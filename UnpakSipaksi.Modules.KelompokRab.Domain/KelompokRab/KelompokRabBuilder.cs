@@ -1,0 +1,44 @@
+﻿using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+using UnpakSipaksi.Common.Domain;
+
+namespace UnpakSipaksi.Modules.KelompokRab.Domain.KelompokRab
+{
+    public sealed partial class KelompokRab
+    {
+        public sealed class KelompokRabBuilder
+        {
+            private readonly KelompokRab _akurasiPenelitian;
+            private Result? _result;
+
+            public KelompokRabBuilder(KelompokRab akurasiPenelitian)
+            {
+                _akurasiPenelitian = akurasiPenelitian;
+            }
+
+            private bool HasError => _result is not null && _result.IsFailure;
+
+            public Result<KelompokRab> Build()
+            {
+                return HasError ? Result.Failure<KelompokRab>(_result!.Error) : Result.Success(_akurasiPenelitian);
+            }
+
+            public KelompokRabBuilder ChangeNama(string nama)
+            {
+                if (HasError) return this;
+
+                /*if (string.IsNullOrWhiteSpace(nama))
+                {
+                    _result = Result.Failure<KelompokRab>(KelompokRabErrors.NamaNotFound);
+                    return this;
+                }*/
+
+                _akurasiPenelitian.Nama = nama;
+                return this;
+            }
+        }
+    }
+}

@@ -1,0 +1,14 @@
+﻿using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+using UnpakSipaksi.Common.Application.Messaging;
+
+namespace UnpakSipaksi.Modules.KelompokMitra.Application.UpdateKelompokMitra
+{
+    public sealed record UpdateKelompokMitraCommand(
+        Guid Uuid,
+        string Nama
+    ) : ICommand;
+}

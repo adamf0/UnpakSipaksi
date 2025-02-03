@@ -1,0 +1,20 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+	<PropertyGroup>
+		<TargetFramework>net8.0</TargetFramework>
+		<ImplicitUsings>enable</ImplicitUsings>
+		<Nullable>enable</Nullable>
+	</PropertyGroup>
+
+	<ItemGroup>
+		<PackageReference Include="Dapper" Version="2.1.35" />
+		<PackageReference Include="MediatR" Version="12.4.1" />
+	</ItemGroup>
+
+	<ItemGroup>
+		<ProjectReference Include="..\UnpakSipaksi.Common.Application\UnpakSipaksi.Common.Application.csproj" />
+		<ProjectReference Include="..\UnpakSipaksi.Common.Domain\UnpakSipaksi.Common.Domain.csproj" />
+		<ProjectReference Include="..\UnpakSipaksi.Modules.KesesuaianPenugasan.Domain\UnpakSipaksi.Modules.KesesuaianPenugasan.Domain.csproj" />
+	</ItemGroup>
+
+</Project>

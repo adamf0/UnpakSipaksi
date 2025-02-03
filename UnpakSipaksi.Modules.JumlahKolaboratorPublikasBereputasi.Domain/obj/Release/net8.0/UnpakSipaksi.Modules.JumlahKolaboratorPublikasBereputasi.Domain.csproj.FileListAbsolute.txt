@@ -1,0 +1,15 @@
+C:\dev_net\UnpakSipaksi\UnpakSipaksi.Modules.JumlahKolaboratorPublikasBereputasi.Domain\bin\Release\net8.0\UnpakSipaksi.Modules.JumlahKolaboratorPublikasBereputasi.Domain.deps.json
+C:\dev_net\UnpakSipaksi\UnpakSipaksi.Modules.JumlahKolaboratorPublikasBereputasi.Domain\bin\Release\net8.0\UnpakSipaksi.Modules.JumlahKolaboratorPublikasBereputasi.Domain.dll
+C:\dev_net\UnpakSipaksi\UnpakSipaksi.Modules.JumlahKolaboratorPublikasBereputasi.Domain\bin\Release\net8.0\UnpakSipaksi.Modules.JumlahKolaboratorPublikasBereputasi.Domain.pdb
+C:\dev_net\UnpakSipaksi\UnpakSipaksi.Modules.JumlahKolaboratorPublikasBereputasi.Domain\bin\Release\net8.0\UnpakSipaksi.Common.Domain.dll
+C:\dev_net\UnpakSipaksi\UnpakSipaksi.Modules.JumlahKolaboratorPublikasBereputasi.Domain\bin\Release\net8.0\UnpakSipaksi.Common.Domain.pdb
+C:\dev_net\UnpakSipaksi\UnpakSipaksi.Modules.JumlahKolaboratorPublikasBereputasi.Domain\obj\Release\net8.0\UnpakSipaksi.Modules.JumlahKolaboratorPublikasBereputasi.Domain.csproj.AssemblyReference.cache
+C:\dev_net\UnpakSipaksi\UnpakSipaksi.Modules.JumlahKolaboratorPublikasBereputasi.Domain\obj\Release\net8.0\UnpakSipaksi.Modules.JumlahKolaboratorPublikasBereputasi.Domain.GeneratedMSBuildEditorConfig.editorconfig
+C:\dev_net\UnpakSipaksi\UnpakSipaksi.Modules.JumlahKolaboratorPublikasBereputasi.Domain\obj\Release\net8.0\UnpakSipaksi.Modules.JumlahKolaboratorPublikasBereputasi.Domain.AssemblyInfoInputs.cache
+C:\dev_net\UnpakSipaksi\UnpakSipaksi.Modules.JumlahKolaboratorPublikasBereputasi.Domain\obj\Release\net8.0\UnpakSipaksi.Modules.JumlahKolaboratorPublikasBereputasi.Domain.AssemblyInfo.cs
+C:\dev_net\UnpakSipaksi\UnpakSipaksi.Modules.JumlahKolaboratorPublikasBereputasi.Domain\obj\Release\net8.0\UnpakSipaksi.Modules.JumlahKolaboratorPublikasBereputasi.Domain.csproj.CoreCompileInputs.cache
+C:\dev_net\UnpakSipaksi\UnpakSipaksi.Modules.JumlahKolaboratorPublikasBereputasi.Domain\obj\Release\net8.0\UnpakSip.95316C9A.Up2Date
+C:\dev_net\UnpakSipaksi\UnpakSipaksi.Modules.JumlahKolaboratorPublikasBereputasi.Domain\obj\Release\net8.0\UnpakSipaksi.Modules.JumlahKolaboratorPublikasBereputasi.Domain.dll
+C:\dev_net\UnpakSipaksi\UnpakSipaksi.Modules.JumlahKolaboratorPublikasBereputasi.Domain\obj\Release\net8.0\refint\UnpakSipaksi.Modules.JumlahKolaboratorPublikasBereputasi.Domain.dll
+C:\dev_net\UnpakSipaksi\UnpakSipaksi.Modules.JumlahKolaboratorPublikasBereputasi.Domain\obj\Release\net8.0\UnpakSipaksi.Modules.JumlahKolaboratorPublikasBereputasi.Domain.pdb
+C:\dev_net\UnpakSipaksi\UnpakSipaksi.Modules.JumlahKolaboratorPublikasBereputasi.Domain\obj\Release\net8.0\ref\UnpakSipaksi.Modules.JumlahKolaboratorPublikasBereputasi.Domain.dll

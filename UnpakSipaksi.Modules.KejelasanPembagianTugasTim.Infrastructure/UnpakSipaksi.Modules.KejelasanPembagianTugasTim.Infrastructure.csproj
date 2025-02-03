@@ -1,0 +1,27 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+	<PropertyGroup>
+		<TargetFramework>net8.0</TargetFramework>
+		<ImplicitUsings>enable</ImplicitUsings>
+		<Nullable>enable</Nullable>
+	</PropertyGroup>
+
+	<ItemGroup>
+		<PackageReference Include="Microsoft.EntityFrameworkCore" Version="8.0.0" />
+		<PackageReference Include="MySql.EntityFrameworkCore" Version="8.0.0" />
+	</ItemGroup>
+
+	<ItemGroup>
+		<FrameworkReference Include="Microsoft.AspNetCore.App" />
+	</ItemGroup>
+
+	<ItemGroup>
+		<ProjectReference Include="..\UnpakSipaksi.Common.Application\UnpakSipaksi.Common.Application.csproj" />
+		<ProjectReference Include="..\UnpakSipaksi.Common.Infrastructure\UnpakSipaksi.Common.Infrastructure.csproj" />
+		<ProjectReference Include="..\UnpakSipaksi.Modules.KejelasanPembagianTugasTim.Application\UnpakSipaksi.Modules.KejelasanPembagianTugasTim.Application.csproj" />
+		<ProjectReference Include="..\UnpakSipaksi.Modules.KejelasanPembagianTugasTim.Domain\UnpakSipaksi.Modules.KejelasanPembagianTugasTim.Domain.csproj" />
+		<ProjectReference Include="..\UnpakSipaksi.Modules.KejelasanPembagianTugasTim.Presentation\UnpakSipaksi.Modules.KejelasanPembagianTugasTim.Presentation.csproj" />
+		<ProjectReference Include="..\UnpakSipaksi.Modules.KejelasanPembagianTugasTim.Domain\UnpakSipaksi.Modules.KejelasanPembagianTugasTim.Domain.csproj" />
+	</ItemGroup>
+
+</Project>

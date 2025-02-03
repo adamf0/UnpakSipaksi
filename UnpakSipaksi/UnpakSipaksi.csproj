@@ -1,0 +1,77 @@
+<Project Sdk="Microsoft.NET.Sdk.Web">
+
+	<PropertyGroup>
+		<TargetFramework>net8.0</TargetFramework>
+		<Nullable>enable</Nullable>
+		<ImplicitUsings>enable</ImplicitUsings>
+		<UserSecretsId>802740c3-f12a-46e1-a454-412e50e704c9</UserSecretsId>
+		<DockerDefaultTargetOS>Linux</DockerDefaultTargetOS>
+	</PropertyGroup>
+
+	<ItemGroup>
+		<PackageReference Include="Microsoft.EntityFrameworkCore" Version="8.0.0" />
+		<PackageReference Include="Microsoft.EntityFrameworkCore.Design" Version="8.0.0">
+			<PrivateAssets>all</PrivateAssets>
+			<IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
+		</PackageReference>
+		<PackageReference Include="Microsoft.EntityFrameworkCore.Tools" Version="8.0.0">
+			<PrivateAssets>all</PrivateAssets>
+			<IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
+		</PackageReference>
+		<PackageReference Include="Microsoft.VisualStudio.Azure.Containers.Tools.Targets" Version="1.21.0" />
+		<PackageReference Include="MySql.EntityFrameworkCore" Version="8.0.0" />
+		<PackageReference Include="Serilog.AspNetCore" Version="8.0.3" />
+		<PackageReference Include="Serilog.Sinks.Seq" Version="8.0.0" />
+		<PackageReference Include="Swashbuckle.AspNetCore" Version="7.0.0" />
+	</ItemGroup>
+
+	<ItemGroup>
+		<ProjectReference Include="..\UnpakSipaksi.Common.Application\UnpakSipaksi.Common.Application.csproj" />
+		<ProjectReference Include="..\UnpakSipaksi.Common.Infrastructure\UnpakSipaksi.Common.Infrastructure.csproj" />
+		<ProjectReference Include="..\UnpakSipaksi.Modules.AkurasiPenelitian.Application\UnpakSipaksi.Modules.AkurasiPenelitian.Application.csproj" />
+		<ProjectReference Include="..\UnpakSipaksi.Modules.AkurasiPenelitian.Infrastructure\UnpakSipaksi.Modules.AkurasiPenelitian.Infrastructure.csproj" />
+		<ProjectReference Include="..\UnpakSipaksi.Modules.ArtikelMediaMassa.Application\UnpakSipaksi.Modules.ArtikelMediaMassa.Application.csproj" />
+		<ProjectReference Include="..\UnpakSipaksi.Modules.ArtikelMediaMassa.Infrastructure\UnpakSipaksi.Modules.ArtikelMediaMassa.Infrastructure.csproj" />
+		<ProjectReference Include="..\UnpakSipaksi.Modules.AuthorSinta.Application\UnpakSipaksi.Modules.AuthorSinta.Application.csproj" />
+		<ProjectReference Include="..\UnpakSipaksi.Modules.AuthorSinta.Infrastructure\UnpakSipaksi.Modules.AuthorSinta.Infrastructure.csproj" />
+		<ProjectReference Include="..\UnpakSipaksi.Modules.FokusPenelitian.Application\UnpakSipaksi.Modules.FokusPenelitian.Application.csproj" />
+		<ProjectReference Include="..\UnpakSipaksi.Modules.FokusPenelitian.Infrastructure\UnpakSipaksi.Modules.FokusPenelitian.Infrastructure.csproj" />
+		<ProjectReference Include="..\UnpakSipaksi.Modules.FokusPengabdian.Application\UnpakSipaksi.Modules.FokusPengabdian.Application.csproj" />
+		<ProjectReference Include="..\UnpakSipaksi.Modules.FokusPengabdian.Infrastructure\UnpakSipaksi.Modules.FokusPengabdian.Infrastructure.csproj" />
+		<ProjectReference Include="..\UnpakSipaksi.Modules.InovasiPemecahanMasalah.Application\UnpakSipaksi.Modules.InovasiPemecahanMasalah.Application.csproj" />
+		<ProjectReference Include="..\UnpakSipaksi.Modules.InovasiPemecahanMasalah.Infrastructure\UnpakSipaksi.Modules.InovasiPemecahanMasalah.Infrastructure.csproj" />
+		<ProjectReference Include="..\UnpakSipaksi.Modules.JenisPublikasi.Application\UnpakSipaksi.Modules.JenisPublikasi.Application.csproj" />
+		<ProjectReference Include="..\UnpakSipaksi.Modules.JenisPublikasi.Infrastructure\UnpakSipaksi.Modules.JenisPublikasi.Infrastructure.csproj" />
+		<ProjectReference Include="..\UnpakSipaksi.Modules.JumlahKolaboratorPublikasBereputasi.Application\UnpakSipaksi.Modules.JumlahKolaboratorPublikasBereputasi.Application.csproj" />
+		<ProjectReference Include="..\UnpakSipaksi.Modules.JumlahKolaboratorPublikasBereputasi.Infrastructure\UnpakSipaksi.Modules.JumlahKolaboratorPublikasBereputasi.Infrastructure.csproj" />
+		<ProjectReference Include="..\UnpakSipaksi.Modules.KategoriMitraPenelitian.Application\UnpakSipaksi.Modules.KategoriMitraPenelitian.Application.csproj" />
+		<ProjectReference Include="..\UnpakSipaksi.Modules.KategoriMitraPenelitian.Infrastructure\UnpakSipaksi.Modules.KategoriMitraPenelitian.Infrastructure.csproj" />
+		<ProjectReference Include="..\UnpakSipaksi.Modules.KategoriSumberDana.Application\UnpakSipaksi.Modules.KategoriSumberDana.Application.csproj" />
+		<ProjectReference Include="..\UnpakSipaksi.Modules.KategoriSumberDana.Infrastructure\UnpakSipaksi.Modules.KategoriSumberDana.Infrastructure.csproj" />
+		<ProjectReference Include="..\UnpakSipaksi.Modules.KategoriTkt.Application\UnpakSipaksi.Modules.KategoriTkt.Application.csproj" />
+		<ProjectReference Include="..\UnpakSipaksi.Modules.KategoriTkt.Infrastructure\UnpakSipaksi.Modules.KategoriTkt.Infrastructure.csproj" />
+		<ProjectReference Include="..\UnpakSipaksi.Modules.KebaruanReferensi.Application\UnpakSipaksi.Modules.KebaruanReferensi.Application.csproj" />
+		<ProjectReference Include="..\UnpakSipaksi.Modules.KebaruanReferensi.Infrastructure\UnpakSipaksi.Modules.KebaruanReferensi.Infrastructure.csproj" />
+		<ProjectReference Include="..\UnpakSipaksi.Modules.KejelasanPembagianTugasTim.Application\UnpakSipaksi.Modules.KejelasanPembagianTugasTim.Application.csproj" />
+		<ProjectReference Include="..\UnpakSipaksi.Modules.KejelasanPembagianTugasTim.Infrastructure\UnpakSipaksi.Modules.KejelasanPembagianTugasTim.Infrastructure.csproj" />
+		<ProjectReference Include="..\UnpakSipaksi.Modules.KelompokMitra.Application\UnpakSipaksi.Modules.KelompokMitra.Application.csproj" />
+		<ProjectReference Include="..\UnpakSipaksi.Modules.KelompokMitra.Infrastructure\UnpakSipaksi.Modules.KelompokMitra.Infrastructure.csproj" />
+		<ProjectReference Include="..\UnpakSipaksi.Modules.KelompokRab.Application\UnpakSipaksi.Modules.KelompokRab.Application.csproj" />
+		<ProjectReference Include="..\UnpakSipaksi.Modules.KelompokRab.Infrastructure\UnpakSipaksi.Modules.KelompokRab.Infrastructure.csproj" />
+		<ProjectReference Include="..\UnpakSipaksi.Modules.KesesuaianJadwal.Application\UnpakSipaksi.Modules.KesesuaianJadwal.Application.csproj" />
+		<ProjectReference Include="..\UnpakSipaksi.Modules.KesesuaianJadwal.Infrastructure\UnpakSipaksi.Modules.KesesuaianJadwal.Infrastructure.csproj" />
+		<ProjectReference Include="..\UnpakSipaksi.Modules.KesesuaianPenugasan.Application\UnpakSipaksi.Modules.KesesuaianPenugasan.Application.csproj" />
+		<ProjectReference Include="..\UnpakSipaksi.Modules.KesesuaianPenugasan.Infrastructure\UnpakSipaksi.Modules.KesesuaianPenugasan.Infrastructure.csproj" />
+		<ProjectReference Include="..\UnpakSipaksi.Modules.KesesuaianSolusiMasalahMitra.Application\UnpakSipaksi.Modules.KesesuaianSolusiMasalahMitra.Application.csproj" />
+		<ProjectReference Include="..\UnpakSipaksi.Modules.KesesuaianSolusiMasalahMitra.Infrastructure\UnpakSipaksi.Modules.KesesuaianSolusiMasalahMitra.Infrastructure.csproj" />
+		<ProjectReference Include="..\UnpakSipaksi.Modules.KesesuaianTkt.Application\UnpakSipaksi.Modules.KesesuaianTkt.Application.csproj" />
+		<ProjectReference Include="..\UnpakSipaksi.Modules.KesesuaianTkt.Infrastructure\UnpakSipaksi.Modules.KesesuaianTkt.Infrastructure.csproj" />
+		<ProjectReference Include="..\UnpakSipaksi.Modules.KesesuaianWaktuRabLuaranFasilitas.Application\UnpakSipaksi.Modules.KesesuaianWaktuRabLuaranFasilitas.Application.csproj" />
+		<ProjectReference Include="..\UnpakSipaksi.Modules.KesesuaianWaktuRabLuaranFasilitas.Infrastructure\UnpakSipaksi.Modules.KesesuaianWaktuRabLuaranFasilitas.Infrastructure.csproj" />
+		<ProjectReference Include="..\UnpakSipaksi.Modules.TemaPenelitian.Application\UnpakSipaksi.Modules.TemaPenelitian.Application.csproj" />
+		<ProjectReference Include="..\UnpakSipaksi.Modules.TemaPenelitian.Infrastructure\UnpakSipaksi.Modules.TemaPenelitian.Infrastructure.csproj" />
+		<ProjectReference Include="..\UnpakSipaksi.Modules.TopikPenelitian.Application\UnpakSipaksi.Modules.TopikPenelitian.Application.csproj" />
+		<ProjectReference Include="..\UnpakSipaksi.Modules.TopikPenelitian.Infrastructure\UnpakSipaksi.Modules.TopikPenelitian.Infrastructure.csproj" />
+	</ItemGroup>
+
+</Project>

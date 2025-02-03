@@ -1,0 +1,15 @@
+C:\dev_net\UnpakSipaksi\UnpakSipaksi.Modules.KategoriTkt.Domain\bin\Debug\net8.0\UnpakSipaksi.Modules.KategoriTkt.Domain.deps.json
+C:\dev_net\UnpakSipaksi\UnpakSipaksi.Modules.KategoriTkt.Domain\bin\Debug\net8.0\UnpakSipaksi.Modules.KategoriTkt.Domain.dll
+C:\dev_net\UnpakSipaksi\UnpakSipaksi.Modules.KategoriTkt.Domain\bin\Debug\net8.0\UnpakSipaksi.Modules.KategoriTkt.Domain.pdb
+C:\dev_net\UnpakSipaksi\UnpakSipaksi.Modules.KategoriTkt.Domain\bin\Debug\net8.0\UnpakSipaksi.Common.Domain.dll
+C:\dev_net\UnpakSipaksi\UnpakSipaksi.Modules.KategoriTkt.Domain\bin\Debug\net8.0\UnpakSipaksi.Common.Domain.pdb
+C:\dev_net\UnpakSipaksi\UnpakSipaksi.Modules.KategoriTkt.Domain\obj\Debug\net8.0\UnpakSipaksi.Modules.KategoriTkt.Domain.csproj.AssemblyReference.cache
+C:\dev_net\UnpakSipaksi\UnpakSipaksi.Modules.KategoriTkt.Domain\obj\Debug\net8.0\UnpakSipaksi.Modules.KategoriTkt.Domain.GeneratedMSBuildEditorConfig.editorconfig
+C:\dev_net\UnpakSipaksi\UnpakSipaksi.Modules.KategoriTkt.Domain\obj\Debug\net8.0\UnpakSipaksi.Modules.KategoriTkt.Domain.AssemblyInfoInputs.cache
+C:\dev_net\UnpakSipaksi\UnpakSipaksi.Modules.KategoriTkt.Domain\obj\Debug\net8.0\UnpakSipaksi.Modules.KategoriTkt.Domain.AssemblyInfo.cs
+C:\dev_net\UnpakSipaksi\UnpakSipaksi.Modules.KategoriTkt.Domain\obj\Debug\net8.0\UnpakSipaksi.Modules.KategoriTkt.Domain.csproj.CoreCompileInputs.cache
+C:\dev_net\UnpakSipaksi\UnpakSipaksi.Modules.KategoriTkt.Domain\obj\Debug\net8.0\UnpakSip.FA0ACCFA.Up2Date
+C:\dev_net\UnpakSipaksi\UnpakSipaksi.Modules.KategoriTkt.Domain\obj\Debug\net8.0\UnpakSipaksi.Modules.KategoriTkt.Domain.dll
+C:\dev_net\UnpakSipaksi\UnpakSipaksi.Modules.KategoriTkt.Domain\obj\Debug\net8.0\refint\UnpakSipaksi.Modules.KategoriTkt.Domain.dll
+C:\dev_net\UnpakSipaksi\UnpakSipaksi.Modules.KategoriTkt.Domain\obj\Debug\net8.0\UnpakSipaksi.Modules.KategoriTkt.Domain.pdb
+C:\dev_net\UnpakSipaksi\UnpakSipaksi.Modules.KategoriTkt.Domain\obj\Debug\net8.0\ref\UnpakSipaksi.Modules.KategoriTkt.Domain.dll

@@ -1,0 +1,15 @@
+C:\dev_net\UnpakSipaksi\UnpakSipaksi.Common.Presentation\bin\Debug\net8.0\UnpakSipaksi.Common.Presentation.deps.json
+C:\dev_net\UnpakSipaksi\UnpakSipaksi.Common.Presentation\bin\Debug\net8.0\UnpakSipaksi.Common.Presentation.dll
+C:\dev_net\UnpakSipaksi\UnpakSipaksi.Common.Presentation\bin\Debug\net8.0\UnpakSipaksi.Common.Presentation.pdb
+C:\dev_net\UnpakSipaksi\UnpakSipaksi.Common.Presentation\bin\Debug\net8.0\UnpakSipaksi.Common.Domain.dll
+C:\dev_net\UnpakSipaksi\UnpakSipaksi.Common.Presentation\bin\Debug\net8.0\UnpakSipaksi.Common.Domain.pdb
+C:\dev_net\UnpakSipaksi\UnpakSipaksi.Common.Presentation\obj\Debug\net8.0\UnpakSipaksi.Common.Presentation.csproj.AssemblyReference.cache
+C:\dev_net\UnpakSipaksi\UnpakSipaksi.Common.Presentation\obj\Debug\net8.0\UnpakSipaksi.Common.Presentation.GeneratedMSBuildEditorConfig.editorconfig
+C:\dev_net\UnpakSipaksi\UnpakSipaksi.Common.Presentation\obj\Debug\net8.0\UnpakSipaksi.Common.Presentation.AssemblyInfoInputs.cache
+C:\dev_net\UnpakSipaksi\UnpakSipaksi.Common.Presentation\obj\Debug\net8.0\UnpakSipaksi.Common.Presentation.AssemblyInfo.cs
+C:\dev_net\UnpakSipaksi\UnpakSipaksi.Common.Presentation\obj\Debug\net8.0\UnpakSipaksi.Common.Presentation.csproj.CoreCompileInputs.cache
+C:\dev_net\UnpakSipaksi\UnpakSipaksi.Common.Presentation\obj\Debug\net8.0\UnpakSip.BDDE1B45.Up2Date
+C:\dev_net\UnpakSipaksi\UnpakSipaksi.Common.Presentation\obj\Debug\net8.0\UnpakSipaksi.Common.Presentation.dll
+C:\dev_net\UnpakSipaksi\UnpakSipaksi.Common.Presentation\obj\Debug\net8.0\refint\UnpakSipaksi.Common.Presentation.dll
+C:\dev_net\UnpakSipaksi\UnpakSipaksi.Common.Presentation\obj\Debug\net8.0\UnpakSipaksi.Common.Presentation.pdb
+C:\dev_net\UnpakSipaksi\UnpakSipaksi.Common.Presentation\obj\Debug\net8.0\ref\UnpakSipaksi.Common.Presentation.dll

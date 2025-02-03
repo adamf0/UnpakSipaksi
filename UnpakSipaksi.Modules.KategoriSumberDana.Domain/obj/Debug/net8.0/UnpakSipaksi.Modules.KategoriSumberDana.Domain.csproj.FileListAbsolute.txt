@@ -1,0 +1,15 @@
+C:\dev_net\UnpakSipaksi\UnpakSipaksi.Modules.KategoriSumberDana.Domain\bin\Debug\net8.0\UnpakSipaksi.Modules.KategoriSumberDana.Domain.deps.json
+C:\dev_net\UnpakSipaksi\UnpakSipaksi.Modules.KategoriSumberDana.Domain\bin\Debug\net8.0\UnpakSipaksi.Modules.KategoriSumberDana.Domain.dll
+C:\dev_net\UnpakSipaksi\UnpakSipaksi.Modules.KategoriSumberDana.Domain\bin\Debug\net8.0\UnpakSipaksi.Modules.KategoriSumberDana.Domain.pdb
+C:\dev_net\UnpakSipaksi\UnpakSipaksi.Modules.KategoriSumberDana.Domain\bin\Debug\net8.0\UnpakSipaksi.Common.Domain.dll
+C:\dev_net\UnpakSipaksi\UnpakSipaksi.Modules.KategoriSumberDana.Domain\bin\Debug\net8.0\UnpakSipaksi.Common.Domain.pdb
+C:\dev_net\UnpakSipaksi\UnpakSipaksi.Modules.KategoriSumberDana.Domain\obj\Debug\net8.0\UnpakSipaksi.Modules.KategoriSumberDana.Domain.csproj.AssemblyReference.cache
+C:\dev_net\UnpakSipaksi\UnpakSipaksi.Modules.KategoriSumberDana.Domain\obj\Debug\net8.0\UnpakSipaksi.Modules.KategoriSumberDana.Domain.GeneratedMSBuildEditorConfig.editorconfig
+C:\dev_net\UnpakSipaksi\UnpakSipaksi.Modules.KategoriSumberDana.Domain\obj\Debug\net8.0\UnpakSipaksi.Modules.KategoriSumberDana.Domain.AssemblyInfoInputs.cache
+C:\dev_net\UnpakSipaksi\UnpakSipaksi.Modules.KategoriSumberDana.Domain\obj\Debug\net8.0\UnpakSipaksi.Modules.KategoriSumberDana.Domain.AssemblyInfo.cs
+C:\dev_net\UnpakSipaksi\UnpakSipaksi.Modules.KategoriSumberDana.Domain\obj\Debug\net8.0\UnpakSipaksi.Modules.KategoriSumberDana.Domain.csproj.CoreCompileInputs.cache
+C:\dev_net\UnpakSipaksi\UnpakSipaksi.Modules.KategoriSumberDana.Domain\obj\Debug\net8.0\UnpakSip.DBCBC5BB.Up2Date
+C:\dev_net\UnpakSipaksi\UnpakSipaksi.Modules.KategoriSumberDana.Domain\obj\Debug\net8.0\UnpakSipaksi.Modules.KategoriSumberDana.Domain.dll
+C:\dev_net\UnpakSipaksi\UnpakSipaksi.Modules.KategoriSumberDana.Domain\obj\Debug\net8.0\refint\UnpakSipaksi.Modules.KategoriSumberDana.Domain.dll
+C:\dev_net\UnpakSipaksi\UnpakSipaksi.Modules.KategoriSumberDana.Domain\obj\Debug\net8.0\UnpakSipaksi.Modules.KategoriSumberDana.Domain.pdb
+C:\dev_net\UnpakSipaksi\UnpakSipaksi.Modules.KategoriSumberDana.Domain\obj\Debug\net8.0\ref\UnpakSipaksi.Modules.KategoriSumberDana.Domain.dll

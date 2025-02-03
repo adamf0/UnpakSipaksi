@@ -1,0 +1,11 @@
+C:\dev_net\UnpakSipaksi\UnpakSipaksi.Modules.FokusPenelitian.PublicApi\bin\Release\net8.0\UnpakSipaksi.Modules.FokusPenelitian.PublicApi.deps.json
+C:\dev_net\UnpakSipaksi\UnpakSipaksi.Modules.FokusPenelitian.PublicApi\bin\Release\net8.0\UnpakSipaksi.Modules.FokusPenelitian.PublicApi.dll
+C:\dev_net\UnpakSipaksi\UnpakSipaksi.Modules.FokusPenelitian.PublicApi\bin\Release\net8.0\UnpakSipaksi.Modules.FokusPenelitian.PublicApi.pdb
+C:\dev_net\UnpakSipaksi\UnpakSipaksi.Modules.FokusPenelitian.PublicApi\obj\Release\net8.0\UnpakSipaksi.Modules.FokusPenelitian.PublicApi.GeneratedMSBuildEditorConfig.editorconfig
+C:\dev_net\UnpakSipaksi\UnpakSipaksi.Modules.FokusPenelitian.PublicApi\obj\Release\net8.0\UnpakSipaksi.Modules.FokusPenelitian.PublicApi.AssemblyInfoInputs.cache
+C:\dev_net\UnpakSipaksi\UnpakSipaksi.Modules.FokusPenelitian.PublicApi\obj\Release\net8.0\UnpakSipaksi.Modules.FokusPenelitian.PublicApi.AssemblyInfo.cs
+C:\dev_net\UnpakSipaksi\UnpakSipaksi.Modules.FokusPenelitian.PublicApi\obj\Release\net8.0\UnpakSipaksi.Modules.FokusPenelitian.PublicApi.csproj.CoreCompileInputs.cache
+C:\dev_net\UnpakSipaksi\UnpakSipaksi.Modules.FokusPenelitian.PublicApi\obj\Release\net8.0\UnpakSipaksi.Modules.FokusPenelitian.PublicApi.dll
+C:\dev_net\UnpakSipaksi\UnpakSipaksi.Modules.FokusPenelitian.PublicApi\obj\Release\net8.0\refint\UnpakSipaksi.Modules.FokusPenelitian.PublicApi.dll
+C:\dev_net\UnpakSipaksi\UnpakSipaksi.Modules.FokusPenelitian.PublicApi\obj\Release\net8.0\UnpakSipaksi.Modules.FokusPenelitian.PublicApi.pdb
+C:\dev_net\UnpakSipaksi\UnpakSipaksi.Modules.FokusPenelitian.PublicApi\obj\Release\net8.0\ref\UnpakSipaksi.Modules.FokusPenelitian.PublicApi.dll
