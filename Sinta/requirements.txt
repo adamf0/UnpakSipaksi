@@ -1,0 +1,3 @@
+sinta-scraper==2.2.1
+fastapi==0.110.0
+uvicorn==0.27.1

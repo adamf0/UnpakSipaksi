@@ -44,6 +44,19 @@ services:
     networks:
       - minio-sample
 
+  sinta:
+    build:
+      context: Sinta/.
+      dockerfile: Dockerfile
+    container_name: sinta
+    image: adamilkom00/sinta:1.0.0
+    security_opt:
+      - "no-new-privileges:true"
+      - apparmor=docker-default
+    ports:
+      - "8000:8000"
+    restart: always
+
   #counter:
   #  container_name: counter
   #  image: redis:latest
