@@ -25,3 +25,4 @@ C:\dev_net\UnpakSipaksi\UnpakSipaksi.Modules.AkurasiPenelitian.Infrastructure\ob
 C:\dev_net\UnpakSipaksi\UnpakSipaksi.Modules.AkurasiPenelitian.Infrastructure\obj\Debug\net8.0\refint\UnpakSipaksi.Modules.AkurasiPenelitian.Infrastructure.dll
 C:\dev_net\UnpakSipaksi\UnpakSipaksi.Modules.AkurasiPenelitian.Infrastructure\obj\Debug\net8.0\UnpakSipaksi.Modules.AkurasiPenelitian.Infrastructure.pdb
 C:\dev_net\UnpakSipaksi\UnpakSipaksi.Modules.AkurasiPenelitian.Infrastructure\obj\Debug\net8.0\ref\UnpakSipaksi.Modules.AkurasiPenelitian.Infrastructure.dll
+C:\dev_net\UnpakSipaksi\UnpakSipaksi.Modules.AkurasiPenelitian.Infrastructure\obj\Debug\net8.0\UnpakSipaksi.Modules.AkurasiPenelitian.Infrastructure.sourcelink.json

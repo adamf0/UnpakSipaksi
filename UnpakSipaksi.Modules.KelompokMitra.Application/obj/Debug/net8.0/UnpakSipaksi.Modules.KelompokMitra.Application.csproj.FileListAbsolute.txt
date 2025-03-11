@@ -17,3 +17,4 @@ C:\dev_net\UnpakSipaksi\UnpakSipaksi.Modules.KelompokMitra.Application\obj\Debug
 C:\dev_net\UnpakSipaksi\UnpakSipaksi.Modules.KelompokMitra.Application\obj\Debug\net8.0\refint\UnpakSipaksi.Modules.KelompokMitra.Application.dll
 C:\dev_net\UnpakSipaksi\UnpakSipaksi.Modules.KelompokMitra.Application\obj\Debug\net8.0\UnpakSipaksi.Modules.KelompokMitra.Application.pdb
 C:\dev_net\UnpakSipaksi\UnpakSipaksi.Modules.KelompokMitra.Application\obj\Debug\net8.0\ref\UnpakSipaksi.Modules.KelompokMitra.Application.dll
+C:\dev_net\UnpakSipaksi\UnpakSipaksi.Modules.KelompokMitra.Application\obj\Debug\net8.0\UnpakSipaksi.Modules.KelompokMitra.Application.sourcelink.json

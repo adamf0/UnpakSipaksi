@@ -21,3 +21,4 @@ C:\dev_net\UnpakSipaksi\UnpakSipaksi.Modules.KategoriMitraPenelitian.Presentatio
 C:\dev_net\UnpakSipaksi\UnpakSipaksi.Modules.KategoriMitraPenelitian.Presentation\obj\Debug\net8.0\refint\UnpakSipaksi.Modules.KategoriMitraPenelitian.Presentation.dll
 C:\dev_net\UnpakSipaksi\UnpakSipaksi.Modules.KategoriMitraPenelitian.Presentation\obj\Debug\net8.0\UnpakSipaksi.Modules.KategoriMitraPenelitian.Presentation.pdb
 C:\dev_net\UnpakSipaksi\UnpakSipaksi.Modules.KategoriMitraPenelitian.Presentation\obj\Debug\net8.0\ref\UnpakSipaksi.Modules.KategoriMitraPenelitian.Presentation.dll
+C:\dev_net\UnpakSipaksi\UnpakSipaksi.Modules.KategoriMitraPenelitian.Presentation\obj\Debug\net8.0\UnpakSipaksi.Modules.KategoriMitraPenelitian.Presentation.sourcelink.json

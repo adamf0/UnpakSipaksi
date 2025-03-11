@@ -25,3 +25,4 @@ C:\dev_net\UnpakSipaksi\UnpakSipaksi.Modules.AuthorSinta.Infrastructure\obj\Debu
 C:\dev_net\UnpakSipaksi\UnpakSipaksi.Modules.AuthorSinta.Infrastructure\obj\Debug\net8.0\refint\UnpakSipaksi.Modules.AuthorSinta.Infrastructure.dll
 C:\dev_net\UnpakSipaksi\UnpakSipaksi.Modules.AuthorSinta.Infrastructure\obj\Debug\net8.0\UnpakSipaksi.Modules.AuthorSinta.Infrastructure.pdb
 C:\dev_net\UnpakSipaksi\UnpakSipaksi.Modules.AuthorSinta.Infrastructure\obj\Debug\net8.0\ref\UnpakSipaksi.Modules.AuthorSinta.Infrastructure.dll
+C:\dev_net\UnpakSipaksi\UnpakSipaksi.Modules.AuthorSinta.Infrastructure\obj\Debug\net8.0\UnpakSipaksi.Modules.AuthorSinta.Infrastructure.sourcelink.json

@@ -1,0 +1,33 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+	<PropertyGroup>
+		<TargetFramework>net8.0</TargetFramework>
+		<ImplicitUsings>enable</ImplicitUsings>
+		<Nullable>enable</Nullable>
+	</PropertyGroup>
+
+	<Target Name="DisableNullableForVisualStudioBuild" BeforeTargets="CoreCompile" Condition="'$(BuildingInsideVisualStudio)' == 'True' And '$(BuildingProject)' == 'True' And '$(Configuration)' == 'Debug'">
+		<PropertyGroup>
+			<Nullable>disable</Nullable>
+		</PropertyGroup>
+	</Target>
+
+	<ItemGroup>
+		<PackageReference Include="Microsoft.EntityFrameworkCore" Version="8.0.0" />
+		<PackageReference Include="MySql.EntityFrameworkCore" Version="8.0.0" />
+	</ItemGroup>
+
+	<ItemGroup>
+		<FrameworkReference Include="Microsoft.AspNetCore.App" />
+	</ItemGroup>
+
+	<ItemGroup>
+		<ProjectReference Include="..\UnpakSipaksi.Common.Application\UnpakSipaksi.Common.Application.csproj" />
+		<ProjectReference Include="..\UnpakSipaksi.Common.Infrastructure\UnpakSipaksi.Common.Infrastructure.csproj" />
+		<ProjectReference Include="..\UnpakSipaksi.Modules.KewajaranTahapanTarget.Application\UnpakSipaksi.Modules.KewajaranTahapanTarget.Application.csproj" />
+		<ProjectReference Include="..\UnpakSipaksi.Modules.KewajaranTahapanTarget.Domain\UnpakSipaksi.Modules.KewajaranTahapanTarget.Domain.csproj" />
+		<ProjectReference Include="..\UnpakSipaksi.Modules.KewajaranTahapanTarget.Presentation\UnpakSipaksi.Modules.KewajaranTahapanTarget.Presentation.csproj" />
+		<ProjectReference Include="..\UnpakSipaksi.Modules.KewajaranTahapanTarget.Domain\UnpakSipaksi.Modules.KewajaranTahapanTarget.Domain.csproj" />
+	</ItemGroup>
+
+</Project>

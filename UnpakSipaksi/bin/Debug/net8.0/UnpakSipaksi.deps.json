@@ -58,6 +58,24 @@
           "UnpakSipaksi.Modules.KesesuaianTkt.Infrastructure": "1.0.0",
           "UnpakSipaksi.Modules.KesesuaianWaktuRabLuaranFasilitas.Application": "1.0.0",
           "UnpakSipaksi.Modules.KesesuaianWaktuRabLuaranFasilitas.Infrastructure": "1.0.0",
+          "UnpakSipaksi.Modules.KetajamanAnalisis.Application": "1.0.0",
+          "UnpakSipaksi.Modules.KetajamanAnalisis.Infrastructure": "1.0.0",
+          "UnpakSipaksi.Modules.KetajamanPerumusanMasalah.Application": "1.0.0",
+          "UnpakSipaksi.Modules.KetajamanPerumusanMasalah.Infrastructure": "1.0.0",
+          "UnpakSipaksi.Modules.KewajaranTahapanTarget.Application": "1.0.0",
+          "UnpakSipaksi.Modules.KewajaranTahapanTarget.Infrastructure": "1.0.0",
+          "UnpakSipaksi.Modules.Komponen.Application": "1.0.0",
+          "UnpakSipaksi.Modules.Komponen.Infrastructure": "1.0.0",
+          "UnpakSipaksi.Modules.KredibilitasMitraDukungan.Application": "1.0.0",
+          "UnpakSipaksi.Modules.KredibilitasMitraDukungan.Infrastructure": "1.0.0",
+          "UnpakSipaksi.Modules.KualitasIpteks.Application": "1.0.0",
+          "UnpakSipaksi.Modules.KualitasIpteks.Infrastructure": "1.0.0",
+          "UnpakSipaksi.Modules.KualitasKuantitasPublikasiJurnalIlmiah.Application": "1.0.0",
+          "UnpakSipaksi.Modules.KualitasKuantitasPublikasiJurnalIlmiah.Infrastructure": "1.0.0",
+          "UnpakSipaksi.Modules.KualitasKuantitasPublikasiProsiding.Application": "1.0.0",
+          "UnpakSipaksi.Modules.KualitasKuantitasPublikasiProsiding.Infrastructure": "1.0.0",
+          "UnpakSipaksi.Modules.KuantitasStatusKi.Application": "1.0.0",
+          "UnpakSipaksi.Modules.KuantitasStatusKi.Infrastructure": "1.0.0",
           "UnpakSipaksi.Modules.TemaPenelitian.Application": "1.0.0",
           "UnpakSipaksi.Modules.TemaPenelitian.Infrastructure": "1.0.0",
           "UnpakSipaksi.Modules.TopikPenelitian.Application": "1.0.0",
@@ -174,6 +192,23 @@
             "assemblyVersion": "2.0.1.0",
             "fileVersion": "2.0.1.0"
           }
+        }
+      },
+      "Microsoft.AspNetCore.Authentication.JwtBearer/8.0.13": {
+        "dependencies": {
+          "Microsoft.IdentityModel.Protocols.OpenIdConnect": "7.1.2"
+        },
+        "runtime": {
+          "lib/net8.0/Microsoft.AspNetCore.Authentication.JwtBearer.dll": {
+            "assemblyVersion": "8.0.13.0",
+            "fileVersion": "8.0.1325.6610"
+          }
+        }
+      },
+      "Microsoft.AspNetCore.Http.Features/5.0.17": {
+        "dependencies": {
+          "Microsoft.Extensions.Primitives": "8.0.0",
+          "System.IO.Pipelines": "6.0.3"
         }
       },
       "Microsoft.Bcl.AsyncInterfaces/6.0.0": {
@@ -562,6 +597,71 @@
         }
       },
       "Microsoft.Extensions.Primitives/8.0.0": {},
+      "Microsoft.IdentityModel.Abstractions/7.1.2": {
+        "runtime": {
+          "lib/net8.0/Microsoft.IdentityModel.Abstractions.dll": {
+            "assemblyVersion": "7.1.2.0",
+            "fileVersion": "7.1.2.41121"
+          }
+        }
+      },
+      "Microsoft.IdentityModel.JsonWebTokens/7.1.2": {
+        "dependencies": {
+          "Microsoft.IdentityModel.Tokens": "7.1.2"
+        },
+        "runtime": {
+          "lib/net8.0/Microsoft.IdentityModel.JsonWebTokens.dll": {
+            "assemblyVersion": "7.1.2.0",
+            "fileVersion": "7.1.2.41121"
+          }
+        }
+      },
+      "Microsoft.IdentityModel.Logging/7.1.2": {
+        "dependencies": {
+          "Microsoft.IdentityModel.Abstractions": "7.1.2"
+        },
+        "runtime": {
+          "lib/net8.0/Microsoft.IdentityModel.Logging.dll": {
+            "assemblyVersion": "7.1.2.0",
+            "fileVersion": "7.1.2.41121"
+          }
+        }
+      },
+      "Microsoft.IdentityModel.Protocols/7.1.2": {
+        "dependencies": {
+          "Microsoft.IdentityModel.Logging": "7.1.2",
+          "Microsoft.IdentityModel.Tokens": "7.1.2"
+        },
+        "runtime": {
+          "lib/net8.0/Microsoft.IdentityModel.Protocols.dll": {
+            "assemblyVersion": "7.1.2.0",
+            "fileVersion": "7.1.2.41121"
+          }
+        }
+      },
+      "Microsoft.IdentityModel.Protocols.OpenIdConnect/7.1.2": {
+        "dependencies": {
+          "Microsoft.IdentityModel.Protocols": "7.1.2",
+          "System.IdentityModel.Tokens.Jwt": "7.1.2"
+        },
+        "runtime": {
+          "lib/net8.0/Microsoft.IdentityModel.Protocols.OpenIdConnect.dll": {
+            "assemblyVersion": "7.1.2.0",
+            "fileVersion": "7.1.2.41121"
+          }
+        }
+      },
+      "Microsoft.IdentityModel.Tokens/7.1.2": {
+        "dependencies": {
+          "Microsoft.IdentityModel.Logging": "7.1.2"
+        },
+        "runtime": {
+          "lib/net8.0/Microsoft.IdentityModel.Tokens.dll": {
+            "assemblyVersion": "7.1.2.0",
+            "fileVersion": "7.1.2.41121"
+          }
+        }
+      },
       "Microsoft.NETCore.Platforms/3.1.0": {},
       "Microsoft.NETCore.Targets/1.1.0": {},
       "Microsoft.OpenApi/1.6.22": {
@@ -973,6 +1073,18 @@
           }
         }
       },
+      "System.IdentityModel.Tokens.Jwt/7.1.2": {
+        "dependencies": {
+          "Microsoft.IdentityModel.JsonWebTokens": "7.1.2",
+          "Microsoft.IdentityModel.Tokens": "7.1.2"
+        },
+        "runtime": {
+          "lib/net8.0/System.IdentityModel.Tokens.Jwt.dll": {
+            "assemblyVersion": "7.1.2.0",
+            "fileVersion": "7.1.2.41121"
+          }
+        }
+      },
       "System.IO/4.3.0": {
         "dependencies": {
           "Microsoft.NETCore.Platforms": "3.1.0",
@@ -1125,8 +1237,10 @@
       },
       "UnpakSipaksi.Common.Application/1.0.0": {
         "dependencies": {
+          "Dapper": "2.1.35",
           "FluentValidation.DependencyInjectionExtensions": "11.11.0",
           "MediatR": "12.4.1",
+          "Microsoft.AspNetCore.Http.Features": "5.0.17",
           "Microsoft.Extensions.Logging.Abstractions": "9.0.0",
           "Serilog": "4.2.0-dev-02328",
           "UnpakSipaksi.Common.Domain": "1.0.0"
@@ -1152,6 +1266,7 @@
       },
       "UnpakSipaksi.Common.Presentation/1.0.0": {
         "dependencies": {
+          "Microsoft.AspNetCore.Authentication.JwtBearer": "8.0.13",
           "UnpakSipaksi.Common.Domain": "1.0.0"
         },
         "runtime": {
@@ -2045,6 +2160,402 @@
           "UnpakSipaksi.Modules.KesesuaianWaktuRabLuaranFasilitas.Presentation.dll": {}
         }
       },
+      "UnpakSipaksi.Modules.KetajamanAnalisis.Application/1.0.0": {
+        "dependencies": {
+          "Dapper": "2.1.35",
+          "MediatR": "12.4.1",
+          "UnpakSipaksi.Common.Application": "1.0.0",
+          "UnpakSipaksi.Common.Domain": "1.0.0",
+          "UnpakSipaksi.Modules.KetajamanAnalisis.Domain": "1.0.0"
+        },
+        "runtime": {
+          "UnpakSipaksi.Modules.KetajamanAnalisis.Application.dll": {}
+        }
+      },
+      "UnpakSipaksi.Modules.KetajamanAnalisis.Domain/1.0.0": {
+        "dependencies": {
+          "UnpakSipaksi.Common.Domain": "1.0.0"
+        },
+        "runtime": {
+          "UnpakSipaksi.Modules.KetajamanAnalisis.Domain.dll": {}
+        }
+      },
+      "UnpakSipaksi.Modules.KetajamanAnalisis.Infrastructure/1.0.0": {
+        "dependencies": {
+          "Microsoft.EntityFrameworkCore": "8.0.0",
+          "MySql.EntityFrameworkCore": "8.0.0",
+          "UnpakSipaksi.Common.Application": "1.0.0",
+          "UnpakSipaksi.Common.Infrastructure": "1.0.0",
+          "UnpakSipaksi.Modules.KetajamanAnalisis.Application": "1.0.0",
+          "UnpakSipaksi.Modules.KetajamanAnalisis.Domain": "1.0.0",
+          "UnpakSipaksi.Modules.KetajamanAnalisis.Presentation": "1.0.0"
+        },
+        "runtime": {
+          "UnpakSipaksi.Modules.KetajamanAnalisis.Infrastructure.dll": {}
+        }
+      },
+      "UnpakSipaksi.Modules.KetajamanAnalisis.Presentation/1.0.0": {
+        "dependencies": {
+          "UnpakSipaksi.Common.Domain": "1.0.0",
+          "UnpakSipaksi.Common.Presentation": "1.0.0",
+          "UnpakSipaksi.Modules.KetajamanAnalisis.Application": "1.0.0"
+        },
+        "runtime": {
+          "UnpakSipaksi.Modules.KetajamanAnalisis.Presentation.dll": {}
+        }
+      },
+      "UnpakSipaksi.Modules.KetajamanPerumusanMasalah.Application/1.0.0": {
+        "dependencies": {
+          "Dapper": "2.1.35",
+          "MediatR": "12.4.1",
+          "UnpakSipaksi.Common.Application": "1.0.0",
+          "UnpakSipaksi.Common.Domain": "1.0.0",
+          "UnpakSipaksi.Modules.KetajamanPerumusanMasalah.Domain": "1.0.0"
+        },
+        "runtime": {
+          "UnpakSipaksi.Modules.KetajamanPerumusanMasalah.Application.dll": {}
+        }
+      },
+      "UnpakSipaksi.Modules.KetajamanPerumusanMasalah.Domain/1.0.0": {
+        "dependencies": {
+          "UnpakSipaksi.Common.Domain": "1.0.0"
+        },
+        "runtime": {
+          "UnpakSipaksi.Modules.KetajamanPerumusanMasalah.Domain.dll": {}
+        }
+      },
+      "UnpakSipaksi.Modules.KetajamanPerumusanMasalah.Infrastructure/1.0.0": {
+        "dependencies": {
+          "Microsoft.EntityFrameworkCore": "8.0.0",
+          "MySql.EntityFrameworkCore": "8.0.0",
+          "UnpakSipaksi.Common.Application": "1.0.0",
+          "UnpakSipaksi.Common.Infrastructure": "1.0.0",
+          "UnpakSipaksi.Modules.KetajamanPerumusanMasalah.Application": "1.0.0",
+          "UnpakSipaksi.Modules.KetajamanPerumusanMasalah.Domain": "1.0.0",
+          "UnpakSipaksi.Modules.KetajamanPerumusanMasalah.Presentation": "1.0.0"
+        },
+        "runtime": {
+          "UnpakSipaksi.Modules.KetajamanPerumusanMasalah.Infrastructure.dll": {}
+        }
+      },
+      "UnpakSipaksi.Modules.KetajamanPerumusanMasalah.Presentation/1.0.0": {
+        "dependencies": {
+          "UnpakSipaksi.Common.Domain": "1.0.0",
+          "UnpakSipaksi.Common.Presentation": "1.0.0",
+          "UnpakSipaksi.Modules.KetajamanPerumusanMasalah.Application": "1.0.0"
+        },
+        "runtime": {
+          "UnpakSipaksi.Modules.KetajamanPerumusanMasalah.Presentation.dll": {}
+        }
+      },
+      "UnpakSipaksi.Modules.KewajaranTahapanTarget.Application/1.0.0": {
+        "dependencies": {
+          "Dapper": "2.1.35",
+          "MediatR": "12.4.1",
+          "UnpakSipaksi.Common.Application": "1.0.0",
+          "UnpakSipaksi.Common.Domain": "1.0.0",
+          "UnpakSipaksi.Modules.KewajaranTahapanTarget.Domain": "1.0.0"
+        },
+        "runtime": {
+          "UnpakSipaksi.Modules.KewajaranTahapanTarget.Application.dll": {}
+        }
+      },
+      "UnpakSipaksi.Modules.KewajaranTahapanTarget.Domain/1.0.0": {
+        "dependencies": {
+          "UnpakSipaksi.Common.Domain": "1.0.0"
+        },
+        "runtime": {
+          "UnpakSipaksi.Modules.KewajaranTahapanTarget.Domain.dll": {}
+        }
+      },
+      "UnpakSipaksi.Modules.KewajaranTahapanTarget.Infrastructure/1.0.0": {
+        "dependencies": {
+          "Microsoft.EntityFrameworkCore": "8.0.0",
+          "MySql.EntityFrameworkCore": "8.0.0",
+          "UnpakSipaksi.Common.Application": "1.0.0",
+          "UnpakSipaksi.Common.Infrastructure": "1.0.0",
+          "UnpakSipaksi.Modules.KewajaranTahapanTarget.Application": "1.0.0",
+          "UnpakSipaksi.Modules.KewajaranTahapanTarget.Domain": "1.0.0",
+          "UnpakSipaksi.Modules.KewajaranTahapanTarget.Presentation": "1.0.0"
+        },
+        "runtime": {
+          "UnpakSipaksi.Modules.KewajaranTahapanTarget.Infrastructure.dll": {}
+        }
+      },
+      "UnpakSipaksi.Modules.KewajaranTahapanTarget.Presentation/1.0.0": {
+        "dependencies": {
+          "UnpakSipaksi.Common.Domain": "1.0.0",
+          "UnpakSipaksi.Common.Presentation": "1.0.0",
+          "UnpakSipaksi.Modules.KewajaranTahapanTarget.Application": "1.0.0"
+        },
+        "runtime": {
+          "UnpakSipaksi.Modules.KewajaranTahapanTarget.Presentation.dll": {}
+        }
+      },
+      "UnpakSipaksi.Modules.Komponen.Application/1.0.0": {
+        "dependencies": {
+          "Dapper": "2.1.35",
+          "MediatR": "12.4.1",
+          "UnpakSipaksi.Common.Application": "1.0.0",
+          "UnpakSipaksi.Common.Domain": "1.0.0",
+          "UnpakSipaksi.Modules.Komponen.Domain": "1.0.0"
+        },
+        "runtime": {
+          "UnpakSipaksi.Modules.Komponen.Application.dll": {}
+        }
+      },
+      "UnpakSipaksi.Modules.Komponen.Domain/1.0.0": {
+        "dependencies": {
+          "UnpakSipaksi.Common.Domain": "1.0.0"
+        },
+        "runtime": {
+          "UnpakSipaksi.Modules.Komponen.Domain.dll": {}
+        }
+      },
+      "UnpakSipaksi.Modules.Komponen.Infrastructure/1.0.0": {
+        "dependencies": {
+          "Microsoft.EntityFrameworkCore": "8.0.0",
+          "MySql.EntityFrameworkCore": "8.0.0",
+          "UnpakSipaksi.Common.Application": "1.0.0",
+          "UnpakSipaksi.Common.Infrastructure": "1.0.0",
+          "UnpakSipaksi.Modules.Komponen.Application": "1.0.0",
+          "UnpakSipaksi.Modules.Komponen.Domain": "1.0.0",
+          "UnpakSipaksi.Modules.Komponen.Presentation": "1.0.0"
+        },
+        "runtime": {
+          "UnpakSipaksi.Modules.Komponen.Infrastructure.dll": {}
+        }
+      },
+      "UnpakSipaksi.Modules.Komponen.Presentation/1.0.0": {
+        "dependencies": {
+          "UnpakSipaksi.Common.Domain": "1.0.0",
+          "UnpakSipaksi.Common.Presentation": "1.0.0",
+          "UnpakSipaksi.Modules.Komponen.Application": "1.0.0"
+        },
+        "runtime": {
+          "UnpakSipaksi.Modules.Komponen.Presentation.dll": {}
+        }
+      },
+      "UnpakSipaksi.Modules.KredibilitasMitraDukungan.Application/1.0.0": {
+        "dependencies": {
+          "Dapper": "2.1.35",
+          "MediatR": "12.4.1",
+          "UnpakSipaksi.Common.Application": "1.0.0",
+          "UnpakSipaksi.Common.Domain": "1.0.0",
+          "UnpakSipaksi.Modules.KredibilitasMitraDukungan.Domain": "1.0.0"
+        },
+        "runtime": {
+          "UnpakSipaksi.Modules.KredibilitasMitraDukungan.Application.dll": {}
+        }
+      },
+      "UnpakSipaksi.Modules.KredibilitasMitraDukungan.Domain/1.0.0": {
+        "dependencies": {
+          "UnpakSipaksi.Common.Domain": "1.0.0"
+        },
+        "runtime": {
+          "UnpakSipaksi.Modules.KredibilitasMitraDukungan.Domain.dll": {}
+        }
+      },
+      "UnpakSipaksi.Modules.KredibilitasMitraDukungan.Infrastructure/1.0.0": {
+        "dependencies": {
+          "Microsoft.EntityFrameworkCore": "8.0.0",
+          "MySql.EntityFrameworkCore": "8.0.0",
+          "UnpakSipaksi.Common.Application": "1.0.0",
+          "UnpakSipaksi.Common.Infrastructure": "1.0.0",
+          "UnpakSipaksi.Modules.KredibilitasMitraDukungan.Application": "1.0.0",
+          "UnpakSipaksi.Modules.KredibilitasMitraDukungan.Domain": "1.0.0",
+          "UnpakSipaksi.Modules.KredibilitasMitraDukungan.Presentation": "1.0.0"
+        },
+        "runtime": {
+          "UnpakSipaksi.Modules.KredibilitasMitraDukungan.Infrastructure.dll": {}
+        }
+      },
+      "UnpakSipaksi.Modules.KredibilitasMitraDukungan.Presentation/1.0.0": {
+        "dependencies": {
+          "UnpakSipaksi.Common.Domain": "1.0.0",
+          "UnpakSipaksi.Common.Presentation": "1.0.0",
+          "UnpakSipaksi.Modules.KredibilitasMitraDukungan.Application": "1.0.0"
+        },
+        "runtime": {
+          "UnpakSipaksi.Modules.KredibilitasMitraDukungan.Presentation.dll": {}
+        }
+      },
+      "UnpakSipaksi.Modules.KualitasIpteks.Application/1.0.0": {
+        "dependencies": {
+          "Dapper": "2.1.35",
+          "MediatR": "12.4.1",
+          "UnpakSipaksi.Common.Application": "1.0.0",
+          "UnpakSipaksi.Common.Domain": "1.0.0",
+          "UnpakSipaksi.Modules.KualitasIpteks.Domain": "1.0.0"
+        },
+        "runtime": {
+          "UnpakSipaksi.Modules.KualitasIpteks.Application.dll": {}
+        }
+      },
+      "UnpakSipaksi.Modules.KualitasIpteks.Domain/1.0.0": {
+        "dependencies": {
+          "UnpakSipaksi.Common.Domain": "1.0.0"
+        },
+        "runtime": {
+          "UnpakSipaksi.Modules.KualitasIpteks.Domain.dll": {}
+        }
+      },
+      "UnpakSipaksi.Modules.KualitasIpteks.Infrastructure/1.0.0": {
+        "dependencies": {
+          "Microsoft.EntityFrameworkCore": "8.0.0",
+          "MySql.EntityFrameworkCore": "8.0.0",
+          "UnpakSipaksi.Common.Application": "1.0.0",
+          "UnpakSipaksi.Common.Infrastructure": "1.0.0",
+          "UnpakSipaksi.Modules.KualitasIpteks.Application": "1.0.0",
+          "UnpakSipaksi.Modules.KualitasIpteks.Domain": "1.0.0",
+          "UnpakSipaksi.Modules.KualitasIpteks.Presentation": "1.0.0"
+        },
+        "runtime": {
+          "UnpakSipaksi.Modules.KualitasIpteks.Infrastructure.dll": {}
+        }
+      },
+      "UnpakSipaksi.Modules.KualitasIpteks.Presentation/1.0.0": {
+        "dependencies": {
+          "UnpakSipaksi.Common.Domain": "1.0.0",
+          "UnpakSipaksi.Common.Presentation": "1.0.0",
+          "UnpakSipaksi.Modules.KualitasIpteks.Application": "1.0.0"
+        },
+        "runtime": {
+          "UnpakSipaksi.Modules.KualitasIpteks.Presentation.dll": {}
+        }
+      },
+      "UnpakSipaksi.Modules.KualitasKuantitasPublikasiJurnalIlmiah.Application/1.0.0": {
+        "dependencies": {
+          "Dapper": "2.1.35",
+          "MediatR": "12.4.1",
+          "UnpakSipaksi.Common.Application": "1.0.0",
+          "UnpakSipaksi.Common.Domain": "1.0.0",
+          "UnpakSipaksi.Modules.KualitasKuantitasPublikasiJurnalIlmiah.Domain": "1.0.0"
+        },
+        "runtime": {
+          "UnpakSipaksi.Modules.KualitasKuantitasPublikasiJurnalIlmiah.Application.dll": {}
+        }
+      },
+      "UnpakSipaksi.Modules.KualitasKuantitasPublikasiJurnalIlmiah.Domain/1.0.0": {
+        "dependencies": {
+          "UnpakSipaksi.Common.Domain": "1.0.0"
+        },
+        "runtime": {
+          "UnpakSipaksi.Modules.KualitasKuantitasPublikasiJurnalIlmiah.Domain.dll": {}
+        }
+      },
+      "UnpakSipaksi.Modules.KualitasKuantitasPublikasiJurnalIlmiah.Infrastructure/1.0.0": {
+        "dependencies": {
+          "Microsoft.EntityFrameworkCore": "8.0.0",
+          "MySql.EntityFrameworkCore": "8.0.0",
+          "UnpakSipaksi.Common.Application": "1.0.0",
+          "UnpakSipaksi.Common.Infrastructure": "1.0.0",
+          "UnpakSipaksi.Modules.KualitasKuantitasPublikasiJurnalIlmiah.Application": "1.0.0",
+          "UnpakSipaksi.Modules.KualitasKuantitasPublikasiJurnalIlmiah.Domain": "1.0.0",
+          "UnpakSipaksi.Modules.KualitasKuantitasPublikasiJurnalIlmiah.Presentation": "1.0.0"
+        },
+        "runtime": {
+          "UnpakSipaksi.Modules.KualitasKuantitasPublikasiJurnalIlmiah.Infrastructure.dll": {}
+        }
+      },
+      "UnpakSipaksi.Modules.KualitasKuantitasPublikasiJurnalIlmiah.Presentation/1.0.0": {
+        "dependencies": {
+          "UnpakSipaksi.Common.Domain": "1.0.0",
+          "UnpakSipaksi.Common.Presentation": "1.0.0",
+          "UnpakSipaksi.Modules.KualitasKuantitasPublikasiJurnalIlmiah.Application": "1.0.0"
+        },
+        "runtime": {
+          "UnpakSipaksi.Modules.KualitasKuantitasPublikasiJurnalIlmiah.Presentation.dll": {}
+        }
+      },
+      "UnpakSipaksi.Modules.KualitasKuantitasPublikasiProsiding.Application/1.0.0": {
+        "dependencies": {
+          "Dapper": "2.1.35",
+          "MediatR": "12.4.1",
+          "UnpakSipaksi.Common.Application": "1.0.0",
+          "UnpakSipaksi.Common.Domain": "1.0.0",
+          "UnpakSipaksi.Modules.KualitasKuantitasPublikasiProsiding.Domain": "1.0.0"
+        },
+        "runtime": {
+          "UnpakSipaksi.Modules.KualitasKuantitasPublikasiProsiding.Application.dll": {}
+        }
+      },
+      "UnpakSipaksi.Modules.KualitasKuantitasPublikasiProsiding.Domain/1.0.0": {
+        "dependencies": {
+          "UnpakSipaksi.Common.Domain": "1.0.0"
+        },
+        "runtime": {
+          "UnpakSipaksi.Modules.KualitasKuantitasPublikasiProsiding.Domain.dll": {}
+        }
+      },
+      "UnpakSipaksi.Modules.KualitasKuantitasPublikasiProsiding.Infrastructure/1.0.0": {
+        "dependencies": {
+          "Microsoft.EntityFrameworkCore": "8.0.0",
+          "MySql.EntityFrameworkCore": "8.0.0",
+          "UnpakSipaksi.Common.Application": "1.0.0",
+          "UnpakSipaksi.Common.Infrastructure": "1.0.0",
+          "UnpakSipaksi.Modules.KualitasKuantitasPublikasiProsiding.Application": "1.0.0",
+          "UnpakSipaksi.Modules.KualitasKuantitasPublikasiProsiding.Domain": "1.0.0",
+          "UnpakSipaksi.Modules.KualitasKuantitasPublikasiProsiding.Presentation": "1.0.0"
+        },
+        "runtime": {
+          "UnpakSipaksi.Modules.KualitasKuantitasPublikasiProsiding.Infrastructure.dll": {}
+        }
+      },
+      "UnpakSipaksi.Modules.KualitasKuantitasPublikasiProsiding.Presentation/1.0.0": {
+        "dependencies": {
+          "UnpakSipaksi.Common.Domain": "1.0.0",
+          "UnpakSipaksi.Common.Presentation": "1.0.0",
+          "UnpakSipaksi.Modules.KualitasKuantitasPublikasiProsiding.Application": "1.0.0"
+        },
+        "runtime": {
+          "UnpakSipaksi.Modules.KualitasKuantitasPublikasiProsiding.Presentation.dll": {}
+        }
+      },
+      "UnpakSipaksi.Modules.KuantitasStatusKi.Application/1.0.0": {
+        "dependencies": {
+          "Dapper": "2.1.35",
+          "MediatR": "12.4.1",
+          "UnpakSipaksi.Common.Application": "1.0.0",
+          "UnpakSipaksi.Common.Domain": "1.0.0",
+          "UnpakSipaksi.Modules.KuantitasStatusKi.Domain": "1.0.0"
+        },
+        "runtime": {
+          "UnpakSipaksi.Modules.KuantitasStatusKi.Application.dll": {}
+        }
+      },
+      "UnpakSipaksi.Modules.KuantitasStatusKi.Domain/1.0.0": {
+        "dependencies": {
+          "UnpakSipaksi.Common.Domain": "1.0.0"
+        },
+        "runtime": {
+          "UnpakSipaksi.Modules.KuantitasStatusKi.Domain.dll": {}
+        }
+      },
+      "UnpakSipaksi.Modules.KuantitasStatusKi.Infrastructure/1.0.0": {
+        "dependencies": {
+          "Microsoft.EntityFrameworkCore": "8.0.0",
+          "MySql.EntityFrameworkCore": "8.0.0",
+          "UnpakSipaksi.Common.Application": "1.0.0",
+          "UnpakSipaksi.Common.Infrastructure": "1.0.0",
+          "UnpakSipaksi.Modules.KuantitasStatusKi.Application": "1.0.0",
+          "UnpakSipaksi.Modules.KuantitasStatusKi.Domain": "1.0.0",
+          "UnpakSipaksi.Modules.KuantitasStatusKi.Presentation": "1.0.0"
+        },
+        "runtime": {
+          "UnpakSipaksi.Modules.KuantitasStatusKi.Infrastructure.dll": {}
+        }
+      },
+      "UnpakSipaksi.Modules.KuantitasStatusKi.Presentation/1.0.0": {
+        "dependencies": {
+          "UnpakSipaksi.Common.Domain": "1.0.0",
+          "UnpakSipaksi.Common.Presentation": "1.0.0",
+          "UnpakSipaksi.Modules.KuantitasStatusKi.Application": "1.0.0"
+        },
+        "runtime": {
+          "UnpakSipaksi.Modules.KuantitasStatusKi.Presentation.dll": {}
+        }
+      },
       "UnpakSipaksi.Modules.TemaPenelitian.Application/1.0.0": {
         "dependencies": {
           "Dapper": "2.1.35",
@@ -2238,6 +2749,20 @@
       "sha512": "sha512-FYv95bNT4UwcNA+G/J1oX5OpRiSUxteXaUt2BJbRSdRNiIUNbggJF69wy6mnk2wYToaanpdXZdCwVylt96MpwQ==",
       "path": "mediatr.contracts/2.0.1",
       "hashPath": "mediatr.contracts.2.0.1.nupkg.sha512"
+    },
+    "Microsoft.AspNetCore.Authentication.JwtBearer/8.0.13": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-EUNaX3F4fALAfvp7wsCqjqziu1lTNwYRFbIcVJEt6vInWxEpscAM/pcG6GBOx3WcmSRdB7sqtKAKSkyY6XhTig==",
+      "path": "microsoft.aspnetcore.authentication.jwtbearer/8.0.13",
+      "hashPath": "microsoft.aspnetcore.authentication.jwtbearer.8.0.13.nupkg.sha512"
+    },
+    "Microsoft.AspNetCore.Http.Features/5.0.17": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-3jG2xS+dx8DDCGV/F+STdPTg89lX3ao3dF/VEPvJaz3wzBIjuadipTtYNEXDIVuOPZwb6jdmhrX9jkzOIBm5cw==",
+      "path": "microsoft.aspnetcore.http.features/5.0.17",
+      "hashPath": "microsoft.aspnetcore.http.features.5.0.17.nupkg.sha512"
     },
     "Microsoft.Bcl.AsyncInterfaces/6.0.0": {
       "type": "package",
@@ -2434,6 +2959,48 @@
       "sha512": "sha512-bXJEZrW9ny8vjMF1JV253WeLhpEVzFo1lyaZu1vQ4ZxWUlVvknZ/+ftFgVheLubb4eZPSwwxBeqS1JkCOjxd8g==",
       "path": "microsoft.extensions.primitives/8.0.0",
       "hashPath": "microsoft.extensions.primitives.8.0.0.nupkg.sha512"
+    },
+    "Microsoft.IdentityModel.Abstractions/7.1.2": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-33eTIA2uO/L9utJjZWbKsMSVsQf7F8vtd6q5mQX7ZJzNvCpci5fleD6AeANGlbbb7WX7XKxq9+Dkb5e3GNDrmQ==",
+      "path": "microsoft.identitymodel.abstractions/7.1.2",
+      "hashPath": "microsoft.identitymodel.abstractions.7.1.2.nupkg.sha512"
+    },
+    "Microsoft.IdentityModel.JsonWebTokens/7.1.2": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-cloLGeZolXbCJhJBc5OC05uhrdhdPL6MWHuVUnkkUvPDeK7HkwThBaLZ1XjBQVk9YhxXE2OvHXnKi0PLleXxDg==",
+      "path": "microsoft.identitymodel.jsonwebtokens/7.1.2",
+      "hashPath": "microsoft.identitymodel.jsonwebtokens.7.1.2.nupkg.sha512"
+    },
+    "Microsoft.IdentityModel.Logging/7.1.2": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-YCxBt2EeJP8fcXk9desChkWI+0vFqFLvBwrz5hBMsoh0KJE6BC66DnzkdzkJNqMltLromc52dkdT206jJ38cTw==",
+      "path": "microsoft.identitymodel.logging/7.1.2",
+      "hashPath": "microsoft.identitymodel.logging.7.1.2.nupkg.sha512"
+    },
+    "Microsoft.IdentityModel.Protocols/7.1.2": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-SydLwMRFx6EHPWJ+N6+MVaoArN1Htt92b935O3RUWPY1yUF63zEjvd3lBu79eWdZUwedP8TN2I5V9T3nackvIQ==",
+      "path": "microsoft.identitymodel.protocols/7.1.2",
+      "hashPath": "microsoft.identitymodel.protocols.7.1.2.nupkg.sha512"
+    },
+    "Microsoft.IdentityModel.Protocols.OpenIdConnect/7.1.2": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-6lHQoLXhnMQ42mGrfDkzbIOR3rzKM1W1tgTeMPLgLCqwwGw0d96xFi/UiX/fYsu7d6cD5MJiL3+4HuI8VU+sVQ==",
+      "path": "microsoft.identitymodel.protocols.openidconnect/7.1.2",
+      "hashPath": "microsoft.identitymodel.protocols.openidconnect.7.1.2.nupkg.sha512"
+    },
+    "Microsoft.IdentityModel.Tokens/7.1.2": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-oICJMqr3aNEDZOwnH5SK49bR6Z4aX0zEAnOLuhloumOSuqnNq+GWBdQyrgILnlcT5xj09xKCP/7Y7gJYB+ls/g==",
+      "path": "microsoft.identitymodel.tokens/7.1.2",
+      "hashPath": "microsoft.identitymodel.tokens.7.1.2.nupkg.sha512"
     },
     "Microsoft.NETCore.Platforms/3.1.0": {
       "type": "package",
@@ -2686,6 +3253,13 @@
       "sha512": "sha512-v+XbyYHaZjDfn0ENmJEV1VYLgGgCTx1gnfOBcppowbpOAriglYgGCvFCPr2EEZyBvXlpxbEsTwkOlInl107ahA==",
       "path": "system.drawing.common/4.7.0",
       "hashPath": "system.drawing.common.4.7.0.nupkg.sha512"
+    },
+    "System.IdentityModel.Tokens.Jwt/7.1.2": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-Thhbe1peAmtSBFaV/ohtykXiZSOkx59Da44hvtWfIMFofDA3M3LaVyjstACf2rKGn4dEDR2cUpRAZ0Xs/zB+7Q==",
+      "path": "system.identitymodel.tokens.jwt/7.1.2",
+      "hashPath": "system.identitymodel.tokens.jwt.7.1.2.nupkg.sha512"
     },
     "System.IO/4.3.0": {
       "type": "package",
@@ -3269,6 +3843,186 @@
       "sha512": ""
     },
     "UnpakSipaksi.Modules.KesesuaianWaktuRabLuaranFasilitas.Presentation/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    },
+    "UnpakSipaksi.Modules.KetajamanAnalisis.Application/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    },
+    "UnpakSipaksi.Modules.KetajamanAnalisis.Domain/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    },
+    "UnpakSipaksi.Modules.KetajamanAnalisis.Infrastructure/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    },
+    "UnpakSipaksi.Modules.KetajamanAnalisis.Presentation/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    },
+    "UnpakSipaksi.Modules.KetajamanPerumusanMasalah.Application/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    },
+    "UnpakSipaksi.Modules.KetajamanPerumusanMasalah.Domain/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    },
+    "UnpakSipaksi.Modules.KetajamanPerumusanMasalah.Infrastructure/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    },
+    "UnpakSipaksi.Modules.KetajamanPerumusanMasalah.Presentation/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    },
+    "UnpakSipaksi.Modules.KewajaranTahapanTarget.Application/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    },
+    "UnpakSipaksi.Modules.KewajaranTahapanTarget.Domain/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    },
+    "UnpakSipaksi.Modules.KewajaranTahapanTarget.Infrastructure/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    },
+    "UnpakSipaksi.Modules.KewajaranTahapanTarget.Presentation/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    },
+    "UnpakSipaksi.Modules.Komponen.Application/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    },
+    "UnpakSipaksi.Modules.Komponen.Domain/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    },
+    "UnpakSipaksi.Modules.Komponen.Infrastructure/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    },
+    "UnpakSipaksi.Modules.Komponen.Presentation/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    },
+    "UnpakSipaksi.Modules.KredibilitasMitraDukungan.Application/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    },
+    "UnpakSipaksi.Modules.KredibilitasMitraDukungan.Domain/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    },
+    "UnpakSipaksi.Modules.KredibilitasMitraDukungan.Infrastructure/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    },
+    "UnpakSipaksi.Modules.KredibilitasMitraDukungan.Presentation/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    },
+    "UnpakSipaksi.Modules.KualitasIpteks.Application/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    },
+    "UnpakSipaksi.Modules.KualitasIpteks.Domain/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    },
+    "UnpakSipaksi.Modules.KualitasIpteks.Infrastructure/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    },
+    "UnpakSipaksi.Modules.KualitasIpteks.Presentation/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    },
+    "UnpakSipaksi.Modules.KualitasKuantitasPublikasiJurnalIlmiah.Application/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    },
+    "UnpakSipaksi.Modules.KualitasKuantitasPublikasiJurnalIlmiah.Domain/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    },
+    "UnpakSipaksi.Modules.KualitasKuantitasPublikasiJurnalIlmiah.Infrastructure/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    },
+    "UnpakSipaksi.Modules.KualitasKuantitasPublikasiJurnalIlmiah.Presentation/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    },
+    "UnpakSipaksi.Modules.KualitasKuantitasPublikasiProsiding.Application/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    },
+    "UnpakSipaksi.Modules.KualitasKuantitasPublikasiProsiding.Domain/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    },
+    "UnpakSipaksi.Modules.KualitasKuantitasPublikasiProsiding.Infrastructure/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    },
+    "UnpakSipaksi.Modules.KualitasKuantitasPublikasiProsiding.Presentation/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    },
+    "UnpakSipaksi.Modules.KuantitasStatusKi.Application/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    },
+    "UnpakSipaksi.Modules.KuantitasStatusKi.Domain/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    },
+    "UnpakSipaksi.Modules.KuantitasStatusKi.Infrastructure/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    },
+    "UnpakSipaksi.Modules.KuantitasStatusKi.Presentation/1.0.0": {
       "type": "project",
       "serviceable": false,
       "sha512": ""

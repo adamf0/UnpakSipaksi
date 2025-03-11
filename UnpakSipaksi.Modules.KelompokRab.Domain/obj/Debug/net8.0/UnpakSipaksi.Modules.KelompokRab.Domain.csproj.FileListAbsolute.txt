@@ -13,3 +13,4 @@ C:\dev_net\UnpakSipaksi\UnpakSipaksi.Modules.KelompokRab.Domain\bin\Debug\net8.0
 C:\dev_net\UnpakSipaksi\UnpakSipaksi.Modules.KelompokRab.Domain\bin\Debug\net8.0\UnpakSipaksi.Common.Domain.pdb
 C:\dev_net\UnpakSipaksi\UnpakSipaksi.Modules.KelompokRab.Domain\obj\Debug\net8.0\UnpakSipaksi.Modules.KelompokRab.Domain.csproj.AssemblyReference.cache
 C:\dev_net\UnpakSipaksi\UnpakSipaksi.Modules.KelompokRab.Domain\obj\Debug\net8.0\UnpakSip.96804AA5.Up2Date
+C:\dev_net\UnpakSipaksi\UnpakSipaksi.Modules.KelompokRab.Domain\obj\Debug\net8.0\UnpakSipaksi.Modules.KelompokRab.Domain.sourcelink.json

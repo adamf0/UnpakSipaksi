@@ -1,10 +1,6 @@
-﻿using Microsoft.Extensions.DependencyInjection;
-using System;
-using System.Collections.Generic;
-using System.Linq;
+﻿using FluentValidation;
+using Microsoft.Extensions.DependencyInjection;
 using System.Reflection;
-using System.Text;
-using System.Threading.Tasks;
 using UnpakSipaksi.Common.Application.Behaviors;
 
 namespace UnpakSipaksi.Common.Application
@@ -23,7 +19,7 @@ namespace UnpakSipaksi.Common.Application
                 config.AddOpenBehavior(typeof(ValidationPipelineBehavior<,>));
             });
 
-            //services.AddValidatorsFromAssemblies(moduleAssemblies, includeInternalTypes: true);
+            services.AddValidatorsFromAssemblies(moduleAssemblies, includeInternalTypes: true);
 
             return services;
         }

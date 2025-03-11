@@ -9,3 +9,4 @@ C:\dev_net\UnpakSipaksi\UnpakSipaksi.Modules.FokusPenelitian.PublicApi\obj\Debug
 C:\dev_net\UnpakSipaksi\UnpakSipaksi.Modules.FokusPenelitian.PublicApi\obj\Debug\net8.0\refint\UnpakSipaksi.Modules.FokusPenelitian.PublicApi.dll
 C:\dev_net\UnpakSipaksi\UnpakSipaksi.Modules.FokusPenelitian.PublicApi\obj\Debug\net8.0\UnpakSipaksi.Modules.FokusPenelitian.PublicApi.pdb
 C:\dev_net\UnpakSipaksi\UnpakSipaksi.Modules.FokusPenelitian.PublicApi\obj\Debug\net8.0\ref\UnpakSipaksi.Modules.FokusPenelitian.PublicApi.dll
+C:\dev_net\UnpakSipaksi\UnpakSipaksi.Modules.FokusPenelitian.PublicApi\obj\Debug\net8.0\UnpakSipaksi.Modules.FokusPenelitian.PublicApi.sourcelink.json

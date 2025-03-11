@@ -25,3 +25,4 @@ C:\dev_net\UnpakSipaksi\UnpakSipaksi.Modules.KelompokRab.Infrastructure\obj\Debu
 C:\dev_net\UnpakSipaksi\UnpakSipaksi.Modules.KelompokRab.Infrastructure\obj\Debug\net8.0\refint\UnpakSipaksi.Modules.KelompokRab.Infrastructure.dll
 C:\dev_net\UnpakSipaksi\UnpakSipaksi.Modules.KelompokRab.Infrastructure\obj\Debug\net8.0\UnpakSipaksi.Modules.KelompokRab.Infrastructure.pdb
 C:\dev_net\UnpakSipaksi\UnpakSipaksi.Modules.KelompokRab.Infrastructure\obj\Debug\net8.0\ref\UnpakSipaksi.Modules.KelompokRab.Infrastructure.dll
+C:\dev_net\UnpakSipaksi\UnpakSipaksi.Modules.KelompokRab.Infrastructure\obj\Debug\net8.0\UnpakSipaksi.Modules.KelompokRab.Infrastructure.sourcelink.json

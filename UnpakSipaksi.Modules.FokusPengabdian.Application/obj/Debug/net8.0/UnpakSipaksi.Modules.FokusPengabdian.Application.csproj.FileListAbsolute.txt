@@ -17,3 +17,4 @@ C:\dev_net\UnpakSipaksi\UnpakSipaksi.Modules.FokusPengabdian.Application\obj\Deb
 C:\dev_net\UnpakSipaksi\UnpakSipaksi.Modules.FokusPengabdian.Application\obj\Debug\net8.0\refint\UnpakSipaksi.Modules.FokusPengabdian.Application.dll
 C:\dev_net\UnpakSipaksi\UnpakSipaksi.Modules.FokusPengabdian.Application\obj\Debug\net8.0\UnpakSipaksi.Modules.FokusPengabdian.Application.pdb
 C:\dev_net\UnpakSipaksi\UnpakSipaksi.Modules.FokusPengabdian.Application\obj\Debug\net8.0\ref\UnpakSipaksi.Modules.FokusPengabdian.Application.dll
+C:\dev_net\UnpakSipaksi\UnpakSipaksi.Modules.FokusPengabdian.Application\obj\Debug\net8.0\UnpakSipaksi.Modules.FokusPengabdian.Application.sourcelink.json

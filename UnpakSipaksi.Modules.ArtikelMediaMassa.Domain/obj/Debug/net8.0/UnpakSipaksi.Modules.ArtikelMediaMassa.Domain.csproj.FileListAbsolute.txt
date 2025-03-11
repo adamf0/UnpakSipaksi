@@ -13,3 +13,4 @@ C:\dev_net\UnpakSipaksi\UnpakSipaksi.Modules.ArtikelMediaMassa.Domain\obj\Debug\
 C:\dev_net\UnpakSipaksi\UnpakSipaksi.Modules.ArtikelMediaMassa.Domain\obj\Debug\net8.0\refint\UnpakSipaksi.Modules.ArtikelMediaMassa.Domain.dll
 C:\dev_net\UnpakSipaksi\UnpakSipaksi.Modules.ArtikelMediaMassa.Domain\obj\Debug\net8.0\UnpakSipaksi.Modules.ArtikelMediaMassa.Domain.pdb
 C:\dev_net\UnpakSipaksi\UnpakSipaksi.Modules.ArtikelMediaMassa.Domain\obj\Debug\net8.0\ref\UnpakSipaksi.Modules.ArtikelMediaMassa.Domain.dll
+C:\dev_net\UnpakSipaksi\UnpakSipaksi.Modules.ArtikelMediaMassa.Domain\obj\Debug\net8.0\UnpakSipaksi.Modules.ArtikelMediaMassa.Domain.sourcelink.json

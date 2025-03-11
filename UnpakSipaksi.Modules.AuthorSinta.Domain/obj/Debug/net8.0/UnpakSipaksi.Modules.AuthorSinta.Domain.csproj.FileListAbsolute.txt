@@ -13,3 +13,4 @@ C:\dev_net\UnpakSipaksi\UnpakSipaksi.Modules.AuthorSinta.Domain\obj\Debug\net8.0
 C:\dev_net\UnpakSipaksi\UnpakSipaksi.Modules.AuthorSinta.Domain\obj\Debug\net8.0\refint\UnpakSipaksi.Modules.AuthorSinta.Domain.dll
 C:\dev_net\UnpakSipaksi\UnpakSipaksi.Modules.AuthorSinta.Domain\obj\Debug\net8.0\UnpakSipaksi.Modules.AuthorSinta.Domain.pdb
 C:\dev_net\UnpakSipaksi\UnpakSipaksi.Modules.AuthorSinta.Domain\obj\Debug\net8.0\ref\UnpakSipaksi.Modules.AuthorSinta.Domain.dll
+C:\dev_net\UnpakSipaksi\UnpakSipaksi.Modules.AuthorSinta.Domain\obj\Debug\net8.0\UnpakSipaksi.Modules.AuthorSinta.Domain.sourcelink.json

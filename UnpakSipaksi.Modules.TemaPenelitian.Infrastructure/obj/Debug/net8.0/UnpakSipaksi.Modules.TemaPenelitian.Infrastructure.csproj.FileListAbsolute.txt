@@ -29,3 +29,4 @@ C:\dev_net\UnpakSipaksi\UnpakSipaksi.Modules.TemaPenelitian.Infrastructure\obj\D
 C:\dev_net\UnpakSipaksi\UnpakSipaksi.Modules.TemaPenelitian.Infrastructure\obj\Debug\net8.0\ref\UnpakSipaksi.Modules.TemaPenelitian.Infrastructure.dll
 C:\dev_net\UnpakSipaksi\UnpakSipaksi.Modules.TemaPenelitian.Infrastructure\bin\Debug\net8.0\UnpakSipaksi.Modules.TemaPenelitian.PublicApi.dll
 C:\dev_net\UnpakSipaksi\UnpakSipaksi.Modules.TemaPenelitian.Infrastructure\bin\Debug\net8.0\UnpakSipaksi.Modules.TemaPenelitian.PublicApi.pdb
+C:\dev_net\UnpakSipaksi\UnpakSipaksi.Modules.TemaPenelitian.Infrastructure\obj\Debug\net8.0\UnpakSipaksi.Modules.TemaPenelitian.Infrastructure.sourcelink.json

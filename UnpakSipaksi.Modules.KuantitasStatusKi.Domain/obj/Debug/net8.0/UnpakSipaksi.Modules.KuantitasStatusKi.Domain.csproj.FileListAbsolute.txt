@@ -1,0 +1,16 @@
+C:\dev_net\UnpakSipaksi\UnpakSipaksi.Modules.KuantitasStatusKi.Domain\bin\Debug\net8.0\UnpakSipaksi.Modules.KuantitasStatusKi.Domain.deps.json
+C:\dev_net\UnpakSipaksi\UnpakSipaksi.Modules.KuantitasStatusKi.Domain\bin\Debug\net8.0\UnpakSipaksi.Modules.KuantitasStatusKi.Domain.dll
+C:\dev_net\UnpakSipaksi\UnpakSipaksi.Modules.KuantitasStatusKi.Domain\bin\Debug\net8.0\UnpakSipaksi.Modules.KuantitasStatusKi.Domain.pdb
+C:\dev_net\UnpakSipaksi\UnpakSipaksi.Modules.KuantitasStatusKi.Domain\bin\Debug\net8.0\UnpakSipaksi.Common.Domain.dll
+C:\dev_net\UnpakSipaksi\UnpakSipaksi.Modules.KuantitasStatusKi.Domain\bin\Debug\net8.0\UnpakSipaksi.Common.Domain.pdb
+C:\dev_net\UnpakSipaksi\UnpakSipaksi.Modules.KuantitasStatusKi.Domain\obj\Debug\net8.0\UnpakSipaksi.Modules.KuantitasStatusKi.Domain.csproj.AssemblyReference.cache
+C:\dev_net\UnpakSipaksi\UnpakSipaksi.Modules.KuantitasStatusKi.Domain\obj\Debug\net8.0\UnpakSipaksi.Modules.KuantitasStatusKi.Domain.GeneratedMSBuildEditorConfig.editorconfig
+C:\dev_net\UnpakSipaksi\UnpakSipaksi.Modules.KuantitasStatusKi.Domain\obj\Debug\net8.0\UnpakSipaksi.Modules.KuantitasStatusKi.Domain.AssemblyInfoInputs.cache
+C:\dev_net\UnpakSipaksi\UnpakSipaksi.Modules.KuantitasStatusKi.Domain\obj\Debug\net8.0\UnpakSipaksi.Modules.KuantitasStatusKi.Domain.AssemblyInfo.cs
+C:\dev_net\UnpakSipaksi\UnpakSipaksi.Modules.KuantitasStatusKi.Domain\obj\Debug\net8.0\UnpakSipaksi.Modules.KuantitasStatusKi.Domain.csproj.CoreCompileInputs.cache
+C:\dev_net\UnpakSipaksi\UnpakSipaksi.Modules.KuantitasStatusKi.Domain\obj\Debug\net8.0\UnpakSipaksi.Modules.KuantitasStatusKi.Domain.sourcelink.json
+C:\dev_net\UnpakSipaksi\UnpakSipaksi.Modules.KuantitasStatusKi.Domain\obj\Debug\net8.0\UnpakSip.2C5C47FA.Up2Date
+C:\dev_net\UnpakSipaksi\UnpakSipaksi.Modules.KuantitasStatusKi.Domain\obj\Debug\net8.0\UnpakSipaksi.Modules.KuantitasStatusKi.Domain.dll
+C:\dev_net\UnpakSipaksi\UnpakSipaksi.Modules.KuantitasStatusKi.Domain\obj\Debug\net8.0\refint\UnpakSipaksi.Modules.KuantitasStatusKi.Domain.dll
+C:\dev_net\UnpakSipaksi\UnpakSipaksi.Modules.KuantitasStatusKi.Domain\obj\Debug\net8.0\UnpakSipaksi.Modules.KuantitasStatusKi.Domain.pdb
+C:\dev_net\UnpakSipaksi\UnpakSipaksi.Modules.KuantitasStatusKi.Domain\obj\Debug\net8.0\ref\UnpakSipaksi.Modules.KuantitasStatusKi.Domain.dll

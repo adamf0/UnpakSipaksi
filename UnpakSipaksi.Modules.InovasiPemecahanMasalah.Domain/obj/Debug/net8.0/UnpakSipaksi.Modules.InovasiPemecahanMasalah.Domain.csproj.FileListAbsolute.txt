@@ -13,3 +13,4 @@ C:\dev_net\UnpakSipaksi\UnpakSipaksi.Modules.InovasiPemecahanMasalah.Domain\obj\
 C:\dev_net\UnpakSipaksi\UnpakSipaksi.Modules.InovasiPemecahanMasalah.Domain\obj\Debug\net8.0\refint\UnpakSipaksi.Modules.InovasiPemecahanMasalah.Domain.dll
 C:\dev_net\UnpakSipaksi\UnpakSipaksi.Modules.InovasiPemecahanMasalah.Domain\obj\Debug\net8.0\UnpakSipaksi.Modules.InovasiPemecahanMasalah.Domain.pdb
 C:\dev_net\UnpakSipaksi\UnpakSipaksi.Modules.InovasiPemecahanMasalah.Domain\obj\Debug\net8.0\ref\UnpakSipaksi.Modules.InovasiPemecahanMasalah.Domain.dll
+C:\dev_net\UnpakSipaksi\UnpakSipaksi.Modules.InovasiPemecahanMasalah.Domain\obj\Debug\net8.0\UnpakSipaksi.Modules.InovasiPemecahanMasalah.Domain.sourcelink.json

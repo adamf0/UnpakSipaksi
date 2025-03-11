@@ -23,3 +23,4 @@ C:\dev_net\UnpakSipaksi\UnpakSipaksi.Modules.TemaPenelitian.Presentation\obj\Deb
 C:\dev_net\UnpakSipaksi\UnpakSipaksi.Modules.TemaPenelitian.Presentation\obj\Debug\net8.0\refint\UnpakSipaksi.Modules.TemaPenelitian.Presentation.dll
 C:\dev_net\UnpakSipaksi\UnpakSipaksi.Modules.TemaPenelitian.Presentation\obj\Debug\net8.0\UnpakSipaksi.Modules.TemaPenelitian.Presentation.pdb
 C:\dev_net\UnpakSipaksi\UnpakSipaksi.Modules.TemaPenelitian.Presentation\obj\Debug\net8.0\ref\UnpakSipaksi.Modules.TemaPenelitian.Presentation.dll
+C:\dev_net\UnpakSipaksi\UnpakSipaksi.Modules.TemaPenelitian.Presentation\obj\Debug\net8.0\UnpakSipaksi.Modules.TemaPenelitian.Presentation.sourcelink.json

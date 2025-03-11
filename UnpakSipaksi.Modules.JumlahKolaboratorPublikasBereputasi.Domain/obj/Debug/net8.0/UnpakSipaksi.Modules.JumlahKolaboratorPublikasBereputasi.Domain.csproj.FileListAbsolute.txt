@@ -13,3 +13,4 @@ C:\dev_net\UnpakSipaksi\UnpakSipaksi.Modules.JumlahKolaboratorPublikasBereputasi
 C:\dev_net\UnpakSipaksi\UnpakSipaksi.Modules.JumlahKolaboratorPublikasBereputasi.Domain\obj\Debug\net8.0\refint\UnpakSipaksi.Modules.JumlahKolaboratorPublikasBereputasi.Domain.dll
 C:\dev_net\UnpakSipaksi\UnpakSipaksi.Modules.JumlahKolaboratorPublikasBereputasi.Domain\obj\Debug\net8.0\UnpakSipaksi.Modules.JumlahKolaboratorPublikasBereputasi.Domain.pdb
 C:\dev_net\UnpakSipaksi\UnpakSipaksi.Modules.JumlahKolaboratorPublikasBereputasi.Domain\obj\Debug\net8.0\ref\UnpakSipaksi.Modules.JumlahKolaboratorPublikasBereputasi.Domain.dll
+C:\dev_net\UnpakSipaksi\UnpakSipaksi.Modules.JumlahKolaboratorPublikasBereputasi.Domain\obj\Debug\net8.0\UnpakSipaksi.Modules.JumlahKolaboratorPublikasBereputasi.Domain.sourcelink.json

@@ -21,3 +21,4 @@ C:\dev_net\UnpakSipaksi\UnpakSipaksi.Modules.KelompokRab.Presentation\obj\Debug\
 C:\dev_net\UnpakSipaksi\UnpakSipaksi.Modules.KelompokRab.Presentation\obj\Debug\net8.0\refint\UnpakSipaksi.Modules.KelompokRab.Presentation.dll
 C:\dev_net\UnpakSipaksi\UnpakSipaksi.Modules.KelompokRab.Presentation\obj\Debug\net8.0\UnpakSipaksi.Modules.KelompokRab.Presentation.pdb
 C:\dev_net\UnpakSipaksi\UnpakSipaksi.Modules.KelompokRab.Presentation\obj\Debug\net8.0\ref\UnpakSipaksi.Modules.KelompokRab.Presentation.dll
+C:\dev_net\UnpakSipaksi\UnpakSipaksi.Modules.KelompokRab.Presentation\obj\Debug\net8.0\UnpakSipaksi.Modules.KelompokRab.Presentation.sourcelink.json

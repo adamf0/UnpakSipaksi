@@ -17,3 +17,4 @@ C:\dev_net\UnpakSipaksi\UnpakSipaksi.Modules.FokusPenelitian.Application\obj\Deb
 C:\dev_net\UnpakSipaksi\UnpakSipaksi.Modules.FokusPenelitian.Application\obj\Debug\net8.0\refint\UnpakSipaksi.Modules.FokusPenelitian.Application.dll
 C:\dev_net\UnpakSipaksi\UnpakSipaksi.Modules.FokusPenelitian.Application\obj\Debug\net8.0\UnpakSipaksi.Modules.FokusPenelitian.Application.pdb
 C:\dev_net\UnpakSipaksi\UnpakSipaksi.Modules.FokusPenelitian.Application\obj\Debug\net8.0\ref\UnpakSipaksi.Modules.FokusPenelitian.Application.dll
+C:\dev_net\UnpakSipaksi\UnpakSipaksi.Modules.FokusPenelitian.Application\obj\Debug\net8.0\UnpakSipaksi.Modules.FokusPenelitian.Application.sourcelink.json

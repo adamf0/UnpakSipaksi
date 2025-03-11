@@ -21,3 +21,4 @@ C:\dev_net\UnpakSipaksi\UnpakSipaksi.Modules.KebaruanReferensi.Presentation\obj\
 C:\dev_net\UnpakSipaksi\UnpakSipaksi.Modules.KebaruanReferensi.Presentation\obj\Debug\net8.0\refint\UnpakSipaksi.Modules.KebaruanReferensi.Presentation.dll
 C:\dev_net\UnpakSipaksi\UnpakSipaksi.Modules.KebaruanReferensi.Presentation\obj\Debug\net8.0\UnpakSipaksi.Modules.KebaruanReferensi.Presentation.pdb
 C:\dev_net\UnpakSipaksi\UnpakSipaksi.Modules.KebaruanReferensi.Presentation\obj\Debug\net8.0\ref\UnpakSipaksi.Modules.KebaruanReferensi.Presentation.dll
+C:\dev_net\UnpakSipaksi\UnpakSipaksi.Modules.KebaruanReferensi.Presentation\obj\Debug\net8.0\UnpakSipaksi.Modules.KebaruanReferensi.Presentation.sourcelink.json

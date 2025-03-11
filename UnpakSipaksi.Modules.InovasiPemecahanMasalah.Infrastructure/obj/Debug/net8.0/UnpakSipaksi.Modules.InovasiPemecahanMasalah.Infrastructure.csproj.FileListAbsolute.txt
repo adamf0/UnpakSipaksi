@@ -25,3 +25,4 @@ C:\dev_net\UnpakSipaksi\UnpakSipaksi.Modules.InovasiPemecahanMasalah.Infrastruct
 C:\dev_net\UnpakSipaksi\UnpakSipaksi.Modules.InovasiPemecahanMasalah.Infrastructure\bin\Debug\net8.0\UnpakSipaksi.Modules.InovasiPemecahanMasalah.Application.pdb
 C:\dev_net\UnpakSipaksi\UnpakSipaksi.Modules.InovasiPemecahanMasalah.Infrastructure\bin\Debug\net8.0\UnpakSipaksi.Modules.InovasiPemecahanMasalah.Domain.pdb
 C:\dev_net\UnpakSipaksi\UnpakSipaksi.Modules.InovasiPemecahanMasalah.Infrastructure\bin\Debug\net8.0\UnpakSipaksi.Modules.InovasiPemecahanMasalah.Presentation.pdb
+C:\dev_net\UnpakSipaksi\UnpakSipaksi.Modules.InovasiPemecahanMasalah.Infrastructure\obj\Debug\net8.0\UnpakSipaksi.Modules.InovasiPemecahanMasalah.Infrastructure.sourcelink.json

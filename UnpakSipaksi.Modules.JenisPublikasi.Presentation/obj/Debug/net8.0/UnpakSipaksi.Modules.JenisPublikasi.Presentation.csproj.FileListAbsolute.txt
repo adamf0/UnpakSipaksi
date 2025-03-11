@@ -21,3 +21,4 @@ C:\dev_net\UnpakSipaksi\UnpakSipaksi.Modules.JenisPublikasi.Presentation\obj\Deb
 C:\dev_net\UnpakSipaksi\UnpakSipaksi.Modules.JenisPublikasi.Presentation\obj\Debug\net8.0\refint\UnpakSipaksi.Modules.JenisPublikasi.Presentation.dll
 C:\dev_net\UnpakSipaksi\UnpakSipaksi.Modules.JenisPublikasi.Presentation\obj\Debug\net8.0\UnpakSipaksi.Modules.JenisPublikasi.Presentation.pdb
 C:\dev_net\UnpakSipaksi\UnpakSipaksi.Modules.JenisPublikasi.Presentation\obj\Debug\net8.0\ref\UnpakSipaksi.Modules.JenisPublikasi.Presentation.dll
+C:\dev_net\UnpakSipaksi\UnpakSipaksi.Modules.JenisPublikasi.Presentation\obj\Debug\net8.0\UnpakSipaksi.Modules.JenisPublikasi.Presentation.sourcelink.json

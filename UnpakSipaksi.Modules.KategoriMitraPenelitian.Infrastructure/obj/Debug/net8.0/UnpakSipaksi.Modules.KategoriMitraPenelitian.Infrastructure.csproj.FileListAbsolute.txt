@@ -25,3 +25,4 @@ C:\dev_net\UnpakSipaksi\UnpakSipaksi.Modules.KategoriMitraPenelitian.Infrastruct
 C:\dev_net\UnpakSipaksi\UnpakSipaksi.Modules.KategoriMitraPenelitian.Infrastructure\obj\Debug\net8.0\refint\UnpakSipaksi.Modules.KategoriMitraPenelitian.Infrastructure.dll
 C:\dev_net\UnpakSipaksi\UnpakSipaksi.Modules.KategoriMitraPenelitian.Infrastructure\obj\Debug\net8.0\UnpakSipaksi.Modules.KategoriMitraPenelitian.Infrastructure.pdb
 C:\dev_net\UnpakSipaksi\UnpakSipaksi.Modules.KategoriMitraPenelitian.Infrastructure\obj\Debug\net8.0\ref\UnpakSipaksi.Modules.KategoriMitraPenelitian.Infrastructure.dll
+C:\dev_net\UnpakSipaksi\UnpakSipaksi.Modules.KategoriMitraPenelitian.Infrastructure\obj\Debug\net8.0\UnpakSipaksi.Modules.KategoriMitraPenelitian.Infrastructure.sourcelink.json

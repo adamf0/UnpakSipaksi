@@ -17,3 +17,4 @@ C:\dev_net\UnpakSipaksi\UnpakSipaksi.Modules.KategoriSumberDana.Application\obj\
 C:\dev_net\UnpakSipaksi\UnpakSipaksi.Modules.KategoriSumberDana.Application\obj\Debug\net8.0\refint\UnpakSipaksi.Modules.KategoriSumberDana.Application.dll
 C:\dev_net\UnpakSipaksi\UnpakSipaksi.Modules.KategoriSumberDana.Application\obj\Debug\net8.0\UnpakSipaksi.Modules.KategoriSumberDana.Application.pdb
 C:\dev_net\UnpakSipaksi\UnpakSipaksi.Modules.KategoriSumberDana.Application\obj\Debug\net8.0\ref\UnpakSipaksi.Modules.KategoriSumberDana.Application.dll
+C:\dev_net\UnpakSipaksi\UnpakSipaksi.Modules.KategoriSumberDana.Application\obj\Debug\net8.0\UnpakSipaksi.Modules.KategoriSumberDana.Application.sourcelink.json

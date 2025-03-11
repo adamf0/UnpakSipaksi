@@ -17,3 +17,4 @@ C:\dev_net\UnpakSipaksi\UnpakSipaksi.Modules.KesesuaianJadwal.Application\obj\De
 C:\dev_net\UnpakSipaksi\UnpakSipaksi.Modules.KesesuaianJadwal.Application\obj\Debug\net8.0\refint\UnpakSipaksi.Modules.KesesuaianJadwal.Application.dll
 C:\dev_net\UnpakSipaksi\UnpakSipaksi.Modules.KesesuaianJadwal.Application\obj\Debug\net8.0\UnpakSipaksi.Modules.KesesuaianJadwal.Application.pdb
 C:\dev_net\UnpakSipaksi\UnpakSipaksi.Modules.KesesuaianJadwal.Application\obj\Debug\net8.0\ref\UnpakSipaksi.Modules.KesesuaianJadwal.Application.dll
+C:\dev_net\UnpakSipaksi\UnpakSipaksi.Modules.KesesuaianJadwal.Application\obj\Debug\net8.0\UnpakSipaksi.Modules.KesesuaianJadwal.Application.sourcelink.json

@@ -21,3 +21,4 @@ C:\dev_net\UnpakSipaksi\UnpakSipaksi.Modules.KejelasanPembagianTugasTim.Presenta
 C:\dev_net\UnpakSipaksi\UnpakSipaksi.Modules.KejelasanPembagianTugasTim.Presentation\obj\Debug\net8.0\refint\UnpakSipaksi.Modules.KejelasanPembagianTugasTim.Presentation.dll
 C:\dev_net\UnpakSipaksi\UnpakSipaksi.Modules.KejelasanPembagianTugasTim.Presentation\obj\Debug\net8.0\UnpakSipaksi.Modules.KejelasanPembagianTugasTim.Presentation.pdb
 C:\dev_net\UnpakSipaksi\UnpakSipaksi.Modules.KejelasanPembagianTugasTim.Presentation\obj\Debug\net8.0\ref\UnpakSipaksi.Modules.KejelasanPembagianTugasTim.Presentation.dll
+C:\dev_net\UnpakSipaksi\UnpakSipaksi.Modules.KejelasanPembagianTugasTim.Presentation\obj\Debug\net8.0\UnpakSipaksi.Modules.KejelasanPembagianTugasTim.Presentation.sourcelink.json

@@ -21,3 +21,4 @@ C:\dev_net\UnpakSipaksi\UnpakSipaksi.Modules.KesesuaianSolusiMasalahMitra.Presen
 C:\dev_net\UnpakSipaksi\UnpakSipaksi.Modules.KesesuaianSolusiMasalahMitra.Presentation\obj\Debug\net8.0\refint\UnpakSipaksi.Modules.KesesuaianSolusiMasalahMitra.Presentation.dll
 C:\dev_net\UnpakSipaksi\UnpakSipaksi.Modules.KesesuaianSolusiMasalahMitra.Presentation\obj\Debug\net8.0\UnpakSipaksi.Modules.KesesuaianSolusiMasalahMitra.Presentation.pdb
 C:\dev_net\UnpakSipaksi\UnpakSipaksi.Modules.KesesuaianSolusiMasalahMitra.Presentation\obj\Debug\net8.0\ref\UnpakSipaksi.Modules.KesesuaianSolusiMasalahMitra.Presentation.dll
+C:\dev_net\UnpakSipaksi\UnpakSipaksi.Modules.KesesuaianSolusiMasalahMitra.Presentation\obj\Debug\net8.0\UnpakSipaksi.Modules.KesesuaianSolusiMasalahMitra.Presentation.sourcelink.json

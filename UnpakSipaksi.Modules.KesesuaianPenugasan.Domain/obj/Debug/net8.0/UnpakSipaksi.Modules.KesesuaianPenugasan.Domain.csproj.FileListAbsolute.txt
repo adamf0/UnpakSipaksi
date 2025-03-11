@@ -13,3 +13,4 @@ C:\dev_net\UnpakSipaksi\UnpakSipaksi.Modules.KesesuaianPenugasan.Domain\obj\Debu
 C:\dev_net\UnpakSipaksi\UnpakSipaksi.Modules.KesesuaianPenugasan.Domain\obj\Debug\net8.0\refint\UnpakSipaksi.Modules.KesesuaianPenugasan.Domain.dll
 C:\dev_net\UnpakSipaksi\UnpakSipaksi.Modules.KesesuaianPenugasan.Domain\obj\Debug\net8.0\UnpakSipaksi.Modules.KesesuaianPenugasan.Domain.pdb
 C:\dev_net\UnpakSipaksi\UnpakSipaksi.Modules.KesesuaianPenugasan.Domain\obj\Debug\net8.0\ref\UnpakSipaksi.Modules.KesesuaianPenugasan.Domain.dll
+C:\dev_net\UnpakSipaksi\UnpakSipaksi.Modules.KesesuaianPenugasan.Domain\obj\Debug\net8.0\UnpakSipaksi.Modules.KesesuaianPenugasan.Domain.sourcelink.json

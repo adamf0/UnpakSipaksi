@@ -25,3 +25,4 @@ C:\dev_net\UnpakSipaksi\UnpakSipaksi.Modules.KategoriSumberDana.Infrastructure\o
 C:\dev_net\UnpakSipaksi\UnpakSipaksi.Modules.KategoriSumberDana.Infrastructure\obj\Debug\net8.0\refint\UnpakSipaksi.Modules.KategoriSumberDana.Infrastructure.dll
 C:\dev_net\UnpakSipaksi\UnpakSipaksi.Modules.KategoriSumberDana.Infrastructure\obj\Debug\net8.0\UnpakSipaksi.Modules.KategoriSumberDana.Infrastructure.pdb
 C:\dev_net\UnpakSipaksi\UnpakSipaksi.Modules.KategoriSumberDana.Infrastructure\obj\Debug\net8.0\ref\UnpakSipaksi.Modules.KategoriSumberDana.Infrastructure.dll
+C:\dev_net\UnpakSipaksi\UnpakSipaksi.Modules.KategoriSumberDana.Infrastructure\obj\Debug\net8.0\UnpakSipaksi.Modules.KategoriSumberDana.Infrastructure.sourcelink.json

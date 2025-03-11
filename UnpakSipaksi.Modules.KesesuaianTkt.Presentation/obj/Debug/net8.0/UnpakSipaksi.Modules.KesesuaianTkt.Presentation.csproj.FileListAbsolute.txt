@@ -21,3 +21,4 @@ C:\dev_net\UnpakSipaksi\UnpakSipaksi.Modules.KesesuaianTkt.Presentation\obj\Debu
 C:\dev_net\UnpakSipaksi\UnpakSipaksi.Modules.KesesuaianTkt.Presentation\obj\Debug\net8.0\refint\UnpakSipaksi.Modules.KesesuaianTkt.Presentation.dll
 C:\dev_net\UnpakSipaksi\UnpakSipaksi.Modules.KesesuaianTkt.Presentation\obj\Debug\net8.0\UnpakSipaksi.Modules.KesesuaianTkt.Presentation.pdb
 C:\dev_net\UnpakSipaksi\UnpakSipaksi.Modules.KesesuaianTkt.Presentation\obj\Debug\net8.0\ref\UnpakSipaksi.Modules.KesesuaianTkt.Presentation.dll
+C:\dev_net\UnpakSipaksi\UnpakSipaksi.Modules.KesesuaianTkt.Presentation\obj\Debug\net8.0\UnpakSipaksi.Modules.KesesuaianTkt.Presentation.sourcelink.json

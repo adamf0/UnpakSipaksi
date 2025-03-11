@@ -21,3 +21,4 @@ C:\dev_net\UnpakSipaksi\UnpakSipaksi.Modules.KategoriTkt.Presentation\obj\Debug\
 C:\dev_net\UnpakSipaksi\UnpakSipaksi.Modules.KategoriTkt.Presentation\obj\Debug\net8.0\refint\UnpakSipaksi.Modules.KategoriTkt.Presentation.dll
 C:\dev_net\UnpakSipaksi\UnpakSipaksi.Modules.KategoriTkt.Presentation\obj\Debug\net8.0\UnpakSipaksi.Modules.KategoriTkt.Presentation.pdb
 C:\dev_net\UnpakSipaksi\UnpakSipaksi.Modules.KategoriTkt.Presentation\obj\Debug\net8.0\ref\UnpakSipaksi.Modules.KategoriTkt.Presentation.dll
+C:\dev_net\UnpakSipaksi\UnpakSipaksi.Modules.KategoriTkt.Presentation\obj\Debug\net8.0\UnpakSipaksi.Modules.KategoriTkt.Presentation.sourcelink.json

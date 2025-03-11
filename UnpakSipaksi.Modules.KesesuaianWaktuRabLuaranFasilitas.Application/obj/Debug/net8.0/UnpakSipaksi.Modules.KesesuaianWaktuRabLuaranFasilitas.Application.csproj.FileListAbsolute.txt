@@ -17,3 +17,4 @@ C:\dev_net\UnpakSipaksi\UnpakSipaksi.Modules.KesesuaianWaktuRabLuaranFasilitas.A
 C:\dev_net\UnpakSipaksi\UnpakSipaksi.Modules.KesesuaianWaktuRabLuaranFasilitas.Application\obj\Debug\net8.0\refint\UnpakSipaksi.Modules.KesesuaianWaktuRabLuaranFasilitas.Application.dll
 C:\dev_net\UnpakSipaksi\UnpakSipaksi.Modules.KesesuaianWaktuRabLuaranFasilitas.Application\obj\Debug\net8.0\UnpakSipaksi.Modules.KesesuaianWaktuRabLuaranFasilitas.Application.pdb
 C:\dev_net\UnpakSipaksi\UnpakSipaksi.Modules.KesesuaianWaktuRabLuaranFasilitas.Application\obj\Debug\net8.0\ref\UnpakSipaksi.Modules.KesesuaianWaktuRabLuaranFasilitas.Application.dll
+C:\dev_net\UnpakSipaksi\UnpakSipaksi.Modules.KesesuaianWaktuRabLuaranFasilitas.Application\obj\Debug\net8.0\UnpakSipaksi.Modules.KesesuaianWaktuRabLuaranFasilitas.Application.sourcelink.json

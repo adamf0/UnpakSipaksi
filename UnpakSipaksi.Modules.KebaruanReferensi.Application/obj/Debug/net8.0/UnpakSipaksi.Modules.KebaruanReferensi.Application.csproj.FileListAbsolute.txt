@@ -17,3 +17,4 @@ C:\dev_net\UnpakSipaksi\UnpakSipaksi.Modules.KebaruanReferensi.Application\obj\D
 C:\dev_net\UnpakSipaksi\UnpakSipaksi.Modules.KebaruanReferensi.Application\obj\Debug\net8.0\refint\UnpakSipaksi.Modules.KebaruanReferensi.Application.dll
 C:\dev_net\UnpakSipaksi\UnpakSipaksi.Modules.KebaruanReferensi.Application\obj\Debug\net8.0\UnpakSipaksi.Modules.KebaruanReferensi.Application.pdb
 C:\dev_net\UnpakSipaksi\UnpakSipaksi.Modules.KebaruanReferensi.Application\obj\Debug\net8.0\ref\UnpakSipaksi.Modules.KebaruanReferensi.Application.dll
+C:\dev_net\UnpakSipaksi\UnpakSipaksi.Modules.KebaruanReferensi.Application\obj\Debug\net8.0\UnpakSipaksi.Modules.KebaruanReferensi.Application.sourcelink.json

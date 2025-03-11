@@ -25,3 +25,4 @@ C:\dev_net\UnpakSipaksi\UnpakSipaksi.Modules.KesesuaianJadwal.Infrastructure\obj
 C:\dev_net\UnpakSipaksi\UnpakSipaksi.Modules.KesesuaianJadwal.Infrastructure\obj\Debug\net8.0\refint\UnpakSipaksi.Modules.KesesuaianJadwal.Infrastructure.dll
 C:\dev_net\UnpakSipaksi\UnpakSipaksi.Modules.KesesuaianJadwal.Infrastructure\obj\Debug\net8.0\UnpakSipaksi.Modules.KesesuaianJadwal.Infrastructure.pdb
 C:\dev_net\UnpakSipaksi\UnpakSipaksi.Modules.KesesuaianJadwal.Infrastructure\obj\Debug\net8.0\ref\UnpakSipaksi.Modules.KesesuaianJadwal.Infrastructure.dll
+C:\dev_net\UnpakSipaksi\UnpakSipaksi.Modules.KesesuaianJadwal.Infrastructure\obj\Debug\net8.0\UnpakSipaksi.Modules.KesesuaianJadwal.Infrastructure.sourcelink.json

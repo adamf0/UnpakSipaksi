@@ -25,3 +25,4 @@ C:\dev_net\UnpakSipaksi\UnpakSipaksi.Modules.KejelasanPembagianTugasTim.Infrastr
 C:\dev_net\UnpakSipaksi\UnpakSipaksi.Modules.KejelasanPembagianTugasTim.Infrastructure\obj\Debug\net8.0\refint\UnpakSipaksi.Modules.KejelasanPembagianTugasTim.Infrastructure.dll
 C:\dev_net\UnpakSipaksi\UnpakSipaksi.Modules.KejelasanPembagianTugasTim.Infrastructure\obj\Debug\net8.0\UnpakSipaksi.Modules.KejelasanPembagianTugasTim.Infrastructure.pdb
 C:\dev_net\UnpakSipaksi\UnpakSipaksi.Modules.KejelasanPembagianTugasTim.Infrastructure\obj\Debug\net8.0\ref\UnpakSipaksi.Modules.KejelasanPembagianTugasTim.Infrastructure.dll
+C:\dev_net\UnpakSipaksi\UnpakSipaksi.Modules.KejelasanPembagianTugasTim.Infrastructure\obj\Debug\net8.0\UnpakSipaksi.Modules.KejelasanPembagianTugasTim.Infrastructure.sourcelink.json

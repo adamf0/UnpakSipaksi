@@ -1,0 +1,7 @@
+﻿using UnpakSipaksi.Common.Application.Messaging;
+using UnpakSipaksi.Modules.KualitasKuantitasPublikasiJurnalIlmiah.Application.GetKualitasKuantitasPublikasiJurnalIlmiah;
+
+namespace UnpakSipaksi.Modules.KualitasKuantitasPublikasiJurnalIlmiah.Application.GetAllKualitasKuantitasPublikasiJurnalIlmiah
+{
+    public sealed record GetAllKualitasKuantitasPublikasiJurnalIlmiahQuery() : IQuery<List<KualitasKuantitasPublikasiJurnalIlmiahResponse>>;
+}

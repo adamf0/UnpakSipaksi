@@ -13,3 +13,4 @@ C:\dev_net\UnpakSipaksi\UnpakSipaksi.Modules.KejelasanPembagianTugasTim.Domain\o
 C:\dev_net\UnpakSipaksi\UnpakSipaksi.Modules.KejelasanPembagianTugasTim.Domain\obj\Debug\net8.0\refint\UnpakSipaksi.Modules.KejelasanPembagianTugasTim.Domain.dll
 C:\dev_net\UnpakSipaksi\UnpakSipaksi.Modules.KejelasanPembagianTugasTim.Domain\obj\Debug\net8.0\UnpakSipaksi.Modules.KejelasanPembagianTugasTim.Domain.pdb
 C:\dev_net\UnpakSipaksi\UnpakSipaksi.Modules.KejelasanPembagianTugasTim.Domain\obj\Debug\net8.0\ref\UnpakSipaksi.Modules.KejelasanPembagianTugasTim.Domain.dll
+C:\dev_net\UnpakSipaksi\UnpakSipaksi.Modules.KejelasanPembagianTugasTim.Domain\obj\Debug\net8.0\UnpakSipaksi.Modules.KejelasanPembagianTugasTim.Domain.sourcelink.json

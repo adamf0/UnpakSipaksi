@@ -19,3 +19,4 @@ C:\dev_net\UnpakSipaksi\UnpakSipaksi.Modules.TemaPenelitian.Application\obj\Debu
 C:\dev_net\UnpakSipaksi\UnpakSipaksi.Modules.TemaPenelitian.Application\obj\Debug\net8.0\refint\UnpakSipaksi.Modules.TemaPenelitian.Application.dll
 C:\dev_net\UnpakSipaksi\UnpakSipaksi.Modules.TemaPenelitian.Application\obj\Debug\net8.0\UnpakSipaksi.Modules.TemaPenelitian.Application.pdb
 C:\dev_net\UnpakSipaksi\UnpakSipaksi.Modules.TemaPenelitian.Application\obj\Debug\net8.0\ref\UnpakSipaksi.Modules.TemaPenelitian.Application.dll
+C:\dev_net\UnpakSipaksi\UnpakSipaksi.Modules.TemaPenelitian.Application\obj\Debug\net8.0\UnpakSipaksi.Modules.TemaPenelitian.Application.sourcelink.json

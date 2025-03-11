@@ -13,3 +13,4 @@ C:\dev_net\UnpakSipaksi\UnpakSipaksi.Common.Presentation\obj\Debug\net8.0\UnpakS
 C:\dev_net\UnpakSipaksi\UnpakSipaksi.Common.Presentation\obj\Debug\net8.0\refint\UnpakSipaksi.Common.Presentation.dll
 C:\dev_net\UnpakSipaksi\UnpakSipaksi.Common.Presentation\obj\Debug\net8.0\UnpakSipaksi.Common.Presentation.pdb
 C:\dev_net\UnpakSipaksi\UnpakSipaksi.Common.Presentation\obj\Debug\net8.0\ref\UnpakSipaksi.Common.Presentation.dll
+C:\dev_net\UnpakSipaksi\UnpakSipaksi.Common.Presentation\obj\Debug\net8.0\UnpakSipaksi.Common.Presentation.sourcelink.json

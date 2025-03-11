@@ -24,17 +24,43 @@ using UnpakSipaksi.Modules.KesesuaianPenugasan.Infrastructure;
 using UnpakSipaksi.Modules.KesesuaianSolusiMasalahMitra.Infrastructure;
 using UnpakSipaksi.Modules.KesesuaianTkt.Infrastructure;
 using UnpakSipaksi.Modules.KesesuaianWaktuRabLuaranFasilitas.Infrastructure;
+using UnpakSipaksi.Modules.KetajamanAnalisis.Infrastructure;
+using UnpakSipaksi.Modules.KetajamanPerumusanMasalah.Infrastructure;
+using UnpakSipaksi.Modules.KewajaranTahapanTarget.Infrastructure;
+using UnpakSipaksi.Modules.Komponen.Infrastructure;
+using UnpakSipaksi.Modules.KredibilitasMitraDukungan.Infrastructure;
+using UnpakSipaksi.Modules.KualitasIpteks.Infrastructure;
+using UnpakSipaksi.Modules.KualitasKuantitasPublikasiJurnalIlmiah.Infrastructure;
+using UnpakSipaksi.Modules.KualitasKuantitasPublikasiProsiding.Infrastructure;
+using UnpakSipaksi.Modules.KuantitasStatusKi.Infrastructure;
+
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.ResponseCompression;
 using System.IO.Compression;
+using System.Runtime.CompilerServices;
+using Microsoft.OpenApi.Models;
+using UnpakSipaksi.Middleware;
+using UnpakSipaksi.Security;
+using UnpakSipaksi.Extensions;
+using UnpakSipaksi.Common.Presentation.Security;
 
 var builder = WebApplication.CreateBuilder(args);
+RuntimeFeature.IsDynamicCodeSupported.Equals(false);
+RuntimeFeature.IsDynamicCodeCompiled.Equals(false);
+AppContext.SetSwitch("System.Runtime.Serialization.EnableUnsafeBinaryFormatterSerialization", false);
+
 builder.Host.UseSerilog((context, loggerConfig) => loggerConfig.ReadFrom.Configuration(context.Configuration));
+builder.Services.AddSingleton<TokenValidator>();
+
 builder.Services.AddExceptionHandler<GlobalExceptionHandler>();
 builder.Services.AddProblemDetails();
-builder.Services.AddControllers();
+builder.Services.AddControllers(options =>
+{
+    options.Filters.Add(new IgnoreAntiforgeryTokenAttribute()); // Abaikan antiforgery untuk semua request
+});
 builder.Services.AddResponseCompression(options => options.Providers.Add<GzipCompressionProvider>());
 builder.Services.Configure<GzipCompressionProviderOptions>(options => options.Level = CompressionLevel.Fastest);
+
 
 //builder.Configuration.AddModuleConfiguration(["Asset"]);
 builder.Services.AddApplication([
@@ -60,7 +86,22 @@ builder.Services.AddApplication([
     UnpakSipaksi.Modules.KesesuaianSolusiMasalahMitra.Application.AssemblyReference.Assembly,
     UnpakSipaksi.Modules.KesesuaianTkt.Application.AssemblyReference.Assembly,
     UnpakSipaksi.Modules.KesesuaianWaktuRabLuaranFasilitas.Application.AssemblyReference.Assembly,
+    UnpakSipaksi.Modules.KetajamanAnalisis.Application.AssemblyReference.Assembly,
+    UnpakSipaksi.Modules.KetajamanPerumusanMasalah.Application.AssemblyReference.Assembly,
+    UnpakSipaksi.Modules.KewajaranTahapanTarget.Application.AssemblyReference.Assembly,
+    UnpakSipaksi.Modules.Komponen.Application.AssemblyReference.Assembly,
+    UnpakSipaksi.Modules.KredibilitasMitraDukungan.Application.AssemblyReference.Assembly,
+    UnpakSipaksi.Modules.KualitasIpteks.Application.AssemblyReference.Assembly,
+    UnpakSipaksi.Modules.KualitasKuantitasPublikasiJurnalIlmiah.Application.AssemblyReference.Assembly,
+    UnpakSipaksi.Modules.KualitasKuantitasPublikasiProsiding.Application.AssemblyReference.Assembly,
+    UnpakSipaksi.Modules.KuantitasStatusKi.Application.AssemblyReference.Assembly,
 ]);
+
+builder.Services.AddAntiforgery(options =>
+{
+    options.HeaderName = "X-CSRF-TOKEN"; // Token harus dikirim melalui header ini
+    options.Cookie.Name = "XSRF-TOKEN"; // Nama cookie antiforgery
+});
 
 builder.Services.AddInfrastructure(builder.Configuration.GetConnectionString("Database")!);
 builder.Services.AddAkurasiPenelitianModule(builder.Configuration);
@@ -85,6 +126,15 @@ builder.Services.AddKesesuaianPenugasanModule(builder.Configuration);
 builder.Services.AddKesesuaianSolusiMasalahMitraModule(builder.Configuration);
 builder.Services.AddKesesuaianTktModule(builder.Configuration);
 builder.Services.AddKesesuaianWaktuRabLuaranFasilitasModule(builder.Configuration);
+builder.Services.AddKetajamanAnalisisModule(builder.Configuration);
+builder.Services.AddKetajamanPerumusanMasalahModule(builder.Configuration);
+builder.Services.AddKewajaranTahapanTargetModule(builder.Configuration);
+builder.Services.AddKomponenModule(builder.Configuration);
+builder.Services.AddKredibilitasMitraDukunganModule(builder.Configuration);
+builder.Services.AddKualitasIpteksModule(builder.Configuration);
+builder.Services.AddKualitasKuantitasPublikasiJurnalIlmiahModule(builder.Configuration);
+builder.Services.AddKualitasKuantitasPublikasiProsidingModule(builder.Configuration);
+builder.Services.AddKuantitasStatusKiModule(builder.Configuration);
 
 builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen();
@@ -94,7 +144,39 @@ builder.WebHost.ConfigureKestrel(options =>
     options.AddServerHeader = false;
 });
 
+builder.Services.AddSwaggerGen(c =>
+{
+    c.SwaggerDoc("v1", new OpenApiInfo
+    {
+        Title = "UnpakSipaksi API",
+        Version = "v1"
+    });
+    c.AddSecurityDefinition("Bearer", new OpenApiSecurityScheme
+    {
+        In = ParameterLocation.Header,
+        Description = "Masukkan token JWT dengan format 'Bearer {token}'",
+        Name = "Authorization",
+        Type = SecuritySchemeType.Http,
+        Scheme = "Bearer"
+    });
+
+    c.OperationFilter<AuthorizeCheckOperationFilter>();
+    c.DocumentFilter<SwaggerAddApiPrefixDocumentFilter>();
+    c.OperationFilter<SwaggerFileOperationFilter>();
+});
+
+builder.Services.AddAuthorization();
+builder.WebHost.ConfigureKestrel(options =>
+{
+    options.AddServerHeader = false;
+});
+
+SecurityConfig.PreventDynamicCodeExecution();
+
 var app = builder.Build();
+app.UseUserAgentMiddleware();
+app.UseSecurityHeadersMiddleware();
+
 AkurasiPenelitianModule.MapEndpoints(app);
 ArtikelMediaMassaModule.MapEndpoints(app);
 AuthorSintaModule.MapEndpoints(app);
@@ -117,6 +199,15 @@ KesesuaianPenugasanModule.MapEndpoints(app);
 KesesuaianSolusiMasalahMitraModule.MapEndpoints(app);
 KesesuaianTktModule.MapEndpoints(app);
 KesesuaianWaktuRabLuaranFasilitasModule.MapEndpoints(app);
+KetajamanAnalisisModule.MapEndpoints(app);
+KetajamanPerumusanMasalahModule.MapEndpoints(app);
+KewajaranTahapanTargetModule.MapEndpoints(app);
+KomponenModule.MapEndpoints(app);
+KredibilitasMitraDukunganModule.MapEndpoints(app);
+KualitasIpteksModule.MapEndpoints(app);
+KualitasKuantitasPublikasiJurnalIlmiahModule.MapEndpoints(app);
+KualitasKuantitasPublikasiProsidingModule.MapEndpoints(app);
+KuantitasStatusKiModule.MapEndpoints(app);
 
 if (app.Environment.IsDevelopment())
 {
@@ -125,52 +216,7 @@ if (app.Environment.IsDevelopment())
 }
 
 app.UseHttpsRedirection();
-
-app.Use((context, next) =>
-{
-    var userAgent = context.Request.Headers["User-Agent"].ToString();
-
-    if (string.IsNullOrEmpty(userAgent))
-    {
-        var problemDetails = new ProblemDetails
-        {
-            Status = StatusCodes.Status400BadRequest,
-            Type = "https://tools.ietf.org/html/rfc7231#section-6.5.1",
-            Title = "Bad Request",
-            Detail = "Unknown User-Agent"
-        };
-        context.Response.StatusCode = problemDetails.Status.Value;
-
-        context.Response.StatusCode = 400;
-        context.Response.ContentType = "application/json";
-        return context.Response.WriteAsJsonAsync(problemDetails);
-    }
-
-    return next();
-});
-
-app.Use((context, next) =>
-{
-    context.Response.Headers.Remove("X-AspNet-Version");
-    context.Response.Headers["X-DNS-Prefetch-Control"] = "off";
-
-    context.Response.Headers["X-Frame-Options"] = "DENY";
-    context.Response.Headers["X-XSS-Protection"] = "1; mode=block";
-    context.Response.Headers["X-Content-Type-Options"] = "nosniff";
-    context.Response.Headers["Referrer-Policy"] = "strict-origin-when-cross-origin";
-    context.Response.Headers["Content-Type"] = "application/json; charset=UTF-8";
-    context.Response.Headers["Strict-Transport-Security"] = "max-age=60; includeSubDomains; preload";
-    context.Response.Headers["Access-Control-Allow-Origin"] = "https://localhost";
-    context.Response.Headers["Cross-Origin-Opener-Policy"] = "same-origin";
-    context.Response.Headers["Cross-Origin-Embedder-Policy"] = "require-corp";
-    context.Response.Headers["Cross-Origin-Resource-Policy"] = "same-site";
-
-    context.Response.Headers.Remove("X-Powered-By");
-    return next();
-});
-
+app.UseAntiforgery();
 app.UseAuthorization();
-
 app.MapControllers();
-
 app.Run();
