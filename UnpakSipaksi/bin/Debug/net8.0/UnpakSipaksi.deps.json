@@ -76,6 +76,26 @@
           "UnpakSipaksi.Modules.KualitasKuantitasPublikasiProsiding.Infrastructure": "1.0.0",
           "UnpakSipaksi.Modules.KuantitasStatusKi.Application": "1.0.0",
           "UnpakSipaksi.Modules.KuantitasStatusKi.Infrastructure": "1.0.0",
+          "UnpakSipaksi.Modules.LuaranArtikel.Application": "1.0.0",
+          "UnpakSipaksi.Modules.LuaranArtikel.Infrastructure": "1.0.0",
+          "UnpakSipaksi.Modules.MetodeRencanaKegiatan.Application": "1.0.0",
+          "UnpakSipaksi.Modules.MetodeRencanaKegiatan.Infrastructure": "1.0.0",
+          "UnpakSipaksi.Modules.ModelFeasibilityStudys.Application": "1.0.0",
+          "UnpakSipaksi.Modules.ModelFeasibilityStudys.Infrastructure": "1.0.0",
+          "UnpakSipaksi.Modules.PeningkatanKeberdayaanMitra.Application": "1.0.0",
+          "UnpakSipaksi.Modules.PeningkatanKeberdayaanMitra.Infrastructure": "1.0.0",
+          "UnpakSipaksi.Modules.PotensiKetercapaianLuaranDijanjikan.Application": "1.0.0",
+          "UnpakSipaksi.Modules.PotensiKetercapaianLuaranDijanjikan.Infrastructure": "1.0.0",
+          "UnpakSipaksi.Modules.PrioritasRiset.Application": "1.0.0",
+          "UnpakSipaksi.Modules.PrioritasRiset.Infrastructure": "1.0.0",
+          "UnpakSipaksi.Modules.PublikasiDisitasiProposal.Application": "1.0.0",
+          "UnpakSipaksi.Modules.PublikasiDisitasiProposal.Infrastructure": "1.0.0",
+          "UnpakSipaksi.Modules.RelevansiKepakaranTemaProposal.Application": "1.0.0",
+          "UnpakSipaksi.Modules.RelevansiKepakaranTemaProposal.Infrastructure": "1.0.0",
+          "UnpakSipaksi.Modules.RelevansiKualitasReferensi.Application": "1.0.0",
+          "UnpakSipaksi.Modules.RelevansiKualitasReferensi.Infrastructure": "1.0.0",
+          "UnpakSipaksi.Modules.RelevansiProdukKepentinganNasional.Application": "1.0.0",
+          "UnpakSipaksi.Modules.RelevansiProdukKepentinganNasional.Infrastructure": "1.0.0",
           "UnpakSipaksi.Modules.TemaPenelitian.Application": "1.0.0",
           "UnpakSipaksi.Modules.TemaPenelitian.Infrastructure": "1.0.0",
           "UnpakSipaksi.Modules.TopikPenelitian.Application": "1.0.0",
@@ -2556,6 +2576,446 @@
           "UnpakSipaksi.Modules.KuantitasStatusKi.Presentation.dll": {}
         }
       },
+      "UnpakSipaksi.Modules.LuaranArtikel.Application/1.0.0": {
+        "dependencies": {
+          "Dapper": "2.1.35",
+          "MediatR": "12.4.1",
+          "UnpakSipaksi.Common.Application": "1.0.0",
+          "UnpakSipaksi.Common.Domain": "1.0.0",
+          "UnpakSipaksi.Modules.LuaranArtikel.Domain": "1.0.0"
+        },
+        "runtime": {
+          "UnpakSipaksi.Modules.LuaranArtikel.Application.dll": {}
+        }
+      },
+      "UnpakSipaksi.Modules.LuaranArtikel.Domain/1.0.0": {
+        "dependencies": {
+          "UnpakSipaksi.Common.Domain": "1.0.0"
+        },
+        "runtime": {
+          "UnpakSipaksi.Modules.LuaranArtikel.Domain.dll": {}
+        }
+      },
+      "UnpakSipaksi.Modules.LuaranArtikel.Infrastructure/1.0.0": {
+        "dependencies": {
+          "Microsoft.EntityFrameworkCore": "8.0.0",
+          "MySql.EntityFrameworkCore": "8.0.0",
+          "UnpakSipaksi.Common.Application": "1.0.0",
+          "UnpakSipaksi.Common.Infrastructure": "1.0.0",
+          "UnpakSipaksi.Modules.LuaranArtikel.Application": "1.0.0",
+          "UnpakSipaksi.Modules.LuaranArtikel.Domain": "1.0.0",
+          "UnpakSipaksi.Modules.LuaranArtikel.Presentation": "1.0.0"
+        },
+        "runtime": {
+          "UnpakSipaksi.Modules.LuaranArtikel.Infrastructure.dll": {}
+        }
+      },
+      "UnpakSipaksi.Modules.LuaranArtikel.Presentation/1.0.0": {
+        "dependencies": {
+          "UnpakSipaksi.Common.Domain": "1.0.0",
+          "UnpakSipaksi.Common.Presentation": "1.0.0",
+          "UnpakSipaksi.Modules.LuaranArtikel.Application": "1.0.0"
+        },
+        "runtime": {
+          "UnpakSipaksi.Modules.LuaranArtikel.Presentation.dll": {}
+        }
+      },
+      "UnpakSipaksi.Modules.MetodeRencanaKegiatan.Application/1.0.0": {
+        "dependencies": {
+          "Dapper": "2.1.35",
+          "MediatR": "12.4.1",
+          "UnpakSipaksi.Common.Application": "1.0.0",
+          "UnpakSipaksi.Common.Domain": "1.0.0",
+          "UnpakSipaksi.Modules.MetodeRencanaKegiatan.Domain": "1.0.0"
+        },
+        "runtime": {
+          "UnpakSipaksi.Modules.MetodeRencanaKegiatan.Application.dll": {}
+        }
+      },
+      "UnpakSipaksi.Modules.MetodeRencanaKegiatan.Domain/1.0.0": {
+        "dependencies": {
+          "UnpakSipaksi.Common.Domain": "1.0.0"
+        },
+        "runtime": {
+          "UnpakSipaksi.Modules.MetodeRencanaKegiatan.Domain.dll": {}
+        }
+      },
+      "UnpakSipaksi.Modules.MetodeRencanaKegiatan.Infrastructure/1.0.0": {
+        "dependencies": {
+          "Microsoft.EntityFrameworkCore": "8.0.0",
+          "MySql.EntityFrameworkCore": "8.0.0",
+          "UnpakSipaksi.Common.Application": "1.0.0",
+          "UnpakSipaksi.Common.Infrastructure": "1.0.0",
+          "UnpakSipaksi.Modules.MetodeRencanaKegiatan.Application": "1.0.0",
+          "UnpakSipaksi.Modules.MetodeRencanaKegiatan.Domain": "1.0.0",
+          "UnpakSipaksi.Modules.MetodeRencanaKegiatan.Presentation": "1.0.0"
+        },
+        "runtime": {
+          "UnpakSipaksi.Modules.MetodeRencanaKegiatan.Infrastructure.dll": {}
+        }
+      },
+      "UnpakSipaksi.Modules.MetodeRencanaKegiatan.Presentation/1.0.0": {
+        "dependencies": {
+          "UnpakSipaksi.Common.Domain": "1.0.0",
+          "UnpakSipaksi.Common.Presentation": "1.0.0",
+          "UnpakSipaksi.Modules.MetodeRencanaKegiatan.Application": "1.0.0"
+        },
+        "runtime": {
+          "UnpakSipaksi.Modules.MetodeRencanaKegiatan.Presentation.dll": {}
+        }
+      },
+      "UnpakSipaksi.Modules.ModelFeasibilityStudys.Application/1.0.0": {
+        "dependencies": {
+          "Dapper": "2.1.35",
+          "MediatR": "12.4.1",
+          "UnpakSipaksi.Common.Application": "1.0.0",
+          "UnpakSipaksi.Common.Domain": "1.0.0",
+          "UnpakSipaksi.Modules.ModelFeasibilityStudys.Domain": "1.0.0"
+        },
+        "runtime": {
+          "UnpakSipaksi.Modules.ModelFeasibilityStudys.Application.dll": {}
+        }
+      },
+      "UnpakSipaksi.Modules.ModelFeasibilityStudys.Domain/1.0.0": {
+        "dependencies": {
+          "UnpakSipaksi.Common.Domain": "1.0.0"
+        },
+        "runtime": {
+          "UnpakSipaksi.Modules.ModelFeasibilityStudys.Domain.dll": {}
+        }
+      },
+      "UnpakSipaksi.Modules.ModelFeasibilityStudys.Infrastructure/1.0.0": {
+        "dependencies": {
+          "Microsoft.EntityFrameworkCore": "8.0.0",
+          "MySql.EntityFrameworkCore": "8.0.0",
+          "UnpakSipaksi.Common.Application": "1.0.0",
+          "UnpakSipaksi.Common.Infrastructure": "1.0.0",
+          "UnpakSipaksi.Modules.ModelFeasibilityStudys.Application": "1.0.0",
+          "UnpakSipaksi.Modules.ModelFeasibilityStudys.Domain": "1.0.0",
+          "UnpakSipaksi.Modules.ModelFeasibilityStudys.Presentation": "1.0.0"
+        },
+        "runtime": {
+          "UnpakSipaksi.Modules.ModelFeasibilityStudys.Infrastructure.dll": {}
+        }
+      },
+      "UnpakSipaksi.Modules.ModelFeasibilityStudys.Presentation/1.0.0": {
+        "dependencies": {
+          "UnpakSipaksi.Common.Domain": "1.0.0",
+          "UnpakSipaksi.Common.Presentation": "1.0.0",
+          "UnpakSipaksi.Modules.ModelFeasibilityStudys.Application": "1.0.0"
+        },
+        "runtime": {
+          "UnpakSipaksi.Modules.ModelFeasibilityStudys.Presentation.dll": {}
+        }
+      },
+      "UnpakSipaksi.Modules.PeningkatanKeberdayaanMitra.Application/1.0.0": {
+        "dependencies": {
+          "Dapper": "2.1.35",
+          "MediatR": "12.4.1",
+          "UnpakSipaksi.Common.Application": "1.0.0",
+          "UnpakSipaksi.Common.Domain": "1.0.0",
+          "UnpakSipaksi.Modules.PeningkatanKeberdayaanMitra.Domain": "1.0.0"
+        },
+        "runtime": {
+          "UnpakSipaksi.Modules.PeningkatanKeberdayaanMitra.Application.dll": {}
+        }
+      },
+      "UnpakSipaksi.Modules.PeningkatanKeberdayaanMitra.Domain/1.0.0": {
+        "dependencies": {
+          "UnpakSipaksi.Common.Domain": "1.0.0"
+        },
+        "runtime": {
+          "UnpakSipaksi.Modules.PeningkatanKeberdayaanMitra.Domain.dll": {}
+        }
+      },
+      "UnpakSipaksi.Modules.PeningkatanKeberdayaanMitra.Infrastructure/1.0.0": {
+        "dependencies": {
+          "Microsoft.EntityFrameworkCore": "8.0.0",
+          "MySql.EntityFrameworkCore": "8.0.0",
+          "UnpakSipaksi.Common.Application": "1.0.0",
+          "UnpakSipaksi.Common.Infrastructure": "1.0.0",
+          "UnpakSipaksi.Modules.PeningkatanKeberdayaanMitra.Application": "1.0.0",
+          "UnpakSipaksi.Modules.PeningkatanKeberdayaanMitra.Domain": "1.0.0",
+          "UnpakSipaksi.Modules.PeningkatanKeberdayaanMitra.Presentation": "1.0.0"
+        },
+        "runtime": {
+          "UnpakSipaksi.Modules.PeningkatanKeberdayaanMitra.Infrastructure.dll": {}
+        }
+      },
+      "UnpakSipaksi.Modules.PeningkatanKeberdayaanMitra.Presentation/1.0.0": {
+        "dependencies": {
+          "UnpakSipaksi.Common.Domain": "1.0.0",
+          "UnpakSipaksi.Common.Presentation": "1.0.0",
+          "UnpakSipaksi.Modules.PeningkatanKeberdayaanMitra.Application": "1.0.0"
+        },
+        "runtime": {
+          "UnpakSipaksi.Modules.PeningkatanKeberdayaanMitra.Presentation.dll": {}
+        }
+      },
+      "UnpakSipaksi.Modules.PotensiKetercapaianLuaranDijanjikan.Application/1.0.0": {
+        "dependencies": {
+          "Dapper": "2.1.35",
+          "MediatR": "12.4.1",
+          "UnpakSipaksi.Common.Application": "1.0.0",
+          "UnpakSipaksi.Common.Domain": "1.0.0",
+          "UnpakSipaksi.Modules.PotensiKetercapaianLuaranDijanjikan.Domain": "1.0.0"
+        },
+        "runtime": {
+          "UnpakSipaksi.Modules.PotensiKetercapaianLuaranDijanjikan.Application.dll": {}
+        }
+      },
+      "UnpakSipaksi.Modules.PotensiKetercapaianLuaranDijanjikan.Domain/1.0.0": {
+        "dependencies": {
+          "UnpakSipaksi.Common.Domain": "1.0.0"
+        },
+        "runtime": {
+          "UnpakSipaksi.Modules.PotensiKetercapaianLuaranDijanjikan.Domain.dll": {}
+        }
+      },
+      "UnpakSipaksi.Modules.PotensiKetercapaianLuaranDijanjikan.Infrastructure/1.0.0": {
+        "dependencies": {
+          "Microsoft.EntityFrameworkCore": "8.0.0",
+          "MySql.EntityFrameworkCore": "8.0.0",
+          "UnpakSipaksi.Common.Application": "1.0.0",
+          "UnpakSipaksi.Common.Infrastructure": "1.0.0",
+          "UnpakSipaksi.Modules.PotensiKetercapaianLuaranDijanjikan.Application": "1.0.0",
+          "UnpakSipaksi.Modules.PotensiKetercapaianLuaranDijanjikan.Domain": "1.0.0",
+          "UnpakSipaksi.Modules.PotensiKetercapaianLuaranDijanjikan.Presentation": "1.0.0"
+        },
+        "runtime": {
+          "UnpakSipaksi.Modules.PotensiKetercapaianLuaranDijanjikan.Infrastructure.dll": {}
+        }
+      },
+      "UnpakSipaksi.Modules.PotensiKetercapaianLuaranDijanjikan.Presentation/1.0.0": {
+        "dependencies": {
+          "UnpakSipaksi.Common.Domain": "1.0.0",
+          "UnpakSipaksi.Common.Presentation": "1.0.0",
+          "UnpakSipaksi.Modules.PotensiKetercapaianLuaranDijanjikan.Application": "1.0.0"
+        },
+        "runtime": {
+          "UnpakSipaksi.Modules.PotensiKetercapaianLuaranDijanjikan.Presentation.dll": {}
+        }
+      },
+      "UnpakSipaksi.Modules.PrioritasRiset.Application/1.0.0": {
+        "dependencies": {
+          "Dapper": "2.1.35",
+          "MediatR": "12.4.1",
+          "UnpakSipaksi.Common.Application": "1.0.0",
+          "UnpakSipaksi.Common.Domain": "1.0.0",
+          "UnpakSipaksi.Modules.PrioritasRiset.Domain": "1.0.0"
+        },
+        "runtime": {
+          "UnpakSipaksi.Modules.PrioritasRiset.Application.dll": {}
+        }
+      },
+      "UnpakSipaksi.Modules.PrioritasRiset.Domain/1.0.0": {
+        "dependencies": {
+          "UnpakSipaksi.Common.Domain": "1.0.0"
+        },
+        "runtime": {
+          "UnpakSipaksi.Modules.PrioritasRiset.Domain.dll": {}
+        }
+      },
+      "UnpakSipaksi.Modules.PrioritasRiset.Infrastructure/1.0.0": {
+        "dependencies": {
+          "Microsoft.EntityFrameworkCore": "8.0.0",
+          "MySql.EntityFrameworkCore": "8.0.0",
+          "UnpakSipaksi.Common.Application": "1.0.0",
+          "UnpakSipaksi.Common.Infrastructure": "1.0.0",
+          "UnpakSipaksi.Modules.PrioritasRiset.Application": "1.0.0",
+          "UnpakSipaksi.Modules.PrioritasRiset.Domain": "1.0.0",
+          "UnpakSipaksi.Modules.PrioritasRiset.Presentation": "1.0.0"
+        },
+        "runtime": {
+          "UnpakSipaksi.Modules.PrioritasRiset.Infrastructure.dll": {}
+        }
+      },
+      "UnpakSipaksi.Modules.PrioritasRiset.Presentation/1.0.0": {
+        "dependencies": {
+          "UnpakSipaksi.Common.Domain": "1.0.0",
+          "UnpakSipaksi.Common.Presentation": "1.0.0",
+          "UnpakSipaksi.Modules.PrioritasRiset.Application": "1.0.0"
+        },
+        "runtime": {
+          "UnpakSipaksi.Modules.PrioritasRiset.Presentation.dll": {}
+        }
+      },
+      "UnpakSipaksi.Modules.PublikasiDisitasiProposal.Application/1.0.0": {
+        "dependencies": {
+          "Dapper": "2.1.35",
+          "MediatR": "12.4.1",
+          "UnpakSipaksi.Common.Application": "1.0.0",
+          "UnpakSipaksi.Common.Domain": "1.0.0",
+          "UnpakSipaksi.Modules.PublikasiDisitasiProposal.Domain": "1.0.0"
+        },
+        "runtime": {
+          "UnpakSipaksi.Modules.PublikasiDisitasiProposal.Application.dll": {}
+        }
+      },
+      "UnpakSipaksi.Modules.PublikasiDisitasiProposal.Domain/1.0.0": {
+        "dependencies": {
+          "UnpakSipaksi.Common.Domain": "1.0.0"
+        },
+        "runtime": {
+          "UnpakSipaksi.Modules.PublikasiDisitasiProposal.Domain.dll": {}
+        }
+      },
+      "UnpakSipaksi.Modules.PublikasiDisitasiProposal.Infrastructure/1.0.0": {
+        "dependencies": {
+          "Microsoft.EntityFrameworkCore": "8.0.0",
+          "MySql.EntityFrameworkCore": "8.0.0",
+          "UnpakSipaksi.Common.Application": "1.0.0",
+          "UnpakSipaksi.Common.Infrastructure": "1.0.0",
+          "UnpakSipaksi.Modules.PublikasiDisitasiProposal.Application": "1.0.0",
+          "UnpakSipaksi.Modules.PublikasiDisitasiProposal.Domain": "1.0.0",
+          "UnpakSipaksi.Modules.PublikasiDisitasiProposal.Presentation": "1.0.0"
+        },
+        "runtime": {
+          "UnpakSipaksi.Modules.PublikasiDisitasiProposal.Infrastructure.dll": {}
+        }
+      },
+      "UnpakSipaksi.Modules.PublikasiDisitasiProposal.Presentation/1.0.0": {
+        "dependencies": {
+          "UnpakSipaksi.Common.Domain": "1.0.0",
+          "UnpakSipaksi.Common.Presentation": "1.0.0",
+          "UnpakSipaksi.Modules.PublikasiDisitasiProposal.Application": "1.0.0"
+        },
+        "runtime": {
+          "UnpakSipaksi.Modules.PublikasiDisitasiProposal.Presentation.dll": {}
+        }
+      },
+      "UnpakSipaksi.Modules.RelevansiKepakaranTemaProposal.Application/1.0.0": {
+        "dependencies": {
+          "Dapper": "2.1.35",
+          "MediatR": "12.4.1",
+          "UnpakSipaksi.Common.Application": "1.0.0",
+          "UnpakSipaksi.Common.Domain": "1.0.0",
+          "UnpakSipaksi.Modules.RelevansiKepakaranTemaProposal.Domain": "1.0.0"
+        },
+        "runtime": {
+          "UnpakSipaksi.Modules.RelevansiKepakaranTemaProposal.Application.dll": {}
+        }
+      },
+      "UnpakSipaksi.Modules.RelevansiKepakaranTemaProposal.Domain/1.0.0": {
+        "dependencies": {
+          "UnpakSipaksi.Common.Domain": "1.0.0"
+        },
+        "runtime": {
+          "UnpakSipaksi.Modules.RelevansiKepakaranTemaProposal.Domain.dll": {}
+        }
+      },
+      "UnpakSipaksi.Modules.RelevansiKepakaranTemaProposal.Infrastructure/1.0.0": {
+        "dependencies": {
+          "Microsoft.EntityFrameworkCore": "8.0.0",
+          "MySql.EntityFrameworkCore": "8.0.0",
+          "UnpakSipaksi.Common.Application": "1.0.0",
+          "UnpakSipaksi.Common.Infrastructure": "1.0.0",
+          "UnpakSipaksi.Modules.RelevansiKepakaranTemaProposal.Application": "1.0.0",
+          "UnpakSipaksi.Modules.RelevansiKepakaranTemaProposal.Domain": "1.0.0",
+          "UnpakSipaksi.Modules.RelevansiKepakaranTemaProposal.Presentation": "1.0.0"
+        },
+        "runtime": {
+          "UnpakSipaksi.Modules.RelevansiKepakaranTemaProposal.Infrastructure.dll": {}
+        }
+      },
+      "UnpakSipaksi.Modules.RelevansiKepakaranTemaProposal.Presentation/1.0.0": {
+        "dependencies": {
+          "UnpakSipaksi.Common.Domain": "1.0.0",
+          "UnpakSipaksi.Common.Presentation": "1.0.0",
+          "UnpakSipaksi.Modules.RelevansiKepakaranTemaProposal.Application": "1.0.0"
+        },
+        "runtime": {
+          "UnpakSipaksi.Modules.RelevansiKepakaranTemaProposal.Presentation.dll": {}
+        }
+      },
+      "UnpakSipaksi.Modules.RelevansiKualitasReferensi.Application/1.0.0": {
+        "dependencies": {
+          "Dapper": "2.1.35",
+          "MediatR": "12.4.1",
+          "UnpakSipaksi.Common.Application": "1.0.0",
+          "UnpakSipaksi.Common.Domain": "1.0.0",
+          "UnpakSipaksi.Modules.RelevansiKualitasReferensi.Domain": "1.0.0"
+        },
+        "runtime": {
+          "UnpakSipaksi.Modules.RelevansiKualitasReferensi.Application.dll": {}
+        }
+      },
+      "UnpakSipaksi.Modules.RelevansiKualitasReferensi.Domain/1.0.0": {
+        "dependencies": {
+          "UnpakSipaksi.Common.Domain": "1.0.0"
+        },
+        "runtime": {
+          "UnpakSipaksi.Modules.RelevansiKualitasReferensi.Domain.dll": {}
+        }
+      },
+      "UnpakSipaksi.Modules.RelevansiKualitasReferensi.Infrastructure/1.0.0": {
+        "dependencies": {
+          "Microsoft.EntityFrameworkCore": "8.0.0",
+          "MySql.EntityFrameworkCore": "8.0.0",
+          "UnpakSipaksi.Common.Application": "1.0.0",
+          "UnpakSipaksi.Common.Infrastructure": "1.0.0",
+          "UnpakSipaksi.Modules.RelevansiKualitasReferensi.Application": "1.0.0",
+          "UnpakSipaksi.Modules.RelevansiKualitasReferensi.Domain": "1.0.0",
+          "UnpakSipaksi.Modules.RelevansiKualitasReferensi.Presentation": "1.0.0"
+        },
+        "runtime": {
+          "UnpakSipaksi.Modules.RelevansiKualitasReferensi.Infrastructure.dll": {}
+        }
+      },
+      "UnpakSipaksi.Modules.RelevansiKualitasReferensi.Presentation/1.0.0": {
+        "dependencies": {
+          "UnpakSipaksi.Common.Domain": "1.0.0",
+          "UnpakSipaksi.Common.Presentation": "1.0.0",
+          "UnpakSipaksi.Modules.RelevansiKualitasReferensi.Application": "1.0.0"
+        },
+        "runtime": {
+          "UnpakSipaksi.Modules.RelevansiKualitasReferensi.Presentation.dll": {}
+        }
+      },
+      "UnpakSipaksi.Modules.RelevansiProdukKepentinganNasional.Application/1.0.0": {
+        "dependencies": {
+          "Dapper": "2.1.35",
+          "MediatR": "12.4.1",
+          "UnpakSipaksi.Common.Application": "1.0.0",
+          "UnpakSipaksi.Common.Domain": "1.0.0",
+          "UnpakSipaksi.Modules.RelevansiProdukKepentinganNasional.Domain": "1.0.0"
+        },
+        "runtime": {
+          "UnpakSipaksi.Modules.RelevansiProdukKepentinganNasional.Application.dll": {}
+        }
+      },
+      "UnpakSipaksi.Modules.RelevansiProdukKepentinganNasional.Domain/1.0.0": {
+        "dependencies": {
+          "UnpakSipaksi.Common.Domain": "1.0.0"
+        },
+        "runtime": {
+          "UnpakSipaksi.Modules.RelevansiProdukKepentinganNasional.Domain.dll": {}
+        }
+      },
+      "UnpakSipaksi.Modules.RelevansiProdukKepentinganNasional.Infrastructure/1.0.0": {
+        "dependencies": {
+          "Microsoft.EntityFrameworkCore": "8.0.0",
+          "MySql.EntityFrameworkCore": "8.0.0",
+          "UnpakSipaksi.Common.Application": "1.0.0",
+          "UnpakSipaksi.Common.Infrastructure": "1.0.0",
+          "UnpakSipaksi.Modules.RelevansiProdukKepentinganNasional.Application": "1.0.0",
+          "UnpakSipaksi.Modules.RelevansiProdukKepentinganNasional.Domain": "1.0.0",
+          "UnpakSipaksi.Modules.RelevansiProdukKepentinganNasional.Presentation": "1.0.0"
+        },
+        "runtime": {
+          "UnpakSipaksi.Modules.RelevansiProdukKepentinganNasional.Infrastructure.dll": {}
+        }
+      },
+      "UnpakSipaksi.Modules.RelevansiProdukKepentinganNasional.Presentation/1.0.0": {
+        "dependencies": {
+          "UnpakSipaksi.Common.Domain": "1.0.0",
+          "UnpakSipaksi.Common.Presentation": "1.0.0",
+          "UnpakSipaksi.Modules.RelevansiProdukKepentinganNasional.Application": "1.0.0"
+        },
+        "runtime": {
+          "UnpakSipaksi.Modules.RelevansiProdukKepentinganNasional.Presentation.dll": {}
+        }
+      },
       "UnpakSipaksi.Modules.TemaPenelitian.Application/1.0.0": {
         "dependencies": {
           "Dapper": "2.1.35",
@@ -4023,6 +4483,206 @@
       "sha512": ""
     },
     "UnpakSipaksi.Modules.KuantitasStatusKi.Presentation/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    },
+    "UnpakSipaksi.Modules.LuaranArtikel.Application/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    },
+    "UnpakSipaksi.Modules.LuaranArtikel.Domain/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    },
+    "UnpakSipaksi.Modules.LuaranArtikel.Infrastructure/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    },
+    "UnpakSipaksi.Modules.LuaranArtikel.Presentation/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    },
+    "UnpakSipaksi.Modules.MetodeRencanaKegiatan.Application/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    },
+    "UnpakSipaksi.Modules.MetodeRencanaKegiatan.Domain/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    },
+    "UnpakSipaksi.Modules.MetodeRencanaKegiatan.Infrastructure/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    },
+    "UnpakSipaksi.Modules.MetodeRencanaKegiatan.Presentation/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    },
+    "UnpakSipaksi.Modules.ModelFeasibilityStudys.Application/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    },
+    "UnpakSipaksi.Modules.ModelFeasibilityStudys.Domain/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    },
+    "UnpakSipaksi.Modules.ModelFeasibilityStudys.Infrastructure/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    },
+    "UnpakSipaksi.Modules.ModelFeasibilityStudys.Presentation/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    },
+    "UnpakSipaksi.Modules.PeningkatanKeberdayaanMitra.Application/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    },
+    "UnpakSipaksi.Modules.PeningkatanKeberdayaanMitra.Domain/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    },
+    "UnpakSipaksi.Modules.PeningkatanKeberdayaanMitra.Infrastructure/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    },
+    "UnpakSipaksi.Modules.PeningkatanKeberdayaanMitra.Presentation/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    },
+    "UnpakSipaksi.Modules.PotensiKetercapaianLuaranDijanjikan.Application/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    },
+    "UnpakSipaksi.Modules.PotensiKetercapaianLuaranDijanjikan.Domain/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    },
+    "UnpakSipaksi.Modules.PotensiKetercapaianLuaranDijanjikan.Infrastructure/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    },
+    "UnpakSipaksi.Modules.PotensiKetercapaianLuaranDijanjikan.Presentation/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    },
+    "UnpakSipaksi.Modules.PrioritasRiset.Application/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    },
+    "UnpakSipaksi.Modules.PrioritasRiset.Domain/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    },
+    "UnpakSipaksi.Modules.PrioritasRiset.Infrastructure/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    },
+    "UnpakSipaksi.Modules.PrioritasRiset.Presentation/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    },
+    "UnpakSipaksi.Modules.PublikasiDisitasiProposal.Application/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    },
+    "UnpakSipaksi.Modules.PublikasiDisitasiProposal.Domain/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    },
+    "UnpakSipaksi.Modules.PublikasiDisitasiProposal.Infrastructure/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    },
+    "UnpakSipaksi.Modules.PublikasiDisitasiProposal.Presentation/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    },
+    "UnpakSipaksi.Modules.RelevansiKepakaranTemaProposal.Application/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    },
+    "UnpakSipaksi.Modules.RelevansiKepakaranTemaProposal.Domain/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    },
+    "UnpakSipaksi.Modules.RelevansiKepakaranTemaProposal.Infrastructure/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    },
+    "UnpakSipaksi.Modules.RelevansiKepakaranTemaProposal.Presentation/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    },
+    "UnpakSipaksi.Modules.RelevansiKualitasReferensi.Application/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    },
+    "UnpakSipaksi.Modules.RelevansiKualitasReferensi.Domain/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    },
+    "UnpakSipaksi.Modules.RelevansiKualitasReferensi.Infrastructure/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    },
+    "UnpakSipaksi.Modules.RelevansiKualitasReferensi.Presentation/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    },
+    "UnpakSipaksi.Modules.RelevansiProdukKepentinganNasional.Application/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    },
+    "UnpakSipaksi.Modules.RelevansiProdukKepentinganNasional.Domain/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    },
+    "UnpakSipaksi.Modules.RelevansiProdukKepentinganNasional.Infrastructure/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    },
+    "UnpakSipaksi.Modules.RelevansiProdukKepentinganNasional.Presentation/1.0.0": {
       "type": "project",
       "serviceable": false,
       "sha512": ""

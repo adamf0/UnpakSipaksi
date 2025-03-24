@@ -245,95 +245,195 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "KesesuaianTkt", "Kesesuaian
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "KesesuaianWaktuRabLuaranFasilitas", "KesesuaianWaktuRabLuaranFasilitas", "{AFD566DB-68C9-4A24-BBFC-E4156CBA4872}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "UnpakSipaksi.Modules.KetajamanAnalisis.Application", "UnpakSipaksi.Modules.KetajamanAnalisis.Application\UnpakSipaksi.Modules.KetajamanAnalisis.Application.csproj", "{422E4610-9034-46C9-988D-C613767898E2}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "UnpakSipaksi.Modules.KetajamanAnalisis.Application", "UnpakSipaksi.Modules.KetajamanAnalisis.Application\UnpakSipaksi.Modules.KetajamanAnalisis.Application.csproj", "{422E4610-9034-46C9-988D-C613767898E2}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "UnpakSipaksi.Modules.KetajamanAnalisis.Domain", "UnpakSipaksi.Modules.KetajamanAnalisis.Domain\UnpakSipaksi.Modules.KetajamanAnalisis.Domain.csproj", "{5CDCEA84-278D-467A-A98F-47076D71BEFF}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "UnpakSipaksi.Modules.KetajamanAnalisis.Domain", "UnpakSipaksi.Modules.KetajamanAnalisis.Domain\UnpakSipaksi.Modules.KetajamanAnalisis.Domain.csproj", "{5CDCEA84-278D-467A-A98F-47076D71BEFF}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "UnpakSipaksi.Modules.KetajamanAnalisis.Infrastructure", "UnpakSipaksi.Modules.KetajamanAnalisis.Infrastructure\UnpakSipaksi.Modules.KetajamanAnalisis.Infrastructure.csproj", "{20532475-3B9A-433B-BE53-4F703772DDF8}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "UnpakSipaksi.Modules.KetajamanAnalisis.Infrastructure", "UnpakSipaksi.Modules.KetajamanAnalisis.Infrastructure\UnpakSipaksi.Modules.KetajamanAnalisis.Infrastructure.csproj", "{20532475-3B9A-433B-BE53-4F703772DDF8}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "UnpakSipaksi.Modules.KetajamanAnalisis.Presentation", "UnpakSipaksi.Modules.KetajamanAnalisis.Presentation\UnpakSipaksi.Modules.KetajamanAnalisis.Presentation.csproj", "{2634238B-9E07-450D-816D-27294EB6A048}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "UnpakSipaksi.Modules.KetajamanAnalisis.Presentation", "UnpakSipaksi.Modules.KetajamanAnalisis.Presentation\UnpakSipaksi.Modules.KetajamanAnalisis.Presentation.csproj", "{2634238B-9E07-450D-816D-27294EB6A048}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "KetajamanAnalisis", "KetajamanAnalisis", "{10393924-7D15-4A70-9489-EB24FC95C4DA}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "UnpakSipaksi.Modules.KetajamanPerumusanMasalah.Application", "UnpakSipaksi.Modules.KetajamanPerumusanMasalah.Application\UnpakSipaksi.Modules.KetajamanPerumusanMasalah.Application.csproj", "{B11558D1-6BBD-4FB7-9980-8FF5B74D6844}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "UnpakSipaksi.Modules.KetajamanPerumusanMasalah.Application", "UnpakSipaksi.Modules.KetajamanPerumusanMasalah.Application\UnpakSipaksi.Modules.KetajamanPerumusanMasalah.Application.csproj", "{B11558D1-6BBD-4FB7-9980-8FF5B74D6844}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "UnpakSipaksi.Modules.KetajamanPerumusanMasalah.Domain", "UnpakSipaksi.Modules.KetajamanPerumusanMasalah.Domain\UnpakSipaksi.Modules.KetajamanPerumusanMasalah.Domain.csproj", "{1662FA06-0BCE-45BD-A748-50884F72BA6C}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "UnpakSipaksi.Modules.KetajamanPerumusanMasalah.Domain", "UnpakSipaksi.Modules.KetajamanPerumusanMasalah.Domain\UnpakSipaksi.Modules.KetajamanPerumusanMasalah.Domain.csproj", "{1662FA06-0BCE-45BD-A748-50884F72BA6C}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "UnpakSipaksi.Modules.KetajamanPerumusanMasalah.Infrastructure", "UnpakSipaksi.Modules.KetajamanPerumusanMasalah.Infrastructure\UnpakSipaksi.Modules.KetajamanPerumusanMasalah.Infrastructure.csproj", "{F8FE6E6D-EE06-464D-8253-CE86B747FB25}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "UnpakSipaksi.Modules.KetajamanPerumusanMasalah.Infrastructure", "UnpakSipaksi.Modules.KetajamanPerumusanMasalah.Infrastructure\UnpakSipaksi.Modules.KetajamanPerumusanMasalah.Infrastructure.csproj", "{F8FE6E6D-EE06-464D-8253-CE86B747FB25}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "UnpakSipaksi.Modules.KetajamanPerumusanMasalah.Presentation", "UnpakSipaksi.Modules.KetajamanPerumusanMasalah.Presentation\UnpakSipaksi.Modules.KetajamanPerumusanMasalah.Presentation.csproj", "{34B1F065-548E-40E6-B3A1-F440AA84D3F5}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "UnpakSipaksi.Modules.KetajamanPerumusanMasalah.Presentation", "UnpakSipaksi.Modules.KetajamanPerumusanMasalah.Presentation\UnpakSipaksi.Modules.KetajamanPerumusanMasalah.Presentation.csproj", "{34B1F065-548E-40E6-B3A1-F440AA84D3F5}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "KetajamanPerumusanMasalah", "KetajamanPerumusanMasalah", "{331FB83C-E354-473C-876F-4136506899EF}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "UnpakSipaksi.Modules.KewajaranTahapanTarget.Application", "UnpakSipaksi.Modules.KewajaranTahapanTarget.Application\UnpakSipaksi.Modules.KewajaranTahapanTarget.Application.csproj", "{D4C24294-BF12-4854-A206-A7E4BFE103FE}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "UnpakSipaksi.Modules.KewajaranTahapanTarget.Application", "UnpakSipaksi.Modules.KewajaranTahapanTarget.Application\UnpakSipaksi.Modules.KewajaranTahapanTarget.Application.csproj", "{D4C24294-BF12-4854-A206-A7E4BFE103FE}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "UnpakSipaksi.Modules.KewajaranTahapanTarget.Domain", "UnpakSipaksi.Modules.KewajaranTahapanTarget.Domain\UnpakSipaksi.Modules.KewajaranTahapanTarget.Domain.csproj", "{231267F6-71AA-4FAE-AB13-5FA78CB97216}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "UnpakSipaksi.Modules.KewajaranTahapanTarget.Domain", "UnpakSipaksi.Modules.KewajaranTahapanTarget.Domain\UnpakSipaksi.Modules.KewajaranTahapanTarget.Domain.csproj", "{231267F6-71AA-4FAE-AB13-5FA78CB97216}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "UnpakSipaksi.Modules.KewajaranTahapanTarget.Infrastructure", "UnpakSipaksi.Modules.KewajaranTahapanTarget.Infrastructure\UnpakSipaksi.Modules.KewajaranTahapanTarget.Infrastructure.csproj", "{71AB601F-0DA9-455C-884E-430E8094A48F}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "UnpakSipaksi.Modules.KewajaranTahapanTarget.Infrastructure", "UnpakSipaksi.Modules.KewajaranTahapanTarget.Infrastructure\UnpakSipaksi.Modules.KewajaranTahapanTarget.Infrastructure.csproj", "{71AB601F-0DA9-455C-884E-430E8094A48F}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "UnpakSipaksi.Modules.KewajaranTahapanTarget.Presentation", "UnpakSipaksi.Modules.KewajaranTahapanTarget.Presentation\UnpakSipaksi.Modules.KewajaranTahapanTarget.Presentation.csproj", "{4305456B-CAF0-4D30-AB9F-3B19452E4B55}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "UnpakSipaksi.Modules.KewajaranTahapanTarget.Presentation", "UnpakSipaksi.Modules.KewajaranTahapanTarget.Presentation\UnpakSipaksi.Modules.KewajaranTahapanTarget.Presentation.csproj", "{4305456B-CAF0-4D30-AB9F-3B19452E4B55}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "KewajaranTahapanTarget", "KewajaranTahapanTarget", "{AF6B1D83-9C31-45F4-B7B2-7B321312861E}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "UnpakSipaksi.Modules.Komponen.Application", "UnpakSipaksi.Modules.Komponen.Application\UnpakSipaksi.Modules.Komponen.Application.csproj", "{6575BC6E-88D4-4CC0-AEEC-515118EFBE06}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "UnpakSipaksi.Modules.Komponen.Application", "UnpakSipaksi.Modules.Komponen.Application\UnpakSipaksi.Modules.Komponen.Application.csproj", "{6575BC6E-88D4-4CC0-AEEC-515118EFBE06}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "UnpakSipaksi.Modules.Komponen.Domain", "UnpakSipaksi.Modules.Komponen.Domain\UnpakSipaksi.Modules.Komponen.Domain.csproj", "{4B057CA7-6E48-4FA1-8801-F5457F7F2BE2}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "UnpakSipaksi.Modules.Komponen.Domain", "UnpakSipaksi.Modules.Komponen.Domain\UnpakSipaksi.Modules.Komponen.Domain.csproj", "{4B057CA7-6E48-4FA1-8801-F5457F7F2BE2}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "UnpakSipaksi.Modules.Komponen.Infrastructure", "UnpakSipaksi.Modules.Komponen.Infrastructure\UnpakSipaksi.Modules.Komponen.Infrastructure.csproj", "{DFD820CC-6A44-406D-9879-ACD229D4D22B}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "UnpakSipaksi.Modules.Komponen.Infrastructure", "UnpakSipaksi.Modules.Komponen.Infrastructure\UnpakSipaksi.Modules.Komponen.Infrastructure.csproj", "{DFD820CC-6A44-406D-9879-ACD229D4D22B}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "UnpakSipaksi.Modules.Komponen.Presentation", "UnpakSipaksi.Modules.Komponen.Presentation\UnpakSipaksi.Modules.Komponen.Presentation.csproj", "{03376669-1C2F-471B-B233-9556DDB043E5}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "UnpakSipaksi.Modules.Komponen.Presentation", "UnpakSipaksi.Modules.Komponen.Presentation\UnpakSipaksi.Modules.Komponen.Presentation.csproj", "{03376669-1C2F-471B-B233-9556DDB043E5}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Komponen", "Komponen", "{238366E6-5274-430B-BE25-9F7ED8058471}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "UnpakSipaksi.Modules.KredibilitasMitraDukungan.Domain", "UnpakSipaksi.Modules.KredibilitasMitraDukungan.Domain\UnpakSipaksi.Modules.KredibilitasMitraDukungan.Domain.csproj", "{B9FEAC29-B3E8-4541-BE98-9CAE97877606}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "UnpakSipaksi.Modules.KredibilitasMitraDukungan.Domain", "UnpakSipaksi.Modules.KredibilitasMitraDukungan.Domain\UnpakSipaksi.Modules.KredibilitasMitraDukungan.Domain.csproj", "{B9FEAC29-B3E8-4541-BE98-9CAE97877606}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "UnpakSipaksi.Modules.KredibilitasMitraDukungan.Application", "UnpakSipaksi.Modules.KredibilitasMitraDukungan.Application\UnpakSipaksi.Modules.KredibilitasMitraDukungan.Application.csproj", "{52F5D7AF-0277-412C-8E0D-76DEC611C897}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "UnpakSipaksi.Modules.KredibilitasMitraDukungan.Application", "UnpakSipaksi.Modules.KredibilitasMitraDukungan.Application\UnpakSipaksi.Modules.KredibilitasMitraDukungan.Application.csproj", "{52F5D7AF-0277-412C-8E0D-76DEC611C897}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "UnpakSipaksi.Modules.KredibilitasMitraDukungan.Infrastructure", "UnpakSipaksi.Modules.KredibilitasMitraDukungan.Infrastructure\UnpakSipaksi.Modules.KredibilitasMitraDukungan.Infrastructure.csproj", "{8D03F30A-AE1B-4A72-89AD-DC1BDB41EAC0}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "UnpakSipaksi.Modules.KredibilitasMitraDukungan.Infrastructure", "UnpakSipaksi.Modules.KredibilitasMitraDukungan.Infrastructure\UnpakSipaksi.Modules.KredibilitasMitraDukungan.Infrastructure.csproj", "{8D03F30A-AE1B-4A72-89AD-DC1BDB41EAC0}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "UnpakSipaksi.Modules.KredibilitasMitraDukungan.Presentation", "UnpakSipaksi.Modules.KredibilitasMitraDukungan.Presentation\UnpakSipaksi.Modules.KredibilitasMitraDukungan.Presentation.csproj", "{20394F09-C178-46B9-8967-479770B58DF7}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "UnpakSipaksi.Modules.KredibilitasMitraDukungan.Presentation", "UnpakSipaksi.Modules.KredibilitasMitraDukungan.Presentation\UnpakSipaksi.Modules.KredibilitasMitraDukungan.Presentation.csproj", "{20394F09-C178-46B9-8967-479770B58DF7}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "KredibilitasMitraDukungan", "KredibilitasMitraDukungan", "{BDF22D50-8356-4A89-A7D7-F99A44191813}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "UnpakSipaksi.Modules.KualitasIpteks.Domain", "UnpakSipaksi.Modules.KualitasIpteks.Domain\UnpakSipaksi.Modules.KualitasIpteks.Domain.csproj", "{7982EDB7-91C3-4CF0-88DB-1AADC2B60691}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "UnpakSipaksi.Modules.KualitasIpteks.Domain", "UnpakSipaksi.Modules.KualitasIpteks.Domain\UnpakSipaksi.Modules.KualitasIpteks.Domain.csproj", "{7982EDB7-91C3-4CF0-88DB-1AADC2B60691}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "UnpakSipaksi.Modules.KualitasIpteks.Application", "UnpakSipaksi.Modules.KualitasIpteks.Application\UnpakSipaksi.Modules.KualitasIpteks.Application.csproj", "{0CDAD197-293A-4219-9C02-E555FBECE2EA}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "UnpakSipaksi.Modules.KualitasIpteks.Application", "UnpakSipaksi.Modules.KualitasIpteks.Application\UnpakSipaksi.Modules.KualitasIpteks.Application.csproj", "{0CDAD197-293A-4219-9C02-E555FBECE2EA}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "UnpakSipaksi.Modules.KualitasIpteks.Infrastructure", "UnpakSipaksi.Modules.KualitasIpteks.Infrastructure\UnpakSipaksi.Modules.KualitasIpteks.Infrastructure.csproj", "{3D60966F-35EE-411C-ABDE-AF820EBD4F18}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "UnpakSipaksi.Modules.KualitasIpteks.Infrastructure", "UnpakSipaksi.Modules.KualitasIpteks.Infrastructure\UnpakSipaksi.Modules.KualitasIpteks.Infrastructure.csproj", "{3D60966F-35EE-411C-ABDE-AF820EBD4F18}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "UnpakSipaksi.Modules.KualitasIpteks.Presentation", "UnpakSipaksi.Modules.KualitasIpteks.Presentation\UnpakSipaksi.Modules.KualitasIpteks.Presentation.csproj", "{A608C028-B4C0-4F81-BBB5-91D3B637F1C9}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "UnpakSipaksi.Modules.KualitasIpteks.Presentation", "UnpakSipaksi.Modules.KualitasIpteks.Presentation\UnpakSipaksi.Modules.KualitasIpteks.Presentation.csproj", "{A608C028-B4C0-4F81-BBB5-91D3B637F1C9}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "KualitasIpteks", "KualitasIpteks", "{C8BA3857-69C6-4B0A-9357-7B3F5AEBFBE1}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "UnpakSipaksi.Modules.KualitasKuantitasPublikasiJurnalIlmiah.Domain", "UnpakSipaksi.Modules.KualitasKuantitasPublikasiJurnalIlmiah.Domain\UnpakSipaksi.Modules.KualitasKuantitasPublikasiJurnalIlmiah.Domain.csproj", "{3C29FD97-4105-409D-9988-0A1E388BA0EC}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "UnpakSipaksi.Modules.KualitasKuantitasPublikasiJurnalIlmiah.Domain", "UnpakSipaksi.Modules.KualitasKuantitasPublikasiJurnalIlmiah.Domain\UnpakSipaksi.Modules.KualitasKuantitasPublikasiJurnalIlmiah.Domain.csproj", "{3C29FD97-4105-409D-9988-0A1E388BA0EC}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "UnpakSipaksi.Modules.KualitasKuantitasPublikasiJurnalIlmiah.Application", "UnpakSipaksi.Modules.KualitasKuantitasPublikasiJurnalIlmiah.Application\UnpakSipaksi.Modules.KualitasKuantitasPublikasiJurnalIlmiah.Application.csproj", "{090C8E67-939F-46A8-8F43-A702322846A9}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "UnpakSipaksi.Modules.KualitasKuantitasPublikasiJurnalIlmiah.Application", "UnpakSipaksi.Modules.KualitasKuantitasPublikasiJurnalIlmiah.Application\UnpakSipaksi.Modules.KualitasKuantitasPublikasiJurnalIlmiah.Application.csproj", "{090C8E67-939F-46A8-8F43-A702322846A9}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "UnpakSipaksi.Modules.KualitasKuantitasPublikasiJurnalIlmiah.Infrastructure", "UnpakSipaksi.Modules.KualitasKuantitasPublikasiJurnalIlmiah.Infrastructure\UnpakSipaksi.Modules.KualitasKuantitasPublikasiJurnalIlmiah.Infrastructure.csproj", "{2A8D5E91-677F-4142-9114-039A95075006}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "UnpakSipaksi.Modules.KualitasKuantitasPublikasiJurnalIlmiah.Infrastructure", "UnpakSipaksi.Modules.KualitasKuantitasPublikasiJurnalIlmiah.Infrastructure\UnpakSipaksi.Modules.KualitasKuantitasPublikasiJurnalIlmiah.Infrastructure.csproj", "{2A8D5E91-677F-4142-9114-039A95075006}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "UnpakSipaksi.Modules.KualitasKuantitasPublikasiJurnalIlmiah.Presentation", "UnpakSipaksi.Modules.KualitasKuantitasPublikasiJurnalIlmiah.Presentation\UnpakSipaksi.Modules.KualitasKuantitasPublikasiJurnalIlmiah.Presentation.csproj", "{A6276C59-4A80-47FA-88D5-54B3907040C2}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "UnpakSipaksi.Modules.KualitasKuantitasPublikasiJurnalIlmiah.Presentation", "UnpakSipaksi.Modules.KualitasKuantitasPublikasiJurnalIlmiah.Presentation\UnpakSipaksi.Modules.KualitasKuantitasPublikasiJurnalIlmiah.Presentation.csproj", "{A6276C59-4A80-47FA-88D5-54B3907040C2}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "KualitasKuantitasPublikasiJurnalIlmiah", "KualitasKuantitasPublikasiJurnalIlmiah", "{768E8A3A-B559-47F7-B2C6-9164D96465C9}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "UnpakSipaksi.Modules.KualitasKuantitasPublikasiProsiding.Domain", "UnpakSipaksi.Modules.KualitasKuantitasPublikasiProsiding.Domain\UnpakSipaksi.Modules.KualitasKuantitasPublikasiProsiding.Domain.csproj", "{C40EC642-5179-489B-B75B-2A41F053CD6F}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "UnpakSipaksi.Modules.KualitasKuantitasPublikasiProsiding.Domain", "UnpakSipaksi.Modules.KualitasKuantitasPublikasiProsiding.Domain\UnpakSipaksi.Modules.KualitasKuantitasPublikasiProsiding.Domain.csproj", "{C40EC642-5179-489B-B75B-2A41F053CD6F}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "UnpakSipaksi.Modules.KualitasKuantitasPublikasiProsiding.Application", "UnpakSipaksi.Modules.KualitasKuantitasPublikasiProsiding.Application\UnpakSipaksi.Modules.KualitasKuantitasPublikasiProsiding.Application.csproj", "{1E61BC7E-069C-4AA7-A73A-CE09ECFA751B}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "UnpakSipaksi.Modules.KualitasKuantitasPublikasiProsiding.Application", "UnpakSipaksi.Modules.KualitasKuantitasPublikasiProsiding.Application\UnpakSipaksi.Modules.KualitasKuantitasPublikasiProsiding.Application.csproj", "{1E61BC7E-069C-4AA7-A73A-CE09ECFA751B}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "UnpakSipaksi.Modules.KualitasKuantitasPublikasiProsiding.Infrastructure", "UnpakSipaksi.Modules.KualitasKuantitasPublikasiProsiding.Infrastructure\UnpakSipaksi.Modules.KualitasKuantitasPublikasiProsiding.Infrastructure.csproj", "{5388D5D5-CA07-43F5-A3B8-9AFB8AB11B0C}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "UnpakSipaksi.Modules.KualitasKuantitasPublikasiProsiding.Infrastructure", "UnpakSipaksi.Modules.KualitasKuantitasPublikasiProsiding.Infrastructure\UnpakSipaksi.Modules.KualitasKuantitasPublikasiProsiding.Infrastructure.csproj", "{5388D5D5-CA07-43F5-A3B8-9AFB8AB11B0C}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "UnpakSipaksi.Modules.KualitasKuantitasPublikasiProsiding.Presentation", "UnpakSipaksi.Modules.KualitasKuantitasPublikasiProsiding.Presentation\UnpakSipaksi.Modules.KualitasKuantitasPublikasiProsiding.Presentation.csproj", "{19F66BE1-4B72-4F10-BD77-B2583CA1285A}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "UnpakSipaksi.Modules.KualitasKuantitasPublikasiProsiding.Presentation", "UnpakSipaksi.Modules.KualitasKuantitasPublikasiProsiding.Presentation\UnpakSipaksi.Modules.KualitasKuantitasPublikasiProsiding.Presentation.csproj", "{19F66BE1-4B72-4F10-BD77-B2583CA1285A}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "KualitasKuantitasPublikasiProsiding", "KualitasKuantitasPublikasiProsiding", "{AB18B8ED-5500-4256-BD31-6F2156D91DBF}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "UnpakSipaksi.Modules.KuantitasStatusKi.Domain", "UnpakSipaksi.Modules.KuantitasStatusKi.Domain\UnpakSipaksi.Modules.KuantitasStatusKi.Domain.csproj", "{294F7078-2809-4138-857B-909FFE9513F1}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "UnpakSipaksi.Modules.KuantitasStatusKi.Domain", "UnpakSipaksi.Modules.KuantitasStatusKi.Domain\UnpakSipaksi.Modules.KuantitasStatusKi.Domain.csproj", "{294F7078-2809-4138-857B-909FFE9513F1}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "UnpakSipaksi.Modules.KuantitasStatusKi.Application", "UnpakSipaksi.Modules.KuantitasStatusKi.Application\UnpakSipaksi.Modules.KuantitasStatusKi.Application.csproj", "{5608065D-6786-4C49-95F6-487FD24713A2}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "UnpakSipaksi.Modules.KuantitasStatusKi.Application", "UnpakSipaksi.Modules.KuantitasStatusKi.Application\UnpakSipaksi.Modules.KuantitasStatusKi.Application.csproj", "{5608065D-6786-4C49-95F6-487FD24713A2}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "UnpakSipaksi.Modules.KuantitasStatusKi.Infrastructure", "UnpakSipaksi.Modules.KuantitasStatusKi.Infrastructure\UnpakSipaksi.Modules.KuantitasStatusKi.Infrastructure.csproj", "{15E7AAD5-8E26-4287-89E8-9D802FA431BD}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "UnpakSipaksi.Modules.KuantitasStatusKi.Infrastructure", "UnpakSipaksi.Modules.KuantitasStatusKi.Infrastructure\UnpakSipaksi.Modules.KuantitasStatusKi.Infrastructure.csproj", "{15E7AAD5-8E26-4287-89E8-9D802FA431BD}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "UnpakSipaksi.Modules.KuantitasStatusKi.Presentation", "UnpakSipaksi.Modules.KuantitasStatusKi.Presentation\UnpakSipaksi.Modules.KuantitasStatusKi.Presentation.csproj", "{49C062B8-A8C7-44B7-9E52-F68E7B7F6BA1}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "UnpakSipaksi.Modules.KuantitasStatusKi.Presentation", "UnpakSipaksi.Modules.KuantitasStatusKi.Presentation\UnpakSipaksi.Modules.KuantitasStatusKi.Presentation.csproj", "{49C062B8-A8C7-44B7-9E52-F68E7B7F6BA1}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "KuantitasStatusKi", "KuantitasStatusKi", "{D667D6D9-9BE2-4A3C-B1B1-A21A0DC371A2}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "UnpakSipaksi.Modules.LuaranArtikel.Domain", "UnpakSipaksi.Modules.LuaranArtikel.Domain\UnpakSipaksi.Modules.LuaranArtikel.Domain.csproj", "{E090A81E-6155-4F79-8D78-B2F75795E70A}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "UnpakSipaksi.Modules.LuaranArtikel.Application", "UnpakSipaksi.Modules.LuaranArtikel.Application\UnpakSipaksi.Modules.LuaranArtikel.Application.csproj", "{C4364E60-A823-4552-B20C-6584151111E9}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "UnpakSipaksi.Modules.LuaranArtikel.Infrastructure", "UnpakSipaksi.Modules.LuaranArtikel.Infrastructure\UnpakSipaksi.Modules.LuaranArtikel.Infrastructure.csproj", "{41800EAF-4C0A-42E5-8609-CD4347A8BB9D}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "UnpakSipaksi.Modules.LuaranArtikel.Presentation", "UnpakSipaksi.Modules.LuaranArtikel.Presentation\UnpakSipaksi.Modules.LuaranArtikel.Presentation.csproj", "{B92E1182-50BF-453D-8929-AA8914A104F9}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "LuaranArtikel", "LuaranArtikel", "{EC3521BE-D1D4-40B0-87B0-2DD8FC2D01F5}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "UnpakSipaksi.Modules.MetodeRencanaKegiatan.Domain", "UnpakSipaksi.Modules.MetodeRencanaKegiatan.Domain\UnpakSipaksi.Modules.MetodeRencanaKegiatan.Domain.csproj", "{772897A7-45E0-48CD-AC65-5C82D7402909}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "UnpakSipaksi.Modules.MetodeRencanaKegiatan.Application", "UnpakSipaksi.Modules.MetodeRencanaKegiatan.Application\UnpakSipaksi.Modules.MetodeRencanaKegiatan.Application.csproj", "{FFF6F86B-FD60-4046-A579-5A9C2626992B}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "UnpakSipaksi.Modules.MetodeRencanaKegiatan.Infrastructure", "UnpakSipaksi.Modules.MetodeRencanaKegiatan.Infrastructure\UnpakSipaksi.Modules.MetodeRencanaKegiatan.Infrastructure.csproj", "{4F9F8BFA-BA23-484A-A99F-3031329FD517}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "UnpakSipaksi.Modules.MetodeRencanaKegiatan.Presentation", "UnpakSipaksi.Modules.MetodeRencanaKegiatan.Presentation\UnpakSipaksi.Modules.MetodeRencanaKegiatan.Presentation.csproj", "{F9F7A952-AE34-434F-B30D-904F99BE7462}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "MetodeRencanaKegiatan", "MetodeRencanaKegiatan", "{790A25E5-A334-4CC4-8E4B-6D433FDAEB9A}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "UnpakSipaksi.Modules.ModelFeasibilityStudys.Domain", "UnpakSipaksi.Modules.ModelFeasibilityStudys.Domain\UnpakSipaksi.Modules.ModelFeasibilityStudys.Domain.csproj", "{EEAE70FA-9383-4F69-9C01-2DDEBBB007D2}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "UnpakSipaksi.Modules.ModelFeasibilityStudys.Application", "UnpakSipaksi.Modules.ModelFeasibilityStudys.Application\UnpakSipaksi.Modules.ModelFeasibilityStudys.Application.csproj", "{D59A241F-3827-43A9-8E40-47400B2DFB2B}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "UnpakSipaksi.Modules.ModelFeasibilityStudys.Infrastructure", "UnpakSipaksi.Modules.ModelFeasibilityStudys.Infrastructure\UnpakSipaksi.Modules.ModelFeasibilityStudys.Infrastructure.csproj", "{54174633-2B54-44BC-8F4B-E1C5C4FF91F9}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "UnpakSipaksi.Modules.ModelFeasibilityStudys.Presentation", "UnpakSipaksi.Modules.ModelFeasibilityStudys.Presentation\UnpakSipaksi.Modules.ModelFeasibilityStudys.Presentation.csproj", "{997ED479-72EC-4F5A-B61D-EA73C8C0ED2F}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "ModelFeasibilityStudys", "ModelFeasibilityStudys", "{01B56453-F0C6-4F56-A910-69CFAE85408D}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "UnpakSipaksi.Modules.PeningkatanKeberdayaanMitra.Domain", "UnpakSipaksi.Modules.PeningkatanKeberdayaanMitra.Domain\UnpakSipaksi.Modules.PeningkatanKeberdayaanMitra.Domain.csproj", "{30B46CAA-1981-412D-966E-9E9CF21E5FBF}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "UnpakSipaksi.Modules.PeningkatanKeberdayaanMitra.Application", "UnpakSipaksi.Modules.PeningkatanKeberdayaanMitra.Application\UnpakSipaksi.Modules.PeningkatanKeberdayaanMitra.Application.csproj", "{4306E6A2-22EB-4AFD-8097-905A03F1CEE6}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "UnpakSipaksi.Modules.PeningkatanKeberdayaanMitra.Infrastructure", "UnpakSipaksi.Modules.PeningkatanKeberdayaanMitra.Infrastructure\UnpakSipaksi.Modules.PeningkatanKeberdayaanMitra.Infrastructure.csproj", "{BF8DB0C0-3FEA-41BB-A41B-A9715214D354}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "UnpakSipaksi.Modules.PeningkatanKeberdayaanMitra.Presentation", "UnpakSipaksi.Modules.PeningkatanKeberdayaanMitra.Presentation\UnpakSipaksi.Modules.PeningkatanKeberdayaanMitra.Presentation.csproj", "{741B1A43-B496-44A5-8A07-170AA8CDD74F}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "PeningkatanKeberdayaanMitra", "PeningkatanKeberdayaanMitra", "{B562AE5C-91CB-474B-A83E-4CEAB2937E45}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "UnpakSipaksi.Modules.PotensiKetercapaianLuaranDijanjikan.Domain", "UnpakSipaksi.Modules.PotensiKetercapaianLuaranDijanjikan.Domain\UnpakSipaksi.Modules.PotensiKetercapaianLuaranDijanjikan.Domain.csproj", "{8B96D568-3463-4EF9-AB8A-C598710790CF}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "UnpakSipaksi.Modules.PotensiKetercapaianLuaranDijanjikan.Application", "UnpakSipaksi.Modules.PotensiKetercapaianLuaranDijanjikan.Application\UnpakSipaksi.Modules.PotensiKetercapaianLuaranDijanjikan.Application.csproj", "{48C7C7EA-1E7D-4AE8-89A9-2D3E90A3B338}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "UnpakSipaksi.Modules.PotensiKetercapaianLuaranDijanjikan.Infrastructure", "UnpakSipaksi.Modules.PotensiKetercapaianLuaranDijanjikan.Infrastructure\UnpakSipaksi.Modules.PotensiKetercapaianLuaranDijanjikan.Infrastructure.csproj", "{EEA59355-D3CA-4FFF-BE2E-1474A9C4688D}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "UnpakSipaksi.Modules.PotensiKetercapaianLuaranDijanjikan.Presentation", "UnpakSipaksi.Modules.PotensiKetercapaianLuaranDijanjikan.Presentation\UnpakSipaksi.Modules.PotensiKetercapaianLuaranDijanjikan.Presentation.csproj", "{656F986F-26DF-47DA-8E22-EF22D442F3CD}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "PotensiKetercapaianLuaranDijanjikan", "PotensiKetercapaianLuaranDijanjikan", "{D9501F6A-1721-4D02-95ED-3D59B6B44C69}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "UnpakSipaksi.Modules.PrioritasRiset.Domain", "UnpakSipaksi.Modules.PrioritasRiset.Domain\UnpakSipaksi.Modules.PrioritasRiset.Domain.csproj", "{265DFA2E-9670-4F3A-B234-ACBA2CB608B1}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "UnpakSipaksi.Modules.PrioritasRiset.Application", "UnpakSipaksi.Modules.PrioritasRiset.Application\UnpakSipaksi.Modules.PrioritasRiset.Application.csproj", "{C723C9CA-C225-4466-B345-5A1038D092CE}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "UnpakSipaksi.Modules.PrioritasRiset.Infrastructure", "UnpakSipaksi.Modules.PrioritasRiset.Infrastructure\UnpakSipaksi.Modules.PrioritasRiset.Infrastructure.csproj", "{C289CE4C-2AB4-4E78-B126-E74FD81EE91D}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "UnpakSipaksi.Modules.PrioritasRiset.Presentation", "UnpakSipaksi.Modules.PrioritasRiset.Presentation\UnpakSipaksi.Modules.PrioritasRiset.Presentation.csproj", "{6040EF7D-E7D0-40F8-83B3-952FDBA44757}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "PrioritasRiset", "PrioritasRiset", "{7B0186C3-B9C0-47DC-AB2B-5E2C42BD3FD0}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "UnpakSipaksi.Modules.PublikasiDisitasiProposal.Domain", "UnpakSipaksi.Modules.PublikasiDisitasiProposal.Domain\UnpakSipaksi.Modules.PublikasiDisitasiProposal.Domain.csproj", "{AE2E3010-BF70-4AF0-A12D-D83EB2ACC0E0}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "UnpakSipaksi.Modules.PublikasiDisitasiProposal.Application", "UnpakSipaksi.Modules.PublikasiDisitasiProposal.Application\UnpakSipaksi.Modules.PublikasiDisitasiProposal.Application.csproj", "{504CF4C4-121D-4505-A47A-6C5B6663C575}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "UnpakSipaksi.Modules.PublikasiDisitasiProposal.Infrastructure", "UnpakSipaksi.Modules.PublikasiDisitasiProposal.Infrastructure\UnpakSipaksi.Modules.PublikasiDisitasiProposal.Infrastructure.csproj", "{B949276F-8EB6-4350-A3FD-F01D9CE2059E}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "UnpakSipaksi.Modules.PublikasiDisitasiProposal.Presentation", "UnpakSipaksi.Modules.PublikasiDisitasiProposal.Presentation\UnpakSipaksi.Modules.PublikasiDisitasiProposal.Presentation.csproj", "{578F484A-5150-4DD0-A8B7-79CFF8A8F76D}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "PublikasiDisitasiProposal", "PublikasiDisitasiProposal", "{BF308AFF-10CD-4496-A9B7-5D7F2BC6CFBA}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "UnpakSipaksi.Modules.RelevansiKepakaranTemaProposal.Domain", "UnpakSipaksi.Modules.RelevansiKepakaranTemaProposal.Domain\UnpakSipaksi.Modules.RelevansiKepakaranTemaProposal.Domain.csproj", "{DB9F2E8B-7649-43B8-823F-D4395482A059}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "UnpakSipaksi.Modules.RelevansiKepakaranTemaProposal.Application", "UnpakSipaksi.Modules.RelevansiKepakaranTemaProposal.Application\UnpakSipaksi.Modules.RelevansiKepakaranTemaProposal.Application.csproj", "{613A10A9-547A-434C-917C-0E1E90021DE2}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "UnpakSipaksi.Modules.RelevansiKepakaranTemaProposal.Infrastructure", "UnpakSipaksi.Modules.RelevansiKepakaranTemaProposal.Infrastructure\UnpakSipaksi.Modules.RelevansiKepakaranTemaProposal.Infrastructure.csproj", "{0E7CA6DB-F28E-438F-9B0D-53B959DCAAE5}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "UnpakSipaksi.Modules.RelevansiKepakaranTemaProposal.Presentation", "UnpakSipaksi.Modules.RelevansiKepakaranTemaProposal.Presentation\UnpakSipaksi.Modules.RelevansiKepakaranTemaProposal.Presentation.csproj", "{4CB4121D-BA6C-4B3E-804B-CC07F47C25F9}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "RelevansiKepakaranTemaProposal", "RelevansiKepakaranTemaProposal", "{360B3EA3-20C0-4AA0-A2C5-F78A2A030872}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "UnpakSipaksi.Modules.RelevansiKualitasReferensi.Domain", "UnpakSipaksi.Modules.RelevansiKualitasReferensi.Domain\UnpakSipaksi.Modules.RelevansiKualitasReferensi.Domain.csproj", "{F2AE468B-DB67-48A5-9556-881D84BBC35F}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "UnpakSipaksi.Modules.RelevansiKualitasReferensi.Application", "UnpakSipaksi.Modules.RelevansiKualitasReferensi.Application\UnpakSipaksi.Modules.RelevansiKualitasReferensi.Application.csproj", "{4A8BB5AA-965F-48F5-8B42-AC8550ED47EB}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "UnpakSipaksi.Modules.RelevansiKualitasReferensi.Infrastructure", "UnpakSipaksi.Modules.RelevansiKualitasReferensi.Infrastructure\UnpakSipaksi.Modules.RelevansiKualitasReferensi.Infrastructure.csproj", "{31FEA219-BD9F-4ADB-B7A2-31D5BF6C997F}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "UnpakSipaksi.Modules.RelevansiKualitasReferensi.Presentation", "UnpakSipaksi.Modules.RelevansiKualitasReferensi.Presentation\UnpakSipaksi.Modules.RelevansiKualitasReferensi.Presentation.csproj", "{81139E85-29A6-4A83-95A7-343EC88CA3EA}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "RelevansiKualitasReferensi", "RelevansiKualitasReferensi", "{514ED05B-3D8B-4A39-8E78-C706DAC2B2D3}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "UnpakSipaksi.Modules.RelevansiProdukKepentinganNasional.Domain", "UnpakSipaksi.Modules.RelevansiProdukKepentinganNasional.Domain\UnpakSipaksi.Modules.RelevansiProdukKepentinganNasional.Domain.csproj", "{AB054CF3-59A1-48A9-91D0-EA03360D1A11}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "UnpakSipaksi.Modules.RelevansiProdukKepentinganNasional.Application", "UnpakSipaksi.Modules.RelevansiProdukKepentinganNasional.Application\UnpakSipaksi.Modules.RelevansiProdukKepentinganNasional.Application.csproj", "{C5A5103D-38EF-41B1-AC11-661E72308776}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "UnpakSipaksi.Modules.RelevansiProdukKepentinganNasional.Infrastructure", "UnpakSipaksi.Modules.RelevansiProdukKepentinganNasional.Infrastructure\UnpakSipaksi.Modules.RelevansiProdukKepentinganNasional.Infrastructure.csproj", "{DF43B2F4-E61A-432B-8E77-1D158E6B522D}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "UnpakSipaksi.Modules.RelevansiProdukKepentinganNasional.Presentation", "UnpakSipaksi.Modules.RelevansiProdukKepentinganNasional.Presentation\UnpakSipaksi.Modules.RelevansiProdukKepentinganNasional.Presentation.csproj", "{0C4C29F1-AB4B-409D-9C96-813A8C051BD5}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "RelevansiProdukKepentinganNasional", "RelevansiProdukKepentinganNasional", "{4AB3E0AC-B9FA-4E03-85D5-32A233DD5A83}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -869,6 +969,166 @@ Global
 		{49C062B8-A8C7-44B7-9E52-F68E7B7F6BA1}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{49C062B8-A8C7-44B7-9E52-F68E7B7F6BA1}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{49C062B8-A8C7-44B7-9E52-F68E7B7F6BA1}.Release|Any CPU.Build.0 = Release|Any CPU
+		{E090A81E-6155-4F79-8D78-B2F75795E70A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{E090A81E-6155-4F79-8D78-B2F75795E70A}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{E090A81E-6155-4F79-8D78-B2F75795E70A}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{E090A81E-6155-4F79-8D78-B2F75795E70A}.Release|Any CPU.Build.0 = Release|Any CPU
+		{C4364E60-A823-4552-B20C-6584151111E9}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{C4364E60-A823-4552-B20C-6584151111E9}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{C4364E60-A823-4552-B20C-6584151111E9}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{C4364E60-A823-4552-B20C-6584151111E9}.Release|Any CPU.Build.0 = Release|Any CPU
+		{41800EAF-4C0A-42E5-8609-CD4347A8BB9D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{41800EAF-4C0A-42E5-8609-CD4347A8BB9D}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{41800EAF-4C0A-42E5-8609-CD4347A8BB9D}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{41800EAF-4C0A-42E5-8609-CD4347A8BB9D}.Release|Any CPU.Build.0 = Release|Any CPU
+		{B92E1182-50BF-453D-8929-AA8914A104F9}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{B92E1182-50BF-453D-8929-AA8914A104F9}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{B92E1182-50BF-453D-8929-AA8914A104F9}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{B92E1182-50BF-453D-8929-AA8914A104F9}.Release|Any CPU.Build.0 = Release|Any CPU
+		{772897A7-45E0-48CD-AC65-5C82D7402909}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{772897A7-45E0-48CD-AC65-5C82D7402909}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{772897A7-45E0-48CD-AC65-5C82D7402909}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{772897A7-45E0-48CD-AC65-5C82D7402909}.Release|Any CPU.Build.0 = Release|Any CPU
+		{FFF6F86B-FD60-4046-A579-5A9C2626992B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{FFF6F86B-FD60-4046-A579-5A9C2626992B}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{FFF6F86B-FD60-4046-A579-5A9C2626992B}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{FFF6F86B-FD60-4046-A579-5A9C2626992B}.Release|Any CPU.Build.0 = Release|Any CPU
+		{4F9F8BFA-BA23-484A-A99F-3031329FD517}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{4F9F8BFA-BA23-484A-A99F-3031329FD517}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{4F9F8BFA-BA23-484A-A99F-3031329FD517}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{4F9F8BFA-BA23-484A-A99F-3031329FD517}.Release|Any CPU.Build.0 = Release|Any CPU
+		{F9F7A952-AE34-434F-B30D-904F99BE7462}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{F9F7A952-AE34-434F-B30D-904F99BE7462}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{F9F7A952-AE34-434F-B30D-904F99BE7462}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{F9F7A952-AE34-434F-B30D-904F99BE7462}.Release|Any CPU.Build.0 = Release|Any CPU
+		{EEAE70FA-9383-4F69-9C01-2DDEBBB007D2}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{EEAE70FA-9383-4F69-9C01-2DDEBBB007D2}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{EEAE70FA-9383-4F69-9C01-2DDEBBB007D2}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{EEAE70FA-9383-4F69-9C01-2DDEBBB007D2}.Release|Any CPU.Build.0 = Release|Any CPU
+		{D59A241F-3827-43A9-8E40-47400B2DFB2B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{D59A241F-3827-43A9-8E40-47400B2DFB2B}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{D59A241F-3827-43A9-8E40-47400B2DFB2B}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{D59A241F-3827-43A9-8E40-47400B2DFB2B}.Release|Any CPU.Build.0 = Release|Any CPU
+		{54174633-2B54-44BC-8F4B-E1C5C4FF91F9}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{54174633-2B54-44BC-8F4B-E1C5C4FF91F9}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{54174633-2B54-44BC-8F4B-E1C5C4FF91F9}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{54174633-2B54-44BC-8F4B-E1C5C4FF91F9}.Release|Any CPU.Build.0 = Release|Any CPU
+		{997ED479-72EC-4F5A-B61D-EA73C8C0ED2F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{997ED479-72EC-4F5A-B61D-EA73C8C0ED2F}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{997ED479-72EC-4F5A-B61D-EA73C8C0ED2F}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{997ED479-72EC-4F5A-B61D-EA73C8C0ED2F}.Release|Any CPU.Build.0 = Release|Any CPU
+		{30B46CAA-1981-412D-966E-9E9CF21E5FBF}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{30B46CAA-1981-412D-966E-9E9CF21E5FBF}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{30B46CAA-1981-412D-966E-9E9CF21E5FBF}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{30B46CAA-1981-412D-966E-9E9CF21E5FBF}.Release|Any CPU.Build.0 = Release|Any CPU
+		{4306E6A2-22EB-4AFD-8097-905A03F1CEE6}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{4306E6A2-22EB-4AFD-8097-905A03F1CEE6}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{4306E6A2-22EB-4AFD-8097-905A03F1CEE6}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{4306E6A2-22EB-4AFD-8097-905A03F1CEE6}.Release|Any CPU.Build.0 = Release|Any CPU
+		{BF8DB0C0-3FEA-41BB-A41B-A9715214D354}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{BF8DB0C0-3FEA-41BB-A41B-A9715214D354}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{BF8DB0C0-3FEA-41BB-A41B-A9715214D354}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{BF8DB0C0-3FEA-41BB-A41B-A9715214D354}.Release|Any CPU.Build.0 = Release|Any CPU
+		{741B1A43-B496-44A5-8A07-170AA8CDD74F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{741B1A43-B496-44A5-8A07-170AA8CDD74F}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{741B1A43-B496-44A5-8A07-170AA8CDD74F}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{741B1A43-B496-44A5-8A07-170AA8CDD74F}.Release|Any CPU.Build.0 = Release|Any CPU
+		{8B96D568-3463-4EF9-AB8A-C598710790CF}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{8B96D568-3463-4EF9-AB8A-C598710790CF}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{8B96D568-3463-4EF9-AB8A-C598710790CF}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{8B96D568-3463-4EF9-AB8A-C598710790CF}.Release|Any CPU.Build.0 = Release|Any CPU
+		{48C7C7EA-1E7D-4AE8-89A9-2D3E90A3B338}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{48C7C7EA-1E7D-4AE8-89A9-2D3E90A3B338}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{48C7C7EA-1E7D-4AE8-89A9-2D3E90A3B338}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{48C7C7EA-1E7D-4AE8-89A9-2D3E90A3B338}.Release|Any CPU.Build.0 = Release|Any CPU
+		{EEA59355-D3CA-4FFF-BE2E-1474A9C4688D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{EEA59355-D3CA-4FFF-BE2E-1474A9C4688D}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{EEA59355-D3CA-4FFF-BE2E-1474A9C4688D}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{EEA59355-D3CA-4FFF-BE2E-1474A9C4688D}.Release|Any CPU.Build.0 = Release|Any CPU
+		{656F986F-26DF-47DA-8E22-EF22D442F3CD}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{656F986F-26DF-47DA-8E22-EF22D442F3CD}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{656F986F-26DF-47DA-8E22-EF22D442F3CD}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{656F986F-26DF-47DA-8E22-EF22D442F3CD}.Release|Any CPU.Build.0 = Release|Any CPU
+		{265DFA2E-9670-4F3A-B234-ACBA2CB608B1}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{265DFA2E-9670-4F3A-B234-ACBA2CB608B1}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{265DFA2E-9670-4F3A-B234-ACBA2CB608B1}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{265DFA2E-9670-4F3A-B234-ACBA2CB608B1}.Release|Any CPU.Build.0 = Release|Any CPU
+		{C723C9CA-C225-4466-B345-5A1038D092CE}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{C723C9CA-C225-4466-B345-5A1038D092CE}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{C723C9CA-C225-4466-B345-5A1038D092CE}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{C723C9CA-C225-4466-B345-5A1038D092CE}.Release|Any CPU.Build.0 = Release|Any CPU
+		{C289CE4C-2AB4-4E78-B126-E74FD81EE91D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{C289CE4C-2AB4-4E78-B126-E74FD81EE91D}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{C289CE4C-2AB4-4E78-B126-E74FD81EE91D}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{C289CE4C-2AB4-4E78-B126-E74FD81EE91D}.Release|Any CPU.Build.0 = Release|Any CPU
+		{6040EF7D-E7D0-40F8-83B3-952FDBA44757}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{6040EF7D-E7D0-40F8-83B3-952FDBA44757}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{6040EF7D-E7D0-40F8-83B3-952FDBA44757}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{6040EF7D-E7D0-40F8-83B3-952FDBA44757}.Release|Any CPU.Build.0 = Release|Any CPU
+		{AE2E3010-BF70-4AF0-A12D-D83EB2ACC0E0}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{AE2E3010-BF70-4AF0-A12D-D83EB2ACC0E0}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{AE2E3010-BF70-4AF0-A12D-D83EB2ACC0E0}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{AE2E3010-BF70-4AF0-A12D-D83EB2ACC0E0}.Release|Any CPU.Build.0 = Release|Any CPU
+		{504CF4C4-121D-4505-A47A-6C5B6663C575}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{504CF4C4-121D-4505-A47A-6C5B6663C575}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{504CF4C4-121D-4505-A47A-6C5B6663C575}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{504CF4C4-121D-4505-A47A-6C5B6663C575}.Release|Any CPU.Build.0 = Release|Any CPU
+		{B949276F-8EB6-4350-A3FD-F01D9CE2059E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{B949276F-8EB6-4350-A3FD-F01D9CE2059E}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{B949276F-8EB6-4350-A3FD-F01D9CE2059E}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{B949276F-8EB6-4350-A3FD-F01D9CE2059E}.Release|Any CPU.Build.0 = Release|Any CPU
+		{578F484A-5150-4DD0-A8B7-79CFF8A8F76D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{578F484A-5150-4DD0-A8B7-79CFF8A8F76D}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{578F484A-5150-4DD0-A8B7-79CFF8A8F76D}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{578F484A-5150-4DD0-A8B7-79CFF8A8F76D}.Release|Any CPU.Build.0 = Release|Any CPU
+		{DB9F2E8B-7649-43B8-823F-D4395482A059}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{DB9F2E8B-7649-43B8-823F-D4395482A059}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{DB9F2E8B-7649-43B8-823F-D4395482A059}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{DB9F2E8B-7649-43B8-823F-D4395482A059}.Release|Any CPU.Build.0 = Release|Any CPU
+		{613A10A9-547A-434C-917C-0E1E90021DE2}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{613A10A9-547A-434C-917C-0E1E90021DE2}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{613A10A9-547A-434C-917C-0E1E90021DE2}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{613A10A9-547A-434C-917C-0E1E90021DE2}.Release|Any CPU.Build.0 = Release|Any CPU
+		{0E7CA6DB-F28E-438F-9B0D-53B959DCAAE5}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{0E7CA6DB-F28E-438F-9B0D-53B959DCAAE5}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{0E7CA6DB-F28E-438F-9B0D-53B959DCAAE5}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{0E7CA6DB-F28E-438F-9B0D-53B959DCAAE5}.Release|Any CPU.Build.0 = Release|Any CPU
+		{4CB4121D-BA6C-4B3E-804B-CC07F47C25F9}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{4CB4121D-BA6C-4B3E-804B-CC07F47C25F9}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{4CB4121D-BA6C-4B3E-804B-CC07F47C25F9}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{4CB4121D-BA6C-4B3E-804B-CC07F47C25F9}.Release|Any CPU.Build.0 = Release|Any CPU
+		{F2AE468B-DB67-48A5-9556-881D84BBC35F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{F2AE468B-DB67-48A5-9556-881D84BBC35F}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{F2AE468B-DB67-48A5-9556-881D84BBC35F}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{F2AE468B-DB67-48A5-9556-881D84BBC35F}.Release|Any CPU.Build.0 = Release|Any CPU
+		{4A8BB5AA-965F-48F5-8B42-AC8550ED47EB}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{4A8BB5AA-965F-48F5-8B42-AC8550ED47EB}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{4A8BB5AA-965F-48F5-8B42-AC8550ED47EB}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{4A8BB5AA-965F-48F5-8B42-AC8550ED47EB}.Release|Any CPU.Build.0 = Release|Any CPU
+		{31FEA219-BD9F-4ADB-B7A2-31D5BF6C997F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{31FEA219-BD9F-4ADB-B7A2-31D5BF6C997F}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{31FEA219-BD9F-4ADB-B7A2-31D5BF6C997F}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{31FEA219-BD9F-4ADB-B7A2-31D5BF6C997F}.Release|Any CPU.Build.0 = Release|Any CPU
+		{81139E85-29A6-4A83-95A7-343EC88CA3EA}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{81139E85-29A6-4A83-95A7-343EC88CA3EA}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{81139E85-29A6-4A83-95A7-343EC88CA3EA}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{81139E85-29A6-4A83-95A7-343EC88CA3EA}.Release|Any CPU.Build.0 = Release|Any CPU
+		{AB054CF3-59A1-48A9-91D0-EA03360D1A11}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{AB054CF3-59A1-48A9-91D0-EA03360D1A11}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{AB054CF3-59A1-48A9-91D0-EA03360D1A11}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{AB054CF3-59A1-48A9-91D0-EA03360D1A11}.Release|Any CPU.Build.0 = Release|Any CPU
+		{C5A5103D-38EF-41B1-AC11-661E72308776}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{C5A5103D-38EF-41B1-AC11-661E72308776}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{C5A5103D-38EF-41B1-AC11-661E72308776}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{C5A5103D-38EF-41B1-AC11-661E72308776}.Release|Any CPU.Build.0 = Release|Any CPU
+		{DF43B2F4-E61A-432B-8E77-1D158E6B522D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{DF43B2F4-E61A-432B-8E77-1D158E6B522D}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{DF43B2F4-E61A-432B-8E77-1D158E6B522D}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{DF43B2F4-E61A-432B-8E77-1D158E6B522D}.Release|Any CPU.Build.0 = Release|Any CPU
+		{0C4C29F1-AB4B-409D-9C96-813A8C051BD5}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{0C4C29F1-AB4B-409D-9C96-813A8C051BD5}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{0C4C29F1-AB4B-409D-9C96-813A8C051BD5}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{0C4C29F1-AB4B-409D-9C96-813A8C051BD5}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -1037,6 +1297,56 @@ Global
 		{15E7AAD5-8E26-4287-89E8-9D802FA431BD} = {D667D6D9-9BE2-4A3C-B1B1-A21A0DC371A2}
 		{49C062B8-A8C7-44B7-9E52-F68E7B7F6BA1} = {D667D6D9-9BE2-4A3C-B1B1-A21A0DC371A2}
 		{D667D6D9-9BE2-4A3C-B1B1-A21A0DC371A2} = {F6E7949F-895D-4A48-A035-B69FEAEA5752}
+		{E090A81E-6155-4F79-8D78-B2F75795E70A} = {EC3521BE-D1D4-40B0-87B0-2DD8FC2D01F5}
+		{C4364E60-A823-4552-B20C-6584151111E9} = {EC3521BE-D1D4-40B0-87B0-2DD8FC2D01F5}
+		{41800EAF-4C0A-42E5-8609-CD4347A8BB9D} = {EC3521BE-D1D4-40B0-87B0-2DD8FC2D01F5}
+		{B92E1182-50BF-453D-8929-AA8914A104F9} = {EC3521BE-D1D4-40B0-87B0-2DD8FC2D01F5}
+		{EC3521BE-D1D4-40B0-87B0-2DD8FC2D01F5} = {F6E7949F-895D-4A48-A035-B69FEAEA5752}
+		{772897A7-45E0-48CD-AC65-5C82D7402909} = {790A25E5-A334-4CC4-8E4B-6D433FDAEB9A}
+		{FFF6F86B-FD60-4046-A579-5A9C2626992B} = {790A25E5-A334-4CC4-8E4B-6D433FDAEB9A}
+		{4F9F8BFA-BA23-484A-A99F-3031329FD517} = {790A25E5-A334-4CC4-8E4B-6D433FDAEB9A}
+		{F9F7A952-AE34-434F-B30D-904F99BE7462} = {790A25E5-A334-4CC4-8E4B-6D433FDAEB9A}
+		{790A25E5-A334-4CC4-8E4B-6D433FDAEB9A} = {F6E7949F-895D-4A48-A035-B69FEAEA5752}
+		{EEAE70FA-9383-4F69-9C01-2DDEBBB007D2} = {01B56453-F0C6-4F56-A910-69CFAE85408D}
+		{D59A241F-3827-43A9-8E40-47400B2DFB2B} = {01B56453-F0C6-4F56-A910-69CFAE85408D}
+		{54174633-2B54-44BC-8F4B-E1C5C4FF91F9} = {01B56453-F0C6-4F56-A910-69CFAE85408D}
+		{997ED479-72EC-4F5A-B61D-EA73C8C0ED2F} = {01B56453-F0C6-4F56-A910-69CFAE85408D}
+		{01B56453-F0C6-4F56-A910-69CFAE85408D} = {F6E7949F-895D-4A48-A035-B69FEAEA5752}
+		{30B46CAA-1981-412D-966E-9E9CF21E5FBF} = {B562AE5C-91CB-474B-A83E-4CEAB2937E45}
+		{4306E6A2-22EB-4AFD-8097-905A03F1CEE6} = {B562AE5C-91CB-474B-A83E-4CEAB2937E45}
+		{BF8DB0C0-3FEA-41BB-A41B-A9715214D354} = {B562AE5C-91CB-474B-A83E-4CEAB2937E45}
+		{741B1A43-B496-44A5-8A07-170AA8CDD74F} = {B562AE5C-91CB-474B-A83E-4CEAB2937E45}
+		{B562AE5C-91CB-474B-A83E-4CEAB2937E45} = {F6E7949F-895D-4A48-A035-B69FEAEA5752}
+		{8B96D568-3463-4EF9-AB8A-C598710790CF} = {D9501F6A-1721-4D02-95ED-3D59B6B44C69}
+		{48C7C7EA-1E7D-4AE8-89A9-2D3E90A3B338} = {D9501F6A-1721-4D02-95ED-3D59B6B44C69}
+		{EEA59355-D3CA-4FFF-BE2E-1474A9C4688D} = {D9501F6A-1721-4D02-95ED-3D59B6B44C69}
+		{656F986F-26DF-47DA-8E22-EF22D442F3CD} = {D9501F6A-1721-4D02-95ED-3D59B6B44C69}
+		{D9501F6A-1721-4D02-95ED-3D59B6B44C69} = {F6E7949F-895D-4A48-A035-B69FEAEA5752}
+		{265DFA2E-9670-4F3A-B234-ACBA2CB608B1} = {7B0186C3-B9C0-47DC-AB2B-5E2C42BD3FD0}
+		{C723C9CA-C225-4466-B345-5A1038D092CE} = {7B0186C3-B9C0-47DC-AB2B-5E2C42BD3FD0}
+		{C289CE4C-2AB4-4E78-B126-E74FD81EE91D} = {7B0186C3-B9C0-47DC-AB2B-5E2C42BD3FD0}
+		{6040EF7D-E7D0-40F8-83B3-952FDBA44757} = {7B0186C3-B9C0-47DC-AB2B-5E2C42BD3FD0}
+		{7B0186C3-B9C0-47DC-AB2B-5E2C42BD3FD0} = {F6E7949F-895D-4A48-A035-B69FEAEA5752}
+		{AE2E3010-BF70-4AF0-A12D-D83EB2ACC0E0} = {BF308AFF-10CD-4496-A9B7-5D7F2BC6CFBA}
+		{504CF4C4-121D-4505-A47A-6C5B6663C575} = {BF308AFF-10CD-4496-A9B7-5D7F2BC6CFBA}
+		{B949276F-8EB6-4350-A3FD-F01D9CE2059E} = {BF308AFF-10CD-4496-A9B7-5D7F2BC6CFBA}
+		{578F484A-5150-4DD0-A8B7-79CFF8A8F76D} = {BF308AFF-10CD-4496-A9B7-5D7F2BC6CFBA}
+		{BF308AFF-10CD-4496-A9B7-5D7F2BC6CFBA} = {F6E7949F-895D-4A48-A035-B69FEAEA5752}
+		{DB9F2E8B-7649-43B8-823F-D4395482A059} = {360B3EA3-20C0-4AA0-A2C5-F78A2A030872}
+		{613A10A9-547A-434C-917C-0E1E90021DE2} = {360B3EA3-20C0-4AA0-A2C5-F78A2A030872}
+		{0E7CA6DB-F28E-438F-9B0D-53B959DCAAE5} = {360B3EA3-20C0-4AA0-A2C5-F78A2A030872}
+		{4CB4121D-BA6C-4B3E-804B-CC07F47C25F9} = {360B3EA3-20C0-4AA0-A2C5-F78A2A030872}
+		{360B3EA3-20C0-4AA0-A2C5-F78A2A030872} = {F6E7949F-895D-4A48-A035-B69FEAEA5752}
+		{F2AE468B-DB67-48A5-9556-881D84BBC35F} = {514ED05B-3D8B-4A39-8E78-C706DAC2B2D3}
+		{4A8BB5AA-965F-48F5-8B42-AC8550ED47EB} = {514ED05B-3D8B-4A39-8E78-C706DAC2B2D3}
+		{31FEA219-BD9F-4ADB-B7A2-31D5BF6C997F} = {514ED05B-3D8B-4A39-8E78-C706DAC2B2D3}
+		{81139E85-29A6-4A83-95A7-343EC88CA3EA} = {514ED05B-3D8B-4A39-8E78-C706DAC2B2D3}
+		{514ED05B-3D8B-4A39-8E78-C706DAC2B2D3} = {F6E7949F-895D-4A48-A035-B69FEAEA5752}
+		{AB054CF3-59A1-48A9-91D0-EA03360D1A11} = {4AB3E0AC-B9FA-4E03-85D5-32A233DD5A83}
+		{C5A5103D-38EF-41B1-AC11-661E72308776} = {4AB3E0AC-B9FA-4E03-85D5-32A233DD5A83}
+		{DF43B2F4-E61A-432B-8E77-1D158E6B522D} = {4AB3E0AC-B9FA-4E03-85D5-32A233DD5A83}
+		{0C4C29F1-AB4B-409D-9C96-813A8C051BD5} = {4AB3E0AC-B9FA-4E03-85D5-32A233DD5A83}
+		{4AB3E0AC-B9FA-4E03-85D5-32A233DD5A83} = {F6E7949F-895D-4A48-A035-B69FEAEA5752}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {436EDA68-9668-49C1-B97C-DFD8EAF1CFE5}

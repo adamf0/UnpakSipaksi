@@ -33,6 +33,16 @@ using UnpakSipaksi.Modules.KualitasIpteks.Infrastructure;
 using UnpakSipaksi.Modules.KualitasKuantitasPublikasiJurnalIlmiah.Infrastructure;
 using UnpakSipaksi.Modules.KualitasKuantitasPublikasiProsiding.Infrastructure;
 using UnpakSipaksi.Modules.KuantitasStatusKi.Infrastructure;
+using UnpakSipaksi.Modules.LuaranArtikel.Infrastructure;
+using UnpakSipaksi.Modules.MetodeRencanaKegiatan.Infrastructure;
+using UnpakSipaksi.Modules.ModelFeasibilityStudys.Infrastructure;
+using UnpakSipaksi.Modules.PeningkatanKeberdayaanMitra.Infrastructure;
+using UnpakSipaksi.Modules.PotensiKetercapaianLuaranDijanjikan.Infrastructure;
+using UnpakSipaksi.Modules.PrioritasRiset.Infrastructure;
+using UnpakSipaksi.Modules.PublikasiDisitasiProposal.Infrastructure;
+using UnpakSipaksi.Modules.RelevansiKepakaranTemaProposal.Infrastructure;
+using UnpakSipaksi.Modules.RelevansiKualitasReferensi.Infrastructure;
+using UnpakSipaksi.Modules.RelevansiProdukKepentinganNasional.Infrastructure;
 
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.ResponseCompression;
@@ -95,6 +105,16 @@ builder.Services.AddApplication([
     UnpakSipaksi.Modules.KualitasKuantitasPublikasiJurnalIlmiah.Application.AssemblyReference.Assembly,
     UnpakSipaksi.Modules.KualitasKuantitasPublikasiProsiding.Application.AssemblyReference.Assembly,
     UnpakSipaksi.Modules.KuantitasStatusKi.Application.AssemblyReference.Assembly,
+    UnpakSipaksi.Modules.LuaranArtikel.Application.AssemblyReference.Assembly,
+    UnpakSipaksi.Modules.MetodeRencanaKegiatan.Application.AssemblyReference.Assembly,
+    UnpakSipaksi.Modules.ModelFeasibilityStudys.Application.AssemblyReference.Assembly,
+    UnpakSipaksi.Modules.PeningkatanKeberdayaanMitra.Application.AssemblyReference.Assembly,
+    UnpakSipaksi.Modules.PotensiKetercapaianLuaranDijanjikan.Application.AssemblyReference.Assembly,
+    UnpakSipaksi.Modules.PrioritasRiset.Application.AssemblyReference.Assembly,
+    UnpakSipaksi.Modules.PublikasiDisitasiProposal.Application.AssemblyReference.Assembly,
+    UnpakSipaksi.Modules.RelevansiKepakaranTemaProposal.Application.AssemblyReference.Assembly,
+    UnpakSipaksi.Modules.RelevansiKualitasReferensi.Application.AssemblyReference.Assembly,
+    UnpakSipaksi.Modules.RelevansiProdukKepentinganNasional.Application.AssemblyReference.Assembly,
 ]);
 
 builder.Services.AddAntiforgery(options =>
@@ -135,6 +155,16 @@ builder.Services.AddKualitasIpteksModule(builder.Configuration);
 builder.Services.AddKualitasKuantitasPublikasiJurnalIlmiahModule(builder.Configuration);
 builder.Services.AddKualitasKuantitasPublikasiProsidingModule(builder.Configuration);
 builder.Services.AddKuantitasStatusKiModule(builder.Configuration);
+builder.Services.AddLuaranArtikelModule(builder.Configuration);
+builder.Services.AddMetodeRencanaKegiatanModule(builder.Configuration);
+builder.Services.AddModelFeasibilityStudysModule(builder.Configuration);
+builder.Services.AddPeningkatanKeberdayaanMitraModule(builder.Configuration);
+builder.Services.AddPotensiKetercapaianLuaranDijanjikanModule(builder.Configuration);
+builder.Services.AddPrioritasRisetModule(builder.Configuration);
+builder.Services.AddPublikasiDisitasiProposalModule(builder.Configuration);
+builder.Services.AddRelevansiKepakaranTemaProposalModule(builder.Configuration);
+builder.Services.AddRelevansiKualitasReferensiModule(builder.Configuration);
+builder.Services.AddRelevansiProdukKepentinganNasionalModule(builder.Configuration);
 
 builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen();
@@ -208,6 +238,16 @@ KualitasIpteksModule.MapEndpoints(app);
 KualitasKuantitasPublikasiJurnalIlmiahModule.MapEndpoints(app);
 KualitasKuantitasPublikasiProsidingModule.MapEndpoints(app);
 KuantitasStatusKiModule.MapEndpoints(app);
+LuaranArtikelModule.MapEndpoints(app);
+MetodeRencanaKegiatanModule.MapEndpoints(app);
+ModelFeasibilityStudysModule.MapEndpoints(app);
+PeningkatanKeberdayaanMitraModule.MapEndpoints(app);
+PotensiKetercapaianLuaranDijanjikanModule.MapEndpoints(app);
+PrioritasRisetModule.MapEndpoints(app);
+PublikasiDisitasiProposalModule.MapEndpoints(app);
+RelevansiKepakaranTemaProposalModule.MapEndpoints(app);
+RelevansiKualitasReferensiModule.MapEndpoints(app);
+RelevansiProdukKepentinganNasionalModule.MapEndpoints(app);
 
 if (app.Environment.IsDevelopment())
 {

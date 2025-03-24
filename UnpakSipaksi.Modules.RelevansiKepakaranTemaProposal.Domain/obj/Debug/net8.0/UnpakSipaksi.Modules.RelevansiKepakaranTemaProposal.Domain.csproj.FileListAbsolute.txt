@@ -1,0 +1,16 @@
+C:\dev_net\UnpakSipaksi\UnpakSipaksi.Modules.RelevansiKepakaranTemaProposal.Domain\bin\Debug\net8.0\UnpakSipaksi.Modules.RelevansiKepakaranTemaProposal.Domain.deps.json
+C:\dev_net\UnpakSipaksi\UnpakSipaksi.Modules.RelevansiKepakaranTemaProposal.Domain\bin\Debug\net8.0\UnpakSipaksi.Modules.RelevansiKepakaranTemaProposal.Domain.dll
+C:\dev_net\UnpakSipaksi\UnpakSipaksi.Modules.RelevansiKepakaranTemaProposal.Domain\bin\Debug\net8.0\UnpakSipaksi.Modules.RelevansiKepakaranTemaProposal.Domain.pdb
+C:\dev_net\UnpakSipaksi\UnpakSipaksi.Modules.RelevansiKepakaranTemaProposal.Domain\bin\Debug\net8.0\UnpakSipaksi.Common.Domain.dll
+C:\dev_net\UnpakSipaksi\UnpakSipaksi.Modules.RelevansiKepakaranTemaProposal.Domain\bin\Debug\net8.0\UnpakSipaksi.Common.Domain.pdb
+C:\dev_net\UnpakSipaksi\UnpakSipaksi.Modules.RelevansiKepakaranTemaProposal.Domain\obj\Debug\net8.0\UnpakSipaksi.Modules.RelevansiKepakaranTemaProposal.Domain.csproj.AssemblyReference.cache
+C:\dev_net\UnpakSipaksi\UnpakSipaksi.Modules.RelevansiKepakaranTemaProposal.Domain\obj\Debug\net8.0\UnpakSipaksi.Modules.RelevansiKepakaranTemaProposal.Domain.GeneratedMSBuildEditorConfig.editorconfig
+C:\dev_net\UnpakSipaksi\UnpakSipaksi.Modules.RelevansiKepakaranTemaProposal.Domain\obj\Debug\net8.0\UnpakSipaksi.Modules.RelevansiKepakaranTemaProposal.Domain.AssemblyInfoInputs.cache
+C:\dev_net\UnpakSipaksi\UnpakSipaksi.Modules.RelevansiKepakaranTemaProposal.Domain\obj\Debug\net8.0\UnpakSipaksi.Modules.RelevansiKepakaranTemaProposal.Domain.AssemblyInfo.cs
+C:\dev_net\UnpakSipaksi\UnpakSipaksi.Modules.RelevansiKepakaranTemaProposal.Domain\obj\Debug\net8.0\UnpakSipaksi.Modules.RelevansiKepakaranTemaProposal.Domain.csproj.CoreCompileInputs.cache
+C:\dev_net\UnpakSipaksi\UnpakSipaksi.Modules.RelevansiKepakaranTemaProposal.Domain\obj\Debug\net8.0\UnpakSipaksi.Modules.RelevansiKepakaranTemaProposal.Domain.sourcelink.json
+C:\dev_net\UnpakSipaksi\UnpakSipaksi.Modules.RelevansiKepakaranTemaProposal.Domain\obj\Debug\net8.0\UnpakSip.60D4BD96.Up2Date
+C:\dev_net\UnpakSipaksi\UnpakSipaksi.Modules.RelevansiKepakaranTemaProposal.Domain\obj\Debug\net8.0\UnpakSipaksi.Modules.RelevansiKepakaranTemaProposal.Domain.dll
+C:\dev_net\UnpakSipaksi\UnpakSipaksi.Modules.RelevansiKepakaranTemaProposal.Domain\obj\Debug\net8.0\refint\UnpakSipaksi.Modules.RelevansiKepakaranTemaProposal.Domain.dll
+C:\dev_net\UnpakSipaksi\UnpakSipaksi.Modules.RelevansiKepakaranTemaProposal.Domain\obj\Debug\net8.0\UnpakSipaksi.Modules.RelevansiKepakaranTemaProposal.Domain.pdb
+C:\dev_net\UnpakSipaksi\UnpakSipaksi.Modules.RelevansiKepakaranTemaProposal.Domain\obj\Debug\net8.0\ref\UnpakSipaksi.Modules.RelevansiKepakaranTemaProposal.Domain.dll

@@ -1,0 +1,16 @@
+C:\dev_net\UnpakSipaksi\UnpakSipaksi.Modules.PeningkatanKeberdayaanMitra.Domain\bin\Debug\net8.0\UnpakSipaksi.Modules.PeningkatanKeberdayaanMitra.Domain.deps.json
+C:\dev_net\UnpakSipaksi\UnpakSipaksi.Modules.PeningkatanKeberdayaanMitra.Domain\bin\Debug\net8.0\UnpakSipaksi.Modules.PeningkatanKeberdayaanMitra.Domain.dll
+C:\dev_net\UnpakSipaksi\UnpakSipaksi.Modules.PeningkatanKeberdayaanMitra.Domain\bin\Debug\net8.0\UnpakSipaksi.Modules.PeningkatanKeberdayaanMitra.Domain.pdb
+C:\dev_net\UnpakSipaksi\UnpakSipaksi.Modules.PeningkatanKeberdayaanMitra.Domain\bin\Debug\net8.0\UnpakSipaksi.Common.Domain.dll
+C:\dev_net\UnpakSipaksi\UnpakSipaksi.Modules.PeningkatanKeberdayaanMitra.Domain\bin\Debug\net8.0\UnpakSipaksi.Common.Domain.pdb
+C:\dev_net\UnpakSipaksi\UnpakSipaksi.Modules.PeningkatanKeberdayaanMitra.Domain\obj\Debug\net8.0\UnpakSipaksi.Modules.PeningkatanKeberdayaanMitra.Domain.csproj.AssemblyReference.cache
+C:\dev_net\UnpakSipaksi\UnpakSipaksi.Modules.PeningkatanKeberdayaanMitra.Domain\obj\Debug\net8.0\UnpakSipaksi.Modules.PeningkatanKeberdayaanMitra.Domain.GeneratedMSBuildEditorConfig.editorconfig
+C:\dev_net\UnpakSipaksi\UnpakSipaksi.Modules.PeningkatanKeberdayaanMitra.Domain\obj\Debug\net8.0\UnpakSipaksi.Modules.PeningkatanKeberdayaanMitra.Domain.AssemblyInfoInputs.cache
+C:\dev_net\UnpakSipaksi\UnpakSipaksi.Modules.PeningkatanKeberdayaanMitra.Domain\obj\Debug\net8.0\UnpakSipaksi.Modules.PeningkatanKeberdayaanMitra.Domain.AssemblyInfo.cs
+C:\dev_net\UnpakSipaksi\UnpakSipaksi.Modules.PeningkatanKeberdayaanMitra.Domain\obj\Debug\net8.0\UnpakSipaksi.Modules.PeningkatanKeberdayaanMitra.Domain.csproj.CoreCompileInputs.cache
+C:\dev_net\UnpakSipaksi\UnpakSipaksi.Modules.PeningkatanKeberdayaanMitra.Domain\obj\Debug\net8.0\UnpakSipaksi.Modules.PeningkatanKeberdayaanMitra.Domain.sourcelink.json
+C:\dev_net\UnpakSipaksi\UnpakSipaksi.Modules.PeningkatanKeberdayaanMitra.Domain\obj\Debug\net8.0\UnpakSip.06038688.Up2Date
+C:\dev_net\UnpakSipaksi\UnpakSipaksi.Modules.PeningkatanKeberdayaanMitra.Domain\obj\Debug\net8.0\UnpakSipaksi.Modules.PeningkatanKeberdayaanMitra.Domain.dll
+C:\dev_net\UnpakSipaksi\UnpakSipaksi.Modules.PeningkatanKeberdayaanMitra.Domain\obj\Debug\net8.0\refint\UnpakSipaksi.Modules.PeningkatanKeberdayaanMitra.Domain.dll
+C:\dev_net\UnpakSipaksi\UnpakSipaksi.Modules.PeningkatanKeberdayaanMitra.Domain\obj\Debug\net8.0\UnpakSipaksi.Modules.PeningkatanKeberdayaanMitra.Domain.pdb
+C:\dev_net\UnpakSipaksi\UnpakSipaksi.Modules.PeningkatanKeberdayaanMitra.Domain\obj\Debug\net8.0\ref\UnpakSipaksi.Modules.PeningkatanKeberdayaanMitra.Domain.dll
