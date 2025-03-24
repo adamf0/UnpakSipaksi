@@ -96,6 +96,14 @@
           "UnpakSipaksi.Modules.RelevansiKualitasReferensi.Infrastructure": "1.0.0",
           "UnpakSipaksi.Modules.RelevansiProdukKepentinganNasional.Application": "1.0.0",
           "UnpakSipaksi.Modules.RelevansiProdukKepentinganNasional.Infrastructure": "1.0.0",
+          "UnpakSipaksi.Modules.Rirn.Application": "1.0.0",
+          "UnpakSipaksi.Modules.Rirn.Infrastructure": "1.0.0",
+          "UnpakSipaksi.Modules.RoadmapPenelitian.Application": "1.0.0",
+          "UnpakSipaksi.Modules.RoadmapPenelitian.Infrastructure": "1.0.0",
+          "UnpakSipaksi.Modules.RumpunIlmu1.Application": "1.0.0",
+          "UnpakSipaksi.Modules.RumpunIlmu1.Infrastructure": "1.0.0",
+          "UnpakSipaksi.Modules.RumpunIlmu2.Application": "1.0.0",
+          "UnpakSipaksi.Modules.RumpunIlmu2.Infrastructure": "1.0.0",
           "UnpakSipaksi.Modules.TemaPenelitian.Application": "1.0.0",
           "UnpakSipaksi.Modules.TemaPenelitian.Infrastructure": "1.0.0",
           "UnpakSipaksi.Modules.TopikPenelitian.Application": "1.0.0",
@@ -3016,6 +3024,189 @@
           "UnpakSipaksi.Modules.RelevansiProdukKepentinganNasional.Presentation.dll": {}
         }
       },
+      "UnpakSipaksi.Modules.Rirn.Application/1.0.0": {
+        "dependencies": {
+          "Dapper": "2.1.35",
+          "MediatR": "12.4.1",
+          "UnpakSipaksi.Common.Application": "1.0.0",
+          "UnpakSipaksi.Common.Domain": "1.0.0",
+          "UnpakSipaksi.Modules.Rirn.Domain": "1.0.0"
+        },
+        "runtime": {
+          "UnpakSipaksi.Modules.Rirn.Application.dll": {}
+        }
+      },
+      "UnpakSipaksi.Modules.Rirn.Domain/1.0.0": {
+        "dependencies": {
+          "UnpakSipaksi.Common.Domain": "1.0.0"
+        },
+        "runtime": {
+          "UnpakSipaksi.Modules.Rirn.Domain.dll": {}
+        }
+      },
+      "UnpakSipaksi.Modules.Rirn.Infrastructure/1.0.0": {
+        "dependencies": {
+          "Microsoft.EntityFrameworkCore": "8.0.0",
+          "MySql.EntityFrameworkCore": "8.0.0",
+          "UnpakSipaksi.Common.Application": "1.0.0",
+          "UnpakSipaksi.Common.Infrastructure": "1.0.0",
+          "UnpakSipaksi.Modules.Rirn.Application": "1.0.0",
+          "UnpakSipaksi.Modules.Rirn.Domain": "1.0.0",
+          "UnpakSipaksi.Modules.Rirn.Presentation": "1.0.0"
+        },
+        "runtime": {
+          "UnpakSipaksi.Modules.Rirn.Infrastructure.dll": {}
+        }
+      },
+      "UnpakSipaksi.Modules.Rirn.Presentation/1.0.0": {
+        "dependencies": {
+          "UnpakSipaksi.Common.Domain": "1.0.0",
+          "UnpakSipaksi.Common.Presentation": "1.0.0",
+          "UnpakSipaksi.Modules.Rirn.Application": "1.0.0"
+        },
+        "runtime": {
+          "UnpakSipaksi.Modules.Rirn.Presentation.dll": {}
+        }
+      },
+      "UnpakSipaksi.Modules.RoadmapPenelitian.Application/1.0.0": {
+        "dependencies": {
+          "Dapper": "2.1.35",
+          "MediatR": "12.4.1",
+          "UnpakSipaksi.Common.Application": "1.0.0",
+          "UnpakSipaksi.Common.Domain": "1.0.0",
+          "UnpakSipaksi.Modules.RoadmapPenelitian.Domain": "1.0.0"
+        },
+        "runtime": {
+          "UnpakSipaksi.Modules.RoadmapPenelitian.Application.dll": {}
+        }
+      },
+      "UnpakSipaksi.Modules.RoadmapPenelitian.Domain/1.0.0": {
+        "dependencies": {
+          "UnpakSipaksi.Common.Domain": "1.0.0"
+        },
+        "runtime": {
+          "UnpakSipaksi.Modules.RoadmapPenelitian.Domain.dll": {}
+        }
+      },
+      "UnpakSipaksi.Modules.RoadmapPenelitian.Infrastructure/1.0.0": {
+        "dependencies": {
+          "Microsoft.EntityFrameworkCore": "8.0.0",
+          "MySql.EntityFrameworkCore": "8.0.0",
+          "UnpakSipaksi.Common.Application": "1.0.0",
+          "UnpakSipaksi.Common.Infrastructure": "1.0.0",
+          "UnpakSipaksi.Modules.RoadmapPenelitian.Application": "1.0.0",
+          "UnpakSipaksi.Modules.RoadmapPenelitian.Domain": "1.0.0",
+          "UnpakSipaksi.Modules.RoadmapPenelitian.Presentation": "1.0.0"
+        },
+        "runtime": {
+          "UnpakSipaksi.Modules.RoadmapPenelitian.Infrastructure.dll": {}
+        }
+      },
+      "UnpakSipaksi.Modules.RoadmapPenelitian.Presentation/1.0.0": {
+        "dependencies": {
+          "UnpakSipaksi.Common.Domain": "1.0.0",
+          "UnpakSipaksi.Common.Presentation": "1.0.0",
+          "UnpakSipaksi.Modules.RoadmapPenelitian.Application": "1.0.0"
+        },
+        "runtime": {
+          "UnpakSipaksi.Modules.RoadmapPenelitian.Presentation.dll": {}
+        }
+      },
+      "UnpakSipaksi.Modules.RumpunIlmu1.Application/1.0.0": {
+        "dependencies": {
+          "Dapper": "2.1.35",
+          "MediatR": "12.4.1",
+          "UnpakSipaksi.Common.Application": "1.0.0",
+          "UnpakSipaksi.Common.Domain": "1.0.0",
+          "UnpakSipaksi.Modules.RumpunIlmu1.Domain": "1.0.0"
+        },
+        "runtime": {
+          "UnpakSipaksi.Modules.RumpunIlmu1.Application.dll": {}
+        }
+      },
+      "UnpakSipaksi.Modules.RumpunIlmu1.Domain/1.0.0": {
+        "dependencies": {
+          "UnpakSipaksi.Common.Domain": "1.0.0"
+        },
+        "runtime": {
+          "UnpakSipaksi.Modules.RumpunIlmu1.Domain.dll": {}
+        }
+      },
+      "UnpakSipaksi.Modules.RumpunIlmu1.Infrastructure/1.0.0": {
+        "dependencies": {
+          "Microsoft.EntityFrameworkCore": "8.0.0",
+          "MySql.EntityFrameworkCore": "8.0.0",
+          "UnpakSipaksi.Common.Application": "1.0.0",
+          "UnpakSipaksi.Common.Infrastructure": "1.0.0",
+          "UnpakSipaksi.Modules.RumpunIlmu1.Application": "1.0.0",
+          "UnpakSipaksi.Modules.RumpunIlmu1.Domain": "1.0.0",
+          "UnpakSipaksi.Modules.RumpunIlmu1.Presentation": "1.0.0",
+          "UnpakSipaksi.Modules.RumpunIlmu1.PublicApi": "1.0.0"
+        },
+        "runtime": {
+          "UnpakSipaksi.Modules.RumpunIlmu1.Infrastructure.dll": {}
+        }
+      },
+      "UnpakSipaksi.Modules.RumpunIlmu1.Presentation/1.0.0": {
+        "dependencies": {
+          "UnpakSipaksi.Common.Domain": "1.0.0",
+          "UnpakSipaksi.Common.Presentation": "1.0.0",
+          "UnpakSipaksi.Modules.RumpunIlmu1.Application": "1.0.0"
+        },
+        "runtime": {
+          "UnpakSipaksi.Modules.RumpunIlmu1.Presentation.dll": {}
+        }
+      },
+      "UnpakSipaksi.Modules.RumpunIlmu1.PublicApi/1.0.0": {
+        "runtime": {
+          "UnpakSipaksi.Modules.RumpunIlmu1.PublicApi.dll": {}
+        }
+      },
+      "UnpakSipaksi.Modules.RumpunIlmu2.Application/1.0.0": {
+        "dependencies": {
+          "Dapper": "2.1.35",
+          "MediatR": "12.4.1",
+          "UnpakSipaksi.Common.Application": "1.0.0",
+          "UnpakSipaksi.Common.Domain": "1.0.0",
+          "UnpakSipaksi.Modules.RumpunIlmu1.PublicApi": "1.0.0",
+          "UnpakSipaksi.Modules.RumpunIlmu2.Domain": "1.0.0"
+        },
+        "runtime": {
+          "UnpakSipaksi.Modules.RumpunIlmu2.Application.dll": {}
+        }
+      },
+      "UnpakSipaksi.Modules.RumpunIlmu2.Domain/1.0.0": {
+        "dependencies": {
+          "UnpakSipaksi.Common.Domain": "1.0.0"
+        },
+        "runtime": {
+          "UnpakSipaksi.Modules.RumpunIlmu2.Domain.dll": {}
+        }
+      },
+      "UnpakSipaksi.Modules.RumpunIlmu2.Infrastructure/1.0.0": {
+        "dependencies": {
+          "Microsoft.EntityFrameworkCore": "8.0.0",
+          "MySql.EntityFrameworkCore": "8.0.0",
+          "UnpakSipaksi.Common.Application": "1.0.0",
+          "UnpakSipaksi.Common.Infrastructure": "1.0.0",
+          "UnpakSipaksi.Modules.RumpunIlmu2.Application": "1.0.0",
+          "UnpakSipaksi.Modules.RumpunIlmu2.Domain": "1.0.0",
+          "UnpakSipaksi.Modules.RumpunIlmu2.Presentation": "1.0.0"
+        },
+        "runtime": {
+          "UnpakSipaksi.Modules.RumpunIlmu2.Infrastructure.dll": {}
+        }
+      },
+      "UnpakSipaksi.Modules.RumpunIlmu2.Presentation/1.0.0": {
+        "dependencies": {
+          "UnpakSipaksi.Common.Domain": "1.0.0",
+          "UnpakSipaksi.Common.Presentation": "1.0.0",
+          "UnpakSipaksi.Modules.RumpunIlmu2.Application": "1.0.0"
+        },
+        "runtime": {
+          "UnpakSipaksi.Modules.RumpunIlmu2.Presentation.dll": {}
+        }
+      },
       "UnpakSipaksi.Modules.TemaPenelitian.Application/1.0.0": {
         "dependencies": {
           "Dapper": "2.1.35",
@@ -4683,6 +4874,91 @@
       "sha512": ""
     },
     "UnpakSipaksi.Modules.RelevansiProdukKepentinganNasional.Presentation/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    },
+    "UnpakSipaksi.Modules.Rirn.Application/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    },
+    "UnpakSipaksi.Modules.Rirn.Domain/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    },
+    "UnpakSipaksi.Modules.Rirn.Infrastructure/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    },
+    "UnpakSipaksi.Modules.Rirn.Presentation/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    },
+    "UnpakSipaksi.Modules.RoadmapPenelitian.Application/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    },
+    "UnpakSipaksi.Modules.RoadmapPenelitian.Domain/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    },
+    "UnpakSipaksi.Modules.RoadmapPenelitian.Infrastructure/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    },
+    "UnpakSipaksi.Modules.RoadmapPenelitian.Presentation/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    },
+    "UnpakSipaksi.Modules.RumpunIlmu1.Application/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    },
+    "UnpakSipaksi.Modules.RumpunIlmu1.Domain/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    },
+    "UnpakSipaksi.Modules.RumpunIlmu1.Infrastructure/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    },
+    "UnpakSipaksi.Modules.RumpunIlmu1.Presentation/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    },
+    "UnpakSipaksi.Modules.RumpunIlmu1.PublicApi/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    },
+    "UnpakSipaksi.Modules.RumpunIlmu2.Application/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    },
+    "UnpakSipaksi.Modules.RumpunIlmu2.Domain/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    },
+    "UnpakSipaksi.Modules.RumpunIlmu2.Infrastructure/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    },
+    "UnpakSipaksi.Modules.RumpunIlmu2.Presentation/1.0.0": {
       "type": "project",
       "serviceable": false,
       "sha512": ""

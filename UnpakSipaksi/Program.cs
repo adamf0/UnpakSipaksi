@@ -43,6 +43,10 @@ using UnpakSipaksi.Modules.PublikasiDisitasiProposal.Infrastructure;
 using UnpakSipaksi.Modules.RelevansiKepakaranTemaProposal.Infrastructure;
 using UnpakSipaksi.Modules.RelevansiKualitasReferensi.Infrastructure;
 using UnpakSipaksi.Modules.RelevansiProdukKepentinganNasional.Infrastructure;
+using UnpakSipaksi.Modules.Rirn.Infrastructure;
+using UnpakSipaksi.Modules.RoadmapPenelitian.Infrastructure;
+using UnpakSipaksi.Modules.RumpunIlmu1.Infrastructure;
+using UnpakSipaksi.Modules.RumpunIlmu2.Infrastructure;
 
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.ResponseCompression;
@@ -115,6 +119,10 @@ builder.Services.AddApplication([
     UnpakSipaksi.Modules.RelevansiKepakaranTemaProposal.Application.AssemblyReference.Assembly,
     UnpakSipaksi.Modules.RelevansiKualitasReferensi.Application.AssemblyReference.Assembly,
     UnpakSipaksi.Modules.RelevansiProdukKepentinganNasional.Application.AssemblyReference.Assembly,
+    UnpakSipaksi.Modules.Rirn.Application.AssemblyReference.Assembly,
+    UnpakSipaksi.Modules.RoadmapPenelitian.Application.AssemblyReference.Assembly,
+    UnpakSipaksi.Modules.RumpunIlmu1.Application.AssemblyReference.Assembly,
+    UnpakSipaksi.Modules.RumpunIlmu2.Application.AssemblyReference.Assembly,
 ]);
 
 builder.Services.AddAntiforgery(options =>
@@ -165,6 +173,10 @@ builder.Services.AddPublikasiDisitasiProposalModule(builder.Configuration);
 builder.Services.AddRelevansiKepakaranTemaProposalModule(builder.Configuration);
 builder.Services.AddRelevansiKualitasReferensiModule(builder.Configuration);
 builder.Services.AddRelevansiProdukKepentinganNasionalModule(builder.Configuration);
+builder.Services.AddRirnModule(builder.Configuration);
+builder.Services.AddRoadmapPenelitianModule(builder.Configuration);
+builder.Services.AddRumpunIlmu1Module(builder.Configuration);
+builder.Services.AddRumpunIlmu2Module(builder.Configuration);
 
 builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen();
@@ -248,6 +260,10 @@ PublikasiDisitasiProposalModule.MapEndpoints(app);
 RelevansiKepakaranTemaProposalModule.MapEndpoints(app);
 RelevansiKualitasReferensiModule.MapEndpoints(app);
 RelevansiProdukKepentinganNasionalModule.MapEndpoints(app);
+RirnModule.MapEndpoints(app);
+RoadmapPenelitianModule.MapEndpoints(app);
+RumpunIlmu1Module.MapEndpoints(app);
+RumpunIlmu2Module.MapEndpoints(app);
 
 if (app.Environment.IsDevelopment())
 {

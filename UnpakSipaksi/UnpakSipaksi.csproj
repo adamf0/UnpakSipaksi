@@ -112,6 +112,14 @@
 		<ProjectReference Include="..\UnpakSipaksi.Modules.RelevansiKualitasReferensi.Infrastructure\UnpakSipaksi.Modules.RelevansiKualitasReferensi.Infrastructure.csproj" />
 		<ProjectReference Include="..\UnpakSipaksi.Modules.RelevansiProdukKepentinganNasional.Application\UnpakSipaksi.Modules.RelevansiProdukKepentinganNasional.Application.csproj" />
 		<ProjectReference Include="..\UnpakSipaksi.Modules.RelevansiProdukKepentinganNasional.Infrastructure\UnpakSipaksi.Modules.RelevansiProdukKepentinganNasional.Infrastructure.csproj" />
+		<ProjectReference Include="..\UnpakSipaksi.Modules.Rirn.Application\UnpakSipaksi.Modules.Rirn.Application.csproj" />
+		<ProjectReference Include="..\UnpakSipaksi.Modules.Rirn.Infrastructure\UnpakSipaksi.Modules.Rirn.Infrastructure.csproj" />
+		<ProjectReference Include="..\UnpakSipaksi.Modules.RoadmapPenelitian.Application\UnpakSipaksi.Modules.RoadmapPenelitian.Application.csproj" />
+		<ProjectReference Include="..\UnpakSipaksi.Modules.RoadmapPenelitian.Infrastructure\UnpakSipaksi.Modules.RoadmapPenelitian.Infrastructure.csproj" />
+		<ProjectReference Include="..\UnpakSipaksi.Modules.RumpunIlmu1.Application\UnpakSipaksi.Modules.RumpunIlmu1.Application.csproj" />
+		<ProjectReference Include="..\UnpakSipaksi.Modules.RumpunIlmu1.Infrastructure\UnpakSipaksi.Modules.RumpunIlmu1.Infrastructure.csproj" />
+		<ProjectReference Include="..\UnpakSipaksi.Modules.RumpunIlmu2.Application\UnpakSipaksi.Modules.RumpunIlmu2.Application.csproj" />
+		<ProjectReference Include="..\UnpakSipaksi.Modules.RumpunIlmu2.Infrastructure\UnpakSipaksi.Modules.RumpunIlmu2.Infrastructure.csproj" />
 		<ProjectReference Include="..\UnpakSipaksi.Modules.TemaPenelitian.Application\UnpakSipaksi.Modules.TemaPenelitian.Application.csproj" />
 		<ProjectReference Include="..\UnpakSipaksi.Modules.TemaPenelitian.Infrastructure\UnpakSipaksi.Modules.TemaPenelitian.Infrastructure.csproj" />
 		<ProjectReference Include="..\UnpakSipaksi.Modules.TopikPenelitian.Application\UnpakSipaksi.Modules.TopikPenelitian.Application.csproj" />

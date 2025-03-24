@@ -1,0 +1,14 @@
+﻿using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace UnpakSipaksi.Modules.RumpunIlmu1.Application.GetRumpunIlmu1
+{
+    public sealed record RumpunIlmu1Response
+    {
+        public string Uuid { get; set; }
+        public string Nama { get; set; } = default!;
+    }
+}

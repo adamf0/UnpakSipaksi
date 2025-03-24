@@ -1,0 +1,36 @@
+{
+  "runtimeTarget": {
+    "name": ".NETCoreApp,Version=v8.0",
+    "signature": ""
+  },
+  "compilationOptions": {},
+  "targets": {
+    ".NETCoreApp,Version=v8.0": {
+      "UnpakSipaksi.Modules.RumpunIlmu2.Domain/1.0.0": {
+        "dependencies": {
+          "UnpakSipaksi.Common.Domain": "1.0.0"
+        },
+        "runtime": {
+          "UnpakSipaksi.Modules.RumpunIlmu2.Domain.dll": {}
+        }
+      },
+      "UnpakSipaksi.Common.Domain/1.0.0": {
+        "runtime": {
+          "UnpakSipaksi.Common.Domain.dll": {}
+        }
+      }
+    }
+  },
+  "libraries": {
+    "UnpakSipaksi.Modules.RumpunIlmu2.Domain/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    },
+    "UnpakSipaksi.Common.Domain/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    }
+  }
+}
