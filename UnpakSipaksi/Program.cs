@@ -52,6 +52,7 @@ using UnpakSipaksi.Modules.RumusanPrioritasMitra.Infrastructure;
 using UnpakSipaksi.Modules.Satuan.Infrastructure;
 using UnpakSipaksi.Modules.SotaKebaharuan.Infrastructure;
 using UnpakSipaksi.Modules.VideoKegiatan.Infrastructure;
+using UnpakSipaksi.Modules.KategoriSkema.Infrastructure;
 
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.ResponseCompression;
@@ -133,6 +134,7 @@ builder.Services.AddApplication([
     UnpakSipaksi.Modules.Satuan.Application.AssemblyReference.Assembly,
     UnpakSipaksi.Modules.SotaKebaharuan.Application.AssemblyReference.Assembly,
     UnpakSipaksi.Modules.VideoKegiatan.Application.AssemblyReference.Assembly,
+    UnpakSipaksi.Modules.KategoriSkema.Application.AssemblyReference.Assembly,
 ]);
 
 builder.Services.AddAntiforgery(options =>
@@ -192,6 +194,7 @@ builder.Services.AddRumusanPrioritasMitraModule(builder.Configuration);
 builder.Services.AddSatuanModule(builder.Configuration);
 builder.Services.AddSotaKebaharuanModule(builder.Configuration);
 builder.Services.AddVideoKegiatanModule(builder.Configuration);
+builder.Services.AddKategoriSkemaModule(builder.Configuration);
 
 builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen();
@@ -284,6 +287,7 @@ RumusanPrioritasMitraModule.MapEndpoints(app);
 SatuanModule.MapEndpoints(app);
 SotaKebaharuanModule.MapEndpoints(app);
 VideoKegiatanModule.MapEndpoints(app);
+KategoriSkemaModule.MapEndpoints(app);
 
 if (app.Environment.IsDevelopment())
 {

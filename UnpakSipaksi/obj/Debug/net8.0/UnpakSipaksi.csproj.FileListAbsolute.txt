@@ -577,3 +577,11 @@ C:\dev_net\UnpakSipaksi\UnpakSipaksi\bin\Debug\net8.0\UnpakSipaksi.Modules.SotaK
 C:\dev_net\UnpakSipaksi\UnpakSipaksi\bin\Debug\net8.0\UnpakSipaksi.Modules.SotaKebaharuan.Presentation.pdb
 C:\dev_net\UnpakSipaksi\UnpakSipaksi\bin\Debug\net8.0\UnpakSipaksi.Modules.VideoKegiatan.Domain.pdb
 C:\dev_net\UnpakSipaksi\UnpakSipaksi\bin\Debug\net8.0\UnpakSipaksi.Modules.VideoKegiatan.Presentation.pdb
+C:\dev_net\UnpakSipaksi\UnpakSipaksi\bin\Debug\net8.0\UnpakSipaksi.Modules.KategoriSkema.Application.dll
+C:\dev_net\UnpakSipaksi\UnpakSipaksi\bin\Debug\net8.0\UnpakSipaksi.Modules.KategoriSkema.Domain.dll
+C:\dev_net\UnpakSipaksi\UnpakSipaksi\bin\Debug\net8.0\UnpakSipaksi.Modules.KategoriSkema.Infrastructure.dll
+C:\dev_net\UnpakSipaksi\UnpakSipaksi\bin\Debug\net8.0\UnpakSipaksi.Modules.KategoriSkema.Presentation.dll
+C:\dev_net\UnpakSipaksi\UnpakSipaksi\bin\Debug\net8.0\UnpakSipaksi.Modules.KategoriSkema.Application.pdb
+C:\dev_net\UnpakSipaksi\UnpakSipaksi\bin\Debug\net8.0\UnpakSipaksi.Modules.KategoriSkema.Infrastructure.pdb
+C:\dev_net\UnpakSipaksi\UnpakSipaksi\bin\Debug\net8.0\UnpakSipaksi.Modules.KategoriSkema.Domain.pdb
+C:\dev_net\UnpakSipaksi\UnpakSipaksi\bin\Debug\net8.0\UnpakSipaksi.Modules.KategoriSkema.Presentation.pdb

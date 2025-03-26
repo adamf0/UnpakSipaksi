@@ -1316,6 +1316,16 @@
         "runtime": {
           "bin/placeholder/UnpakSipaksi.Modules.RumpunIlmu2.PublicApi.dll": {}
         }
+      },
+      "UnpakSipaksi.Modules.RumpunIlmu3.PublicApi/1.0.0": {
+        "type": "project",
+        "framework": ".NETCoreApp,Version=v8.0",
+        "compile": {
+          "bin/placeholder/UnpakSipaksi.Modules.RumpunIlmu3.PublicApi.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/UnpakSipaksi.Modules.RumpunIlmu3.PublicApi.dll": {}
+        }
       }
     }
   },
@@ -3539,6 +3549,11 @@
       "type": "project",
       "path": "../UnpakSipaksi.Modules.RumpunIlmu2.PublicApi/UnpakSipaksi.Modules.RumpunIlmu2.PublicApi.csproj",
       "msbuildProject": "../UnpakSipaksi.Modules.RumpunIlmu2.PublicApi/UnpakSipaksi.Modules.RumpunIlmu2.PublicApi.csproj"
+    },
+    "UnpakSipaksi.Modules.RumpunIlmu3.PublicApi/1.0.0": {
+      "type": "project",
+      "path": "../UnpakSipaksi.Modules.RumpunIlmu3.PublicApi/UnpakSipaksi.Modules.RumpunIlmu3.PublicApi.csproj",
+      "msbuildProject": "../UnpakSipaksi.Modules.RumpunIlmu3.PublicApi/UnpakSipaksi.Modules.RumpunIlmu3.PublicApi.csproj"
     }
   },
   "projectFileDependencyGroups": {
@@ -3551,7 +3566,8 @@
       "UnpakSipaksi.Modules.RumpunIlmu2.Application >= 1.0.0",
       "UnpakSipaksi.Modules.RumpunIlmu2.Domain >= 1.0.0",
       "UnpakSipaksi.Modules.RumpunIlmu2.Presentation >= 1.0.0",
-      "UnpakSipaksi.Modules.RumpunIlmu2.PublicApi >= 1.0.0"
+      "UnpakSipaksi.Modules.RumpunIlmu2.PublicApi >= 1.0.0",
+      "UnpakSipaksi.Modules.RumpunIlmu3.PublicApi >= 1.0.0"
     ]
   },
   "packageFolders": {
@@ -3602,6 +3618,9 @@
             },
             "C:\\dev_net\\UnpakSipaksi\\UnpakSipaksi.Modules.RumpunIlmu2.PublicApi\\UnpakSipaksi.Modules.RumpunIlmu2.PublicApi.csproj": {
               "projectPath": "C:\\dev_net\\UnpakSipaksi\\UnpakSipaksi.Modules.RumpunIlmu2.PublicApi\\UnpakSipaksi.Modules.RumpunIlmu2.PublicApi.csproj"
+            },
+            "C:\\dev_net\\UnpakSipaksi\\UnpakSipaksi.Modules.RumpunIlmu3.PublicApi\\UnpakSipaksi.Modules.RumpunIlmu3.PublicApi.csproj": {
+              "projectPath": "C:\\dev_net\\UnpakSipaksi\\UnpakSipaksi.Modules.RumpunIlmu3.PublicApi\\UnpakSipaksi.Modules.RumpunIlmu3.PublicApi.csproj"
             }
           }
         }

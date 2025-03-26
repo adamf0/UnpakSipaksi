@@ -16,7 +16,8 @@
           "UnpakSipaksi.Modules.RumpunIlmu2.Application": "1.0.0",
           "UnpakSipaksi.Modules.RumpunIlmu2.Domain": "1.0.0",
           "UnpakSipaksi.Modules.RumpunIlmu2.Presentation": "1.0.0",
-          "UnpakSipaksi.Modules.RumpunIlmu2.PublicApi": "1.0.0"
+          "UnpakSipaksi.Modules.RumpunIlmu2.PublicApi": "1.0.0",
+          "UnpakSipaksi.Modules.RumpunIlmu3.PublicApi": "1.0.0"
         },
         "runtime": {
           "UnpakSipaksi.Modules.RumpunIlmu2.Infrastructure.dll": {}
@@ -732,6 +733,11 @@
         "runtime": {
           "UnpakSipaksi.Modules.RumpunIlmu2.PublicApi.dll": {}
         }
+      },
+      "UnpakSipaksi.Modules.RumpunIlmu3.PublicApi/1.0.0": {
+        "runtime": {
+          "UnpakSipaksi.Modules.RumpunIlmu3.PublicApi.dll": {}
+        }
       }
     }
   },
@@ -1268,6 +1274,11 @@
       "sha512": ""
     },
     "UnpakSipaksi.Modules.RumpunIlmu2.PublicApi/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    },
+    "UnpakSipaksi.Modules.RumpunIlmu3.PublicApi/1.0.0": {
       "type": "project",
       "serviceable": false,
       "sha512": ""

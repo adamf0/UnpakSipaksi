@@ -34,3 +34,5 @@ C:\dev_net\UnpakSipaksi\UnpakSipaksi.Modules.RumpunIlmu2.Infrastructure\bin\Debu
 C:\dev_net\UnpakSipaksi\UnpakSipaksi.Modules.RumpunIlmu2.Infrastructure\bin\Debug\net8.0\UnpakSipaksi.Modules.RumpunIlmu1.Application.pdb
 C:\dev_net\UnpakSipaksi\UnpakSipaksi.Modules.RumpunIlmu2.Infrastructure\bin\Debug\net8.0\UnpakSipaksi.Modules.RumpunIlmu2.PublicApi.pdb
 C:\dev_net\UnpakSipaksi\UnpakSipaksi.Modules.RumpunIlmu2.Infrastructure\bin\Debug\net8.0\UnpakSipaksi.Modules.RumpunIlmu1.Domain.pdb
+C:\dev_net\UnpakSipaksi\UnpakSipaksi.Modules.RumpunIlmu2.Infrastructure\bin\Debug\net8.0\UnpakSipaksi.Modules.RumpunIlmu3.PublicApi.dll
+C:\dev_net\UnpakSipaksi\UnpakSipaksi.Modules.RumpunIlmu2.Infrastructure\bin\Debug\net8.0\UnpakSipaksi.Modules.RumpunIlmu3.PublicApi.pdb

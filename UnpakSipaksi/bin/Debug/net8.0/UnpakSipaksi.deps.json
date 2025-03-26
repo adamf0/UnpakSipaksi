@@ -36,6 +36,8 @@
           "UnpakSipaksi.Modules.JumlahKolaboratorPublikasBereputasi.Infrastructure": "1.0.0",
           "UnpakSipaksi.Modules.KategoriMitraPenelitian.Application": "1.0.0",
           "UnpakSipaksi.Modules.KategoriMitraPenelitian.Infrastructure": "1.0.0",
+          "UnpakSipaksi.Modules.KategoriSkema.Application": "1.0.0",
+          "UnpakSipaksi.Modules.KategoriSkema.Infrastructure": "1.0.0",
           "UnpakSipaksi.Modules.KategoriSumberDana.Application": "1.0.0",
           "UnpakSipaksi.Modules.KategoriSumberDana.Infrastructure": "1.0.0",
           "UnpakSipaksi.Modules.KategoriTkt.Application": "1.0.0",
@@ -1714,6 +1716,50 @@
           "UnpakSipaksi.Modules.KategoriMitraPenelitian.Presentation.dll": {}
         }
       },
+      "UnpakSipaksi.Modules.KategoriSkema.Application/1.0.0": {
+        "dependencies": {
+          "Dapper": "2.1.35",
+          "MediatR": "12.4.1",
+          "UnpakSipaksi.Common.Application": "1.0.0",
+          "UnpakSipaksi.Common.Domain": "1.0.0",
+          "UnpakSipaksi.Modules.KategoriSkema.Domain": "1.0.0"
+        },
+        "runtime": {
+          "UnpakSipaksi.Modules.KategoriSkema.Application.dll": {}
+        }
+      },
+      "UnpakSipaksi.Modules.KategoriSkema.Domain/1.0.0": {
+        "dependencies": {
+          "UnpakSipaksi.Common.Domain": "1.0.0"
+        },
+        "runtime": {
+          "UnpakSipaksi.Modules.KategoriSkema.Domain.dll": {}
+        }
+      },
+      "UnpakSipaksi.Modules.KategoriSkema.Infrastructure/1.0.0": {
+        "dependencies": {
+          "Microsoft.EntityFrameworkCore": "8.0.0",
+          "MySql.EntityFrameworkCore": "8.0.0",
+          "UnpakSipaksi.Common.Application": "1.0.0",
+          "UnpakSipaksi.Common.Infrastructure": "1.0.0",
+          "UnpakSipaksi.Modules.KategoriSkema.Application": "1.0.0",
+          "UnpakSipaksi.Modules.KategoriSkema.Domain": "1.0.0",
+          "UnpakSipaksi.Modules.KategoriSkema.Presentation": "1.0.0"
+        },
+        "runtime": {
+          "UnpakSipaksi.Modules.KategoriSkema.Infrastructure.dll": {}
+        }
+      },
+      "UnpakSipaksi.Modules.KategoriSkema.Presentation/1.0.0": {
+        "dependencies": {
+          "UnpakSipaksi.Common.Domain": "1.0.0",
+          "UnpakSipaksi.Common.Presentation": "1.0.0",
+          "UnpakSipaksi.Modules.KategoriSkema.Application": "1.0.0"
+        },
+        "runtime": {
+          "UnpakSipaksi.Modules.KategoriSkema.Presentation.dll": {}
+        }
+      },
       "UnpakSipaksi.Modules.KategoriSumberDana.Application/1.0.0": {
         "dependencies": {
           "Dapper": "2.1.35",
@@ -3203,7 +3249,8 @@
           "UnpakSipaksi.Modules.RumpunIlmu2.Application": "1.0.0",
           "UnpakSipaksi.Modules.RumpunIlmu2.Domain": "1.0.0",
           "UnpakSipaksi.Modules.RumpunIlmu2.Presentation": "1.0.0",
-          "UnpakSipaksi.Modules.RumpunIlmu2.PublicApi": "1.0.0"
+          "UnpakSipaksi.Modules.RumpunIlmu2.PublicApi": "1.0.0",
+          "UnpakSipaksi.Modules.RumpunIlmu3.PublicApi": "1.0.0"
         },
         "runtime": {
           "UnpakSipaksi.Modules.RumpunIlmu2.Infrastructure.dll": {}
@@ -4518,6 +4565,26 @@
       "sha512": ""
     },
     "UnpakSipaksi.Modules.KategoriMitraPenelitian.Presentation/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    },
+    "UnpakSipaksi.Modules.KategoriSkema.Application/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    },
+    "UnpakSipaksi.Modules.KategoriSkema.Domain/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    },
+    "UnpakSipaksi.Modules.KategoriSkema.Infrastructure/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    },
+    "UnpakSipaksi.Modules.KategoriSkema.Presentation/1.0.0": {
       "type": "project",
       "serviceable": false,
       "sha512": ""

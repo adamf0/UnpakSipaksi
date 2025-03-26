@@ -29,6 +29,7 @@
 		<ProjectReference Include="..\UnpakSipaksi.Modules.RumpunIlmu2.Domain\UnpakSipaksi.Modules.RumpunIlmu2.Domain.csproj" />
 		<ProjectReference Include="..\UnpakSipaksi.Modules.RumpunIlmu2.Presentation\UnpakSipaksi.Modules.RumpunIlmu2.Presentation.csproj" />
 		<ProjectReference Include="..\UnpakSipaksi.Modules.RumpunIlmu2.PublicApi\UnpakSipaksi.Modules.RumpunIlmu2.PublicApi.csproj" />
+		<ProjectReference Include="..\UnpakSipaksi.Modules.RumpunIlmu3.PublicApi\UnpakSipaksi.Modules.RumpunIlmu3.PublicApi.csproj" />
 	</ItemGroup>
 
 </Project>
