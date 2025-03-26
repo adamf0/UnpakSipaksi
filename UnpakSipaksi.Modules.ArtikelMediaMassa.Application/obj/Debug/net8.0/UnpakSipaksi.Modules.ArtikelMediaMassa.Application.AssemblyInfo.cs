@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("UnpakSipaksi.Modules.ArtikelMediaMassa.Application")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+98d9ba2e035bdf30d8707ed663ed0f72242d01e3")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+0a0b5221645cd9bce10bedd6c24fc9e061711476")]
 [assembly: System.Reflection.AssemblyProductAttribute("UnpakSipaksi.Modules.ArtikelMediaMassa.Application")]
 [assembly: System.Reflection.AssemblyTitleAttribute("UnpakSipaksi.Modules.ArtikelMediaMassa.Application")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

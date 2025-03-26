@@ -120,10 +120,20 @@
 		<ProjectReference Include="..\UnpakSipaksi.Modules.RumpunIlmu1.Infrastructure\UnpakSipaksi.Modules.RumpunIlmu1.Infrastructure.csproj" />
 		<ProjectReference Include="..\UnpakSipaksi.Modules.RumpunIlmu2.Application\UnpakSipaksi.Modules.RumpunIlmu2.Application.csproj" />
 		<ProjectReference Include="..\UnpakSipaksi.Modules.RumpunIlmu2.Infrastructure\UnpakSipaksi.Modules.RumpunIlmu2.Infrastructure.csproj" />
+		<ProjectReference Include="..\UnpakSipaksi.Modules.RumpunIlmu3.Application\UnpakSipaksi.Modules.RumpunIlmu3.Application.csproj" />
+		<ProjectReference Include="..\UnpakSipaksi.Modules.RumpunIlmu3.Infrastructure\UnpakSipaksi.Modules.RumpunIlmu3.Infrastructure.csproj" />
+		<ProjectReference Include="..\UnpakSipaksi.Modules.RumusanPrioritasMitra.Application\UnpakSipaksi.Modules.RumusanPrioritasMitra.Application.csproj" />
+		<ProjectReference Include="..\UnpakSipaksi.Modules.RumusanPrioritasMitra.Infrastructure\UnpakSipaksi.Modules.RumusanPrioritasMitra.Infrastructure.csproj" />
+		<ProjectReference Include="..\UnpakSipaksi.Modules.Satuan.Application\UnpakSipaksi.Modules.Satuan.Application.csproj" />
+		<ProjectReference Include="..\UnpakSipaksi.Modules.Satuan.Infrastructure\UnpakSipaksi.Modules.Satuan.Infrastructure.csproj" />
+		<ProjectReference Include="..\UnpakSipaksi.Modules.SotaKebaharuan.Application\UnpakSipaksi.Modules.SotaKebaharuan.Application.csproj" />
+		<ProjectReference Include="..\UnpakSipaksi.Modules.SotaKebaharuan.Infrastructure\UnpakSipaksi.Modules.SotaKebaharuan.Infrastructure.csproj" />
 		<ProjectReference Include="..\UnpakSipaksi.Modules.TemaPenelitian.Application\UnpakSipaksi.Modules.TemaPenelitian.Application.csproj" />
 		<ProjectReference Include="..\UnpakSipaksi.Modules.TemaPenelitian.Infrastructure\UnpakSipaksi.Modules.TemaPenelitian.Infrastructure.csproj" />
 		<ProjectReference Include="..\UnpakSipaksi.Modules.TopikPenelitian.Application\UnpakSipaksi.Modules.TopikPenelitian.Application.csproj" />
 		<ProjectReference Include="..\UnpakSipaksi.Modules.TopikPenelitian.Infrastructure\UnpakSipaksi.Modules.TopikPenelitian.Infrastructure.csproj" />
+		<ProjectReference Include="..\UnpakSipaksi.Modules.VideoKegiatan.Application\UnpakSipaksi.Modules.VideoKegiatan.Application.csproj" />
+		<ProjectReference Include="..\UnpakSipaksi.Modules.VideoKegiatan.Infrastructure\UnpakSipaksi.Modules.VideoKegiatan.Infrastructure.csproj" />
 	</ItemGroup>
 
 	<ItemGroup>

@@ -14,6 +14,7 @@ using UnpakSipaksi.Modules.RumpunIlmu2.Application.Abstractions.Data;
 using UnpakSipaksi.Modules.RumpunIlmu2.Presentation.RumpunIlmu2;
 using UnpakSipaksi.Modules.RumpunIlmu2.Infrastructure.RumpunIlmu2;
 using UnpakSipaksi.Modules.RumpunIlmu2.Infrastructure.Database;
+using UnpakSipaksi.Modules.RumpunIlmu2.PublicApi;
 
 namespace UnpakSipaksi.Modules.RumpunIlmu2.Infrastructure
 {
@@ -43,6 +44,7 @@ namespace UnpakSipaksi.Modules.RumpunIlmu2.Infrastructure
             services.AddDbContext<RumpunIlmu2DbContext>(optionsBuilder => optionsBuilder.UseMySQL(databaseConnectionString));
 
             services.AddScoped<IRumpunIlmu2Repository, RumpunIlmu2Repository>();
+            services.AddScoped<IRumpunIlmu2Api, IRumpunIlmu2Api>();
 
             services.AddScoped<IUnitOfWork>(sp => sp.GetRequiredService<RumpunIlmu2DbContext>());
         }

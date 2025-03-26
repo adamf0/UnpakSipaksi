@@ -24,9 +24,11 @@
 	<ItemGroup>
 		<ProjectReference Include="..\UnpakSipaksi.Common.Application\UnpakSipaksi.Common.Application.csproj" />
 		<ProjectReference Include="..\UnpakSipaksi.Common.Infrastructure\UnpakSipaksi.Common.Infrastructure.csproj" />
+		<ProjectReference Include="..\UnpakSipaksi.Modules.RumpunIlmu1.Application\UnpakSipaksi.Modules.RumpunIlmu1.Application.csproj" />
 		<ProjectReference Include="..\UnpakSipaksi.Modules.RumpunIlmu2.Application\UnpakSipaksi.Modules.RumpunIlmu2.Application.csproj" />
 		<ProjectReference Include="..\UnpakSipaksi.Modules.RumpunIlmu2.Domain\UnpakSipaksi.Modules.RumpunIlmu2.Domain.csproj" />
 		<ProjectReference Include="..\UnpakSipaksi.Modules.RumpunIlmu2.Presentation\UnpakSipaksi.Modules.RumpunIlmu2.Presentation.csproj" />
+		<ProjectReference Include="..\UnpakSipaksi.Modules.RumpunIlmu2.PublicApi\UnpakSipaksi.Modules.RumpunIlmu2.PublicApi.csproj" />
 	</ItemGroup>
 
 </Project>

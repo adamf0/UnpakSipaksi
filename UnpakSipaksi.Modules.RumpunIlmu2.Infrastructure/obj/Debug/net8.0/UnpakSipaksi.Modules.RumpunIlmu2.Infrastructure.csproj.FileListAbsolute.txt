@@ -28,3 +28,9 @@ C:\dev_net\UnpakSipaksi\UnpakSipaksi.Modules.RumpunIlmu2.Infrastructure\obj\Debu
 C:\dev_net\UnpakSipaksi\UnpakSipaksi.Modules.RumpunIlmu2.Infrastructure\obj\Debug\net8.0\refint\UnpakSipaksi.Modules.RumpunIlmu2.Infrastructure.dll
 C:\dev_net\UnpakSipaksi\UnpakSipaksi.Modules.RumpunIlmu2.Infrastructure\obj\Debug\net8.0\UnpakSipaksi.Modules.RumpunIlmu2.Infrastructure.pdb
 C:\dev_net\UnpakSipaksi\UnpakSipaksi.Modules.RumpunIlmu2.Infrastructure\obj\Debug\net8.0\ref\UnpakSipaksi.Modules.RumpunIlmu2.Infrastructure.dll
+C:\dev_net\UnpakSipaksi\UnpakSipaksi.Modules.RumpunIlmu2.Infrastructure\bin\Debug\net8.0\UnpakSipaksi.Modules.RumpunIlmu1.Application.dll
+C:\dev_net\UnpakSipaksi\UnpakSipaksi.Modules.RumpunIlmu2.Infrastructure\bin\Debug\net8.0\UnpakSipaksi.Modules.RumpunIlmu1.Domain.dll
+C:\dev_net\UnpakSipaksi\UnpakSipaksi.Modules.RumpunIlmu2.Infrastructure\bin\Debug\net8.0\UnpakSipaksi.Modules.RumpunIlmu2.PublicApi.dll
+C:\dev_net\UnpakSipaksi\UnpakSipaksi.Modules.RumpunIlmu2.Infrastructure\bin\Debug\net8.0\UnpakSipaksi.Modules.RumpunIlmu1.Application.pdb
+C:\dev_net\UnpakSipaksi\UnpakSipaksi.Modules.RumpunIlmu2.Infrastructure\bin\Debug\net8.0\UnpakSipaksi.Modules.RumpunIlmu2.PublicApi.pdb
+C:\dev_net\UnpakSipaksi\UnpakSipaksi.Modules.RumpunIlmu2.Infrastructure\bin\Debug\net8.0\UnpakSipaksi.Modules.RumpunIlmu1.Domain.pdb

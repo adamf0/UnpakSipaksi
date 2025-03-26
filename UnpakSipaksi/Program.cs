@@ -47,6 +47,11 @@ using UnpakSipaksi.Modules.Rirn.Infrastructure;
 using UnpakSipaksi.Modules.RoadmapPenelitian.Infrastructure;
 using UnpakSipaksi.Modules.RumpunIlmu1.Infrastructure;
 using UnpakSipaksi.Modules.RumpunIlmu2.Infrastructure;
+using UnpakSipaksi.Modules.RumpunIlmu3.Infrastructure;
+using UnpakSipaksi.Modules.RumusanPrioritasMitra.Infrastructure;
+using UnpakSipaksi.Modules.Satuan.Infrastructure;
+using UnpakSipaksi.Modules.SotaKebaharuan.Infrastructure;
+using UnpakSipaksi.Modules.VideoKegiatan.Infrastructure;
 
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.ResponseCompression;
@@ -123,6 +128,11 @@ builder.Services.AddApplication([
     UnpakSipaksi.Modules.RoadmapPenelitian.Application.AssemblyReference.Assembly,
     UnpakSipaksi.Modules.RumpunIlmu1.Application.AssemblyReference.Assembly,
     UnpakSipaksi.Modules.RumpunIlmu2.Application.AssemblyReference.Assembly,
+    UnpakSipaksi.Modules.RumpunIlmu3.Application.AssemblyReference.Assembly,
+    UnpakSipaksi.Modules.RumusanPrioritasMitra.Application.AssemblyReference.Assembly,
+    UnpakSipaksi.Modules.Satuan.Application.AssemblyReference.Assembly,
+    UnpakSipaksi.Modules.SotaKebaharuan.Application.AssemblyReference.Assembly,
+    UnpakSipaksi.Modules.VideoKegiatan.Application.AssemblyReference.Assembly,
 ]);
 
 builder.Services.AddAntiforgery(options =>
@@ -177,6 +187,11 @@ builder.Services.AddRirnModule(builder.Configuration);
 builder.Services.AddRoadmapPenelitianModule(builder.Configuration);
 builder.Services.AddRumpunIlmu1Module(builder.Configuration);
 builder.Services.AddRumpunIlmu2Module(builder.Configuration);
+builder.Services.AddRumpunIlmu3Module(builder.Configuration);
+builder.Services.AddRumusanPrioritasMitraModule(builder.Configuration);
+builder.Services.AddSatuanModule(builder.Configuration);
+builder.Services.AddSotaKebaharuanModule(builder.Configuration);
+builder.Services.AddVideoKegiatanModule(builder.Configuration);
 
 builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen();
@@ -264,6 +279,11 @@ RirnModule.MapEndpoints(app);
 RoadmapPenelitianModule.MapEndpoints(app);
 RumpunIlmu1Module.MapEndpoints(app);
 RumpunIlmu2Module.MapEndpoints(app);
+RumpunIlmu3Module.MapEndpoints(app);
+RumusanPrioritasMitraModule.MapEndpoints(app);
+SatuanModule.MapEndpoints(app);
+SotaKebaharuanModule.MapEndpoints(app);
+VideoKegiatanModule.MapEndpoints(app);
 
 if (app.Environment.IsDevelopment())
 {

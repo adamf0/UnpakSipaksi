@@ -12,9 +12,11 @@
           "MySql.EntityFrameworkCore": "8.0.0",
           "UnpakSipaksi.Common.Application": "1.0.0",
           "UnpakSipaksi.Common.Infrastructure": "1.0.0",
+          "UnpakSipaksi.Modules.RumpunIlmu1.Application": "1.0.0",
           "UnpakSipaksi.Modules.RumpunIlmu2.Application": "1.0.0",
           "UnpakSipaksi.Modules.RumpunIlmu2.Domain": "1.0.0",
-          "UnpakSipaksi.Modules.RumpunIlmu2.Presentation": "1.0.0"
+          "UnpakSipaksi.Modules.RumpunIlmu2.Presentation": "1.0.0",
+          "UnpakSipaksi.Modules.RumpunIlmu2.PublicApi": "1.0.0"
         },
         "runtime": {
           "UnpakSipaksi.Modules.RumpunIlmu2.Infrastructure.dll": {}
@@ -670,6 +672,26 @@
           "UnpakSipaksi.Common.Presentation.dll": {}
         }
       },
+      "UnpakSipaksi.Modules.RumpunIlmu1.Application/1.0.0": {
+        "dependencies": {
+          "Dapper": "2.1.35",
+          "MediatR": "12.4.1",
+          "UnpakSipaksi.Common.Application": "1.0.0",
+          "UnpakSipaksi.Common.Domain": "1.0.0",
+          "UnpakSipaksi.Modules.RumpunIlmu1.Domain": "1.0.0"
+        },
+        "runtime": {
+          "UnpakSipaksi.Modules.RumpunIlmu1.Application.dll": {}
+        }
+      },
+      "UnpakSipaksi.Modules.RumpunIlmu1.Domain/1.0.0": {
+        "dependencies": {
+          "UnpakSipaksi.Common.Domain": "1.0.0"
+        },
+        "runtime": {
+          "UnpakSipaksi.Modules.RumpunIlmu1.Domain.dll": {}
+        }
+      },
       "UnpakSipaksi.Modules.RumpunIlmu1.PublicApi/1.0.0": {
         "runtime": {
           "UnpakSipaksi.Modules.RumpunIlmu1.PublicApi.dll": {}
@@ -704,6 +726,11 @@
         },
         "runtime": {
           "UnpakSipaksi.Modules.RumpunIlmu2.Presentation.dll": {}
+        }
+      },
+      "UnpakSipaksi.Modules.RumpunIlmu2.PublicApi/1.0.0": {
+        "runtime": {
+          "UnpakSipaksi.Modules.RumpunIlmu2.PublicApi.dll": {}
         }
       }
     }
@@ -1210,6 +1237,16 @@
       "serviceable": false,
       "sha512": ""
     },
+    "UnpakSipaksi.Modules.RumpunIlmu1.Application/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    },
+    "UnpakSipaksi.Modules.RumpunIlmu1.Domain/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    },
     "UnpakSipaksi.Modules.RumpunIlmu1.PublicApi/1.0.0": {
       "type": "project",
       "serviceable": false,
@@ -1226,6 +1263,11 @@
       "sha512": ""
     },
     "UnpakSipaksi.Modules.RumpunIlmu2.Presentation/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    },
+    "UnpakSipaksi.Modules.RumpunIlmu2.PublicApi/1.0.0": {
       "type": "project",
       "serviceable": false,
       "sha512": ""
