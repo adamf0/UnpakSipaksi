@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("UnpakSipaksi.Modules.MetodeRencanaKegiatan.Presentation")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+0a0b5221645cd9bce10bedd6c24fc9e061711476")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+528ef957eb2d1d3d7220ddb2ffca1c78b8576abf")]
 [assembly: System.Reflection.AssemblyProductAttribute("UnpakSipaksi.Modules.MetodeRencanaKegiatan.Presentation")]
 [assembly: System.Reflection.AssemblyTitleAttribute("UnpakSipaksi.Modules.MetodeRencanaKegiatan.Presentation")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]
