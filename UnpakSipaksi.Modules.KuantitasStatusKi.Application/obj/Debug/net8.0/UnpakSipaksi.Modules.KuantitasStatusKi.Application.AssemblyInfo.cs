@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("UnpakSipaksi.Modules.KuantitasStatusKi.Application")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+528ef957eb2d1d3d7220ddb2ffca1c78b8576abf")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+3234ef92271897ca3d2289f2a36e5c539a76455c")]
 [assembly: System.Reflection.AssemblyProductAttribute("UnpakSipaksi.Modules.KuantitasStatusKi.Application")]
 [assembly: System.Reflection.AssemblyTitleAttribute("UnpakSipaksi.Modules.KuantitasStatusKi.Application")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

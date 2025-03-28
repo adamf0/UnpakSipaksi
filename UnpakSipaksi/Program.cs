@@ -53,6 +53,8 @@ using UnpakSipaksi.Modules.Satuan.Infrastructure;
 using UnpakSipaksi.Modules.SotaKebaharuan.Infrastructure;
 using UnpakSipaksi.Modules.VideoKegiatan.Infrastructure;
 using UnpakSipaksi.Modules.KategoriSkema.Infrastructure;
+using UnpakSipaksi.Modules.KategoriProgramPengabdian.Infrastructure;
+using UnpakSipaksi.Modules.PenugasanReviewer.Infrastructure;
 
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.ResponseCompression;
@@ -135,6 +137,8 @@ builder.Services.AddApplication([
     UnpakSipaksi.Modules.SotaKebaharuan.Application.AssemblyReference.Assembly,
     UnpakSipaksi.Modules.VideoKegiatan.Application.AssemblyReference.Assembly,
     UnpakSipaksi.Modules.KategoriSkema.Application.AssemblyReference.Assembly,
+    UnpakSipaksi.Modules.KategoriProgramPengabdian.Application.AssemblyReference.Assembly,
+    UnpakSipaksi.Modules.PenugasanReviewer.Application.AssemblyReference.Assembly,
 ]);
 
 builder.Services.AddAntiforgery(options =>
@@ -195,6 +199,8 @@ builder.Services.AddSatuanModule(builder.Configuration);
 builder.Services.AddSotaKebaharuanModule(builder.Configuration);
 builder.Services.AddVideoKegiatanModule(builder.Configuration);
 builder.Services.AddKategoriSkemaModule(builder.Configuration);
+builder.Services.AddKategoriProgramPengabdianModule(builder.Configuration);
+builder.Services.AddPenugasanReviewerModule(builder.Configuration);
 
 builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen();
@@ -288,6 +294,8 @@ SatuanModule.MapEndpoints(app);
 SotaKebaharuanModule.MapEndpoints(app);
 VideoKegiatanModule.MapEndpoints(app);
 KategoriSkemaModule.MapEndpoints(app);
+KategoriProgramPengabdianModule.MapEndpoints(app);
+PenugasanReviewerModule.MapEndpoints(app);
 
 if (app.Environment.IsDevelopment())
 {

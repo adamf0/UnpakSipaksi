@@ -36,6 +36,8 @@
           "UnpakSipaksi.Modules.JumlahKolaboratorPublikasBereputasi.Infrastructure": "1.0.0",
           "UnpakSipaksi.Modules.KategoriMitraPenelitian.Application": "1.0.0",
           "UnpakSipaksi.Modules.KategoriMitraPenelitian.Infrastructure": "1.0.0",
+          "UnpakSipaksi.Modules.KategoriProgramPengabdian.Application": "1.0.0",
+          "UnpakSipaksi.Modules.KategoriProgramPengabdian.Infrastructure": "1.0.0",
           "UnpakSipaksi.Modules.KategoriSkema.Application": "1.0.0",
           "UnpakSipaksi.Modules.KategoriSkema.Infrastructure": "1.0.0",
           "UnpakSipaksi.Modules.KategoriSumberDana.Application": "1.0.0",
@@ -86,6 +88,8 @@
           "UnpakSipaksi.Modules.ModelFeasibilityStudys.Infrastructure": "1.0.0",
           "UnpakSipaksi.Modules.PeningkatanKeberdayaanMitra.Application": "1.0.0",
           "UnpakSipaksi.Modules.PeningkatanKeberdayaanMitra.Infrastructure": "1.0.0",
+          "UnpakSipaksi.Modules.PenugasanReviewer.Application": "1.0.0",
+          "UnpakSipaksi.Modules.PenugasanReviewer.Infrastructure": "1.0.0",
           "UnpakSipaksi.Modules.PotensiKetercapaianLuaranDijanjikan.Application": "1.0.0",
           "UnpakSipaksi.Modules.PotensiKetercapaianLuaranDijanjikan.Infrastructure": "1.0.0",
           "UnpakSipaksi.Modules.PrioritasRiset.Application": "1.0.0",
@@ -1716,6 +1720,50 @@
           "UnpakSipaksi.Modules.KategoriMitraPenelitian.Presentation.dll": {}
         }
       },
+      "UnpakSipaksi.Modules.KategoriProgramPengabdian.Application/1.0.0": {
+        "dependencies": {
+          "Dapper": "2.1.35",
+          "MediatR": "12.4.1",
+          "UnpakSipaksi.Common.Application": "1.0.0",
+          "UnpakSipaksi.Common.Domain": "1.0.0",
+          "UnpakSipaksi.Modules.KategoriProgramPengabdian.Domain": "1.0.0"
+        },
+        "runtime": {
+          "UnpakSipaksi.Modules.KategoriProgramPengabdian.Application.dll": {}
+        }
+      },
+      "UnpakSipaksi.Modules.KategoriProgramPengabdian.Domain/1.0.0": {
+        "dependencies": {
+          "UnpakSipaksi.Common.Domain": "1.0.0"
+        },
+        "runtime": {
+          "UnpakSipaksi.Modules.KategoriProgramPengabdian.Domain.dll": {}
+        }
+      },
+      "UnpakSipaksi.Modules.KategoriProgramPengabdian.Infrastructure/1.0.0": {
+        "dependencies": {
+          "Microsoft.EntityFrameworkCore": "8.0.0",
+          "MySql.EntityFrameworkCore": "8.0.0",
+          "UnpakSipaksi.Common.Application": "1.0.0",
+          "UnpakSipaksi.Common.Infrastructure": "1.0.0",
+          "UnpakSipaksi.Modules.KategoriProgramPengabdian.Application": "1.0.0",
+          "UnpakSipaksi.Modules.KategoriProgramPengabdian.Domain": "1.0.0",
+          "UnpakSipaksi.Modules.KategoriProgramPengabdian.Presentation": "1.0.0"
+        },
+        "runtime": {
+          "UnpakSipaksi.Modules.KategoriProgramPengabdian.Infrastructure.dll": {}
+        }
+      },
+      "UnpakSipaksi.Modules.KategoriProgramPengabdian.Presentation/1.0.0": {
+        "dependencies": {
+          "UnpakSipaksi.Common.Domain": "1.0.0",
+          "UnpakSipaksi.Common.Presentation": "1.0.0",
+          "UnpakSipaksi.Modules.KategoriProgramPengabdian.Application": "1.0.0"
+        },
+        "runtime": {
+          "UnpakSipaksi.Modules.KategoriProgramPengabdian.Presentation.dll": {}
+        }
+      },
       "UnpakSipaksi.Modules.KategoriSkema.Application/1.0.0": {
         "dependencies": {
           "Dapper": "2.1.35",
@@ -2814,6 +2862,50 @@
         },
         "runtime": {
           "UnpakSipaksi.Modules.PeningkatanKeberdayaanMitra.Presentation.dll": {}
+        }
+      },
+      "UnpakSipaksi.Modules.PenugasanReviewer.Application/1.0.0": {
+        "dependencies": {
+          "Dapper": "2.1.35",
+          "MediatR": "12.4.1",
+          "UnpakSipaksi.Common.Application": "1.0.0",
+          "UnpakSipaksi.Common.Domain": "1.0.0",
+          "UnpakSipaksi.Modules.PenugasanReviewer.Domain": "1.0.0"
+        },
+        "runtime": {
+          "UnpakSipaksi.Modules.PenugasanReviewer.Application.dll": {}
+        }
+      },
+      "UnpakSipaksi.Modules.PenugasanReviewer.Domain/1.0.0": {
+        "dependencies": {
+          "UnpakSipaksi.Common.Domain": "1.0.0"
+        },
+        "runtime": {
+          "UnpakSipaksi.Modules.PenugasanReviewer.Domain.dll": {}
+        }
+      },
+      "UnpakSipaksi.Modules.PenugasanReviewer.Infrastructure/1.0.0": {
+        "dependencies": {
+          "Microsoft.EntityFrameworkCore": "8.0.0",
+          "MySql.EntityFrameworkCore": "8.0.0",
+          "UnpakSipaksi.Common.Application": "1.0.0",
+          "UnpakSipaksi.Common.Infrastructure": "1.0.0",
+          "UnpakSipaksi.Modules.PenugasanReviewer.Application": "1.0.0",
+          "UnpakSipaksi.Modules.PenugasanReviewer.Domain": "1.0.0",
+          "UnpakSipaksi.Modules.PenugasanReviewer.Presentation": "1.0.0"
+        },
+        "runtime": {
+          "UnpakSipaksi.Modules.PenugasanReviewer.Infrastructure.dll": {}
+        }
+      },
+      "UnpakSipaksi.Modules.PenugasanReviewer.Presentation/1.0.0": {
+        "dependencies": {
+          "UnpakSipaksi.Common.Domain": "1.0.0",
+          "UnpakSipaksi.Common.Presentation": "1.0.0",
+          "UnpakSipaksi.Modules.PenugasanReviewer.Application": "1.0.0"
+        },
+        "runtime": {
+          "UnpakSipaksi.Modules.PenugasanReviewer.Presentation.dll": {}
         }
       },
       "UnpakSipaksi.Modules.PotensiKetercapaianLuaranDijanjikan.Application/1.0.0": {
@@ -4569,6 +4661,26 @@
       "serviceable": false,
       "sha512": ""
     },
+    "UnpakSipaksi.Modules.KategoriProgramPengabdian.Application/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    },
+    "UnpakSipaksi.Modules.KategoriProgramPengabdian.Domain/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    },
+    "UnpakSipaksi.Modules.KategoriProgramPengabdian.Infrastructure/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    },
+    "UnpakSipaksi.Modules.KategoriProgramPengabdian.Presentation/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    },
     "UnpakSipaksi.Modules.KategoriSkema.Application/1.0.0": {
       "type": "project",
       "serviceable": false,
@@ -5065,6 +5177,26 @@
       "sha512": ""
     },
     "UnpakSipaksi.Modules.PeningkatanKeberdayaanMitra.Presentation/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    },
+    "UnpakSipaksi.Modules.PenugasanReviewer.Application/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    },
+    "UnpakSipaksi.Modules.PenugasanReviewer.Domain/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    },
+    "UnpakSipaksi.Modules.PenugasanReviewer.Infrastructure/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    },
+    "UnpakSipaksi.Modules.PenugasanReviewer.Presentation/1.0.0": {
       "type": "project",
       "serviceable": false,
       "sha512": ""

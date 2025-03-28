@@ -15,7 +15,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("UnpakSipaksi")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+02eec3e5ccd90756c75492402a4b539d3a453a25")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+3234ef92271897ca3d2289f2a36e5c539a76455c")]
 [assembly: System.Reflection.AssemblyProductAttribute("UnpakSipaksi")]
 [assembly: System.Reflection.AssemblyTitleAttribute("UnpakSipaksi")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

@@ -52,6 +52,8 @@
 		<ProjectReference Include="..\UnpakSipaksi.Modules.JumlahKolaboratorPublikasBereputasi.Infrastructure\UnpakSipaksi.Modules.JumlahKolaboratorPublikasBereputasi.Infrastructure.csproj" />
 		<ProjectReference Include="..\UnpakSipaksi.Modules.KategoriMitraPenelitian.Application\UnpakSipaksi.Modules.KategoriMitraPenelitian.Application.csproj" />
 		<ProjectReference Include="..\UnpakSipaksi.Modules.KategoriMitraPenelitian.Infrastructure\UnpakSipaksi.Modules.KategoriMitraPenelitian.Infrastructure.csproj" />
+		<ProjectReference Include="..\UnpakSipaksi.Modules.KategoriProgramPengabdian.Application\UnpakSipaksi.Modules.KategoriProgramPengabdian.Application.csproj" />
+		<ProjectReference Include="..\UnpakSipaksi.Modules.KategoriProgramPengabdian.Infrastructure\UnpakSipaksi.Modules.KategoriProgramPengabdian.Infrastructure.csproj" />
 		<ProjectReference Include="..\UnpakSipaksi.Modules.KategoriSkema.Application\UnpakSipaksi.Modules.KategoriSkema.Application.csproj" />
 		<ProjectReference Include="..\UnpakSipaksi.Modules.KategoriSkema.Infrastructure\UnpakSipaksi.Modules.KategoriSkema.Infrastructure.csproj" />
 		<ProjectReference Include="..\UnpakSipaksi.Modules.KategoriSumberDana.Application\UnpakSipaksi.Modules.KategoriSumberDana.Application.csproj" />
@@ -102,6 +104,8 @@
 		<ProjectReference Include="..\UnpakSipaksi.Modules.ModelFeasibilityStudys.Infrastructure\UnpakSipaksi.Modules.ModelFeasibilityStudys.Infrastructure.csproj" />
 		<ProjectReference Include="..\UnpakSipaksi.Modules.PeningkatanKeberdayaanMitra.Application\UnpakSipaksi.Modules.PeningkatanKeberdayaanMitra.Application.csproj" />
 		<ProjectReference Include="..\UnpakSipaksi.Modules.PeningkatanKeberdayaanMitra.Infrastructure\UnpakSipaksi.Modules.PeningkatanKeberdayaanMitra.Infrastructure.csproj" />
+		<ProjectReference Include="..\UnpakSipaksi.Modules.PenugasanReviewer.Application\UnpakSipaksi.Modules.PenugasanReviewer.Application.csproj" />
+		<ProjectReference Include="..\UnpakSipaksi.Modules.PenugasanReviewer.Infrastructure\UnpakSipaksi.Modules.PenugasanReviewer.Infrastructure.csproj" />
 		<ProjectReference Include="..\UnpakSipaksi.Modules.PotensiKetercapaianLuaranDijanjikan.Application\UnpakSipaksi.Modules.PotensiKetercapaianLuaranDijanjikan.Application.csproj" />
 		<ProjectReference Include="..\UnpakSipaksi.Modules.PotensiKetercapaianLuaranDijanjikan.Infrastructure\UnpakSipaksi.Modules.PotensiKetercapaianLuaranDijanjikan.Infrastructure.csproj" />
 		<ProjectReference Include="..\UnpakSipaksi.Modules.PrioritasRiset.Application\UnpakSipaksi.Modules.PrioritasRiset.Application.csproj" />
