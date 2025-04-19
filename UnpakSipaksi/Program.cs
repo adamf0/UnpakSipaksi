@@ -55,6 +55,12 @@ using UnpakSipaksi.Modules.VideoKegiatan.Infrastructure;
 using UnpakSipaksi.Modules.KategoriSkema.Infrastructure;
 using UnpakSipaksi.Modules.KategoriProgramPengabdian.Infrastructure;
 using UnpakSipaksi.Modules.PenugasanReviewer.Infrastructure;
+using UnpakSipaksi.Modules.Pengumuman.Infrastructure;
+using UnpakSipaksi.Modules.Referensi.Infrastructure;
+using UnpakSipaksi.Modules.Roadmap.Infrastructure;
+using UnpakSipaksi.Modules.Metode.Infrastructure;
+using UnpakSipaksi.Modules.UrgensiPenelitian.Infrastructure;
+using UnpakSipaksi.Modules.SubstansiBobot.Infrastructure;
 
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.ResponseCompression;
@@ -139,6 +145,12 @@ builder.Services.AddApplication([
     UnpakSipaksi.Modules.KategoriSkema.Application.AssemblyReference.Assembly,
     UnpakSipaksi.Modules.KategoriProgramPengabdian.Application.AssemblyReference.Assembly,
     UnpakSipaksi.Modules.PenugasanReviewer.Application.AssemblyReference.Assembly,
+    UnpakSipaksi.Modules.Pengumuman.Application.AssemblyReference.Assembly,
+    UnpakSipaksi.Modules.Referensi.Application.AssemblyReference.Assembly,
+    UnpakSipaksi.Modules.Roadmap.Application.AssemblyReference.Assembly,
+    UnpakSipaksi.Modules.Metode.Application.AssemblyReference.Assembly,
+    UnpakSipaksi.Modules.UrgensiPenelitian.Application.AssemblyReference.Assembly,
+    UnpakSipaksi.Modules.SubstansiBobot.Application.AssemblyReference.Assembly,
 ]);
 
 builder.Services.AddAntiforgery(options =>
@@ -201,6 +213,12 @@ builder.Services.AddVideoKegiatanModule(builder.Configuration);
 builder.Services.AddKategoriSkemaModule(builder.Configuration);
 builder.Services.AddKategoriProgramPengabdianModule(builder.Configuration);
 builder.Services.AddPenugasanReviewerModule(builder.Configuration);
+builder.Services.AddPengumumanModule(builder.Configuration);
+builder.Services.AddReferensiModule(builder.Configuration);
+builder.Services.AddRoadmapModule(builder.Configuration);
+builder.Services.AddMetodeModule(builder.Configuration);
+builder.Services.AddUrgensiPenelitianModule(builder.Configuration);
+builder.Services.AddSubstansiBobotModule(builder.Configuration);
 
 builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen();
@@ -296,6 +314,12 @@ VideoKegiatanModule.MapEndpoints(app);
 KategoriSkemaModule.MapEndpoints(app);
 KategoriProgramPengabdianModule.MapEndpoints(app);
 PenugasanReviewerModule.MapEndpoints(app);
+PengumumanModule.MapEndpoints(app);
+ReferensiModule.MapEndpoints(app);
+RoadmapModule.MapEndpoints(app);
+MetodeModule.MapEndpoints(app);
+UrgensiPenelitianModule.MapEndpoints(app);
+SubstansiBobotModule.MapEndpoints(app);
 
 if (app.Environment.IsDevelopment())
 {

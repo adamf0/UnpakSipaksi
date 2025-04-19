@@ -14,6 +14,8 @@ using UnpakSipaksi.Modules.InovasiPemecahanMasalah.Domain.InovasiPemecahanMasala
 using UnpakSipaksi.Modules.InovasiPemecahanMasalah.Presentation.InovasiPemecahanMasalah;
 using UnpakSipaksi.Modules.InovasiPemecahanMasalah.Infrastructure.Database;
 using UnpakSipaksi.Modules.InovasiPemecahanMasalah.Infrastructure.InovasiPemecahanMasalah;
+using UnpakSipaksi.Modules.InovasiPemecahanMasalah.PublicApi;
+using UnpakSipaksi.Modules.InovasiPemecahanMasalah.Infrastructure.PublicApi;
 
 namespace UnpakSipaksi.Modules.InovasiPemecahanMasalah.Infrastructure
 {
@@ -43,6 +45,8 @@ namespace UnpakSipaksi.Modules.InovasiPemecahanMasalah.Infrastructure
             services.AddDbContext<InovasiPemecahanMasalahDbContext>(optionsBuilder => optionsBuilder.UseMySQL(databaseConnectionString));
 
             services.AddScoped<IInovasiPemecahanMasalahRepository, InovasiPemecahanMasalahRepository>();
+
+            services.AddScoped<IInovasiPemecahanMasalahApi, InovasiPemecahanMasalahApi>();
 
             services.AddScoped<IUnitOfWork>(sp => sp.GetRequiredService<InovasiPemecahanMasalahDbContext>());
         }

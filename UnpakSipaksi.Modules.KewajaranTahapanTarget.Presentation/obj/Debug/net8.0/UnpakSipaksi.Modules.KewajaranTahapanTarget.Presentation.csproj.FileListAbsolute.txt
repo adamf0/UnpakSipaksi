@@ -1,9 +1,3 @@
-C:\dev_net\UnpakSipaksi\UnpakSipaksi.Modules.KewajaranTahapanTarget.Presentation\obj\Debug\net8.0\UnpakSipaksi.Modules.KewajaranTahapanTarget.Presentation.csproj.AssemblyReference.cache
-C:\dev_net\UnpakSipaksi\UnpakSipaksi.Modules.KewajaranTahapanTarget.Presentation\obj\Debug\net8.0\UnpakSipaksi.Modules.KewajaranTahapanTarget.Presentation.GeneratedMSBuildEditorConfig.editorconfig
-C:\dev_net\UnpakSipaksi\UnpakSipaksi.Modules.KewajaranTahapanTarget.Presentation\obj\Debug\net8.0\UnpakSipaksi.Modules.KewajaranTahapanTarget.Presentation.AssemblyInfoInputs.cache
-C:\dev_net\UnpakSipaksi\UnpakSipaksi.Modules.KewajaranTahapanTarget.Presentation\obj\Debug\net8.0\UnpakSipaksi.Modules.KewajaranTahapanTarget.Presentation.AssemblyInfo.cs
-C:\dev_net\UnpakSipaksi\UnpakSipaksi.Modules.KewajaranTahapanTarget.Presentation\obj\Debug\net8.0\UnpakSipaksi.Modules.KewajaranTahapanTarget.Presentation.csproj.CoreCompileInputs.cache
-C:\dev_net\UnpakSipaksi\UnpakSipaksi.Modules.KewajaranTahapanTarget.Presentation\obj\Debug\net8.0\UnpakSipaksi.Modules.KewajaranTahapanTarget.Presentation.sourcelink.json
 C:\dev_net\UnpakSipaksi\UnpakSipaksi.Modules.KewajaranTahapanTarget.Presentation\bin\Debug\net8.0\UnpakSipaksi.Modules.KewajaranTahapanTarget.Presentation.deps.json
 C:\dev_net\UnpakSipaksi\UnpakSipaksi.Modules.KewajaranTahapanTarget.Presentation\bin\Debug\net8.0\UnpakSipaksi.Modules.KewajaranTahapanTarget.Presentation.dll
 C:\dev_net\UnpakSipaksi\UnpakSipaksi.Modules.KewajaranTahapanTarget.Presentation\bin\Debug\net8.0\UnpakSipaksi.Modules.KewajaranTahapanTarget.Presentation.pdb
@@ -17,6 +11,12 @@ C:\dev_net\UnpakSipaksi\UnpakSipaksi.Modules.KewajaranTahapanTarget.Presentation
 C:\dev_net\UnpakSipaksi\UnpakSipaksi.Modules.KewajaranTahapanTarget.Presentation\bin\Debug\net8.0\UnpakSipaksi.Modules.KewajaranTahapanTarget.Application.pdb
 C:\dev_net\UnpakSipaksi\UnpakSipaksi.Modules.KewajaranTahapanTarget.Presentation\bin\Debug\net8.0\UnpakSipaksi.Common.Application.pdb
 C:\dev_net\UnpakSipaksi\UnpakSipaksi.Modules.KewajaranTahapanTarget.Presentation\bin\Debug\net8.0\UnpakSipaksi.Modules.KewajaranTahapanTarget.Domain.pdb
+C:\dev_net\UnpakSipaksi\UnpakSipaksi.Modules.KewajaranTahapanTarget.Presentation\obj\Debug\net8.0\UnpakSipaksi.Modules.KewajaranTahapanTarget.Presentation.csproj.AssemblyReference.cache
+C:\dev_net\UnpakSipaksi\UnpakSipaksi.Modules.KewajaranTahapanTarget.Presentation\obj\Debug\net8.0\UnpakSipaksi.Modules.KewajaranTahapanTarget.Presentation.GeneratedMSBuildEditorConfig.editorconfig
+C:\dev_net\UnpakSipaksi\UnpakSipaksi.Modules.KewajaranTahapanTarget.Presentation\obj\Debug\net8.0\UnpakSipaksi.Modules.KewajaranTahapanTarget.Presentation.AssemblyInfoInputs.cache
+C:\dev_net\UnpakSipaksi\UnpakSipaksi.Modules.KewajaranTahapanTarget.Presentation\obj\Debug\net8.0\UnpakSipaksi.Modules.KewajaranTahapanTarget.Presentation.AssemblyInfo.cs
+C:\dev_net\UnpakSipaksi\UnpakSipaksi.Modules.KewajaranTahapanTarget.Presentation\obj\Debug\net8.0\UnpakSipaksi.Modules.KewajaranTahapanTarget.Presentation.csproj.CoreCompileInputs.cache
+C:\dev_net\UnpakSipaksi\UnpakSipaksi.Modules.KewajaranTahapanTarget.Presentation\obj\Debug\net8.0\UnpakSipaksi.Modules.KewajaranTahapanTarget.Presentation.sourcelink.json
 C:\dev_net\UnpakSipaksi\UnpakSipaksi.Modules.KewajaranTahapanTarget.Presentation\obj\Debug\net8.0\UnpakSip.AB8B3464.Up2Date
 C:\dev_net\UnpakSipaksi\UnpakSipaksi.Modules.KewajaranTahapanTarget.Presentation\obj\Debug\net8.0\UnpakSipaksi.Modules.KewajaranTahapanTarget.Presentation.dll
 C:\dev_net\UnpakSipaksi\UnpakSipaksi.Modules.KewajaranTahapanTarget.Presentation\obj\Debug\net8.0\refint\UnpakSipaksi.Modules.KewajaranTahapanTarget.Presentation.dll

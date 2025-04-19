@@ -5,8 +5,8 @@ C:\dev_net\UnpakSipaksi\UnpakSipaksi.Modules.TopikPenelitian.PublicApi\obj\Debug
 C:\dev_net\UnpakSipaksi\UnpakSipaksi.Modules.TopikPenelitian.PublicApi\obj\Debug\net8.0\UnpakSipaksi.Modules.TopikPenelitian.PublicApi.AssemblyInfoInputs.cache
 C:\dev_net\UnpakSipaksi\UnpakSipaksi.Modules.TopikPenelitian.PublicApi\obj\Debug\net8.0\UnpakSipaksi.Modules.TopikPenelitian.PublicApi.AssemblyInfo.cs
 C:\dev_net\UnpakSipaksi\UnpakSipaksi.Modules.TopikPenelitian.PublicApi\obj\Debug\net8.0\UnpakSipaksi.Modules.TopikPenelitian.PublicApi.csproj.CoreCompileInputs.cache
+C:\dev_net\UnpakSipaksi\UnpakSipaksi.Modules.TopikPenelitian.PublicApi\obj\Debug\net8.0\UnpakSipaksi.Modules.TopikPenelitian.PublicApi.sourcelink.json
 C:\dev_net\UnpakSipaksi\UnpakSipaksi.Modules.TopikPenelitian.PublicApi\obj\Debug\net8.0\UnpakSipaksi.Modules.TopikPenelitian.PublicApi.dll
 C:\dev_net\UnpakSipaksi\UnpakSipaksi.Modules.TopikPenelitian.PublicApi\obj\Debug\net8.0\refint\UnpakSipaksi.Modules.TopikPenelitian.PublicApi.dll
 C:\dev_net\UnpakSipaksi\UnpakSipaksi.Modules.TopikPenelitian.PublicApi\obj\Debug\net8.0\UnpakSipaksi.Modules.TopikPenelitian.PublicApi.pdb
 C:\dev_net\UnpakSipaksi\UnpakSipaksi.Modules.TopikPenelitian.PublicApi\obj\Debug\net8.0\ref\UnpakSipaksi.Modules.TopikPenelitian.PublicApi.dll
-C:\dev_net\UnpakSipaksi\UnpakSipaksi.Modules.TopikPenelitian.PublicApi\obj\Debug\net8.0\UnpakSipaksi.Modules.TopikPenelitian.PublicApi.sourcelink.json

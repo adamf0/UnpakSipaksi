@@ -28,6 +28,7 @@
 		<ProjectReference Include="..\UnpakSipaksi.Modules.KejelasanPembagianTugasTim.Domain\UnpakSipaksi.Modules.KejelasanPembagianTugasTim.Domain.csproj" />
 		<ProjectReference Include="..\UnpakSipaksi.Modules.KejelasanPembagianTugasTim.Presentation\UnpakSipaksi.Modules.KejelasanPembagianTugasTim.Presentation.csproj" />
 		<ProjectReference Include="..\UnpakSipaksi.Modules.KejelasanPembagianTugasTim.Domain\UnpakSipaksi.Modules.KejelasanPembagianTugasTim.Domain.csproj" />
+		<ProjectReference Include="..\UnpakSipaksi.Modules.KejelasanPembagianTugasTim.PublicApi\UnpakSipaksi.Modules.KejelasanPembagianTugasTim.PublicApi.csproj" />
 	</ItemGroup>
 
 </Project>

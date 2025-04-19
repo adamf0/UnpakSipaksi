@@ -8,9 +8,9 @@ C:\dev_net\UnpakSipaksi\UnpakSipaksi.Common.Application\obj\Debug\net8.0\UnpakSi
 C:\dev_net\UnpakSipaksi\UnpakSipaksi.Common.Application\obj\Debug\net8.0\UnpakSipaksi.Common.Application.AssemblyInfoInputs.cache
 C:\dev_net\UnpakSipaksi\UnpakSipaksi.Common.Application\obj\Debug\net8.0\UnpakSipaksi.Common.Application.AssemblyInfo.cs
 C:\dev_net\UnpakSipaksi\UnpakSipaksi.Common.Application\obj\Debug\net8.0\UnpakSipaksi.Common.Application.csproj.CoreCompileInputs.cache
+C:\dev_net\UnpakSipaksi\UnpakSipaksi.Common.Application\obj\Debug\net8.0\UnpakSipaksi.Common.Application.sourcelink.json
 C:\dev_net\UnpakSipaksi\UnpakSipaksi.Common.Application\obj\Debug\net8.0\UnpakSip.96762559.Up2Date
 C:\dev_net\UnpakSipaksi\UnpakSipaksi.Common.Application\obj\Debug\net8.0\UnpakSipaksi.Common.Application.dll
 C:\dev_net\UnpakSipaksi\UnpakSipaksi.Common.Application\obj\Debug\net8.0\refint\UnpakSipaksi.Common.Application.dll
 C:\dev_net\UnpakSipaksi\UnpakSipaksi.Common.Application\obj\Debug\net8.0\UnpakSipaksi.Common.Application.pdb
 C:\dev_net\UnpakSipaksi\UnpakSipaksi.Common.Application\obj\Debug\net8.0\ref\UnpakSipaksi.Common.Application.dll
-C:\dev_net\UnpakSipaksi\UnpakSipaksi.Common.Application\obj\Debug\net8.0\UnpakSipaksi.Common.Application.sourcelink.json

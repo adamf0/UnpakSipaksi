@@ -10,10 +10,10 @@ namespace UnpakSipaksi.Modules.KelompokRab.Domain.KelompokRab
     public static class KelompokRabErrors
     {
         public static Error EmptyData() =>
-            Error.NotFound("KelompokRab.EmptyData", $"data is not found");
+            Error.NotFound("KelompokRab.EmptyData", "data is not found");
 
         public static Error NotFound(Guid Id) =>
-            Error.NotFound("KelompokRab.NotFound", $"The event with the identifier {Id} was not found");
+            Error.NotFound("KelompokRab.NotFound", $"Kelompok rab with the identifier {Id} was not found");
 
     }
 }

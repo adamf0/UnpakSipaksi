@@ -4,7 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace UnpakSipaksi.Modules.KesesuaianJadwal.Application.GetkesesuaianJadwalRepository
+namespace UnpakSipaksi.Modules.KesesuaianJadwal.Application.GetKesesuaianJadwal
 {
     public sealed record KesesuaianJadwalResponse
     {

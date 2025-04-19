@@ -28,6 +28,7 @@
 		<ProjectReference Include="..\UnpakSipaksi.Modules.MetodeRencanaKegiatan.Domain\UnpakSipaksi.Modules.MetodeRencanaKegiatan.Domain.csproj" />
 		<ProjectReference Include="..\UnpakSipaksi.Modules.MetodeRencanaKegiatan.Presentation\UnpakSipaksi.Modules.MetodeRencanaKegiatan.Presentation.csproj" />
 		<ProjectReference Include="..\UnpakSipaksi.Modules.MetodeRencanaKegiatan.Domain\UnpakSipaksi.Modules.MetodeRencanaKegiatan.Domain.csproj" />
+		<ProjectReference Include="..\UnpakSipaksi.Modules.MetodeRencanaKegiatan.PublicApi\UnpakSipaksi.Modules.MetodeRencanaKegiatan.PublicApi.csproj" />
 	</ItemGroup>
 
 </Project>

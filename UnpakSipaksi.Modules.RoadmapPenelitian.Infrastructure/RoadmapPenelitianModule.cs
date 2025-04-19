@@ -7,8 +7,10 @@ using UnpakSipaksi.Common.Infrastructure.Data;
 using UnpakSipaksi.Modules.RoadmapPenelitian.Application.Abstractions.Data;
 using UnpakSipaksi.Modules.RoadmapPenelitian.Domain.RoadmapPenelitian;
 using UnpakSipaksi.Modules.RoadmapPenelitian.Infrastructure.Database;
+using UnpakSipaksi.Modules.RoadmapPenelitian.Infrastructure.PublicApi;
 using UnpakSipaksi.Modules.RoadmapPenelitian.Infrastructure.RoadmapPenelitian;
 using UnpakSipaksi.Modules.RoadmapPenelitian.Presentation.RoadmapPenelitian;
+using UnpakSipaksi.Modules.RoadmapPenelitian.PublicApi;
 
 namespace UnpakSipaksi.Modules.RoadmapPenelitian.Infrastructure
 {
@@ -38,6 +40,8 @@ namespace UnpakSipaksi.Modules.RoadmapPenelitian.Infrastructure
             services.AddDbContext<RoadmapPenelitianDbContext>(optionsBuilder => optionsBuilder.UseMySQL(databaseConnectionString));
 
             services.AddScoped<IRoadmapPenelitianRepository, RoadmapPenelitianRepository>();
+
+            services.AddScoped<IRoadmapPenelitianApi, RoadmapPenelitianApi>();
 
             services.AddScoped<IUnitOfWork>(sp => sp.GetRequiredService<RoadmapPenelitianDbContext>());
         }

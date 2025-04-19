@@ -1,0 +1,12 @@
+C:\dev_net\UnpakSipaksi\UnpakSipaksi.Modules.VideoKegiatan.PublicApi\bin\Debug\net8.0\UnpakSipaksi.Modules.VideoKegiatan.PublicApi.deps.json
+C:\dev_net\UnpakSipaksi\UnpakSipaksi.Modules.VideoKegiatan.PublicApi\bin\Debug\net8.0\UnpakSipaksi.Modules.VideoKegiatan.PublicApi.dll
+C:\dev_net\UnpakSipaksi\UnpakSipaksi.Modules.VideoKegiatan.PublicApi\bin\Debug\net8.0\UnpakSipaksi.Modules.VideoKegiatan.PublicApi.pdb
+C:\dev_net\UnpakSipaksi\UnpakSipaksi.Modules.VideoKegiatan.PublicApi\obj\Debug\net8.0\UnpakSipaksi.Modules.VideoKegiatan.PublicApi.GeneratedMSBuildEditorConfig.editorconfig
+C:\dev_net\UnpakSipaksi\UnpakSipaksi.Modules.VideoKegiatan.PublicApi\obj\Debug\net8.0\UnpakSipaksi.Modules.VideoKegiatan.PublicApi.AssemblyInfoInputs.cache
+C:\dev_net\UnpakSipaksi\UnpakSipaksi.Modules.VideoKegiatan.PublicApi\obj\Debug\net8.0\UnpakSipaksi.Modules.VideoKegiatan.PublicApi.AssemblyInfo.cs
+C:\dev_net\UnpakSipaksi\UnpakSipaksi.Modules.VideoKegiatan.PublicApi\obj\Debug\net8.0\UnpakSipaksi.Modules.VideoKegiatan.PublicApi.csproj.CoreCompileInputs.cache
+C:\dev_net\UnpakSipaksi\UnpakSipaksi.Modules.VideoKegiatan.PublicApi\obj\Debug\net8.0\UnpakSipaksi.Modules.VideoKegiatan.PublicApi.sourcelink.json
+C:\dev_net\UnpakSipaksi\UnpakSipaksi.Modules.VideoKegiatan.PublicApi\obj\Debug\net8.0\UnpakSipaksi.Modules.VideoKegiatan.PublicApi.dll
+C:\dev_net\UnpakSipaksi\UnpakSipaksi.Modules.VideoKegiatan.PublicApi\obj\Debug\net8.0\refint\UnpakSipaksi.Modules.VideoKegiatan.PublicApi.dll
+C:\dev_net\UnpakSipaksi\UnpakSipaksi.Modules.VideoKegiatan.PublicApi\obj\Debug\net8.0\UnpakSipaksi.Modules.VideoKegiatan.PublicApi.pdb
+C:\dev_net\UnpakSipaksi\UnpakSipaksi.Modules.VideoKegiatan.PublicApi\obj\Debug\net8.0\ref\UnpakSipaksi.Modules.VideoKegiatan.PublicApi.dll

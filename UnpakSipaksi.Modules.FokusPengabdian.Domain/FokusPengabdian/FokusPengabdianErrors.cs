@@ -10,10 +10,10 @@ namespace UnpakSipaksi.Modules.FokusPengabdian.Domain.FokusPengabdian
     public static class FokusPengabdianErrors
     {
         public static Error EmptyData() =>
-            Error.NotFound("FokusPengabdian.EmptyData", $"data is not found");
+            Error.NotFound("FokusPengabdian.EmptyData", "data is not found");
 
         public static Error NotFound(Guid Id) =>
-            Error.NotFound("FokusPengabdian.NotFound", $"The event with the identifier {Id} was not found");
+            Error.NotFound("FokusPengabdian.NotFound", $"Fokus pengabdian with identifier {Id} not found");
 
     }
 }

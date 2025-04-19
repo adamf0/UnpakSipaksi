@@ -14,10 +14,6 @@ namespace UnpakSipaksi.Modules.KredibilitasMitraDukungan.Application.CreateKredi
         {
             Result<Domain.KredibilitasMitraDukungan.KredibilitasMitraDukungan> result = Domain.KredibilitasMitraDukungan.KredibilitasMitraDukungan.Create(
                 request.Nama,
-                request.BobotPDP,
-                request.BobotTerapan,
-                request.BobotKerjasama,
-                request.BobotPenelitianDasar,
                 request.Skor
             );
 

@@ -26,10 +26,6 @@ namespace UnpakSipaksi.Modules.RelevansiKualitasReferensi.Domain.RelevansiKualit
 
         public static Result<RelevansiKualitasReferensi> Create(
         string Nama,
-        int BobotPDP,
-        int BobotTerapan,
-        int BobotKerjasama,
-        int BobotPenelitianDasar,
         int Skor
         )
         {
@@ -37,10 +33,6 @@ namespace UnpakSipaksi.Modules.RelevansiKualitasReferensi.Domain.RelevansiKualit
             {
                 Uuid = Guid.NewGuid(),
                 Nama = Nama,
-                BobotPDP = BobotPDP,
-                BobotTerapan = BobotTerapan,
-                BobotKerjasama = BobotKerjasama,
-                BobotPenelitianDasar = BobotPenelitianDasar,
                 Skor = Skor,
             };
 

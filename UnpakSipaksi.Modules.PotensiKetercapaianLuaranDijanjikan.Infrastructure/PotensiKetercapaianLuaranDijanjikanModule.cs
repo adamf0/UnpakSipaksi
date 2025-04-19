@@ -9,6 +9,8 @@ using UnpakSipaksi.Modules.PotensiKetercapaianLuaranDijanjikan.Application.Abstr
 using UnpakSipaksi.Modules.PotensiKetercapaianLuaranDijanjikan.Presentation.PotensiKetercapaianLuaranDijanjikan;
 using UnpakSipaksi.Modules.PotensiKetercapaianLuaranDijanjikan.Infrastructure.PotensiKetercapaianLuaranDijanjikan;
 using UnpakSipaksi.Modules.PotensiKetercapaianLuaranDijanjikan.Infrastructure.Database;
+using UnpakSipaksi.Modules.PotensiKetercapaianLuaranDijanjikan.PublicApi;
+using UnpakSipaksi.Modules.PotensiKetercapaianLuaranDijanjikan.Infrastructure.PublicApi;
 
 namespace UnpakSipaksi.Modules.PotensiKetercapaianLuaranDijanjikan.Infrastructure
 {
@@ -38,6 +40,8 @@ namespace UnpakSipaksi.Modules.PotensiKetercapaianLuaranDijanjikan.Infrastructur
             services.AddDbContext<PotensiKetercapaianLuaranDijanjikanDbContext>(optionsBuilder => optionsBuilder.UseMySQL(databaseConnectionString));
 
             services.AddScoped<IPotensiKetercapaianLuaranDijanjikanRepository, PotensiKetercapaianLuaranDijanjikanRepository>();
+
+            services.AddScoped<IPotensiKetercapaianLuaranDijanjikanApi, PotensiKetercapaianLuaranDijanjikanApi>();
 
             services.AddScoped<IUnitOfWork>(sp => sp.GetRequiredService<PotensiKetercapaianLuaranDijanjikanDbContext>());
         }

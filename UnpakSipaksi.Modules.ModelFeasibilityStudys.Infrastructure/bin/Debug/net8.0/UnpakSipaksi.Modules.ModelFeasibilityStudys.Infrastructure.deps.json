@@ -14,7 +14,8 @@
           "UnpakSipaksi.Common.Infrastructure": "1.0.0",
           "UnpakSipaksi.Modules.ModelFeasibilityStudys.Application": "1.0.0",
           "UnpakSipaksi.Modules.ModelFeasibilityStudys.Domain": "1.0.0",
-          "UnpakSipaksi.Modules.ModelFeasibilityStudys.Presentation": "1.0.0"
+          "UnpakSipaksi.Modules.ModelFeasibilityStudys.Presentation": "1.0.0",
+          "UnpakSipaksi.Modules.ModelFeasibilityStudys.PublicApi": "1.0.0"
         },
         "runtime": {
           "UnpakSipaksi.Modules.ModelFeasibilityStudys.Infrastructure.dll": {}
@@ -699,6 +700,11 @@
         "runtime": {
           "UnpakSipaksi.Modules.ModelFeasibilityStudys.Presentation.dll": {}
         }
+      },
+      "UnpakSipaksi.Modules.ModelFeasibilityStudys.PublicApi/1.0.0": {
+        "runtime": {
+          "UnpakSipaksi.Modules.ModelFeasibilityStudys.PublicApi.dll": {}
+        }
       }
     }
   },
@@ -1215,6 +1221,11 @@
       "sha512": ""
     },
     "UnpakSipaksi.Modules.ModelFeasibilityStudys.Presentation/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    },
+    "UnpakSipaksi.Modules.ModelFeasibilityStudys.PublicApi/1.0.0": {
       "type": "project",
       "serviceable": false,
       "sha512": ""

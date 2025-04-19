@@ -9,6 +9,8 @@ using UnpakSipaksi.Modules.KualitasKuantitasPublikasiProsiding.Application.Abstr
 using UnpakSipaksi.Modules.KualitasKuantitasPublikasiProsiding.Infrastructure.Database;
 using UnpakSipaksi.Modules.KualitasKuantitasPublikasiProsiding.Infrastructure.KualitasKuantitasPublikasiProsiding;
 using UnpakSipaksi.Modules.KualitasKuantitasPublikasiProsiding.Presentation.KualitasKuantitasPublikasiProsiding;
+using UnpakSipaksi.Modules.KualitasKuantitasPublikasiProsiding.Infrastructure.PublicApi;
+using UnpakSipaksi.Modules.KualitasKuantitasPublikasiProsiding.PubliApi;
 
 namespace UnpakSipaksi.Modules.KualitasKuantitasPublikasiProsiding.Infrastructure
 {
@@ -38,6 +40,8 @@ namespace UnpakSipaksi.Modules.KualitasKuantitasPublikasiProsiding.Infrastructur
             services.AddDbContext<KualitasKuantitasPublikasiProsidingDbContext>(optionsBuilder => optionsBuilder.UseMySQL(databaseConnectionString));
 
             services.AddScoped<IKualitasKuantitasPublikasiProsidingRepository, KualitasKuantitasPublikasiProsidingRepository>();
+
+            services.AddScoped<IKualitasKuantitasPublikasiProsidingApi, KualitasKuantitasPublikasiProsidingApi>();
 
             services.AddScoped<IUnitOfWork>(sp => sp.GetRequiredService<KualitasKuantitasPublikasiProsidingDbContext>());
         }

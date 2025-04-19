@@ -14,7 +14,8 @@
           "UnpakSipaksi.Common.Infrastructure": "1.0.0",
           "UnpakSipaksi.Modules.KebaruanReferensi.Application": "1.0.0",
           "UnpakSipaksi.Modules.KebaruanReferensi.Domain": "1.0.0",
-          "UnpakSipaksi.Modules.KebaruanReferensi.Presentation": "1.0.0"
+          "UnpakSipaksi.Modules.KebaruanReferensi.Presentation": "1.0.0",
+          "UnpakSipaksi.Modules.KebaruanReferensi.PublicApi": "1.0.0"
         },
         "runtime": {
           "UnpakSipaksi.Modules.KebaruanReferensi.Infrastructure.dll": {}
@@ -699,6 +700,11 @@
         "runtime": {
           "UnpakSipaksi.Modules.KebaruanReferensi.Presentation.dll": {}
         }
+      },
+      "UnpakSipaksi.Modules.KebaruanReferensi.PublicApi/1.0.0": {
+        "runtime": {
+          "UnpakSipaksi.Modules.KebaruanReferensi.PublicApi.dll": {}
+        }
       }
     }
   },
@@ -1215,6 +1221,11 @@
       "sha512": ""
     },
     "UnpakSipaksi.Modules.KebaruanReferensi.Presentation/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    },
+    "UnpakSipaksi.Modules.KebaruanReferensi.PublicApi/1.0.0": {
       "type": "project",
       "serviceable": false,
       "sha512": ""

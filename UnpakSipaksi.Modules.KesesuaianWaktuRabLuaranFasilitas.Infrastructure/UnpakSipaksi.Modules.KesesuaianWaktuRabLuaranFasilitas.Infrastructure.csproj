@@ -29,6 +29,7 @@
 		<ProjectReference Include="..\UnpakSipaksi.Modules.KesesuaianWaktuRabLuaranFasilitas.Domain\UnpakSipaksi.Modules.KesesuaianWaktuRabLuaranFasilitas.Domain.csproj" />
 		<ProjectReference Include="..\UnpakSipaksi.Modules.KesesuaianWaktuRabLuaranFasilitas.Presentation\UnpakSipaksi.Modules.KesesuaianWaktuRabLuaranFasilitas.Presentation.csproj" />
 		<ProjectReference Include="..\UnpakSipaksi.Modules.KesesuaianWaktuRabLuaranFasilitas.Domain\UnpakSipaksi.Modules.KesesuaianWaktuRabLuaranFasilitas.Domain.csproj" />
+		<ProjectReference Include="..\UnpakSipaksi.Modules.KesesuaianWaktuRabLuaranFasilitas.PublicApi\UnpakSipaksi.Modules.KesesuaianWaktuRabLuaranFasilitas.PublicApi.csproj" />
 	</ItemGroup>
 
 </Project>

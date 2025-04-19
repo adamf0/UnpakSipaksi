@@ -14,7 +14,8 @@
           "UnpakSipaksi.Common.Infrastructure": "1.0.0",
           "UnpakSipaksi.Modules.VideoKegiatan.Application": "1.0.0",
           "UnpakSipaksi.Modules.VideoKegiatan.Domain": "1.0.0",
-          "UnpakSipaksi.Modules.VideoKegiatan.Presentation": "1.0.0"
+          "UnpakSipaksi.Modules.VideoKegiatan.Presentation": "1.0.0",
+          "UnpakSipaksi.Modules.VideoKegiatan.PublicApi": "1.0.0"
         },
         "runtime": {
           "UnpakSipaksi.Modules.VideoKegiatan.Infrastructure.dll": {}
@@ -699,6 +700,11 @@
         "runtime": {
           "UnpakSipaksi.Modules.VideoKegiatan.Presentation.dll": {}
         }
+      },
+      "UnpakSipaksi.Modules.VideoKegiatan.PublicApi/1.0.0": {
+        "runtime": {
+          "UnpakSipaksi.Modules.VideoKegiatan.PublicApi.dll": {}
+        }
       }
     }
   },
@@ -1215,6 +1221,11 @@
       "sha512": ""
     },
     "UnpakSipaksi.Modules.VideoKegiatan.Presentation/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    },
+    "UnpakSipaksi.Modules.VideoKegiatan.PublicApi/1.0.0": {
       "type": "project",
       "serviceable": false,
       "sha512": ""

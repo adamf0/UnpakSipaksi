@@ -14,7 +14,8 @@
           "UnpakSipaksi.Common.Infrastructure": "1.0.0",
           "UnpakSipaksi.Modules.PotensiKetercapaianLuaranDijanjikan.Application": "1.0.0",
           "UnpakSipaksi.Modules.PotensiKetercapaianLuaranDijanjikan.Domain": "1.0.0",
-          "UnpakSipaksi.Modules.PotensiKetercapaianLuaranDijanjikan.Presentation": "1.0.0"
+          "UnpakSipaksi.Modules.PotensiKetercapaianLuaranDijanjikan.Presentation": "1.0.0",
+          "UnpakSipaksi.Modules.PotensiKetercapaianLuaranDijanjikan.PublicApi": "1.0.0"
         },
         "runtime": {
           "UnpakSipaksi.Modules.PotensiKetercapaianLuaranDijanjikan.Infrastructure.dll": {}
@@ -699,6 +700,11 @@
         "runtime": {
           "UnpakSipaksi.Modules.PotensiKetercapaianLuaranDijanjikan.Presentation.dll": {}
         }
+      },
+      "UnpakSipaksi.Modules.PotensiKetercapaianLuaranDijanjikan.PublicApi/1.0.0": {
+        "runtime": {
+          "UnpakSipaksi.Modules.PotensiKetercapaianLuaranDijanjikan.PublicApi.dll": {}
+        }
       }
     }
   },
@@ -1215,6 +1221,11 @@
       "sha512": ""
     },
     "UnpakSipaksi.Modules.PotensiKetercapaianLuaranDijanjikan.Presentation/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    },
+    "UnpakSipaksi.Modules.PotensiKetercapaianLuaranDijanjikan.PublicApi/1.0.0": {
       "type": "project",
       "serviceable": false,
       "sha512": ""

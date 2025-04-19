@@ -21,10 +21,6 @@ namespace UnpakSipaksi.Modules.KetajamanPerumusanMasalah.Application.UpdateKetaj
 
             Result<Domain.KetajamanPerumusanMasalah.KetajamanPerumusanMasalah> asset = Domain.KetajamanPerumusanMasalah.KetajamanPerumusanMasalah.Update(existingKetajamanPerumusanMasalah!)
                          .ChangeNama(request.Nama)
-                         .ChangeBobotPDP(request.BobotPDP)
-                         .ChangeBobotTerapan(request.BobotTerapan)
-                         .ChangeBobotPenelitianDasar(request.BobotPenelitianDasar)
-                         .ChangeBobotKerjasama(request.BobotKerjasama)
                          .ChangeSkor(request.Skor)
                          .Build();
 

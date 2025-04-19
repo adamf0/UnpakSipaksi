@@ -28,6 +28,7 @@
 		<ProjectReference Include="..\UnpakSipaksi.Modules.SotaKebaharuan.Domain\UnpakSipaksi.Modules.SotaKebaharuan.Domain.csproj" />
 		<ProjectReference Include="..\UnpakSipaksi.Modules.SotaKebaharuan.Presentation\UnpakSipaksi.Modules.SotaKebaharuan.Presentation.csproj" />
 		<ProjectReference Include="..\UnpakSipaksi.Modules.SotaKebaharuan.Domain\UnpakSipaksi.Modules.SotaKebaharuan.Domain.csproj" />
+		<ProjectReference Include="..\UnpakSipaksi.Modules.SotaKebaharuan.PublicApi\UnpakSipaksi.Modules.SotaKebaharuan.PublicApi.csproj" />
 	</ItemGroup>
 
 </Project>

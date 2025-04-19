@@ -28,6 +28,7 @@
 		<ProjectReference Include="..\UnpakSipaksi.Modules.ModelFeasibilityStudys.Domain\UnpakSipaksi.Modules.ModelFeasibilityStudys.Domain.csproj" />
 		<ProjectReference Include="..\UnpakSipaksi.Modules.ModelFeasibilityStudys.Presentation\UnpakSipaksi.Modules.ModelFeasibilityStudys.Presentation.csproj" />
 		<ProjectReference Include="..\UnpakSipaksi.Modules.ModelFeasibilityStudys.Domain\UnpakSipaksi.Modules.ModelFeasibilityStudys.Domain.csproj" />
+		<ProjectReference Include="..\UnpakSipaksi.Modules.ModelFeasibilityStudys.PublicApi\UnpakSipaksi.Modules.ModelFeasibilityStudys.PublicApi.csproj" />
 	</ItemGroup>
 
 </Project>

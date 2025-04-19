@@ -1,0 +1,88 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+	<PropertyGroup>
+		<TargetFramework>net8.0</TargetFramework>
+		<ImplicitUsings>enable</ImplicitUsings>
+		<Nullable>enable</Nullable>
+	</PropertyGroup>
+
+	<Target Name="DisableNullableForVisualStudioBuild" BeforeTargets="CoreCompile" Condition="'$(BuildingInsideVisualStudio)' == 'True' And '$(BuildingProject)' == 'True' And '$(Configuration)' == 'Debug'">
+		<PropertyGroup>
+			<Nullable>disable</Nullable>
+		</PropertyGroup>
+	</Target>
+
+	<ItemGroup>
+		<PackageReference Include="Dapper" Version="2.1.35" />
+		<PackageReference Include="MediatR" Version="12.4.1" />
+	</ItemGroup>
+
+	<ItemGroup>
+		<ProjectReference Include="..\UnpakSipaksi.Common.Application\UnpakSipaksi.Common.Application.csproj" />
+		<ProjectReference Include="..\UnpakSipaksi.Common.Domain\UnpakSipaksi.Common.Domain.csproj" />
+		<ProjectReference Include="..\UnpakSipaksi.Modules.AkurasiPenelitian.PublicApi\UnpakSipaksi.Modules.AkurasiPenelitian.PublicApi.csproj" />
+		
+		<ProjectReference Include="..\UnpakSipaksi.Modules.ArtikelMediaMassa.PublicApi\UnpakSipaksi.Modules.ArtikelMediaMassa.PublicApi.csproj" />
+		
+		<ProjectReference Include="..\UnpakSipaksi.Modules.InovasiPemecahanMasalah.PublicApi\UnpakSipaksi.Modules.InovasiPemecahanMasalah.PublicApi.csproj" />
+		
+		<ProjectReference Include="..\UnpakSipaksi.Modules.JumlahKolaboratorPublikasBereputasi.PublicApi\UnpakSipaksi.Modules.JumlahKolaboratorPublikasBereputasi.PublicApi.csproj" />
+		
+		<ProjectReference Include="..\UnpakSipaksi.Modules.KebaruanReferensi.PublicApi\UnpakSipaksi.Modules.KebaruanReferensi.PublicApi.csproj" />
+		
+		<ProjectReference Include="..\UnpakSipaksi.Modules.KejelasanPembagianTugasTim.PublicApi\UnpakSipaksi.Modules.KejelasanPembagianTugasTim.PublicApi.csproj" />
+		
+		<ProjectReference Include="..\UnpakSipaksi.Modules.KesesuaianJadwal.PublicApi\UnpakSipaksi.Modules.KesesuaianJadwal.PublicApi.csproj" />
+		
+		<ProjectReference Include="..\UnpakSipaksi.Modules.KesesuaianPenugasan.PublicApi\UnpakSipaksi.Modules.KesesuaianPenugasan.PublicApi.csproj" />
+		
+		<ProjectReference Include="..\UnpakSipaksi.Modules.KesesuaianSolusiMasalahMitra.PublicApi\UnpakSipaksi.Modules.KesesuaianSolusiMasalahMitra.PublicApi.csproj" />
+		
+		<ProjectReference Include="..\UnpakSipaksi.Modules.KesesuaianTkt.PublicApi\UnpakSipaksi.Modules.KesesuaianTkt.PublicApi.csproj" />
+		
+		<ProjectReference Include="..\UnpakSipaksi.Modules.KesesuaianWaktuRabLuaranFasilitas.PublicApi\UnpakSipaksi.Modules.KesesuaianWaktuRabLuaranFasilitas.PublicApi.csproj" />
+		
+		<ProjectReference Include="..\UnpakSipaksi.Modules.KetajamanAnalisis.PublicApi\UnpakSipaksi.Modules.KetajamanAnalisis.PublicApi.csproj" />
+		
+		<ProjectReference Include="..\UnpakSipaksi.Modules.KetajamanPerumusanMasalah.PublicApi\UnpakSipaksi.Modules.KetajamanPerumusanMasalah.PublicApi.csproj" />
+		
+		<ProjectReference Include="..\UnpakSipaksi.Modules.KewajaranTahapanTarget.PublicApi\UnpakSipaksi.Modules.KewajaranTahapanTarget.PublicApi.csproj" />
+		
+		<ProjectReference Include="..\UnpakSipaksi.Modules.KredibilitasMitraDukungan.PublicApi\UnpakSipaksi.Modules.KredibilitasMitraDukungan.PublicApi.csproj" />
+		
+		<ProjectReference Include="..\UnpakSipaksi.Modules.KualitasIpteks.PublicApi\UnpakSipaksi.Modules.KualitasIpteks.PublicApi.csproj" />
+		
+		<ProjectReference Include="..\UnpakSipaksi.Modules.KualitasKuantitasPublikasiJurnalIlmiah.PubliApi\UnpakSipaksi.Modules.KualitasKuantitasPublikasiJurnalIlmiah.PubliApi.csproj" />
+		
+		<ProjectReference Include="..\UnpakSipaksi.Modules.KualitasKuantitasPublikasiProsiding.PublicApi\UnpakSipaksi.Modules.KualitasKuantitasPublikasiProsiding.PublicApi.csproj" />
+		
+		<ProjectReference Include="..\UnpakSipaksi.Modules.KuantitasStatusKi.PublicApi\UnpakSipaksi.Modules.KuantitasStatusKi.PublicApi.csproj" />
+		
+		<ProjectReference Include="..\UnpakSipaksi.Modules.LuaranArtikel.PublicApi\UnpakSipaksi.Modules.LuaranArtikel.PublicApi.csproj" />
+		
+		<ProjectReference Include="..\UnpakSipaksi.Modules.MetodeRencanaKegiatan.PublicApi\UnpakSipaksi.Modules.MetodeRencanaKegiatan.PublicApi.csproj" />
+		
+		<ProjectReference Include="..\UnpakSipaksi.Modules.ModelFeasibilityStudys.PublicApi\UnpakSipaksi.Modules.ModelFeasibilityStudys.PublicApi.csproj" />
+		
+		<ProjectReference Include="..\UnpakSipaksi.Modules.PeningkatanKeberdayaanMitra.PublicApi\UnpakSipaksi.Modules.PeningkatanKeberdayaanMitra.PublicApi.csproj" />
+		
+		<ProjectReference Include="..\UnpakSipaksi.Modules.PotensiKetercapaianLuaranDijanjikan.PublicApi\UnpakSipaksi.Modules.PotensiKetercapaianLuaranDijanjikan.PublicApi.csproj" />
+		
+		<ProjectReference Include="..\UnpakSipaksi.Modules.PublikasiDisitasiProposal.PublicApi\UnpakSipaksi.Modules.PublikasiDisitasiProposal.PublicApi.csproj" />
+		
+		<ProjectReference Include="..\UnpakSipaksi.Modules.RelevansiKepakaranTemaProposal.PublicApi\UnpakSipaksi.Modules.RelevansiKepakaranTemaProposal.PublicApi.csproj" />
+		
+		<ProjectReference Include="..\UnpakSipaksi.Modules.RelevansiKualitasReferensi.PublicApi\UnpakSipaksi.Modules.RelevansiKualitasReferensi.PublicApi.csproj" />
+		
+		<ProjectReference Include="..\UnpakSipaksi.Modules.RelevansiProdukKepentinganNasional.PublicApi\UnpakSipaksi.Modules.RelevansiProdukKepentinganNasional.PublicApi.csproj" />
+		
+		<ProjectReference Include="..\UnpakSipaksi.Modules.RoadmapPenelitian.PublicApi\UnpakSipaksi.Modules.RoadmapPenelitian.PublicApi.csproj" />
+		
+		<ProjectReference Include="..\UnpakSipaksi.Modules.RumusanPrioritasMitra.PublicApi\UnpakSipaksi.Modules.RumusanPrioritasMitra.PublicApi.csproj" />
+		
+		<ProjectReference Include="..\UnpakSipaksi.Modules.SotaKebaharuan.PublicApi\UnpakSipaksi.Modules.SotaKebaharuan.PublicApi.csproj" />
+		
+		<ProjectReference Include="..\UnpakSipaksi.Modules.VideoKegiatan.PublicApi\UnpakSipaksi.Modules.VideoKegiatan.PublicApi.csproj" />
+	</ItemGroup>
+
+</Project>

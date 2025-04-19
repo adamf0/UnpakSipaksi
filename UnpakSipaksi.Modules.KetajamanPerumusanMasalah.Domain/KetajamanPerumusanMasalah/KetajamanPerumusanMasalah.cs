@@ -26,10 +26,6 @@ namespace UnpakSipaksi.Modules.KetajamanPerumusanMasalah.Domain.KetajamanPerumus
 
         public static Result<KetajamanPerumusanMasalah> Create(
         string Nama,
-        int BobotPDP,
-        int BobotTerapan,
-        int BobotKerjasama,
-        int BobotPenelitianDasar,
         int Skor
         )
         {
@@ -37,10 +33,6 @@ namespace UnpakSipaksi.Modules.KetajamanPerumusanMasalah.Domain.KetajamanPerumus
             {
                 Uuid = Guid.NewGuid(),
                 Nama = Nama,
-                BobotPDP = BobotPDP,
-                BobotTerapan = BobotTerapan,
-                BobotKerjasama = BobotKerjasama,
-                BobotPenelitianDasar = BobotPenelitianDasar,
                 Skor = Skor,
             };
 

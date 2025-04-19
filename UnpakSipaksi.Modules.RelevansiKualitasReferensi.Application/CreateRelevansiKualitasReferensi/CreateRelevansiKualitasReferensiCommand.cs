@@ -4,10 +4,6 @@ namespace UnpakSipaksi.Modules.RelevansiKualitasReferensi.Application.CreateRele
 {
     public sealed record CreateRelevansiKualitasReferensiCommand(
         string Nama,
-        int BobotPDP,
-        int BobotTerapan,
-        int BobotKerjasama,
-        int BobotPenelitianDasar,
         int Skor
     ) : ICommand<Guid>;
 }

@@ -12,9 +12,9 @@ C:\dev_net\UnpakSipaksi\UnpakSipaksi.Modules.KelompokMitra.Application\obj\Debug
 C:\dev_net\UnpakSipaksi\UnpakSipaksi.Modules.KelompokMitra.Application\obj\Debug\net8.0\UnpakSipaksi.Modules.KelompokMitra.Application.AssemblyInfoInputs.cache
 C:\dev_net\UnpakSipaksi\UnpakSipaksi.Modules.KelompokMitra.Application\obj\Debug\net8.0\UnpakSipaksi.Modules.KelompokMitra.Application.AssemblyInfo.cs
 C:\dev_net\UnpakSipaksi\UnpakSipaksi.Modules.KelompokMitra.Application\obj\Debug\net8.0\UnpakSipaksi.Modules.KelompokMitra.Application.csproj.CoreCompileInputs.cache
+C:\dev_net\UnpakSipaksi\UnpakSipaksi.Modules.KelompokMitra.Application\obj\Debug\net8.0\UnpakSipaksi.Modules.KelompokMitra.Application.sourcelink.json
 C:\dev_net\UnpakSipaksi\UnpakSipaksi.Modules.KelompokMitra.Application\obj\Debug\net8.0\UnpakSip.84D03122.Up2Date
 C:\dev_net\UnpakSipaksi\UnpakSipaksi.Modules.KelompokMitra.Application\obj\Debug\net8.0\UnpakSipaksi.Modules.KelompokMitra.Application.dll
 C:\dev_net\UnpakSipaksi\UnpakSipaksi.Modules.KelompokMitra.Application\obj\Debug\net8.0\refint\UnpakSipaksi.Modules.KelompokMitra.Application.dll
 C:\dev_net\UnpakSipaksi\UnpakSipaksi.Modules.KelompokMitra.Application\obj\Debug\net8.0\UnpakSipaksi.Modules.KelompokMitra.Application.pdb
 C:\dev_net\UnpakSipaksi\UnpakSipaksi.Modules.KelompokMitra.Application\obj\Debug\net8.0\ref\UnpakSipaksi.Modules.KelompokMitra.Application.dll
-C:\dev_net\UnpakSipaksi\UnpakSipaksi.Modules.KelompokMitra.Application\obj\Debug\net8.0\UnpakSipaksi.Modules.KelompokMitra.Application.sourcelink.json

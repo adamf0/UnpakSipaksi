@@ -20,9 +20,9 @@ C:\dev_net\UnpakSipaksi\UnpakSipaksi.Modules.KategoriSumberDana.Infrastructure\o
 C:\dev_net\UnpakSipaksi\UnpakSipaksi.Modules.KategoriSumberDana.Infrastructure\obj\Debug\net8.0\UnpakSipaksi.Modules.KategoriSumberDana.Infrastructure.AssemblyInfoInputs.cache
 C:\dev_net\UnpakSipaksi\UnpakSipaksi.Modules.KategoriSumberDana.Infrastructure\obj\Debug\net8.0\UnpakSipaksi.Modules.KategoriSumberDana.Infrastructure.AssemblyInfo.cs
 C:\dev_net\UnpakSipaksi\UnpakSipaksi.Modules.KategoriSumberDana.Infrastructure\obj\Debug\net8.0\UnpakSipaksi.Modules.KategoriSumberDana.Infrastructure.csproj.CoreCompileInputs.cache
+C:\dev_net\UnpakSipaksi\UnpakSipaksi.Modules.KategoriSumberDana.Infrastructure\obj\Debug\net8.0\UnpakSipaksi.Modules.KategoriSumberDana.Infrastructure.sourcelink.json
 C:\dev_net\UnpakSipaksi\UnpakSipaksi.Modules.KategoriSumberDana.Infrastructure\obj\Debug\net8.0\UnpakSip.A39E8D60.Up2Date
 C:\dev_net\UnpakSipaksi\UnpakSipaksi.Modules.KategoriSumberDana.Infrastructure\obj\Debug\net8.0\UnpakSipaksi.Modules.KategoriSumberDana.Infrastructure.dll
 C:\dev_net\UnpakSipaksi\UnpakSipaksi.Modules.KategoriSumberDana.Infrastructure\obj\Debug\net8.0\refint\UnpakSipaksi.Modules.KategoriSumberDana.Infrastructure.dll
 C:\dev_net\UnpakSipaksi\UnpakSipaksi.Modules.KategoriSumberDana.Infrastructure\obj\Debug\net8.0\UnpakSipaksi.Modules.KategoriSumberDana.Infrastructure.pdb
 C:\dev_net\UnpakSipaksi\UnpakSipaksi.Modules.KategoriSumberDana.Infrastructure\obj\Debug\net8.0\ref\UnpakSipaksi.Modules.KategoriSumberDana.Infrastructure.dll
-C:\dev_net\UnpakSipaksi\UnpakSipaksi.Modules.KategoriSumberDana.Infrastructure\obj\Debug\net8.0\UnpakSipaksi.Modules.KategoriSumberDana.Infrastructure.sourcelink.json

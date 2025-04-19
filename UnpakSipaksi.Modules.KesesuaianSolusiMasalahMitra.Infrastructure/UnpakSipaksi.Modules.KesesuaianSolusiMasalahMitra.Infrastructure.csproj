@@ -28,6 +28,7 @@
 		<ProjectReference Include="..\UnpakSipaksi.Modules.KesesuaianSolusiMasalahMitra.Domain\UnpakSipaksi.Modules.KesesuaianSolusiMasalahMitra.Domain.csproj" />
 		<ProjectReference Include="..\UnpakSipaksi.Modules.KesesuaianSolusiMasalahMitra.Presentation\UnpakSipaksi.Modules.KesesuaianSolusiMasalahMitra.Presentation.csproj" />
 		<ProjectReference Include="..\UnpakSipaksi.Modules.KesesuaianSolusiMasalahMitra.Domain\UnpakSipaksi.Modules.KesesuaianSolusiMasalahMitra.Domain.csproj" />
+		<ProjectReference Include="..\UnpakSipaksi.Modules.KesesuaianSolusiMasalahMitra.PublicApi\UnpakSipaksi.Modules.KesesuaianSolusiMasalahMitra.PublicApi.csproj" />
 	</ItemGroup>
 
 </Project>

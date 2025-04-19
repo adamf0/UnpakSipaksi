@@ -20,6 +20,10 @@ namespace UnpakSipaksi.Modules.KebaruanReferensi.Domain.KebaruanReferensi
         public Guid Uuid{ get; private set; }
         [Column("name")]
         public string Nama { get; private set; } = null!;
+        public int BobotPDP { get; private set; } = 0;
+        public int BobotTerapan { get; private set; } = 0;
+        public int BobotKerjasama { get; private set; } = 0;
+        public int BobotPenelitianDasar { get; private set; } = 0;
         public int Skor { get; private set; }
 
         public static KebaruanReferensiBuilder Update(KebaruanReferensi prev) => new KebaruanReferensiBuilder(prev);

@@ -4,10 +4,6 @@ namespace UnpakSipaksi.Modules.KredibilitasMitraDukungan.Application.CreateKredi
 {
     public sealed record CreateKredibilitasMitraDukunganCommand(
         string Nama,
-        int BobotPDP,
-        int BobotTerapan,
-        int BobotKerjasama,
-        int BobotPenelitianDasar,
         int Skor
     ) : ICommand<Guid>;
 }

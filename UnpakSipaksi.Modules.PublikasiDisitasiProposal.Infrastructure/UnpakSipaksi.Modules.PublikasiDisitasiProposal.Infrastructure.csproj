@@ -27,7 +27,7 @@
 		<ProjectReference Include="..\UnpakSipaksi.Modules.PublikasiDisitasiProposal.Application\UnpakSipaksi.Modules.PublikasiDisitasiProposal.Application.csproj" />
 		<ProjectReference Include="..\UnpakSipaksi.Modules.PublikasiDisitasiProposal.Domain\UnpakSipaksi.Modules.PublikasiDisitasiProposal.Domain.csproj" />
 		<ProjectReference Include="..\UnpakSipaksi.Modules.PublikasiDisitasiProposal.Presentation\UnpakSipaksi.Modules.PublikasiDisitasiProposal.Presentation.csproj" />
-		<ProjectReference Include="..\UnpakSipaksi.Modules.PublikasiDisitasiProposal.Domain\UnpakSipaksi.Modules.PublikasiDisitasiProposal.Domain.csproj" />
+		<ProjectReference Include="..\UnpakSipaksi.Modules.PublikasiDisitasiProposal.PublicApi\UnpakSipaksi.Modules.PublikasiDisitasiProposal.PublicApi.csproj" />
 	</ItemGroup>
 
 </Project>

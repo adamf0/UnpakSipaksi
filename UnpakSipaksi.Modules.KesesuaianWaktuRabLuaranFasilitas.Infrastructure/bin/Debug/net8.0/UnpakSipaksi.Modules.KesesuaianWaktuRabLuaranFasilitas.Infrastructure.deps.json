@@ -14,7 +14,8 @@
           "UnpakSipaksi.Common.Infrastructure": "1.0.0",
           "UnpakSipaksi.Modules.KesesuaianWaktuRabLuaranFasilitas.Application": "1.0.0",
           "UnpakSipaksi.Modules.KesesuaianWaktuRabLuaranFasilitas.Domain": "1.0.0",
-          "UnpakSipaksi.Modules.KesesuaianWaktuRabLuaranFasilitas.Presentation": "1.0.0"
+          "UnpakSipaksi.Modules.KesesuaianWaktuRabLuaranFasilitas.Presentation": "1.0.0",
+          "UnpakSipaksi.Modules.KesesuaianWaktuRabLuaranFasilitas.PublicApi": "1.0.0"
         },
         "runtime": {
           "UnpakSipaksi.Modules.KesesuaianWaktuRabLuaranFasilitas.Infrastructure.dll": {}
@@ -699,6 +700,11 @@
         "runtime": {
           "UnpakSipaksi.Modules.KesesuaianWaktuRabLuaranFasilitas.Presentation.dll": {}
         }
+      },
+      "UnpakSipaksi.Modules.KesesuaianWaktuRabLuaranFasilitas.PublicApi/1.0.0": {
+        "runtime": {
+          "UnpakSipaksi.Modules.KesesuaianWaktuRabLuaranFasilitas.PublicApi.dll": {}
+        }
       }
     }
   },
@@ -1215,6 +1221,11 @@
       "sha512": ""
     },
     "UnpakSipaksi.Modules.KesesuaianWaktuRabLuaranFasilitas.Presentation/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    },
+    "UnpakSipaksi.Modules.KesesuaianWaktuRabLuaranFasilitas.PublicApi/1.0.0": {
       "type": "project",
       "serviceable": false,
       "sha512": ""

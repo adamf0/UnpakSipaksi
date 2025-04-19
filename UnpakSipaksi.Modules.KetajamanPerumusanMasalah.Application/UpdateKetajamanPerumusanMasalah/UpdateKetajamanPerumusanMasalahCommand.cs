@@ -5,10 +5,6 @@ namespace UnpakSipaksi.Modules.KetajamanPerumusanMasalah.Application.UpdateKetaj
     public sealed record UpdateKetajamanPerumusanMasalahCommand(
         Guid Uuid,
         string Nama,
-        int BobotPDP,
-        int BobotTerapan,
-        int BobotKerjasama,
-        int BobotPenelitianDasar,
         int Skor
     ) : ICommand;
 }

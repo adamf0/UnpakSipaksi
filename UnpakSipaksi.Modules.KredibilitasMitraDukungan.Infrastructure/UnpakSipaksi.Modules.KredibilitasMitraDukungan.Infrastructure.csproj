@@ -28,6 +28,7 @@
 		<ProjectReference Include="..\UnpakSipaksi.Modules.KredibilitasMitraDukungan.Domain\UnpakSipaksi.Modules.KredibilitasMitraDukungan.Domain.csproj" />
 		<ProjectReference Include="..\UnpakSipaksi.Modules.KredibilitasMitraDukungan.Presentation\UnpakSipaksi.Modules.KredibilitasMitraDukungan.Presentation.csproj" />
 		<ProjectReference Include="..\UnpakSipaksi.Modules.KredibilitasMitraDukungan.Domain\UnpakSipaksi.Modules.KredibilitasMitraDukungan.Domain.csproj" />
+		<ProjectReference Include="..\UnpakSipaksi.Modules.KredibilitasMitraDukungan.PublicApi\UnpakSipaksi.Modules.KredibilitasMitraDukungan.PublicApi.csproj" />
 	</ItemGroup>
 
 </Project>

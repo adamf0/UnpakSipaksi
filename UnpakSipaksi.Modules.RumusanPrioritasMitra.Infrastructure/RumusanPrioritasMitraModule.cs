@@ -9,6 +9,8 @@ using UnpakSipaksi.Modules.RumusanPrioritasMitra.Application.Abstractions.Data;
 using UnpakSipaksi.Modules.RumusanPrioritasMitra.Infrastructure.RumusanPrioritasMitra;
 using UnpakSipaksi.Modules.RumusanPrioritasMitra.Infrastructure.Database;
 using UnpakSipaksi.Modules.RumusanPrioritasMitra.Presentation.RumusanPrioritasMitra;
+using UnpakSipaksi.Modules.RumusanPrioritasMitra.PublicApi;
+using UnpakSipaksi.Modules.RumusanPrioritasMitra.Infrastructure.PublicApi;
 
 namespace UnpakSipaksi.Modules.RumusanPrioritasMitra.Infrastructure
 {
@@ -38,6 +40,8 @@ namespace UnpakSipaksi.Modules.RumusanPrioritasMitra.Infrastructure
             services.AddDbContext<RumusanPrioritasMitraDbContext>(optionsBuilder => optionsBuilder.UseMySQL(databaseConnectionString));
 
             services.AddScoped<IRumusanPrioritasMitraRepository, RumusanPrioritasMitraRepository>();
+
+            services.AddScoped<IRumusanPrioritasMitraApi, RumusanPrioritasMitraApi>();
 
             services.AddScoped<IUnitOfWork>(sp => sp.GetRequiredService<RumusanPrioritasMitraDbContext>());
         }

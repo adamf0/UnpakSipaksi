@@ -28,6 +28,7 @@
 		<ProjectReference Include="..\UnpakSipaksi.Modules.KuantitasStatusKi.Domain\UnpakSipaksi.Modules.KuantitasStatusKi.Domain.csproj" />
 		<ProjectReference Include="..\UnpakSipaksi.Modules.KuantitasStatusKi.Presentation\UnpakSipaksi.Modules.KuantitasStatusKi.Presentation.csproj" />
 		<ProjectReference Include="..\UnpakSipaksi.Modules.KuantitasStatusKi.Domain\UnpakSipaksi.Modules.KuantitasStatusKi.Domain.csproj" />
+		<ProjectReference Include="..\UnpakSipaksi.Modules.KuantitasStatusKi.PublicApi\UnpakSipaksi.Modules.KuantitasStatusKi.PublicApi.csproj" />
 	</ItemGroup>
 
 </Project>

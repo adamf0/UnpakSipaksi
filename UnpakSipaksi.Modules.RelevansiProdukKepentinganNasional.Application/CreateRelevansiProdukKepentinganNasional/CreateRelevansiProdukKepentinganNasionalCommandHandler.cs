@@ -14,10 +14,6 @@ namespace UnpakSipaksi.Modules.RelevansiProdukKepentinganNasional.Application.Cr
         {
             Result<Domain.RelevansiProdukKepentinganNasional.RelevansiProdukKepentinganNasional> result = Domain.RelevansiProdukKepentinganNasional.RelevansiProdukKepentinganNasional.Create(
                 request.Nama,
-                request.BobotPDP,
-                request.BobotTerapan,
-                request.BobotKerjasama,
-                request.BobotPenelitianDasar,
                 request.Skor
             );
 

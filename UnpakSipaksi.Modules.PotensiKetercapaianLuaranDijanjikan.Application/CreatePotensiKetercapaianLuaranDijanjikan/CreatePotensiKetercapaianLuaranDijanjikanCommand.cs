@@ -4,10 +4,6 @@ namespace UnpakSipaksi.Modules.PotensiKetercapaianLuaranDijanjikan.Application.C
 {
     public sealed record CreatePotensiKetercapaianLuaranDijanjikanCommand(
         string Nama,
-        int BobotPDP,
-        int BobotTerapan,
-        int BobotKerjasama,
-        int BobotPenelitianDasar,
         int Skor
     ) : ICommand<Guid>;
 }

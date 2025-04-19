@@ -4,9 +4,7 @@ using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Routing;
 using UnpakSipaksi.Common.Domain;
 using UnpakSipaksi.Common.Presentation.ApiResults;
-using UnpakSipaksi.Modules.KewajaranTahapanTarget.Application.DeleteKetajamanAnalisis;
 using UnpakSipaksi.Modules.KewajaranTahapanTarget.Application.DeleteKewajaranTahapanTarget;
-using UnpakSipaksi.Modules.KewajaranTahapanTarget.Presentation;
 
 namespace UnpakSipaksi.Modules.KewajaranTahapanTarget.Presentation.KewajaranTahapanTarget
 {

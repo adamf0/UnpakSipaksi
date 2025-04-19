@@ -5,10 +5,13 @@ namespace UnpakSipaksi.Modules.RumusanPrioritasMitra.Domain.RumusanPrioritasMitr
     public static class RumusanPrioritasMitraErrors
     {
         public static Error EmptyData() =>
-            Error.NotFound("RumusanPrioritasMitra.EmptyData", $"data is not found");
-
+            Error.NotFound("RumusanPrioritasMitra.EmptyData", "data is not found");
+        public static Error NotSameValue() =>
+            Error.NotFound("RumusanPrioritasMitra.NotSameValue", "not the same value in data 'nilai'");
+        public static Error UnknownKategoriSkema() =>
+            Error.NotFound("RumusanPrioritasMitra.UnknownKategoriSkema", "Unknown schema category");
         public static Error NotFound(Guid Id) =>
-            Error.NotFound("RumusanPrioritasMitra.NotFound", $"The event with the identifier {Id} was not found");
+            Error.NotFound("RumusanPrioritasMitra.NotFound", $"Rumusan prioritas mitra with the identifier {Id} was not found");
 
     }
 }

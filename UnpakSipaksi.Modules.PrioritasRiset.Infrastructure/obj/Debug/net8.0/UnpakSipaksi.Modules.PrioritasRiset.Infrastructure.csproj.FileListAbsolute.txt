@@ -1,9 +1,3 @@
-C:\dev_net\UnpakSipaksi\UnpakSipaksi.Modules.PrioritasRiset.Infrastructure\obj\Debug\net8.0\UnpakSipaksi.Modules.PrioritasRiset.Infrastructure.csproj.AssemblyReference.cache
-C:\dev_net\UnpakSipaksi\UnpakSipaksi.Modules.PrioritasRiset.Infrastructure\obj\Debug\net8.0\UnpakSipaksi.Modules.PrioritasRiset.Infrastructure.GeneratedMSBuildEditorConfig.editorconfig
-C:\dev_net\UnpakSipaksi\UnpakSipaksi.Modules.PrioritasRiset.Infrastructure\obj\Debug\net8.0\UnpakSipaksi.Modules.PrioritasRiset.Infrastructure.AssemblyInfoInputs.cache
-C:\dev_net\UnpakSipaksi\UnpakSipaksi.Modules.PrioritasRiset.Infrastructure\obj\Debug\net8.0\UnpakSipaksi.Modules.PrioritasRiset.Infrastructure.AssemblyInfo.cs
-C:\dev_net\UnpakSipaksi\UnpakSipaksi.Modules.PrioritasRiset.Infrastructure\obj\Debug\net8.0\UnpakSipaksi.Modules.PrioritasRiset.Infrastructure.csproj.CoreCompileInputs.cache
-C:\dev_net\UnpakSipaksi\UnpakSipaksi.Modules.PrioritasRiset.Infrastructure\obj\Debug\net8.0\UnpakSipaksi.Modules.PrioritasRiset.Infrastructure.sourcelink.json
 C:\dev_net\UnpakSipaksi\UnpakSipaksi.Modules.PrioritasRiset.Infrastructure\bin\Debug\net8.0\UnpakSipaksi.Modules.PrioritasRiset.Infrastructure.deps.json
 C:\dev_net\UnpakSipaksi\UnpakSipaksi.Modules.PrioritasRiset.Infrastructure\bin\Debug\net8.0\UnpakSipaksi.Modules.PrioritasRiset.Infrastructure.dll
 C:\dev_net\UnpakSipaksi\UnpakSipaksi.Modules.PrioritasRiset.Infrastructure\bin\Debug\net8.0\UnpakSipaksi.Modules.PrioritasRiset.Infrastructure.pdb
@@ -21,6 +15,12 @@ C:\dev_net\UnpakSipaksi\UnpakSipaksi.Modules.PrioritasRiset.Infrastructure\bin\D
 C:\dev_net\UnpakSipaksi\UnpakSipaksi.Modules.PrioritasRiset.Infrastructure\bin\Debug\net8.0\UnpakSipaksi.Modules.PrioritasRiset.Presentation.pdb
 C:\dev_net\UnpakSipaksi\UnpakSipaksi.Modules.PrioritasRiset.Infrastructure\bin\Debug\net8.0\UnpakSipaksi.Common.Domain.pdb
 C:\dev_net\UnpakSipaksi\UnpakSipaksi.Modules.PrioritasRiset.Infrastructure\bin\Debug\net8.0\UnpakSipaksi.Common.Presentation.pdb
+C:\dev_net\UnpakSipaksi\UnpakSipaksi.Modules.PrioritasRiset.Infrastructure\obj\Debug\net8.0\UnpakSipaksi.Modules.PrioritasRiset.Infrastructure.csproj.AssemblyReference.cache
+C:\dev_net\UnpakSipaksi\UnpakSipaksi.Modules.PrioritasRiset.Infrastructure\obj\Debug\net8.0\UnpakSipaksi.Modules.PrioritasRiset.Infrastructure.GeneratedMSBuildEditorConfig.editorconfig
+C:\dev_net\UnpakSipaksi\UnpakSipaksi.Modules.PrioritasRiset.Infrastructure\obj\Debug\net8.0\UnpakSipaksi.Modules.PrioritasRiset.Infrastructure.AssemblyInfoInputs.cache
+C:\dev_net\UnpakSipaksi\UnpakSipaksi.Modules.PrioritasRiset.Infrastructure\obj\Debug\net8.0\UnpakSipaksi.Modules.PrioritasRiset.Infrastructure.AssemblyInfo.cs
+C:\dev_net\UnpakSipaksi\UnpakSipaksi.Modules.PrioritasRiset.Infrastructure\obj\Debug\net8.0\UnpakSipaksi.Modules.PrioritasRiset.Infrastructure.csproj.CoreCompileInputs.cache
+C:\dev_net\UnpakSipaksi\UnpakSipaksi.Modules.PrioritasRiset.Infrastructure\obj\Debug\net8.0\UnpakSipaksi.Modules.PrioritasRiset.Infrastructure.sourcelink.json
 C:\dev_net\UnpakSipaksi\UnpakSipaksi.Modules.PrioritasRiset.Infrastructure\obj\Debug\net8.0\UnpakSip.C1E8C6A4.Up2Date
 C:\dev_net\UnpakSipaksi\UnpakSipaksi.Modules.PrioritasRiset.Infrastructure\obj\Debug\net8.0\UnpakSipaksi.Modules.PrioritasRiset.Infrastructure.dll
 C:\dev_net\UnpakSipaksi\UnpakSipaksi.Modules.PrioritasRiset.Infrastructure\obj\Debug\net8.0\refint\UnpakSipaksi.Modules.PrioritasRiset.Infrastructure.dll

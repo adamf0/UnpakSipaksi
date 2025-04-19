@@ -1,0 +1,34 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+	<PropertyGroup>
+		<TargetFramework>net8.0</TargetFramework>
+		<ImplicitUsings>enable</ImplicitUsings>
+		<Nullable>enable</Nullable>
+	</PropertyGroup>
+
+	<Target Name="DisableNullableForVisualStudioBuild" BeforeTargets="CoreCompile" Condition="'$(BuildingInsideVisualStudio)' == 'True' And '$(BuildingProject)' == 'True' And '$(Configuration)' == 'Debug'">
+		<PropertyGroup>
+			<Nullable>disable</Nullable>
+		</PropertyGroup>
+	</Target>
+
+	<ItemGroup>
+		<PackageReference Include="Dapper" Version="2.1.35" />
+		<PackageReference Include="MediatR" Version="12.4.1" />
+	</ItemGroup>
+
+	<ItemGroup>
+		<ProjectReference Include="..\UnpakSipaksi.Common.Application\UnpakSipaksi.Common.Application.csproj" />
+		<ProjectReference Include="..\UnpakSipaksi.Common.Domain\UnpakSipaksi.Common.Domain.csproj" />
+		
+		<ProjectReference Include="..\UnpakSipaksi.Modules.AkurasiPenelitian.PublicApi\UnpakSipaksi.Modules.AkurasiPenelitian.PublicApi.csproj" />
+		<ProjectReference Include="..\UnpakSipaksi.Modules.KejelasanPembagianTugasTim.PublicApi\UnpakSipaksi.Modules.KejelasanPembagianTugasTim.PublicApi.csproj" />
+		<ProjectReference Include="..\UnpakSipaksi.Modules.KesesuaianTkt.PublicApi\UnpakSipaksi.Modules.KesesuaianTkt.PublicApi.csproj" />
+		<ProjectReference Include="..\UnpakSipaksi.Modules.KesesuaianWaktuRabLuaranFasilitas.PublicApi\UnpakSipaksi.Modules.KesesuaianWaktuRabLuaranFasilitas.PublicApi.csproj" />
+		<ProjectReference Include="..\UnpakSipaksi.Modules.KredibilitasMitraDukungan.PublicApi\UnpakSipaksi.Modules.KredibilitasMitraDukungan.PublicApi.csproj" />
+		<ProjectReference Include="..\UnpakSipaksi.Modules.Metode.Domain\UnpakSipaksi.Modules.Metode.Domain.csproj" />
+		<ProjectReference Include="..\UnpakSipaksi.Modules.ModelFeasibilityStudys.PublicApi\UnpakSipaksi.Modules.ModelFeasibilityStudys.PublicApi.csproj" />
+		<ProjectReference Include="..\UnpakSipaksi.Modules.PotensiKetercapaianLuaranDijanjikan.PublicApi\UnpakSipaksi.Modules.PotensiKetercapaianLuaranDijanjikan.PublicApi.csproj" />
+	</ItemGroup>
+
+</Project>

@@ -8,11 +8,13 @@ C:\dev_net\UnpakSipaksi\UnpakSipaksi.Modules.KetajamanAnalisis.Infrastructure\bi
 C:\dev_net\UnpakSipaksi\UnpakSipaksi.Modules.KetajamanAnalisis.Infrastructure\bin\Debug\net8.0\UnpakSipaksi.Modules.KetajamanAnalisis.Application.dll
 C:\dev_net\UnpakSipaksi\UnpakSipaksi.Modules.KetajamanAnalisis.Infrastructure\bin\Debug\net8.0\UnpakSipaksi.Modules.KetajamanAnalisis.Domain.dll
 C:\dev_net\UnpakSipaksi\UnpakSipaksi.Modules.KetajamanAnalisis.Infrastructure\bin\Debug\net8.0\UnpakSipaksi.Modules.KetajamanAnalisis.Presentation.dll
+C:\dev_net\UnpakSipaksi\UnpakSipaksi.Modules.KetajamanAnalisis.Infrastructure\bin\Debug\net8.0\UnpakSipaksi.Modules.KetajamanAnalisis.PublicApi.dll
 C:\dev_net\UnpakSipaksi\UnpakSipaksi.Modules.KetajamanAnalisis.Infrastructure\bin\Debug\net8.0\UnpakSipaksi.Common.Application.pdb
 C:\dev_net\UnpakSipaksi\UnpakSipaksi.Modules.KetajamanAnalisis.Infrastructure\bin\Debug\net8.0\UnpakSipaksi.Common.Infrastructure.pdb
 C:\dev_net\UnpakSipaksi\UnpakSipaksi.Modules.KetajamanAnalisis.Infrastructure\bin\Debug\net8.0\UnpakSipaksi.Modules.KetajamanAnalisis.Application.pdb
 C:\dev_net\UnpakSipaksi\UnpakSipaksi.Modules.KetajamanAnalisis.Infrastructure\bin\Debug\net8.0\UnpakSipaksi.Modules.KetajamanAnalisis.Domain.pdb
 C:\dev_net\UnpakSipaksi\UnpakSipaksi.Modules.KetajamanAnalisis.Infrastructure\bin\Debug\net8.0\UnpakSipaksi.Modules.KetajamanAnalisis.Presentation.pdb
+C:\dev_net\UnpakSipaksi\UnpakSipaksi.Modules.KetajamanAnalisis.Infrastructure\bin\Debug\net8.0\UnpakSipaksi.Modules.KetajamanAnalisis.PublicApi.pdb
 C:\dev_net\UnpakSipaksi\UnpakSipaksi.Modules.KetajamanAnalisis.Infrastructure\bin\Debug\net8.0\UnpakSipaksi.Common.Domain.pdb
 C:\dev_net\UnpakSipaksi\UnpakSipaksi.Modules.KetajamanAnalisis.Infrastructure\bin\Debug\net8.0\UnpakSipaksi.Common.Presentation.pdb
 C:\dev_net\UnpakSipaksi\UnpakSipaksi.Modules.KetajamanAnalisis.Infrastructure\obj\Debug\net8.0\UnpakSipaksi.Modules.KetajamanAnalisis.Infrastructure.csproj.AssemblyReference.cache

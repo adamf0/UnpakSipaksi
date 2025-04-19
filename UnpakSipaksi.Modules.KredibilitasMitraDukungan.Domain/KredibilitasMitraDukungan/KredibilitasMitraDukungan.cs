@@ -26,10 +26,6 @@ namespace UnpakSipaksi.Modules.KredibilitasMitraDukungan.Domain.KredibilitasMitr
 
         public static Result<KredibilitasMitraDukungan> Create(
         string Nama,
-        int BobotPDP,
-        int BobotTerapan,
-        int BobotKerjasama,
-        int BobotPenelitianDasar,
         int Skor
         )
         {
@@ -37,10 +33,6 @@ namespace UnpakSipaksi.Modules.KredibilitasMitraDukungan.Domain.KredibilitasMitr
             {
                 Uuid = Guid.NewGuid(),
                 Nama = Nama,
-                BobotPDP = BobotPDP,
-                BobotTerapan = BobotTerapan,
-                BobotKerjasama = BobotKerjasama,
-                BobotPenelitianDasar = BobotPenelitianDasar,
                 Skor = Skor,
             };
 

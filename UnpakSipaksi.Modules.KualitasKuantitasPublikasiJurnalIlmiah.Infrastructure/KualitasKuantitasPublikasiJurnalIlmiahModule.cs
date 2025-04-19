@@ -8,7 +8,9 @@ using UnpakSipaksi.Modules.KualitasKuantitasPublikasiJurnalIlmiah.Application.Ab
 using UnpakSipaksi.Modules.KualitasKuantitasPublikasiJurnalIlmiah.Domain.KualitasKuantitasPublikasiJurnalIlmiah;
 using UnpakSipaksi.Modules.KualitasKuantitasPublikasiJurnalIlmiah.Infrastructure.Database;
 using UnpakSipaksi.Modules.KualitasKuantitasPublikasiJurnalIlmiah.Infrastructure.KualitasKuantitasPublikasiJurnalIlmiah;
+using UnpakSipaksi.Modules.KualitasKuantitasPublikasiJurnalIlmiah.Infrastructure.PublicApi;
 using UnpakSipaksi.Modules.KualitasKuantitasPublikasiJurnalIlmiah.Presentation.KualitasKuantitasPublikasiJurnalIlmiah;
+using UnpakSipaksi.Modules.KualitasKuantitasPublikasiJurnalIlmiah.PubliApi;
 
 namespace UnpakSipaksi.Modules.KualitasKuantitasPublikasiJurnalIlmiah.Infrastructure
 {
@@ -38,6 +40,8 @@ namespace UnpakSipaksi.Modules.KualitasKuantitasPublikasiJurnalIlmiah.Infrastruc
             services.AddDbContext<KualitasKuantitasPublikasiJurnalIlmiahDbContext>(optionsBuilder => optionsBuilder.UseMySQL(databaseConnectionString));
 
             services.AddScoped<IKualitasKuantitasPublikasiJurnalIlmiahRepository, KualitasKuantitasPublikasiJurnalIlmiahRepository>();
+
+            services.AddScoped<IKualitasKuantitasPublikasiJurnalIlmiahApi, KualitasKuantitasPublikasiJurnalIlmiahApi>();
 
             services.AddScoped<IUnitOfWork>(sp => sp.GetRequiredService<KualitasKuantitasPublikasiJurnalIlmiahDbContext>());
         }

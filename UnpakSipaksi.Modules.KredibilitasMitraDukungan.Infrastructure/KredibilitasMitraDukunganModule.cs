@@ -9,6 +9,8 @@ using UnpakSipaksi.Modules.KredibilitasMitraDukungan.Application.Abstractions.Da
 using UnpakSipaksi.Modules.KredibilitasMitraDukungan.Infrastructure.KredibilitasMitraDukungan;
 using UnpakSipaksi.Modules.KredibilitasMitraDukungan.Infrastructure.Database;
 using UnpakSipaksi.Modules.KredibilitasMitraDukungan.Presentation.KredibilitasMitraDukungan;
+using UnpakSipaksi.Modules.KredibilitasMitraDukungan.PublicApi;
+using UnpakSipaksi.Modules.KredibilitasMitraDukungan.Infrastructure.PublicApi;
 
 namespace UnpakSipaksi.Modules.KredibilitasMitraDukungan.Infrastructure
 {
@@ -38,6 +40,8 @@ namespace UnpakSipaksi.Modules.KredibilitasMitraDukungan.Infrastructure
             services.AddDbContext<KredibilitasMitraDukunganDbContext>(optionsBuilder => optionsBuilder.UseMySQL(databaseConnectionString));
 
             services.AddScoped<IKredibilitasMitraDukunganRepository, KredibilitasMitraDukunganRepository>();
+
+            services.AddScoped<IKredibilitasMitraDukunganApi, KredibilitasMitraDukunganApi>();
 
             services.AddScoped<IUnitOfWork>(sp => sp.GetRequiredService<KredibilitasMitraDukunganDbContext>());
         }

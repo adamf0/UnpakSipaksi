@@ -8,11 +8,13 @@ C:\dev_net\UnpakSipaksi\UnpakSipaksi.Modules.KetajamanPerumusanMasalah.Infrastru
 C:\dev_net\UnpakSipaksi\UnpakSipaksi.Modules.KetajamanPerumusanMasalah.Infrastructure\bin\Debug\net8.0\UnpakSipaksi.Modules.KetajamanPerumusanMasalah.Application.dll
 C:\dev_net\UnpakSipaksi\UnpakSipaksi.Modules.KetajamanPerumusanMasalah.Infrastructure\bin\Debug\net8.0\UnpakSipaksi.Modules.KetajamanPerumusanMasalah.Domain.dll
 C:\dev_net\UnpakSipaksi\UnpakSipaksi.Modules.KetajamanPerumusanMasalah.Infrastructure\bin\Debug\net8.0\UnpakSipaksi.Modules.KetajamanPerumusanMasalah.Presentation.dll
+C:\dev_net\UnpakSipaksi\UnpakSipaksi.Modules.KetajamanPerumusanMasalah.Infrastructure\bin\Debug\net8.0\UnpakSipaksi.Modules.KetajamanPerumusanMasalah.PublicApi.dll
 C:\dev_net\UnpakSipaksi\UnpakSipaksi.Modules.KetajamanPerumusanMasalah.Infrastructure\bin\Debug\net8.0\UnpakSipaksi.Common.Application.pdb
 C:\dev_net\UnpakSipaksi\UnpakSipaksi.Modules.KetajamanPerumusanMasalah.Infrastructure\bin\Debug\net8.0\UnpakSipaksi.Common.Infrastructure.pdb
 C:\dev_net\UnpakSipaksi\UnpakSipaksi.Modules.KetajamanPerumusanMasalah.Infrastructure\bin\Debug\net8.0\UnpakSipaksi.Modules.KetajamanPerumusanMasalah.Application.pdb
 C:\dev_net\UnpakSipaksi\UnpakSipaksi.Modules.KetajamanPerumusanMasalah.Infrastructure\bin\Debug\net8.0\UnpakSipaksi.Modules.KetajamanPerumusanMasalah.Domain.pdb
 C:\dev_net\UnpakSipaksi\UnpakSipaksi.Modules.KetajamanPerumusanMasalah.Infrastructure\bin\Debug\net8.0\UnpakSipaksi.Modules.KetajamanPerumusanMasalah.Presentation.pdb
+C:\dev_net\UnpakSipaksi\UnpakSipaksi.Modules.KetajamanPerumusanMasalah.Infrastructure\bin\Debug\net8.0\UnpakSipaksi.Modules.KetajamanPerumusanMasalah.PublicApi.pdb
 C:\dev_net\UnpakSipaksi\UnpakSipaksi.Modules.KetajamanPerumusanMasalah.Infrastructure\bin\Debug\net8.0\UnpakSipaksi.Common.Domain.pdb
 C:\dev_net\UnpakSipaksi\UnpakSipaksi.Modules.KetajamanPerumusanMasalah.Infrastructure\bin\Debug\net8.0\UnpakSipaksi.Common.Presentation.pdb
 C:\dev_net\UnpakSipaksi\UnpakSipaksi.Modules.KetajamanPerumusanMasalah.Infrastructure\obj\Debug\net8.0\UnpakSipaksi.Modules.KetajamanPerumusanMasalah.Infrastructure.csproj.AssemblyReference.cache

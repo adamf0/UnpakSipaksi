@@ -1,8 +1,3 @@
-C:\dev_net\UnpakSipaksi\UnpakSipaksi.Modules.AkurasiPenelitian.Presentation\obj\Debug\net8.0\UnpakSipaksi.Modules.AkurasiPenelitian.Presentation.csproj.AssemblyReference.cache
-C:\dev_net\UnpakSipaksi\UnpakSipaksi.Modules.AkurasiPenelitian.Presentation\obj\Debug\net8.0\UnpakSipaksi.Modules.AkurasiPenelitian.Presentation.GeneratedMSBuildEditorConfig.editorconfig
-C:\dev_net\UnpakSipaksi\UnpakSipaksi.Modules.AkurasiPenelitian.Presentation\obj\Debug\net8.0\UnpakSipaksi.Modules.AkurasiPenelitian.Presentation.AssemblyInfoInputs.cache
-C:\dev_net\UnpakSipaksi\UnpakSipaksi.Modules.AkurasiPenelitian.Presentation\obj\Debug\net8.0\UnpakSipaksi.Modules.AkurasiPenelitian.Presentation.AssemblyInfo.cs
-C:\dev_net\UnpakSipaksi\UnpakSipaksi.Modules.AkurasiPenelitian.Presentation\obj\Debug\net8.0\UnpakSipaksi.Modules.AkurasiPenelitian.Presentation.csproj.CoreCompileInputs.cache
 C:\dev_net\UnpakSipaksi\UnpakSipaksi.Modules.AkurasiPenelitian.Presentation\bin\Debug\net8.0\UnpakSipaksi.Modules.AkurasiPenelitian.Presentation.deps.json
 C:\dev_net\UnpakSipaksi\UnpakSipaksi.Modules.AkurasiPenelitian.Presentation\bin\Debug\net8.0\UnpakSipaksi.Modules.AkurasiPenelitian.Presentation.dll
 C:\dev_net\UnpakSipaksi\UnpakSipaksi.Modules.AkurasiPenelitian.Presentation\bin\Debug\net8.0\UnpakSipaksi.Modules.AkurasiPenelitian.Presentation.pdb
@@ -16,9 +11,14 @@ C:\dev_net\UnpakSipaksi\UnpakSipaksi.Modules.AkurasiPenelitian.Presentation\bin\
 C:\dev_net\UnpakSipaksi\UnpakSipaksi.Modules.AkurasiPenelitian.Presentation\bin\Debug\net8.0\UnpakSipaksi.Modules.AkurasiPenelitian.Application.pdb
 C:\dev_net\UnpakSipaksi\UnpakSipaksi.Modules.AkurasiPenelitian.Presentation\bin\Debug\net8.0\UnpakSipaksi.Common.Application.pdb
 C:\dev_net\UnpakSipaksi\UnpakSipaksi.Modules.AkurasiPenelitian.Presentation\bin\Debug\net8.0\UnpakSipaksi.Modules.AkurasiPenelitian.Domain.pdb
+C:\dev_net\UnpakSipaksi\UnpakSipaksi.Modules.AkurasiPenelitian.Presentation\obj\Debug\net8.0\UnpakSipaksi.Modules.AkurasiPenelitian.Presentation.csproj.AssemblyReference.cache
+C:\dev_net\UnpakSipaksi\UnpakSipaksi.Modules.AkurasiPenelitian.Presentation\obj\Debug\net8.0\UnpakSipaksi.Modules.AkurasiPenelitian.Presentation.GeneratedMSBuildEditorConfig.editorconfig
+C:\dev_net\UnpakSipaksi\UnpakSipaksi.Modules.AkurasiPenelitian.Presentation\obj\Debug\net8.0\UnpakSipaksi.Modules.AkurasiPenelitian.Presentation.AssemblyInfoInputs.cache
+C:\dev_net\UnpakSipaksi\UnpakSipaksi.Modules.AkurasiPenelitian.Presentation\obj\Debug\net8.0\UnpakSipaksi.Modules.AkurasiPenelitian.Presentation.AssemblyInfo.cs
+C:\dev_net\UnpakSipaksi\UnpakSipaksi.Modules.AkurasiPenelitian.Presentation\obj\Debug\net8.0\UnpakSipaksi.Modules.AkurasiPenelitian.Presentation.csproj.CoreCompileInputs.cache
+C:\dev_net\UnpakSipaksi\UnpakSipaksi.Modules.AkurasiPenelitian.Presentation\obj\Debug\net8.0\UnpakSipaksi.Modules.AkurasiPenelitian.Presentation.sourcelink.json
 C:\dev_net\UnpakSipaksi\UnpakSipaksi.Modules.AkurasiPenelitian.Presentation\obj\Debug\net8.0\UnpakSip.F1D645B2.Up2Date
 C:\dev_net\UnpakSipaksi\UnpakSipaksi.Modules.AkurasiPenelitian.Presentation\obj\Debug\net8.0\UnpakSipaksi.Modules.AkurasiPenelitian.Presentation.dll
 C:\dev_net\UnpakSipaksi\UnpakSipaksi.Modules.AkurasiPenelitian.Presentation\obj\Debug\net8.0\refint\UnpakSipaksi.Modules.AkurasiPenelitian.Presentation.dll
 C:\dev_net\UnpakSipaksi\UnpakSipaksi.Modules.AkurasiPenelitian.Presentation\obj\Debug\net8.0\UnpakSipaksi.Modules.AkurasiPenelitian.Presentation.pdb
 C:\dev_net\UnpakSipaksi\UnpakSipaksi.Modules.AkurasiPenelitian.Presentation\obj\Debug\net8.0\ref\UnpakSipaksi.Modules.AkurasiPenelitian.Presentation.dll
-C:\dev_net\UnpakSipaksi\UnpakSipaksi.Modules.AkurasiPenelitian.Presentation\obj\Debug\net8.0\UnpakSipaksi.Modules.AkurasiPenelitian.Presentation.sourcelink.json

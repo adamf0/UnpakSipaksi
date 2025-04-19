@@ -9,6 +9,8 @@ using UnpakSipaksi.Modules.KetajamanAnalisis.Domain.KetajamanAnalisis;
 using UnpakSipaksi.Modules.KetajamanAnalisis.Infrastructure.KetajamanAnalisis;
 using UnpakSipaksi.Modules.KetajamanAnalisis.Infrastructure.Database;
 using UnpakSipaksi.Modules.KetajamanAnalisis.Presentation.KetajamanAnalisis;
+using UnpakSipaksi.Modules.KetajamanAnalisis.Infrastructure.PublicApi;
+using UnpakSipaksi.Modules.KetajamanAnalisis.PublicApi;
 
 namespace UnpakSipaksi.Modules.KetajamanAnalisis.Infrastructure
 {
@@ -38,6 +40,8 @@ namespace UnpakSipaksi.Modules.KetajamanAnalisis.Infrastructure
             services.AddDbContext<KetajamanAnalisisDbContext>(optionsBuilder => optionsBuilder.UseMySQL(databaseConnectionString));
 
             services.AddScoped<IKetajamanAnalisisRepository, KetajamanAnalisisRepository>();
+
+            services.AddScoped<IKetajamanAnalisisApi, KetajamanAnalisisApi>();
 
             services.AddScoped<IUnitOfWork>(sp => sp.GetRequiredService<KetajamanAnalisisDbContext>());
         }

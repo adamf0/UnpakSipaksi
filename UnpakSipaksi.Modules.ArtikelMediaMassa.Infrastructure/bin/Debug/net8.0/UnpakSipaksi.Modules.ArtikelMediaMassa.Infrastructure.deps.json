@@ -14,7 +14,8 @@
           "UnpakSipaksi.Common.Infrastructure": "1.0.0",
           "UnpakSipaksi.Modules.ArtikelMediaMassa.Application": "1.0.0",
           "UnpakSipaksi.Modules.ArtikelMediaMassa.Domain": "1.0.0",
-          "UnpakSipaksi.Modules.ArtikelMediaMassa.Presentation": "1.0.0"
+          "UnpakSipaksi.Modules.ArtikelMediaMassa.Presentation": "1.0.0",
+          "UnpakSipaksi.Modules.ArtikelMediaMassa.PublicApi": "1.0.0"
         },
         "runtime": {
           "UnpakSipaksi.Modules.ArtikelMediaMassa.Infrastructure.dll": {}
@@ -699,6 +700,11 @@
         "runtime": {
           "UnpakSipaksi.Modules.ArtikelMediaMassa.Presentation.dll": {}
         }
+      },
+      "UnpakSipaksi.Modules.ArtikelMediaMassa.PublicApi/1.0.0": {
+        "runtime": {
+          "UnpakSipaksi.Modules.ArtikelMediaMassa.PublicApi.dll": {}
+        }
       }
     }
   },
@@ -1215,6 +1221,11 @@
       "sha512": ""
     },
     "UnpakSipaksi.Modules.ArtikelMediaMassa.Presentation/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    },
+    "UnpakSipaksi.Modules.ArtikelMediaMassa.PublicApi/1.0.0": {
       "type": "project",
       "serviceable": false,
       "sha512": ""

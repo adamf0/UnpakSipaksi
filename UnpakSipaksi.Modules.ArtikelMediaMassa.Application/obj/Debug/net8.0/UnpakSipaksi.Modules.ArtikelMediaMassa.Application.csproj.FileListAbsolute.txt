@@ -12,9 +12,9 @@ C:\dev_net\UnpakSipaksi\UnpakSipaksi.Modules.ArtikelMediaMassa.Application\obj\D
 C:\dev_net\UnpakSipaksi\UnpakSipaksi.Modules.ArtikelMediaMassa.Application\obj\Debug\net8.0\UnpakSipaksi.Modules.ArtikelMediaMassa.Application.AssemblyInfoInputs.cache
 C:\dev_net\UnpakSipaksi\UnpakSipaksi.Modules.ArtikelMediaMassa.Application\obj\Debug\net8.0\UnpakSipaksi.Modules.ArtikelMediaMassa.Application.AssemblyInfo.cs
 C:\dev_net\UnpakSipaksi\UnpakSipaksi.Modules.ArtikelMediaMassa.Application\obj\Debug\net8.0\UnpakSipaksi.Modules.ArtikelMediaMassa.Application.csproj.CoreCompileInputs.cache
+C:\dev_net\UnpakSipaksi\UnpakSipaksi.Modules.ArtikelMediaMassa.Application\obj\Debug\net8.0\UnpakSipaksi.Modules.ArtikelMediaMassa.Application.sourcelink.json
 C:\dev_net\UnpakSipaksi\UnpakSipaksi.Modules.ArtikelMediaMassa.Application\obj\Debug\net8.0\UnpakSip.1710D9D0.Up2Date
 C:\dev_net\UnpakSipaksi\UnpakSipaksi.Modules.ArtikelMediaMassa.Application\obj\Debug\net8.0\UnpakSipaksi.Modules.ArtikelMediaMassa.Application.dll
 C:\dev_net\UnpakSipaksi\UnpakSipaksi.Modules.ArtikelMediaMassa.Application\obj\Debug\net8.0\refint\UnpakSipaksi.Modules.ArtikelMediaMassa.Application.dll
 C:\dev_net\UnpakSipaksi\UnpakSipaksi.Modules.ArtikelMediaMassa.Application\obj\Debug\net8.0\UnpakSipaksi.Modules.ArtikelMediaMassa.Application.pdb
 C:\dev_net\UnpakSipaksi\UnpakSipaksi.Modules.ArtikelMediaMassa.Application\obj\Debug\net8.0\ref\UnpakSipaksi.Modules.ArtikelMediaMassa.Application.dll
-C:\dev_net\UnpakSipaksi\UnpakSipaksi.Modules.ArtikelMediaMassa.Application\obj\Debug\net8.0\UnpakSipaksi.Modules.ArtikelMediaMassa.Application.sourcelink.json

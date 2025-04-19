@@ -14,7 +14,8 @@
           "UnpakSipaksi.Common.Infrastructure": "1.0.0",
           "UnpakSipaksi.Modules.KejelasanPembagianTugasTim.Application": "1.0.0",
           "UnpakSipaksi.Modules.KejelasanPembagianTugasTim.Domain": "1.0.0",
-          "UnpakSipaksi.Modules.KejelasanPembagianTugasTim.Presentation": "1.0.0"
+          "UnpakSipaksi.Modules.KejelasanPembagianTugasTim.Presentation": "1.0.0",
+          "UnpakSipaksi.Modules.KejelasanPembagianTugasTim.PublicApi": "1.0.0"
         },
         "runtime": {
           "UnpakSipaksi.Modules.KejelasanPembagianTugasTim.Infrastructure.dll": {}
@@ -699,6 +700,11 @@
         "runtime": {
           "UnpakSipaksi.Modules.KejelasanPembagianTugasTim.Presentation.dll": {}
         }
+      },
+      "UnpakSipaksi.Modules.KejelasanPembagianTugasTim.PublicApi/1.0.0": {
+        "runtime": {
+          "UnpakSipaksi.Modules.KejelasanPembagianTugasTim.PublicApi.dll": {}
+        }
       }
     }
   },
@@ -1215,6 +1221,11 @@
       "sha512": ""
     },
     "UnpakSipaksi.Modules.KejelasanPembagianTugasTim.Presentation/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    },
+    "UnpakSipaksi.Modules.KejelasanPembagianTugasTim.PublicApi/1.0.0": {
       "type": "project",
       "serviceable": false,
       "sha512": ""

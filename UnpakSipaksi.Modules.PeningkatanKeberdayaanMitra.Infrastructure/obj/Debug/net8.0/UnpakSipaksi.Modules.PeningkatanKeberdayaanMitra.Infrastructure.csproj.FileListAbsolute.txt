@@ -8,11 +8,13 @@ C:\dev_net\UnpakSipaksi\UnpakSipaksi.Modules.PeningkatanKeberdayaanMitra.Infrast
 C:\dev_net\UnpakSipaksi\UnpakSipaksi.Modules.PeningkatanKeberdayaanMitra.Infrastructure\bin\Debug\net8.0\UnpakSipaksi.Modules.PeningkatanKeberdayaanMitra.Application.dll
 C:\dev_net\UnpakSipaksi\UnpakSipaksi.Modules.PeningkatanKeberdayaanMitra.Infrastructure\bin\Debug\net8.0\UnpakSipaksi.Modules.PeningkatanKeberdayaanMitra.Domain.dll
 C:\dev_net\UnpakSipaksi\UnpakSipaksi.Modules.PeningkatanKeberdayaanMitra.Infrastructure\bin\Debug\net8.0\UnpakSipaksi.Modules.PeningkatanKeberdayaanMitra.Presentation.dll
+C:\dev_net\UnpakSipaksi\UnpakSipaksi.Modules.PeningkatanKeberdayaanMitra.Infrastructure\bin\Debug\net8.0\UnpakSipaksi.Modules.PeningkatanKeberdayaanMitra.PublicApi.dll
 C:\dev_net\UnpakSipaksi\UnpakSipaksi.Modules.PeningkatanKeberdayaanMitra.Infrastructure\bin\Debug\net8.0\UnpakSipaksi.Common.Application.pdb
 C:\dev_net\UnpakSipaksi\UnpakSipaksi.Modules.PeningkatanKeberdayaanMitra.Infrastructure\bin\Debug\net8.0\UnpakSipaksi.Common.Infrastructure.pdb
 C:\dev_net\UnpakSipaksi\UnpakSipaksi.Modules.PeningkatanKeberdayaanMitra.Infrastructure\bin\Debug\net8.0\UnpakSipaksi.Modules.PeningkatanKeberdayaanMitra.Application.pdb
 C:\dev_net\UnpakSipaksi\UnpakSipaksi.Modules.PeningkatanKeberdayaanMitra.Infrastructure\bin\Debug\net8.0\UnpakSipaksi.Modules.PeningkatanKeberdayaanMitra.Domain.pdb
 C:\dev_net\UnpakSipaksi\UnpakSipaksi.Modules.PeningkatanKeberdayaanMitra.Infrastructure\bin\Debug\net8.0\UnpakSipaksi.Modules.PeningkatanKeberdayaanMitra.Presentation.pdb
+C:\dev_net\UnpakSipaksi\UnpakSipaksi.Modules.PeningkatanKeberdayaanMitra.Infrastructure\bin\Debug\net8.0\UnpakSipaksi.Modules.PeningkatanKeberdayaanMitra.PublicApi.pdb
 C:\dev_net\UnpakSipaksi\UnpakSipaksi.Modules.PeningkatanKeberdayaanMitra.Infrastructure\bin\Debug\net8.0\UnpakSipaksi.Common.Domain.pdb
 C:\dev_net\UnpakSipaksi\UnpakSipaksi.Modules.PeningkatanKeberdayaanMitra.Infrastructure\bin\Debug\net8.0\UnpakSipaksi.Common.Presentation.pdb
 C:\dev_net\UnpakSipaksi\UnpakSipaksi.Modules.PeningkatanKeberdayaanMitra.Infrastructure\obj\Debug\net8.0\UnpakSipaksi.Modules.PeningkatanKeberdayaanMitra.Infrastructure.csproj.AssemblyReference.cache

@@ -27,7 +27,7 @@
 		<ProjectReference Include="..\UnpakSipaksi.Modules.VideoKegiatan.Application\UnpakSipaksi.Modules.VideoKegiatan.Application.csproj" />
 		<ProjectReference Include="..\UnpakSipaksi.Modules.VideoKegiatan.Domain\UnpakSipaksi.Modules.VideoKegiatan.Domain.csproj" />
 		<ProjectReference Include="..\UnpakSipaksi.Modules.VideoKegiatan.Presentation\UnpakSipaksi.Modules.VideoKegiatan.Presentation.csproj" />
-		<ProjectReference Include="..\UnpakSipaksi.Modules.VideoKegiatan.Domain\UnpakSipaksi.Modules.VideoKegiatan.Domain.csproj" />
+		<ProjectReference Include="..\UnpakSipaksi.Modules.VideoKegiatan.PublicApi\UnpakSipaksi.Modules.VideoKegiatan.PublicApi.csproj" />
 	</ItemGroup>
 
 </Project>

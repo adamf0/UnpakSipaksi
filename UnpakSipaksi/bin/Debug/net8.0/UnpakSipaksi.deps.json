@@ -82,10 +82,14 @@
           "UnpakSipaksi.Modules.KuantitasStatusKi.Infrastructure": "1.0.0",
           "UnpakSipaksi.Modules.LuaranArtikel.Application": "1.0.0",
           "UnpakSipaksi.Modules.LuaranArtikel.Infrastructure": "1.0.0",
+          "UnpakSipaksi.Modules.Metode.Application": "1.0.0",
+          "UnpakSipaksi.Modules.Metode.Infrastructure": "1.0.0",
           "UnpakSipaksi.Modules.MetodeRencanaKegiatan.Application": "1.0.0",
           "UnpakSipaksi.Modules.MetodeRencanaKegiatan.Infrastructure": "1.0.0",
           "UnpakSipaksi.Modules.ModelFeasibilityStudys.Application": "1.0.0",
           "UnpakSipaksi.Modules.ModelFeasibilityStudys.Infrastructure": "1.0.0",
+          "UnpakSipaksi.Modules.Pengumuman.Application": "1.0.0",
+          "UnpakSipaksi.Modules.Pengumuman.Infrastructure": "1.0.0",
           "UnpakSipaksi.Modules.PeningkatanKeberdayaanMitra.Application": "1.0.0",
           "UnpakSipaksi.Modules.PeningkatanKeberdayaanMitra.Infrastructure": "1.0.0",
           "UnpakSipaksi.Modules.PenugasanReviewer.Application": "1.0.0",
@@ -96,6 +100,7 @@
           "UnpakSipaksi.Modules.PrioritasRiset.Infrastructure": "1.0.0",
           "UnpakSipaksi.Modules.PublikasiDisitasiProposal.Application": "1.0.0",
           "UnpakSipaksi.Modules.PublikasiDisitasiProposal.Infrastructure": "1.0.0",
+          "UnpakSipaksi.Modules.Referensi.Infrastructure": "1.0.0",
           "UnpakSipaksi.Modules.RelevansiKepakaranTemaProposal.Application": "1.0.0",
           "UnpakSipaksi.Modules.RelevansiKepakaranTemaProposal.Infrastructure": "1.0.0",
           "UnpakSipaksi.Modules.RelevansiKualitasReferensi.Application": "1.0.0",
@@ -104,6 +109,8 @@
           "UnpakSipaksi.Modules.RelevansiProdukKepentinganNasional.Infrastructure": "1.0.0",
           "UnpakSipaksi.Modules.Rirn.Application": "1.0.0",
           "UnpakSipaksi.Modules.Rirn.Infrastructure": "1.0.0",
+          "UnpakSipaksi.Modules.Roadmap.Application": "1.0.0",
+          "UnpakSipaksi.Modules.Roadmap.Infrastructure": "1.0.0",
           "UnpakSipaksi.Modules.RoadmapPenelitian.Application": "1.0.0",
           "UnpakSipaksi.Modules.RoadmapPenelitian.Infrastructure": "1.0.0",
           "UnpakSipaksi.Modules.RumpunIlmu1.Application": "1.0.0",
@@ -118,10 +125,15 @@
           "UnpakSipaksi.Modules.Satuan.Infrastructure": "1.0.0",
           "UnpakSipaksi.Modules.SotaKebaharuan.Application": "1.0.0",
           "UnpakSipaksi.Modules.SotaKebaharuan.Infrastructure": "1.0.0",
+          "UnpakSipaksi.Modules.SubstansiBobot.Application": "1.0.0",
+          "UnpakSipaksi.Modules.SubstansiBobot.Infrastructure": "1.0.0",
           "UnpakSipaksi.Modules.TemaPenelitian.Application": "1.0.0",
           "UnpakSipaksi.Modules.TemaPenelitian.Infrastructure": "1.0.0",
           "UnpakSipaksi.Modules.TopikPenelitian.Application": "1.0.0",
           "UnpakSipaksi.Modules.TopikPenelitian.Infrastructure": "1.0.0",
+          "UnpakSipaksi.Modules.TopikPenelitian.PublicApi": "1.0.0",
+          "UnpakSipaksi.Modules.UrgensiPenelitian.Application": "1.0.0",
+          "UnpakSipaksi.Modules.UrgensiPenelitian.Infrastructure": "1.0.0",
           "UnpakSipaksi.Modules.VideoKegiatan.Application": "1.0.0",
           "UnpakSipaksi.Modules.VideoKegiatan.Infrastructure": "1.0.0"
         },
@@ -1345,7 +1357,8 @@
           "UnpakSipaksi.Common.Infrastructure": "1.0.0",
           "UnpakSipaksi.Modules.AkurasiPenelitian.Application": "1.0.0",
           "UnpakSipaksi.Modules.AkurasiPenelitian.Domain": "1.0.0",
-          "UnpakSipaksi.Modules.AkurasiPenelitian.Presentation": "1.0.0"
+          "UnpakSipaksi.Modules.AkurasiPenelitian.Presentation": "1.0.0",
+          "UnpakSipaksi.Modules.AkurasiPenelitian.PublicApi": "1.0.0"
         },
         "runtime": {
           "UnpakSipaksi.Modules.AkurasiPenelitian.Infrastructure.dll": {}
@@ -1359,6 +1372,11 @@
         },
         "runtime": {
           "UnpakSipaksi.Modules.AkurasiPenelitian.Presentation.dll": {}
+        }
+      },
+      "UnpakSipaksi.Modules.AkurasiPenelitian.PublicApi/1.0.0": {
+        "runtime": {
+          "UnpakSipaksi.Modules.AkurasiPenelitian.PublicApi.dll": {}
         }
       },
       "UnpakSipaksi.Modules.ArtikelMediaMassa.Application/1.0.0": {
@@ -1389,7 +1407,8 @@
           "UnpakSipaksi.Common.Infrastructure": "1.0.0",
           "UnpakSipaksi.Modules.ArtikelMediaMassa.Application": "1.0.0",
           "UnpakSipaksi.Modules.ArtikelMediaMassa.Domain": "1.0.0",
-          "UnpakSipaksi.Modules.ArtikelMediaMassa.Presentation": "1.0.0"
+          "UnpakSipaksi.Modules.ArtikelMediaMassa.Presentation": "1.0.0",
+          "UnpakSipaksi.Modules.ArtikelMediaMassa.PublicApi": "1.0.0"
         },
         "runtime": {
           "UnpakSipaksi.Modules.ArtikelMediaMassa.Infrastructure.dll": {}
@@ -1403,6 +1422,11 @@
         },
         "runtime": {
           "UnpakSipaksi.Modules.ArtikelMediaMassa.Presentation.dll": {}
+        }
+      },
+      "UnpakSipaksi.Modules.ArtikelMediaMassa.PublicApi/1.0.0": {
+        "runtime": {
+          "UnpakSipaksi.Modules.ArtikelMediaMassa.PublicApi.dll": {}
         }
       },
       "UnpakSipaksi.Modules.AuthorSinta.Application/1.0.0": {
@@ -1572,7 +1596,8 @@
           "UnpakSipaksi.Common.Infrastructure": "1.0.0",
           "UnpakSipaksi.Modules.InovasiPemecahanMasalah.Application": "1.0.0",
           "UnpakSipaksi.Modules.InovasiPemecahanMasalah.Domain": "1.0.0",
-          "UnpakSipaksi.Modules.InovasiPemecahanMasalah.Presentation": "1.0.0"
+          "UnpakSipaksi.Modules.InovasiPemecahanMasalah.Presentation": "1.0.0",
+          "UnpakSipaksi.Modules.InovasiPemecahanMasalah.PublicApi": "1.0.0"
         },
         "runtime": {
           "UnpakSipaksi.Modules.InovasiPemecahanMasalah.Infrastructure.dll": {}
@@ -1586,6 +1611,11 @@
         },
         "runtime": {
           "UnpakSipaksi.Modules.InovasiPemecahanMasalah.Presentation.dll": {}
+        }
+      },
+      "UnpakSipaksi.Modules.InovasiPemecahanMasalah.PublicApi/1.0.0": {
+        "runtime": {
+          "UnpakSipaksi.Modules.InovasiPemecahanMasalah.PublicApi.dll": {}
         }
       },
       "UnpakSipaksi.Modules.JenisPublikasi.Application/1.0.0": {
@@ -1660,7 +1690,8 @@
           "UnpakSipaksi.Common.Infrastructure": "1.0.0",
           "UnpakSipaksi.Modules.JumlahKolaboratorPublikasBereputasi.Application": "1.0.0",
           "UnpakSipaksi.Modules.JumlahKolaboratorPublikasBereputasi.Domain": "1.0.0",
-          "UnpakSipaksi.Modules.JumlahKolaboratorPublikasBereputasi.Presentation": "1.0.0"
+          "UnpakSipaksi.Modules.JumlahKolaboratorPublikasBereputasi.Presentation": "1.0.0",
+          "UnpakSipaksi.Modules.JumlahKolaboratorPublikasBereputasi.PublicApi": "1.0.0"
         },
         "runtime": {
           "UnpakSipaksi.Modules.JumlahKolaboratorPublikasBereputasi.Infrastructure.dll": {}
@@ -1674,6 +1705,11 @@
         },
         "runtime": {
           "UnpakSipaksi.Modules.JumlahKolaboratorPublikasBereputasi.Presentation.dll": {}
+        }
+      },
+      "UnpakSipaksi.Modules.JumlahKolaboratorPublikasBereputasi.PublicApi/1.0.0": {
+        "runtime": {
+          "UnpakSipaksi.Modules.JumlahKolaboratorPublikasBereputasi.PublicApi.dll": {}
         }
       },
       "UnpakSipaksi.Modules.KategoriMitraPenelitian.Application/1.0.0": {
@@ -1880,7 +1916,8 @@
           "UnpakSipaksi.Common.Infrastructure": "1.0.0",
           "UnpakSipaksi.Modules.KategoriTkt.Application": "1.0.0",
           "UnpakSipaksi.Modules.KategoriTkt.Domain": "1.0.0",
-          "UnpakSipaksi.Modules.KategoriTkt.Presentation": "1.0.0"
+          "UnpakSipaksi.Modules.KategoriTkt.Presentation": "1.0.0",
+          "UnpakSipaksi.Modules.KategoriTkt.PublicApi": "1.0.0"
         },
         "runtime": {
           "UnpakSipaksi.Modules.KategoriTkt.Infrastructure.dll": {}
@@ -1894,6 +1931,11 @@
         },
         "runtime": {
           "UnpakSipaksi.Modules.KategoriTkt.Presentation.dll": {}
+        }
+      },
+      "UnpakSipaksi.Modules.KategoriTkt.PublicApi/1.0.0": {
+        "runtime": {
+          "UnpakSipaksi.Modules.KategoriTkt.PublicApi.dll": {}
         }
       },
       "UnpakSipaksi.Modules.KebaruanReferensi.Application/1.0.0": {
@@ -1924,7 +1966,8 @@
           "UnpakSipaksi.Common.Infrastructure": "1.0.0",
           "UnpakSipaksi.Modules.KebaruanReferensi.Application": "1.0.0",
           "UnpakSipaksi.Modules.KebaruanReferensi.Domain": "1.0.0",
-          "UnpakSipaksi.Modules.KebaruanReferensi.Presentation": "1.0.0"
+          "UnpakSipaksi.Modules.KebaruanReferensi.Presentation": "1.0.0",
+          "UnpakSipaksi.Modules.KebaruanReferensi.PublicApi": "1.0.0"
         },
         "runtime": {
           "UnpakSipaksi.Modules.KebaruanReferensi.Infrastructure.dll": {}
@@ -1938,6 +1981,11 @@
         },
         "runtime": {
           "UnpakSipaksi.Modules.KebaruanReferensi.Presentation.dll": {}
+        }
+      },
+      "UnpakSipaksi.Modules.KebaruanReferensi.PublicApi/1.0.0": {
+        "runtime": {
+          "UnpakSipaksi.Modules.KebaruanReferensi.PublicApi.dll": {}
         }
       },
       "UnpakSipaksi.Modules.KejelasanPembagianTugasTim.Application/1.0.0": {
@@ -1968,7 +2016,8 @@
           "UnpakSipaksi.Common.Infrastructure": "1.0.0",
           "UnpakSipaksi.Modules.KejelasanPembagianTugasTim.Application": "1.0.0",
           "UnpakSipaksi.Modules.KejelasanPembagianTugasTim.Domain": "1.0.0",
-          "UnpakSipaksi.Modules.KejelasanPembagianTugasTim.Presentation": "1.0.0"
+          "UnpakSipaksi.Modules.KejelasanPembagianTugasTim.Presentation": "1.0.0",
+          "UnpakSipaksi.Modules.KejelasanPembagianTugasTim.PublicApi": "1.0.0"
         },
         "runtime": {
           "UnpakSipaksi.Modules.KejelasanPembagianTugasTim.Infrastructure.dll": {}
@@ -1982,6 +2031,11 @@
         },
         "runtime": {
           "UnpakSipaksi.Modules.KejelasanPembagianTugasTim.Presentation.dll": {}
+        }
+      },
+      "UnpakSipaksi.Modules.KejelasanPembagianTugasTim.PublicApi/1.0.0": {
+        "runtime": {
+          "UnpakSipaksi.Modules.KejelasanPembagianTugasTim.PublicApi.dll": {}
         }
       },
       "UnpakSipaksi.Modules.KelompokMitra.Application/1.0.0": {
@@ -2100,7 +2154,8 @@
           "UnpakSipaksi.Common.Infrastructure": "1.0.0",
           "UnpakSipaksi.Modules.KesesuaianJadwal.Application": "1.0.0",
           "UnpakSipaksi.Modules.KesesuaianJadwal.Domain": "1.0.0",
-          "UnpakSipaksi.Modules.KesesuaianJadwal.Presentation": "1.0.0"
+          "UnpakSipaksi.Modules.KesesuaianJadwal.Presentation": "1.0.0",
+          "UnpakSipaksi.Modules.KesesuaianJadwal.PublicApi": "1.0.0"
         },
         "runtime": {
           "UnpakSipaksi.Modules.KesesuaianJadwal.Infrastructure.dll": {}
@@ -2114,6 +2169,11 @@
         },
         "runtime": {
           "UnpakSipaksi.Modules.KesesuaianJadwal.Presentation.dll": {}
+        }
+      },
+      "UnpakSipaksi.Modules.KesesuaianJadwal.PublicApi/1.0.0": {
+        "runtime": {
+          "UnpakSipaksi.Modules.KesesuaianJadwal.PublicApi.dll": {}
         }
       },
       "UnpakSipaksi.Modules.KesesuaianPenugasan.Application/1.0.0": {
@@ -2144,7 +2204,8 @@
           "UnpakSipaksi.Common.Infrastructure": "1.0.0",
           "UnpakSipaksi.Modules.KesesuaianPenugasan.Application": "1.0.0",
           "UnpakSipaksi.Modules.KesesuaianPenugasan.Domain": "1.0.0",
-          "UnpakSipaksi.Modules.KesesuaianPenugasan.Presentation": "1.0.0"
+          "UnpakSipaksi.Modules.KesesuaianPenugasan.Presentation": "1.0.0",
+          "UnpakSipaksi.Modules.KesesuaianPenugasan.PublicApi": "1.0.0"
         },
         "runtime": {
           "UnpakSipaksi.Modules.KesesuaianPenugasan.Infrastructure.dll": {}
@@ -2158,6 +2219,11 @@
         },
         "runtime": {
           "UnpakSipaksi.Modules.KesesuaianPenugasan.Presentation.dll": {}
+        }
+      },
+      "UnpakSipaksi.Modules.KesesuaianPenugasan.PublicApi/1.0.0": {
+        "runtime": {
+          "UnpakSipaksi.Modules.KesesuaianPenugasan.PublicApi.dll": {}
         }
       },
       "UnpakSipaksi.Modules.KesesuaianSolusiMasalahMitra.Application/1.0.0": {
@@ -2188,7 +2254,8 @@
           "UnpakSipaksi.Common.Infrastructure": "1.0.0",
           "UnpakSipaksi.Modules.KesesuaianSolusiMasalahMitra.Application": "1.0.0",
           "UnpakSipaksi.Modules.KesesuaianSolusiMasalahMitra.Domain": "1.0.0",
-          "UnpakSipaksi.Modules.KesesuaianSolusiMasalahMitra.Presentation": "1.0.0"
+          "UnpakSipaksi.Modules.KesesuaianSolusiMasalahMitra.Presentation": "1.0.0",
+          "UnpakSipaksi.Modules.KesesuaianSolusiMasalahMitra.PublicApi": "1.0.0"
         },
         "runtime": {
           "UnpakSipaksi.Modules.KesesuaianSolusiMasalahMitra.Infrastructure.dll": {}
@@ -2202,6 +2269,11 @@
         },
         "runtime": {
           "UnpakSipaksi.Modules.KesesuaianSolusiMasalahMitra.Presentation.dll": {}
+        }
+      },
+      "UnpakSipaksi.Modules.KesesuaianSolusiMasalahMitra.PublicApi/1.0.0": {
+        "runtime": {
+          "UnpakSipaksi.Modules.KesesuaianSolusiMasalahMitra.PublicApi.dll": {}
         }
       },
       "UnpakSipaksi.Modules.KesesuaianTkt.Application/1.0.0": {
@@ -2232,7 +2304,8 @@
           "UnpakSipaksi.Common.Infrastructure": "1.0.0",
           "UnpakSipaksi.Modules.KesesuaianTkt.Application": "1.0.0",
           "UnpakSipaksi.Modules.KesesuaianTkt.Domain": "1.0.0",
-          "UnpakSipaksi.Modules.KesesuaianTkt.Presentation": "1.0.0"
+          "UnpakSipaksi.Modules.KesesuaianTkt.Presentation": "1.0.0",
+          "UnpakSipaksi.Modules.KesesuaianTkt.PublicApi": "1.0.0"
         },
         "runtime": {
           "UnpakSipaksi.Modules.KesesuaianTkt.Infrastructure.dll": {}
@@ -2246,6 +2319,11 @@
         },
         "runtime": {
           "UnpakSipaksi.Modules.KesesuaianTkt.Presentation.dll": {}
+        }
+      },
+      "UnpakSipaksi.Modules.KesesuaianTkt.PublicApi/1.0.0": {
+        "runtime": {
+          "UnpakSipaksi.Modules.KesesuaianTkt.PublicApi.dll": {}
         }
       },
       "UnpakSipaksi.Modules.KesesuaianWaktuRabLuaranFasilitas.Application/1.0.0": {
@@ -2276,7 +2354,8 @@
           "UnpakSipaksi.Common.Infrastructure": "1.0.0",
           "UnpakSipaksi.Modules.KesesuaianWaktuRabLuaranFasilitas.Application": "1.0.0",
           "UnpakSipaksi.Modules.KesesuaianWaktuRabLuaranFasilitas.Domain": "1.0.0",
-          "UnpakSipaksi.Modules.KesesuaianWaktuRabLuaranFasilitas.Presentation": "1.0.0"
+          "UnpakSipaksi.Modules.KesesuaianWaktuRabLuaranFasilitas.Presentation": "1.0.0",
+          "UnpakSipaksi.Modules.KesesuaianWaktuRabLuaranFasilitas.PublicApi": "1.0.0"
         },
         "runtime": {
           "UnpakSipaksi.Modules.KesesuaianWaktuRabLuaranFasilitas.Infrastructure.dll": {}
@@ -2290,6 +2369,11 @@
         },
         "runtime": {
           "UnpakSipaksi.Modules.KesesuaianWaktuRabLuaranFasilitas.Presentation.dll": {}
+        }
+      },
+      "UnpakSipaksi.Modules.KesesuaianWaktuRabLuaranFasilitas.PublicApi/1.0.0": {
+        "runtime": {
+          "UnpakSipaksi.Modules.KesesuaianWaktuRabLuaranFasilitas.PublicApi.dll": {}
         }
       },
       "UnpakSipaksi.Modules.KetajamanAnalisis.Application/1.0.0": {
@@ -2320,7 +2404,8 @@
           "UnpakSipaksi.Common.Infrastructure": "1.0.0",
           "UnpakSipaksi.Modules.KetajamanAnalisis.Application": "1.0.0",
           "UnpakSipaksi.Modules.KetajamanAnalisis.Domain": "1.0.0",
-          "UnpakSipaksi.Modules.KetajamanAnalisis.Presentation": "1.0.0"
+          "UnpakSipaksi.Modules.KetajamanAnalisis.Presentation": "1.0.0",
+          "UnpakSipaksi.Modules.KetajamanAnalisis.PublicApi": "1.0.0"
         },
         "runtime": {
           "UnpakSipaksi.Modules.KetajamanAnalisis.Infrastructure.dll": {}
@@ -2334,6 +2419,11 @@
         },
         "runtime": {
           "UnpakSipaksi.Modules.KetajamanAnalisis.Presentation.dll": {}
+        }
+      },
+      "UnpakSipaksi.Modules.KetajamanAnalisis.PublicApi/1.0.0": {
+        "runtime": {
+          "UnpakSipaksi.Modules.KetajamanAnalisis.PublicApi.dll": {}
         }
       },
       "UnpakSipaksi.Modules.KetajamanPerumusanMasalah.Application/1.0.0": {
@@ -2364,7 +2454,8 @@
           "UnpakSipaksi.Common.Infrastructure": "1.0.0",
           "UnpakSipaksi.Modules.KetajamanPerumusanMasalah.Application": "1.0.0",
           "UnpakSipaksi.Modules.KetajamanPerumusanMasalah.Domain": "1.0.0",
-          "UnpakSipaksi.Modules.KetajamanPerumusanMasalah.Presentation": "1.0.0"
+          "UnpakSipaksi.Modules.KetajamanPerumusanMasalah.Presentation": "1.0.0",
+          "UnpakSipaksi.Modules.KetajamanPerumusanMasalah.PublicApi": "1.0.0"
         },
         "runtime": {
           "UnpakSipaksi.Modules.KetajamanPerumusanMasalah.Infrastructure.dll": {}
@@ -2378,6 +2469,11 @@
         },
         "runtime": {
           "UnpakSipaksi.Modules.KetajamanPerumusanMasalah.Presentation.dll": {}
+        }
+      },
+      "UnpakSipaksi.Modules.KetajamanPerumusanMasalah.PublicApi/1.0.0": {
+        "runtime": {
+          "UnpakSipaksi.Modules.KetajamanPerumusanMasalah.PublicApi.dll": {}
         }
       },
       "UnpakSipaksi.Modules.KewajaranTahapanTarget.Application/1.0.0": {
@@ -2408,7 +2504,8 @@
           "UnpakSipaksi.Common.Infrastructure": "1.0.0",
           "UnpakSipaksi.Modules.KewajaranTahapanTarget.Application": "1.0.0",
           "UnpakSipaksi.Modules.KewajaranTahapanTarget.Domain": "1.0.0",
-          "UnpakSipaksi.Modules.KewajaranTahapanTarget.Presentation": "1.0.0"
+          "UnpakSipaksi.Modules.KewajaranTahapanTarget.Presentation": "1.0.0",
+          "UnpakSipaksi.Modules.KewajaranTahapanTarget.PublicApi": "1.0.0"
         },
         "runtime": {
           "UnpakSipaksi.Modules.KewajaranTahapanTarget.Infrastructure.dll": {}
@@ -2422,6 +2519,11 @@
         },
         "runtime": {
           "UnpakSipaksi.Modules.KewajaranTahapanTarget.Presentation.dll": {}
+        }
+      },
+      "UnpakSipaksi.Modules.KewajaranTahapanTarget.PublicApi/1.0.0": {
+        "runtime": {
+          "UnpakSipaksi.Modules.KewajaranTahapanTarget.PublicApi.dll": {}
         }
       },
       "UnpakSipaksi.Modules.Komponen.Application/1.0.0": {
@@ -2496,7 +2598,8 @@
           "UnpakSipaksi.Common.Infrastructure": "1.0.0",
           "UnpakSipaksi.Modules.KredibilitasMitraDukungan.Application": "1.0.0",
           "UnpakSipaksi.Modules.KredibilitasMitraDukungan.Domain": "1.0.0",
-          "UnpakSipaksi.Modules.KredibilitasMitraDukungan.Presentation": "1.0.0"
+          "UnpakSipaksi.Modules.KredibilitasMitraDukungan.Presentation": "1.0.0",
+          "UnpakSipaksi.Modules.KredibilitasMitraDukungan.PublicApi": "1.0.0"
         },
         "runtime": {
           "UnpakSipaksi.Modules.KredibilitasMitraDukungan.Infrastructure.dll": {}
@@ -2510,6 +2613,11 @@
         },
         "runtime": {
           "UnpakSipaksi.Modules.KredibilitasMitraDukungan.Presentation.dll": {}
+        }
+      },
+      "UnpakSipaksi.Modules.KredibilitasMitraDukungan.PublicApi/1.0.0": {
+        "runtime": {
+          "UnpakSipaksi.Modules.KredibilitasMitraDukungan.PublicApi.dll": {}
         }
       },
       "UnpakSipaksi.Modules.KualitasIpteks.Application/1.0.0": {
@@ -2540,7 +2648,8 @@
           "UnpakSipaksi.Common.Infrastructure": "1.0.0",
           "UnpakSipaksi.Modules.KualitasIpteks.Application": "1.0.0",
           "UnpakSipaksi.Modules.KualitasIpteks.Domain": "1.0.0",
-          "UnpakSipaksi.Modules.KualitasIpteks.Presentation": "1.0.0"
+          "UnpakSipaksi.Modules.KualitasIpteks.Presentation": "1.0.0",
+          "UnpakSipaksi.Modules.KualitasIpteks.PublicApi": "1.0.0"
         },
         "runtime": {
           "UnpakSipaksi.Modules.KualitasIpteks.Infrastructure.dll": {}
@@ -2554,6 +2663,11 @@
         },
         "runtime": {
           "UnpakSipaksi.Modules.KualitasIpteks.Presentation.dll": {}
+        }
+      },
+      "UnpakSipaksi.Modules.KualitasIpteks.PublicApi/1.0.0": {
+        "runtime": {
+          "UnpakSipaksi.Modules.KualitasIpteks.PublicApi.dll": {}
         }
       },
       "UnpakSipaksi.Modules.KualitasKuantitasPublikasiJurnalIlmiah.Application/1.0.0": {
@@ -2584,7 +2698,8 @@
           "UnpakSipaksi.Common.Infrastructure": "1.0.0",
           "UnpakSipaksi.Modules.KualitasKuantitasPublikasiJurnalIlmiah.Application": "1.0.0",
           "UnpakSipaksi.Modules.KualitasKuantitasPublikasiJurnalIlmiah.Domain": "1.0.0",
-          "UnpakSipaksi.Modules.KualitasKuantitasPublikasiJurnalIlmiah.Presentation": "1.0.0"
+          "UnpakSipaksi.Modules.KualitasKuantitasPublikasiJurnalIlmiah.Presentation": "1.0.0",
+          "UnpakSipaksi.Modules.KualitasKuantitasPublikasiJurnalIlmiah.PubliApi": "1.0.0"
         },
         "runtime": {
           "UnpakSipaksi.Modules.KualitasKuantitasPublikasiJurnalIlmiah.Infrastructure.dll": {}
@@ -2598,6 +2713,11 @@
         },
         "runtime": {
           "UnpakSipaksi.Modules.KualitasKuantitasPublikasiJurnalIlmiah.Presentation.dll": {}
+        }
+      },
+      "UnpakSipaksi.Modules.KualitasKuantitasPublikasiJurnalIlmiah.PubliApi/1.0.0": {
+        "runtime": {
+          "UnpakSipaksi.Modules.KualitasKuantitasPublikasiJurnalIlmiah.PubliApi.dll": {}
         }
       },
       "UnpakSipaksi.Modules.KualitasKuantitasPublikasiProsiding.Application/1.0.0": {
@@ -2628,7 +2748,8 @@
           "UnpakSipaksi.Common.Infrastructure": "1.0.0",
           "UnpakSipaksi.Modules.KualitasKuantitasPublikasiProsiding.Application": "1.0.0",
           "UnpakSipaksi.Modules.KualitasKuantitasPublikasiProsiding.Domain": "1.0.0",
-          "UnpakSipaksi.Modules.KualitasKuantitasPublikasiProsiding.Presentation": "1.0.0"
+          "UnpakSipaksi.Modules.KualitasKuantitasPublikasiProsiding.Presentation": "1.0.0",
+          "UnpakSipaksi.Modules.KualitasKuantitasPublikasiProsiding.PublicApi": "1.0.0"
         },
         "runtime": {
           "UnpakSipaksi.Modules.KualitasKuantitasPublikasiProsiding.Infrastructure.dll": {}
@@ -2642,6 +2763,11 @@
         },
         "runtime": {
           "UnpakSipaksi.Modules.KualitasKuantitasPublikasiProsiding.Presentation.dll": {}
+        }
+      },
+      "UnpakSipaksi.Modules.KualitasKuantitasPublikasiProsiding.PublicApi/1.0.0": {
+        "runtime": {
+          "UnpakSipaksi.Modules.KualitasKuantitasPublikasiProsiding.PublicApi.dll": {}
         }
       },
       "UnpakSipaksi.Modules.KuantitasStatusKi.Application/1.0.0": {
@@ -2672,7 +2798,8 @@
           "UnpakSipaksi.Common.Infrastructure": "1.0.0",
           "UnpakSipaksi.Modules.KuantitasStatusKi.Application": "1.0.0",
           "UnpakSipaksi.Modules.KuantitasStatusKi.Domain": "1.0.0",
-          "UnpakSipaksi.Modules.KuantitasStatusKi.Presentation": "1.0.0"
+          "UnpakSipaksi.Modules.KuantitasStatusKi.Presentation": "1.0.0",
+          "UnpakSipaksi.Modules.KuantitasStatusKi.PublicApi": "1.0.0"
         },
         "runtime": {
           "UnpakSipaksi.Modules.KuantitasStatusKi.Infrastructure.dll": {}
@@ -2686,6 +2813,11 @@
         },
         "runtime": {
           "UnpakSipaksi.Modules.KuantitasStatusKi.Presentation.dll": {}
+        }
+      },
+      "UnpakSipaksi.Modules.KuantitasStatusKi.PublicApi/1.0.0": {
+        "runtime": {
+          "UnpakSipaksi.Modules.KuantitasStatusKi.PublicApi.dll": {}
         }
       },
       "UnpakSipaksi.Modules.LuaranArtikel.Application/1.0.0": {
@@ -2716,7 +2848,8 @@
           "UnpakSipaksi.Common.Infrastructure": "1.0.0",
           "UnpakSipaksi.Modules.LuaranArtikel.Application": "1.0.0",
           "UnpakSipaksi.Modules.LuaranArtikel.Domain": "1.0.0",
-          "UnpakSipaksi.Modules.LuaranArtikel.Presentation": "1.0.0"
+          "UnpakSipaksi.Modules.LuaranArtikel.Presentation": "1.0.0",
+          "UnpakSipaksi.Modules.LuaranArtikel.PublicApi": "1.0.0"
         },
         "runtime": {
           "UnpakSipaksi.Modules.LuaranArtikel.Infrastructure.dll": {}
@@ -2730,6 +2863,62 @@
         },
         "runtime": {
           "UnpakSipaksi.Modules.LuaranArtikel.Presentation.dll": {}
+        }
+      },
+      "UnpakSipaksi.Modules.LuaranArtikel.PublicApi/1.0.0": {
+        "runtime": {
+          "UnpakSipaksi.Modules.LuaranArtikel.PublicApi.dll": {}
+        }
+      },
+      "UnpakSipaksi.Modules.Metode.Application/1.0.0": {
+        "dependencies": {
+          "Dapper": "2.1.35",
+          "MediatR": "12.4.1",
+          "UnpakSipaksi.Common.Application": "1.0.0",
+          "UnpakSipaksi.Common.Domain": "1.0.0",
+          "UnpakSipaksi.Modules.AkurasiPenelitian.PublicApi": "1.0.0",
+          "UnpakSipaksi.Modules.KejelasanPembagianTugasTim.PublicApi": "1.0.0",
+          "UnpakSipaksi.Modules.KesesuaianTkt.PublicApi": "1.0.0",
+          "UnpakSipaksi.Modules.KesesuaianWaktuRabLuaranFasilitas.PublicApi": "1.0.0",
+          "UnpakSipaksi.Modules.KredibilitasMitraDukungan.PublicApi": "1.0.0",
+          "UnpakSipaksi.Modules.Metode.Domain": "1.0.0",
+          "UnpakSipaksi.Modules.ModelFeasibilityStudys.PublicApi": "1.0.0",
+          "UnpakSipaksi.Modules.PotensiKetercapaianLuaranDijanjikan.PublicApi": "1.0.0"
+        },
+        "runtime": {
+          "UnpakSipaksi.Modules.Metode.Application.dll": {}
+        }
+      },
+      "UnpakSipaksi.Modules.Metode.Domain/1.0.0": {
+        "dependencies": {
+          "UnpakSipaksi.Common.Domain": "1.0.0"
+        },
+        "runtime": {
+          "UnpakSipaksi.Modules.Metode.Domain.dll": {}
+        }
+      },
+      "UnpakSipaksi.Modules.Metode.Infrastructure/1.0.0": {
+        "dependencies": {
+          "Microsoft.EntityFrameworkCore": "8.0.0",
+          "MySql.EntityFrameworkCore": "8.0.0",
+          "UnpakSipaksi.Common.Application": "1.0.0",
+          "UnpakSipaksi.Common.Infrastructure": "1.0.0",
+          "UnpakSipaksi.Modules.Metode.Application": "1.0.0",
+          "UnpakSipaksi.Modules.Metode.Domain": "1.0.0",
+          "UnpakSipaksi.Modules.Metode.Presentation": "1.0.0"
+        },
+        "runtime": {
+          "UnpakSipaksi.Modules.Metode.Infrastructure.dll": {}
+        }
+      },
+      "UnpakSipaksi.Modules.Metode.Presentation/1.0.0": {
+        "dependencies": {
+          "UnpakSipaksi.Common.Domain": "1.0.0",
+          "UnpakSipaksi.Common.Presentation": "1.0.0",
+          "UnpakSipaksi.Modules.Metode.Application": "1.0.0"
+        },
+        "runtime": {
+          "UnpakSipaksi.Modules.Metode.Presentation.dll": {}
         }
       },
       "UnpakSipaksi.Modules.MetodeRencanaKegiatan.Application/1.0.0": {
@@ -2760,7 +2949,8 @@
           "UnpakSipaksi.Common.Infrastructure": "1.0.0",
           "UnpakSipaksi.Modules.MetodeRencanaKegiatan.Application": "1.0.0",
           "UnpakSipaksi.Modules.MetodeRencanaKegiatan.Domain": "1.0.0",
-          "UnpakSipaksi.Modules.MetodeRencanaKegiatan.Presentation": "1.0.0"
+          "UnpakSipaksi.Modules.MetodeRencanaKegiatan.Presentation": "1.0.0",
+          "UnpakSipaksi.Modules.MetodeRencanaKegiatan.PublicApi": "1.0.0"
         },
         "runtime": {
           "UnpakSipaksi.Modules.MetodeRencanaKegiatan.Infrastructure.dll": {}
@@ -2774,6 +2964,11 @@
         },
         "runtime": {
           "UnpakSipaksi.Modules.MetodeRencanaKegiatan.Presentation.dll": {}
+        }
+      },
+      "UnpakSipaksi.Modules.MetodeRencanaKegiatan.PublicApi/1.0.0": {
+        "runtime": {
+          "UnpakSipaksi.Modules.MetodeRencanaKegiatan.PublicApi.dll": {}
         }
       },
       "UnpakSipaksi.Modules.ModelFeasibilityStudys.Application/1.0.0": {
@@ -2804,7 +2999,8 @@
           "UnpakSipaksi.Common.Infrastructure": "1.0.0",
           "UnpakSipaksi.Modules.ModelFeasibilityStudys.Application": "1.0.0",
           "UnpakSipaksi.Modules.ModelFeasibilityStudys.Domain": "1.0.0",
-          "UnpakSipaksi.Modules.ModelFeasibilityStudys.Presentation": "1.0.0"
+          "UnpakSipaksi.Modules.ModelFeasibilityStudys.Presentation": "1.0.0",
+          "UnpakSipaksi.Modules.ModelFeasibilityStudys.PublicApi": "1.0.0"
         },
         "runtime": {
           "UnpakSipaksi.Modules.ModelFeasibilityStudys.Infrastructure.dll": {}
@@ -2818,6 +3014,55 @@
         },
         "runtime": {
           "UnpakSipaksi.Modules.ModelFeasibilityStudys.Presentation.dll": {}
+        }
+      },
+      "UnpakSipaksi.Modules.ModelFeasibilityStudys.PublicApi/1.0.0": {
+        "runtime": {
+          "UnpakSipaksi.Modules.ModelFeasibilityStudys.PublicApi.dll": {}
+        }
+      },
+      "UnpakSipaksi.Modules.Pengumuman.Application/1.0.0": {
+        "dependencies": {
+          "Dapper": "2.1.35",
+          "MediatR": "12.4.1",
+          "UnpakSipaksi.Common.Application": "1.0.0",
+          "UnpakSipaksi.Common.Domain": "1.0.0",
+          "UnpakSipaksi.Modules.Pengumuman.Domain": "1.0.0"
+        },
+        "runtime": {
+          "UnpakSipaksi.Modules.Pengumuman.Application.dll": {}
+        }
+      },
+      "UnpakSipaksi.Modules.Pengumuman.Domain/1.0.0": {
+        "dependencies": {
+          "UnpakSipaksi.Common.Domain": "1.0.0"
+        },
+        "runtime": {
+          "UnpakSipaksi.Modules.Pengumuman.Domain.dll": {}
+        }
+      },
+      "UnpakSipaksi.Modules.Pengumuman.Infrastructure/1.0.0": {
+        "dependencies": {
+          "Microsoft.EntityFrameworkCore": "8.0.0",
+          "MySql.EntityFrameworkCore": "8.0.0",
+          "UnpakSipaksi.Common.Application": "1.0.0",
+          "UnpakSipaksi.Common.Infrastructure": "1.0.0",
+          "UnpakSipaksi.Modules.Pengumuman.Application": "1.0.0",
+          "UnpakSipaksi.Modules.Pengumuman.Domain": "1.0.0",
+          "UnpakSipaksi.Modules.Pengumuman.Presentation": "1.0.0"
+        },
+        "runtime": {
+          "UnpakSipaksi.Modules.Pengumuman.Infrastructure.dll": {}
+        }
+      },
+      "UnpakSipaksi.Modules.Pengumuman.Presentation/1.0.0": {
+        "dependencies": {
+          "UnpakSipaksi.Common.Domain": "1.0.0",
+          "UnpakSipaksi.Common.Presentation": "1.0.0",
+          "UnpakSipaksi.Modules.Pengumuman.Application": "1.0.0"
+        },
+        "runtime": {
+          "UnpakSipaksi.Modules.Pengumuman.Presentation.dll": {}
         }
       },
       "UnpakSipaksi.Modules.PeningkatanKeberdayaanMitra.Application/1.0.0": {
@@ -2848,7 +3093,8 @@
           "UnpakSipaksi.Common.Infrastructure": "1.0.0",
           "UnpakSipaksi.Modules.PeningkatanKeberdayaanMitra.Application": "1.0.0",
           "UnpakSipaksi.Modules.PeningkatanKeberdayaanMitra.Domain": "1.0.0",
-          "UnpakSipaksi.Modules.PeningkatanKeberdayaanMitra.Presentation": "1.0.0"
+          "UnpakSipaksi.Modules.PeningkatanKeberdayaanMitra.Presentation": "1.0.0",
+          "UnpakSipaksi.Modules.PeningkatanKeberdayaanMitra.PublicApi": "1.0.0"
         },
         "runtime": {
           "UnpakSipaksi.Modules.PeningkatanKeberdayaanMitra.Infrastructure.dll": {}
@@ -2862,6 +3108,11 @@
         },
         "runtime": {
           "UnpakSipaksi.Modules.PeningkatanKeberdayaanMitra.Presentation.dll": {}
+        }
+      },
+      "UnpakSipaksi.Modules.PeningkatanKeberdayaanMitra.PublicApi/1.0.0": {
+        "runtime": {
+          "UnpakSipaksi.Modules.PeningkatanKeberdayaanMitra.PublicApi.dll": {}
         }
       },
       "UnpakSipaksi.Modules.PenugasanReviewer.Application/1.0.0": {
@@ -2936,7 +3187,8 @@
           "UnpakSipaksi.Common.Infrastructure": "1.0.0",
           "UnpakSipaksi.Modules.PotensiKetercapaianLuaranDijanjikan.Application": "1.0.0",
           "UnpakSipaksi.Modules.PotensiKetercapaianLuaranDijanjikan.Domain": "1.0.0",
-          "UnpakSipaksi.Modules.PotensiKetercapaianLuaranDijanjikan.Presentation": "1.0.0"
+          "UnpakSipaksi.Modules.PotensiKetercapaianLuaranDijanjikan.Presentation": "1.0.0",
+          "UnpakSipaksi.Modules.PotensiKetercapaianLuaranDijanjikan.PublicApi": "1.0.0"
         },
         "runtime": {
           "UnpakSipaksi.Modules.PotensiKetercapaianLuaranDijanjikan.Infrastructure.dll": {}
@@ -2950,6 +3202,11 @@
         },
         "runtime": {
           "UnpakSipaksi.Modules.PotensiKetercapaianLuaranDijanjikan.Presentation.dll": {}
+        }
+      },
+      "UnpakSipaksi.Modules.PotensiKetercapaianLuaranDijanjikan.PublicApi/1.0.0": {
+        "runtime": {
+          "UnpakSipaksi.Modules.PotensiKetercapaianLuaranDijanjikan.PublicApi.dll": {}
         }
       },
       "UnpakSipaksi.Modules.PrioritasRiset.Application/1.0.0": {
@@ -3024,7 +3281,8 @@
           "UnpakSipaksi.Common.Infrastructure": "1.0.0",
           "UnpakSipaksi.Modules.PublikasiDisitasiProposal.Application": "1.0.0",
           "UnpakSipaksi.Modules.PublikasiDisitasiProposal.Domain": "1.0.0",
-          "UnpakSipaksi.Modules.PublikasiDisitasiProposal.Presentation": "1.0.0"
+          "UnpakSipaksi.Modules.PublikasiDisitasiProposal.Presentation": "1.0.0",
+          "UnpakSipaksi.Modules.PublikasiDisitasiProposal.PublicApi": "1.0.0"
         },
         "runtime": {
           "UnpakSipaksi.Modules.PublikasiDisitasiProposal.Infrastructure.dll": {}
@@ -3040,12 +3298,64 @@
           "UnpakSipaksi.Modules.PublikasiDisitasiProposal.Presentation.dll": {}
         }
       },
+      "UnpakSipaksi.Modules.PublikasiDisitasiProposal.PublicApi/1.0.0": {
+        "runtime": {
+          "UnpakSipaksi.Modules.PublikasiDisitasiProposal.PublicApi.dll": {}
+        }
+      },
+      "UnpakSipaksi.Modules.Referensi.Application/1.0.0": {
+        "dependencies": {
+          "Dapper": "2.1.35",
+          "MediatR": "12.4.1",
+          "UnpakSipaksi.Common.Application": "1.0.0",
+          "UnpakSipaksi.Common.Domain": "1.0.0",
+          "UnpakSipaksi.Modules.KebaruanReferensi.PublicApi": "1.0.0",
+          "UnpakSipaksi.Modules.Referensi.Domain": "1.0.0",
+          "UnpakSipaksi.Modules.RelevansiKualitasReferensi.PublicApi": "1.0.0"
+        },
+        "runtime": {
+          "UnpakSipaksi.Modules.Referensi.Application.dll": {}
+        }
+      },
+      "UnpakSipaksi.Modules.Referensi.Domain/1.0.0": {
+        "dependencies": {
+          "UnpakSipaksi.Common.Domain": "1.0.0"
+        },
+        "runtime": {
+          "UnpakSipaksi.Modules.Referensi.Domain.dll": {}
+        }
+      },
+      "UnpakSipaksi.Modules.Referensi.Infrastructure/1.0.0": {
+        "dependencies": {
+          "Microsoft.EntityFrameworkCore": "8.0.0",
+          "MySql.EntityFrameworkCore": "8.0.0",
+          "UnpakSipaksi.Common.Application": "1.0.0",
+          "UnpakSipaksi.Common.Infrastructure": "1.0.0",
+          "UnpakSipaksi.Modules.Referensi.Application": "1.0.0",
+          "UnpakSipaksi.Modules.Referensi.Domain": "1.0.0",
+          "UnpakSipaksi.Modules.Referensi.Presentation": "1.0.0"
+        },
+        "runtime": {
+          "UnpakSipaksi.Modules.Referensi.Infrastructure.dll": {}
+        }
+      },
+      "UnpakSipaksi.Modules.Referensi.Presentation/1.0.0": {
+        "dependencies": {
+          "UnpakSipaksi.Common.Domain": "1.0.0",
+          "UnpakSipaksi.Common.Presentation": "1.0.0",
+          "UnpakSipaksi.Modules.Referensi.Application": "1.0.0"
+        },
+        "runtime": {
+          "UnpakSipaksi.Modules.Referensi.Presentation.dll": {}
+        }
+      },
       "UnpakSipaksi.Modules.RelevansiKepakaranTemaProposal.Application/1.0.0": {
         "dependencies": {
           "Dapper": "2.1.35",
           "MediatR": "12.4.1",
           "UnpakSipaksi.Common.Application": "1.0.0",
           "UnpakSipaksi.Common.Domain": "1.0.0",
+          "UnpakSipaksi.Modules.PublikasiDisitasiProposal.Domain": "1.0.0",
           "UnpakSipaksi.Modules.RelevansiKepakaranTemaProposal.Domain": "1.0.0"
         },
         "runtime": {
@@ -3068,7 +3378,8 @@
           "UnpakSipaksi.Common.Infrastructure": "1.0.0",
           "UnpakSipaksi.Modules.RelevansiKepakaranTemaProposal.Application": "1.0.0",
           "UnpakSipaksi.Modules.RelevansiKepakaranTemaProposal.Domain": "1.0.0",
-          "UnpakSipaksi.Modules.RelevansiKepakaranTemaProposal.Presentation": "1.0.0"
+          "UnpakSipaksi.Modules.RelevansiKepakaranTemaProposal.Presentation": "1.0.0",
+          "UnpakSipaksi.Modules.RelevansiKepakaranTemaProposal.PublicApi": "1.0.0"
         },
         "runtime": {
           "UnpakSipaksi.Modules.RelevansiKepakaranTemaProposal.Infrastructure.dll": {}
@@ -3082,6 +3393,11 @@
         },
         "runtime": {
           "UnpakSipaksi.Modules.RelevansiKepakaranTemaProposal.Presentation.dll": {}
+        }
+      },
+      "UnpakSipaksi.Modules.RelevansiKepakaranTemaProposal.PublicApi/1.0.0": {
+        "runtime": {
+          "UnpakSipaksi.Modules.RelevansiKepakaranTemaProposal.PublicApi.dll": {}
         }
       },
       "UnpakSipaksi.Modules.RelevansiKualitasReferensi.Application/1.0.0": {
@@ -3112,7 +3428,8 @@
           "UnpakSipaksi.Common.Infrastructure": "1.0.0",
           "UnpakSipaksi.Modules.RelevansiKualitasReferensi.Application": "1.0.0",
           "UnpakSipaksi.Modules.RelevansiKualitasReferensi.Domain": "1.0.0",
-          "UnpakSipaksi.Modules.RelevansiKualitasReferensi.Presentation": "1.0.0"
+          "UnpakSipaksi.Modules.RelevansiKualitasReferensi.Presentation": "1.0.0",
+          "UnpakSipaksi.Modules.RelevansiKualitasReferensi.PublicApi": "1.0.0"
         },
         "runtime": {
           "UnpakSipaksi.Modules.RelevansiKualitasReferensi.Infrastructure.dll": {}
@@ -3126,6 +3443,11 @@
         },
         "runtime": {
           "UnpakSipaksi.Modules.RelevansiKualitasReferensi.Presentation.dll": {}
+        }
+      },
+      "UnpakSipaksi.Modules.RelevansiKualitasReferensi.PublicApi/1.0.0": {
+        "runtime": {
+          "UnpakSipaksi.Modules.RelevansiKualitasReferensi.PublicApi.dll": {}
         }
       },
       "UnpakSipaksi.Modules.RelevansiProdukKepentinganNasional.Application/1.0.0": {
@@ -3156,7 +3478,8 @@
           "UnpakSipaksi.Common.Infrastructure": "1.0.0",
           "UnpakSipaksi.Modules.RelevansiProdukKepentinganNasional.Application": "1.0.0",
           "UnpakSipaksi.Modules.RelevansiProdukKepentinganNasional.Domain": "1.0.0",
-          "UnpakSipaksi.Modules.RelevansiProdukKepentinganNasional.Presentation": "1.0.0"
+          "UnpakSipaksi.Modules.RelevansiProdukKepentinganNasional.Presentation": "1.0.0",
+          "UnpakSipaksi.Modules.RelevansiProdukKepentinganNasional.PublicApi": "1.0.0"
         },
         "runtime": {
           "UnpakSipaksi.Modules.RelevansiProdukKepentinganNasional.Infrastructure.dll": {}
@@ -3170,6 +3493,11 @@
         },
         "runtime": {
           "UnpakSipaksi.Modules.RelevansiProdukKepentinganNasional.Presentation.dll": {}
+        }
+      },
+      "UnpakSipaksi.Modules.RelevansiProdukKepentinganNasional.PublicApi/1.0.0": {
+        "runtime": {
+          "UnpakSipaksi.Modules.RelevansiProdukKepentinganNasional.PublicApi.dll": {}
         }
       },
       "UnpakSipaksi.Modules.Rirn.Application/1.0.0": {
@@ -3216,6 +3544,50 @@
           "UnpakSipaksi.Modules.Rirn.Presentation.dll": {}
         }
       },
+      "UnpakSipaksi.Modules.Roadmap.Application/1.0.0": {
+        "dependencies": {
+          "Dapper": "2.1.35",
+          "MediatR": "12.4.1",
+          "UnpakSipaksi.Common.Application": "1.0.0",
+          "UnpakSipaksi.Common.Domain": "1.0.0",
+          "UnpakSipaksi.Modules.Roadmap.Domain": "1.0.0"
+        },
+        "runtime": {
+          "UnpakSipaksi.Modules.Roadmap.Application.dll": {}
+        }
+      },
+      "UnpakSipaksi.Modules.Roadmap.Domain/1.0.0": {
+        "dependencies": {
+          "UnpakSipaksi.Common.Domain": "1.0.0"
+        },
+        "runtime": {
+          "UnpakSipaksi.Modules.Roadmap.Domain.dll": {}
+        }
+      },
+      "UnpakSipaksi.Modules.Roadmap.Infrastructure/1.0.0": {
+        "dependencies": {
+          "Microsoft.EntityFrameworkCore": "8.0.0",
+          "MySql.EntityFrameworkCore": "8.0.0",
+          "UnpakSipaksi.Common.Application": "1.0.0",
+          "UnpakSipaksi.Common.Infrastructure": "1.0.0",
+          "UnpakSipaksi.Modules.Roadmap.Application": "1.0.0",
+          "UnpakSipaksi.Modules.Roadmap.Domain": "1.0.0",
+          "UnpakSipaksi.Modules.Roadmap.Presentation": "1.0.0"
+        },
+        "runtime": {
+          "UnpakSipaksi.Modules.Roadmap.Infrastructure.dll": {}
+        }
+      },
+      "UnpakSipaksi.Modules.Roadmap.Presentation/1.0.0": {
+        "dependencies": {
+          "UnpakSipaksi.Common.Domain": "1.0.0",
+          "UnpakSipaksi.Common.Presentation": "1.0.0",
+          "UnpakSipaksi.Modules.Roadmap.Application": "1.0.0"
+        },
+        "runtime": {
+          "UnpakSipaksi.Modules.Roadmap.Presentation.dll": {}
+        }
+      },
       "UnpakSipaksi.Modules.RoadmapPenelitian.Application/1.0.0": {
         "dependencies": {
           "Dapper": "2.1.35",
@@ -3244,7 +3616,8 @@
           "UnpakSipaksi.Common.Infrastructure": "1.0.0",
           "UnpakSipaksi.Modules.RoadmapPenelitian.Application": "1.0.0",
           "UnpakSipaksi.Modules.RoadmapPenelitian.Domain": "1.0.0",
-          "UnpakSipaksi.Modules.RoadmapPenelitian.Presentation": "1.0.0"
+          "UnpakSipaksi.Modules.RoadmapPenelitian.Presentation": "1.0.0",
+          "UnpakSipaksi.Modules.RoadmapPenelitian.PublicApi": "1.0.0"
         },
         "runtime": {
           "UnpakSipaksi.Modules.RoadmapPenelitian.Infrastructure.dll": {}
@@ -3258,6 +3631,11 @@
         },
         "runtime": {
           "UnpakSipaksi.Modules.RoadmapPenelitian.Presentation.dll": {}
+        }
+      },
+      "UnpakSipaksi.Modules.RoadmapPenelitian.PublicApi/1.0.0": {
+        "runtime": {
+          "UnpakSipaksi.Modules.RoadmapPenelitian.PublicApi.dll": {}
         }
       },
       "UnpakSipaksi.Modules.RumpunIlmu1.Application/1.0.0": {
@@ -3442,7 +3820,8 @@
           "UnpakSipaksi.Common.Infrastructure": "1.0.0",
           "UnpakSipaksi.Modules.RumusanPrioritasMitra.Application": "1.0.0",
           "UnpakSipaksi.Modules.RumusanPrioritasMitra.Domain": "1.0.0",
-          "UnpakSipaksi.Modules.RumusanPrioritasMitra.Presentation": "1.0.0"
+          "UnpakSipaksi.Modules.RumusanPrioritasMitra.Presentation": "1.0.0",
+          "UnpakSipaksi.Modules.RumusanPrioritasMitra.PublicApi": "1.0.0"
         },
         "runtime": {
           "UnpakSipaksi.Modules.RumusanPrioritasMitra.Infrastructure.dll": {}
@@ -3456,6 +3835,11 @@
         },
         "runtime": {
           "UnpakSipaksi.Modules.RumusanPrioritasMitra.Presentation.dll": {}
+        }
+      },
+      "UnpakSipaksi.Modules.RumusanPrioritasMitra.PublicApi/1.0.0": {
+        "runtime": {
+          "UnpakSipaksi.Modules.RumusanPrioritasMitra.PublicApi.dll": {}
         }
       },
       "UnpakSipaksi.Modules.Satuan.Application/1.0.0": {
@@ -3530,7 +3914,8 @@
           "UnpakSipaksi.Common.Infrastructure": "1.0.0",
           "UnpakSipaksi.Modules.SotaKebaharuan.Application": "1.0.0",
           "UnpakSipaksi.Modules.SotaKebaharuan.Domain": "1.0.0",
-          "UnpakSipaksi.Modules.SotaKebaharuan.Presentation": "1.0.0"
+          "UnpakSipaksi.Modules.SotaKebaharuan.Presentation": "1.0.0",
+          "UnpakSipaksi.Modules.SotaKebaharuan.PublicApi": "1.0.0"
         },
         "runtime": {
           "UnpakSipaksi.Modules.SotaKebaharuan.Infrastructure.dll": {}
@@ -3544,6 +3929,89 @@
         },
         "runtime": {
           "UnpakSipaksi.Modules.SotaKebaharuan.Presentation.dll": {}
+        }
+      },
+      "UnpakSipaksi.Modules.SotaKebaharuan.PublicApi/1.0.0": {
+        "dependencies": {
+          "UnpakSipaksi.Modules.SotaKebaharuan.Presentation": "1.0.0"
+        },
+        "runtime": {
+          "UnpakSipaksi.Modules.SotaKebaharuan.PublicApi.dll": {}
+        }
+      },
+      "UnpakSipaksi.Modules.SubstansiBobot.Application/1.0.0": {
+        "dependencies": {
+          "Dapper": "2.1.35",
+          "MediatR": "12.4.1",
+          "UnpakSipaksi.Common.Application": "1.0.0",
+          "UnpakSipaksi.Common.Domain": "1.0.0",
+          "UnpakSipaksi.Modules.AkurasiPenelitian.PublicApi": "1.0.0",
+          "UnpakSipaksi.Modules.ArtikelMediaMassa.PublicApi": "1.0.0",
+          "UnpakSipaksi.Modules.InovasiPemecahanMasalah.PublicApi": "1.0.0",
+          "UnpakSipaksi.Modules.JumlahKolaboratorPublikasBereputasi.PublicApi": "1.0.0",
+          "UnpakSipaksi.Modules.KebaruanReferensi.PublicApi": "1.0.0",
+          "UnpakSipaksi.Modules.KejelasanPembagianTugasTim.PublicApi": "1.0.0",
+          "UnpakSipaksi.Modules.KesesuaianJadwal.PublicApi": "1.0.0",
+          "UnpakSipaksi.Modules.KesesuaianPenugasan.PublicApi": "1.0.0",
+          "UnpakSipaksi.Modules.KesesuaianSolusiMasalahMitra.PublicApi": "1.0.0",
+          "UnpakSipaksi.Modules.KesesuaianTkt.PublicApi": "1.0.0",
+          "UnpakSipaksi.Modules.KesesuaianWaktuRabLuaranFasilitas.PublicApi": "1.0.0",
+          "UnpakSipaksi.Modules.KetajamanAnalisis.PublicApi": "1.0.0",
+          "UnpakSipaksi.Modules.KetajamanPerumusanMasalah.PublicApi": "1.0.0",
+          "UnpakSipaksi.Modules.KewajaranTahapanTarget.PublicApi": "1.0.0",
+          "UnpakSipaksi.Modules.KredibilitasMitraDukungan.PublicApi": "1.0.0",
+          "UnpakSipaksi.Modules.KualitasIpteks.PublicApi": "1.0.0",
+          "UnpakSipaksi.Modules.KualitasKuantitasPublikasiJurnalIlmiah.PubliApi": "1.0.0",
+          "UnpakSipaksi.Modules.KualitasKuantitasPublikasiProsiding.PublicApi": "1.0.0",
+          "UnpakSipaksi.Modules.KuantitasStatusKi.PublicApi": "1.0.0",
+          "UnpakSipaksi.Modules.LuaranArtikel.PublicApi": "1.0.0",
+          "UnpakSipaksi.Modules.MetodeRencanaKegiatan.PublicApi": "1.0.0",
+          "UnpakSipaksi.Modules.ModelFeasibilityStudys.PublicApi": "1.0.0",
+          "UnpakSipaksi.Modules.PeningkatanKeberdayaanMitra.PublicApi": "1.0.0",
+          "UnpakSipaksi.Modules.PotensiKetercapaianLuaranDijanjikan.PublicApi": "1.0.0",
+          "UnpakSipaksi.Modules.PublikasiDisitasiProposal.PublicApi": "1.0.0",
+          "UnpakSipaksi.Modules.RelevansiKepakaranTemaProposal.PublicApi": "1.0.0",
+          "UnpakSipaksi.Modules.RelevansiKualitasReferensi.PublicApi": "1.0.0",
+          "UnpakSipaksi.Modules.RelevansiProdukKepentinganNasional.PublicApi": "1.0.0",
+          "UnpakSipaksi.Modules.RoadmapPenelitian.PublicApi": "1.0.0",
+          "UnpakSipaksi.Modules.RumusanPrioritasMitra.PublicApi": "1.0.0",
+          "UnpakSipaksi.Modules.SotaKebaharuan.PublicApi": "1.0.0",
+          "UnpakSipaksi.Modules.VideoKegiatan.PublicApi": "1.0.0"
+        },
+        "runtime": {
+          "UnpakSipaksi.Modules.SubstansiBobot.Application.dll": {}
+        }
+      },
+      "UnpakSipaksi.Modules.SubstansiBobot.Domain/1.0.0": {
+        "dependencies": {
+          "UnpakSipaksi.Common.Domain": "1.0.0"
+        },
+        "runtime": {
+          "UnpakSipaksi.Modules.SubstansiBobot.Domain.dll": {}
+        }
+      },
+      "UnpakSipaksi.Modules.SubstansiBobot.Infrastructure/1.0.0": {
+        "dependencies": {
+          "Microsoft.EntityFrameworkCore": "8.0.0",
+          "MySql.EntityFrameworkCore": "8.0.0",
+          "UnpakSipaksi.Common.Application": "1.0.0",
+          "UnpakSipaksi.Common.Infrastructure": "1.0.0",
+          "UnpakSipaksi.Modules.SubstansiBobot.Application": "1.0.0",
+          "UnpakSipaksi.Modules.SubstansiBobot.Domain": "1.0.0",
+          "UnpakSipaksi.Modules.SubstansiBobot.Presentation": "1.0.0"
+        },
+        "runtime": {
+          "UnpakSipaksi.Modules.SubstansiBobot.Infrastructure.dll": {}
+        }
+      },
+      "UnpakSipaksi.Modules.SubstansiBobot.Presentation/1.0.0": {
+        "dependencies": {
+          "UnpakSipaksi.Common.Domain": "1.0.0",
+          "UnpakSipaksi.Common.Presentation": "1.0.0",
+          "UnpakSipaksi.Modules.SubstansiBobot.Application": "1.0.0"
+        },
+        "runtime": {
+          "UnpakSipaksi.Modules.SubstansiBobot.Presentation.dll": {}
         }
       },
       "UnpakSipaksi.Modules.TemaPenelitian.Application/1.0.0": {
@@ -3648,6 +4116,55 @@
           "UnpakSipaksi.Modules.TopikPenelitian.PublicApi.dll": {}
         }
       },
+      "UnpakSipaksi.Modules.UrgensiPenelitian.Application/1.0.0": {
+        "dependencies": {
+          "Dapper": "2.1.35",
+          "MediatR": "12.4.1",
+          "UnpakSipaksi.Common.Application": "1.0.0",
+          "UnpakSipaksi.Common.Domain": "1.0.0",
+          "UnpakSipaksi.Modules.InovasiPemecahanMasalah.PublicApi": "1.0.0",
+          "UnpakSipaksi.Modules.KetajamanPerumusanMasalah.PublicApi": "1.0.0",
+          "UnpakSipaksi.Modules.RelevansiProdukKepentinganNasional.PublicApi": "1.0.0",
+          "UnpakSipaksi.Modules.RoadmapPenelitian.PublicApi": "1.0.0",
+          "UnpakSipaksi.Modules.SotaKebaharuan.PublicApi": "1.0.0",
+          "UnpakSipaksi.Modules.UrgensiPenelitian.Domain": "1.0.0"
+        },
+        "runtime": {
+          "UnpakSipaksi.Modules.UrgensiPenelitian.Application.dll": {}
+        }
+      },
+      "UnpakSipaksi.Modules.UrgensiPenelitian.Domain/1.0.0": {
+        "dependencies": {
+          "UnpakSipaksi.Common.Domain": "1.0.0"
+        },
+        "runtime": {
+          "UnpakSipaksi.Modules.UrgensiPenelitian.Domain.dll": {}
+        }
+      },
+      "UnpakSipaksi.Modules.UrgensiPenelitian.Infrastructure/1.0.0": {
+        "dependencies": {
+          "Microsoft.EntityFrameworkCore": "8.0.0",
+          "MySql.EntityFrameworkCore": "8.0.0",
+          "UnpakSipaksi.Common.Application": "1.0.0",
+          "UnpakSipaksi.Common.Infrastructure": "1.0.0",
+          "UnpakSipaksi.Modules.UrgensiPenelitian.Application": "1.0.0",
+          "UnpakSipaksi.Modules.UrgensiPenelitian.Domain": "1.0.0",
+          "UnpakSipaksi.Modules.UrgensiPenelitian.Presentation": "1.0.0"
+        },
+        "runtime": {
+          "UnpakSipaksi.Modules.UrgensiPenelitian.Infrastructure.dll": {}
+        }
+      },
+      "UnpakSipaksi.Modules.UrgensiPenelitian.Presentation/1.0.0": {
+        "dependencies": {
+          "UnpakSipaksi.Common.Domain": "1.0.0",
+          "UnpakSipaksi.Common.Presentation": "1.0.0",
+          "UnpakSipaksi.Modules.UrgensiPenelitian.Application": "1.0.0"
+        },
+        "runtime": {
+          "UnpakSipaksi.Modules.UrgensiPenelitian.Presentation.dll": {}
+        }
+      },
       "UnpakSipaksi.Modules.VideoKegiatan.Application/1.0.0": {
         "dependencies": {
           "Dapper": "2.1.35",
@@ -3676,7 +4193,8 @@
           "UnpakSipaksi.Common.Infrastructure": "1.0.0",
           "UnpakSipaksi.Modules.VideoKegiatan.Application": "1.0.0",
           "UnpakSipaksi.Modules.VideoKegiatan.Domain": "1.0.0",
-          "UnpakSipaksi.Modules.VideoKegiatan.Presentation": "1.0.0"
+          "UnpakSipaksi.Modules.VideoKegiatan.Presentation": "1.0.0",
+          "UnpakSipaksi.Modules.VideoKegiatan.PublicApi": "1.0.0"
         },
         "runtime": {
           "UnpakSipaksi.Modules.VideoKegiatan.Infrastructure.dll": {}
@@ -3690,6 +4208,11 @@
         },
         "runtime": {
           "UnpakSipaksi.Modules.VideoKegiatan.Presentation.dll": {}
+        }
+      },
+      "UnpakSipaksi.Modules.VideoKegiatan.PublicApi/1.0.0": {
+        "runtime": {
+          "UnpakSipaksi.Modules.VideoKegiatan.PublicApi.dll": {}
         }
       }
     }
@@ -4496,6 +5019,11 @@
       "serviceable": false,
       "sha512": ""
     },
+    "UnpakSipaksi.Modules.AkurasiPenelitian.PublicApi/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    },
     "UnpakSipaksi.Modules.ArtikelMediaMassa.Application/1.0.0": {
       "type": "project",
       "serviceable": false,
@@ -4512,6 +5040,11 @@
       "sha512": ""
     },
     "UnpakSipaksi.Modules.ArtikelMediaMassa.Presentation/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    },
+    "UnpakSipaksi.Modules.ArtikelMediaMassa.PublicApi/1.0.0": {
       "type": "project",
       "serviceable": false,
       "sha512": ""
@@ -4601,6 +5134,11 @@
       "serviceable": false,
       "sha512": ""
     },
+    "UnpakSipaksi.Modules.InovasiPemecahanMasalah.PublicApi/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    },
     "UnpakSipaksi.Modules.JenisPublikasi.Application/1.0.0": {
       "type": "project",
       "serviceable": false,
@@ -4637,6 +5175,11 @@
       "sha512": ""
     },
     "UnpakSipaksi.Modules.JumlahKolaboratorPublikasBereputasi.Presentation/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    },
+    "UnpakSipaksi.Modules.JumlahKolaboratorPublikasBereputasi.PublicApi/1.0.0": {
       "type": "project",
       "serviceable": false,
       "sha512": ""
@@ -4741,6 +5284,11 @@
       "serviceable": false,
       "sha512": ""
     },
+    "UnpakSipaksi.Modules.KategoriTkt.PublicApi/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    },
     "UnpakSipaksi.Modules.KebaruanReferensi.Application/1.0.0": {
       "type": "project",
       "serviceable": false,
@@ -4761,6 +5309,11 @@
       "serviceable": false,
       "sha512": ""
     },
+    "UnpakSipaksi.Modules.KebaruanReferensi.PublicApi/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    },
     "UnpakSipaksi.Modules.KejelasanPembagianTugasTim.Application/1.0.0": {
       "type": "project",
       "serviceable": false,
@@ -4777,6 +5330,11 @@
       "sha512": ""
     },
     "UnpakSipaksi.Modules.KejelasanPembagianTugasTim.Presentation/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    },
+    "UnpakSipaksi.Modules.KejelasanPembagianTugasTim.PublicApi/1.0.0": {
       "type": "project",
       "serviceable": false,
       "sha512": ""
@@ -4841,6 +5399,11 @@
       "serviceable": false,
       "sha512": ""
     },
+    "UnpakSipaksi.Modules.KesesuaianJadwal.PublicApi/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    },
     "UnpakSipaksi.Modules.KesesuaianPenugasan.Application/1.0.0": {
       "type": "project",
       "serviceable": false,
@@ -4857,6 +5420,11 @@
       "sha512": ""
     },
     "UnpakSipaksi.Modules.KesesuaianPenugasan.Presentation/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    },
+    "UnpakSipaksi.Modules.KesesuaianPenugasan.PublicApi/1.0.0": {
       "type": "project",
       "serviceable": false,
       "sha512": ""
@@ -4881,6 +5449,11 @@
       "serviceable": false,
       "sha512": ""
     },
+    "UnpakSipaksi.Modules.KesesuaianSolusiMasalahMitra.PublicApi/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    },
     "UnpakSipaksi.Modules.KesesuaianTkt.Application/1.0.0": {
       "type": "project",
       "serviceable": false,
@@ -4897,6 +5470,11 @@
       "sha512": ""
     },
     "UnpakSipaksi.Modules.KesesuaianTkt.Presentation/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    },
+    "UnpakSipaksi.Modules.KesesuaianTkt.PublicApi/1.0.0": {
       "type": "project",
       "serviceable": false,
       "sha512": ""
@@ -4921,6 +5499,11 @@
       "serviceable": false,
       "sha512": ""
     },
+    "UnpakSipaksi.Modules.KesesuaianWaktuRabLuaranFasilitas.PublicApi/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    },
     "UnpakSipaksi.Modules.KetajamanAnalisis.Application/1.0.0": {
       "type": "project",
       "serviceable": false,
@@ -4937,6 +5520,11 @@
       "sha512": ""
     },
     "UnpakSipaksi.Modules.KetajamanAnalisis.Presentation/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    },
+    "UnpakSipaksi.Modules.KetajamanAnalisis.PublicApi/1.0.0": {
       "type": "project",
       "serviceable": false,
       "sha512": ""
@@ -4961,6 +5549,11 @@
       "serviceable": false,
       "sha512": ""
     },
+    "UnpakSipaksi.Modules.KetajamanPerumusanMasalah.PublicApi/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    },
     "UnpakSipaksi.Modules.KewajaranTahapanTarget.Application/1.0.0": {
       "type": "project",
       "serviceable": false,
@@ -4977,6 +5570,11 @@
       "sha512": ""
     },
     "UnpakSipaksi.Modules.KewajaranTahapanTarget.Presentation/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    },
+    "UnpakSipaksi.Modules.KewajaranTahapanTarget.PublicApi/1.0.0": {
       "type": "project",
       "serviceable": false,
       "sha512": ""
@@ -5021,6 +5619,11 @@
       "serviceable": false,
       "sha512": ""
     },
+    "UnpakSipaksi.Modules.KredibilitasMitraDukungan.PublicApi/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    },
     "UnpakSipaksi.Modules.KualitasIpteks.Application/1.0.0": {
       "type": "project",
       "serviceable": false,
@@ -5037,6 +5640,11 @@
       "sha512": ""
     },
     "UnpakSipaksi.Modules.KualitasIpteks.Presentation/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    },
+    "UnpakSipaksi.Modules.KualitasIpteks.PublicApi/1.0.0": {
       "type": "project",
       "serviceable": false,
       "sha512": ""
@@ -5061,6 +5669,11 @@
       "serviceable": false,
       "sha512": ""
     },
+    "UnpakSipaksi.Modules.KualitasKuantitasPublikasiJurnalIlmiah.PubliApi/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    },
     "UnpakSipaksi.Modules.KualitasKuantitasPublikasiProsiding.Application/1.0.0": {
       "type": "project",
       "serviceable": false,
@@ -5077,6 +5690,11 @@
       "sha512": ""
     },
     "UnpakSipaksi.Modules.KualitasKuantitasPublikasiProsiding.Presentation/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    },
+    "UnpakSipaksi.Modules.KualitasKuantitasPublikasiProsiding.PublicApi/1.0.0": {
       "type": "project",
       "serviceable": false,
       "sha512": ""
@@ -5101,6 +5719,11 @@
       "serviceable": false,
       "sha512": ""
     },
+    "UnpakSipaksi.Modules.KuantitasStatusKi.PublicApi/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    },
     "UnpakSipaksi.Modules.LuaranArtikel.Application/1.0.0": {
       "type": "project",
       "serviceable": false,
@@ -5117,6 +5740,31 @@
       "sha512": ""
     },
     "UnpakSipaksi.Modules.LuaranArtikel.Presentation/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    },
+    "UnpakSipaksi.Modules.LuaranArtikel.PublicApi/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    },
+    "UnpakSipaksi.Modules.Metode.Application/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    },
+    "UnpakSipaksi.Modules.Metode.Domain/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    },
+    "UnpakSipaksi.Modules.Metode.Infrastructure/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    },
+    "UnpakSipaksi.Modules.Metode.Presentation/1.0.0": {
       "type": "project",
       "serviceable": false,
       "sha512": ""
@@ -5141,6 +5789,11 @@
       "serviceable": false,
       "sha512": ""
     },
+    "UnpakSipaksi.Modules.MetodeRencanaKegiatan.PublicApi/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    },
     "UnpakSipaksi.Modules.ModelFeasibilityStudys.Application/1.0.0": {
       "type": "project",
       "serviceable": false,
@@ -5161,6 +5814,31 @@
       "serviceable": false,
       "sha512": ""
     },
+    "UnpakSipaksi.Modules.ModelFeasibilityStudys.PublicApi/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    },
+    "UnpakSipaksi.Modules.Pengumuman.Application/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    },
+    "UnpakSipaksi.Modules.Pengumuman.Domain/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    },
+    "UnpakSipaksi.Modules.Pengumuman.Infrastructure/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    },
+    "UnpakSipaksi.Modules.Pengumuman.Presentation/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    },
     "UnpakSipaksi.Modules.PeningkatanKeberdayaanMitra.Application/1.0.0": {
       "type": "project",
       "serviceable": false,
@@ -5177,6 +5855,11 @@
       "sha512": ""
     },
     "UnpakSipaksi.Modules.PeningkatanKeberdayaanMitra.Presentation/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    },
+    "UnpakSipaksi.Modules.PeningkatanKeberdayaanMitra.PublicApi/1.0.0": {
       "type": "project",
       "serviceable": false,
       "sha512": ""
@@ -5221,6 +5904,11 @@
       "serviceable": false,
       "sha512": ""
     },
+    "UnpakSipaksi.Modules.PotensiKetercapaianLuaranDijanjikan.PublicApi/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    },
     "UnpakSipaksi.Modules.PrioritasRiset.Application/1.0.0": {
       "type": "project",
       "serviceable": false,
@@ -5261,6 +5949,31 @@
       "serviceable": false,
       "sha512": ""
     },
+    "UnpakSipaksi.Modules.PublikasiDisitasiProposal.PublicApi/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    },
+    "UnpakSipaksi.Modules.Referensi.Application/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    },
+    "UnpakSipaksi.Modules.Referensi.Domain/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    },
+    "UnpakSipaksi.Modules.Referensi.Infrastructure/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    },
+    "UnpakSipaksi.Modules.Referensi.Presentation/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    },
     "UnpakSipaksi.Modules.RelevansiKepakaranTemaProposal.Application/1.0.0": {
       "type": "project",
       "serviceable": false,
@@ -5277,6 +5990,11 @@
       "sha512": ""
     },
     "UnpakSipaksi.Modules.RelevansiKepakaranTemaProposal.Presentation/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    },
+    "UnpakSipaksi.Modules.RelevansiKepakaranTemaProposal.PublicApi/1.0.0": {
       "type": "project",
       "serviceable": false,
       "sha512": ""
@@ -5301,6 +6019,11 @@
       "serviceable": false,
       "sha512": ""
     },
+    "UnpakSipaksi.Modules.RelevansiKualitasReferensi.PublicApi/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    },
     "UnpakSipaksi.Modules.RelevansiProdukKepentinganNasional.Application/1.0.0": {
       "type": "project",
       "serviceable": false,
@@ -5317,6 +6040,11 @@
       "sha512": ""
     },
     "UnpakSipaksi.Modules.RelevansiProdukKepentinganNasional.Presentation/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    },
+    "UnpakSipaksi.Modules.RelevansiProdukKepentinganNasional.PublicApi/1.0.0": {
       "type": "project",
       "serviceable": false,
       "sha512": ""
@@ -5341,6 +6069,26 @@
       "serviceable": false,
       "sha512": ""
     },
+    "UnpakSipaksi.Modules.Roadmap.Application/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    },
+    "UnpakSipaksi.Modules.Roadmap.Domain/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    },
+    "UnpakSipaksi.Modules.Roadmap.Infrastructure/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    },
+    "UnpakSipaksi.Modules.Roadmap.Presentation/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    },
     "UnpakSipaksi.Modules.RoadmapPenelitian.Application/1.0.0": {
       "type": "project",
       "serviceable": false,
@@ -5357,6 +6105,11 @@
       "sha512": ""
     },
     "UnpakSipaksi.Modules.RoadmapPenelitian.Presentation/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    },
+    "UnpakSipaksi.Modules.RoadmapPenelitian.PublicApi/1.0.0": {
       "type": "project",
       "serviceable": false,
       "sha512": ""
@@ -5456,6 +6209,11 @@
       "serviceable": false,
       "sha512": ""
     },
+    "UnpakSipaksi.Modules.RumusanPrioritasMitra.PublicApi/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    },
     "UnpakSipaksi.Modules.Satuan.Application/1.0.0": {
       "type": "project",
       "serviceable": false,
@@ -5492,6 +6250,31 @@
       "sha512": ""
     },
     "UnpakSipaksi.Modules.SotaKebaharuan.Presentation/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    },
+    "UnpakSipaksi.Modules.SotaKebaharuan.PublicApi/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    },
+    "UnpakSipaksi.Modules.SubstansiBobot.Application/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    },
+    "UnpakSipaksi.Modules.SubstansiBobot.Domain/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    },
+    "UnpakSipaksi.Modules.SubstansiBobot.Infrastructure/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    },
+    "UnpakSipaksi.Modules.SubstansiBobot.Presentation/1.0.0": {
       "type": "project",
       "serviceable": false,
       "sha512": ""
@@ -5546,6 +6329,26 @@
       "serviceable": false,
       "sha512": ""
     },
+    "UnpakSipaksi.Modules.UrgensiPenelitian.Application/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    },
+    "UnpakSipaksi.Modules.UrgensiPenelitian.Domain/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    },
+    "UnpakSipaksi.Modules.UrgensiPenelitian.Infrastructure/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    },
+    "UnpakSipaksi.Modules.UrgensiPenelitian.Presentation/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    },
     "UnpakSipaksi.Modules.VideoKegiatan.Application/1.0.0": {
       "type": "project",
       "serviceable": false,
@@ -5562,6 +6365,11 @@
       "sha512": ""
     },
     "UnpakSipaksi.Modules.VideoKegiatan.Presentation/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    },
+    "UnpakSipaksi.Modules.VideoKegiatan.PublicApi/1.0.0": {
       "type": "project",
       "serviceable": false,
       "sha512": ""

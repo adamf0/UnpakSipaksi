@@ -10,10 +10,10 @@ namespace UnpakSipaksi.Modules.Satuan.Domain.Satuan
     public static class SatuanErrors
     {
         public static Error EmptyData() =>
-            Error.NotFound("Satuan.EmptyData", $"data is not found");
+            Error.NotFound("Satuan.EmptyData", "data is not found");
 
         public static Error NotFound(Guid Id) =>
-            Error.NotFound("Satuan.NotFound", $"The event with the identifier {Id} was not found");
+            Error.NotFound("Satuan.NotFound", $"Satuan with the identifier {Id} was not found");
 
     }
 }

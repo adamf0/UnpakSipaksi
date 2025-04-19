@@ -5,10 +5,6 @@ namespace UnpakSipaksi.Modules.RelevansiKualitasReferensi.Application.UpdateRele
     public sealed record UpdateRelevansiKualitasReferensiCommand(
         Guid Uuid,
         string Nama,
-        int BobotPDP,
-        int BobotTerapan,
-        int BobotKerjasama,
-        int BobotPenelitianDasar,
         int Skor
     ) : ICommand;
 }

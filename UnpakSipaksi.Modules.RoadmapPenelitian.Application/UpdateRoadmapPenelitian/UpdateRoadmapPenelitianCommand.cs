@@ -5,10 +5,6 @@ namespace UnpakSipaksi.Modules.RoadmapPenelitian.Application.UpdateRoadmapPeneli
     public sealed record UpdateRoadmapPenelitianCommand(
         Guid Uuid,
         string Nama,
-        int BobotPDP,
-        int BobotTerapan,
-        int BobotKerjasama,
-        int BobotPenelitianDasar,
         int Skor
     ) : ICommand;
 }

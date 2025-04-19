@@ -21,10 +21,6 @@ namespace UnpakSipaksi.Modules.RoadmapPenelitian.Application.UpdateRoadmapPeneli
 
             Result<Domain.RoadmapPenelitian.RoadmapPenelitian> asset = Domain.RoadmapPenelitian.RoadmapPenelitian.Update(existingRoadmapPenelitian!)
                          .ChangeNama(request.Nama)
-                         .ChangeBobotPDP(request.BobotPDP)
-                         .ChangeBobotTerapan(request.BobotTerapan)
-                         .ChangeBobotPenelitianDasar(request.BobotPenelitianDasar)
-                         .ChangeBobotKerjasama(request.BobotKerjasama)
                          .ChangeSkor(request.Skor)
                          .Build();
 

@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("UnpakSipaksi.Modules.KesesuaianJadwal.Application")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+3234ef92271897ca3d2289f2a36e5c539a76455c")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+aaf0d403bc0603653fdc9f03d566b1853de61966")]
 [assembly: System.Reflection.AssemblyProductAttribute("UnpakSipaksi.Modules.KesesuaianJadwal.Application")]
 [assembly: System.Reflection.AssemblyTitleAttribute("UnpakSipaksi.Modules.KesesuaianJadwal.Application")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

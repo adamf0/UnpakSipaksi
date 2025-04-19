@@ -1,6 +1,6 @@
 ﻿using UnpakSipaksi.Common.Application.Messaging;
 
-namespace UnpakSipaksi.Modules.KewajaranTahapanTarget.Application.UpdateKetajamanAnalisis
+namespace UnpakSipaksi.Modules.KewajaranTahapanTarget.Application.UpdateKewajaranTahapanTarget
 {
     public sealed record UpdateKewajaranTahapanTargetCommand(
         Guid Uuid,

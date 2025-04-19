@@ -1265,6 +1265,16 @@
         "frameworkReferences": [
           "Microsoft.AspNetCore.App"
         ]
+      },
+      "UnpakSipaksi.Modules.KualitasKuantitasPublikasiProsiding.PublicApi/1.0.0": {
+        "type": "project",
+        "framework": ".NETCoreApp,Version=v8.0",
+        "compile": {
+          "bin/placeholder/UnpakSipaksi.Modules.KualitasKuantitasPublikasiProsiding.PublicApi.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/UnpakSipaksi.Modules.KualitasKuantitasPublikasiProsiding.PublicApi.dll": {}
+        }
       }
     }
   },
@@ -3468,6 +3478,11 @@
       "type": "project",
       "path": "../UnpakSipaksi.Modules.KualitasKuantitasPublikasiProsiding.Presentation/UnpakSipaksi.Modules.KualitasKuantitasPublikasiProsiding.Presentation.csproj",
       "msbuildProject": "../UnpakSipaksi.Modules.KualitasKuantitasPublikasiProsiding.Presentation/UnpakSipaksi.Modules.KualitasKuantitasPublikasiProsiding.Presentation.csproj"
+    },
+    "UnpakSipaksi.Modules.KualitasKuantitasPublikasiProsiding.PublicApi/1.0.0": {
+      "type": "project",
+      "path": "../UnpakSipaksi.Modules.KualitasKuantitasPublikasiProsiding.PublicApi/UnpakSipaksi.Modules.KualitasKuantitasPublikasiProsiding.PublicApi.csproj",
+      "msbuildProject": "../UnpakSipaksi.Modules.KualitasKuantitasPublikasiProsiding.PublicApi/UnpakSipaksi.Modules.KualitasKuantitasPublikasiProsiding.PublicApi.csproj"
     }
   },
   "projectFileDependencyGroups": {
@@ -3478,7 +3493,8 @@
       "UnpakSipaksi.Common.Infrastructure >= 1.0.0",
       "UnpakSipaksi.Modules.KualitasKuantitasPublikasiProsiding.Application >= 1.0.0",
       "UnpakSipaksi.Modules.KualitasKuantitasPublikasiProsiding.Domain >= 1.0.0",
-      "UnpakSipaksi.Modules.KualitasKuantitasPublikasiProsiding.Presentation >= 1.0.0"
+      "UnpakSipaksi.Modules.KualitasKuantitasPublikasiProsiding.Presentation >= 1.0.0",
+      "UnpakSipaksi.Modules.KualitasKuantitasPublikasiProsiding.PublicApi >= 1.0.0"
     ]
   },
   "packageFolders": {
@@ -3523,6 +3539,9 @@
             },
             "C:\\dev_net\\UnpakSipaksi\\UnpakSipaksi.Modules.KualitasKuantitasPublikasiProsiding.Presentation\\UnpakSipaksi.Modules.KualitasKuantitasPublikasiProsiding.Presentation.csproj": {
               "projectPath": "C:\\dev_net\\UnpakSipaksi\\UnpakSipaksi.Modules.KualitasKuantitasPublikasiProsiding.Presentation\\UnpakSipaksi.Modules.KualitasKuantitasPublikasiProsiding.Presentation.csproj"
+            },
+            "C:\\dev_net\\UnpakSipaksi\\UnpakSipaksi.Modules.KualitasKuantitasPublikasiProsiding.PublicApi\\UnpakSipaksi.Modules.KualitasKuantitasPublikasiProsiding.PublicApi.csproj": {
+              "projectPath": "C:\\dev_net\\UnpakSipaksi\\UnpakSipaksi.Modules.KualitasKuantitasPublikasiProsiding.PublicApi\\UnpakSipaksi.Modules.KualitasKuantitasPublikasiProsiding.PublicApi.csproj"
             }
           }
         }

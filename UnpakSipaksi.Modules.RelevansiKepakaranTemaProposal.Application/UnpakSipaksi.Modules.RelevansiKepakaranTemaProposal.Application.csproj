@@ -20,6 +20,7 @@
 	<ItemGroup>
 		<ProjectReference Include="..\UnpakSipaksi.Common.Application\UnpakSipaksi.Common.Application.csproj" />
 		<ProjectReference Include="..\UnpakSipaksi.Common.Domain\UnpakSipaksi.Common.Domain.csproj" />
+		<ProjectReference Include="..\UnpakSipaksi.Modules.PublikasiDisitasiProposal.Domain\UnpakSipaksi.Modules.PublikasiDisitasiProposal.Domain.csproj" />
 		<ProjectReference Include="..\UnpakSipaksi.Modules.RelevansiKepakaranTemaProposal.Domain\UnpakSipaksi.Modules.RelevansiKepakaranTemaProposal.Domain.csproj" />
 	</ItemGroup>
 

@@ -28,6 +28,7 @@
 		<ProjectReference Include="..\UnpakSipaksi.Modules.KualitasKuantitasPublikasiProsiding.Domain\UnpakSipaksi.Modules.KualitasKuantitasPublikasiProsiding.Domain.csproj" />
 		<ProjectReference Include="..\UnpakSipaksi.Modules.KualitasKuantitasPublikasiProsiding.Presentation\UnpakSipaksi.Modules.KualitasKuantitasPublikasiProsiding.Presentation.csproj" />
 		<ProjectReference Include="..\UnpakSipaksi.Modules.KualitasKuantitasPublikasiProsiding.Domain\UnpakSipaksi.Modules.KualitasKuantitasPublikasiProsiding.Domain.csproj" />
+		<ProjectReference Include="..\UnpakSipaksi.Modules.KualitasKuantitasPublikasiProsiding.PublicApi\UnpakSipaksi.Modules.KualitasKuantitasPublikasiProsiding.PublicApi.csproj" />
 	</ItemGroup>
 
 </Project>

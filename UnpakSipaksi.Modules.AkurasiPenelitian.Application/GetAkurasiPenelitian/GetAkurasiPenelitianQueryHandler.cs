@@ -20,10 +20,6 @@ namespace UnpakSipaksi.Modules.AkurasiPenelitian.Application.GetAkurasiPenelitia
                  SELECT 
                      CAST(NULLIF(uuid, '') AS VARCHAR(36)) AS Uuid,
                      name as Nama,
-                     bobot_pdp AS BobotPDP,
-                     bobot_terapan AS BobotTerapan,
-                     bobot_kerjasama AS BobotKerjasama,
-                     bobot_penelitian_dasar AS BobotPenelitianDasar,
                      skor AS Skor 
                  FROM akurasi_penelitian 
                  WHERE uuid = @Uuid

@@ -8,11 +8,13 @@ C:\dev_net\UnpakSipaksi\UnpakSipaksi.Modules.KesesuaianPenugasan.Infrastructure\
 C:\dev_net\UnpakSipaksi\UnpakSipaksi.Modules.KesesuaianPenugasan.Infrastructure\bin\Debug\net8.0\UnpakSipaksi.Modules.KesesuaianPenugasan.Application.dll
 C:\dev_net\UnpakSipaksi\UnpakSipaksi.Modules.KesesuaianPenugasan.Infrastructure\bin\Debug\net8.0\UnpakSipaksi.Modules.KesesuaianPenugasan.Domain.dll
 C:\dev_net\UnpakSipaksi\UnpakSipaksi.Modules.KesesuaianPenugasan.Infrastructure\bin\Debug\net8.0\UnpakSipaksi.Modules.KesesuaianPenugasan.Presentation.dll
+C:\dev_net\UnpakSipaksi\UnpakSipaksi.Modules.KesesuaianPenugasan.Infrastructure\bin\Debug\net8.0\UnpakSipaksi.Modules.KesesuaianPenugasan.PublicApi.dll
 C:\dev_net\UnpakSipaksi\UnpakSipaksi.Modules.KesesuaianPenugasan.Infrastructure\bin\Debug\net8.0\UnpakSipaksi.Common.Application.pdb
 C:\dev_net\UnpakSipaksi\UnpakSipaksi.Modules.KesesuaianPenugasan.Infrastructure\bin\Debug\net8.0\UnpakSipaksi.Common.Infrastructure.pdb
 C:\dev_net\UnpakSipaksi\UnpakSipaksi.Modules.KesesuaianPenugasan.Infrastructure\bin\Debug\net8.0\UnpakSipaksi.Modules.KesesuaianPenugasan.Application.pdb
 C:\dev_net\UnpakSipaksi\UnpakSipaksi.Modules.KesesuaianPenugasan.Infrastructure\bin\Debug\net8.0\UnpakSipaksi.Modules.KesesuaianPenugasan.Domain.pdb
 C:\dev_net\UnpakSipaksi\UnpakSipaksi.Modules.KesesuaianPenugasan.Infrastructure\bin\Debug\net8.0\UnpakSipaksi.Modules.KesesuaianPenugasan.Presentation.pdb
+C:\dev_net\UnpakSipaksi\UnpakSipaksi.Modules.KesesuaianPenugasan.Infrastructure\bin\Debug\net8.0\UnpakSipaksi.Modules.KesesuaianPenugasan.PublicApi.pdb
 C:\dev_net\UnpakSipaksi\UnpakSipaksi.Modules.KesesuaianPenugasan.Infrastructure\bin\Debug\net8.0\UnpakSipaksi.Common.Domain.pdb
 C:\dev_net\UnpakSipaksi\UnpakSipaksi.Modules.KesesuaianPenugasan.Infrastructure\bin\Debug\net8.0\UnpakSipaksi.Common.Presentation.pdb
 C:\dev_net\UnpakSipaksi\UnpakSipaksi.Modules.KesesuaianPenugasan.Infrastructure\obj\Debug\net8.0\UnpakSipaksi.Modules.KesesuaianPenugasan.Infrastructure.csproj.AssemblyReference.cache
@@ -20,9 +22,9 @@ C:\dev_net\UnpakSipaksi\UnpakSipaksi.Modules.KesesuaianPenugasan.Infrastructure\
 C:\dev_net\UnpakSipaksi\UnpakSipaksi.Modules.KesesuaianPenugasan.Infrastructure\obj\Debug\net8.0\UnpakSipaksi.Modules.KesesuaianPenugasan.Infrastructure.AssemblyInfoInputs.cache
 C:\dev_net\UnpakSipaksi\UnpakSipaksi.Modules.KesesuaianPenugasan.Infrastructure\obj\Debug\net8.0\UnpakSipaksi.Modules.KesesuaianPenugasan.Infrastructure.AssemblyInfo.cs
 C:\dev_net\UnpakSipaksi\UnpakSipaksi.Modules.KesesuaianPenugasan.Infrastructure\obj\Debug\net8.0\UnpakSipaksi.Modules.KesesuaianPenugasan.Infrastructure.csproj.CoreCompileInputs.cache
+C:\dev_net\UnpakSipaksi\UnpakSipaksi.Modules.KesesuaianPenugasan.Infrastructure\obj\Debug\net8.0\UnpakSipaksi.Modules.KesesuaianPenugasan.Infrastructure.sourcelink.json
 C:\dev_net\UnpakSipaksi\UnpakSipaksi.Modules.KesesuaianPenugasan.Infrastructure\obj\Debug\net8.0\UnpakSip.3528D73B.Up2Date
 C:\dev_net\UnpakSipaksi\UnpakSipaksi.Modules.KesesuaianPenugasan.Infrastructure\obj\Debug\net8.0\UnpakSipaksi.Modules.KesesuaianPenugasan.Infrastructure.dll
 C:\dev_net\UnpakSipaksi\UnpakSipaksi.Modules.KesesuaianPenugasan.Infrastructure\obj\Debug\net8.0\refint\UnpakSipaksi.Modules.KesesuaianPenugasan.Infrastructure.dll
 C:\dev_net\UnpakSipaksi\UnpakSipaksi.Modules.KesesuaianPenugasan.Infrastructure\obj\Debug\net8.0\UnpakSipaksi.Modules.KesesuaianPenugasan.Infrastructure.pdb
 C:\dev_net\UnpakSipaksi\UnpakSipaksi.Modules.KesesuaianPenugasan.Infrastructure\obj\Debug\net8.0\ref\UnpakSipaksi.Modules.KesesuaianPenugasan.Infrastructure.dll
-C:\dev_net\UnpakSipaksi\UnpakSipaksi.Modules.KesesuaianPenugasan.Infrastructure\obj\Debug\net8.0\UnpakSipaksi.Modules.KesesuaianPenugasan.Infrastructure.sourcelink.json

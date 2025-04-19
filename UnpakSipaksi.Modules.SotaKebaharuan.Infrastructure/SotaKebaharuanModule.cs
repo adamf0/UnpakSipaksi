@@ -7,8 +7,10 @@ using UnpakSipaksi.Common.Infrastructure.Data;
 using UnpakSipaksi.Modules.SotaKebaharuan.Application.Abstractions.Data;
 using UnpakSipaksi.Modules.SotaKebaharuan.Domain.SotaKebaharuan;
 using UnpakSipaksi.Modules.SotaKebaharuan.Infrastructure.Database;
+using UnpakSipaksi.Modules.SotaKebaharuan.Infrastructure.PublicApi;
 using UnpakSipaksi.Modules.SotaKebaharuan.Infrastructure.SotaKebaharuan;
 using UnpakSipaksi.Modules.SotaKebaharuan.Presentation.SotaKebaharuan;
+using UnpakSipaksi.Modules.SotaKebaharuan.PublicApi;
 
 namespace UnpakSipaksi.Modules.SotaKebaharuan.Infrastructure
 {
@@ -38,6 +40,8 @@ namespace UnpakSipaksi.Modules.SotaKebaharuan.Infrastructure
             services.AddDbContext<SotaKebaharuanDbContext>(optionsBuilder => optionsBuilder.UseMySQL(databaseConnectionString));
 
             services.AddScoped<ISotaKebaharuanRepository, SotaKebaharuanRepository>();
+
+            services.AddScoped<ISotaKebaharuanApi, SotaKebaharuanApi>();
 
             services.AddScoped<IUnitOfWork>(sp => sp.GetRequiredService<SotaKebaharuanDbContext>());
         }

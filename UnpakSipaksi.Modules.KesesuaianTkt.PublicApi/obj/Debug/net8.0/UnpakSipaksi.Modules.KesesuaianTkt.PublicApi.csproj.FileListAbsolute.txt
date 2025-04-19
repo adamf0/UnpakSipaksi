@@ -1,0 +1,12 @@
+C:\dev_net\UnpakSipaksi\UnpakSipaksi.Modules.KesesuaianTkt.PublicApi\bin\Debug\net8.0\UnpakSipaksi.Modules.KesesuaianTkt.PublicApi.deps.json
+C:\dev_net\UnpakSipaksi\UnpakSipaksi.Modules.KesesuaianTkt.PublicApi\bin\Debug\net8.0\UnpakSipaksi.Modules.KesesuaianTkt.PublicApi.dll
+C:\dev_net\UnpakSipaksi\UnpakSipaksi.Modules.KesesuaianTkt.PublicApi\bin\Debug\net8.0\UnpakSipaksi.Modules.KesesuaianTkt.PublicApi.pdb
+C:\dev_net\UnpakSipaksi\UnpakSipaksi.Modules.KesesuaianTkt.PublicApi\obj\Debug\net8.0\UnpakSipaksi.Modules.KesesuaianTkt.PublicApi.GeneratedMSBuildEditorConfig.editorconfig
+C:\dev_net\UnpakSipaksi\UnpakSipaksi.Modules.KesesuaianTkt.PublicApi\obj\Debug\net8.0\UnpakSipaksi.Modules.KesesuaianTkt.PublicApi.AssemblyInfoInputs.cache
+C:\dev_net\UnpakSipaksi\UnpakSipaksi.Modules.KesesuaianTkt.PublicApi\obj\Debug\net8.0\UnpakSipaksi.Modules.KesesuaianTkt.PublicApi.AssemblyInfo.cs
+C:\dev_net\UnpakSipaksi\UnpakSipaksi.Modules.KesesuaianTkt.PublicApi\obj\Debug\net8.0\UnpakSipaksi.Modules.KesesuaianTkt.PublicApi.csproj.CoreCompileInputs.cache
+C:\dev_net\UnpakSipaksi\UnpakSipaksi.Modules.KesesuaianTkt.PublicApi\obj\Debug\net8.0\UnpakSipaksi.Modules.KesesuaianTkt.PublicApi.sourcelink.json
+C:\dev_net\UnpakSipaksi\UnpakSipaksi.Modules.KesesuaianTkt.PublicApi\obj\Debug\net8.0\UnpakSipaksi.Modules.KesesuaianTkt.PublicApi.dll
+C:\dev_net\UnpakSipaksi\UnpakSipaksi.Modules.KesesuaianTkt.PublicApi\obj\Debug\net8.0\refint\UnpakSipaksi.Modules.KesesuaianTkt.PublicApi.dll
+C:\dev_net\UnpakSipaksi\UnpakSipaksi.Modules.KesesuaianTkt.PublicApi\obj\Debug\net8.0\UnpakSipaksi.Modules.KesesuaianTkt.PublicApi.pdb
+C:\dev_net\UnpakSipaksi\UnpakSipaksi.Modules.KesesuaianTkt.PublicApi\obj\Debug\net8.0\ref\UnpakSipaksi.Modules.KesesuaianTkt.PublicApi.dll

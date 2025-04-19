@@ -28,6 +28,7 @@
 		<ProjectReference Include="..\UnpakSipaksi.Modules.KategoriTkt.Domain\UnpakSipaksi.Modules.KategoriTkt.Domain.csproj" />
 		<ProjectReference Include="..\UnpakSipaksi.Modules.KategoriTkt.Presentation\UnpakSipaksi.Modules.KategoriTkt.Presentation.csproj" />
 		<ProjectReference Include="..\UnpakSipaksi.Modules.KategoriTkt.Domain\UnpakSipaksi.Modules.KategoriTkt.Domain.csproj" />
+		<ProjectReference Include="..\UnpakSipaksi.Modules.KategoriTkt.PublicApi\UnpakSipaksi.Modules.KategoriTkt.PublicApi.csproj" />
 	</ItemGroup>
 
 </Project>

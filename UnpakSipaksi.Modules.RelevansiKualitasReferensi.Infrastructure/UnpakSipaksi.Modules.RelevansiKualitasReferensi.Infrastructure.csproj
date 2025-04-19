@@ -28,6 +28,7 @@
 		<ProjectReference Include="..\UnpakSipaksi.Modules.RelevansiKualitasReferensi.Domain\UnpakSipaksi.Modules.RelevansiKualitasReferensi.Domain.csproj" />
 		<ProjectReference Include="..\UnpakSipaksi.Modules.RelevansiKualitasReferensi.Presentation\UnpakSipaksi.Modules.RelevansiKualitasReferensi.Presentation.csproj" />
 		<ProjectReference Include="..\UnpakSipaksi.Modules.RelevansiKualitasReferensi.Domain\UnpakSipaksi.Modules.RelevansiKualitasReferensi.Domain.csproj" />
+		<ProjectReference Include="..\UnpakSipaksi.Modules.RelevansiKualitasReferensi.PublicApi\UnpakSipaksi.Modules.RelevansiKualitasReferensi.PublicApi.csproj" />
 	</ItemGroup>
 
 </Project>

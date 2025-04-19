@@ -8,7 +8,9 @@ using UnpakSipaksi.Modules.LuaranArtikel.Application.Abstractions.Data;
 using UnpakSipaksi.Modules.LuaranArtikel.Domain.LuaranArtikel;
 using UnpakSipaksi.Modules.LuaranArtikel.Infrastructure.Database;
 using UnpakSipaksi.Modules.LuaranArtikel.Infrastructure.LuaranArtikel;
+using UnpakSipaksi.Modules.LuaranArtikel.Infrastructure.PublicApi;
 using UnpakSipaksi.Modules.LuaranArtikel.Presentation.LuaranArtikel;
+using UnpakSipaksi.Modules.LuaranArtikel.PublicApi;
 
 namespace UnpakSipaksi.Modules.LuaranArtikel.Infrastructure
 {
@@ -38,6 +40,8 @@ namespace UnpakSipaksi.Modules.LuaranArtikel.Infrastructure
             services.AddDbContext<LuaranArtikelDbContext>(optionsBuilder => optionsBuilder.UseMySQL(databaseConnectionString));
 
             services.AddScoped<ILuaranArtikelRepository, LuaranArtikelRepository>();
+
+            services.AddScoped<ILuaranArtikelApi, LuaranArtikelApi>();
 
             services.AddScoped<IUnitOfWork>(sp => sp.GetRequiredService<LuaranArtikelDbContext>());
         }

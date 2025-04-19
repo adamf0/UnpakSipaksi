@@ -12,6 +12,7 @@
           "MediatR": "12.4.1",
           "UnpakSipaksi.Common.Application": "1.0.0",
           "UnpakSipaksi.Common.Domain": "1.0.0",
+          "UnpakSipaksi.Modules.PublikasiDisitasiProposal.Domain": "1.0.0",
           "UnpakSipaksi.Modules.RelevansiKepakaranTemaProposal.Domain": "1.0.0"
         },
         "runtime": {
@@ -149,6 +150,14 @@
           "UnpakSipaksi.Common.Domain.dll": {}
         }
       },
+      "UnpakSipaksi.Modules.PublikasiDisitasiProposal.Domain/1.0.0": {
+        "dependencies": {
+          "UnpakSipaksi.Common.Domain": "1.0.0"
+        },
+        "runtime": {
+          "UnpakSipaksi.Modules.PublikasiDisitasiProposal.Domain.dll": {}
+        }
+      },
       "UnpakSipaksi.Modules.RelevansiKepakaranTemaProposal.Domain/1.0.0": {
         "dependencies": {
           "UnpakSipaksi.Common.Domain": "1.0.0"
@@ -255,6 +264,11 @@
       "sha512": ""
     },
     "UnpakSipaksi.Common.Domain/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    },
+    "UnpakSipaksi.Modules.PublikasiDisitasiProposal.Domain/1.0.0": {
       "type": "project",
       "serviceable": false,
       "sha512": ""

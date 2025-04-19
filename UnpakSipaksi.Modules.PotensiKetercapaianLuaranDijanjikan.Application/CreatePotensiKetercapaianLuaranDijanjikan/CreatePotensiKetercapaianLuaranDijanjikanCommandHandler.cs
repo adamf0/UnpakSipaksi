@@ -14,10 +14,6 @@ namespace UnpakSipaksi.Modules.PotensiKetercapaianLuaranDijanjikan.Application.C
         {
             Result<Domain.PotensiKetercapaianLuaranDijanjikan.PotensiKetercapaianLuaranDijanjikan> result = Domain.PotensiKetercapaianLuaranDijanjikan.PotensiKetercapaianLuaranDijanjikan.Create(
                 request.Nama,
-                request.BobotPDP,
-                request.BobotTerapan,
-                request.BobotKerjasama,
-                request.BobotPenelitianDasar,
                 request.Skor
             );
 

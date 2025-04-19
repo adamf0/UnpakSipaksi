@@ -7,7 +7,6 @@ using UnpakSipaksi.Common.Presentation.ApiResults;
 using UnpakSipaksi.Modules.KesesuaianJadwal.Application.GetKesesuaianJadwal;
 using UnpakSipaksi.Modules.KesesuaianJadwal.Application.GetAllKesesuaianJadwal;
 using UnpakSipaksi.Modules.KesesuaianJadwal.Presentation;
-using UnpakSipaksi.Modules.KesesuaianJadwal.Application.GetkesesuaianJadwalRepository;
 
 namespace UnpakSipaksi.Modules.KesesuaianJadwal.Presentation.KesesuaianJadwal
 {

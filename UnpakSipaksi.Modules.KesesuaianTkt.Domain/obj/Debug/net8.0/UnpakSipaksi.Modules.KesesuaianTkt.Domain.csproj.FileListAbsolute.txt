@@ -8,9 +8,9 @@ C:\dev_net\UnpakSipaksi\UnpakSipaksi.Modules.KesesuaianTkt.Domain\obj\Debug\net8
 C:\dev_net\UnpakSipaksi\UnpakSipaksi.Modules.KesesuaianTkt.Domain\obj\Debug\net8.0\UnpakSipaksi.Modules.KesesuaianTkt.Domain.AssemblyInfoInputs.cache
 C:\dev_net\UnpakSipaksi\UnpakSipaksi.Modules.KesesuaianTkt.Domain\obj\Debug\net8.0\UnpakSipaksi.Modules.KesesuaianTkt.Domain.AssemblyInfo.cs
 C:\dev_net\UnpakSipaksi\UnpakSipaksi.Modules.KesesuaianTkt.Domain\obj\Debug\net8.0\UnpakSipaksi.Modules.KesesuaianTkt.Domain.csproj.CoreCompileInputs.cache
+C:\dev_net\UnpakSipaksi\UnpakSipaksi.Modules.KesesuaianTkt.Domain\obj\Debug\net8.0\UnpakSipaksi.Modules.KesesuaianTkt.Domain.sourcelink.json
 C:\dev_net\UnpakSipaksi\UnpakSipaksi.Modules.KesesuaianTkt.Domain\obj\Debug\net8.0\UnpakSip.F10C0752.Up2Date
 C:\dev_net\UnpakSipaksi\UnpakSipaksi.Modules.KesesuaianTkt.Domain\obj\Debug\net8.0\UnpakSipaksi.Modules.KesesuaianTkt.Domain.dll
 C:\dev_net\UnpakSipaksi\UnpakSipaksi.Modules.KesesuaianTkt.Domain\obj\Debug\net8.0\refint\UnpakSipaksi.Modules.KesesuaianTkt.Domain.dll
 C:\dev_net\UnpakSipaksi\UnpakSipaksi.Modules.KesesuaianTkt.Domain\obj\Debug\net8.0\UnpakSipaksi.Modules.KesesuaianTkt.Domain.pdb
 C:\dev_net\UnpakSipaksi\UnpakSipaksi.Modules.KesesuaianTkt.Domain\obj\Debug\net8.0\ref\UnpakSipaksi.Modules.KesesuaianTkt.Domain.dll
-C:\dev_net\UnpakSipaksi\UnpakSipaksi.Modules.KesesuaianTkt.Domain\obj\Debug\net8.0\UnpakSipaksi.Modules.KesesuaianTkt.Domain.sourcelink.json

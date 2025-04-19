@@ -14,6 +14,8 @@ using UnpakSipaksi.Modules.KesesuaianWaktuRabLuaranFasilitas.Domain.KesesuaianWa
 using UnpakSipaksi.Modules.KesesuaianWaktuRabLuaranFasilitas.Presentation.KesesuaianWaktuRabLuaranFasilitas;
 using UnpakSipaksi.Modules.KesesuaianWaktuRabLuaranFasilitas.Infrastructure.KesesuaianWaktuRabLuaranFasilitas;
 using UnpakSipaksi.Modules.KesesuaianWaktuRabLuaranFasilitas.Infrastructure.Database;
+using UnpakSipaksi.Modules.KesesuaianWaktuRabLuaranFasilitas.PublicApi;
+using UnpakSipaksi.Modules.KesesuaianWaktuRabLuaranFasilitas.Infrastructure.PublicApi;
 
 namespace UnpakSipaksi.Modules.KesesuaianWaktuRabLuaranFasilitas.Infrastructure
 {
@@ -43,6 +45,8 @@ namespace UnpakSipaksi.Modules.KesesuaianWaktuRabLuaranFasilitas.Infrastructure
             services.AddDbContext<KesesuaianWaktuRabLuaranFasilitasDbContext>(optionsBuilder => optionsBuilder.UseMySQL(databaseConnectionString));
 
             services.AddScoped<IKesesuaianWaktuRabLuaranFasilitasRepository, KesesuaianWaktuRabLuaranFasilitasRepository>();
+
+            services.AddScoped<IKesesuaianWaktuRabLuaranFasilitasApi, KesesuaianWaktuRabLuaranFasilitasApi>();
 
             services.AddScoped<IUnitOfWork>(sp => sp.GetRequiredService<KesesuaianWaktuRabLuaranFasilitasDbContext>());
         }

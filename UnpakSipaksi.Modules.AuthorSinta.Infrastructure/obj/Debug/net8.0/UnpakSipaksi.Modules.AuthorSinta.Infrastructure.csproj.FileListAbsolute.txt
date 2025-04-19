@@ -1,8 +1,3 @@
-C:\dev_net\UnpakSipaksi\UnpakSipaksi.Modules.AuthorSinta.Infrastructure\obj\Debug\net8.0\UnpakSipaksi.Modules.AuthorSinta.Infrastructure.csproj.AssemblyReference.cache
-C:\dev_net\UnpakSipaksi\UnpakSipaksi.Modules.AuthorSinta.Infrastructure\obj\Debug\net8.0\UnpakSipaksi.Modules.AuthorSinta.Infrastructure.GeneratedMSBuildEditorConfig.editorconfig
-C:\dev_net\UnpakSipaksi\UnpakSipaksi.Modules.AuthorSinta.Infrastructure\obj\Debug\net8.0\UnpakSipaksi.Modules.AuthorSinta.Infrastructure.AssemblyInfoInputs.cache
-C:\dev_net\UnpakSipaksi\UnpakSipaksi.Modules.AuthorSinta.Infrastructure\obj\Debug\net8.0\UnpakSipaksi.Modules.AuthorSinta.Infrastructure.AssemblyInfo.cs
-C:\dev_net\UnpakSipaksi\UnpakSipaksi.Modules.AuthorSinta.Infrastructure\obj\Debug\net8.0\UnpakSipaksi.Modules.AuthorSinta.Infrastructure.csproj.CoreCompileInputs.cache
 C:\dev_net\UnpakSipaksi\UnpakSipaksi.Modules.AuthorSinta.Infrastructure\bin\Debug\net8.0\UnpakSipaksi.Modules.AuthorSinta.Infrastructure.deps.json
 C:\dev_net\UnpakSipaksi\UnpakSipaksi.Modules.AuthorSinta.Infrastructure\bin\Debug\net8.0\UnpakSipaksi.Modules.AuthorSinta.Infrastructure.dll
 C:\dev_net\UnpakSipaksi\UnpakSipaksi.Modules.AuthorSinta.Infrastructure\bin\Debug\net8.0\UnpakSipaksi.Modules.AuthorSinta.Infrastructure.pdb
@@ -20,9 +15,14 @@ C:\dev_net\UnpakSipaksi\UnpakSipaksi.Modules.AuthorSinta.Infrastructure\bin\Debu
 C:\dev_net\UnpakSipaksi\UnpakSipaksi.Modules.AuthorSinta.Infrastructure\bin\Debug\net8.0\UnpakSipaksi.Modules.AuthorSinta.Presentation.pdb
 C:\dev_net\UnpakSipaksi\UnpakSipaksi.Modules.AuthorSinta.Infrastructure\bin\Debug\net8.0\UnpakSipaksi.Common.Domain.pdb
 C:\dev_net\UnpakSipaksi\UnpakSipaksi.Modules.AuthorSinta.Infrastructure\bin\Debug\net8.0\UnpakSipaksi.Common.Presentation.pdb
+C:\dev_net\UnpakSipaksi\UnpakSipaksi.Modules.AuthorSinta.Infrastructure\obj\Debug\net8.0\UnpakSipaksi.Modules.AuthorSinta.Infrastructure.csproj.AssemblyReference.cache
+C:\dev_net\UnpakSipaksi\UnpakSipaksi.Modules.AuthorSinta.Infrastructure\obj\Debug\net8.0\UnpakSipaksi.Modules.AuthorSinta.Infrastructure.GeneratedMSBuildEditorConfig.editorconfig
+C:\dev_net\UnpakSipaksi\UnpakSipaksi.Modules.AuthorSinta.Infrastructure\obj\Debug\net8.0\UnpakSipaksi.Modules.AuthorSinta.Infrastructure.AssemblyInfoInputs.cache
+C:\dev_net\UnpakSipaksi\UnpakSipaksi.Modules.AuthorSinta.Infrastructure\obj\Debug\net8.0\UnpakSipaksi.Modules.AuthorSinta.Infrastructure.AssemblyInfo.cs
+C:\dev_net\UnpakSipaksi\UnpakSipaksi.Modules.AuthorSinta.Infrastructure\obj\Debug\net8.0\UnpakSipaksi.Modules.AuthorSinta.Infrastructure.csproj.CoreCompileInputs.cache
+C:\dev_net\UnpakSipaksi\UnpakSipaksi.Modules.AuthorSinta.Infrastructure\obj\Debug\net8.0\UnpakSipaksi.Modules.AuthorSinta.Infrastructure.sourcelink.json
 C:\dev_net\UnpakSipaksi\UnpakSipaksi.Modules.AuthorSinta.Infrastructure\obj\Debug\net8.0\UnpakSip.81EE066E.Up2Date
 C:\dev_net\UnpakSipaksi\UnpakSipaksi.Modules.AuthorSinta.Infrastructure\obj\Debug\net8.0\UnpakSipaksi.Modules.AuthorSinta.Infrastructure.dll
 C:\dev_net\UnpakSipaksi\UnpakSipaksi.Modules.AuthorSinta.Infrastructure\obj\Debug\net8.0\refint\UnpakSipaksi.Modules.AuthorSinta.Infrastructure.dll
 C:\dev_net\UnpakSipaksi\UnpakSipaksi.Modules.AuthorSinta.Infrastructure\obj\Debug\net8.0\UnpakSipaksi.Modules.AuthorSinta.Infrastructure.pdb
 C:\dev_net\UnpakSipaksi\UnpakSipaksi.Modules.AuthorSinta.Infrastructure\obj\Debug\net8.0\ref\UnpakSipaksi.Modules.AuthorSinta.Infrastructure.dll
-C:\dev_net\UnpakSipaksi\UnpakSipaksi.Modules.AuthorSinta.Infrastructure\obj\Debug\net8.0\UnpakSipaksi.Modules.AuthorSinta.Infrastructure.sourcelink.json

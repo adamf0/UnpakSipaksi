@@ -14,6 +14,8 @@ using UnpakSipaksi.Modules.KebaruanReferensi.Domain.KebaruanReferensi;
 using UnpakSipaksi.Modules.KebaruanReferensi.Presentation.KebaruanReferensi;
 using UnpakSipaksi.Modules.KebaruanReferensi.Infrastructure.Database;
 using UnpakSipaksi.Modules.KebaruanReferensi.Infrastructure.KebaruanReferensi;
+using UnpakSipaksi.Modules.KebaruanReferensi.Infrastructure.PublicApi;
+using UnpakSipaksi.Modules.KebaruanReferensi.PublicApi;
 
 namespace UnpakSipaksi.Modules.KebaruanReferensi.Infrastructure
 {
@@ -43,6 +45,8 @@ namespace UnpakSipaksi.Modules.KebaruanReferensi.Infrastructure
             services.AddDbContext<KebaruanReferensiDbContext>(optionsBuilder => optionsBuilder.UseMySQL(databaseConnectionString));
 
             services.AddScoped<IKebaruanReferensiRepository, KebaruanReferensiRepository>();
+
+            services.AddScoped<IKebaruanReferensiApi, KebaruanReferensiApi>();
 
             services.AddScoped<IUnitOfWork>(sp => sp.GetRequiredService<KebaruanReferensiDbContext>());
         }

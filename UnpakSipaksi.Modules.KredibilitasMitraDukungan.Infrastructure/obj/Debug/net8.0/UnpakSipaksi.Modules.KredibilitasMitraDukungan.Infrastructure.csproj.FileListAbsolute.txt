@@ -8,11 +8,13 @@ C:\dev_net\UnpakSipaksi\UnpakSipaksi.Modules.KredibilitasMitraDukungan.Infrastru
 C:\dev_net\UnpakSipaksi\UnpakSipaksi.Modules.KredibilitasMitraDukungan.Infrastructure\bin\Debug\net8.0\UnpakSipaksi.Modules.KredibilitasMitraDukungan.Application.dll
 C:\dev_net\UnpakSipaksi\UnpakSipaksi.Modules.KredibilitasMitraDukungan.Infrastructure\bin\Debug\net8.0\UnpakSipaksi.Modules.KredibilitasMitraDukungan.Domain.dll
 C:\dev_net\UnpakSipaksi\UnpakSipaksi.Modules.KredibilitasMitraDukungan.Infrastructure\bin\Debug\net8.0\UnpakSipaksi.Modules.KredibilitasMitraDukungan.Presentation.dll
+C:\dev_net\UnpakSipaksi\UnpakSipaksi.Modules.KredibilitasMitraDukungan.Infrastructure\bin\Debug\net8.0\UnpakSipaksi.Modules.KredibilitasMitraDukungan.PublicApi.dll
 C:\dev_net\UnpakSipaksi\UnpakSipaksi.Modules.KredibilitasMitraDukungan.Infrastructure\bin\Debug\net8.0\UnpakSipaksi.Common.Application.pdb
 C:\dev_net\UnpakSipaksi\UnpakSipaksi.Modules.KredibilitasMitraDukungan.Infrastructure\bin\Debug\net8.0\UnpakSipaksi.Common.Infrastructure.pdb
 C:\dev_net\UnpakSipaksi\UnpakSipaksi.Modules.KredibilitasMitraDukungan.Infrastructure\bin\Debug\net8.0\UnpakSipaksi.Modules.KredibilitasMitraDukungan.Application.pdb
 C:\dev_net\UnpakSipaksi\UnpakSipaksi.Modules.KredibilitasMitraDukungan.Infrastructure\bin\Debug\net8.0\UnpakSipaksi.Modules.KredibilitasMitraDukungan.Domain.pdb
 C:\dev_net\UnpakSipaksi\UnpakSipaksi.Modules.KredibilitasMitraDukungan.Infrastructure\bin\Debug\net8.0\UnpakSipaksi.Modules.KredibilitasMitraDukungan.Presentation.pdb
+C:\dev_net\UnpakSipaksi\UnpakSipaksi.Modules.KredibilitasMitraDukungan.Infrastructure\bin\Debug\net8.0\UnpakSipaksi.Modules.KredibilitasMitraDukungan.PublicApi.pdb
 C:\dev_net\UnpakSipaksi\UnpakSipaksi.Modules.KredibilitasMitraDukungan.Infrastructure\bin\Debug\net8.0\UnpakSipaksi.Common.Domain.pdb
 C:\dev_net\UnpakSipaksi\UnpakSipaksi.Modules.KredibilitasMitraDukungan.Infrastructure\bin\Debug\net8.0\UnpakSipaksi.Common.Presentation.pdb
 C:\dev_net\UnpakSipaksi\UnpakSipaksi.Modules.KredibilitasMitraDukungan.Infrastructure\obj\Debug\net8.0\UnpakSipaksi.Modules.KredibilitasMitraDukungan.Infrastructure.csproj.AssemblyReference.cache

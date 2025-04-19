@@ -8,11 +8,13 @@ C:\dev_net\UnpakSipaksi\UnpakSipaksi.Modules.RelevansiKualitasReferensi.Infrastr
 C:\dev_net\UnpakSipaksi\UnpakSipaksi.Modules.RelevansiKualitasReferensi.Infrastructure\bin\Debug\net8.0\UnpakSipaksi.Modules.RelevansiKualitasReferensi.Application.dll
 C:\dev_net\UnpakSipaksi\UnpakSipaksi.Modules.RelevansiKualitasReferensi.Infrastructure\bin\Debug\net8.0\UnpakSipaksi.Modules.RelevansiKualitasReferensi.Domain.dll
 C:\dev_net\UnpakSipaksi\UnpakSipaksi.Modules.RelevansiKualitasReferensi.Infrastructure\bin\Debug\net8.0\UnpakSipaksi.Modules.RelevansiKualitasReferensi.Presentation.dll
+C:\dev_net\UnpakSipaksi\UnpakSipaksi.Modules.RelevansiKualitasReferensi.Infrastructure\bin\Debug\net8.0\UnpakSipaksi.Modules.RelevansiKualitasReferensi.PublicApi.dll
 C:\dev_net\UnpakSipaksi\UnpakSipaksi.Modules.RelevansiKualitasReferensi.Infrastructure\bin\Debug\net8.0\UnpakSipaksi.Common.Application.pdb
 C:\dev_net\UnpakSipaksi\UnpakSipaksi.Modules.RelevansiKualitasReferensi.Infrastructure\bin\Debug\net8.0\UnpakSipaksi.Common.Infrastructure.pdb
 C:\dev_net\UnpakSipaksi\UnpakSipaksi.Modules.RelevansiKualitasReferensi.Infrastructure\bin\Debug\net8.0\UnpakSipaksi.Modules.RelevansiKualitasReferensi.Application.pdb
 C:\dev_net\UnpakSipaksi\UnpakSipaksi.Modules.RelevansiKualitasReferensi.Infrastructure\bin\Debug\net8.0\UnpakSipaksi.Modules.RelevansiKualitasReferensi.Domain.pdb
 C:\dev_net\UnpakSipaksi\UnpakSipaksi.Modules.RelevansiKualitasReferensi.Infrastructure\bin\Debug\net8.0\UnpakSipaksi.Modules.RelevansiKualitasReferensi.Presentation.pdb
+C:\dev_net\UnpakSipaksi\UnpakSipaksi.Modules.RelevansiKualitasReferensi.Infrastructure\bin\Debug\net8.0\UnpakSipaksi.Modules.RelevansiKualitasReferensi.PublicApi.pdb
 C:\dev_net\UnpakSipaksi\UnpakSipaksi.Modules.RelevansiKualitasReferensi.Infrastructure\bin\Debug\net8.0\UnpakSipaksi.Common.Domain.pdb
 C:\dev_net\UnpakSipaksi\UnpakSipaksi.Modules.RelevansiKualitasReferensi.Infrastructure\bin\Debug\net8.0\UnpakSipaksi.Common.Presentation.pdb
 C:\dev_net\UnpakSipaksi\UnpakSipaksi.Modules.RelevansiKualitasReferensi.Infrastructure\obj\Debug\net8.0\UnpakSipaksi.Modules.RelevansiKualitasReferensi.Infrastructure.csproj.AssemblyReference.cache

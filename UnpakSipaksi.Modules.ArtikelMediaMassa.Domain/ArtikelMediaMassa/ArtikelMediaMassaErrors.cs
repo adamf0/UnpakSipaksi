@@ -10,10 +10,13 @@ namespace UnpakSipaksi.Modules.ArtikelMediaMassa.Domain.ArtikelMediaMassa
     public static class ArtikelMediaMassaErrors
     {
         public static Error EmptyData() =>
-            Error.NotFound("ArtikelMediaMassa.EmptyData", $"data is not found");
-
+            Error.NotFound("ArtikelMediaMassa.EmptyData", "data is not found");
+        public static Error NotSameValue() =>
+            Error.NotFound("ArtikelMediaMassa.NotSameValue", "not the same value in data 'nilai'");
+        public static Error UnknownKategoriSkema() =>
+            Error.NotFound("ArtikelMediaMassa.UnknownKategoriSkema", "Unknown schema category");
         public static Error NotFound(Guid Id) =>
-            Error.NotFound("ArtikelMediaMassa.NotFound", $"The event with the identifier {Id} was not found");
+            Error.NotFound("ArtikelMediaMassa.NotFound", $"Artikel media massa with identifier {Id} not found");
 
     }
 }

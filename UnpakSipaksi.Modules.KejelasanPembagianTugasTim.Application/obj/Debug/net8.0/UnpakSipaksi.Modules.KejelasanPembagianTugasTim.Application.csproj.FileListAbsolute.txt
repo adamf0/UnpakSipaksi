@@ -12,9 +12,9 @@ C:\dev_net\UnpakSipaksi\UnpakSipaksi.Modules.KejelasanPembagianTugasTim.Applicat
 C:\dev_net\UnpakSipaksi\UnpakSipaksi.Modules.KejelasanPembagianTugasTim.Application\obj\Debug\net8.0\UnpakSipaksi.Modules.KejelasanPembagianTugasTim.Application.AssemblyInfoInputs.cache
 C:\dev_net\UnpakSipaksi\UnpakSipaksi.Modules.KejelasanPembagianTugasTim.Application\obj\Debug\net8.0\UnpakSipaksi.Modules.KejelasanPembagianTugasTim.Application.AssemblyInfo.cs
 C:\dev_net\UnpakSipaksi\UnpakSipaksi.Modules.KejelasanPembagianTugasTim.Application\obj\Debug\net8.0\UnpakSipaksi.Modules.KejelasanPembagianTugasTim.Application.csproj.CoreCompileInputs.cache
+C:\dev_net\UnpakSipaksi\UnpakSipaksi.Modules.KejelasanPembagianTugasTim.Application\obj\Debug\net8.0\UnpakSipaksi.Modules.KejelasanPembagianTugasTim.Application.sourcelink.json
 C:\dev_net\UnpakSipaksi\UnpakSipaksi.Modules.KejelasanPembagianTugasTim.Application\obj\Debug\net8.0\UnpakSip.7EEE56DA.Up2Date
 C:\dev_net\UnpakSipaksi\UnpakSipaksi.Modules.KejelasanPembagianTugasTim.Application\obj\Debug\net8.0\UnpakSipaksi.Modules.KejelasanPembagianTugasTim.Application.dll
 C:\dev_net\UnpakSipaksi\UnpakSipaksi.Modules.KejelasanPembagianTugasTim.Application\obj\Debug\net8.0\refint\UnpakSipaksi.Modules.KejelasanPembagianTugasTim.Application.dll
 C:\dev_net\UnpakSipaksi\UnpakSipaksi.Modules.KejelasanPembagianTugasTim.Application\obj\Debug\net8.0\UnpakSipaksi.Modules.KejelasanPembagianTugasTim.Application.pdb
 C:\dev_net\UnpakSipaksi\UnpakSipaksi.Modules.KejelasanPembagianTugasTim.Application\obj\Debug\net8.0\ref\UnpakSipaksi.Modules.KejelasanPembagianTugasTim.Application.dll
-C:\dev_net\UnpakSipaksi\UnpakSipaksi.Modules.KejelasanPembagianTugasTim.Application\obj\Debug\net8.0\UnpakSipaksi.Modules.KejelasanPembagianTugasTim.Application.sourcelink.json

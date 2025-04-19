@@ -7,8 +7,10 @@ using UnpakSipaksi.Common.Infrastructure.Data;
 using UnpakSipaksi.Modules.RelevansiProdukKepentinganNasional.Application.Abstractions.Data;
 using UnpakSipaksi.Modules.RelevansiProdukKepentinganNasional.Domain.RelevansiProdukKepentinganNasional;
 using UnpakSipaksi.Modules.RelevansiProdukKepentinganNasional.Infrastructure.Database;
+using UnpakSipaksi.Modules.RelevansiProdukKepentinganNasional.Infrastructure.PublicApi;
 using UnpakSipaksi.Modules.RelevansiProdukKepentinganNasional.Infrastructure.RelevansiProdukKepentinganNasional;
 using UnpakSipaksi.Modules.RelevansiProdukKepentinganNasional.Presentation.RelevansiProdukKepentinganNasional;
+using UnpakSipaksi.Modules.RelevansiProdukKepentinganNasional.PublicApi;
 
 namespace UnpakSipaksi.Modules.RelevansiProdukKepentinganNasional.Infrastructure
 {
@@ -38,6 +40,8 @@ namespace UnpakSipaksi.Modules.RelevansiProdukKepentinganNasional.Infrastructure
             services.AddDbContext<RelevansiProdukKepentinganNasionalDbContext>(optionsBuilder => optionsBuilder.UseMySQL(databaseConnectionString));
 
             services.AddScoped<IRelevansiProdukKepentinganNasionalRepository, RelevansiProdukKepentinganNasionalRepository>();
+
+            services.AddScoped<IRelevansiProdukKepentinganNasionalApi, RelevansiProdukKepentinganNasionalApi>();
 
             services.AddScoped<IUnitOfWork>(sp => sp.GetRequiredService<RelevansiProdukKepentinganNasionalDbContext>());
         }

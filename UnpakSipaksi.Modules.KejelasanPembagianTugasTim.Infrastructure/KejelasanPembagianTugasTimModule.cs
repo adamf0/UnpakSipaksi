@@ -14,6 +14,8 @@ using UnpakSipaksi.Modules.KejelasanPembagianTugasTim.Domain.KejelasanPembagianT
 using UnpakSipaksi.Modules.KejelasanPembagianTugasTim.Presentation.KejelasanPembagianTugasTim;
 using UnpakSipaksi.Modules.KejelasanPembagianTugasTim.Infrastructure.KejelasanPembagianTugasTim;
 using UnpakSipaksi.Modules.KejelasanPembagianTugasTim.Infrastructure.Database;
+using UnpakSipaksi.Modules.KejelasanPembagianTugasTim.PublicApi;
+using UnpakSipaksi.Modules.KejelasanPembagianTugasTim.Infrastructure.PublicApi;
 
 namespace UnpakSipaksi.Modules.KejelasanPembagianTugasTim.Infrastructure
 {
@@ -43,6 +45,8 @@ namespace UnpakSipaksi.Modules.KejelasanPembagianTugasTim.Infrastructure
             services.AddDbContext<KejelasanPembagianTugasTimDbContext>(optionsBuilder => optionsBuilder.UseMySQL(databaseConnectionString));
 
             services.AddScoped<IKejelasanPembagianTugasTimRepository, KejelasanPembagianTugasTimRepository>();
+
+            services.AddScoped<IKejelasanPembagianTugasTimApi, KejelasanPembagianTugasTimApi>();
 
             services.AddScoped<IUnitOfWork>(sp => sp.GetRequiredService<KejelasanPembagianTugasTimDbContext>());
         }

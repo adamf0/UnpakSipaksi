@@ -28,6 +28,7 @@
 		<ProjectReference Include="..\UnpakSipaksi.Modules.KualitasIpteks.Domain\UnpakSipaksi.Modules.KualitasIpteks.Domain.csproj" />
 		<ProjectReference Include="..\UnpakSipaksi.Modules.KualitasIpteks.Presentation\UnpakSipaksi.Modules.KualitasIpteks.Presentation.csproj" />
 		<ProjectReference Include="..\UnpakSipaksi.Modules.KualitasIpteks.Domain\UnpakSipaksi.Modules.KualitasIpteks.Domain.csproj" />
+		<ProjectReference Include="..\UnpakSipaksi.Modules.KualitasIpteks.PublicApi\UnpakSipaksi.Modules.KualitasIpteks.PublicApi.csproj" />
 	</ItemGroup>
 
 </Project>

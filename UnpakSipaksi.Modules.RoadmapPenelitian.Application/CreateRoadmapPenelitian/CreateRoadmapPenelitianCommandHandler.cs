@@ -14,10 +14,6 @@ namespace UnpakSipaksi.Modules.RoadmapPenelitian.Application.CreateRoadmapPeneli
         {
             Result<Domain.RoadmapPenelitian.RoadmapPenelitian> result = Domain.RoadmapPenelitian.RoadmapPenelitian.Create(
                 request.Nama,
-                request.BobotPDP,
-                request.BobotTerapan,
-                request.BobotKerjasama,
-                request.BobotPenelitianDasar,
                 request.Skor
             );
 

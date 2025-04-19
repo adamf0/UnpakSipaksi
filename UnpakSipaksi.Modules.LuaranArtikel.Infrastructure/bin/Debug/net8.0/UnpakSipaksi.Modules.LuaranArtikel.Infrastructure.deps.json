@@ -14,7 +14,8 @@
           "UnpakSipaksi.Common.Infrastructure": "1.0.0",
           "UnpakSipaksi.Modules.LuaranArtikel.Application": "1.0.0",
           "UnpakSipaksi.Modules.LuaranArtikel.Domain": "1.0.0",
-          "UnpakSipaksi.Modules.LuaranArtikel.Presentation": "1.0.0"
+          "UnpakSipaksi.Modules.LuaranArtikel.Presentation": "1.0.0",
+          "UnpakSipaksi.Modules.LuaranArtikel.PublicApi": "1.0.0"
         },
         "runtime": {
           "UnpakSipaksi.Modules.LuaranArtikel.Infrastructure.dll": {}
@@ -699,6 +700,11 @@
         "runtime": {
           "UnpakSipaksi.Modules.LuaranArtikel.Presentation.dll": {}
         }
+      },
+      "UnpakSipaksi.Modules.LuaranArtikel.PublicApi/1.0.0": {
+        "runtime": {
+          "UnpakSipaksi.Modules.LuaranArtikel.PublicApi.dll": {}
+        }
       }
     }
   },
@@ -1215,6 +1221,11 @@
       "sha512": ""
     },
     "UnpakSipaksi.Modules.LuaranArtikel.Presentation/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    },
+    "UnpakSipaksi.Modules.LuaranArtikel.PublicApi/1.0.0": {
       "type": "project",
       "serviceable": false,
       "sha512": ""

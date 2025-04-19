@@ -28,6 +28,7 @@
 		<ProjectReference Include="..\UnpakSipaksi.Modules.RelevansiKepakaranTemaProposal.Domain\UnpakSipaksi.Modules.RelevansiKepakaranTemaProposal.Domain.csproj" />
 		<ProjectReference Include="..\UnpakSipaksi.Modules.RelevansiKepakaranTemaProposal.Presentation\UnpakSipaksi.Modules.RelevansiKepakaranTemaProposal.Presentation.csproj" />
 		<ProjectReference Include="..\UnpakSipaksi.Modules.RelevansiKepakaranTemaProposal.Domain\UnpakSipaksi.Modules.RelevansiKepakaranTemaProposal.Domain.csproj" />
+		<ProjectReference Include="..\UnpakSipaksi.Modules.RelevansiKepakaranTemaProposal.PublicApi\UnpakSipaksi.Modules.RelevansiKepakaranTemaProposal.PublicApi.csproj" />
 	</ItemGroup>
 
 </Project>

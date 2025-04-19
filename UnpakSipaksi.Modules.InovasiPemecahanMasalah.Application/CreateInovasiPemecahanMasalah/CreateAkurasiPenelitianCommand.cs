@@ -9,10 +9,6 @@ namespace UnpakSipaksi.Modules.InovasiPemecahanMasalah.Application.CreateInovasi
 {
     public sealed record CreateInovasiPemecahanMasalahCommand(
         string Nama,
-        int BobotPDP,
-        int BobotTerapan,
-        int BobotKerjasama,
-        int BobotPenelitianDasar,
         int Skor
     ) : ICommand<Guid>;
 }

@@ -14,6 +14,8 @@ using UnpakSipaksi.Modules.KesesuaianPenugasan.Domain.KesesuaianPenugasan;
 using UnpakSipaksi.Modules.KesesuaianPenugasan.Presentation.KesesuaianPenugasan;
 using UnpakSipaksi.Modules.KesesuaianPenugasan.Infrastructure.KesesuaianPenugasan;
 using UnpakSipaksi.Modules.KesesuaianPenugasan.Infrastructure.Database;
+using UnpakSipaksi.Modules.KesesuaianPenugasan.PublicApi;
+using UnpakSipaksi.Modules.KesesuaianPenugasan.Infrastructure.PublicApi;
 
 namespace UnpakSipaksi.Modules.KesesuaianPenugasan.Infrastructure
 {
@@ -43,6 +45,8 @@ namespace UnpakSipaksi.Modules.KesesuaianPenugasan.Infrastructure
             services.AddDbContext<KesesuaianPenugasanDbContext>(optionsBuilder => optionsBuilder.UseMySQL(databaseConnectionString));
 
             services.AddScoped<IKesesuaianPenugasanRepository, KesesuaianPenugasanRepository>();
+
+            services.AddScoped<IKesesuaianPenugasanApi, KesesuaianPenugasanApi>();
 
             services.AddScoped<IUnitOfWork>(sp => sp.GetRequiredService<KesesuaianPenugasanDbContext>());
         }

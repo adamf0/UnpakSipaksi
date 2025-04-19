@@ -5,10 +5,6 @@ namespace UnpakSipaksi.Modules.PotensiKetercapaianLuaranDijanjikan.Application.U
     public sealed record UpdatePotensiKetercapaianLuaranDijanjikanCommand(
         Guid Uuid,
         string Nama,
-        int BobotPDP,
-        int BobotTerapan,
-        int BobotKerjasama,
-        int BobotPenelitianDasar,
         int Skor
     ) : ICommand;
 }

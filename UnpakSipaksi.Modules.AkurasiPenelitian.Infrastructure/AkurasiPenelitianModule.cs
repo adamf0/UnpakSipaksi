@@ -13,7 +13,9 @@ using UnpakSipaksi.Modules.AkurasiPenelitian.Application.Abstractions.Data;
 using UnpakSipaksi.Modules.AkurasiPenelitian.Domain.AkurasiPenelitian;
 using UnpakSipaksi.Modules.AkurasiPenelitian.Infrastructure.AkurasiPenelitian;
 using UnpakSipaksi.Modules.AkurasiPenelitian.Infrastructure.Database;
+using UnpakSipaksi.Modules.AkurasiPenelitian.Infrastructure.PublicApi;
 using UnpakSipaksi.Modules.AkurasiPenelitian.Presentation.AkurasiPenelitian;
+using UnpakSipaksi.Modules.AkurasiPenelitian.PublicApi;
 
 namespace UnpakSipaksi.Modules.AkurasiPenelitian.Infrastructure
 {
@@ -43,6 +45,8 @@ namespace UnpakSipaksi.Modules.AkurasiPenelitian.Infrastructure
             services.AddDbContext<AkurasiPenelitianDbContext>(optionsBuilder => optionsBuilder.UseMySQL(databaseConnectionString));
 
             services.AddScoped<IAkurasiPenelitianRepository, AkurasiPenelitianRepository>();
+
+            services.AddScoped<IAkurasiPenelitianApi, AkurasiPenelitianApi>();
 
             services.AddScoped<IUnitOfWork>(sp => sp.GetRequiredService<AkurasiPenelitianDbContext>());
         }

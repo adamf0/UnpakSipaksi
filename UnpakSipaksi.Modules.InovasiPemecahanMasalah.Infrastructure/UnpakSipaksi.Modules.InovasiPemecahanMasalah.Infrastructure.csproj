@@ -28,6 +28,7 @@
 		<ProjectReference Include="..\UnpakSipaksi.Modules.InovasiPemecahanMasalah.Domain\UnpakSipaksi.Modules.InovasiPemecahanMasalah.Domain.csproj" />
 		<ProjectReference Include="..\UnpakSipaksi.Modules.InovasiPemecahanMasalah.Presentation\UnpakSipaksi.Modules.InovasiPemecahanMasalah.Presentation.csproj" />
 		<ProjectReference Include="..\UnpakSipaksi.Modules.InovasiPemecahanMasalah.Domain\UnpakSipaksi.Modules.InovasiPemecahanMasalah.Domain.csproj" />
+		<ProjectReference Include="..\UnpakSipaksi.Modules.InovasiPemecahanMasalah.PublicApi\UnpakSipaksi.Modules.InovasiPemecahanMasalah.PublicApi.csproj" />
 	</ItemGroup>
 
 </Project>

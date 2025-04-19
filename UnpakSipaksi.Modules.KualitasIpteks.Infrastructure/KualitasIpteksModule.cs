@@ -8,7 +8,9 @@ using UnpakSipaksi.Modules.KualitasIpteks.Application.Abstractions.Data;
 using UnpakSipaksi.Modules.KualitasIpteks.Domain.KualitasIpteks;
 using UnpakSipaksi.Modules.KualitasIpteks.Infrastructure.Database;
 using UnpakSipaksi.Modules.KualitasIpteks.Infrastructure.KualitasIpteks;
+using UnpakSipaksi.Modules.KualitasIpteks.Infrastructure.PublicApi;
 using UnpakSipaksi.Modules.KualitasIpteks.Presentation.KualitasIpteks;
+using UnpakSipaksi.Modules.KualitasIpteks.PublicApi;
 
 namespace UnpakSipaksi.Modules.KualitasIpteks.Infrastructure
 {
@@ -38,6 +40,8 @@ namespace UnpakSipaksi.Modules.KualitasIpteks.Infrastructure
             services.AddDbContext<KualitasIpteksDbContext>(optionsBuilder => optionsBuilder.UseMySQL(databaseConnectionString));
 
             services.AddScoped<IKualitasIpteksRepository, KualitasIpteksRepository>();
+
+            services.AddScoped<IKualitasIpteksApi, KualitasIpteksApi>();
 
             services.AddScoped<IUnitOfWork>(sp => sp.GetRequiredService<KualitasIpteksDbContext>());
         }

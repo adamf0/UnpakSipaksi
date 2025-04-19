@@ -10,10 +10,6 @@ namespace UnpakSipaksi.Modules.AkurasiPenelitian.Application.UpdateAkurasiPeneli
     public sealed record UpdateAkurasiPenelitianCommand(
         Guid Uuid,
         string Nama,
-        int BobotPDP,
-        int BobotTerapan,
-        int BobotKerjasama,
-        int BobotPenelitianDasar,
         int Skor
     ) : ICommand;
 }

@@ -1,9 +1,3 @@
-C:\dev_net\UnpakSipaksi\UnpakSipaksi.Modules.RoadmapPenelitian.Application\obj\Debug\net8.0\UnpakSipaksi.Modules.RoadmapPenelitian.Application.csproj.AssemblyReference.cache
-C:\dev_net\UnpakSipaksi\UnpakSipaksi.Modules.RoadmapPenelitian.Application\obj\Debug\net8.0\UnpakSipaksi.Modules.RoadmapPenelitian.Application.GeneratedMSBuildEditorConfig.editorconfig
-C:\dev_net\UnpakSipaksi\UnpakSipaksi.Modules.RoadmapPenelitian.Application\obj\Debug\net8.0\UnpakSipaksi.Modules.RoadmapPenelitian.Application.AssemblyInfoInputs.cache
-C:\dev_net\UnpakSipaksi\UnpakSipaksi.Modules.RoadmapPenelitian.Application\obj\Debug\net8.0\UnpakSipaksi.Modules.RoadmapPenelitian.Application.AssemblyInfo.cs
-C:\dev_net\UnpakSipaksi\UnpakSipaksi.Modules.RoadmapPenelitian.Application\obj\Debug\net8.0\UnpakSipaksi.Modules.RoadmapPenelitian.Application.csproj.CoreCompileInputs.cache
-C:\dev_net\UnpakSipaksi\UnpakSipaksi.Modules.RoadmapPenelitian.Application\obj\Debug\net8.0\UnpakSipaksi.Modules.RoadmapPenelitian.Application.sourcelink.json
 C:\dev_net\UnpakSipaksi\UnpakSipaksi.Modules.RoadmapPenelitian.Application\bin\Debug\net8.0\UnpakSipaksi.Modules.RoadmapPenelitian.Application.deps.json
 C:\dev_net\UnpakSipaksi\UnpakSipaksi.Modules.RoadmapPenelitian.Application\bin\Debug\net8.0\UnpakSipaksi.Modules.RoadmapPenelitian.Application.dll
 C:\dev_net\UnpakSipaksi\UnpakSipaksi.Modules.RoadmapPenelitian.Application\bin\Debug\net8.0\UnpakSipaksi.Modules.RoadmapPenelitian.Application.pdb
@@ -13,6 +7,12 @@ C:\dev_net\UnpakSipaksi\UnpakSipaksi.Modules.RoadmapPenelitian.Application\bin\D
 C:\dev_net\UnpakSipaksi\UnpakSipaksi.Modules.RoadmapPenelitian.Application\bin\Debug\net8.0\UnpakSipaksi.Common.Application.pdb
 C:\dev_net\UnpakSipaksi\UnpakSipaksi.Modules.RoadmapPenelitian.Application\bin\Debug\net8.0\UnpakSipaksi.Common.Domain.pdb
 C:\dev_net\UnpakSipaksi\UnpakSipaksi.Modules.RoadmapPenelitian.Application\bin\Debug\net8.0\UnpakSipaksi.Modules.RoadmapPenelitian.Domain.pdb
+C:\dev_net\UnpakSipaksi\UnpakSipaksi.Modules.RoadmapPenelitian.Application\obj\Debug\net8.0\UnpakSipaksi.Modules.RoadmapPenelitian.Application.csproj.AssemblyReference.cache
+C:\dev_net\UnpakSipaksi\UnpakSipaksi.Modules.RoadmapPenelitian.Application\obj\Debug\net8.0\UnpakSipaksi.Modules.RoadmapPenelitian.Application.GeneratedMSBuildEditorConfig.editorconfig
+C:\dev_net\UnpakSipaksi\UnpakSipaksi.Modules.RoadmapPenelitian.Application\obj\Debug\net8.0\UnpakSipaksi.Modules.RoadmapPenelitian.Application.AssemblyInfoInputs.cache
+C:\dev_net\UnpakSipaksi\UnpakSipaksi.Modules.RoadmapPenelitian.Application\obj\Debug\net8.0\UnpakSipaksi.Modules.RoadmapPenelitian.Application.AssemblyInfo.cs
+C:\dev_net\UnpakSipaksi\UnpakSipaksi.Modules.RoadmapPenelitian.Application\obj\Debug\net8.0\UnpakSipaksi.Modules.RoadmapPenelitian.Application.csproj.CoreCompileInputs.cache
+C:\dev_net\UnpakSipaksi\UnpakSipaksi.Modules.RoadmapPenelitian.Application\obj\Debug\net8.0\UnpakSipaksi.Modules.RoadmapPenelitian.Application.sourcelink.json
 C:\dev_net\UnpakSipaksi\UnpakSipaksi.Modules.RoadmapPenelitian.Application\obj\Debug\net8.0\UnpakSip.887F68EC.Up2Date
 C:\dev_net\UnpakSipaksi\UnpakSipaksi.Modules.RoadmapPenelitian.Application\obj\Debug\net8.0\UnpakSipaksi.Modules.RoadmapPenelitian.Application.dll
 C:\dev_net\UnpakSipaksi\UnpakSipaksi.Modules.RoadmapPenelitian.Application\obj\Debug\net8.0\refint\UnpakSipaksi.Modules.RoadmapPenelitian.Application.dll

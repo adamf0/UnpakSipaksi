@@ -5,8 +5,8 @@ C:\dev_net\UnpakSipaksi\UnpakSipaksi.Common.Domain\obj\Debug\net8.0\UnpakSipaksi
 C:\dev_net\UnpakSipaksi\UnpakSipaksi.Common.Domain\obj\Debug\net8.0\UnpakSipaksi.Common.Domain.AssemblyInfoInputs.cache
 C:\dev_net\UnpakSipaksi\UnpakSipaksi.Common.Domain\obj\Debug\net8.0\UnpakSipaksi.Common.Domain.AssemblyInfo.cs
 C:\dev_net\UnpakSipaksi\UnpakSipaksi.Common.Domain\obj\Debug\net8.0\UnpakSipaksi.Common.Domain.csproj.CoreCompileInputs.cache
+C:\dev_net\UnpakSipaksi\UnpakSipaksi.Common.Domain\obj\Debug\net8.0\UnpakSipaksi.Common.Domain.sourcelink.json
 C:\dev_net\UnpakSipaksi\UnpakSipaksi.Common.Domain\obj\Debug\net8.0\UnpakSipaksi.Common.Domain.dll
 C:\dev_net\UnpakSipaksi\UnpakSipaksi.Common.Domain\obj\Debug\net8.0\refint\UnpakSipaksi.Common.Domain.dll
 C:\dev_net\UnpakSipaksi\UnpakSipaksi.Common.Domain\obj\Debug\net8.0\UnpakSipaksi.Common.Domain.pdb
 C:\dev_net\UnpakSipaksi\UnpakSipaksi.Common.Domain\obj\Debug\net8.0\ref\UnpakSipaksi.Common.Domain.dll
-C:\dev_net\UnpakSipaksi\UnpakSipaksi.Common.Domain\obj\Debug\net8.0\UnpakSipaksi.Common.Domain.sourcelink.json

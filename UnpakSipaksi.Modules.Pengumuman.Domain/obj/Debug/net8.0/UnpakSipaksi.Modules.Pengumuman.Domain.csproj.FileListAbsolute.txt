@@ -1,0 +1,16 @@
+C:\dev_net\UnpakSipaksi\UnpakSipaksi.Modules.Pengumuman.Domain\bin\Debug\net8.0\UnpakSipaksi.Modules.Pengumuman.Domain.deps.json
+C:\dev_net\UnpakSipaksi\UnpakSipaksi.Modules.Pengumuman.Domain\bin\Debug\net8.0\UnpakSipaksi.Modules.Pengumuman.Domain.dll
+C:\dev_net\UnpakSipaksi\UnpakSipaksi.Modules.Pengumuman.Domain\bin\Debug\net8.0\UnpakSipaksi.Modules.Pengumuman.Domain.pdb
+C:\dev_net\UnpakSipaksi\UnpakSipaksi.Modules.Pengumuman.Domain\bin\Debug\net8.0\UnpakSipaksi.Common.Domain.dll
+C:\dev_net\UnpakSipaksi\UnpakSipaksi.Modules.Pengumuman.Domain\bin\Debug\net8.0\UnpakSipaksi.Common.Domain.pdb
+C:\dev_net\UnpakSipaksi\UnpakSipaksi.Modules.Pengumuman.Domain\obj\Debug\net8.0\UnpakSipaksi.Modules.Pengumuman.Domain.csproj.AssemblyReference.cache
+C:\dev_net\UnpakSipaksi\UnpakSipaksi.Modules.Pengumuman.Domain\obj\Debug\net8.0\UnpakSipaksi.Modules.Pengumuman.Domain.GeneratedMSBuildEditorConfig.editorconfig
+C:\dev_net\UnpakSipaksi\UnpakSipaksi.Modules.Pengumuman.Domain\obj\Debug\net8.0\UnpakSipaksi.Modules.Pengumuman.Domain.AssemblyInfoInputs.cache
+C:\dev_net\UnpakSipaksi\UnpakSipaksi.Modules.Pengumuman.Domain\obj\Debug\net8.0\UnpakSipaksi.Modules.Pengumuman.Domain.AssemblyInfo.cs
+C:\dev_net\UnpakSipaksi\UnpakSipaksi.Modules.Pengumuman.Domain\obj\Debug\net8.0\UnpakSipaksi.Modules.Pengumuman.Domain.csproj.CoreCompileInputs.cache
+C:\dev_net\UnpakSipaksi\UnpakSipaksi.Modules.Pengumuman.Domain\obj\Debug\net8.0\UnpakSipaksi.Modules.Pengumuman.Domain.sourcelink.json
+C:\dev_net\UnpakSipaksi\UnpakSipaksi.Modules.Pengumuman.Domain\obj\Debug\net8.0\UnpakSip.277B0CC9.Up2Date
+C:\dev_net\UnpakSipaksi\UnpakSipaksi.Modules.Pengumuman.Domain\obj\Debug\net8.0\UnpakSipaksi.Modules.Pengumuman.Domain.dll
+C:\dev_net\UnpakSipaksi\UnpakSipaksi.Modules.Pengumuman.Domain\obj\Debug\net8.0\refint\UnpakSipaksi.Modules.Pengumuman.Domain.dll
+C:\dev_net\UnpakSipaksi\UnpakSipaksi.Modules.Pengumuman.Domain\obj\Debug\net8.0\UnpakSipaksi.Modules.Pengumuman.Domain.pdb
+C:\dev_net\UnpakSipaksi\UnpakSipaksi.Modules.Pengumuman.Domain\obj\Debug\net8.0\ref\UnpakSipaksi.Modules.Pengumuman.Domain.dll

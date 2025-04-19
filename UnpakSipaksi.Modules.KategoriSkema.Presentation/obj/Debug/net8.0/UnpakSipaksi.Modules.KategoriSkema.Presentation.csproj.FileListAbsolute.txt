@@ -1,9 +1,3 @@
-C:\dev_net\UnpakSipaksi\UnpakSipaksi.Modules.KategoriSkema.Presentation\obj\Debug\net8.0\UnpakSipaksi.Modules.KategoriSkema.Presentation.csproj.AssemblyReference.cache
-C:\dev_net\UnpakSipaksi\UnpakSipaksi.Modules.KategoriSkema.Presentation\obj\Debug\net8.0\UnpakSipaksi.Modules.KategoriSkema.Presentation.GeneratedMSBuildEditorConfig.editorconfig
-C:\dev_net\UnpakSipaksi\UnpakSipaksi.Modules.KategoriSkema.Presentation\obj\Debug\net8.0\UnpakSipaksi.Modules.KategoriSkema.Presentation.AssemblyInfoInputs.cache
-C:\dev_net\UnpakSipaksi\UnpakSipaksi.Modules.KategoriSkema.Presentation\obj\Debug\net8.0\UnpakSipaksi.Modules.KategoriSkema.Presentation.AssemblyInfo.cs
-C:\dev_net\UnpakSipaksi\UnpakSipaksi.Modules.KategoriSkema.Presentation\obj\Debug\net8.0\UnpakSipaksi.Modules.KategoriSkema.Presentation.csproj.CoreCompileInputs.cache
-C:\dev_net\UnpakSipaksi\UnpakSipaksi.Modules.KategoriSkema.Presentation\obj\Debug\net8.0\UnpakSipaksi.Modules.KategoriSkema.Presentation.sourcelink.json
 C:\dev_net\UnpakSipaksi\UnpakSipaksi.Modules.KategoriSkema.Presentation\bin\Debug\net8.0\UnpakSipaksi.Modules.KategoriSkema.Presentation.deps.json
 C:\dev_net\UnpakSipaksi\UnpakSipaksi.Modules.KategoriSkema.Presentation\bin\Debug\net8.0\UnpakSipaksi.Modules.KategoriSkema.Presentation.dll
 C:\dev_net\UnpakSipaksi\UnpakSipaksi.Modules.KategoriSkema.Presentation\bin\Debug\net8.0\UnpakSipaksi.Modules.KategoriSkema.Presentation.pdb
@@ -17,6 +11,12 @@ C:\dev_net\UnpakSipaksi\UnpakSipaksi.Modules.KategoriSkema.Presentation\bin\Debu
 C:\dev_net\UnpakSipaksi\UnpakSipaksi.Modules.KategoriSkema.Presentation\bin\Debug\net8.0\UnpakSipaksi.Modules.KategoriSkema.Application.pdb
 C:\dev_net\UnpakSipaksi\UnpakSipaksi.Modules.KategoriSkema.Presentation\bin\Debug\net8.0\UnpakSipaksi.Common.Application.pdb
 C:\dev_net\UnpakSipaksi\UnpakSipaksi.Modules.KategoriSkema.Presentation\bin\Debug\net8.0\UnpakSipaksi.Modules.KategoriSkema.Domain.pdb
+C:\dev_net\UnpakSipaksi\UnpakSipaksi.Modules.KategoriSkema.Presentation\obj\Debug\net8.0\UnpakSipaksi.Modules.KategoriSkema.Presentation.csproj.AssemblyReference.cache
+C:\dev_net\UnpakSipaksi\UnpakSipaksi.Modules.KategoriSkema.Presentation\obj\Debug\net8.0\UnpakSipaksi.Modules.KategoriSkema.Presentation.GeneratedMSBuildEditorConfig.editorconfig
+C:\dev_net\UnpakSipaksi\UnpakSipaksi.Modules.KategoriSkema.Presentation\obj\Debug\net8.0\UnpakSipaksi.Modules.KategoriSkema.Presentation.AssemblyInfoInputs.cache
+C:\dev_net\UnpakSipaksi\UnpakSipaksi.Modules.KategoriSkema.Presentation\obj\Debug\net8.0\UnpakSipaksi.Modules.KategoriSkema.Presentation.AssemblyInfo.cs
+C:\dev_net\UnpakSipaksi\UnpakSipaksi.Modules.KategoriSkema.Presentation\obj\Debug\net8.0\UnpakSipaksi.Modules.KategoriSkema.Presentation.csproj.CoreCompileInputs.cache
+C:\dev_net\UnpakSipaksi\UnpakSipaksi.Modules.KategoriSkema.Presentation\obj\Debug\net8.0\UnpakSipaksi.Modules.KategoriSkema.Presentation.sourcelink.json
 C:\dev_net\UnpakSipaksi\UnpakSipaksi.Modules.KategoriSkema.Presentation\obj\Debug\net8.0\UnpakSip.315D1EC2.Up2Date
 C:\dev_net\UnpakSipaksi\UnpakSipaksi.Modules.KategoriSkema.Presentation\obj\Debug\net8.0\UnpakSipaksi.Modules.KategoriSkema.Presentation.dll
 C:\dev_net\UnpakSipaksi\UnpakSipaksi.Modules.KategoriSkema.Presentation\obj\Debug\net8.0\refint\UnpakSipaksi.Modules.KategoriSkema.Presentation.dll

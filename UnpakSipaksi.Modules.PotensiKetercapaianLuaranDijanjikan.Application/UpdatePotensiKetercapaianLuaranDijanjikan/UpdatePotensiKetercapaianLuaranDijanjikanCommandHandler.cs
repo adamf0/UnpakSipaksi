@@ -21,10 +21,6 @@ namespace UnpakSipaksi.Modules.PotensiKetercapaianLuaranDijanjikan.Application.U
 
             Result<Domain.PotensiKetercapaianLuaranDijanjikan.PotensiKetercapaianLuaranDijanjikan> asset = Domain.PotensiKetercapaianLuaranDijanjikan.PotensiKetercapaianLuaranDijanjikan.Update(existingPotensiKetercapaianLuaranDijanjikan!)
                          .ChangeNama(request.Nama)
-                         .ChangeBobotPDP(request.BobotPDP)
-                         .ChangeBobotTerapan(request.BobotTerapan)
-                         .ChangeBobotPenelitianDasar(request.BobotPenelitianDasar)
-                         .ChangeBobotKerjasama(request.BobotKerjasama)
                          .ChangeSkor(request.Skor)
                          .Build();
 

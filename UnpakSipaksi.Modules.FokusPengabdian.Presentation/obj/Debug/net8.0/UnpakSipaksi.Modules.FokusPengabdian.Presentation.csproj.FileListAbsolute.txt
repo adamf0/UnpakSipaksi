@@ -16,9 +16,9 @@ C:\dev_net\UnpakSipaksi\UnpakSipaksi.Modules.FokusPengabdian.Presentation\obj\De
 C:\dev_net\UnpakSipaksi\UnpakSipaksi.Modules.FokusPengabdian.Presentation\obj\Debug\net8.0\UnpakSipaksi.Modules.FokusPengabdian.Presentation.AssemblyInfoInputs.cache
 C:\dev_net\UnpakSipaksi\UnpakSipaksi.Modules.FokusPengabdian.Presentation\obj\Debug\net8.0\UnpakSipaksi.Modules.FokusPengabdian.Presentation.AssemblyInfo.cs
 C:\dev_net\UnpakSipaksi\UnpakSipaksi.Modules.FokusPengabdian.Presentation\obj\Debug\net8.0\UnpakSipaksi.Modules.FokusPengabdian.Presentation.csproj.CoreCompileInputs.cache
+C:\dev_net\UnpakSipaksi\UnpakSipaksi.Modules.FokusPengabdian.Presentation\obj\Debug\net8.0\UnpakSipaksi.Modules.FokusPengabdian.Presentation.sourcelink.json
 C:\dev_net\UnpakSipaksi\UnpakSipaksi.Modules.FokusPengabdian.Presentation\obj\Debug\net8.0\UnpakSip.18B17D40.Up2Date
 C:\dev_net\UnpakSipaksi\UnpakSipaksi.Modules.FokusPengabdian.Presentation\obj\Debug\net8.0\UnpakSipaksi.Modules.FokusPengabdian.Presentation.dll
 C:\dev_net\UnpakSipaksi\UnpakSipaksi.Modules.FokusPengabdian.Presentation\obj\Debug\net8.0\refint\UnpakSipaksi.Modules.FokusPengabdian.Presentation.dll
 C:\dev_net\UnpakSipaksi\UnpakSipaksi.Modules.FokusPengabdian.Presentation\obj\Debug\net8.0\UnpakSipaksi.Modules.FokusPengabdian.Presentation.pdb
 C:\dev_net\UnpakSipaksi\UnpakSipaksi.Modules.FokusPengabdian.Presentation\obj\Debug\net8.0\ref\UnpakSipaksi.Modules.FokusPengabdian.Presentation.dll
-C:\dev_net\UnpakSipaksi\UnpakSipaksi.Modules.FokusPengabdian.Presentation\obj\Debug\net8.0\UnpakSipaksi.Modules.FokusPengabdian.Presentation.sourcelink.json

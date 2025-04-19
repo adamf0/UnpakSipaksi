@@ -14,6 +14,8 @@ using UnpakSipaksi.Modules.KesesuaianJadwal.Domain.KesesuaianJadwal;
 using UnpakSipaksi.Modules.KesesuaianJadwal.Presentation.KesesuaianJadwal;
 using UnpakSipaksi.Modules.KesesuaianJadwal.Infrastructure.KesesuaianJadwal;
 using UnpakSipaksi.Modules.KesesuaianJadwal.Infrastructure.Database;
+using UnpakSipaksi.Modules.KesesuaianJadwal.PublicApi;
+using UnpakSipaksi.Modules.KesesuaianJadwal.Infrastructure.PublicApi;
 
 namespace UnpakSipaksi.Modules.KesesuaianJadwal.Infrastructure
 {
@@ -43,6 +45,8 @@ namespace UnpakSipaksi.Modules.KesesuaianJadwal.Infrastructure
             services.AddDbContext<KesesuaianJadwalDbContext>(optionsBuilder => optionsBuilder.UseMySQL(databaseConnectionString));
 
             services.AddScoped<IKesesuaianJadwalRepository, KesesuaianJadwalRepository>();
+
+            services.AddScoped<IKesesuaianJadwalApi, KesesuaianJadwalApi>();
 
             services.AddScoped<IUnitOfWork>(sp => sp.GetRequiredService<KesesuaianJadwalDbContext>());
         }

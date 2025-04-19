@@ -10,10 +10,6 @@ namespace UnpakSipaksi.Modules.InovasiPemecahanMasalah.Application.UpdateInovasi
     public sealed record UpdateInovasiPemecahanMasalahCommand(
         Guid Uuid,
         string Nama,
-        int BobotPDP,
-        int BobotTerapan,
-        int BobotKerjasama,
-        int BobotPenelitianDasar,
         int Skor
     ) : ICommand;
 }

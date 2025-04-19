@@ -1,0 +1,12 @@
+C:\dev_net\UnpakSipaksi\UnpakSipaksi.Modules.KesesuaianWaktuRabLuaranFasilitas.PublicApi\bin\Debug\net8.0\UnpakSipaksi.Modules.KesesuaianWaktuRabLuaranFasilitas.PublicApi.deps.json
+C:\dev_net\UnpakSipaksi\UnpakSipaksi.Modules.KesesuaianWaktuRabLuaranFasilitas.PublicApi\bin\Debug\net8.0\UnpakSipaksi.Modules.KesesuaianWaktuRabLuaranFasilitas.PublicApi.dll
+C:\dev_net\UnpakSipaksi\UnpakSipaksi.Modules.KesesuaianWaktuRabLuaranFasilitas.PublicApi\bin\Debug\net8.0\UnpakSipaksi.Modules.KesesuaianWaktuRabLuaranFasilitas.PublicApi.pdb
+C:\dev_net\UnpakSipaksi\UnpakSipaksi.Modules.KesesuaianWaktuRabLuaranFasilitas.PublicApi\obj\Debug\net8.0\UnpakSipaksi.Modules.KesesuaianWaktuRabLuaranFasilitas.PublicApi.GeneratedMSBuildEditorConfig.editorconfig
+C:\dev_net\UnpakSipaksi\UnpakSipaksi.Modules.KesesuaianWaktuRabLuaranFasilitas.PublicApi\obj\Debug\net8.0\UnpakSipaksi.Modules.KesesuaianWaktuRabLuaranFasilitas.PublicApi.AssemblyInfoInputs.cache
+C:\dev_net\UnpakSipaksi\UnpakSipaksi.Modules.KesesuaianWaktuRabLuaranFasilitas.PublicApi\obj\Debug\net8.0\UnpakSipaksi.Modules.KesesuaianWaktuRabLuaranFasilitas.PublicApi.AssemblyInfo.cs
+C:\dev_net\UnpakSipaksi\UnpakSipaksi.Modules.KesesuaianWaktuRabLuaranFasilitas.PublicApi\obj\Debug\net8.0\UnpakSipaksi.Modules.KesesuaianWaktuRabLuaranFasilitas.PublicApi.csproj.CoreCompileInputs.cache
+C:\dev_net\UnpakSipaksi\UnpakSipaksi.Modules.KesesuaianWaktuRabLuaranFasilitas.PublicApi\obj\Debug\net8.0\UnpakSipaksi.Modules.KesesuaianWaktuRabLuaranFasilitas.PublicApi.sourcelink.json
+C:\dev_net\UnpakSipaksi\UnpakSipaksi.Modules.KesesuaianWaktuRabLuaranFasilitas.PublicApi\obj\Debug\net8.0\UnpakSipaksi.Modules.KesesuaianWaktuRabLuaranFasilitas.PublicApi.dll
+C:\dev_net\UnpakSipaksi\UnpakSipaksi.Modules.KesesuaianWaktuRabLuaranFasilitas.PublicApi\obj\Debug\net8.0\refint\UnpakSipaksi.Modules.KesesuaianWaktuRabLuaranFasilitas.PublicApi.dll
+C:\dev_net\UnpakSipaksi\UnpakSipaksi.Modules.KesesuaianWaktuRabLuaranFasilitas.PublicApi\obj\Debug\net8.0\UnpakSipaksi.Modules.KesesuaianWaktuRabLuaranFasilitas.PublicApi.pdb
+C:\dev_net\UnpakSipaksi\UnpakSipaksi.Modules.KesesuaianWaktuRabLuaranFasilitas.PublicApi\obj\Debug\net8.0\ref\UnpakSipaksi.Modules.KesesuaianWaktuRabLuaranFasilitas.PublicApi.dll

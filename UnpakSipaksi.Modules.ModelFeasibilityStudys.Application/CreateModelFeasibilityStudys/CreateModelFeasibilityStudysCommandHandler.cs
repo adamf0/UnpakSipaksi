@@ -14,10 +14,6 @@ namespace UnpakSipaksi.Modules.ModelFeasibilityStudys.Application.CreateModelFea
         {
             Result<Domain.ModelFeasibilityStudys.ModelFeasibilityStudys> result = Domain.ModelFeasibilityStudys.ModelFeasibilityStudys.Create(
                 request.Nama,
-                request.BobotPDP,
-                request.BobotTerapan,
-                request.BobotKerjasama,
-                request.BobotPenelitianDasar,
                 request.Skor
             );
 

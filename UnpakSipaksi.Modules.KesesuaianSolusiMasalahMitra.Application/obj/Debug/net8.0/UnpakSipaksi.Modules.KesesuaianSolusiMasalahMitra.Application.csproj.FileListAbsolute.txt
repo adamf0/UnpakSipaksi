@@ -1,8 +1,3 @@
-C:\dev_net\UnpakSipaksi\UnpakSipaksi.Modules.KesesuaianSolusiMasalahMitra.Application\obj\Debug\net8.0\UnpakSipaksi.Modules.KesesuaianSolusiMasalahMitra.Application.csproj.AssemblyReference.cache
-C:\dev_net\UnpakSipaksi\UnpakSipaksi.Modules.KesesuaianSolusiMasalahMitra.Application\obj\Debug\net8.0\UnpakSipaksi.Modules.KesesuaianSolusiMasalahMitra.Application.GeneratedMSBuildEditorConfig.editorconfig
-C:\dev_net\UnpakSipaksi\UnpakSipaksi.Modules.KesesuaianSolusiMasalahMitra.Application\obj\Debug\net8.0\UnpakSipaksi.Modules.KesesuaianSolusiMasalahMitra.Application.AssemblyInfoInputs.cache
-C:\dev_net\UnpakSipaksi\UnpakSipaksi.Modules.KesesuaianSolusiMasalahMitra.Application\obj\Debug\net8.0\UnpakSipaksi.Modules.KesesuaianSolusiMasalahMitra.Application.AssemblyInfo.cs
-C:\dev_net\UnpakSipaksi\UnpakSipaksi.Modules.KesesuaianSolusiMasalahMitra.Application\obj\Debug\net8.0\UnpakSipaksi.Modules.KesesuaianSolusiMasalahMitra.Application.csproj.CoreCompileInputs.cache
 C:\dev_net\UnpakSipaksi\UnpakSipaksi.Modules.KesesuaianSolusiMasalahMitra.Application\bin\Debug\net8.0\UnpakSipaksi.Modules.KesesuaianSolusiMasalahMitra.Application.deps.json
 C:\dev_net\UnpakSipaksi\UnpakSipaksi.Modules.KesesuaianSolusiMasalahMitra.Application\bin\Debug\net8.0\UnpakSipaksi.Modules.KesesuaianSolusiMasalahMitra.Application.dll
 C:\dev_net\UnpakSipaksi\UnpakSipaksi.Modules.KesesuaianSolusiMasalahMitra.Application\bin\Debug\net8.0\UnpakSipaksi.Modules.KesesuaianSolusiMasalahMitra.Application.pdb
@@ -12,9 +7,14 @@ C:\dev_net\UnpakSipaksi\UnpakSipaksi.Modules.KesesuaianSolusiMasalahMitra.Applic
 C:\dev_net\UnpakSipaksi\UnpakSipaksi.Modules.KesesuaianSolusiMasalahMitra.Application\bin\Debug\net8.0\UnpakSipaksi.Common.Application.pdb
 C:\dev_net\UnpakSipaksi\UnpakSipaksi.Modules.KesesuaianSolusiMasalahMitra.Application\bin\Debug\net8.0\UnpakSipaksi.Common.Domain.pdb
 C:\dev_net\UnpakSipaksi\UnpakSipaksi.Modules.KesesuaianSolusiMasalahMitra.Application\bin\Debug\net8.0\UnpakSipaksi.Modules.KesesuaianSolusiMasalahMitra.Domain.pdb
+C:\dev_net\UnpakSipaksi\UnpakSipaksi.Modules.KesesuaianSolusiMasalahMitra.Application\obj\Debug\net8.0\UnpakSipaksi.Modules.KesesuaianSolusiMasalahMitra.Application.csproj.AssemblyReference.cache
+C:\dev_net\UnpakSipaksi\UnpakSipaksi.Modules.KesesuaianSolusiMasalahMitra.Application\obj\Debug\net8.0\UnpakSipaksi.Modules.KesesuaianSolusiMasalahMitra.Application.GeneratedMSBuildEditorConfig.editorconfig
+C:\dev_net\UnpakSipaksi\UnpakSipaksi.Modules.KesesuaianSolusiMasalahMitra.Application\obj\Debug\net8.0\UnpakSipaksi.Modules.KesesuaianSolusiMasalahMitra.Application.AssemblyInfoInputs.cache
+C:\dev_net\UnpakSipaksi\UnpakSipaksi.Modules.KesesuaianSolusiMasalahMitra.Application\obj\Debug\net8.0\UnpakSipaksi.Modules.KesesuaianSolusiMasalahMitra.Application.AssemblyInfo.cs
+C:\dev_net\UnpakSipaksi\UnpakSipaksi.Modules.KesesuaianSolusiMasalahMitra.Application\obj\Debug\net8.0\UnpakSipaksi.Modules.KesesuaianSolusiMasalahMitra.Application.csproj.CoreCompileInputs.cache
+C:\dev_net\UnpakSipaksi\UnpakSipaksi.Modules.KesesuaianSolusiMasalahMitra.Application\obj\Debug\net8.0\UnpakSipaksi.Modules.KesesuaianSolusiMasalahMitra.Application.sourcelink.json
 C:\dev_net\UnpakSipaksi\UnpakSipaksi.Modules.KesesuaianSolusiMasalahMitra.Application\obj\Debug\net8.0\UnpakSip.CFD3BCFF.Up2Date
 C:\dev_net\UnpakSipaksi\UnpakSipaksi.Modules.KesesuaianSolusiMasalahMitra.Application\obj\Debug\net8.0\UnpakSipaksi.Modules.KesesuaianSolusiMasalahMitra.Application.dll
 C:\dev_net\UnpakSipaksi\UnpakSipaksi.Modules.KesesuaianSolusiMasalahMitra.Application\obj\Debug\net8.0\refint\UnpakSipaksi.Modules.KesesuaianSolusiMasalahMitra.Application.dll
 C:\dev_net\UnpakSipaksi\UnpakSipaksi.Modules.KesesuaianSolusiMasalahMitra.Application\obj\Debug\net8.0\UnpakSipaksi.Modules.KesesuaianSolusiMasalahMitra.Application.pdb
 C:\dev_net\UnpakSipaksi\UnpakSipaksi.Modules.KesesuaianSolusiMasalahMitra.Application\obj\Debug\net8.0\ref\UnpakSipaksi.Modules.KesesuaianSolusiMasalahMitra.Application.dll
-C:\dev_net\UnpakSipaksi\UnpakSipaksi.Modules.KesesuaianSolusiMasalahMitra.Application\obj\Debug\net8.0\UnpakSipaksi.Modules.KesesuaianSolusiMasalahMitra.Application.sourcelink.json

@@ -8,11 +8,13 @@ C:\dev_net\UnpakSipaksi\UnpakSipaksi.Modules.KuantitasStatusKi.Infrastructure\bi
 C:\dev_net\UnpakSipaksi\UnpakSipaksi.Modules.KuantitasStatusKi.Infrastructure\bin\Debug\net8.0\UnpakSipaksi.Modules.KuantitasStatusKi.Application.dll
 C:\dev_net\UnpakSipaksi\UnpakSipaksi.Modules.KuantitasStatusKi.Infrastructure\bin\Debug\net8.0\UnpakSipaksi.Modules.KuantitasStatusKi.Domain.dll
 C:\dev_net\UnpakSipaksi\UnpakSipaksi.Modules.KuantitasStatusKi.Infrastructure\bin\Debug\net8.0\UnpakSipaksi.Modules.KuantitasStatusKi.Presentation.dll
+C:\dev_net\UnpakSipaksi\UnpakSipaksi.Modules.KuantitasStatusKi.Infrastructure\bin\Debug\net8.0\UnpakSipaksi.Modules.KuantitasStatusKi.PublicApi.dll
 C:\dev_net\UnpakSipaksi\UnpakSipaksi.Modules.KuantitasStatusKi.Infrastructure\bin\Debug\net8.0\UnpakSipaksi.Common.Application.pdb
 C:\dev_net\UnpakSipaksi\UnpakSipaksi.Modules.KuantitasStatusKi.Infrastructure\bin\Debug\net8.0\UnpakSipaksi.Common.Infrastructure.pdb
 C:\dev_net\UnpakSipaksi\UnpakSipaksi.Modules.KuantitasStatusKi.Infrastructure\bin\Debug\net8.0\UnpakSipaksi.Modules.KuantitasStatusKi.Application.pdb
 C:\dev_net\UnpakSipaksi\UnpakSipaksi.Modules.KuantitasStatusKi.Infrastructure\bin\Debug\net8.0\UnpakSipaksi.Modules.KuantitasStatusKi.Domain.pdb
 C:\dev_net\UnpakSipaksi\UnpakSipaksi.Modules.KuantitasStatusKi.Infrastructure\bin\Debug\net8.0\UnpakSipaksi.Modules.KuantitasStatusKi.Presentation.pdb
+C:\dev_net\UnpakSipaksi\UnpakSipaksi.Modules.KuantitasStatusKi.Infrastructure\bin\Debug\net8.0\UnpakSipaksi.Modules.KuantitasStatusKi.PublicApi.pdb
 C:\dev_net\UnpakSipaksi\UnpakSipaksi.Modules.KuantitasStatusKi.Infrastructure\bin\Debug\net8.0\UnpakSipaksi.Common.Domain.pdb
 C:\dev_net\UnpakSipaksi\UnpakSipaksi.Modules.KuantitasStatusKi.Infrastructure\bin\Debug\net8.0\UnpakSipaksi.Common.Presentation.pdb
 C:\dev_net\UnpakSipaksi\UnpakSipaksi.Modules.KuantitasStatusKi.Infrastructure\obj\Debug\net8.0\UnpakSipaksi.Modules.KuantitasStatusKi.Infrastructure.csproj.AssemblyReference.cache

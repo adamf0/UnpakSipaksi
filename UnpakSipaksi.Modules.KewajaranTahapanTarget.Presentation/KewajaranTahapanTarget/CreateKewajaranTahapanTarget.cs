@@ -5,7 +5,7 @@ using Microsoft.AspNetCore.Routing;
 using System.Text.Encodings.Web;
 using UnpakSipaksi.Common.Domain;
 using UnpakSipaksi.Common.Presentation.ApiResults;
-using UnpakSipaksi.Modules.KewajaranTahapanTarget.Application.CreateKetajamanAnalisis;
+using UnpakSipaksi.Modules.KewajaranTahapanTarget.Application.CreateKewajaranTahapanTarget;
 
 namespace UnpakSipaksi.Modules.KewajaranTahapanTarget.Presentation.KewajaranTahapanTarget
 {

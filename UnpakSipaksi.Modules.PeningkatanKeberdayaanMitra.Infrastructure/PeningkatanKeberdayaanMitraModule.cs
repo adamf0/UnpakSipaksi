@@ -9,6 +9,8 @@ using UnpakSipaksi.Modules.PeningkatanKeberdayaanMitra.Application.Abstractions.
 using UnpakSipaksi.Modules.PeningkatanKeberdayaanMitra.Infrastructure.PeningkatanKeberdayaanMitra;
 using UnpakSipaksi.Modules.PeningkatanKeberdayaanMitra.Infrastructure.Database;
 using UnpakSipaksi.Modules.PeningkatanKeberdayaanMitra.Presentation.PeningkatanKeberdayaanMitra;
+using UnpakSipaksi.Modules.PeningkatanKeberdayaanMitra.PublicApi;
+using UnpakSipaksi.Modules.PeningkatanKeberdayaanMitra.Infrastructure.PublicApi;
 
 namespace UnpakSipaksi.Modules.PeningkatanKeberdayaanMitra.Infrastructure
 {
@@ -38,6 +40,8 @@ namespace UnpakSipaksi.Modules.PeningkatanKeberdayaanMitra.Infrastructure
             services.AddDbContext<PeningkatanKeberdayaanMitraDbContext>(optionsBuilder => optionsBuilder.UseMySQL(databaseConnectionString));
 
             services.AddScoped<IPeningkatanKeberdayaanMitraRepository, PeningkatanKeberdayaanMitraRepository>();
+
+            services.AddScoped<IPeningkatanKeberdayaanMitraApi, PeningkatanKeberdayaanMitraApi>();
 
             services.AddScoped<IUnitOfWork>(sp => sp.GetRequiredService<PeningkatanKeberdayaanMitraDbContext>());
         }

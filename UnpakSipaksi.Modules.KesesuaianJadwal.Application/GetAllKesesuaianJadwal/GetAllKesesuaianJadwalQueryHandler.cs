@@ -10,7 +10,6 @@ using UnpakSipaksi.Common.Application.Messaging;
 using UnpakSipaksi.Common.Domain;
 using UnpakSipaksi.Modules.KesesuaianJadwal.Domain.KesesuaianJadwal;
 using UnpakSipaksi.Modules.KesesuaianJadwal.Application.GetKesesuaianJadwal;
-using UnpakSipaksi.Modules.KesesuaianJadwal.Application.GetkesesuaianJadwalRepository;
 
 namespace UnpakSipaksi.Modules.KesesuaianJadwal.Application.GetAllKesesuaianJadwal
 {

@@ -1265,6 +1265,16 @@
         "frameworkReferences": [
           "Microsoft.AspNetCore.App"
         ]
+      },
+      "UnpakSipaksi.Modules.RoadmapPenelitian.PublicApi/1.0.0": {
+        "type": "project",
+        "framework": ".NETCoreApp,Version=v8.0",
+        "compile": {
+          "bin/placeholder/UnpakSipaksi.Modules.RoadmapPenelitian.PublicApi.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/UnpakSipaksi.Modules.RoadmapPenelitian.PublicApi.dll": {}
+        }
       }
     }
   },
@@ -3468,6 +3478,11 @@
       "type": "project",
       "path": "../UnpakSipaksi.Modules.RoadmapPenelitian.Presentation/UnpakSipaksi.Modules.RoadmapPenelitian.Presentation.csproj",
       "msbuildProject": "../UnpakSipaksi.Modules.RoadmapPenelitian.Presentation/UnpakSipaksi.Modules.RoadmapPenelitian.Presentation.csproj"
+    },
+    "UnpakSipaksi.Modules.RoadmapPenelitian.PublicApi/1.0.0": {
+      "type": "project",
+      "path": "../UnpakSipaksi.Modules.RoadmapPenelitian.PublicApi/UnpakSipaksi.Modules.RoadmapPenelitian.PublicApi.csproj",
+      "msbuildProject": "../UnpakSipaksi.Modules.RoadmapPenelitian.PublicApi/UnpakSipaksi.Modules.RoadmapPenelitian.PublicApi.csproj"
     }
   },
   "projectFileDependencyGroups": {
@@ -3478,7 +3493,8 @@
       "UnpakSipaksi.Common.Infrastructure >= 1.0.0",
       "UnpakSipaksi.Modules.RoadmapPenelitian.Application >= 1.0.0",
       "UnpakSipaksi.Modules.RoadmapPenelitian.Domain >= 1.0.0",
-      "UnpakSipaksi.Modules.RoadmapPenelitian.Presentation >= 1.0.0"
+      "UnpakSipaksi.Modules.RoadmapPenelitian.Presentation >= 1.0.0",
+      "UnpakSipaksi.Modules.RoadmapPenelitian.PublicApi >= 1.0.0"
     ]
   },
   "packageFolders": {
@@ -3523,6 +3539,9 @@
             },
             "C:\\dev_net\\UnpakSipaksi\\UnpakSipaksi.Modules.RoadmapPenelitian.Presentation\\UnpakSipaksi.Modules.RoadmapPenelitian.Presentation.csproj": {
               "projectPath": "C:\\dev_net\\UnpakSipaksi\\UnpakSipaksi.Modules.RoadmapPenelitian.Presentation\\UnpakSipaksi.Modules.RoadmapPenelitian.Presentation.csproj"
+            },
+            "C:\\dev_net\\UnpakSipaksi\\UnpakSipaksi.Modules.RoadmapPenelitian.PublicApi\\UnpakSipaksi.Modules.RoadmapPenelitian.PublicApi.csproj": {
+              "projectPath": "C:\\dev_net\\UnpakSipaksi\\UnpakSipaksi.Modules.RoadmapPenelitian.PublicApi\\UnpakSipaksi.Modules.RoadmapPenelitian.PublicApi.csproj"
             }
           }
         }

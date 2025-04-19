@@ -19,10 +19,6 @@ namespace UnpakSipaksi.Modules.InovasiPemecahanMasalah.Application.CreateInovasi
         {
             Result<Domain.InovasiPemecahanMasalah.InovasiPemecahanMasalah> result = Domain.InovasiPemecahanMasalah.InovasiPemecahanMasalah.Create(
                 request.Nama,
-                request.BobotPDP,
-                request.BobotTerapan,
-                request.BobotKerjasama,
-                request.BobotPenelitianDasar,
                 request.Skor
             );
 

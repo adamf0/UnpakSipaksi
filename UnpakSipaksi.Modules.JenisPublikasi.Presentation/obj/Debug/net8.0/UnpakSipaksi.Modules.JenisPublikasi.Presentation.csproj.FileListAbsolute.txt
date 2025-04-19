@@ -16,9 +16,9 @@ C:\dev_net\UnpakSipaksi\UnpakSipaksi.Modules.JenisPublikasi.Presentation\obj\Deb
 C:\dev_net\UnpakSipaksi\UnpakSipaksi.Modules.JenisPublikasi.Presentation\obj\Debug\net8.0\UnpakSipaksi.Modules.JenisPublikasi.Presentation.AssemblyInfoInputs.cache
 C:\dev_net\UnpakSipaksi\UnpakSipaksi.Modules.JenisPublikasi.Presentation\obj\Debug\net8.0\UnpakSipaksi.Modules.JenisPublikasi.Presentation.AssemblyInfo.cs
 C:\dev_net\UnpakSipaksi\UnpakSipaksi.Modules.JenisPublikasi.Presentation\obj\Debug\net8.0\UnpakSipaksi.Modules.JenisPublikasi.Presentation.csproj.CoreCompileInputs.cache
+C:\dev_net\UnpakSipaksi\UnpakSipaksi.Modules.JenisPublikasi.Presentation\obj\Debug\net8.0\UnpakSipaksi.Modules.JenisPublikasi.Presentation.sourcelink.json
 C:\dev_net\UnpakSipaksi\UnpakSipaksi.Modules.JenisPublikasi.Presentation\obj\Debug\net8.0\UnpakSip.268D0832.Up2Date
 C:\dev_net\UnpakSipaksi\UnpakSipaksi.Modules.JenisPublikasi.Presentation\obj\Debug\net8.0\UnpakSipaksi.Modules.JenisPublikasi.Presentation.dll
 C:\dev_net\UnpakSipaksi\UnpakSipaksi.Modules.JenisPublikasi.Presentation\obj\Debug\net8.0\refint\UnpakSipaksi.Modules.JenisPublikasi.Presentation.dll
 C:\dev_net\UnpakSipaksi\UnpakSipaksi.Modules.JenisPublikasi.Presentation\obj\Debug\net8.0\UnpakSipaksi.Modules.JenisPublikasi.Presentation.pdb
 C:\dev_net\UnpakSipaksi\UnpakSipaksi.Modules.JenisPublikasi.Presentation\obj\Debug\net8.0\ref\UnpakSipaksi.Modules.JenisPublikasi.Presentation.dll
-C:\dev_net\UnpakSipaksi\UnpakSipaksi.Modules.JenisPublikasi.Presentation\obj\Debug\net8.0\UnpakSipaksi.Modules.JenisPublikasi.Presentation.sourcelink.json

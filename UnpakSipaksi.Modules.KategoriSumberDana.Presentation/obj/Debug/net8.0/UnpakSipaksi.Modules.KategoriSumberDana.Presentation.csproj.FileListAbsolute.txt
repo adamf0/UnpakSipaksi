@@ -16,9 +16,9 @@ C:\dev_net\UnpakSipaksi\UnpakSipaksi.Modules.KategoriSumberDana.Presentation\obj
 C:\dev_net\UnpakSipaksi\UnpakSipaksi.Modules.KategoriSumberDana.Presentation\obj\Debug\net8.0\UnpakSipaksi.Modules.KategoriSumberDana.Presentation.AssemblyInfoInputs.cache
 C:\dev_net\UnpakSipaksi\UnpakSipaksi.Modules.KategoriSumberDana.Presentation\obj\Debug\net8.0\UnpakSipaksi.Modules.KategoriSumberDana.Presentation.AssemblyInfo.cs
 C:\dev_net\UnpakSipaksi\UnpakSipaksi.Modules.KategoriSumberDana.Presentation\obj\Debug\net8.0\UnpakSipaksi.Modules.KategoriSumberDana.Presentation.csproj.CoreCompileInputs.cache
+C:\dev_net\UnpakSipaksi\UnpakSipaksi.Modules.KategoriSumberDana.Presentation\obj\Debug\net8.0\UnpakSipaksi.Modules.KategoriSumberDana.Presentation.sourcelink.json
 C:\dev_net\UnpakSipaksi\UnpakSipaksi.Modules.KategoriSumberDana.Presentation\obj\Debug\net8.0\UnpakSip.2CD9CE9F.Up2Date
 C:\dev_net\UnpakSipaksi\UnpakSipaksi.Modules.KategoriSumberDana.Presentation\obj\Debug\net8.0\UnpakSipaksi.Modules.KategoriSumberDana.Presentation.dll
 C:\dev_net\UnpakSipaksi\UnpakSipaksi.Modules.KategoriSumberDana.Presentation\obj\Debug\net8.0\refint\UnpakSipaksi.Modules.KategoriSumberDana.Presentation.dll
 C:\dev_net\UnpakSipaksi\UnpakSipaksi.Modules.KategoriSumberDana.Presentation\obj\Debug\net8.0\UnpakSipaksi.Modules.KategoriSumberDana.Presentation.pdb
 C:\dev_net\UnpakSipaksi\UnpakSipaksi.Modules.KategoriSumberDana.Presentation\obj\Debug\net8.0\ref\UnpakSipaksi.Modules.KategoriSumberDana.Presentation.dll
-C:\dev_net\UnpakSipaksi\UnpakSipaksi.Modules.KategoriSumberDana.Presentation\obj\Debug\net8.0\UnpakSipaksi.Modules.KategoriSumberDana.Presentation.sourcelink.json

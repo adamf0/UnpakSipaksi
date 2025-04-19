@@ -14,7 +14,8 @@
           "UnpakSipaksi.Common.Infrastructure": "1.0.0",
           "UnpakSipaksi.Modules.JumlahKolaboratorPublikasBereputasi.Application": "1.0.0",
           "UnpakSipaksi.Modules.JumlahKolaboratorPublikasBereputasi.Domain": "1.0.0",
-          "UnpakSipaksi.Modules.JumlahKolaboratorPublikasBereputasi.Presentation": "1.0.0"
+          "UnpakSipaksi.Modules.JumlahKolaboratorPublikasBereputasi.Presentation": "1.0.0",
+          "UnpakSipaksi.Modules.JumlahKolaboratorPublikasBereputasi.PublicApi": "1.0.0"
         },
         "runtime": {
           "UnpakSipaksi.Modules.JumlahKolaboratorPublikasBereputasi.Infrastructure.dll": {}
@@ -699,6 +700,11 @@
         "runtime": {
           "UnpakSipaksi.Modules.JumlahKolaboratorPublikasBereputasi.Presentation.dll": {}
         }
+      },
+      "UnpakSipaksi.Modules.JumlahKolaboratorPublikasBereputasi.PublicApi/1.0.0": {
+        "runtime": {
+          "UnpakSipaksi.Modules.JumlahKolaboratorPublikasBereputasi.PublicApi.dll": {}
+        }
       }
     }
   },
@@ -1215,6 +1221,11 @@
       "sha512": ""
     },
     "UnpakSipaksi.Modules.JumlahKolaboratorPublikasBereputasi.Presentation/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    },
+    "UnpakSipaksi.Modules.JumlahKolaboratorPublikasBereputasi.PublicApi/1.0.0": {
       "type": "project",
       "serviceable": false,
       "sha512": ""

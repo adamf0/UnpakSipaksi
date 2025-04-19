@@ -20,9 +20,9 @@ C:\dev_net\UnpakSipaksi\UnpakSipaksi.Modules.FokusPengabdian.Infrastructure\obj\
 C:\dev_net\UnpakSipaksi\UnpakSipaksi.Modules.FokusPengabdian.Infrastructure\obj\Debug\net8.0\UnpakSipaksi.Modules.FokusPengabdian.Infrastructure.AssemblyInfoInputs.cache
 C:\dev_net\UnpakSipaksi\UnpakSipaksi.Modules.FokusPengabdian.Infrastructure\obj\Debug\net8.0\UnpakSipaksi.Modules.FokusPengabdian.Infrastructure.AssemblyInfo.cs
 C:\dev_net\UnpakSipaksi\UnpakSipaksi.Modules.FokusPengabdian.Infrastructure\obj\Debug\net8.0\UnpakSipaksi.Modules.FokusPengabdian.Infrastructure.csproj.CoreCompileInputs.cache
+C:\dev_net\UnpakSipaksi\UnpakSipaksi.Modules.FokusPengabdian.Infrastructure\obj\Debug\net8.0\UnpakSipaksi.Modules.FokusPengabdian.Infrastructure.sourcelink.json
 C:\dev_net\UnpakSipaksi\UnpakSipaksi.Modules.FokusPengabdian.Infrastructure\obj\Debug\net8.0\UnpakSip.6540ECD5.Up2Date
 C:\dev_net\UnpakSipaksi\UnpakSipaksi.Modules.FokusPengabdian.Infrastructure\obj\Debug\net8.0\UnpakSipaksi.Modules.FokusPengabdian.Infrastructure.dll
 C:\dev_net\UnpakSipaksi\UnpakSipaksi.Modules.FokusPengabdian.Infrastructure\obj\Debug\net8.0\refint\UnpakSipaksi.Modules.FokusPengabdian.Infrastructure.dll
 C:\dev_net\UnpakSipaksi\UnpakSipaksi.Modules.FokusPengabdian.Infrastructure\obj\Debug\net8.0\UnpakSipaksi.Modules.FokusPengabdian.Infrastructure.pdb
 C:\dev_net\UnpakSipaksi\UnpakSipaksi.Modules.FokusPengabdian.Infrastructure\obj\Debug\net8.0\ref\UnpakSipaksi.Modules.FokusPengabdian.Infrastructure.dll
-C:\dev_net\UnpakSipaksi\UnpakSipaksi.Modules.FokusPengabdian.Infrastructure\obj\Debug\net8.0\UnpakSipaksi.Modules.FokusPengabdian.Infrastructure.sourcelink.json

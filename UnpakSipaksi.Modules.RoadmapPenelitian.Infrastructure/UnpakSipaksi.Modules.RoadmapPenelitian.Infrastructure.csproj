@@ -28,6 +28,7 @@
 		<ProjectReference Include="..\UnpakSipaksi.Modules.RoadmapPenelitian.Domain\UnpakSipaksi.Modules.RoadmapPenelitian.Domain.csproj" />
 		<ProjectReference Include="..\UnpakSipaksi.Modules.RoadmapPenelitian.Presentation\UnpakSipaksi.Modules.RoadmapPenelitian.Presentation.csproj" />
 		<ProjectReference Include="..\UnpakSipaksi.Modules.RoadmapPenelitian.Domain\UnpakSipaksi.Modules.RoadmapPenelitian.Domain.csproj" />
+		<ProjectReference Include="..\UnpakSipaksi.Modules.RoadmapPenelitian.PublicApi\UnpakSipaksi.Modules.RoadmapPenelitian.PublicApi.csproj" />
 	</ItemGroup>
 
 </Project>

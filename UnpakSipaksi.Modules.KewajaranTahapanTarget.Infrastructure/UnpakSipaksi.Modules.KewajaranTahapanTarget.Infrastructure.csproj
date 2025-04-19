@@ -28,6 +28,7 @@
 		<ProjectReference Include="..\UnpakSipaksi.Modules.KewajaranTahapanTarget.Domain\UnpakSipaksi.Modules.KewajaranTahapanTarget.Domain.csproj" />
 		<ProjectReference Include="..\UnpakSipaksi.Modules.KewajaranTahapanTarget.Presentation\UnpakSipaksi.Modules.KewajaranTahapanTarget.Presentation.csproj" />
 		<ProjectReference Include="..\UnpakSipaksi.Modules.KewajaranTahapanTarget.Domain\UnpakSipaksi.Modules.KewajaranTahapanTarget.Domain.csproj" />
+		<ProjectReference Include="..\UnpakSipaksi.Modules.KewajaranTahapanTarget.PublicApi\UnpakSipaksi.Modules.KewajaranTahapanTarget.PublicApi.csproj" />
 	</ItemGroup>
 
 </Project>

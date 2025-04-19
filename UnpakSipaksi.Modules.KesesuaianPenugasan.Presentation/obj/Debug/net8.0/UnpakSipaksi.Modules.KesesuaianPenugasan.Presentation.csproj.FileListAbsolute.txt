@@ -16,9 +16,9 @@ C:\dev_net\UnpakSipaksi\UnpakSipaksi.Modules.KesesuaianPenugasan.Presentation\ob
 C:\dev_net\UnpakSipaksi\UnpakSipaksi.Modules.KesesuaianPenugasan.Presentation\obj\Debug\net8.0\UnpakSipaksi.Modules.KesesuaianPenugasan.Presentation.AssemblyInfoInputs.cache
 C:\dev_net\UnpakSipaksi\UnpakSipaksi.Modules.KesesuaianPenugasan.Presentation\obj\Debug\net8.0\UnpakSipaksi.Modules.KesesuaianPenugasan.Presentation.AssemblyInfo.cs
 C:\dev_net\UnpakSipaksi\UnpakSipaksi.Modules.KesesuaianPenugasan.Presentation\obj\Debug\net8.0\UnpakSipaksi.Modules.KesesuaianPenugasan.Presentation.csproj.CoreCompileInputs.cache
+C:\dev_net\UnpakSipaksi\UnpakSipaksi.Modules.KesesuaianPenugasan.Presentation\obj\Debug\net8.0\UnpakSipaksi.Modules.KesesuaianPenugasan.Presentation.sourcelink.json
 C:\dev_net\UnpakSipaksi\UnpakSipaksi.Modules.KesesuaianPenugasan.Presentation\obj\Debug\net8.0\UnpakSip.D91F3F7E.Up2Date
 C:\dev_net\UnpakSipaksi\UnpakSipaksi.Modules.KesesuaianPenugasan.Presentation\obj\Debug\net8.0\UnpakSipaksi.Modules.KesesuaianPenugasan.Presentation.dll
 C:\dev_net\UnpakSipaksi\UnpakSipaksi.Modules.KesesuaianPenugasan.Presentation\obj\Debug\net8.0\refint\UnpakSipaksi.Modules.KesesuaianPenugasan.Presentation.dll
 C:\dev_net\UnpakSipaksi\UnpakSipaksi.Modules.KesesuaianPenugasan.Presentation\obj\Debug\net8.0\UnpakSipaksi.Modules.KesesuaianPenugasan.Presentation.pdb
 C:\dev_net\UnpakSipaksi\UnpakSipaksi.Modules.KesesuaianPenugasan.Presentation\obj\Debug\net8.0\ref\UnpakSipaksi.Modules.KesesuaianPenugasan.Presentation.dll
-C:\dev_net\UnpakSipaksi\UnpakSipaksi.Modules.KesesuaianPenugasan.Presentation\obj\Debug\net8.0\UnpakSipaksi.Modules.KesesuaianPenugasan.Presentation.sourcelink.json

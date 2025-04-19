@@ -9,6 +9,8 @@ using UnpakSipaksi.Modules.VideoKegiatan.Application.Abstractions.Data;
 using UnpakSipaksi.Modules.VideoKegiatan.Infrastructure.VideoKegiatan;
 using UnpakSipaksi.Modules.VideoKegiatan.Infrastructure.Database;
 using UnpakSipaksi.Modules.VideoKegiatan.Presentation.VideoKegiatan;
+using UnpakSipaksi.Modules.VideoKegiatan.PublicApi;
+using UnpakSipaksi.Modules.VideoKegiatan.Infrastructure.PublicApi;
 
 namespace UnpakSipaksi.Modules.VideoKegiatan.Infrastructure
 {
@@ -38,6 +40,8 @@ namespace UnpakSipaksi.Modules.VideoKegiatan.Infrastructure
             services.AddDbContext<VideoKegiatanDbContext>(optionsBuilder => optionsBuilder.UseMySQL(databaseConnectionString));
 
             services.AddScoped<IVideoKegiatanRepository, VideoKegiatanRepository>();
+
+            services.AddScoped<IVideoKegiatanApi, VideoKegiatanApi>();
 
             services.AddScoped<IUnitOfWork>(sp => sp.GetRequiredService<VideoKegiatanDbContext>());
         }

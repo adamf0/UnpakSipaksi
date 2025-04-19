@@ -28,6 +28,7 @@
 		<ProjectReference Include="..\UnpakSipaksi.Modules.PeningkatanKeberdayaanMitra.Domain\UnpakSipaksi.Modules.PeningkatanKeberdayaanMitra.Domain.csproj" />
 		<ProjectReference Include="..\UnpakSipaksi.Modules.PeningkatanKeberdayaanMitra.Presentation\UnpakSipaksi.Modules.PeningkatanKeberdayaanMitra.Presentation.csproj" />
 		<ProjectReference Include="..\UnpakSipaksi.Modules.PeningkatanKeberdayaanMitra.Domain\UnpakSipaksi.Modules.PeningkatanKeberdayaanMitra.Domain.csproj" />
+		<ProjectReference Include="..\UnpakSipaksi.Modules.PeningkatanKeberdayaanMitra.PublicApi\UnpakSipaksi.Modules.PeningkatanKeberdayaanMitra.PublicApi.csproj" />
 	</ItemGroup>
 
 </Project>

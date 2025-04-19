@@ -14,7 +14,8 @@
           "UnpakSipaksi.Common.Infrastructure": "1.0.0",
           "UnpakSipaksi.Modules.RoadmapPenelitian.Application": "1.0.0",
           "UnpakSipaksi.Modules.RoadmapPenelitian.Domain": "1.0.0",
-          "UnpakSipaksi.Modules.RoadmapPenelitian.Presentation": "1.0.0"
+          "UnpakSipaksi.Modules.RoadmapPenelitian.Presentation": "1.0.0",
+          "UnpakSipaksi.Modules.RoadmapPenelitian.PublicApi": "1.0.0"
         },
         "runtime": {
           "UnpakSipaksi.Modules.RoadmapPenelitian.Infrastructure.dll": {}
@@ -699,6 +700,11 @@
         "runtime": {
           "UnpakSipaksi.Modules.RoadmapPenelitian.Presentation.dll": {}
         }
+      },
+      "UnpakSipaksi.Modules.RoadmapPenelitian.PublicApi/1.0.0": {
+        "runtime": {
+          "UnpakSipaksi.Modules.RoadmapPenelitian.PublicApi.dll": {}
+        }
       }
     }
   },
@@ -1215,6 +1221,11 @@
       "sha512": ""
     },
     "UnpakSipaksi.Modules.RoadmapPenelitian.Presentation/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    },
+    "UnpakSipaksi.Modules.RoadmapPenelitian.PublicApi/1.0.0": {
       "type": "project",
       "serviceable": false,
       "sha512": ""

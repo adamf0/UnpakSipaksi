@@ -14,7 +14,8 @@
           "UnpakSipaksi.Common.Infrastructure": "1.0.0",
           "UnpakSipaksi.Modules.PeningkatanKeberdayaanMitra.Application": "1.0.0",
           "UnpakSipaksi.Modules.PeningkatanKeberdayaanMitra.Domain": "1.0.0",
-          "UnpakSipaksi.Modules.PeningkatanKeberdayaanMitra.Presentation": "1.0.0"
+          "UnpakSipaksi.Modules.PeningkatanKeberdayaanMitra.Presentation": "1.0.0",
+          "UnpakSipaksi.Modules.PeningkatanKeberdayaanMitra.PublicApi": "1.0.0"
         },
         "runtime": {
           "UnpakSipaksi.Modules.PeningkatanKeberdayaanMitra.Infrastructure.dll": {}
@@ -699,6 +700,11 @@
         "runtime": {
           "UnpakSipaksi.Modules.PeningkatanKeberdayaanMitra.Presentation.dll": {}
         }
+      },
+      "UnpakSipaksi.Modules.PeningkatanKeberdayaanMitra.PublicApi/1.0.0": {
+        "runtime": {
+          "UnpakSipaksi.Modules.PeningkatanKeberdayaanMitra.PublicApi.dll": {}
+        }
       }
     }
   },
@@ -1215,6 +1221,11 @@
       "sha512": ""
     },
     "UnpakSipaksi.Modules.PeningkatanKeberdayaanMitra.Presentation/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    },
+    "UnpakSipaksi.Modules.PeningkatanKeberdayaanMitra.PublicApi/1.0.0": {
       "type": "project",
       "serviceable": false,
       "sha512": ""

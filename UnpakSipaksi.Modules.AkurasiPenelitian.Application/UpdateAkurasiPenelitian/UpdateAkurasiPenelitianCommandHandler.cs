@@ -26,10 +26,6 @@ namespace UnpakSipaksi.Modules.AkurasiPenelitian.Application.UpdateAkurasiPeneli
 
             Result<Domain.AkurasiPenelitian.AkurasiPenelitian> asset = Domain.AkurasiPenelitian.AkurasiPenelitian.Update(existingAkurasiPenelitian!)
                          .ChangeNama(request.Nama)
-                         .ChangeBobotPDP(request.BobotPDP)
-                         .ChangeBobotTerapan(request.BobotTerapan)
-                         .ChangeBobotPenelitianDasar(request.BobotPenelitianDasar)
-                         .ChangeBobotKerjasama(request.BobotKerjasama)
                          .ChangeSkor(request.Skor)
                          .Build();
 

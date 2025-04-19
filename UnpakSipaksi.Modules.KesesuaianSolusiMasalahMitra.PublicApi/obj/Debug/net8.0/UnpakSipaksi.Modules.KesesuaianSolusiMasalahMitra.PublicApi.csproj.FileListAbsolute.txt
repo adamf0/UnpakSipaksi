@@ -1,0 +1,12 @@
+C:\dev_net\UnpakSipaksi\UnpakSipaksi.Modules.KesesuaianSolusiMasalahMitra.PublicApi\bin\Debug\net8.0\UnpakSipaksi.Modules.KesesuaianSolusiMasalahMitra.PublicApi.deps.json
+C:\dev_net\UnpakSipaksi\UnpakSipaksi.Modules.KesesuaianSolusiMasalahMitra.PublicApi\bin\Debug\net8.0\UnpakSipaksi.Modules.KesesuaianSolusiMasalahMitra.PublicApi.dll
+C:\dev_net\UnpakSipaksi\UnpakSipaksi.Modules.KesesuaianSolusiMasalahMitra.PublicApi\bin\Debug\net8.0\UnpakSipaksi.Modules.KesesuaianSolusiMasalahMitra.PublicApi.pdb
+C:\dev_net\UnpakSipaksi\UnpakSipaksi.Modules.KesesuaianSolusiMasalahMitra.PublicApi\obj\Debug\net8.0\UnpakSipaksi.Modules.KesesuaianSolusiMasalahMitra.PublicApi.GeneratedMSBuildEditorConfig.editorconfig
+C:\dev_net\UnpakSipaksi\UnpakSipaksi.Modules.KesesuaianSolusiMasalahMitra.PublicApi\obj\Debug\net8.0\UnpakSipaksi.Modules.KesesuaianSolusiMasalahMitra.PublicApi.AssemblyInfoInputs.cache
+C:\dev_net\UnpakSipaksi\UnpakSipaksi.Modules.KesesuaianSolusiMasalahMitra.PublicApi\obj\Debug\net8.0\UnpakSipaksi.Modules.KesesuaianSolusiMasalahMitra.PublicApi.AssemblyInfo.cs
+C:\dev_net\UnpakSipaksi\UnpakSipaksi.Modules.KesesuaianSolusiMasalahMitra.PublicApi\obj\Debug\net8.0\UnpakSipaksi.Modules.KesesuaianSolusiMasalahMitra.PublicApi.csproj.CoreCompileInputs.cache
+C:\dev_net\UnpakSipaksi\UnpakSipaksi.Modules.KesesuaianSolusiMasalahMitra.PublicApi\obj\Debug\net8.0\UnpakSipaksi.Modules.KesesuaianSolusiMasalahMitra.PublicApi.sourcelink.json
+C:\dev_net\UnpakSipaksi\UnpakSipaksi.Modules.KesesuaianSolusiMasalahMitra.PublicApi\obj\Debug\net8.0\UnpakSipaksi.Modules.KesesuaianSolusiMasalahMitra.PublicApi.dll
+C:\dev_net\UnpakSipaksi\UnpakSipaksi.Modules.KesesuaianSolusiMasalahMitra.PublicApi\obj\Debug\net8.0\refint\UnpakSipaksi.Modules.KesesuaianSolusiMasalahMitra.PublicApi.dll
+C:\dev_net\UnpakSipaksi\UnpakSipaksi.Modules.KesesuaianSolusiMasalahMitra.PublicApi\obj\Debug\net8.0\UnpakSipaksi.Modules.KesesuaianSolusiMasalahMitra.PublicApi.pdb
+C:\dev_net\UnpakSipaksi\UnpakSipaksi.Modules.KesesuaianSolusiMasalahMitra.PublicApi\obj\Debug\net8.0\ref\UnpakSipaksi.Modules.KesesuaianSolusiMasalahMitra.PublicApi.dll

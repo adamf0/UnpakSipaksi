@@ -5,10 +5,6 @@ namespace UnpakSipaksi.Modules.RelevansiProdukKepentinganNasional.Application.Up
     public sealed record UpdateRelevansiProdukKepentinganNasionalCommand(
         Guid Uuid,
         string Nama,
-        int BobotPDP,
-        int BobotTerapan,
-        int BobotKerjasama,
-        int BobotPenelitianDasar,
         int Skor
     ) : ICommand;
 }

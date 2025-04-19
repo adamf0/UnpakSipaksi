@@ -1,0 +1,12 @@
+C:\dev_net\UnpakSipaksi\UnpakSipaksi.Modules.ModelFeasibilityStudys.PublicApi\bin\Debug\net8.0\UnpakSipaksi.Modules.ModelFeasibilityStudys.PublicApi.deps.json
+C:\dev_net\UnpakSipaksi\UnpakSipaksi.Modules.ModelFeasibilityStudys.PublicApi\bin\Debug\net8.0\UnpakSipaksi.Modules.ModelFeasibilityStudys.PublicApi.dll
+C:\dev_net\UnpakSipaksi\UnpakSipaksi.Modules.ModelFeasibilityStudys.PublicApi\bin\Debug\net8.0\UnpakSipaksi.Modules.ModelFeasibilityStudys.PublicApi.pdb
+C:\dev_net\UnpakSipaksi\UnpakSipaksi.Modules.ModelFeasibilityStudys.PublicApi\obj\Debug\net8.0\UnpakSipaksi.Modules.ModelFeasibilityStudys.PublicApi.GeneratedMSBuildEditorConfig.editorconfig
+C:\dev_net\UnpakSipaksi\UnpakSipaksi.Modules.ModelFeasibilityStudys.PublicApi\obj\Debug\net8.0\UnpakSipaksi.Modules.ModelFeasibilityStudys.PublicApi.AssemblyInfoInputs.cache
+C:\dev_net\UnpakSipaksi\UnpakSipaksi.Modules.ModelFeasibilityStudys.PublicApi\obj\Debug\net8.0\UnpakSipaksi.Modules.ModelFeasibilityStudys.PublicApi.AssemblyInfo.cs
+C:\dev_net\UnpakSipaksi\UnpakSipaksi.Modules.ModelFeasibilityStudys.PublicApi\obj\Debug\net8.0\UnpakSipaksi.Modules.ModelFeasibilityStudys.PublicApi.csproj.CoreCompileInputs.cache
+C:\dev_net\UnpakSipaksi\UnpakSipaksi.Modules.ModelFeasibilityStudys.PublicApi\obj\Debug\net8.0\UnpakSipaksi.Modules.ModelFeasibilityStudys.PublicApi.sourcelink.json
+C:\dev_net\UnpakSipaksi\UnpakSipaksi.Modules.ModelFeasibilityStudys.PublicApi\obj\Debug\net8.0\UnpakSipaksi.Modules.ModelFeasibilityStudys.PublicApi.dll
+C:\dev_net\UnpakSipaksi\UnpakSipaksi.Modules.ModelFeasibilityStudys.PublicApi\obj\Debug\net8.0\refint\UnpakSipaksi.Modules.ModelFeasibilityStudys.PublicApi.dll
+C:\dev_net\UnpakSipaksi\UnpakSipaksi.Modules.ModelFeasibilityStudys.PublicApi\obj\Debug\net8.0\UnpakSipaksi.Modules.ModelFeasibilityStudys.PublicApi.pdb
+C:\dev_net\UnpakSipaksi\UnpakSipaksi.Modules.ModelFeasibilityStudys.PublicApi\obj\Debug\net8.0\ref\UnpakSipaksi.Modules.ModelFeasibilityStudys.PublicApi.dll

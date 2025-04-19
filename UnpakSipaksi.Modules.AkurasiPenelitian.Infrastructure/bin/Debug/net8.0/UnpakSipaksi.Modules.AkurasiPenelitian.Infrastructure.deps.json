@@ -14,7 +14,8 @@
           "UnpakSipaksi.Common.Infrastructure": "1.0.0",
           "UnpakSipaksi.Modules.AkurasiPenelitian.Application": "1.0.0",
           "UnpakSipaksi.Modules.AkurasiPenelitian.Domain": "1.0.0",
-          "UnpakSipaksi.Modules.AkurasiPenelitian.Presentation": "1.0.0"
+          "UnpakSipaksi.Modules.AkurasiPenelitian.Presentation": "1.0.0",
+          "UnpakSipaksi.Modules.AkurasiPenelitian.PublicApi": "1.0.0"
         },
         "runtime": {
           "UnpakSipaksi.Modules.AkurasiPenelitian.Infrastructure.dll": {}
@@ -699,6 +700,11 @@
         "runtime": {
           "UnpakSipaksi.Modules.AkurasiPenelitian.Presentation.dll": {}
         }
+      },
+      "UnpakSipaksi.Modules.AkurasiPenelitian.PublicApi/1.0.0": {
+        "runtime": {
+          "UnpakSipaksi.Modules.AkurasiPenelitian.PublicApi.dll": {}
+        }
       }
     }
   },
@@ -1215,6 +1221,11 @@
       "sha512": ""
     },
     "UnpakSipaksi.Modules.AkurasiPenelitian.Presentation/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    },
+    "UnpakSipaksi.Modules.AkurasiPenelitian.PublicApi/1.0.0": {
       "type": "project",
       "serviceable": false,
       "sha512": ""

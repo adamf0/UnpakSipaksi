@@ -28,6 +28,7 @@
 		<ProjectReference Include="..\UnpakSipaksi.Modules.LuaranArtikel.Domain\UnpakSipaksi.Modules.LuaranArtikel.Domain.csproj" />
 		<ProjectReference Include="..\UnpakSipaksi.Modules.LuaranArtikel.Presentation\UnpakSipaksi.Modules.LuaranArtikel.Presentation.csproj" />
 		<ProjectReference Include="..\UnpakSipaksi.Modules.LuaranArtikel.Domain\UnpakSipaksi.Modules.LuaranArtikel.Domain.csproj" />
+		<ProjectReference Include="..\UnpakSipaksi.Modules.LuaranArtikel.PublicApi\UnpakSipaksi.Modules.LuaranArtikel.PublicApi.csproj" />
 	</ItemGroup>
 
 </Project>

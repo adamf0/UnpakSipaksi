@@ -16,9 +16,9 @@ C:\dev_net\UnpakSipaksi\UnpakSipaksi.Modules.InovasiPemecahanMasalah.Presentatio
 C:\dev_net\UnpakSipaksi\UnpakSipaksi.Modules.InovasiPemecahanMasalah.Presentation\obj\Debug\net8.0\UnpakSipaksi.Modules.InovasiPemecahanMasalah.Presentation.AssemblyInfoInputs.cache
 C:\dev_net\UnpakSipaksi\UnpakSipaksi.Modules.InovasiPemecahanMasalah.Presentation\obj\Debug\net8.0\UnpakSipaksi.Modules.InovasiPemecahanMasalah.Presentation.AssemblyInfo.cs
 C:\dev_net\UnpakSipaksi\UnpakSipaksi.Modules.InovasiPemecahanMasalah.Presentation\obj\Debug\net8.0\UnpakSipaksi.Modules.InovasiPemecahanMasalah.Presentation.csproj.CoreCompileInputs.cache
+C:\dev_net\UnpakSipaksi\UnpakSipaksi.Modules.InovasiPemecahanMasalah.Presentation\obj\Debug\net8.0\UnpakSipaksi.Modules.InovasiPemecahanMasalah.Presentation.sourcelink.json
 C:\dev_net\UnpakSipaksi\UnpakSipaksi.Modules.InovasiPemecahanMasalah.Presentation\obj\Debug\net8.0\UnpakSip.1F9C8C08.Up2Date
 C:\dev_net\UnpakSipaksi\UnpakSipaksi.Modules.InovasiPemecahanMasalah.Presentation\obj\Debug\net8.0\UnpakSipaksi.Modules.InovasiPemecahanMasalah.Presentation.dll
 C:\dev_net\UnpakSipaksi\UnpakSipaksi.Modules.InovasiPemecahanMasalah.Presentation\obj\Debug\net8.0\refint\UnpakSipaksi.Modules.InovasiPemecahanMasalah.Presentation.dll
 C:\dev_net\UnpakSipaksi\UnpakSipaksi.Modules.InovasiPemecahanMasalah.Presentation\obj\Debug\net8.0\UnpakSipaksi.Modules.InovasiPemecahanMasalah.Presentation.pdb
 C:\dev_net\UnpakSipaksi\UnpakSipaksi.Modules.InovasiPemecahanMasalah.Presentation\obj\Debug\net8.0\ref\UnpakSipaksi.Modules.InovasiPemecahanMasalah.Presentation.dll
-C:\dev_net\UnpakSipaksi\UnpakSipaksi.Modules.InovasiPemecahanMasalah.Presentation\obj\Debug\net8.0\UnpakSipaksi.Modules.InovasiPemecahanMasalah.Presentation.sourcelink.json

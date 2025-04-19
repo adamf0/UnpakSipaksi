@@ -1,0 +1,12 @@
+C:\dev_net\UnpakSipaksi\UnpakSipaksi.Modules.KuantitasStatusKi.PublicApi\bin\Debug\net8.0\UnpakSipaksi.Modules.KuantitasStatusKi.PublicApi.deps.json
+C:\dev_net\UnpakSipaksi\UnpakSipaksi.Modules.KuantitasStatusKi.PublicApi\bin\Debug\net8.0\UnpakSipaksi.Modules.KuantitasStatusKi.PublicApi.dll
+C:\dev_net\UnpakSipaksi\UnpakSipaksi.Modules.KuantitasStatusKi.PublicApi\bin\Debug\net8.0\UnpakSipaksi.Modules.KuantitasStatusKi.PublicApi.pdb
+C:\dev_net\UnpakSipaksi\UnpakSipaksi.Modules.KuantitasStatusKi.PublicApi\obj\Debug\net8.0\UnpakSipaksi.Modules.KuantitasStatusKi.PublicApi.GeneratedMSBuildEditorConfig.editorconfig
+C:\dev_net\UnpakSipaksi\UnpakSipaksi.Modules.KuantitasStatusKi.PublicApi\obj\Debug\net8.0\UnpakSipaksi.Modules.KuantitasStatusKi.PublicApi.AssemblyInfoInputs.cache
+C:\dev_net\UnpakSipaksi\UnpakSipaksi.Modules.KuantitasStatusKi.PublicApi\obj\Debug\net8.0\UnpakSipaksi.Modules.KuantitasStatusKi.PublicApi.AssemblyInfo.cs
+C:\dev_net\UnpakSipaksi\UnpakSipaksi.Modules.KuantitasStatusKi.PublicApi\obj\Debug\net8.0\UnpakSipaksi.Modules.KuantitasStatusKi.PublicApi.csproj.CoreCompileInputs.cache
+C:\dev_net\UnpakSipaksi\UnpakSipaksi.Modules.KuantitasStatusKi.PublicApi\obj\Debug\net8.0\UnpakSipaksi.Modules.KuantitasStatusKi.PublicApi.sourcelink.json
+C:\dev_net\UnpakSipaksi\UnpakSipaksi.Modules.KuantitasStatusKi.PublicApi\obj\Debug\net8.0\UnpakSipaksi.Modules.KuantitasStatusKi.PublicApi.dll
+C:\dev_net\UnpakSipaksi\UnpakSipaksi.Modules.KuantitasStatusKi.PublicApi\obj\Debug\net8.0\refint\UnpakSipaksi.Modules.KuantitasStatusKi.PublicApi.dll
+C:\dev_net\UnpakSipaksi\UnpakSipaksi.Modules.KuantitasStatusKi.PublicApi\obj\Debug\net8.0\UnpakSipaksi.Modules.KuantitasStatusKi.PublicApi.pdb
+C:\dev_net\UnpakSipaksi\UnpakSipaksi.Modules.KuantitasStatusKi.PublicApi\obj\Debug\net8.0\ref\UnpakSipaksi.Modules.KuantitasStatusKi.PublicApi.dll

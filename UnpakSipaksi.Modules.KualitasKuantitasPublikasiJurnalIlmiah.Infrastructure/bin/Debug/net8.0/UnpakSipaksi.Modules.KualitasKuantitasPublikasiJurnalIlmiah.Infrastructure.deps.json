@@ -14,7 +14,8 @@
           "UnpakSipaksi.Common.Infrastructure": "1.0.0",
           "UnpakSipaksi.Modules.KualitasKuantitasPublikasiJurnalIlmiah.Application": "1.0.0",
           "UnpakSipaksi.Modules.KualitasKuantitasPublikasiJurnalIlmiah.Domain": "1.0.0",
-          "UnpakSipaksi.Modules.KualitasKuantitasPublikasiJurnalIlmiah.Presentation": "1.0.0"
+          "UnpakSipaksi.Modules.KualitasKuantitasPublikasiJurnalIlmiah.Presentation": "1.0.0",
+          "UnpakSipaksi.Modules.KualitasKuantitasPublikasiJurnalIlmiah.PubliApi": "1.0.0"
         },
         "runtime": {
           "UnpakSipaksi.Modules.KualitasKuantitasPublikasiJurnalIlmiah.Infrastructure.dll": {}
@@ -699,6 +700,11 @@
         "runtime": {
           "UnpakSipaksi.Modules.KualitasKuantitasPublikasiJurnalIlmiah.Presentation.dll": {}
         }
+      },
+      "UnpakSipaksi.Modules.KualitasKuantitasPublikasiJurnalIlmiah.PubliApi/1.0.0": {
+        "runtime": {
+          "UnpakSipaksi.Modules.KualitasKuantitasPublikasiJurnalIlmiah.PubliApi.dll": {}
+        }
       }
     }
   },
@@ -1215,6 +1221,11 @@
       "sha512": ""
     },
     "UnpakSipaksi.Modules.KualitasKuantitasPublikasiJurnalIlmiah.Presentation/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    },
+    "UnpakSipaksi.Modules.KualitasKuantitasPublikasiJurnalIlmiah.PubliApi/1.0.0": {
       "type": "project",
       "serviceable": false,
       "sha512": ""

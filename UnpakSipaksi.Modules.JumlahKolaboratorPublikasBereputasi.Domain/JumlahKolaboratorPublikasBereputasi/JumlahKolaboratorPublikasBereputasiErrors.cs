@@ -10,10 +10,13 @@ namespace UnpakSipaksi.Modules.JumlahKolaboratorPublikasBereputasi.Domain.Jumlah
     public static class JumlahKolaboratorPublikasBereputasiErrors
     {
         public static Error EmptyData() =>
-            Error.NotFound("JumlahKolaboratorPublikasBereputasi.EmptyData", $"data is not found");
-
+            Error.NotFound("JumlahKolaboratorPublikasBereputasi.EmptyData", "data is not found");
+        public static Error NotSameValue() =>
+           Error.NotFound("JumlahKolaboratorPublikasBereputasi.NotSameValue", "not the same value in data 'nilai'");
+        public static Error UnknownKategoriSkema() =>
+            Error.NotFound("JumlahKolaboratorPublikasBereputasi.UnknownKategoriSkema", "Unknown schema category");
         public static Error NotFound(Guid Id) =>
-            Error.NotFound("JumlahKolaboratorPublikasBereputasi.NotFound", $"The event with the identifier {Id} was not found");
+            Error.NotFound("JumlahKolaboratorPublikasBereputasi.NotFound", $"Jumlah kolaborator publikas bereputasi with identifier {Id} not found");
 
     }
 }

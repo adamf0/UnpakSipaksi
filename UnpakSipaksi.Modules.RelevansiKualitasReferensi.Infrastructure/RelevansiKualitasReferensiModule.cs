@@ -7,8 +7,10 @@ using UnpakSipaksi.Common.Infrastructure.Data;
 using UnpakSipaksi.Modules.RelevansiKualitasReferensi.Application.Abstractions.Data;
 using UnpakSipaksi.Modules.RelevansiKualitasReferensi.Domain.RelevansiKualitasReferensi;
 using UnpakSipaksi.Modules.RelevansiKualitasReferensi.Infrastructure.Database;
+using UnpakSipaksi.Modules.RelevansiKualitasReferensi.Infrastructure.PublicApi;
 using UnpakSipaksi.Modules.RelevansiKualitasReferensi.Infrastructure.RelevansiKualitasReferensi;
 using UnpakSipaksi.Modules.RelevansiKualitasReferensi.Presentation.RelevansiKualitasReferensi;
+using UnpakSipaksi.Modules.RelevansiKualitasReferensi.PublicApi;
 
 namespace UnpakSipaksi.Modules.RelevansiKualitasReferensi.Infrastructure
 {
@@ -38,6 +40,8 @@ namespace UnpakSipaksi.Modules.RelevansiKualitasReferensi.Infrastructure
             services.AddDbContext<RelevansiKualitasReferensiDbContext>(optionsBuilder => optionsBuilder.UseMySQL(databaseConnectionString));
 
             services.AddScoped<IRelevansiKualitasReferensiRepository, RelevansiKualitasReferensiRepository>();
+
+            services.AddScoped<IRelevansiKualitasReferensiApi, RelevansiKualitasReferensiApi>();
 
             services.AddScoped<IUnitOfWork>(sp => sp.GetRequiredService<RelevansiKualitasReferensiDbContext>());
         }

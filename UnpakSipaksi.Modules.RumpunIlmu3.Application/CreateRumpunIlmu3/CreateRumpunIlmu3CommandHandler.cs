@@ -23,7 +23,7 @@ namespace UnpakSipaksi.Modules.RumpunIlmu3.Application.CreateRumpunIlmu3
 
             if (RumpunIlmu2 is null)
             {
-                return Result.Failure<Guid>(RumpunIlmu3Errors.RumpunIlmu1NotFound(request.UuidRumpunIlmu2));
+                return Result.Failure<Guid>(RumpunIlmu3Errors.RumpunIlmu2NotFound(request.UuidRumpunIlmu2));
             }
 
             Result<Domain.RumpunIlmu3.RumpunIlmu3> result = Domain.RumpunIlmu3.RumpunIlmu3.Create(

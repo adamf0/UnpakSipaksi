@@ -1,0 +1,6 @@
+﻿using UnpakSipaksi.Common.Application.Messaging;
+
+namespace UnpakSipaksi.Modules.PotensiKetercapaianLuaranDijanjikan.Application.GetPotensiKetercapaianLuaranDijanjikan
+{
+    public sealed record GetPotensiKetercapaianLuaranDijanjikanDefaultQuery(Guid PotensiKetercapaianLuaranDijanjikanUuid) : IQuery<PotensiKetercapaianLuaranDijanjikanDefaultResponse>;
+}

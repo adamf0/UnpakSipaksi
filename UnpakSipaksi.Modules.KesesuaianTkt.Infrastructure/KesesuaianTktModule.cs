@@ -14,6 +14,8 @@ using UnpakSipaksi.Modules.KesesuaianTkt.Domain.KesesuaianTkt;
 using UnpakSipaksi.Modules.KesesuaianTkt.Presentation.KesesuaianTkt;
 using UnpakSipaksi.Modules.KesesuaianTkt.Infrastructure.KesesuaianTkt;
 using UnpakSipaksi.Modules.KesesuaianTkt.Infrastructure.Database;
+using UnpakSipaksi.Modules.KesesuaianTkt.PublicApi;
+using UnpakSipaksi.Modules.KesesuaianTkt.Infrastructure.PublicApi;
 
 namespace UnpakSipaksi.Modules.KesesuaianTkt.Infrastructure
 {
@@ -43,6 +45,8 @@ namespace UnpakSipaksi.Modules.KesesuaianTkt.Infrastructure
             services.AddDbContext<KesesuaianTktDbContext>(optionsBuilder => optionsBuilder.UseMySQL(databaseConnectionString));
 
             services.AddScoped<IKesesuaianTktRepository, KesesuaianTktRepository>();
+
+            services.AddScoped<IKesesuaianTktApi, KesesuaianTktApi>();
 
             services.AddScoped<IUnitOfWork>(sp => sp.GetRequiredService<KesesuaianTktDbContext>());
         }

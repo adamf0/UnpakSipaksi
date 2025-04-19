@@ -25,7 +25,7 @@ namespace UnpakSipaksi.Modules.PotensiKetercapaianLuaranDijanjikan.Application.G
                      bobot_kerjasama AS BobotKerjasama,
                      bobot_penelitian_dasar AS BobotPenelitianDasar,
                      skor AS Skor 
-                 FROM jumlah_kolaborator_publikasi_bereputasi 
+                 FROM potensi_ketercapaian_luaran_dijanjikan 
                  WHERE uuid = @Uuid
                  """;
 

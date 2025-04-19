@@ -14,10 +14,6 @@ namespace UnpakSipaksi.Modules.RelevansiKualitasReferensi.Application.CreateRele
         {
             Result<Domain.RelevansiKualitasReferensi.RelevansiKualitasReferensi> result = Domain.RelevansiKualitasReferensi.RelevansiKualitasReferensi.Create(
                 request.Nama,
-                request.BobotPDP,
-                request.BobotTerapan,
-                request.BobotKerjasama,
-                request.BobotPenelitianDasar,
                 request.Skor
             );
 

@@ -7,8 +7,10 @@ using UnpakSipaksi.Common.Infrastructure.Data;
 using UnpakSipaksi.Modules.RelevansiKepakaranTemaProposal.Application.Abstractions.Data;
 using UnpakSipaksi.Modules.RelevansiKepakaranTemaProposal.Domain.RelevansiKepakaranTemaProposal;
 using UnpakSipaksi.Modules.RelevansiKepakaranTemaProposal.Infrastructure.Database;
+using UnpakSipaksi.Modules.RelevansiKepakaranTemaProposal.Infrastructure.PublicApi;
 using UnpakSipaksi.Modules.RelevansiKepakaranTemaProposal.Infrastructure.RelevansiKepakaranTemaProposal;
 using UnpakSipaksi.Modules.RelevansiKepakaranTemaProposal.Presentation.RelevansiKepakaranTemaProposal;
+using UnpakSipaksi.Modules.RelevansiKepakaranTemaProposal.PublicApi;
 
 namespace UnpakSipaksi.Modules.RelevansiKepakaranTemaProposal.Infrastructure
 {
@@ -38,6 +40,8 @@ namespace UnpakSipaksi.Modules.RelevansiKepakaranTemaProposal.Infrastructure
             services.AddDbContext<RelevansiKepakaranTemaProposalDbContext>(optionsBuilder => optionsBuilder.UseMySQL(databaseConnectionString));
 
             services.AddScoped<IRelevansiKepakaranTemaProposalRepository, RelevansiKepakaranTemaProposalRepository>();
+
+            services.AddScoped<IRelevansiKepakaranTemaProposalApi, RelevansiKepakaranTemaProposalApi>();
 
             services.AddScoped<IUnitOfWork>(sp => sp.GetRequiredService<RelevansiKepakaranTemaProposalDbContext>());
         }

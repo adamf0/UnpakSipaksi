@@ -19,10 +19,6 @@ namespace UnpakSipaksi.Modules.RelevansiProdukKepentinganNasional.Application.Ge
             SELECT 
                 CAST(NULLIF(uuid, '') AS VARCHAR(36)) AS Uuid,
                 name as Nama,
-                bobot_pdp AS BobotPDP,
-                bobot_terapan AS BobotTerapan,
-                bobot_kerjasama AS BobotKerjasama,
-                bobot_penelitian_dasar AS BobotPenelitianDasar,
                 skor AS Skor 
             FROM relevansi_produk_kepentingan_nasional
             """;

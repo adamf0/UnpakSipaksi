@@ -28,6 +28,7 @@
 		<ProjectReference Include="..\UnpakSipaksi.Modules.KualitasKuantitasPublikasiJurnalIlmiah.Domain\UnpakSipaksi.Modules.KualitasKuantitasPublikasiJurnalIlmiah.Domain.csproj" />
 		<ProjectReference Include="..\UnpakSipaksi.Modules.KualitasKuantitasPublikasiJurnalIlmiah.Presentation\UnpakSipaksi.Modules.KualitasKuantitasPublikasiJurnalIlmiah.Presentation.csproj" />
 		<ProjectReference Include="..\UnpakSipaksi.Modules.KualitasKuantitasPublikasiJurnalIlmiah.Domain\UnpakSipaksi.Modules.KualitasKuantitasPublikasiJurnalIlmiah.Domain.csproj" />
+		<ProjectReference Include="..\UnpakSipaksi.Modules.KualitasKuantitasPublikasiJurnalIlmiah.PubliApi\UnpakSipaksi.Modules.KualitasKuantitasPublikasiJurnalIlmiah.PubliApi.csproj" />
 	</ItemGroup>
 
 </Project>

@@ -21,10 +21,6 @@ namespace UnpakSipaksi.Modules.ModelFeasibilityStudys.Application.UpdateModelFea
 
             Result<Domain.ModelFeasibilityStudys.ModelFeasibilityStudys> asset = Domain.ModelFeasibilityStudys.ModelFeasibilityStudys.Update(existingModelFeasibilityStudys!)
                          .ChangeNama(request.Nama)
-                         .ChangeBobotPDP(request.BobotPDP)
-                         .ChangeBobotTerapan(request.BobotTerapan)
-                         .ChangeBobotPenelitianDasar(request.BobotPenelitianDasar)
-                         .ChangeBobotKerjasama(request.BobotKerjasama)
                          .ChangeSkor(request.Skor)
                          .Build();
 

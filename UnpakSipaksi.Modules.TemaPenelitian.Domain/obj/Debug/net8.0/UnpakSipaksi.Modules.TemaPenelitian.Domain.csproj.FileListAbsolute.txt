@@ -8,9 +8,9 @@ C:\dev_net\UnpakSipaksi\UnpakSipaksi.Modules.TemaPenelitian.Domain\obj\Debug\net
 C:\dev_net\UnpakSipaksi\UnpakSipaksi.Modules.TemaPenelitian.Domain\obj\Debug\net8.0\UnpakSipaksi.Modules.TemaPenelitian.Domain.AssemblyInfoInputs.cache
 C:\dev_net\UnpakSipaksi\UnpakSipaksi.Modules.TemaPenelitian.Domain\obj\Debug\net8.0\UnpakSipaksi.Modules.TemaPenelitian.Domain.AssemblyInfo.cs
 C:\dev_net\UnpakSipaksi\UnpakSipaksi.Modules.TemaPenelitian.Domain\obj\Debug\net8.0\UnpakSipaksi.Modules.TemaPenelitian.Domain.csproj.CoreCompileInputs.cache
+C:\dev_net\UnpakSipaksi\UnpakSipaksi.Modules.TemaPenelitian.Domain\obj\Debug\net8.0\UnpakSipaksi.Modules.TemaPenelitian.Domain.sourcelink.json
 C:\dev_net\UnpakSipaksi\UnpakSipaksi.Modules.TemaPenelitian.Domain\obj\Debug\net8.0\UnpakSip.5A9F6BD2.Up2Date
 C:\dev_net\UnpakSipaksi\UnpakSipaksi.Modules.TemaPenelitian.Domain\obj\Debug\net8.0\UnpakSipaksi.Modules.TemaPenelitian.Domain.dll
 C:\dev_net\UnpakSipaksi\UnpakSipaksi.Modules.TemaPenelitian.Domain\obj\Debug\net8.0\refint\UnpakSipaksi.Modules.TemaPenelitian.Domain.dll
 C:\dev_net\UnpakSipaksi\UnpakSipaksi.Modules.TemaPenelitian.Domain\obj\Debug\net8.0\UnpakSipaksi.Modules.TemaPenelitian.Domain.pdb
 C:\dev_net\UnpakSipaksi\UnpakSipaksi.Modules.TemaPenelitian.Domain\obj\Debug\net8.0\ref\UnpakSipaksi.Modules.TemaPenelitian.Domain.dll
-C:\dev_net\UnpakSipaksi\UnpakSipaksi.Modules.TemaPenelitian.Domain\obj\Debug\net8.0\UnpakSipaksi.Modules.TemaPenelitian.Domain.sourcelink.json

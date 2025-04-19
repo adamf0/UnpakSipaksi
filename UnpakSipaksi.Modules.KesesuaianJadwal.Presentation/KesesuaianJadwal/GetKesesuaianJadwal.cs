@@ -5,7 +5,6 @@ using Microsoft.AspNetCore.Routing;
 using UnpakSipaksi.Common.Domain;
 using UnpakSipaksi.Common.Presentation.ApiResults;
 using UnpakSipaksi.Modules.KesesuaianJadwal.Application.GetKesesuaianJadwal;
-using UnpakSipaksi.Modules.KesesuaianJadwal.Application.GetkesesuaianJadwalRepository;
 
 namespace UnpakSipaksi.Modules.KesesuaianJadwal.Presentation.KesesuaianJadwal
 {

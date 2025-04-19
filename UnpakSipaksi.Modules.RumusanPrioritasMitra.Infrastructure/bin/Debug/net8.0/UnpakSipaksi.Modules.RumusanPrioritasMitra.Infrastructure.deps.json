@@ -14,7 +14,8 @@
           "UnpakSipaksi.Common.Infrastructure": "1.0.0",
           "UnpakSipaksi.Modules.RumusanPrioritasMitra.Application": "1.0.0",
           "UnpakSipaksi.Modules.RumusanPrioritasMitra.Domain": "1.0.0",
-          "UnpakSipaksi.Modules.RumusanPrioritasMitra.Presentation": "1.0.0"
+          "UnpakSipaksi.Modules.RumusanPrioritasMitra.Presentation": "1.0.0",
+          "UnpakSipaksi.Modules.RumusanPrioritasMitra.PublicApi": "1.0.0"
         },
         "runtime": {
           "UnpakSipaksi.Modules.RumusanPrioritasMitra.Infrastructure.dll": {}
@@ -699,6 +700,11 @@
         "runtime": {
           "UnpakSipaksi.Modules.RumusanPrioritasMitra.Presentation.dll": {}
         }
+      },
+      "UnpakSipaksi.Modules.RumusanPrioritasMitra.PublicApi/1.0.0": {
+        "runtime": {
+          "UnpakSipaksi.Modules.RumusanPrioritasMitra.PublicApi.dll": {}
+        }
       }
     }
   },
@@ -1215,6 +1221,11 @@
       "sha512": ""
     },
     "UnpakSipaksi.Modules.RumusanPrioritasMitra.Presentation/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    },
+    "UnpakSipaksi.Modules.RumusanPrioritasMitra.PublicApi/1.0.0": {
       "type": "project",
       "serviceable": false,
       "sha512": ""

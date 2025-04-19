@@ -1,9 +1,3 @@
-C:\dev_net\UnpakSipaksi\UnpakSipaksi.Modules.RumpunIlmu2.Application\obj\Debug\net8.0\UnpakSipaksi.Modules.RumpunIlmu2.Application.csproj.AssemblyReference.cache
-C:\dev_net\UnpakSipaksi\UnpakSipaksi.Modules.RumpunIlmu2.Application\obj\Debug\net8.0\UnpakSipaksi.Modules.RumpunIlmu2.Application.GeneratedMSBuildEditorConfig.editorconfig
-C:\dev_net\UnpakSipaksi\UnpakSipaksi.Modules.RumpunIlmu2.Application\obj\Debug\net8.0\UnpakSipaksi.Modules.RumpunIlmu2.Application.AssemblyInfoInputs.cache
-C:\dev_net\UnpakSipaksi\UnpakSipaksi.Modules.RumpunIlmu2.Application\obj\Debug\net8.0\UnpakSipaksi.Modules.RumpunIlmu2.Application.AssemblyInfo.cs
-C:\dev_net\UnpakSipaksi\UnpakSipaksi.Modules.RumpunIlmu2.Application\obj\Debug\net8.0\UnpakSipaksi.Modules.RumpunIlmu2.Application.csproj.CoreCompileInputs.cache
-C:\dev_net\UnpakSipaksi\UnpakSipaksi.Modules.RumpunIlmu2.Application\obj\Debug\net8.0\UnpakSipaksi.Modules.RumpunIlmu2.Application.sourcelink.json
 C:\dev_net\UnpakSipaksi\UnpakSipaksi.Modules.RumpunIlmu2.Application\bin\Debug\net8.0\UnpakSipaksi.Modules.RumpunIlmu2.Application.deps.json
 C:\dev_net\UnpakSipaksi\UnpakSipaksi.Modules.RumpunIlmu2.Application\bin\Debug\net8.0\UnpakSipaksi.Modules.RumpunIlmu2.Application.dll
 C:\dev_net\UnpakSipaksi\UnpakSipaksi.Modules.RumpunIlmu2.Application\bin\Debug\net8.0\UnpakSipaksi.Modules.RumpunIlmu2.Application.pdb
@@ -15,6 +9,12 @@ C:\dev_net\UnpakSipaksi\UnpakSipaksi.Modules.RumpunIlmu2.Application\bin\Debug\n
 C:\dev_net\UnpakSipaksi\UnpakSipaksi.Modules.RumpunIlmu2.Application\bin\Debug\net8.0\UnpakSipaksi.Common.Domain.pdb
 C:\dev_net\UnpakSipaksi\UnpakSipaksi.Modules.RumpunIlmu2.Application\bin\Debug\net8.0\UnpakSipaksi.Modules.RumpunIlmu1.PublicApi.pdb
 C:\dev_net\UnpakSipaksi\UnpakSipaksi.Modules.RumpunIlmu2.Application\bin\Debug\net8.0\UnpakSipaksi.Modules.RumpunIlmu2.Domain.pdb
+C:\dev_net\UnpakSipaksi\UnpakSipaksi.Modules.RumpunIlmu2.Application\obj\Debug\net8.0\UnpakSipaksi.Modules.RumpunIlmu2.Application.csproj.AssemblyReference.cache
+C:\dev_net\UnpakSipaksi\UnpakSipaksi.Modules.RumpunIlmu2.Application\obj\Debug\net8.0\UnpakSipaksi.Modules.RumpunIlmu2.Application.GeneratedMSBuildEditorConfig.editorconfig
+C:\dev_net\UnpakSipaksi\UnpakSipaksi.Modules.RumpunIlmu2.Application\obj\Debug\net8.0\UnpakSipaksi.Modules.RumpunIlmu2.Application.AssemblyInfoInputs.cache
+C:\dev_net\UnpakSipaksi\UnpakSipaksi.Modules.RumpunIlmu2.Application\obj\Debug\net8.0\UnpakSipaksi.Modules.RumpunIlmu2.Application.AssemblyInfo.cs
+C:\dev_net\UnpakSipaksi\UnpakSipaksi.Modules.RumpunIlmu2.Application\obj\Debug\net8.0\UnpakSipaksi.Modules.RumpunIlmu2.Application.csproj.CoreCompileInputs.cache
+C:\dev_net\UnpakSipaksi\UnpakSipaksi.Modules.RumpunIlmu2.Application\obj\Debug\net8.0\UnpakSipaksi.Modules.RumpunIlmu2.Application.sourcelink.json
 C:\dev_net\UnpakSipaksi\UnpakSipaksi.Modules.RumpunIlmu2.Application\obj\Debug\net8.0\UnpakSip.C85C318D.Up2Date
 C:\dev_net\UnpakSipaksi\UnpakSipaksi.Modules.RumpunIlmu2.Application\obj\Debug\net8.0\UnpakSipaksi.Modules.RumpunIlmu2.Application.dll
 C:\dev_net\UnpakSipaksi\UnpakSipaksi.Modules.RumpunIlmu2.Application\obj\Debug\net8.0\refint\UnpakSipaksi.Modules.RumpunIlmu2.Application.dll

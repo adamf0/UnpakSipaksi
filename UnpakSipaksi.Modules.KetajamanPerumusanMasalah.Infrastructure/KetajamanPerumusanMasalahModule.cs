@@ -9,6 +9,8 @@ using UnpakSipaksi.Modules.KetajamanPerumusanMasalah.Application.Abstractions.Da
 using UnpakSipaksi.Modules.KetajamanPerumusanMasalah.Infrastructure.KetajamanPerumusanMasalah;
 using UnpakSipaksi.Modules.KetajamanPerumusanMasalah.Infrastructure.Database;
 using UnpakSipaksi.Modules.KetajamanPerumusanMasalah.Presentation.KetajamanPerumusanMasalah;
+using UnpakSipaksi.Modules.KetajamanPerumusanMasalah.PublicApi;
+using UnpakSipaksi.Modules.KetajamanPerumusanMasalah.Infrastructure.PublicApi;
 
 namespace UnpakSipaksi.Modules.KetajamanPerumusanMasalah.Infrastructure
 {
@@ -38,6 +40,8 @@ namespace UnpakSipaksi.Modules.KetajamanPerumusanMasalah.Infrastructure
             services.AddDbContext<KetajamanPerumusanMasalahDbContext>(optionsBuilder => optionsBuilder.UseMySQL(databaseConnectionString));
 
             services.AddScoped<IKetajamanPerumusanMasalahRepository, KetajamanPerumusanMasalahRepository>();
+
+            services.AddScoped<IKetajamanPerumusanMasalahApi, KetajamanPerumusanMasalahApi>();
 
             services.AddScoped<IUnitOfWork>(sp => sp.GetRequiredService<KetajamanPerumusanMasalahDbContext>());
         }

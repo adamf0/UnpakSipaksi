@@ -14,7 +14,8 @@
           "UnpakSipaksi.Common.Infrastructure": "1.0.0",
           "UnpakSipaksi.Modules.RelevansiKualitasReferensi.Application": "1.0.0",
           "UnpakSipaksi.Modules.RelevansiKualitasReferensi.Domain": "1.0.0",
-          "UnpakSipaksi.Modules.RelevansiKualitasReferensi.Presentation": "1.0.0"
+          "UnpakSipaksi.Modules.RelevansiKualitasReferensi.Presentation": "1.0.0",
+          "UnpakSipaksi.Modules.RelevansiKualitasReferensi.PublicApi": "1.0.0"
         },
         "runtime": {
           "UnpakSipaksi.Modules.RelevansiKualitasReferensi.Infrastructure.dll": {}
@@ -699,6 +700,11 @@
         "runtime": {
           "UnpakSipaksi.Modules.RelevansiKualitasReferensi.Presentation.dll": {}
         }
+      },
+      "UnpakSipaksi.Modules.RelevansiKualitasReferensi.PublicApi/1.0.0": {
+        "runtime": {
+          "UnpakSipaksi.Modules.RelevansiKualitasReferensi.PublicApi.dll": {}
+        }
       }
     }
   },
@@ -1215,6 +1221,11 @@
       "sha512": ""
     },
     "UnpakSipaksi.Modules.RelevansiKualitasReferensi.Presentation/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    },
+    "UnpakSipaksi.Modules.RelevansiKualitasReferensi.PublicApi/1.0.0": {
       "type": "project",
       "serviceable": false,
       "sha512": ""

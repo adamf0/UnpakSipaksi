@@ -9,10 +9,6 @@ namespace UnpakSipaksi.Modules.AkurasiPenelitian.Application.CreateAkurasiPeneli
 {
     public sealed record CreateAkurasiPenelitianCommand(
         string Nama,
-        int BobotPDP,
-        int BobotTerapan,
-        int BobotKerjasama,
-        int BobotPenelitianDasar,
         int Skor
     ) : ICommand<Guid>;
 }

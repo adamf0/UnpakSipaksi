@@ -10,12 +10,14 @@ C:\dev_net\UnpakSipaksi\UnpakSipaksi.Modules.RelevansiKepakaranTemaProposal.Pres
 C:\dev_net\UnpakSipaksi\UnpakSipaksi.Modules.RelevansiKepakaranTemaProposal.Presentation\bin\Debug\net8.0\UnpakSipaksi.Common.Application.dll
 C:\dev_net\UnpakSipaksi\UnpakSipaksi.Modules.RelevansiKepakaranTemaProposal.Presentation\bin\Debug\net8.0\UnpakSipaksi.Common.Domain.dll
 C:\dev_net\UnpakSipaksi\UnpakSipaksi.Modules.RelevansiKepakaranTemaProposal.Presentation\bin\Debug\net8.0\UnpakSipaksi.Common.Presentation.dll
+C:\dev_net\UnpakSipaksi\UnpakSipaksi.Modules.RelevansiKepakaranTemaProposal.Presentation\bin\Debug\net8.0\UnpakSipaksi.Modules.PublikasiDisitasiProposal.Domain.dll
 C:\dev_net\UnpakSipaksi\UnpakSipaksi.Modules.RelevansiKepakaranTemaProposal.Presentation\bin\Debug\net8.0\UnpakSipaksi.Modules.RelevansiKepakaranTemaProposal.Application.dll
 C:\dev_net\UnpakSipaksi\UnpakSipaksi.Modules.RelevansiKepakaranTemaProposal.Presentation\bin\Debug\net8.0\UnpakSipaksi.Modules.RelevansiKepakaranTemaProposal.Domain.dll
 C:\dev_net\UnpakSipaksi\UnpakSipaksi.Modules.RelevansiKepakaranTemaProposal.Presentation\bin\Debug\net8.0\UnpakSipaksi.Common.Domain.pdb
 C:\dev_net\UnpakSipaksi\UnpakSipaksi.Modules.RelevansiKepakaranTemaProposal.Presentation\bin\Debug\net8.0\UnpakSipaksi.Common.Presentation.pdb
 C:\dev_net\UnpakSipaksi\UnpakSipaksi.Modules.RelevansiKepakaranTemaProposal.Presentation\bin\Debug\net8.0\UnpakSipaksi.Modules.RelevansiKepakaranTemaProposal.Application.pdb
 C:\dev_net\UnpakSipaksi\UnpakSipaksi.Modules.RelevansiKepakaranTemaProposal.Presentation\bin\Debug\net8.0\UnpakSipaksi.Common.Application.pdb
+C:\dev_net\UnpakSipaksi\UnpakSipaksi.Modules.RelevansiKepakaranTemaProposal.Presentation\bin\Debug\net8.0\UnpakSipaksi.Modules.PublikasiDisitasiProposal.Domain.pdb
 C:\dev_net\UnpakSipaksi\UnpakSipaksi.Modules.RelevansiKepakaranTemaProposal.Presentation\bin\Debug\net8.0\UnpakSipaksi.Modules.RelevansiKepakaranTemaProposal.Domain.pdb
 C:\dev_net\UnpakSipaksi\UnpakSipaksi.Modules.RelevansiKepakaranTemaProposal.Presentation\obj\Debug\net8.0\UnpakSip.A861BAC6.Up2Date
 C:\dev_net\UnpakSipaksi\UnpakSipaksi.Modules.RelevansiKepakaranTemaProposal.Presentation\obj\Debug\net8.0\UnpakSipaksi.Modules.RelevansiKepakaranTemaProposal.Presentation.dll

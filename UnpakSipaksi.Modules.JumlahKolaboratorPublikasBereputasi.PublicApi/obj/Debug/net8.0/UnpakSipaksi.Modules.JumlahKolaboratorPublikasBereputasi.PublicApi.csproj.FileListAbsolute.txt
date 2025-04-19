@@ -1,0 +1,12 @@
+C:\dev_net\UnpakSipaksi\UnpakSipaksi.Modules.JumlahKolaboratorPublikasBereputasi.PublicApi\bin\Debug\net8.0\UnpakSipaksi.Modules.JumlahKolaboratorPublikasBereputasi.PublicApi.deps.json
+C:\dev_net\UnpakSipaksi\UnpakSipaksi.Modules.JumlahKolaboratorPublikasBereputasi.PublicApi\bin\Debug\net8.0\UnpakSipaksi.Modules.JumlahKolaboratorPublikasBereputasi.PublicApi.dll
+C:\dev_net\UnpakSipaksi\UnpakSipaksi.Modules.JumlahKolaboratorPublikasBereputasi.PublicApi\bin\Debug\net8.0\UnpakSipaksi.Modules.JumlahKolaboratorPublikasBereputasi.PublicApi.pdb
+C:\dev_net\UnpakSipaksi\UnpakSipaksi.Modules.JumlahKolaboratorPublikasBereputasi.PublicApi\obj\Debug\net8.0\UnpakSipaksi.Modules.JumlahKolaboratorPublikasBereputasi.PublicApi.GeneratedMSBuildEditorConfig.editorconfig
+C:\dev_net\UnpakSipaksi\UnpakSipaksi.Modules.JumlahKolaboratorPublikasBereputasi.PublicApi\obj\Debug\net8.0\UnpakSipaksi.Modules.JumlahKolaboratorPublikasBereputasi.PublicApi.AssemblyInfoInputs.cache
+C:\dev_net\UnpakSipaksi\UnpakSipaksi.Modules.JumlahKolaboratorPublikasBereputasi.PublicApi\obj\Debug\net8.0\UnpakSipaksi.Modules.JumlahKolaboratorPublikasBereputasi.PublicApi.AssemblyInfo.cs
+C:\dev_net\UnpakSipaksi\UnpakSipaksi.Modules.JumlahKolaboratorPublikasBereputasi.PublicApi\obj\Debug\net8.0\UnpakSipaksi.Modules.JumlahKolaboratorPublikasBereputasi.PublicApi.csproj.CoreCompileInputs.cache
+C:\dev_net\UnpakSipaksi\UnpakSipaksi.Modules.JumlahKolaboratorPublikasBereputasi.PublicApi\obj\Debug\net8.0\UnpakSipaksi.Modules.JumlahKolaboratorPublikasBereputasi.PublicApi.sourcelink.json
+C:\dev_net\UnpakSipaksi\UnpakSipaksi.Modules.JumlahKolaboratorPublikasBereputasi.PublicApi\obj\Debug\net8.0\UnpakSipaksi.Modules.JumlahKolaboratorPublikasBereputasi.PublicApi.dll
+C:\dev_net\UnpakSipaksi\UnpakSipaksi.Modules.JumlahKolaboratorPublikasBereputasi.PublicApi\obj\Debug\net8.0\refint\UnpakSipaksi.Modules.JumlahKolaboratorPublikasBereputasi.PublicApi.dll
+C:\dev_net\UnpakSipaksi\UnpakSipaksi.Modules.JumlahKolaboratorPublikasBereputasi.PublicApi\obj\Debug\net8.0\UnpakSipaksi.Modules.JumlahKolaboratorPublikasBereputasi.PublicApi.pdb
+C:\dev_net\UnpakSipaksi\UnpakSipaksi.Modules.JumlahKolaboratorPublikasBereputasi.PublicApi\obj\Debug\net8.0\ref\UnpakSipaksi.Modules.JumlahKolaboratorPublikasBereputasi.PublicApi.dll

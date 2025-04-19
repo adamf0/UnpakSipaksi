@@ -9,6 +9,8 @@ using UnpakSipaksi.Modules.MetodeRencanaKegiatan.Application.Abstractions.Data;
 using UnpakSipaksi.Modules.MetodeRencanaKegiatan.Domain.MetodeRencanaKegiatan;
 using UnpakSipaksi.Modules.MetodeRencanaKegiatan.Infrastructure.Database;
 using UnpakSipaksi.Modules.MetodeRencanaKegiatan.Infrastructure.MetodeRencanaKegiatan;
+using UnpakSipaksi.Modules.MetodeRencanaKegiatan.Infrastructure.PublicApi;
+using UnpakSipaksi.Modules.MetodeRencanaKegiatan.PublicApi;
 
 namespace UnpakSipaksi.Modules.MetodeRencanaKegiatan.Infrastructure
 {
@@ -38,6 +40,8 @@ namespace UnpakSipaksi.Modules.MetodeRencanaKegiatan.Infrastructure
             services.AddDbContext<MetodeRencanaKegiatanDbContext>(optionsBuilder => optionsBuilder.UseMySQL(databaseConnectionString));
 
             services.AddScoped<IMetodeRencanaKegiatanRepository, MetodeRencanaKegiatanRepository>();
+
+            services.AddScoped<IMetodeRencanaKegiatanApi, MetodeRencanaKegiatanApi>();
 
             services.AddScoped<IUnitOfWork>(sp => sp.GetRequiredService<MetodeRencanaKegiatanDbContext>());
         }

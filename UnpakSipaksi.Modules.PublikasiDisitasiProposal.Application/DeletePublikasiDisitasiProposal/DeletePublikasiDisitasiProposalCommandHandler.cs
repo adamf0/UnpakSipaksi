@@ -1,7 +1,6 @@
 ﻿using UnpakSipaksi.Common.Application.Messaging;
 using UnpakSipaksi.Common.Domain;
 using UnpakSipaksi.Modules.PublikasiDisitasiProposal.Application.Abstractions.Data;
-using UnpakSipaksi.Modules.PublikasiDisitasiProposal.Application.PublikasiDisitasiProposal;
 using UnpakSipaksi.Modules.PublikasiDisitasiProposal.Domain.PublikasiDisitasiProposal;
 
 namespace UnpakSipaksi.Modules.PublikasiDisitasiProposal.Application.DeletePublikasiDisitasiProposal

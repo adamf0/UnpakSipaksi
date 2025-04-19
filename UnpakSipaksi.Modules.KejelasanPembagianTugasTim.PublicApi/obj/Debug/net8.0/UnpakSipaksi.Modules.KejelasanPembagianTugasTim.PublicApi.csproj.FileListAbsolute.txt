@@ -1,0 +1,12 @@
+C:\dev_net\UnpakSipaksi\UnpakSipaksi.Modules.KejelasanPembagianTugasTim.PublicApi\bin\Debug\net8.0\UnpakSipaksi.Modules.KejelasanPembagianTugasTim.PublicApi.deps.json
+C:\dev_net\UnpakSipaksi\UnpakSipaksi.Modules.KejelasanPembagianTugasTim.PublicApi\bin\Debug\net8.0\UnpakSipaksi.Modules.KejelasanPembagianTugasTim.PublicApi.dll
+C:\dev_net\UnpakSipaksi\UnpakSipaksi.Modules.KejelasanPembagianTugasTim.PublicApi\bin\Debug\net8.0\UnpakSipaksi.Modules.KejelasanPembagianTugasTim.PublicApi.pdb
+C:\dev_net\UnpakSipaksi\UnpakSipaksi.Modules.KejelasanPembagianTugasTim.PublicApi\obj\Debug\net8.0\UnpakSipaksi.Modules.KejelasanPembagianTugasTim.PublicApi.GeneratedMSBuildEditorConfig.editorconfig
+C:\dev_net\UnpakSipaksi\UnpakSipaksi.Modules.KejelasanPembagianTugasTim.PublicApi\obj\Debug\net8.0\UnpakSipaksi.Modules.KejelasanPembagianTugasTim.PublicApi.AssemblyInfoInputs.cache
+C:\dev_net\UnpakSipaksi\UnpakSipaksi.Modules.KejelasanPembagianTugasTim.PublicApi\obj\Debug\net8.0\UnpakSipaksi.Modules.KejelasanPembagianTugasTim.PublicApi.AssemblyInfo.cs
+C:\dev_net\UnpakSipaksi\UnpakSipaksi.Modules.KejelasanPembagianTugasTim.PublicApi\obj\Debug\net8.0\UnpakSipaksi.Modules.KejelasanPembagianTugasTim.PublicApi.csproj.CoreCompileInputs.cache
+C:\dev_net\UnpakSipaksi\UnpakSipaksi.Modules.KejelasanPembagianTugasTim.PublicApi\obj\Debug\net8.0\UnpakSipaksi.Modules.KejelasanPembagianTugasTim.PublicApi.sourcelink.json
+C:\dev_net\UnpakSipaksi\UnpakSipaksi.Modules.KejelasanPembagianTugasTim.PublicApi\obj\Debug\net8.0\UnpakSipaksi.Modules.KejelasanPembagianTugasTim.PublicApi.dll
+C:\dev_net\UnpakSipaksi\UnpakSipaksi.Modules.KejelasanPembagianTugasTim.PublicApi\obj\Debug\net8.0\refint\UnpakSipaksi.Modules.KejelasanPembagianTugasTim.PublicApi.dll
+C:\dev_net\UnpakSipaksi\UnpakSipaksi.Modules.KejelasanPembagianTugasTim.PublicApi\obj\Debug\net8.0\UnpakSipaksi.Modules.KejelasanPembagianTugasTim.PublicApi.pdb
+C:\dev_net\UnpakSipaksi\UnpakSipaksi.Modules.KejelasanPembagianTugasTim.PublicApi\obj\Debug\net8.0\ref\UnpakSipaksi.Modules.KejelasanPembagianTugasTim.PublicApi.dll

@@ -1,8 +1,3 @@
-C:\dev_net\UnpakSipaksi\UnpakSipaksi.Modules.KesesuaianWaktuRabLuaranFasilitas.Presentation\obj\Debug\net8.0\UnpakSipaksi.Modules.KesesuaianWaktuRabLuaranFasilitas.Presentation.csproj.AssemblyReference.cache
-C:\dev_net\UnpakSipaksi\UnpakSipaksi.Modules.KesesuaianWaktuRabLuaranFasilitas.Presentation\obj\Debug\net8.0\UnpakSipaksi.Modules.KesesuaianWaktuRabLuaranFasilitas.Presentation.GeneratedMSBuildEditorConfig.editorconfig
-C:\dev_net\UnpakSipaksi\UnpakSipaksi.Modules.KesesuaianWaktuRabLuaranFasilitas.Presentation\obj\Debug\net8.0\UnpakSipaksi.Modules.KesesuaianWaktuRabLuaranFasilitas.Presentation.AssemblyInfoInputs.cache
-C:\dev_net\UnpakSipaksi\UnpakSipaksi.Modules.KesesuaianWaktuRabLuaranFasilitas.Presentation\obj\Debug\net8.0\UnpakSipaksi.Modules.KesesuaianWaktuRabLuaranFasilitas.Presentation.AssemblyInfo.cs
-C:\dev_net\UnpakSipaksi\UnpakSipaksi.Modules.KesesuaianWaktuRabLuaranFasilitas.Presentation\obj\Debug\net8.0\UnpakSipaksi.Modules.KesesuaianWaktuRabLuaranFasilitas.Presentation.csproj.CoreCompileInputs.cache
 C:\dev_net\UnpakSipaksi\UnpakSipaksi.Modules.KesesuaianWaktuRabLuaranFasilitas.Presentation\bin\Debug\net8.0\UnpakSipaksi.Modules.KesesuaianWaktuRabLuaranFasilitas.Presentation.deps.json
 C:\dev_net\UnpakSipaksi\UnpakSipaksi.Modules.KesesuaianWaktuRabLuaranFasilitas.Presentation\bin\Debug\net8.0\UnpakSipaksi.Modules.KesesuaianWaktuRabLuaranFasilitas.Presentation.dll
 C:\dev_net\UnpakSipaksi\UnpakSipaksi.Modules.KesesuaianWaktuRabLuaranFasilitas.Presentation\bin\Debug\net8.0\UnpakSipaksi.Modules.KesesuaianWaktuRabLuaranFasilitas.Presentation.pdb
@@ -16,9 +11,14 @@ C:\dev_net\UnpakSipaksi\UnpakSipaksi.Modules.KesesuaianWaktuRabLuaranFasilitas.P
 C:\dev_net\UnpakSipaksi\UnpakSipaksi.Modules.KesesuaianWaktuRabLuaranFasilitas.Presentation\bin\Debug\net8.0\UnpakSipaksi.Modules.KesesuaianWaktuRabLuaranFasilitas.Application.pdb
 C:\dev_net\UnpakSipaksi\UnpakSipaksi.Modules.KesesuaianWaktuRabLuaranFasilitas.Presentation\bin\Debug\net8.0\UnpakSipaksi.Common.Application.pdb
 C:\dev_net\UnpakSipaksi\UnpakSipaksi.Modules.KesesuaianWaktuRabLuaranFasilitas.Presentation\bin\Debug\net8.0\UnpakSipaksi.Modules.KesesuaianWaktuRabLuaranFasilitas.Domain.pdb
+C:\dev_net\UnpakSipaksi\UnpakSipaksi.Modules.KesesuaianWaktuRabLuaranFasilitas.Presentation\obj\Debug\net8.0\UnpakSipaksi.Modules.KesesuaianWaktuRabLuaranFasilitas.Presentation.csproj.AssemblyReference.cache
+C:\dev_net\UnpakSipaksi\UnpakSipaksi.Modules.KesesuaianWaktuRabLuaranFasilitas.Presentation\obj\Debug\net8.0\UnpakSipaksi.Modules.KesesuaianWaktuRabLuaranFasilitas.Presentation.GeneratedMSBuildEditorConfig.editorconfig
+C:\dev_net\UnpakSipaksi\UnpakSipaksi.Modules.KesesuaianWaktuRabLuaranFasilitas.Presentation\obj\Debug\net8.0\UnpakSipaksi.Modules.KesesuaianWaktuRabLuaranFasilitas.Presentation.AssemblyInfoInputs.cache
+C:\dev_net\UnpakSipaksi\UnpakSipaksi.Modules.KesesuaianWaktuRabLuaranFasilitas.Presentation\obj\Debug\net8.0\UnpakSipaksi.Modules.KesesuaianWaktuRabLuaranFasilitas.Presentation.AssemblyInfo.cs
+C:\dev_net\UnpakSipaksi\UnpakSipaksi.Modules.KesesuaianWaktuRabLuaranFasilitas.Presentation\obj\Debug\net8.0\UnpakSipaksi.Modules.KesesuaianWaktuRabLuaranFasilitas.Presentation.csproj.CoreCompileInputs.cache
+C:\dev_net\UnpakSipaksi\UnpakSipaksi.Modules.KesesuaianWaktuRabLuaranFasilitas.Presentation\obj\Debug\net8.0\UnpakSipaksi.Modules.KesesuaianWaktuRabLuaranFasilitas.Presentation.sourcelink.json
 C:\dev_net\UnpakSipaksi\UnpakSipaksi.Modules.KesesuaianWaktuRabLuaranFasilitas.Presentation\obj\Debug\net8.0\UnpakSip.2198AFDD.Up2Date
 C:\dev_net\UnpakSipaksi\UnpakSipaksi.Modules.KesesuaianWaktuRabLuaranFasilitas.Presentation\obj\Debug\net8.0\UnpakSipaksi.Modules.KesesuaianWaktuRabLuaranFasilitas.Presentation.dll
 C:\dev_net\UnpakSipaksi\UnpakSipaksi.Modules.KesesuaianWaktuRabLuaranFasilitas.Presentation\obj\Debug\net8.0\refint\UnpakSipaksi.Modules.KesesuaianWaktuRabLuaranFasilitas.Presentation.dll
 C:\dev_net\UnpakSipaksi\UnpakSipaksi.Modules.KesesuaianWaktuRabLuaranFasilitas.Presentation\obj\Debug\net8.0\UnpakSipaksi.Modules.KesesuaianWaktuRabLuaranFasilitas.Presentation.pdb
 C:\dev_net\UnpakSipaksi\UnpakSipaksi.Modules.KesesuaianWaktuRabLuaranFasilitas.Presentation\obj\Debug\net8.0\ref\UnpakSipaksi.Modules.KesesuaianWaktuRabLuaranFasilitas.Presentation.dll
-C:\dev_net\UnpakSipaksi\UnpakSipaksi.Modules.KesesuaianWaktuRabLuaranFasilitas.Presentation\obj\Debug\net8.0\UnpakSipaksi.Modules.KesesuaianWaktuRabLuaranFasilitas.Presentation.sourcelink.json

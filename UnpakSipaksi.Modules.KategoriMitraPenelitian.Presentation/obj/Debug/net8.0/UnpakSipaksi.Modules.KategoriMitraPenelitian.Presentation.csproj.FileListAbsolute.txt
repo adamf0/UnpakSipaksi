@@ -1,8 +1,3 @@
-C:\dev_net\UnpakSipaksi\UnpakSipaksi.Modules.KategoriMitraPenelitian.Presentation\obj\Debug\net8.0\UnpakSipaksi.Modules.KategoriMitraPenelitian.Presentation.csproj.AssemblyReference.cache
-C:\dev_net\UnpakSipaksi\UnpakSipaksi.Modules.KategoriMitraPenelitian.Presentation\obj\Debug\net8.0\UnpakSipaksi.Modules.KategoriMitraPenelitian.Presentation.GeneratedMSBuildEditorConfig.editorconfig
-C:\dev_net\UnpakSipaksi\UnpakSipaksi.Modules.KategoriMitraPenelitian.Presentation\obj\Debug\net8.0\UnpakSipaksi.Modules.KategoriMitraPenelitian.Presentation.AssemblyInfoInputs.cache
-C:\dev_net\UnpakSipaksi\UnpakSipaksi.Modules.KategoriMitraPenelitian.Presentation\obj\Debug\net8.0\UnpakSipaksi.Modules.KategoriMitraPenelitian.Presentation.AssemblyInfo.cs
-C:\dev_net\UnpakSipaksi\UnpakSipaksi.Modules.KategoriMitraPenelitian.Presentation\obj\Debug\net8.0\UnpakSipaksi.Modules.KategoriMitraPenelitian.Presentation.csproj.CoreCompileInputs.cache
 C:\dev_net\UnpakSipaksi\UnpakSipaksi.Modules.KategoriMitraPenelitian.Presentation\bin\Debug\net8.0\UnpakSipaksi.Modules.KategoriMitraPenelitian.Presentation.deps.json
 C:\dev_net\UnpakSipaksi\UnpakSipaksi.Modules.KategoriMitraPenelitian.Presentation\bin\Debug\net8.0\UnpakSipaksi.Modules.KategoriMitraPenelitian.Presentation.dll
 C:\dev_net\UnpakSipaksi\UnpakSipaksi.Modules.KategoriMitraPenelitian.Presentation\bin\Debug\net8.0\UnpakSipaksi.Modules.KategoriMitraPenelitian.Presentation.pdb
@@ -16,9 +11,14 @@ C:\dev_net\UnpakSipaksi\UnpakSipaksi.Modules.KategoriMitraPenelitian.Presentatio
 C:\dev_net\UnpakSipaksi\UnpakSipaksi.Modules.KategoriMitraPenelitian.Presentation\bin\Debug\net8.0\UnpakSipaksi.Modules.KategoriMitraPenelitian.Application.pdb
 C:\dev_net\UnpakSipaksi\UnpakSipaksi.Modules.KategoriMitraPenelitian.Presentation\bin\Debug\net8.0\UnpakSipaksi.Common.Application.pdb
 C:\dev_net\UnpakSipaksi\UnpakSipaksi.Modules.KategoriMitraPenelitian.Presentation\bin\Debug\net8.0\UnpakSipaksi.Modules.KategoriMitraPenelitian.Domain.pdb
+C:\dev_net\UnpakSipaksi\UnpakSipaksi.Modules.KategoriMitraPenelitian.Presentation\obj\Debug\net8.0\UnpakSipaksi.Modules.KategoriMitraPenelitian.Presentation.csproj.AssemblyReference.cache
+C:\dev_net\UnpakSipaksi\UnpakSipaksi.Modules.KategoriMitraPenelitian.Presentation\obj\Debug\net8.0\UnpakSipaksi.Modules.KategoriMitraPenelitian.Presentation.GeneratedMSBuildEditorConfig.editorconfig
+C:\dev_net\UnpakSipaksi\UnpakSipaksi.Modules.KategoriMitraPenelitian.Presentation\obj\Debug\net8.0\UnpakSipaksi.Modules.KategoriMitraPenelitian.Presentation.AssemblyInfoInputs.cache
+C:\dev_net\UnpakSipaksi\UnpakSipaksi.Modules.KategoriMitraPenelitian.Presentation\obj\Debug\net8.0\UnpakSipaksi.Modules.KategoriMitraPenelitian.Presentation.AssemblyInfo.cs
+C:\dev_net\UnpakSipaksi\UnpakSipaksi.Modules.KategoriMitraPenelitian.Presentation\obj\Debug\net8.0\UnpakSipaksi.Modules.KategoriMitraPenelitian.Presentation.csproj.CoreCompileInputs.cache
+C:\dev_net\UnpakSipaksi\UnpakSipaksi.Modules.KategoriMitraPenelitian.Presentation\obj\Debug\net8.0\UnpakSipaksi.Modules.KategoriMitraPenelitian.Presentation.sourcelink.json
 C:\dev_net\UnpakSipaksi\UnpakSipaksi.Modules.KategoriMitraPenelitian.Presentation\obj\Debug\net8.0\UnpakSip.32A1A669.Up2Date
 C:\dev_net\UnpakSipaksi\UnpakSipaksi.Modules.KategoriMitraPenelitian.Presentation\obj\Debug\net8.0\UnpakSipaksi.Modules.KategoriMitraPenelitian.Presentation.dll
 C:\dev_net\UnpakSipaksi\UnpakSipaksi.Modules.KategoriMitraPenelitian.Presentation\obj\Debug\net8.0\refint\UnpakSipaksi.Modules.KategoriMitraPenelitian.Presentation.dll
 C:\dev_net\UnpakSipaksi\UnpakSipaksi.Modules.KategoriMitraPenelitian.Presentation\obj\Debug\net8.0\UnpakSipaksi.Modules.KategoriMitraPenelitian.Presentation.pdb
 C:\dev_net\UnpakSipaksi\UnpakSipaksi.Modules.KategoriMitraPenelitian.Presentation\obj\Debug\net8.0\ref\UnpakSipaksi.Modules.KategoriMitraPenelitian.Presentation.dll
-C:\dev_net\UnpakSipaksi\UnpakSipaksi.Modules.KategoriMitraPenelitian.Presentation\obj\Debug\net8.0\UnpakSipaksi.Modules.KategoriMitraPenelitian.Presentation.sourcelink.json

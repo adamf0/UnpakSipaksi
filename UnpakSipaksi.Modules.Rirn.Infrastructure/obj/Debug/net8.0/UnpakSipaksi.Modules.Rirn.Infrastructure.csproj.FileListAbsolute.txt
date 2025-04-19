@@ -1,9 +1,3 @@
-C:\dev_net\UnpakSipaksi\UnpakSipaksi.Modules.Rirn.Infrastructure\obj\Debug\net8.0\UnpakSipaksi.Modules.Rirn.Infrastructure.csproj.AssemblyReference.cache
-C:\dev_net\UnpakSipaksi\UnpakSipaksi.Modules.Rirn.Infrastructure\obj\Debug\net8.0\UnpakSipaksi.Modules.Rirn.Infrastructure.GeneratedMSBuildEditorConfig.editorconfig
-C:\dev_net\UnpakSipaksi\UnpakSipaksi.Modules.Rirn.Infrastructure\obj\Debug\net8.0\UnpakSipaksi.Modules.Rirn.Infrastructure.AssemblyInfoInputs.cache
-C:\dev_net\UnpakSipaksi\UnpakSipaksi.Modules.Rirn.Infrastructure\obj\Debug\net8.0\UnpakSipaksi.Modules.Rirn.Infrastructure.AssemblyInfo.cs
-C:\dev_net\UnpakSipaksi\UnpakSipaksi.Modules.Rirn.Infrastructure\obj\Debug\net8.0\UnpakSipaksi.Modules.Rirn.Infrastructure.csproj.CoreCompileInputs.cache
-C:\dev_net\UnpakSipaksi\UnpakSipaksi.Modules.Rirn.Infrastructure\obj\Debug\net8.0\UnpakSipaksi.Modules.Rirn.Infrastructure.sourcelink.json
 C:\dev_net\UnpakSipaksi\UnpakSipaksi.Modules.Rirn.Infrastructure\bin\Debug\net8.0\UnpakSipaksi.Modules.Rirn.Infrastructure.deps.json
 C:\dev_net\UnpakSipaksi\UnpakSipaksi.Modules.Rirn.Infrastructure\bin\Debug\net8.0\UnpakSipaksi.Modules.Rirn.Infrastructure.dll
 C:\dev_net\UnpakSipaksi\UnpakSipaksi.Modules.Rirn.Infrastructure\bin\Debug\net8.0\UnpakSipaksi.Modules.Rirn.Infrastructure.pdb
@@ -21,6 +15,12 @@ C:\dev_net\UnpakSipaksi\UnpakSipaksi.Modules.Rirn.Infrastructure\bin\Debug\net8.
 C:\dev_net\UnpakSipaksi\UnpakSipaksi.Modules.Rirn.Infrastructure\bin\Debug\net8.0\UnpakSipaksi.Modules.Rirn.Presentation.pdb
 C:\dev_net\UnpakSipaksi\UnpakSipaksi.Modules.Rirn.Infrastructure\bin\Debug\net8.0\UnpakSipaksi.Common.Domain.pdb
 C:\dev_net\UnpakSipaksi\UnpakSipaksi.Modules.Rirn.Infrastructure\bin\Debug\net8.0\UnpakSipaksi.Common.Presentation.pdb
+C:\dev_net\UnpakSipaksi\UnpakSipaksi.Modules.Rirn.Infrastructure\obj\Debug\net8.0\UnpakSipaksi.Modules.Rirn.Infrastructure.csproj.AssemblyReference.cache
+C:\dev_net\UnpakSipaksi\UnpakSipaksi.Modules.Rirn.Infrastructure\obj\Debug\net8.0\UnpakSipaksi.Modules.Rirn.Infrastructure.GeneratedMSBuildEditorConfig.editorconfig
+C:\dev_net\UnpakSipaksi\UnpakSipaksi.Modules.Rirn.Infrastructure\obj\Debug\net8.0\UnpakSipaksi.Modules.Rirn.Infrastructure.AssemblyInfoInputs.cache
+C:\dev_net\UnpakSipaksi\UnpakSipaksi.Modules.Rirn.Infrastructure\obj\Debug\net8.0\UnpakSipaksi.Modules.Rirn.Infrastructure.AssemblyInfo.cs
+C:\dev_net\UnpakSipaksi\UnpakSipaksi.Modules.Rirn.Infrastructure\obj\Debug\net8.0\UnpakSipaksi.Modules.Rirn.Infrastructure.csproj.CoreCompileInputs.cache
+C:\dev_net\UnpakSipaksi\UnpakSipaksi.Modules.Rirn.Infrastructure\obj\Debug\net8.0\UnpakSipaksi.Modules.Rirn.Infrastructure.sourcelink.json
 C:\dev_net\UnpakSipaksi\UnpakSipaksi.Modules.Rirn.Infrastructure\obj\Debug\net8.0\UnpakSip.86CCCBBC.Up2Date
 C:\dev_net\UnpakSipaksi\UnpakSipaksi.Modules.Rirn.Infrastructure\obj\Debug\net8.0\UnpakSipaksi.Modules.Rirn.Infrastructure.dll
 C:\dev_net\UnpakSipaksi\UnpakSipaksi.Modules.Rirn.Infrastructure\obj\Debug\net8.0\refint\UnpakSipaksi.Modules.Rirn.Infrastructure.dll

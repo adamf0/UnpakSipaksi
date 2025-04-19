@@ -10,10 +10,10 @@ namespace UnpakSipaksi.Modules.PrioritasRiset.Domain.PrioritasRiset
     public static class PrioritasRisetErrors
     {
         public static Error EmptyData() =>
-            Error.NotFound("PrioritasRiset.EmptyData", $"data is not found");
+            Error.NotFound("PrioritasRiset.EmptyData", "data is not found");
 
         public static Error NotFound(Guid Id) =>
-            Error.NotFound("PrioritasRiset.NotFound", $"The event with the identifier {Id} was not found");
+            Error.NotFound("PrioritasRiset.NotFound", $"Prioritas riset with the identifier {Id} was not found");
 
     }
 }

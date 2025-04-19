@@ -1,0 +1,31 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+	<PropertyGroup>
+		<TargetFramework>net8.0</TargetFramework>
+		<ImplicitUsings>enable</ImplicitUsings>
+		<Nullable>enable</Nullable>
+	</PropertyGroup>
+
+	<Target Name="DisableNullableForVisualStudioBuild" BeforeTargets="CoreCompile" Condition="'$(BuildingInsideVisualStudio)' == 'True' And '$(BuildingProject)' == 'True' And '$(Configuration)' == 'Debug'">
+		<PropertyGroup>
+			<Nullable>disable</Nullable>
+		</PropertyGroup>
+	</Target>
+
+	<ItemGroup>
+		<PackageReference Include="Dapper" Version="2.1.35" />
+		<PackageReference Include="MediatR" Version="12.4.1" />
+	</ItemGroup>
+
+	<ItemGroup>
+		<ProjectReference Include="..\UnpakSipaksi.Common.Application\UnpakSipaksi.Common.Application.csproj" />
+		<ProjectReference Include="..\UnpakSipaksi.Common.Domain\UnpakSipaksi.Common.Domain.csproj" />
+		<ProjectReference Include="..\UnpakSipaksi.Modules.InovasiPemecahanMasalah.PublicApi\UnpakSipaksi.Modules.InovasiPemecahanMasalah.PublicApi.csproj" />
+		<ProjectReference Include="..\UnpakSipaksi.Modules.KetajamanPerumusanMasalah.PublicApi\UnpakSipaksi.Modules.KetajamanPerumusanMasalah.PublicApi.csproj" />
+		<ProjectReference Include="..\UnpakSipaksi.Modules.RelevansiProdukKepentinganNasional.PublicApi\UnpakSipaksi.Modules.RelevansiProdukKepentinganNasional.PublicApi.csproj" />
+		<ProjectReference Include="..\UnpakSipaksi.Modules.RoadmapPenelitian.PublicApi\UnpakSipaksi.Modules.RoadmapPenelitian.PublicApi.csproj" />
+		<ProjectReference Include="..\UnpakSipaksi.Modules.SotaKebaharuan.PublicApi\UnpakSipaksi.Modules.SotaKebaharuan.PublicApi.csproj" />
+		<ProjectReference Include="..\UnpakSipaksi.Modules.UrgensiPenelitian.Domain\UnpakSipaksi.Modules.UrgensiPenelitian.Domain.csproj" />
+	</ItemGroup>
+
+</Project>

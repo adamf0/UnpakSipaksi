@@ -31,10 +31,6 @@ namespace UnpakSipaksi.Modules.AkurasiPenelitian.Domain.AkurasiPenelitian
 
         public static Result<AkurasiPenelitian> Create(
         string Nama,
-        int BobotPDP,
-        int BobotTerapan,
-        int BobotKerjasama,
-        int BobotPenelitianDasar,
         int Skor
         )
         {
@@ -42,10 +38,6 @@ namespace UnpakSipaksi.Modules.AkurasiPenelitian.Domain.AkurasiPenelitian
             {
                 Uuid = Guid.NewGuid(),
                 Nama = Nama,
-                BobotPDP = BobotPDP,
-                BobotTerapan = BobotTerapan,
-                BobotKerjasama = BobotKerjasama,
-                BobotPenelitianDasar = BobotPenelitianDasar,
                 Skor = Skor,
             };
 

@@ -4,10 +4,6 @@ namespace UnpakSipaksi.Modules.RelevansiProdukKepentinganNasional.Application.Cr
 {
     public sealed record CreateRelevansiProdukKepentinganNasionalCommand(
         string Nama,
-        int BobotPDP,
-        int BobotTerapan,
-        int BobotKerjasama,
-        int BobotPenelitianDasar,
         int Skor
     ) : ICommand<Guid>;
 }

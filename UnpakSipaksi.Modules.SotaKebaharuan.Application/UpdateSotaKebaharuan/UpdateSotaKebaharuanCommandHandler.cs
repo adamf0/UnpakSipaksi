@@ -21,10 +21,6 @@ namespace UnpakSipaksi.Modules.SotaKebaharuan.Application.UpdateSotaKebaharuan
 
             Result<Domain.SotaKebaharuan.SotaKebaharuan> asset = Domain.SotaKebaharuan.SotaKebaharuan.Update(existingSotaKebaharuan!)
                          .ChangeNama(request.Nama)
-                         .ChangeBobotPDP(request.BobotPDP)
-                         .ChangeBobotTerapan(request.BobotTerapan)
-                         .ChangeBobotPenelitianDasar(request.BobotPenelitianDasar)
-                         .ChangeBobotKerjasama(request.BobotKerjasama)
                          .ChangeSkor(request.Skor)
                          .Build();
 

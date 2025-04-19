@@ -10,10 +10,10 @@ namespace UnpakSipaksi.Modules.KategoriMitraPenelitian.Domain.KategoriMitraPenel
     public static class KategoriMitraPenelitianErrors
     {
         public static Error EmptyData() =>
-            Error.NotFound("KategoriMitraPenelitian.EmptyData", $"data is not found");
+            Error.NotFound("KategoriMitraPenelitian.EmptyData", "data is not found");
 
         public static Error NotFound(Guid Id) =>
-            Error.NotFound("KategoriMitraPenelitian.NotFound", $"The event with the identifier {Id} was not found");
+            Error.NotFound("KategoriMitraPenelitian.NotFound", $"Kategori mitra penelitian with identifier {Id} not found");
 
     }
 }

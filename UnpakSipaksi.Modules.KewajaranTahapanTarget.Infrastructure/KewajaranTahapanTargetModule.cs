@@ -8,7 +8,9 @@ using UnpakSipaksi.Modules.KewajaranTahapanTarget.Application.Abstractions.Data;
 using UnpakSipaksi.Modules.KewajaranTahapanTarget.Domain.KewajaranTahapanTarget;
 using UnpakSipaksi.Modules.KewajaranTahapanTarget.Infrastructure.Database;
 using UnpakSipaksi.Modules.KewajaranTahapanTarget.Infrastructure.KewajaranTahapanTarget;
+using UnpakSipaksi.Modules.KewajaranTahapanTarget.Infrastructure.PublicApi;
 using UnpakSipaksi.Modules.KewajaranTahapanTarget.Presentation.KewajaranTahapanTarget;
+using UnpakSipaksi.Modules.KewajaranTahapanTarget.PublicApi;
 
 namespace UnpakSipaksi.Modules.KewajaranTahapanTarget.Infrastructure
 {
@@ -38,6 +40,8 @@ namespace UnpakSipaksi.Modules.KewajaranTahapanTarget.Infrastructure
             services.AddDbContext<KewajaranTahapanTargetDbContext>(optionsBuilder => optionsBuilder.UseMySQL(databaseConnectionString));
 
             services.AddScoped<IKewajaranTahapanTargetRepository, KewajaranTahapanTargetRepository>();
+
+            services.AddScoped<IKewajaranTahapanTargetApi, KewajaranTahapanTargetApi>();
 
             services.AddScoped<IUnitOfWork>(sp => sp.GetRequiredService<KewajaranTahapanTargetDbContext>());
         }

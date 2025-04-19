@@ -5,10 +5,6 @@ namespace UnpakSipaksi.Modules.ModelFeasibilityStudys.Application.UpdateModelFea
     public sealed record UpdateModelFeasibilityStudysCommand(
         Guid Uuid,
         string Nama,
-        int BobotPDP,
-        int BobotTerapan,
-        int BobotKerjasama,
-        int BobotPenelitianDasar,
         int Skor
     ) : ICommand;
 }

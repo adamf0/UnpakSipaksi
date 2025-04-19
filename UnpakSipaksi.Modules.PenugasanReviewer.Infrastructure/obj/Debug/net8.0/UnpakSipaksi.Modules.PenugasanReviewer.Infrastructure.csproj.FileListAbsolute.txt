@@ -1,9 +1,3 @@
-C:\dev_net\UnpakSipaksi\UnpakSipaksi.Modules.PenugasanReviewer.Infrastructure\obj\Debug\net8.0\UnpakSipaksi.Modules.PenugasanReviewer.Infrastructure.csproj.AssemblyReference.cache
-C:\dev_net\UnpakSipaksi\UnpakSipaksi.Modules.PenugasanReviewer.Infrastructure\obj\Debug\net8.0\UnpakSipaksi.Modules.PenugasanReviewer.Infrastructure.GeneratedMSBuildEditorConfig.editorconfig
-C:\dev_net\UnpakSipaksi\UnpakSipaksi.Modules.PenugasanReviewer.Infrastructure\obj\Debug\net8.0\UnpakSipaksi.Modules.PenugasanReviewer.Infrastructure.AssemblyInfoInputs.cache
-C:\dev_net\UnpakSipaksi\UnpakSipaksi.Modules.PenugasanReviewer.Infrastructure\obj\Debug\net8.0\UnpakSipaksi.Modules.PenugasanReviewer.Infrastructure.AssemblyInfo.cs
-C:\dev_net\UnpakSipaksi\UnpakSipaksi.Modules.PenugasanReviewer.Infrastructure\obj\Debug\net8.0\UnpakSipaksi.Modules.PenugasanReviewer.Infrastructure.csproj.CoreCompileInputs.cache
-C:\dev_net\UnpakSipaksi\UnpakSipaksi.Modules.PenugasanReviewer.Infrastructure\obj\Debug\net8.0\UnpakSipaksi.Modules.PenugasanReviewer.Infrastructure.sourcelink.json
 C:\dev_net\UnpakSipaksi\UnpakSipaksi.Modules.PenugasanReviewer.Infrastructure\bin\Debug\net8.0\UnpakSipaksi.Modules.PenugasanReviewer.Infrastructure.deps.json
 C:\dev_net\UnpakSipaksi\UnpakSipaksi.Modules.PenugasanReviewer.Infrastructure\bin\Debug\net8.0\UnpakSipaksi.Modules.PenugasanReviewer.Infrastructure.dll
 C:\dev_net\UnpakSipaksi\UnpakSipaksi.Modules.PenugasanReviewer.Infrastructure\bin\Debug\net8.0\UnpakSipaksi.Modules.PenugasanReviewer.Infrastructure.pdb
@@ -21,6 +15,12 @@ C:\dev_net\UnpakSipaksi\UnpakSipaksi.Modules.PenugasanReviewer.Infrastructure\bi
 C:\dev_net\UnpakSipaksi\UnpakSipaksi.Modules.PenugasanReviewer.Infrastructure\bin\Debug\net8.0\UnpakSipaksi.Modules.PenugasanReviewer.Presentation.pdb
 C:\dev_net\UnpakSipaksi\UnpakSipaksi.Modules.PenugasanReviewer.Infrastructure\bin\Debug\net8.0\UnpakSipaksi.Common.Domain.pdb
 C:\dev_net\UnpakSipaksi\UnpakSipaksi.Modules.PenugasanReviewer.Infrastructure\bin\Debug\net8.0\UnpakSipaksi.Common.Presentation.pdb
+C:\dev_net\UnpakSipaksi\UnpakSipaksi.Modules.PenugasanReviewer.Infrastructure\obj\Debug\net8.0\UnpakSipaksi.Modules.PenugasanReviewer.Infrastructure.csproj.AssemblyReference.cache
+C:\dev_net\UnpakSipaksi\UnpakSipaksi.Modules.PenugasanReviewer.Infrastructure\obj\Debug\net8.0\UnpakSipaksi.Modules.PenugasanReviewer.Infrastructure.GeneratedMSBuildEditorConfig.editorconfig
+C:\dev_net\UnpakSipaksi\UnpakSipaksi.Modules.PenugasanReviewer.Infrastructure\obj\Debug\net8.0\UnpakSipaksi.Modules.PenugasanReviewer.Infrastructure.AssemblyInfoInputs.cache
+C:\dev_net\UnpakSipaksi\UnpakSipaksi.Modules.PenugasanReviewer.Infrastructure\obj\Debug\net8.0\UnpakSipaksi.Modules.PenugasanReviewer.Infrastructure.AssemblyInfo.cs
+C:\dev_net\UnpakSipaksi\UnpakSipaksi.Modules.PenugasanReviewer.Infrastructure\obj\Debug\net8.0\UnpakSipaksi.Modules.PenugasanReviewer.Infrastructure.csproj.CoreCompileInputs.cache
+C:\dev_net\UnpakSipaksi\UnpakSipaksi.Modules.PenugasanReviewer.Infrastructure\obj\Debug\net8.0\UnpakSipaksi.Modules.PenugasanReviewer.Infrastructure.sourcelink.json
 C:\dev_net\UnpakSipaksi\UnpakSipaksi.Modules.PenugasanReviewer.Infrastructure\obj\Debug\net8.0\UnpakSip.F3E70EDB.Up2Date
 C:\dev_net\UnpakSipaksi\UnpakSipaksi.Modules.PenugasanReviewer.Infrastructure\obj\Debug\net8.0\UnpakSipaksi.Modules.PenugasanReviewer.Infrastructure.dll
 C:\dev_net\UnpakSipaksi\UnpakSipaksi.Modules.PenugasanReviewer.Infrastructure\obj\Debug\net8.0\refint\UnpakSipaksi.Modules.PenugasanReviewer.Infrastructure.dll

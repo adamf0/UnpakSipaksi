@@ -8,11 +8,13 @@ C:\dev_net\UnpakSipaksi\UnpakSipaksi.Modules.MetodeRencanaKegiatan.Infrastructur
 C:\dev_net\UnpakSipaksi\UnpakSipaksi.Modules.MetodeRencanaKegiatan.Infrastructure\bin\Debug\net8.0\UnpakSipaksi.Modules.MetodeRencanaKegiatan.Application.dll
 C:\dev_net\UnpakSipaksi\UnpakSipaksi.Modules.MetodeRencanaKegiatan.Infrastructure\bin\Debug\net8.0\UnpakSipaksi.Modules.MetodeRencanaKegiatan.Domain.dll
 C:\dev_net\UnpakSipaksi\UnpakSipaksi.Modules.MetodeRencanaKegiatan.Infrastructure\bin\Debug\net8.0\UnpakSipaksi.Modules.MetodeRencanaKegiatan.Presentation.dll
+C:\dev_net\UnpakSipaksi\UnpakSipaksi.Modules.MetodeRencanaKegiatan.Infrastructure\bin\Debug\net8.0\UnpakSipaksi.Modules.MetodeRencanaKegiatan.PublicApi.dll
 C:\dev_net\UnpakSipaksi\UnpakSipaksi.Modules.MetodeRencanaKegiatan.Infrastructure\bin\Debug\net8.0\UnpakSipaksi.Common.Application.pdb
 C:\dev_net\UnpakSipaksi\UnpakSipaksi.Modules.MetodeRencanaKegiatan.Infrastructure\bin\Debug\net8.0\UnpakSipaksi.Common.Infrastructure.pdb
 C:\dev_net\UnpakSipaksi\UnpakSipaksi.Modules.MetodeRencanaKegiatan.Infrastructure\bin\Debug\net8.0\UnpakSipaksi.Modules.MetodeRencanaKegiatan.Application.pdb
 C:\dev_net\UnpakSipaksi\UnpakSipaksi.Modules.MetodeRencanaKegiatan.Infrastructure\bin\Debug\net8.0\UnpakSipaksi.Modules.MetodeRencanaKegiatan.Domain.pdb
 C:\dev_net\UnpakSipaksi\UnpakSipaksi.Modules.MetodeRencanaKegiatan.Infrastructure\bin\Debug\net8.0\UnpakSipaksi.Modules.MetodeRencanaKegiatan.Presentation.pdb
+C:\dev_net\UnpakSipaksi\UnpakSipaksi.Modules.MetodeRencanaKegiatan.Infrastructure\bin\Debug\net8.0\UnpakSipaksi.Modules.MetodeRencanaKegiatan.PublicApi.pdb
 C:\dev_net\UnpakSipaksi\UnpakSipaksi.Modules.MetodeRencanaKegiatan.Infrastructure\bin\Debug\net8.0\UnpakSipaksi.Common.Domain.pdb
 C:\dev_net\UnpakSipaksi\UnpakSipaksi.Modules.MetodeRencanaKegiatan.Infrastructure\bin\Debug\net8.0\UnpakSipaksi.Common.Presentation.pdb
 C:\dev_net\UnpakSipaksi\UnpakSipaksi.Modules.MetodeRencanaKegiatan.Infrastructure\obj\Debug\net8.0\UnpakSipaksi.Modules.MetodeRencanaKegiatan.Infrastructure.csproj.AssemblyReference.cache

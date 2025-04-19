@@ -14,7 +14,8 @@
           "UnpakSipaksi.Common.Infrastructure": "1.0.0",
           "UnpakSipaksi.Modules.KuantitasStatusKi.Application": "1.0.0",
           "UnpakSipaksi.Modules.KuantitasStatusKi.Domain": "1.0.0",
-          "UnpakSipaksi.Modules.KuantitasStatusKi.Presentation": "1.0.0"
+          "UnpakSipaksi.Modules.KuantitasStatusKi.Presentation": "1.0.0",
+          "UnpakSipaksi.Modules.KuantitasStatusKi.PublicApi": "1.0.0"
         },
         "runtime": {
           "UnpakSipaksi.Modules.KuantitasStatusKi.Infrastructure.dll": {}
@@ -699,6 +700,11 @@
         "runtime": {
           "UnpakSipaksi.Modules.KuantitasStatusKi.Presentation.dll": {}
         }
+      },
+      "UnpakSipaksi.Modules.KuantitasStatusKi.PublicApi/1.0.0": {
+        "runtime": {
+          "UnpakSipaksi.Modules.KuantitasStatusKi.PublicApi.dll": {}
+        }
       }
     }
   },
@@ -1215,6 +1221,11 @@
       "sha512": ""
     },
     "UnpakSipaksi.Modules.KuantitasStatusKi.Presentation/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    },
+    "UnpakSipaksi.Modules.KuantitasStatusKi.PublicApi/1.0.0": {
       "type": "project",
       "serviceable": false,
       "sha512": ""

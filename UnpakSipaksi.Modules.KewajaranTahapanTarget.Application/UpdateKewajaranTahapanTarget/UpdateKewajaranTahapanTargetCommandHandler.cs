@@ -2,7 +2,6 @@
 using UnpakSipaksi.Common.Domain;
 using UnpakSipaksi.Modules.KewajaranTahapanTarget.Domain.KewajaranTahapanTarget;
 using UnpakSipaksi.Modules.KewajaranTahapanTarget.Application.Abstractions.Data;
-using UnpakSipaksi.Modules.KewajaranTahapanTarget.Application.UpdateKetajamanAnalisis;
 
 namespace UnpakSipaksi.Modules.KewajaranTahapanTarget.Application.UpdateKewajaranTahapanTarget
 {

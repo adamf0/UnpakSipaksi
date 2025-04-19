@@ -14,7 +14,8 @@
           "UnpakSipaksi.Common.Infrastructure": "1.0.0",
           "UnpakSipaksi.Modules.KetajamanPerumusanMasalah.Application": "1.0.0",
           "UnpakSipaksi.Modules.KetajamanPerumusanMasalah.Domain": "1.0.0",
-          "UnpakSipaksi.Modules.KetajamanPerumusanMasalah.Presentation": "1.0.0"
+          "UnpakSipaksi.Modules.KetajamanPerumusanMasalah.Presentation": "1.0.0",
+          "UnpakSipaksi.Modules.KetajamanPerumusanMasalah.PublicApi": "1.0.0"
         },
         "runtime": {
           "UnpakSipaksi.Modules.KetajamanPerumusanMasalah.Infrastructure.dll": {}
@@ -699,6 +700,11 @@
         "runtime": {
           "UnpakSipaksi.Modules.KetajamanPerumusanMasalah.Presentation.dll": {}
         }
+      },
+      "UnpakSipaksi.Modules.KetajamanPerumusanMasalah.PublicApi/1.0.0": {
+        "runtime": {
+          "UnpakSipaksi.Modules.KetajamanPerumusanMasalah.PublicApi.dll": {}
+        }
       }
     }
   },
@@ -1215,6 +1221,11 @@
       "sha512": ""
     },
     "UnpakSipaksi.Modules.KetajamanPerumusanMasalah.Presentation/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    },
+    "UnpakSipaksi.Modules.KetajamanPerumusanMasalah.PublicApi/1.0.0": {
       "type": "project",
       "serviceable": false,
       "sha512": ""

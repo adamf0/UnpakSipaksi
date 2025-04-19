@@ -4,10 +4,6 @@ namespace UnpakSipaksi.Modules.KetajamanPerumusanMasalah.Application.CreateKetaj
 {
     public sealed record CreateKetajamanPerumusanMasalahCommand(
         string Nama,
-        int BobotPDP,
-        int BobotTerapan,
-        int BobotKerjasama,
-        int BobotPenelitianDasar,
         int Skor
     ) : ICommand<Guid>;
 }

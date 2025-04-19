@@ -13,7 +13,9 @@ using UnpakSipaksi.Modules.ArtikelMediaMassa.Application.Abstractions.Data;
 using UnpakSipaksi.Modules.ArtikelMediaMassa.Domain.ArtikelMediaMassa;
 using UnpakSipaksi.Modules.ArtikelMediaMassa.Infrastructure.ArtikelMediaMassa;
 using UnpakSipaksi.Modules.ArtikelMediaMassa.Infrastructure.Database;
+using UnpakSipaksi.Modules.ArtikelMediaMassa.Infrastructure.PublicApi;
 using UnpakSipaksi.Modules.ArtikelMediaMassa.Presentation.ArtikelMediaMassa;
+using UnpakSipaksi.Modules.ArtikelMediaMassa.PublicApi;
 
 namespace UnpakSipaksi.Modules.ArtikelMediaMassa.Infrastructure
 {
@@ -43,6 +45,8 @@ namespace UnpakSipaksi.Modules.ArtikelMediaMassa.Infrastructure
             services.AddDbContext<ArtikelMediaMassaDbContext>(optionsBuilder => optionsBuilder.UseMySQL(databaseConnectionString));
 
             services.AddScoped<IArtikelMediaMassaRepository, ArtikelMediaMassaRepository>();
+
+            services.AddScoped<IArtikelMediaMassaApi, ArtikelMediaMassaApi>();
 
             services.AddScoped<IUnitOfWork>(sp => sp.GetRequiredService<ArtikelMediaMassaDbContext>());
         }

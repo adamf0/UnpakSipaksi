@@ -10,10 +10,13 @@ namespace UnpakSipaksi.Modules.KejelasanPembagianTugasTim.Domain.KejelasanPembag
     public static class KejelasanPembagianTugasTimErrors
     {
         public static Error EmptyData() =>
-            Error.NotFound("KejelasanPembagianTugasTim.EmptyData", $"data is not found");
-
+            Error.NotFound("KejelasanPembagianTugasTim.EmptyData", "data is not found");
+        public static Error NotSameValue() =>
+            Error.NotFound("KejelasanPembagianTugasTim.NotSameValue", "not the same value in data 'nilai'");
+        public static Error UnknownKategoriSkema() =>
+            Error.NotFound("KejelasanPembagianTugasTim.UnknownKategoriSkema", "Unknown schema category");
         public static Error NotFound(Guid Id) =>
-            Error.NotFound("KejelasanPembagianTugasTim.NotFound", $"The event with the identifier {Id} was not found");
+            Error.NotFound("KejelasanPembagianTugasTim.NotFound", $"Kejelasan pembagian tugas tim with identifier {Id} not found");
 
     }
 }

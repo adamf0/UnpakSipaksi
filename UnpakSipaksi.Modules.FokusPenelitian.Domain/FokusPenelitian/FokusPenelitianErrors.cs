@@ -10,10 +10,10 @@ namespace UnpakSipaksi.Modules.FokusPenelitian.Domain.FokusPenelitian
     public static class FokusPenelitianErrors
     {
         public static Error EmptyData() =>
-            Error.NotFound("FokusPenelitian.EmptyData", $"data is not found");
+            Error.NotFound("FokusPenelitian.EmptyData", "data is not found");
 
         public static Error NotFound(Guid Id) =>
-            Error.NotFound("FokusPenelitian.NotFound", $"The event with the identifier {Id} was not found");
+            Error.NotFound("FokusPenelitian.NotFound", $"Fokus penelitian with identifier {Id} not found");
 
     }
 }

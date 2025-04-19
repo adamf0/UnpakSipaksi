@@ -14,7 +14,8 @@
           "UnpakSipaksi.Common.Infrastructure": "1.0.0",
           "UnpakSipaksi.Modules.MetodeRencanaKegiatan.Application": "1.0.0",
           "UnpakSipaksi.Modules.MetodeRencanaKegiatan.Domain": "1.0.0",
-          "UnpakSipaksi.Modules.MetodeRencanaKegiatan.Presentation": "1.0.0"
+          "UnpakSipaksi.Modules.MetodeRencanaKegiatan.Presentation": "1.0.0",
+          "UnpakSipaksi.Modules.MetodeRencanaKegiatan.PublicApi": "1.0.0"
         },
         "runtime": {
           "UnpakSipaksi.Modules.MetodeRencanaKegiatan.Infrastructure.dll": {}
@@ -699,6 +700,11 @@
         "runtime": {
           "UnpakSipaksi.Modules.MetodeRencanaKegiatan.Presentation.dll": {}
         }
+      },
+      "UnpakSipaksi.Modules.MetodeRencanaKegiatan.PublicApi/1.0.0": {
+        "runtime": {
+          "UnpakSipaksi.Modules.MetodeRencanaKegiatan.PublicApi.dll": {}
+        }
       }
     }
   },
@@ -1215,6 +1221,11 @@
       "sha512": ""
     },
     "UnpakSipaksi.Modules.MetodeRencanaKegiatan.Presentation/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    },
+    "UnpakSipaksi.Modules.MetodeRencanaKegiatan.PublicApi/1.0.0": {
       "type": "project",
       "serviceable": false,
       "sha512": ""

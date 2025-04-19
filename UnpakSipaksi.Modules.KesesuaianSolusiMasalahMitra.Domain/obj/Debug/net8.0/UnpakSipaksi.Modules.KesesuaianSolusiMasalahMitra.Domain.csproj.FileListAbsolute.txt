@@ -8,9 +8,9 @@ C:\dev_net\UnpakSipaksi\UnpakSipaksi.Modules.KesesuaianSolusiMasalahMitra.Domain
 C:\dev_net\UnpakSipaksi\UnpakSipaksi.Modules.KesesuaianSolusiMasalahMitra.Domain\obj\Debug\net8.0\UnpakSipaksi.Modules.KesesuaianSolusiMasalahMitra.Domain.AssemblyInfoInputs.cache
 C:\dev_net\UnpakSipaksi\UnpakSipaksi.Modules.KesesuaianSolusiMasalahMitra.Domain\obj\Debug\net8.0\UnpakSipaksi.Modules.KesesuaianSolusiMasalahMitra.Domain.AssemblyInfo.cs
 C:\dev_net\UnpakSipaksi\UnpakSipaksi.Modules.KesesuaianSolusiMasalahMitra.Domain\obj\Debug\net8.0\UnpakSipaksi.Modules.KesesuaianSolusiMasalahMitra.Domain.csproj.CoreCompileInputs.cache
+C:\dev_net\UnpakSipaksi\UnpakSipaksi.Modules.KesesuaianSolusiMasalahMitra.Domain\obj\Debug\net8.0\UnpakSipaksi.Modules.KesesuaianSolusiMasalahMitra.Domain.sourcelink.json
 C:\dev_net\UnpakSipaksi\UnpakSipaksi.Modules.KesesuaianSolusiMasalahMitra.Domain\obj\Debug\net8.0\UnpakSip.85197D94.Up2Date
 C:\dev_net\UnpakSipaksi\UnpakSipaksi.Modules.KesesuaianSolusiMasalahMitra.Domain\obj\Debug\net8.0\UnpakSipaksi.Modules.KesesuaianSolusiMasalahMitra.Domain.dll
 C:\dev_net\UnpakSipaksi\UnpakSipaksi.Modules.KesesuaianSolusiMasalahMitra.Domain\obj\Debug\net8.0\refint\UnpakSipaksi.Modules.KesesuaianSolusiMasalahMitra.Domain.dll
 C:\dev_net\UnpakSipaksi\UnpakSipaksi.Modules.KesesuaianSolusiMasalahMitra.Domain\obj\Debug\net8.0\UnpakSipaksi.Modules.KesesuaianSolusiMasalahMitra.Domain.pdb
 C:\dev_net\UnpakSipaksi\UnpakSipaksi.Modules.KesesuaianSolusiMasalahMitra.Domain\obj\Debug\net8.0\ref\UnpakSipaksi.Modules.KesesuaianSolusiMasalahMitra.Domain.dll
-C:\dev_net\UnpakSipaksi\UnpakSipaksi.Modules.KesesuaianSolusiMasalahMitra.Domain\obj\Debug\net8.0\UnpakSipaksi.Modules.KesesuaianSolusiMasalahMitra.Domain.sourcelink.json

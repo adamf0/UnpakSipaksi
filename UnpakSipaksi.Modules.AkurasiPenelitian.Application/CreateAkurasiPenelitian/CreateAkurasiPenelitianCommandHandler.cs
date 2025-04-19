@@ -19,10 +19,6 @@ namespace UnpakSipaksi.Modules.AkurasiPenelitian.Application.CreateAkurasiPeneli
         {
             Result<Domain.AkurasiPenelitian.AkurasiPenelitian> result = Domain.AkurasiPenelitian.AkurasiPenelitian.Create(
                 request.Nama,
-                request.BobotPDP,
-                request.BobotTerapan,
-                request.BobotKerjasama,
-                request.BobotPenelitianDasar,
                 request.Skor
             );
 

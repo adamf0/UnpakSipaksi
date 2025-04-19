@@ -14,10 +14,6 @@ namespace UnpakSipaksi.Modules.KetajamanPerumusanMasalah.Application.CreateKetaj
         {
             Result<Domain.KetajamanPerumusanMasalah.KetajamanPerumusanMasalah> result = Domain.KetajamanPerumusanMasalah.KetajamanPerumusanMasalah.Create(
                 request.Nama,
-                request.BobotPDP,
-                request.BobotTerapan,
-                request.BobotKerjasama,
-                request.BobotPenelitianDasar,
                 request.Skor
             );
 

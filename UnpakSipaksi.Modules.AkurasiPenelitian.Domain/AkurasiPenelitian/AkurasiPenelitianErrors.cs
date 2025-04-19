@@ -10,10 +10,13 @@ namespace UnpakSipaksi.Modules.AkurasiPenelitian.Domain.AkurasiPenelitian
     public static class AkurasiPenelitianErrors
     {
         public static Error EmptyData() =>
-            Error.NotFound("AkurasiPenelitian.EmptyData", $"data is not found");
-
+            Error.NotFound("AkurasiPenelitian.EmptyData", "data is not found");
+        public static Error NotSameValue() =>
+            Error.NotFound("AkurasiPenelitian.NotSameValue", "not the same value in data 'nilai'");
+        public static Error UnknownKategoriSkema() =>
+            Error.NotFound("AkurasiPenelitian.UnknownKategoriSkema", "Unknown schema category");
         public static Error NotFound(Guid Id) =>
-            Error.NotFound("AkurasiPenelitian.NotFound", $"The event with the identifier {Id} was not found");
+            Error.NotFound("AkurasiPenelitian.NotFound", $"Akurasi penelitian with identifier {Id} not found");
         
     }
 }

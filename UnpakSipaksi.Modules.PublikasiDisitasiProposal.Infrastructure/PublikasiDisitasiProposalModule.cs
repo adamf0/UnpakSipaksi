@@ -7,8 +7,10 @@ using UnpakSipaksi.Common.Infrastructure.Data;
 using UnpakSipaksi.Modules.PublikasiDisitasiProposal.Application.Abstractions.Data;
 using UnpakSipaksi.Modules.PublikasiDisitasiProposal.Domain.PublikasiDisitasiProposal;
 using UnpakSipaksi.Modules.PublikasiDisitasiProposal.Infrastructure.Database;
+using UnpakSipaksi.Modules.PublikasiDisitasiProposal.Infrastructure.PublicApi;
 using UnpakSipaksi.Modules.PublikasiDisitasiProposal.Infrastructure.PublikasiDisitasiProposal;
 using UnpakSipaksi.Modules.PublikasiDisitasiProposal.Presentation.PublikasiDisitasiProposal;
+using UnpakSipaksi.Modules.PublikasiDisitasiProposal.PublicApi;
 
 namespace UnpakSipaksi.Modules.PublikasiDisitasiProposal.Infrastructure
 {
@@ -38,6 +40,8 @@ namespace UnpakSipaksi.Modules.PublikasiDisitasiProposal.Infrastructure
             services.AddDbContext<PublikasiDisitasiProposalDbContext>(optionsBuilder => optionsBuilder.UseMySQL(databaseConnectionString));
 
             services.AddScoped<IPublikasiDisitasiProposalRepository, PublikasiDisitasiProposalRepository>();
+
+            services.AddScoped<IPublikasiDisitasiProposalApi, PublikasiDisitasiProposalApi>();
 
             services.AddScoped<IUnitOfWork>(sp => sp.GetRequiredService<PublikasiDisitasiProposalDbContext>());
         }

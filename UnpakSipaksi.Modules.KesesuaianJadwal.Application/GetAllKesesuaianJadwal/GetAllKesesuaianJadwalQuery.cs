@@ -5,7 +5,6 @@ using System.Text;
 using System.Threading.Tasks;
 using UnpakSipaksi.Common.Application.Messaging;
 using UnpakSipaksi.Modules.KesesuaianJadwal.Application.GetKesesuaianJadwal;
-using UnpakSipaksi.Modules.KesesuaianJadwal.Application.GetkesesuaianJadwalRepository;
 
 namespace UnpakSipaksi.Modules.KesesuaianJadwal.Application.GetAllKesesuaianJadwal
 {

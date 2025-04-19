@@ -21,10 +21,6 @@ namespace UnpakSipaksi.Modules.RelevansiProdukKepentinganNasional.Application.Up
 
             Result<Domain.RelevansiProdukKepentinganNasional.RelevansiProdukKepentinganNasional> asset = Domain.RelevansiProdukKepentinganNasional.RelevansiProdukKepentinganNasional.Update(existingRelevansiProdukKepentinganNasional!)
                          .ChangeNama(request.Nama)
-                         .ChangeBobotPDP(request.BobotPDP)
-                         .ChangeBobotTerapan(request.BobotTerapan)
-                         .ChangeBobotPenelitianDasar(request.BobotPenelitianDasar)
-                         .ChangeBobotKerjasama(request.BobotKerjasama)
                          .ChangeSkor(request.Skor)
                          .Build();
 

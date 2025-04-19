@@ -14,10 +14,6 @@ namespace UnpakSipaksi.Modules.SotaKebaharuan.Application.CreateSotaKebaharuan
         {
             Result<Domain.SotaKebaharuan.SotaKebaharuan> result = Domain.SotaKebaharuan.SotaKebaharuan.Create(
                 request.Nama,
-                request.BobotPDP,
-                request.BobotTerapan,
-                request.BobotKerjasama,
-                request.BobotPenelitianDasar,
                 request.Skor
             );
 

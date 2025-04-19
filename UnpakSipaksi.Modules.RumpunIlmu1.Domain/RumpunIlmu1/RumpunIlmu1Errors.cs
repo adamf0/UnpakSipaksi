@@ -10,10 +10,10 @@ namespace UnpakSipaksi.Modules.RumpunIlmu1.Domain.RumpunIlmu1
     public static class RumpunIlmu1Errors
     {
         public static Error EmptyData() =>
-            Error.NotFound("RumpunIlmu1.EmptyData", $"data is not found");
+            Error.NotFound("RumpunIlmu1.EmptyData", "data is not found");
 
         public static Error NotFound(Guid Id) =>
-            Error.NotFound("RumpunIlmu1.NotFound", $"The event with the identifier {Id} was not found");
+            Error.NotFound("RumpunIlmu1.NotFound", $"Rumpun Ilmu 1 with the identifier {Id} was not found");
 
     }
 }

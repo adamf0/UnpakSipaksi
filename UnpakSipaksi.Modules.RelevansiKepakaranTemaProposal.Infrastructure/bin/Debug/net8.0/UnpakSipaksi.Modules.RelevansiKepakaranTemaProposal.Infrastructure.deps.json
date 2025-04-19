@@ -14,7 +14,8 @@
           "UnpakSipaksi.Common.Infrastructure": "1.0.0",
           "UnpakSipaksi.Modules.RelevansiKepakaranTemaProposal.Application": "1.0.0",
           "UnpakSipaksi.Modules.RelevansiKepakaranTemaProposal.Domain": "1.0.0",
-          "UnpakSipaksi.Modules.RelevansiKepakaranTemaProposal.Presentation": "1.0.0"
+          "UnpakSipaksi.Modules.RelevansiKepakaranTemaProposal.Presentation": "1.0.0",
+          "UnpakSipaksi.Modules.RelevansiKepakaranTemaProposal.PublicApi": "1.0.0"
         },
         "runtime": {
           "UnpakSipaksi.Modules.RelevansiKepakaranTemaProposal.Infrastructure.dll": {}
@@ -670,12 +671,21 @@
           "UnpakSipaksi.Common.Presentation.dll": {}
         }
       },
+      "UnpakSipaksi.Modules.PublikasiDisitasiProposal.Domain/1.0.0": {
+        "dependencies": {
+          "UnpakSipaksi.Common.Domain": "1.0.0"
+        },
+        "runtime": {
+          "UnpakSipaksi.Modules.PublikasiDisitasiProposal.Domain.dll": {}
+        }
+      },
       "UnpakSipaksi.Modules.RelevansiKepakaranTemaProposal.Application/1.0.0": {
         "dependencies": {
           "Dapper": "2.1.35",
           "MediatR": "12.4.1",
           "UnpakSipaksi.Common.Application": "1.0.0",
           "UnpakSipaksi.Common.Domain": "1.0.0",
+          "UnpakSipaksi.Modules.PublikasiDisitasiProposal.Domain": "1.0.0",
           "UnpakSipaksi.Modules.RelevansiKepakaranTemaProposal.Domain": "1.0.0"
         },
         "runtime": {
@@ -698,6 +708,11 @@
         },
         "runtime": {
           "UnpakSipaksi.Modules.RelevansiKepakaranTemaProposal.Presentation.dll": {}
+        }
+      },
+      "UnpakSipaksi.Modules.RelevansiKepakaranTemaProposal.PublicApi/1.0.0": {
+        "runtime": {
+          "UnpakSipaksi.Modules.RelevansiKepakaranTemaProposal.PublicApi.dll": {}
         }
       }
     }
@@ -1204,6 +1219,11 @@
       "serviceable": false,
       "sha512": ""
     },
+    "UnpakSipaksi.Modules.PublikasiDisitasiProposal.Domain/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    },
     "UnpakSipaksi.Modules.RelevansiKepakaranTemaProposal.Application/1.0.0": {
       "type": "project",
       "serviceable": false,
@@ -1215,6 +1235,11 @@
       "sha512": ""
     },
     "UnpakSipaksi.Modules.RelevansiKepakaranTemaProposal.Presentation/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    },
+    "UnpakSipaksi.Modules.RelevansiKepakaranTemaProposal.PublicApi/1.0.0": {
       "type": "project",
       "serviceable": false,
       "sha512": ""

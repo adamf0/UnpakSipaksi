@@ -14,6 +14,8 @@ using UnpakSipaksi.Modules.KesesuaianSolusiMasalahMitra.Domain.KesesuaianSolusiM
 using UnpakSipaksi.Modules.KesesuaianSolusiMasalahMitra.Presentation.KesesuaianSolusiMasalahMitra;
 using UnpakSipaksi.Modules.KesesuaianSolusiMasalahMitra.Infrastructure.Database;
 using UnpakSipaksi.Modules.KesesuaianSolusiMasalahMitra.Infrastructure.KesesuaianSolusiMasalahMitra;
+using UnpakSipaksi.Modules.KesesuaianSolusiMasalahMitra.PublicApi;
+using UnpakSipaksi.Modules.KesesuaianSolusiMasalahMitra.Infrastructure.PublicApi;
 
 namespace UnpakSipaksi.Modules.KesesuaianSolusiMasalahMitra.Infrastructure
 {
@@ -43,6 +45,8 @@ namespace UnpakSipaksi.Modules.KesesuaianSolusiMasalahMitra.Infrastructure
             services.AddDbContext<KesesuaianSolusiMasalahMitraDbContext>(optionsBuilder => optionsBuilder.UseMySQL(databaseConnectionString));
 
             services.AddScoped<IKesesuaianSolusiMasalahMitraRepository, KesesuaianSolusiMasalahMitraRepository>();
+
+            services.AddScoped<IKesesuaianSolusiMasalahMitraApi, KesesuaianSolusiMasalahMitraApi>();
 
             services.AddScoped<IUnitOfWork>(sp => sp.GetRequiredService<KesesuaianSolusiMasalahMitraDbContext>());
         }

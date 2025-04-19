@@ -21,10 +21,6 @@ namespace UnpakSipaksi.Modules.RelevansiKualitasReferensi.Application.UpdateRele
 
             Result<Domain.RelevansiKualitasReferensi.RelevansiKualitasReferensi> asset = Domain.RelevansiKualitasReferensi.RelevansiKualitasReferensi.Update(existingRelevansiKualitasReferensi!)
                          .ChangeNama(request.Nama)
-                         .ChangeBobotPDP(request.BobotPDP)
-                         .ChangeBobotTerapan(request.BobotTerapan)
-                         .ChangeBobotPenelitianDasar(request.BobotPenelitianDasar)
-                         .ChangeBobotKerjasama(request.BobotKerjasama)
                          .ChangeSkor(request.Skor)
                          .Build();
 

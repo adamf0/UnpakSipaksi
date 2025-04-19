@@ -3,7 +3,6 @@ using System.Data.Common;
 using UnpakSipaksi.Common.Application.Data;
 using UnpakSipaksi.Common.Application.Messaging;
 using UnpakSipaksi.Common.Domain;
-using UnpakSipaksi.Modules.KesesuaianJadwal.Application.GetkesesuaianJadwalRepository;
 using UnpakSipaksi.Modules.KesesuaianJadwal.Domain.KesesuaianJadwal;
 
 namespace UnpakSipaksi.Modules.KesesuaianJadwal.Application.GetKesesuaianJadwal

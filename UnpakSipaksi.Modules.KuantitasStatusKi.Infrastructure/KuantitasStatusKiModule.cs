@@ -8,7 +8,9 @@ using UnpakSipaksi.Modules.KuantitasStatusKi.Application.Abstractions.Data;
 using UnpakSipaksi.Modules.KuantitasStatusKi.Domain.KuantitasStatusKi;
 using UnpakSipaksi.Modules.KuantitasStatusKi.Infrastructure.Database;
 using UnpakSipaksi.Modules.KuantitasStatusKi.Infrastructure.KuantitasStatusKi;
+using UnpakSipaksi.Modules.KuantitasStatusKi.Infrastructure.PublicApi;
 using UnpakSipaksi.Modules.KuantitasStatusKi.Presentation.KuantitasStatusKi;
+using UnpakSipaksi.Modules.KuantitasStatusKi.PublicApi;
 
 namespace UnpakSipaksi.Modules.KuantitasStatusKi.Infrastructure
 {
@@ -38,6 +40,8 @@ namespace UnpakSipaksi.Modules.KuantitasStatusKi.Infrastructure
             services.AddDbContext<KuantitasStatusKiDbContext>(optionsBuilder => optionsBuilder.UseMySQL(databaseConnectionString));
 
             services.AddScoped<IKuantitasStatusKiRepository, KuantitasStatusKiRepository>();
+
+            services.AddScoped<IKuantitasStatusKiApi, KuantitasStatusKiApi>();
 
             services.AddScoped<IUnitOfWork>(sp => sp.GetRequiredService<KuantitasStatusKiDbContext>());
         }

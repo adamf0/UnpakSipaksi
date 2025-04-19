@@ -17,12 +17,8 @@ namespace UnpakSipaksi.Modules.InovasiPemecahanMasalah.Presentation.InovasiPemec
             {
                 Result result = await sender.Send(new UpdateInovasiPemecahanMasalahCommand(
                     request.Id,
-                    HtmlEncoder.Default.Encode(request.Nama),
-                    int.Parse(HtmlEncoder.Default.Encode(request.BobotPDP)),
-                    int.Parse(HtmlEncoder.Default.Encode(request.BobotTerapan)),
-                    int.Parse(HtmlEncoder.Default.Encode(request.BobotKerjasama)),
-                    int.Parse(HtmlEncoder.Default.Encode(request.BobotPenelitianDasar)),
-                    int.Parse(HtmlEncoder.Default.Encode(request.BobotSkor))
+                    request.Nama,
+                    int.Parse(request.BobotSkor)
                     )
                 );
 
@@ -34,12 +30,6 @@ namespace UnpakSipaksi.Modules.InovasiPemecahanMasalah.Presentation.InovasiPemec
         {
             public Guid Id { get; set; }
             public string Nama { get; set; }
-
-            public string BobotPDP { get; set; }
-            public string BobotTerapan { get; set; }
-
-            public string BobotKerjasama { get; set; }
-            public string BobotPenelitianDasar { get; set; }
             public string BobotSkor { get; set; }
         }
     }

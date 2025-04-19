@@ -21,10 +21,6 @@ namespace UnpakSipaksi.Modules.KredibilitasMitraDukungan.Application.UpdateKredi
 
             Result<Domain.KredibilitasMitraDukungan.KredibilitasMitraDukungan> asset = Domain.KredibilitasMitraDukungan.KredibilitasMitraDukungan.Update(existingKredibilitasMitraDukungan!)
                          .ChangeNama(request.Nama)
-                         .ChangeBobotPDP(request.BobotPDP)
-                         .ChangeBobotTerapan(request.BobotTerapan)
-                         .ChangeBobotPenelitianDasar(request.BobotPenelitianDasar)
-                         .ChangeBobotKerjasama(request.BobotKerjasama)
                          .ChangeSkor(request.Skor)
                          .Build();
 

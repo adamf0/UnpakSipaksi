@@ -5,10 +5,13 @@ namespace UnpakSipaksi.Modules.KredibilitasMitraDukungan.Domain.KredibilitasMitr
     public static class KredibilitasMitraDukunganErrors
     {
         public static Error EmptyData() =>
-            Error.NotFound("KredibilitasMitraDukungan.EmptyData", $"data is not found");
-
+            Error.NotFound("KredibilitasMitraDukungan.EmptyData", "data is not found");
+        public static Error NotSameValue() =>
+            Error.NotFound("KredibilitasMitraDukungan.NotSameValue", "not the same value in data 'nilai'");
+        public static Error UnknownKategoriSkema() =>
+            Error.NotFound("KredibilitasMitraDukungan.UnknownKategoriSkema", "Unknown schema category");
         public static Error NotFound(Guid Id) =>
-            Error.NotFound("KredibilitasMitraDukungan.NotFound", $"The event with the identifier {Id} was not found");
+            Error.NotFound("KredibilitasMitraDukungan.NotFound", $"Kredibilitas mitra dukungan with the identifier {Id} was not found");
 
     }
 }

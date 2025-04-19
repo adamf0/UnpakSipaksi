@@ -8,11 +8,13 @@ C:\dev_net\UnpakSipaksi\UnpakSipaksi.Modules.PotensiKetercapaianLuaranDijanjikan
 C:\dev_net\UnpakSipaksi\UnpakSipaksi.Modules.PotensiKetercapaianLuaranDijanjikan.Infrastructure\bin\Debug\net8.0\UnpakSipaksi.Modules.PotensiKetercapaianLuaranDijanjikan.Application.dll
 C:\dev_net\UnpakSipaksi\UnpakSipaksi.Modules.PotensiKetercapaianLuaranDijanjikan.Infrastructure\bin\Debug\net8.0\UnpakSipaksi.Modules.PotensiKetercapaianLuaranDijanjikan.Domain.dll
 C:\dev_net\UnpakSipaksi\UnpakSipaksi.Modules.PotensiKetercapaianLuaranDijanjikan.Infrastructure\bin\Debug\net8.0\UnpakSipaksi.Modules.PotensiKetercapaianLuaranDijanjikan.Presentation.dll
+C:\dev_net\UnpakSipaksi\UnpakSipaksi.Modules.PotensiKetercapaianLuaranDijanjikan.Infrastructure\bin\Debug\net8.0\UnpakSipaksi.Modules.PotensiKetercapaianLuaranDijanjikan.PublicApi.dll
 C:\dev_net\UnpakSipaksi\UnpakSipaksi.Modules.PotensiKetercapaianLuaranDijanjikan.Infrastructure\bin\Debug\net8.0\UnpakSipaksi.Common.Application.pdb
 C:\dev_net\UnpakSipaksi\UnpakSipaksi.Modules.PotensiKetercapaianLuaranDijanjikan.Infrastructure\bin\Debug\net8.0\UnpakSipaksi.Common.Infrastructure.pdb
 C:\dev_net\UnpakSipaksi\UnpakSipaksi.Modules.PotensiKetercapaianLuaranDijanjikan.Infrastructure\bin\Debug\net8.0\UnpakSipaksi.Modules.PotensiKetercapaianLuaranDijanjikan.Application.pdb
 C:\dev_net\UnpakSipaksi\UnpakSipaksi.Modules.PotensiKetercapaianLuaranDijanjikan.Infrastructure\bin\Debug\net8.0\UnpakSipaksi.Modules.PotensiKetercapaianLuaranDijanjikan.Domain.pdb
 C:\dev_net\UnpakSipaksi\UnpakSipaksi.Modules.PotensiKetercapaianLuaranDijanjikan.Infrastructure\bin\Debug\net8.0\UnpakSipaksi.Modules.PotensiKetercapaianLuaranDijanjikan.Presentation.pdb
+C:\dev_net\UnpakSipaksi\UnpakSipaksi.Modules.PotensiKetercapaianLuaranDijanjikan.Infrastructure\bin\Debug\net8.0\UnpakSipaksi.Modules.PotensiKetercapaianLuaranDijanjikan.PublicApi.pdb
 C:\dev_net\UnpakSipaksi\UnpakSipaksi.Modules.PotensiKetercapaianLuaranDijanjikan.Infrastructure\bin\Debug\net8.0\UnpakSipaksi.Common.Domain.pdb
 C:\dev_net\UnpakSipaksi\UnpakSipaksi.Modules.PotensiKetercapaianLuaranDijanjikan.Infrastructure\bin\Debug\net8.0\UnpakSipaksi.Common.Presentation.pdb
 C:\dev_net\UnpakSipaksi\UnpakSipaksi.Modules.PotensiKetercapaianLuaranDijanjikan.Infrastructure\obj\Debug\net8.0\UnpakSipaksi.Modules.PotensiKetercapaianLuaranDijanjikan.Infrastructure.csproj.AssemblyReference.cache

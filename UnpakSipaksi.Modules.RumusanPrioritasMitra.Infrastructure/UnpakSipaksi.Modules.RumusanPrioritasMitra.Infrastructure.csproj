@@ -27,6 +27,7 @@
 		<ProjectReference Include="..\UnpakSipaksi.Modules.RumusanPrioritasMitra.Application\UnpakSipaksi.Modules.RumusanPrioritasMitra.Application.csproj" />
 		<ProjectReference Include="..\UnpakSipaksi.Modules.RumusanPrioritasMitra.Domain\UnpakSipaksi.Modules.RumusanPrioritasMitra.Domain.csproj" />
 		<ProjectReference Include="..\UnpakSipaksi.Modules.RumusanPrioritasMitra.Presentation\UnpakSipaksi.Modules.RumusanPrioritasMitra.Presentation.csproj" />
+		<ProjectReference Include="..\UnpakSipaksi.Modules.RumusanPrioritasMitra.PublicApi\UnpakSipaksi.Modules.RumusanPrioritasMitra.PublicApi.csproj" />
 	</ItemGroup>
 
 </Project>

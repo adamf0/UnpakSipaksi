@@ -10,9 +10,9 @@ C:\dev_net\UnpakSipaksi\UnpakSipaksi.Common.Infrastructure\obj\Debug\net8.0\Unpa
 C:\dev_net\UnpakSipaksi\UnpakSipaksi.Common.Infrastructure\obj\Debug\net8.0\UnpakSipaksi.Common.Infrastructure.AssemblyInfoInputs.cache
 C:\dev_net\UnpakSipaksi\UnpakSipaksi.Common.Infrastructure\obj\Debug\net8.0\UnpakSipaksi.Common.Infrastructure.AssemblyInfo.cs
 C:\dev_net\UnpakSipaksi\UnpakSipaksi.Common.Infrastructure\obj\Debug\net8.0\UnpakSipaksi.Common.Infrastructure.csproj.CoreCompileInputs.cache
+C:\dev_net\UnpakSipaksi\UnpakSipaksi.Common.Infrastructure\obj\Debug\net8.0\UnpakSipaksi.Common.Infrastructure.sourcelink.json
 C:\dev_net\UnpakSipaksi\UnpakSipaksi.Common.Infrastructure\obj\Debug\net8.0\UnpakSip.F00BD98D.Up2Date
 C:\dev_net\UnpakSipaksi\UnpakSipaksi.Common.Infrastructure\obj\Debug\net8.0\UnpakSipaksi.Common.Infrastructure.dll
 C:\dev_net\UnpakSipaksi\UnpakSipaksi.Common.Infrastructure\obj\Debug\net8.0\refint\UnpakSipaksi.Common.Infrastructure.dll
 C:\dev_net\UnpakSipaksi\UnpakSipaksi.Common.Infrastructure\obj\Debug\net8.0\UnpakSipaksi.Common.Infrastructure.pdb
 C:\dev_net\UnpakSipaksi\UnpakSipaksi.Common.Infrastructure\obj\Debug\net8.0\ref\UnpakSipaksi.Common.Infrastructure.dll
-C:\dev_net\UnpakSipaksi\UnpakSipaksi.Common.Infrastructure\obj\Debug\net8.0\UnpakSipaksi.Common.Infrastructure.sourcelink.json

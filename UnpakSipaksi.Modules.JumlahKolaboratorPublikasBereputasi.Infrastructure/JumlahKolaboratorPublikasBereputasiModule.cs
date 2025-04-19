@@ -14,6 +14,8 @@ using UnpakSipaksi.Modules.JumlahKolaboratorPublikasBereputasi.Domain.JumlahKola
 using UnpakSipaksi.Modules.JumlahKolaboratorPublikasBereputasi.Infrastructure.JumlahKolaboratorPublikasBereputasi;
 using UnpakSipaksi.Modules.JumlahKolaboratorPublikasBereputasi.Infrastructure.Database;
 using UnpakSipaksi.Modules.JumlahKolaboratorPublikasBereputasi.Presentation.JumlahKolaboratorPublikasBereputasi;
+using UnpakSipaksi.Modules.JumlahKolaboratorPublikasBereputasi.PublicApi;
+using UnpakSipaksi.Modules.JumlahKolaboratorPublikasBereputasi.Infrastructure.PublicApi;
 
 namespace UnpakSipaksi.Modules.JumlahKolaboratorPublikasBereputasi.Infrastructure
 {
@@ -43,6 +45,7 @@ namespace UnpakSipaksi.Modules.JumlahKolaboratorPublikasBereputasi.Infrastructur
             services.AddDbContext<JumlahKolaboratorPublikasBereputasiDbContext>(optionsBuilder => optionsBuilder.UseMySQL(databaseConnectionString));
 
             services.AddScoped<IJumlahKolaboratorPublikasBereputasiRepository, JumlahKolaboratorPublikasBereputasiRepository>();
+            services.AddScoped<IJumlahKolaboratorPublikasBereputasiApi, JumlahKolaboratorPublikasBereputasiApi>();
 
             services.AddScoped<IUnitOfWork>(sp => sp.GetRequiredService<JumlahKolaboratorPublikasBereputasiDbContext>());
         }

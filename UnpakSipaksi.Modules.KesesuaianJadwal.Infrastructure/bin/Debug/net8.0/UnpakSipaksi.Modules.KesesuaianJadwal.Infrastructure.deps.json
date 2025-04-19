@@ -14,7 +14,8 @@
           "UnpakSipaksi.Common.Infrastructure": "1.0.0",
           "UnpakSipaksi.Modules.KesesuaianJadwal.Application": "1.0.0",
           "UnpakSipaksi.Modules.KesesuaianJadwal.Domain": "1.0.0",
-          "UnpakSipaksi.Modules.KesesuaianJadwal.Presentation": "1.0.0"
+          "UnpakSipaksi.Modules.KesesuaianJadwal.Presentation": "1.0.0",
+          "UnpakSipaksi.Modules.KesesuaianJadwal.PublicApi": "1.0.0"
         },
         "runtime": {
           "UnpakSipaksi.Modules.KesesuaianJadwal.Infrastructure.dll": {}
@@ -699,6 +700,11 @@
         "runtime": {
           "UnpakSipaksi.Modules.KesesuaianJadwal.Presentation.dll": {}
         }
+      },
+      "UnpakSipaksi.Modules.KesesuaianJadwal.PublicApi/1.0.0": {
+        "runtime": {
+          "UnpakSipaksi.Modules.KesesuaianJadwal.PublicApi.dll": {}
+        }
       }
     }
   },
@@ -1215,6 +1221,11 @@
       "sha512": ""
     },
     "UnpakSipaksi.Modules.KesesuaianJadwal.Presentation/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    },
+    "UnpakSipaksi.Modules.KesesuaianJadwal.PublicApi/1.0.0": {
       "type": "project",
       "serviceable": false,
       "sha512": ""

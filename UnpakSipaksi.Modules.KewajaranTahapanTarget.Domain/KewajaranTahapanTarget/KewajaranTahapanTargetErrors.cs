@@ -5,10 +5,13 @@ namespace UnpakSipaksi.Modules.KewajaranTahapanTarget.Domain.KewajaranTahapanTar
     public static class KewajaranTahapanTargetErrors
     {
         public static Error EmptyData() =>
-            Error.NotFound("KewajaranTahapanTarget.EmptyData", $"data is not found");
-
+            Error.NotFound("KewajaranTahapanTarget.EmptyData", "data is not found");
+        public static Error NotSameValue() =>
+            Error.NotFound("KewajaranTahapanTarget.NotSameValue", "not the same value in data 'nilai'");
+        public static Error UnknownKategoriSkema() =>
+            Error.NotFound("KewajaranTahapanTarget.UnknownKategoriSkema", "Unknown schema category");
         public static Error NotFound(Guid Id) =>
-            Error.NotFound("KewajaranTahapanTarget.NotFound", $"The event with the identifier {Id} was not found");
+            Error.NotFound("KewajaranTahapanTarget.NotFound", $"Kewajaran tahapan target with the identifier {Id} was not found");
 
     }
 }

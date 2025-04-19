@@ -28,6 +28,7 @@
 		<ProjectReference Include="..\UnpakSipaksi.Modules.ArtikelMediaMassa.Domain\UnpakSipaksi.Modules.ArtikelMediaMassa.Domain.csproj" />
 		<ProjectReference Include="..\UnpakSipaksi.Modules.ArtikelMediaMassa.Presentation\UnpakSipaksi.Modules.ArtikelMediaMassa.Presentation.csproj" />
 		<ProjectReference Include="..\UnpakSipaksi.Modules.ArtikelMediaMassa.Domain\UnpakSipaksi.Modules.ArtikelMediaMassa.Domain.csproj" />
+		<ProjectReference Include="..\UnpakSipaksi.Modules.ArtikelMediaMassa.PublicApi\UnpakSipaksi.Modules.ArtikelMediaMassa.PublicApi.csproj" />
 	</ItemGroup>
 
 </Project>

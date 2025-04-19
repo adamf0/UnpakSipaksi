@@ -1,0 +1,12 @@
+C:\dev_net\UnpakSipaksi\UnpakSipaksi.Modules.KetajamanPerumusanMasalah.PublicApi\bin\Debug\net8.0\UnpakSipaksi.Modules.KetajamanPerumusanMasalah.PublicApi.deps.json
+C:\dev_net\UnpakSipaksi\UnpakSipaksi.Modules.KetajamanPerumusanMasalah.PublicApi\bin\Debug\net8.0\UnpakSipaksi.Modules.KetajamanPerumusanMasalah.PublicApi.dll
+C:\dev_net\UnpakSipaksi\UnpakSipaksi.Modules.KetajamanPerumusanMasalah.PublicApi\bin\Debug\net8.0\UnpakSipaksi.Modules.KetajamanPerumusanMasalah.PublicApi.pdb
+C:\dev_net\UnpakSipaksi\UnpakSipaksi.Modules.KetajamanPerumusanMasalah.PublicApi\obj\Debug\net8.0\UnpakSipaksi.Modules.KetajamanPerumusanMasalah.PublicApi.GeneratedMSBuildEditorConfig.editorconfig
+C:\dev_net\UnpakSipaksi\UnpakSipaksi.Modules.KetajamanPerumusanMasalah.PublicApi\obj\Debug\net8.0\UnpakSipaksi.Modules.KetajamanPerumusanMasalah.PublicApi.AssemblyInfoInputs.cache
+C:\dev_net\UnpakSipaksi\UnpakSipaksi.Modules.KetajamanPerumusanMasalah.PublicApi\obj\Debug\net8.0\UnpakSipaksi.Modules.KetajamanPerumusanMasalah.PublicApi.AssemblyInfo.cs
+C:\dev_net\UnpakSipaksi\UnpakSipaksi.Modules.KetajamanPerumusanMasalah.PublicApi\obj\Debug\net8.0\UnpakSipaksi.Modules.KetajamanPerumusanMasalah.PublicApi.csproj.CoreCompileInputs.cache
+C:\dev_net\UnpakSipaksi\UnpakSipaksi.Modules.KetajamanPerumusanMasalah.PublicApi\obj\Debug\net8.0\UnpakSipaksi.Modules.KetajamanPerumusanMasalah.PublicApi.sourcelink.json
+C:\dev_net\UnpakSipaksi\UnpakSipaksi.Modules.KetajamanPerumusanMasalah.PublicApi\obj\Debug\net8.0\UnpakSipaksi.Modules.KetajamanPerumusanMasalah.PublicApi.dll
+C:\dev_net\UnpakSipaksi\UnpakSipaksi.Modules.KetajamanPerumusanMasalah.PublicApi\obj\Debug\net8.0\refint\UnpakSipaksi.Modules.KetajamanPerumusanMasalah.PublicApi.dll
+C:\dev_net\UnpakSipaksi\UnpakSipaksi.Modules.KetajamanPerumusanMasalah.PublicApi\obj\Debug\net8.0\UnpakSipaksi.Modules.KetajamanPerumusanMasalah.PublicApi.pdb
+C:\dev_net\UnpakSipaksi\UnpakSipaksi.Modules.KetajamanPerumusanMasalah.PublicApi\obj\Debug\net8.0\ref\UnpakSipaksi.Modules.KetajamanPerumusanMasalah.PublicApi.dll

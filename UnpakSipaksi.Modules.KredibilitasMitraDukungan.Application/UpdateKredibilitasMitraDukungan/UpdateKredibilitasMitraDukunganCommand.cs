@@ -5,10 +5,6 @@ namespace UnpakSipaksi.Modules.KredibilitasMitraDukungan.Application.UpdateKredi
     public sealed record UpdateKredibilitasMitraDukunganCommand(
         Guid Uuid,
         string Nama,
-        int BobotPDP,
-        int BobotTerapan,
-        int BobotKerjasama,
-        int BobotPenelitianDasar,
         int Skor
     ) : ICommand;
 }

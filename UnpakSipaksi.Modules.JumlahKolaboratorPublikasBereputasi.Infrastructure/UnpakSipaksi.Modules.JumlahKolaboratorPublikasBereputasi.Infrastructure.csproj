@@ -28,6 +28,7 @@
 		<ProjectReference Include="..\UnpakSipaksi.Modules.JumlahKolaboratorPublikasBereputasi.Domain\UnpakSipaksi.Modules.JumlahKolaboratorPublikasBereputasi.Domain.csproj" />
 		<ProjectReference Include="..\UnpakSipaksi.Modules.JumlahKolaboratorPublikasBereputasi.Presentation\UnpakSipaksi.Modules.JumlahKolaboratorPublikasBereputasi.Presentation.csproj" />
 		<ProjectReference Include="..\UnpakSipaksi.Modules.JumlahKolaboratorPublikasBereputasi.Domain\UnpakSipaksi.Modules.JumlahKolaboratorPublikasBereputasi.Domain.csproj" />
+		<ProjectReference Include="..\UnpakSipaksi.Modules.JumlahKolaboratorPublikasBereputasi.PublicApi\UnpakSipaksi.Modules.JumlahKolaboratorPublikasBereputasi.PublicApi.csproj" />
 	</ItemGroup>
 
 </Project>

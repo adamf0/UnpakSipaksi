@@ -1,0 +1,12 @@
+C:\dev_net\UnpakSipaksi\UnpakSipaksi.Modules.KualitasKuantitasPublikasiJurnalIlmiah.PubliApi\bin\Debug\net8.0\UnpakSipaksi.Modules.KualitasKuantitasPublikasiJurnalIlmiah.PubliApi.deps.json
+C:\dev_net\UnpakSipaksi\UnpakSipaksi.Modules.KualitasKuantitasPublikasiJurnalIlmiah.PubliApi\bin\Debug\net8.0\UnpakSipaksi.Modules.KualitasKuantitasPublikasiJurnalIlmiah.PubliApi.dll
+C:\dev_net\UnpakSipaksi\UnpakSipaksi.Modules.KualitasKuantitasPublikasiJurnalIlmiah.PubliApi\bin\Debug\net8.0\UnpakSipaksi.Modules.KualitasKuantitasPublikasiJurnalIlmiah.PubliApi.pdb
+C:\dev_net\UnpakSipaksi\UnpakSipaksi.Modules.KualitasKuantitasPublikasiJurnalIlmiah.PubliApi\obj\Debug\net8.0\UnpakSipaksi.Modules.KualitasKuantitasPublikasiJurnalIlmiah.PubliApi.GeneratedMSBuildEditorConfig.editorconfig
+C:\dev_net\UnpakSipaksi\UnpakSipaksi.Modules.KualitasKuantitasPublikasiJurnalIlmiah.PubliApi\obj\Debug\net8.0\UnpakSipaksi.Modules.KualitasKuantitasPublikasiJurnalIlmiah.PubliApi.AssemblyInfoInputs.cache
+C:\dev_net\UnpakSipaksi\UnpakSipaksi.Modules.KualitasKuantitasPublikasiJurnalIlmiah.PubliApi\obj\Debug\net8.0\UnpakSipaksi.Modules.KualitasKuantitasPublikasiJurnalIlmiah.PubliApi.AssemblyInfo.cs
+C:\dev_net\UnpakSipaksi\UnpakSipaksi.Modules.KualitasKuantitasPublikasiJurnalIlmiah.PubliApi\obj\Debug\net8.0\UnpakSipaksi.Modules.KualitasKuantitasPublikasiJurnalIlmiah.PubliApi.csproj.CoreCompileInputs.cache
+C:\dev_net\UnpakSipaksi\UnpakSipaksi.Modules.KualitasKuantitasPublikasiJurnalIlmiah.PubliApi\obj\Debug\net8.0\UnpakSipaksi.Modules.KualitasKuantitasPublikasiJurnalIlmiah.PubliApi.sourcelink.json
+C:\dev_net\UnpakSipaksi\UnpakSipaksi.Modules.KualitasKuantitasPublikasiJurnalIlmiah.PubliApi\obj\Debug\net8.0\UnpakSipaksi.Modules.KualitasKuantitasPublikasiJurnalIlmiah.PubliApi.dll
+C:\dev_net\UnpakSipaksi\UnpakSipaksi.Modules.KualitasKuantitasPublikasiJurnalIlmiah.PubliApi\obj\Debug\net8.0\refint\UnpakSipaksi.Modules.KualitasKuantitasPublikasiJurnalIlmiah.PubliApi.dll
+C:\dev_net\UnpakSipaksi\UnpakSipaksi.Modules.KualitasKuantitasPublikasiJurnalIlmiah.PubliApi\obj\Debug\net8.0\UnpakSipaksi.Modules.KualitasKuantitasPublikasiJurnalIlmiah.PubliApi.pdb
+C:\dev_net\UnpakSipaksi\UnpakSipaksi.Modules.KualitasKuantitasPublikasiJurnalIlmiah.PubliApi\obj\Debug\net8.0\ref\UnpakSipaksi.Modules.KualitasKuantitasPublikasiJurnalIlmiah.PubliApi.dll

@@ -28,6 +28,7 @@
 		<ProjectReference Include="..\UnpakSipaksi.Modules.KetajamanAnalisis.Domain\UnpakSipaksi.Modules.KetajamanAnalisis.Domain.csproj" />
 		<ProjectReference Include="..\UnpakSipaksi.Modules.KetajamanAnalisis.Presentation\UnpakSipaksi.Modules.KetajamanAnalisis.Presentation.csproj" />
 		<ProjectReference Include="..\UnpakSipaksi.Modules.KetajamanAnalisis.Domain\UnpakSipaksi.Modules.KetajamanAnalisis.Domain.csproj" />
+		<ProjectReference Include="..\UnpakSipaksi.Modules.KetajamanAnalisis.PublicApi\UnpakSipaksi.Modules.KetajamanAnalisis.PublicApi.csproj" />
 	</ItemGroup>
 
 </Project>

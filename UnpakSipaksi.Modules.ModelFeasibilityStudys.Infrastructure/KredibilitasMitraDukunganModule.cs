@@ -9,6 +9,8 @@ using UnpakSipaksi.Modules.ModelFeasibilityStudys.Infrastructure.Database;
 using UnpakSipaksi.Modules.ModelFeasibilityStudys.Domain.ModelFeasibilityStudys;
 using UnpakSipaksi.Modules.ModelFeasibilityStudys.Infrastructure.ModelFeasibilityStudys;
 using UnpakSipaksi.Modules.ModelFeasibilityStudys.Presentation.ModelFeasibilityStudys;
+using UnpakSipaksi.Modules.ModelFeasibilityStudys.PublicApi;
+using UnpakSipaksi.Modules.ModelFeasibilityStudys.Infrastructure.PublicApi;
 
 namespace UnpakSipaksi.Modules.ModelFeasibilityStudys.Infrastructure
 {
@@ -38,6 +40,8 @@ namespace UnpakSipaksi.Modules.ModelFeasibilityStudys.Infrastructure
             services.AddDbContext<ModelFeasibilityStudysDbContext>(optionsBuilder => optionsBuilder.UseMySQL(databaseConnectionString));
 
             services.AddScoped<IModelFeasibilityStudysRepository, ModelFeasibilityStudysRepository>();
+
+            services.AddScoped<IModelFeasibilityStudysApi, ModelFeasibilityStudysApi>();
 
             services.AddScoped<IUnitOfWork>(sp => sp.GetRequiredService<ModelFeasibilityStudysDbContext>());
         }

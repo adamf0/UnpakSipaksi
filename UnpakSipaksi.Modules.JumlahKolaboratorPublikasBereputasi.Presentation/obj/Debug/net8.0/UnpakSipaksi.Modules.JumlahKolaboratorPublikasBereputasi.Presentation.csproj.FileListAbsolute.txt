@@ -1,8 +1,3 @@
-C:\dev_net\UnpakSipaksi\UnpakSipaksi.Modules.JumlahKolaboratorPublikasBereputasi.Presentation\obj\Debug\net8.0\UnpakSipaksi.Modules.JumlahKolaboratorPublikasBereputasi.Presentation.csproj.AssemblyReference.cache
-C:\dev_net\UnpakSipaksi\UnpakSipaksi.Modules.JumlahKolaboratorPublikasBereputasi.Presentation\obj\Debug\net8.0\UnpakSipaksi.Modules.JumlahKolaboratorPublikasBereputasi.Presentation.GeneratedMSBuildEditorConfig.editorconfig
-C:\dev_net\UnpakSipaksi\UnpakSipaksi.Modules.JumlahKolaboratorPublikasBereputasi.Presentation\obj\Debug\net8.0\UnpakSipaksi.Modules.JumlahKolaboratorPublikasBereputasi.Presentation.AssemblyInfoInputs.cache
-C:\dev_net\UnpakSipaksi\UnpakSipaksi.Modules.JumlahKolaboratorPublikasBereputasi.Presentation\obj\Debug\net8.0\UnpakSipaksi.Modules.JumlahKolaboratorPublikasBereputasi.Presentation.AssemblyInfo.cs
-C:\dev_net\UnpakSipaksi\UnpakSipaksi.Modules.JumlahKolaboratorPublikasBereputasi.Presentation\obj\Debug\net8.0\UnpakSipaksi.Modules.JumlahKolaboratorPublikasBereputasi.Presentation.csproj.CoreCompileInputs.cache
 C:\dev_net\UnpakSipaksi\UnpakSipaksi.Modules.JumlahKolaboratorPublikasBereputasi.Presentation\bin\Debug\net8.0\UnpakSipaksi.Modules.JumlahKolaboratorPublikasBereputasi.Presentation.deps.json
 C:\dev_net\UnpakSipaksi\UnpakSipaksi.Modules.JumlahKolaboratorPublikasBereputasi.Presentation\bin\Debug\net8.0\UnpakSipaksi.Modules.JumlahKolaboratorPublikasBereputasi.Presentation.dll
 C:\dev_net\UnpakSipaksi\UnpakSipaksi.Modules.JumlahKolaboratorPublikasBereputasi.Presentation\bin\Debug\net8.0\UnpakSipaksi.Modules.JumlahKolaboratorPublikasBereputasi.Presentation.pdb
@@ -16,9 +11,14 @@ C:\dev_net\UnpakSipaksi\UnpakSipaksi.Modules.JumlahKolaboratorPublikasBereputasi
 C:\dev_net\UnpakSipaksi\UnpakSipaksi.Modules.JumlahKolaboratorPublikasBereputasi.Presentation\bin\Debug\net8.0\UnpakSipaksi.Modules.JumlahKolaboratorPublikasBereputasi.Application.pdb
 C:\dev_net\UnpakSipaksi\UnpakSipaksi.Modules.JumlahKolaboratorPublikasBereputasi.Presentation\bin\Debug\net8.0\UnpakSipaksi.Common.Application.pdb
 C:\dev_net\UnpakSipaksi\UnpakSipaksi.Modules.JumlahKolaboratorPublikasBereputasi.Presentation\bin\Debug\net8.0\UnpakSipaksi.Modules.JumlahKolaboratorPublikasBereputasi.Domain.pdb
+C:\dev_net\UnpakSipaksi\UnpakSipaksi.Modules.JumlahKolaboratorPublikasBereputasi.Presentation\obj\Debug\net8.0\UnpakSipaksi.Modules.JumlahKolaboratorPublikasBereputasi.Presentation.csproj.AssemblyReference.cache
+C:\dev_net\UnpakSipaksi\UnpakSipaksi.Modules.JumlahKolaboratorPublikasBereputasi.Presentation\obj\Debug\net8.0\UnpakSipaksi.Modules.JumlahKolaboratorPublikasBereputasi.Presentation.GeneratedMSBuildEditorConfig.editorconfig
+C:\dev_net\UnpakSipaksi\UnpakSipaksi.Modules.JumlahKolaboratorPublikasBereputasi.Presentation\obj\Debug\net8.0\UnpakSipaksi.Modules.JumlahKolaboratorPublikasBereputasi.Presentation.AssemblyInfoInputs.cache
+C:\dev_net\UnpakSipaksi\UnpakSipaksi.Modules.JumlahKolaboratorPublikasBereputasi.Presentation\obj\Debug\net8.0\UnpakSipaksi.Modules.JumlahKolaboratorPublikasBereputasi.Presentation.AssemblyInfo.cs
+C:\dev_net\UnpakSipaksi\UnpakSipaksi.Modules.JumlahKolaboratorPublikasBereputasi.Presentation\obj\Debug\net8.0\UnpakSipaksi.Modules.JumlahKolaboratorPublikasBereputasi.Presentation.csproj.CoreCompileInputs.cache
+C:\dev_net\UnpakSipaksi\UnpakSipaksi.Modules.JumlahKolaboratorPublikasBereputasi.Presentation\obj\Debug\net8.0\UnpakSipaksi.Modules.JumlahKolaboratorPublikasBereputasi.Presentation.sourcelink.json
 C:\dev_net\UnpakSipaksi\UnpakSipaksi.Modules.JumlahKolaboratorPublikasBereputasi.Presentation\obj\Debug\net8.0\UnpakSip.1794E7D9.Up2Date
 C:\dev_net\UnpakSipaksi\UnpakSipaksi.Modules.JumlahKolaboratorPublikasBereputasi.Presentation\obj\Debug\net8.0\UnpakSipaksi.Modules.JumlahKolaboratorPublikasBereputasi.Presentation.dll
 C:\dev_net\UnpakSipaksi\UnpakSipaksi.Modules.JumlahKolaboratorPublikasBereputasi.Presentation\obj\Debug\net8.0\refint\UnpakSipaksi.Modules.JumlahKolaboratorPublikasBereputasi.Presentation.dll
 C:\dev_net\UnpakSipaksi\UnpakSipaksi.Modules.JumlahKolaboratorPublikasBereputasi.Presentation\obj\Debug\net8.0\UnpakSipaksi.Modules.JumlahKolaboratorPublikasBereputasi.Presentation.pdb
 C:\dev_net\UnpakSipaksi\UnpakSipaksi.Modules.JumlahKolaboratorPublikasBereputasi.Presentation\obj\Debug\net8.0\ref\UnpakSipaksi.Modules.JumlahKolaboratorPublikasBereputasi.Presentation.dll
-C:\dev_net\UnpakSipaksi\UnpakSipaksi.Modules.JumlahKolaboratorPublikasBereputasi.Presentation\obj\Debug\net8.0\UnpakSipaksi.Modules.JumlahKolaboratorPublikasBereputasi.Presentation.sourcelink.json

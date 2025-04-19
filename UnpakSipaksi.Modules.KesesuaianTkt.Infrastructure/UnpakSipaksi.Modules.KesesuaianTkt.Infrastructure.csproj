@@ -28,6 +28,7 @@
 		<ProjectReference Include="..\UnpakSipaksi.Modules.KesesuaianTkt.Domain\UnpakSipaksi.Modules.KesesuaianTkt.Domain.csproj" />
 		<ProjectReference Include="..\UnpakSipaksi.Modules.KesesuaianTkt.Presentation\UnpakSipaksi.Modules.KesesuaianTkt.Presentation.csproj" />
 		<ProjectReference Include="..\UnpakSipaksi.Modules.KesesuaianTkt.Domain\UnpakSipaksi.Modules.KesesuaianTkt.Domain.csproj" />
+		<ProjectReference Include="..\UnpakSipaksi.Modules.KesesuaianTkt.PublicApi\UnpakSipaksi.Modules.KesesuaianTkt.PublicApi.csproj" />
 	</ItemGroup>
 
 </Project>

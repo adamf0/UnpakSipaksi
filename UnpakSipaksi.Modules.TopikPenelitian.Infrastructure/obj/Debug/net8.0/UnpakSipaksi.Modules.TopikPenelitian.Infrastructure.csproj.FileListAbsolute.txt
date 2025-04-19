@@ -24,9 +24,9 @@ C:\dev_net\UnpakSipaksi\UnpakSipaksi.Modules.TopikPenelitian.Infrastructure\obj\
 C:\dev_net\UnpakSipaksi\UnpakSipaksi.Modules.TopikPenelitian.Infrastructure\obj\Debug\net8.0\UnpakSipaksi.Modules.TopikPenelitian.Infrastructure.AssemblyInfoInputs.cache
 C:\dev_net\UnpakSipaksi\UnpakSipaksi.Modules.TopikPenelitian.Infrastructure\obj\Debug\net8.0\UnpakSipaksi.Modules.TopikPenelitian.Infrastructure.AssemblyInfo.cs
 C:\dev_net\UnpakSipaksi\UnpakSipaksi.Modules.TopikPenelitian.Infrastructure\obj\Debug\net8.0\UnpakSipaksi.Modules.TopikPenelitian.Infrastructure.csproj.CoreCompileInputs.cache
+C:\dev_net\UnpakSipaksi\UnpakSipaksi.Modules.TopikPenelitian.Infrastructure\obj\Debug\net8.0\UnpakSipaksi.Modules.TopikPenelitian.Infrastructure.sourcelink.json
 C:\dev_net\UnpakSipaksi\UnpakSipaksi.Modules.TopikPenelitian.Infrastructure\obj\Debug\net8.0\UnpakSip.A79786F4.Up2Date
 C:\dev_net\UnpakSipaksi\UnpakSipaksi.Modules.TopikPenelitian.Infrastructure\obj\Debug\net8.0\UnpakSipaksi.Modules.TopikPenelitian.Infrastructure.dll
 C:\dev_net\UnpakSipaksi\UnpakSipaksi.Modules.TopikPenelitian.Infrastructure\obj\Debug\net8.0\refint\UnpakSipaksi.Modules.TopikPenelitian.Infrastructure.dll
 C:\dev_net\UnpakSipaksi\UnpakSipaksi.Modules.TopikPenelitian.Infrastructure\obj\Debug\net8.0\UnpakSipaksi.Modules.TopikPenelitian.Infrastructure.pdb
 C:\dev_net\UnpakSipaksi\UnpakSipaksi.Modules.TopikPenelitian.Infrastructure\obj\Debug\net8.0\ref\UnpakSipaksi.Modules.TopikPenelitian.Infrastructure.dll
-C:\dev_net\UnpakSipaksi\UnpakSipaksi.Modules.TopikPenelitian.Infrastructure\obj\Debug\net8.0\UnpakSipaksi.Modules.TopikPenelitian.Infrastructure.sourcelink.json
