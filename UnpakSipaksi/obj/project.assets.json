@@ -2514,6 +2514,77 @@
           "bin/placeholder/UnpakSipaksi.Modules.InovasiPemecahanMasalah.PublicApi.dll": {}
         }
       },
+      "UnpakSipaksi.Modules.Insentif.Application/1.0.0": {
+        "type": "project",
+        "framework": ".NETCoreApp,Version=v8.0",
+        "dependencies": {
+          "Dapper": "2.1.35",
+          "MediatR": "12.4.1",
+          "UnpakSipaksi.Common.Application": "1.0.0",
+          "UnpakSipaksi.Common.Domain": "1.0.0",
+          "UnpakSipaksi.Modules.Insentif.Domain": "1.0.0",
+          "UnpakSipaksi.Modules.JenisPublikasi.PublicApi": "1.0.0"
+        },
+        "compile": {
+          "bin/placeholder/UnpakSipaksi.Modules.Insentif.Application.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/UnpakSipaksi.Modules.Insentif.Application.dll": {}
+        }
+      },
+      "UnpakSipaksi.Modules.Insentif.Domain/1.0.0": {
+        "type": "project",
+        "framework": ".NETCoreApp,Version=v8.0",
+        "dependencies": {
+          "UnpakSipaksi.Common.Domain": "1.0.0"
+        },
+        "compile": {
+          "bin/placeholder/UnpakSipaksi.Modules.Insentif.Domain.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/UnpakSipaksi.Modules.Insentif.Domain.dll": {}
+        }
+      },
+      "UnpakSipaksi.Modules.Insentif.Infrastructure/1.0.0": {
+        "type": "project",
+        "framework": ".NETCoreApp,Version=v8.0",
+        "dependencies": {
+          "Microsoft.EntityFrameworkCore": "8.0.0",
+          "MySql.EntityFrameworkCore": "8.0.0",
+          "UnpakSipaksi.Common.Application": "1.0.0",
+          "UnpakSipaksi.Common.Infrastructure": "1.0.0",
+          "UnpakSipaksi.Modules.Insentif.Application": "1.0.0",
+          "UnpakSipaksi.Modules.Insentif.Domain": "1.0.0",
+          "UnpakSipaksi.Modules.Insentif.Presentation": "1.0.0"
+        },
+        "compile": {
+          "bin/placeholder/UnpakSipaksi.Modules.Insentif.Infrastructure.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/UnpakSipaksi.Modules.Insentif.Infrastructure.dll": {}
+        },
+        "frameworkReferences": [
+          "Microsoft.AspNetCore.App"
+        ]
+      },
+      "UnpakSipaksi.Modules.Insentif.Presentation/1.0.0": {
+        "type": "project",
+        "framework": ".NETCoreApp,Version=v8.0",
+        "dependencies": {
+          "UnpakSipaksi.Common.Domain": "1.0.0",
+          "UnpakSipaksi.Common.Presentation": "1.0.0",
+          "UnpakSipaksi.Modules.Insentif.Application": "1.0.0"
+        },
+        "compile": {
+          "bin/placeholder/UnpakSipaksi.Modules.Insentif.Presentation.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/UnpakSipaksi.Modules.Insentif.Presentation.dll": {}
+        },
+        "frameworkReferences": [
+          "Microsoft.AspNetCore.App"
+        ]
+      },
       "UnpakSipaksi.Modules.JenisPublikasi.Application/1.0.0": {
         "type": "project",
         "framework": ".NETCoreApp,Version=v8.0",
@@ -2554,7 +2625,8 @@
           "UnpakSipaksi.Common.Infrastructure": "1.0.0",
           "UnpakSipaksi.Modules.JenisPublikasi.Application": "1.0.0",
           "UnpakSipaksi.Modules.JenisPublikasi.Domain": "1.0.0",
-          "UnpakSipaksi.Modules.JenisPublikasi.Presentation": "1.0.0"
+          "UnpakSipaksi.Modules.JenisPublikasi.Presentation": "1.0.0",
+          "UnpakSipaksi.Modules.JenisPublikasi.PublicApi": "1.0.0"
         },
         "compile": {
           "bin/placeholder/UnpakSipaksi.Modules.JenisPublikasi.Infrastructure.dll": {}
@@ -2583,6 +2655,16 @@
         "frameworkReferences": [
           "Microsoft.AspNetCore.App"
         ]
+      },
+      "UnpakSipaksi.Modules.JenisPublikasi.PublicApi/1.0.0": {
+        "type": "project",
+        "framework": ".NETCoreApp,Version=v8.0",
+        "compile": {
+          "bin/placeholder/UnpakSipaksi.Modules.JenisPublikasi.PublicApi.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/UnpakSipaksi.Modules.JenisPublikasi.PublicApi.dll": {}
+        }
       },
       "UnpakSipaksi.Modules.JumlahKolaboratorPublikasBereputasi.Application/1.0.0": {
         "type": "project",
@@ -10474,6 +10556,26 @@
       "path": "../UnpakSipaksi.Modules.InovasiPemecahanMasalah.PublicApi/UnpakSipaksi.Modules.InovasiPemecahanMasalah.PublicApi.csproj",
       "msbuildProject": "../UnpakSipaksi.Modules.InovasiPemecahanMasalah.PublicApi/UnpakSipaksi.Modules.InovasiPemecahanMasalah.PublicApi.csproj"
     },
+    "UnpakSipaksi.Modules.Insentif.Application/1.0.0": {
+      "type": "project",
+      "path": "../UnpakSipaksi.Modules.Insentif.Application/UnpakSipaksi.Modules.Insentif.Application.csproj",
+      "msbuildProject": "../UnpakSipaksi.Modules.Insentif.Application/UnpakSipaksi.Modules.Insentif.Application.csproj"
+    },
+    "UnpakSipaksi.Modules.Insentif.Domain/1.0.0": {
+      "type": "project",
+      "path": "../UnpakSipaksi.Modules.Insentif.Domain/UnpakSipaksi.Modules.Insentif.Domain.csproj",
+      "msbuildProject": "../UnpakSipaksi.Modules.Insentif.Domain/UnpakSipaksi.Modules.Insentif.Domain.csproj"
+    },
+    "UnpakSipaksi.Modules.Insentif.Infrastructure/1.0.0": {
+      "type": "project",
+      "path": "../UnpakSipaksi.Modules.Insentif.Infrastructure/UnpakSipaksi.Modules.Insentif.Infrastructure.csproj",
+      "msbuildProject": "../UnpakSipaksi.Modules.Insentif.Infrastructure/UnpakSipaksi.Modules.Insentif.Infrastructure.csproj"
+    },
+    "UnpakSipaksi.Modules.Insentif.Presentation/1.0.0": {
+      "type": "project",
+      "path": "../UnpakSipaksi.Modules.Insentif.Presentation/UnpakSipaksi.Modules.Insentif.Presentation.csproj",
+      "msbuildProject": "../UnpakSipaksi.Modules.Insentif.Presentation/UnpakSipaksi.Modules.Insentif.Presentation.csproj"
+    },
     "UnpakSipaksi.Modules.JenisPublikasi.Application/1.0.0": {
       "type": "project",
       "path": "../UnpakSipaksi.Modules.JenisPublikasi.Application/UnpakSipaksi.Modules.JenisPublikasi.Application.csproj",
@@ -10493,6 +10595,11 @@
       "type": "project",
       "path": "../UnpakSipaksi.Modules.JenisPublikasi.Presentation/UnpakSipaksi.Modules.JenisPublikasi.Presentation.csproj",
       "msbuildProject": "../UnpakSipaksi.Modules.JenisPublikasi.Presentation/UnpakSipaksi.Modules.JenisPublikasi.Presentation.csproj"
+    },
+    "UnpakSipaksi.Modules.JenisPublikasi.PublicApi/1.0.0": {
+      "type": "project",
+      "path": "../UnpakSipaksi.Modules.JenisPublikasi.PublicApi/UnpakSipaksi.Modules.JenisPublikasi.PublicApi.csproj",
+      "msbuildProject": "../UnpakSipaksi.Modules.JenisPublikasi.PublicApi/UnpakSipaksi.Modules.JenisPublikasi.PublicApi.csproj"
     },
     "UnpakSipaksi.Modules.JumlahKolaboratorPublikasBereputasi.Application/1.0.0": {
       "type": "project",
@@ -11734,6 +11841,8 @@
       "UnpakSipaksi.Modules.FokusPengabdian.Infrastructure >= 1.0.0",
       "UnpakSipaksi.Modules.InovasiPemecahanMasalah.Application >= 1.0.0",
       "UnpakSipaksi.Modules.InovasiPemecahanMasalah.Infrastructure >= 1.0.0",
+      "UnpakSipaksi.Modules.Insentif.Application >= 1.0.0",
+      "UnpakSipaksi.Modules.Insentif.Infrastructure >= 1.0.0",
       "UnpakSipaksi.Modules.JenisPublikasi.Application >= 1.0.0",
       "UnpakSipaksi.Modules.JenisPublikasi.Infrastructure >= 1.0.0",
       "UnpakSipaksi.Modules.JumlahKolaboratorPublikasBereputasi.Application >= 1.0.0",
@@ -11911,6 +12020,12 @@
             },
             "C:\\dev_net\\UnpakSipaksi\\UnpakSipaksi.Modules.InovasiPemecahanMasalah.Infrastructure\\UnpakSipaksi.Modules.InovasiPemecahanMasalah.Infrastructure.csproj": {
               "projectPath": "C:\\dev_net\\UnpakSipaksi\\UnpakSipaksi.Modules.InovasiPemecahanMasalah.Infrastructure\\UnpakSipaksi.Modules.InovasiPemecahanMasalah.Infrastructure.csproj"
+            },
+            "C:\\dev_net\\UnpakSipaksi\\UnpakSipaksi.Modules.Insentif.Application\\UnpakSipaksi.Modules.Insentif.Application.csproj": {
+              "projectPath": "C:\\dev_net\\UnpakSipaksi\\UnpakSipaksi.Modules.Insentif.Application\\UnpakSipaksi.Modules.Insentif.Application.csproj"
+            },
+            "C:\\dev_net\\UnpakSipaksi\\UnpakSipaksi.Modules.Insentif.Infrastructure\\UnpakSipaksi.Modules.Insentif.Infrastructure.csproj": {
+              "projectPath": "C:\\dev_net\\UnpakSipaksi\\UnpakSipaksi.Modules.Insentif.Infrastructure\\UnpakSipaksi.Modules.Insentif.Infrastructure.csproj"
             },
             "C:\\dev_net\\UnpakSipaksi\\UnpakSipaksi.Modules.JenisPublikasi.Application\\UnpakSipaksi.Modules.JenisPublikasi.Application.csproj": {
               "projectPath": "C:\\dev_net\\UnpakSipaksi\\UnpakSipaksi.Modules.JenisPublikasi.Application\\UnpakSipaksi.Modules.JenisPublikasi.Application.csproj"

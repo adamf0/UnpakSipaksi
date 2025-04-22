@@ -14,6 +14,8 @@ using UnpakSipaksi.Modules.JenisPublikasi.Domain.JenisPublikasi;
 using UnpakSipaksi.Modules.JenisPublikasi.Infrastructure.JenisPublikasi;
 using UnpakSipaksi.Modules.JenisPublikasi.Infrastructure.Database;
 using UnpakSipaksi.Modules.JenisPublikasi.Presentation.JenisPublikasi;
+using UnpakSipaksi.Modules.JenisPublikasi.Infrastructure.PublicApi;
+using UnpakSipaksi.Modules.JenisPublikasi.PublicApi;
 
 namespace UnpakSipaksi.Modules.JenisPublikasi.Infrastructure
 {
@@ -43,6 +45,8 @@ namespace UnpakSipaksi.Modules.JenisPublikasi.Infrastructure
             services.AddDbContext<JenisPublikasiDbContext>(optionsBuilder => optionsBuilder.UseMySQL(databaseConnectionString));
 
             services.AddScoped<IJenisPublikasiRepository, JenisPublikasiRepository>();
+
+            services.AddScoped<IJenisPublikasiApi, JenisPublikasiApi>();
 
             services.AddScoped<IUnitOfWork>(sp => sp.GetRequiredService<JenisPublikasiDbContext>());
         }

@@ -46,6 +46,8 @@
 		<ProjectReference Include="..\UnpakSipaksi.Modules.FokusPengabdian.Infrastructure\UnpakSipaksi.Modules.FokusPengabdian.Infrastructure.csproj" />
 		<ProjectReference Include="..\UnpakSipaksi.Modules.InovasiPemecahanMasalah.Application\UnpakSipaksi.Modules.InovasiPemecahanMasalah.Application.csproj" />
 		<ProjectReference Include="..\UnpakSipaksi.Modules.InovasiPemecahanMasalah.Infrastructure\UnpakSipaksi.Modules.InovasiPemecahanMasalah.Infrastructure.csproj" />
+		<ProjectReference Include="..\UnpakSipaksi.Modules.Insentif.Application\UnpakSipaksi.Modules.Insentif.Application.csproj" />
+		<ProjectReference Include="..\UnpakSipaksi.Modules.Insentif.Infrastructure\UnpakSipaksi.Modules.Insentif.Infrastructure.csproj" />
 		<ProjectReference Include="..\UnpakSipaksi.Modules.JenisPublikasi.Application\UnpakSipaksi.Modules.JenisPublikasi.Application.csproj" />
 		<ProjectReference Include="..\UnpakSipaksi.Modules.JenisPublikasi.Infrastructure\UnpakSipaksi.Modules.JenisPublikasi.Infrastructure.csproj" />
 		<ProjectReference Include="..\UnpakSipaksi.Modules.JumlahKolaboratorPublikasBereputasi.Application\UnpakSipaksi.Modules.JumlahKolaboratorPublikasBereputasi.Application.csproj" />

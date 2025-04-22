@@ -30,6 +30,8 @@
           "UnpakSipaksi.Modules.FokusPengabdian.Infrastructure": "1.0.0",
           "UnpakSipaksi.Modules.InovasiPemecahanMasalah.Application": "1.0.0",
           "UnpakSipaksi.Modules.InovasiPemecahanMasalah.Infrastructure": "1.0.0",
+          "UnpakSipaksi.Modules.Insentif.Application": "1.0.0",
+          "UnpakSipaksi.Modules.Insentif.Infrastructure": "1.0.0",
           "UnpakSipaksi.Modules.JenisPublikasi.Application": "1.0.0",
           "UnpakSipaksi.Modules.JenisPublikasi.Infrastructure": "1.0.0",
           "UnpakSipaksi.Modules.JumlahKolaboratorPublikasBereputasi.Application": "1.0.0",
@@ -1618,6 +1620,51 @@
           "UnpakSipaksi.Modules.InovasiPemecahanMasalah.PublicApi.dll": {}
         }
       },
+      "UnpakSipaksi.Modules.Insentif.Application/1.0.0": {
+        "dependencies": {
+          "Dapper": "2.1.35",
+          "MediatR": "12.4.1",
+          "UnpakSipaksi.Common.Application": "1.0.0",
+          "UnpakSipaksi.Common.Domain": "1.0.0",
+          "UnpakSipaksi.Modules.Insentif.Domain": "1.0.0",
+          "UnpakSipaksi.Modules.JenisPublikasi.PublicApi": "1.0.0"
+        },
+        "runtime": {
+          "UnpakSipaksi.Modules.Insentif.Application.dll": {}
+        }
+      },
+      "UnpakSipaksi.Modules.Insentif.Domain/1.0.0": {
+        "dependencies": {
+          "UnpakSipaksi.Common.Domain": "1.0.0"
+        },
+        "runtime": {
+          "UnpakSipaksi.Modules.Insentif.Domain.dll": {}
+        }
+      },
+      "UnpakSipaksi.Modules.Insentif.Infrastructure/1.0.0": {
+        "dependencies": {
+          "Microsoft.EntityFrameworkCore": "8.0.0",
+          "MySql.EntityFrameworkCore": "8.0.0",
+          "UnpakSipaksi.Common.Application": "1.0.0",
+          "UnpakSipaksi.Common.Infrastructure": "1.0.0",
+          "UnpakSipaksi.Modules.Insentif.Application": "1.0.0",
+          "UnpakSipaksi.Modules.Insentif.Domain": "1.0.0",
+          "UnpakSipaksi.Modules.Insentif.Presentation": "1.0.0"
+        },
+        "runtime": {
+          "UnpakSipaksi.Modules.Insentif.Infrastructure.dll": {}
+        }
+      },
+      "UnpakSipaksi.Modules.Insentif.Presentation/1.0.0": {
+        "dependencies": {
+          "UnpakSipaksi.Common.Domain": "1.0.0",
+          "UnpakSipaksi.Common.Presentation": "1.0.0",
+          "UnpakSipaksi.Modules.Insentif.Application": "1.0.0"
+        },
+        "runtime": {
+          "UnpakSipaksi.Modules.Insentif.Presentation.dll": {}
+        }
+      },
       "UnpakSipaksi.Modules.JenisPublikasi.Application/1.0.0": {
         "dependencies": {
           "Dapper": "2.1.35",
@@ -1646,7 +1693,8 @@
           "UnpakSipaksi.Common.Infrastructure": "1.0.0",
           "UnpakSipaksi.Modules.JenisPublikasi.Application": "1.0.0",
           "UnpakSipaksi.Modules.JenisPublikasi.Domain": "1.0.0",
-          "UnpakSipaksi.Modules.JenisPublikasi.Presentation": "1.0.0"
+          "UnpakSipaksi.Modules.JenisPublikasi.Presentation": "1.0.0",
+          "UnpakSipaksi.Modules.JenisPublikasi.PublicApi": "1.0.0"
         },
         "runtime": {
           "UnpakSipaksi.Modules.JenisPublikasi.Infrastructure.dll": {}
@@ -1660,6 +1708,11 @@
         },
         "runtime": {
           "UnpakSipaksi.Modules.JenisPublikasi.Presentation.dll": {}
+        }
+      },
+      "UnpakSipaksi.Modules.JenisPublikasi.PublicApi/1.0.0": {
+        "runtime": {
+          "UnpakSipaksi.Modules.JenisPublikasi.PublicApi.dll": {}
         }
       },
       "UnpakSipaksi.Modules.JumlahKolaboratorPublikasBereputasi.Application/1.0.0": {
@@ -5139,6 +5192,26 @@
       "serviceable": false,
       "sha512": ""
     },
+    "UnpakSipaksi.Modules.Insentif.Application/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    },
+    "UnpakSipaksi.Modules.Insentif.Domain/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    },
+    "UnpakSipaksi.Modules.Insentif.Infrastructure/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    },
+    "UnpakSipaksi.Modules.Insentif.Presentation/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    },
     "UnpakSipaksi.Modules.JenisPublikasi.Application/1.0.0": {
       "type": "project",
       "serviceable": false,
@@ -5155,6 +5228,11 @@
       "sha512": ""
     },
     "UnpakSipaksi.Modules.JenisPublikasi.Presentation/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    },
+    "UnpakSipaksi.Modules.JenisPublikasi.PublicApi/1.0.0": {
       "type": "project",
       "serviceable": false,
       "sha512": ""

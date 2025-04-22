@@ -71,6 +71,7 @@ using UnpakSipaksi.Middleware;
 using UnpakSipaksi.Security;
 using UnpakSipaksi.Extensions;
 using UnpakSipaksi.Common.Presentation.Security;
+using UnpakSipaksi.Modules.Insentif.Infrastructure;
 
 var builder = WebApplication.CreateBuilder(args);
 RuntimeFeature.IsDynamicCodeSupported.Equals(false);
@@ -151,6 +152,7 @@ builder.Services.AddApplication([
     UnpakSipaksi.Modules.Metode.Application.AssemblyReference.Assembly,
     UnpakSipaksi.Modules.UrgensiPenelitian.Application.AssemblyReference.Assembly,
     UnpakSipaksi.Modules.SubstansiBobot.Application.AssemblyReference.Assembly,
+    UnpakSipaksi.Modules.Insentif.Application.AssemblyReference.Assembly,
 ]);
 
 builder.Services.AddAntiforgery(options =>
@@ -219,6 +221,7 @@ builder.Services.AddRoadmapModule(builder.Configuration);
 builder.Services.AddMetodeModule(builder.Configuration);
 builder.Services.AddUrgensiPenelitianModule(builder.Configuration);
 builder.Services.AddSubstansiBobotModule(builder.Configuration);
+builder.Services.AddInsentifModule(builder.Configuration);
 
 builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen();
@@ -320,6 +323,7 @@ RoadmapModule.MapEndpoints(app);
 MetodeModule.MapEndpoints(app);
 UrgensiPenelitianModule.MapEndpoints(app);
 SubstansiBobotModule.MapEndpoints(app);
+InsentifModule.MapEndpoints(app);
 
 if (app.Environment.IsDevelopment())
 {

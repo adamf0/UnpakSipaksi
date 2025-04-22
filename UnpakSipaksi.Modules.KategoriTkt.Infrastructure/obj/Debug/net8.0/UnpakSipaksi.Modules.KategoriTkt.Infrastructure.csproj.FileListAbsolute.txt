@@ -8,11 +8,13 @@ C:\dev_net\UnpakSipaksi\UnpakSipaksi.Modules.KategoriTkt.Infrastructure\bin\Debu
 C:\dev_net\UnpakSipaksi\UnpakSipaksi.Modules.KategoriTkt.Infrastructure\bin\Debug\net8.0\UnpakSipaksi.Modules.KategoriTkt.Application.dll
 C:\dev_net\UnpakSipaksi\UnpakSipaksi.Modules.KategoriTkt.Infrastructure\bin\Debug\net8.0\UnpakSipaksi.Modules.KategoriTkt.Domain.dll
 C:\dev_net\UnpakSipaksi\UnpakSipaksi.Modules.KategoriTkt.Infrastructure\bin\Debug\net8.0\UnpakSipaksi.Modules.KategoriTkt.Presentation.dll
+C:\dev_net\UnpakSipaksi\UnpakSipaksi.Modules.KategoriTkt.Infrastructure\bin\Debug\net8.0\UnpakSipaksi.Modules.KategoriTkt.PublicApi.dll
 C:\dev_net\UnpakSipaksi\UnpakSipaksi.Modules.KategoriTkt.Infrastructure\bin\Debug\net8.0\UnpakSipaksi.Common.Application.pdb
 C:\dev_net\UnpakSipaksi\UnpakSipaksi.Modules.KategoriTkt.Infrastructure\bin\Debug\net8.0\UnpakSipaksi.Common.Infrastructure.pdb
 C:\dev_net\UnpakSipaksi\UnpakSipaksi.Modules.KategoriTkt.Infrastructure\bin\Debug\net8.0\UnpakSipaksi.Modules.KategoriTkt.Application.pdb
 C:\dev_net\UnpakSipaksi\UnpakSipaksi.Modules.KategoriTkt.Infrastructure\bin\Debug\net8.0\UnpakSipaksi.Modules.KategoriTkt.Domain.pdb
 C:\dev_net\UnpakSipaksi\UnpakSipaksi.Modules.KategoriTkt.Infrastructure\bin\Debug\net8.0\UnpakSipaksi.Modules.KategoriTkt.Presentation.pdb
+C:\dev_net\UnpakSipaksi\UnpakSipaksi.Modules.KategoriTkt.Infrastructure\bin\Debug\net8.0\UnpakSipaksi.Modules.KategoriTkt.PublicApi.pdb
 C:\dev_net\UnpakSipaksi\UnpakSipaksi.Modules.KategoriTkt.Infrastructure\bin\Debug\net8.0\UnpakSipaksi.Common.Domain.pdb
 C:\dev_net\UnpakSipaksi\UnpakSipaksi.Modules.KategoriTkt.Infrastructure\bin\Debug\net8.0\UnpakSipaksi.Common.Presentation.pdb
 C:\dev_net\UnpakSipaksi\UnpakSipaksi.Modules.KategoriTkt.Infrastructure\obj\Debug\net8.0\UnpakSipaksi.Modules.KategoriTkt.Infrastructure.csproj.AssemblyReference.cache
@@ -26,5 +28,3 @@ C:\dev_net\UnpakSipaksi\UnpakSipaksi.Modules.KategoriTkt.Infrastructure\obj\Debu
 C:\dev_net\UnpakSipaksi\UnpakSipaksi.Modules.KategoriTkt.Infrastructure\obj\Debug\net8.0\refint\UnpakSipaksi.Modules.KategoriTkt.Infrastructure.dll
 C:\dev_net\UnpakSipaksi\UnpakSipaksi.Modules.KategoriTkt.Infrastructure\obj\Debug\net8.0\UnpakSipaksi.Modules.KategoriTkt.Infrastructure.pdb
 C:\dev_net\UnpakSipaksi\UnpakSipaksi.Modules.KategoriTkt.Infrastructure\obj\Debug\net8.0\ref\UnpakSipaksi.Modules.KategoriTkt.Infrastructure.dll
-C:\dev_net\UnpakSipaksi\UnpakSipaksi.Modules.KategoriTkt.Infrastructure\bin\Debug\net8.0\UnpakSipaksi.Modules.KategoriTkt.PublicApi.dll
-C:\dev_net\UnpakSipaksi\UnpakSipaksi.Modules.KategoriTkt.Infrastructure\bin\Debug\net8.0\UnpakSipaksi.Modules.KategoriTkt.PublicApi.pdb

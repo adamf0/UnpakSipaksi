@@ -1,9 +1,3 @@
-C:\dev_net\UnpakSipaksi\UnpakSipaksi.Modules.RelevansiKepakaranTemaProposal.Application\obj\Debug\net8.0\UnpakSipaksi.Modules.RelevansiKepakaranTemaProposal.Application.csproj.AssemblyReference.cache
-C:\dev_net\UnpakSipaksi\UnpakSipaksi.Modules.RelevansiKepakaranTemaProposal.Application\obj\Debug\net8.0\UnpakSipaksi.Modules.RelevansiKepakaranTemaProposal.Application.GeneratedMSBuildEditorConfig.editorconfig
-C:\dev_net\UnpakSipaksi\UnpakSipaksi.Modules.RelevansiKepakaranTemaProposal.Application\obj\Debug\net8.0\UnpakSipaksi.Modules.RelevansiKepakaranTemaProposal.Application.AssemblyInfoInputs.cache
-C:\dev_net\UnpakSipaksi\UnpakSipaksi.Modules.RelevansiKepakaranTemaProposal.Application\obj\Debug\net8.0\UnpakSipaksi.Modules.RelevansiKepakaranTemaProposal.Application.AssemblyInfo.cs
-C:\dev_net\UnpakSipaksi\UnpakSipaksi.Modules.RelevansiKepakaranTemaProposal.Application\obj\Debug\net8.0\UnpakSipaksi.Modules.RelevansiKepakaranTemaProposal.Application.csproj.CoreCompileInputs.cache
-C:\dev_net\UnpakSipaksi\UnpakSipaksi.Modules.RelevansiKepakaranTemaProposal.Application\obj\Debug\net8.0\UnpakSipaksi.Modules.RelevansiKepakaranTemaProposal.Application.sourcelink.json
 C:\dev_net\UnpakSipaksi\UnpakSipaksi.Modules.RelevansiKepakaranTemaProposal.Application\bin\Debug\net8.0\UnpakSipaksi.Modules.RelevansiKepakaranTemaProposal.Application.deps.json
 C:\dev_net\UnpakSipaksi\UnpakSipaksi.Modules.RelevansiKepakaranTemaProposal.Application\bin\Debug\net8.0\UnpakSipaksi.Modules.RelevansiKepakaranTemaProposal.Application.dll
 C:\dev_net\UnpakSipaksi\UnpakSipaksi.Modules.RelevansiKepakaranTemaProposal.Application\bin\Debug\net8.0\UnpakSipaksi.Modules.RelevansiKepakaranTemaProposal.Application.pdb
@@ -15,6 +9,12 @@ C:\dev_net\UnpakSipaksi\UnpakSipaksi.Modules.RelevansiKepakaranTemaProposal.Appl
 C:\dev_net\UnpakSipaksi\UnpakSipaksi.Modules.RelevansiKepakaranTemaProposal.Application\bin\Debug\net8.0\UnpakSipaksi.Common.Domain.pdb
 C:\dev_net\UnpakSipaksi\UnpakSipaksi.Modules.RelevansiKepakaranTemaProposal.Application\bin\Debug\net8.0\UnpakSipaksi.Modules.PublikasiDisitasiProposal.Domain.pdb
 C:\dev_net\UnpakSipaksi\UnpakSipaksi.Modules.RelevansiKepakaranTemaProposal.Application\bin\Debug\net8.0\UnpakSipaksi.Modules.RelevansiKepakaranTemaProposal.Domain.pdb
+C:\dev_net\UnpakSipaksi\UnpakSipaksi.Modules.RelevansiKepakaranTemaProposal.Application\obj\Debug\net8.0\UnpakSipaksi.Modules.RelevansiKepakaranTemaProposal.Application.csproj.AssemblyReference.cache
+C:\dev_net\UnpakSipaksi\UnpakSipaksi.Modules.RelevansiKepakaranTemaProposal.Application\obj\Debug\net8.0\UnpakSipaksi.Modules.RelevansiKepakaranTemaProposal.Application.GeneratedMSBuildEditorConfig.editorconfig
+C:\dev_net\UnpakSipaksi\UnpakSipaksi.Modules.RelevansiKepakaranTemaProposal.Application\obj\Debug\net8.0\UnpakSipaksi.Modules.RelevansiKepakaranTemaProposal.Application.AssemblyInfoInputs.cache
+C:\dev_net\UnpakSipaksi\UnpakSipaksi.Modules.RelevansiKepakaranTemaProposal.Application\obj\Debug\net8.0\UnpakSipaksi.Modules.RelevansiKepakaranTemaProposal.Application.AssemblyInfo.cs
+C:\dev_net\UnpakSipaksi\UnpakSipaksi.Modules.RelevansiKepakaranTemaProposal.Application\obj\Debug\net8.0\UnpakSipaksi.Modules.RelevansiKepakaranTemaProposal.Application.csproj.CoreCompileInputs.cache
+C:\dev_net\UnpakSipaksi\UnpakSipaksi.Modules.RelevansiKepakaranTemaProposal.Application\obj\Debug\net8.0\UnpakSipaksi.Modules.RelevansiKepakaranTemaProposal.Application.sourcelink.json
 C:\dev_net\UnpakSipaksi\UnpakSipaksi.Modules.RelevansiKepakaranTemaProposal.Application\obj\Debug\net8.0\UnpakSip.681FAC36.Up2Date
 C:\dev_net\UnpakSipaksi\UnpakSipaksi.Modules.RelevansiKepakaranTemaProposal.Application\obj\Debug\net8.0\UnpakSipaksi.Modules.RelevansiKepakaranTemaProposal.Application.dll
 C:\dev_net\UnpakSipaksi\UnpakSipaksi.Modules.RelevansiKepakaranTemaProposal.Application\obj\Debug\net8.0\refint\UnpakSipaksi.Modules.RelevansiKepakaranTemaProposal.Application.dll

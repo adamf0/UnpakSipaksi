@@ -8,11 +8,13 @@ C:\dev_net\UnpakSipaksi\UnpakSipaksi.Modules.JumlahKolaboratorPublikasBereputasi
 C:\dev_net\UnpakSipaksi\UnpakSipaksi.Modules.JumlahKolaboratorPublikasBereputasi.Infrastructure\bin\Debug\net8.0\UnpakSipaksi.Modules.JumlahKolaboratorPublikasBereputasi.Application.dll
 C:\dev_net\UnpakSipaksi\UnpakSipaksi.Modules.JumlahKolaboratorPublikasBereputasi.Infrastructure\bin\Debug\net8.0\UnpakSipaksi.Modules.JumlahKolaboratorPublikasBereputasi.Domain.dll
 C:\dev_net\UnpakSipaksi\UnpakSipaksi.Modules.JumlahKolaboratorPublikasBereputasi.Infrastructure\bin\Debug\net8.0\UnpakSipaksi.Modules.JumlahKolaboratorPublikasBereputasi.Presentation.dll
+C:\dev_net\UnpakSipaksi\UnpakSipaksi.Modules.JumlahKolaboratorPublikasBereputasi.Infrastructure\bin\Debug\net8.0\UnpakSipaksi.Modules.JumlahKolaboratorPublikasBereputasi.PublicApi.dll
 C:\dev_net\UnpakSipaksi\UnpakSipaksi.Modules.JumlahKolaboratorPublikasBereputasi.Infrastructure\bin\Debug\net8.0\UnpakSipaksi.Common.Application.pdb
 C:\dev_net\UnpakSipaksi\UnpakSipaksi.Modules.JumlahKolaboratorPublikasBereputasi.Infrastructure\bin\Debug\net8.0\UnpakSipaksi.Common.Infrastructure.pdb
 C:\dev_net\UnpakSipaksi\UnpakSipaksi.Modules.JumlahKolaboratorPublikasBereputasi.Infrastructure\bin\Debug\net8.0\UnpakSipaksi.Modules.JumlahKolaboratorPublikasBereputasi.Application.pdb
 C:\dev_net\UnpakSipaksi\UnpakSipaksi.Modules.JumlahKolaboratorPublikasBereputasi.Infrastructure\bin\Debug\net8.0\UnpakSipaksi.Modules.JumlahKolaboratorPublikasBereputasi.Domain.pdb
 C:\dev_net\UnpakSipaksi\UnpakSipaksi.Modules.JumlahKolaboratorPublikasBereputasi.Infrastructure\bin\Debug\net8.0\UnpakSipaksi.Modules.JumlahKolaboratorPublikasBereputasi.Presentation.pdb
+C:\dev_net\UnpakSipaksi\UnpakSipaksi.Modules.JumlahKolaboratorPublikasBereputasi.Infrastructure\bin\Debug\net8.0\UnpakSipaksi.Modules.JumlahKolaboratorPublikasBereputasi.PublicApi.pdb
 C:\dev_net\UnpakSipaksi\UnpakSipaksi.Modules.JumlahKolaboratorPublikasBereputasi.Infrastructure\bin\Debug\net8.0\UnpakSipaksi.Common.Domain.pdb
 C:\dev_net\UnpakSipaksi\UnpakSipaksi.Modules.JumlahKolaboratorPublikasBereputasi.Infrastructure\bin\Debug\net8.0\UnpakSipaksi.Common.Presentation.pdb
 C:\dev_net\UnpakSipaksi\UnpakSipaksi.Modules.JumlahKolaboratorPublikasBereputasi.Infrastructure\obj\Debug\net8.0\UnpakSipaksi.Modules.JumlahKolaboratorPublikasBereputasi.Infrastructure.csproj.AssemblyReference.cache
@@ -26,5 +28,3 @@ C:\dev_net\UnpakSipaksi\UnpakSipaksi.Modules.JumlahKolaboratorPublikasBereputasi
 C:\dev_net\UnpakSipaksi\UnpakSipaksi.Modules.JumlahKolaboratorPublikasBereputasi.Infrastructure\obj\Debug\net8.0\refint\UnpakSipaksi.Modules.JumlahKolaboratorPublikasBereputasi.Infrastructure.dll
 C:\dev_net\UnpakSipaksi\UnpakSipaksi.Modules.JumlahKolaboratorPublikasBereputasi.Infrastructure\obj\Debug\net8.0\UnpakSipaksi.Modules.JumlahKolaboratorPublikasBereputasi.Infrastructure.pdb
 C:\dev_net\UnpakSipaksi\UnpakSipaksi.Modules.JumlahKolaboratorPublikasBereputasi.Infrastructure\obj\Debug\net8.0\ref\UnpakSipaksi.Modules.JumlahKolaboratorPublikasBereputasi.Infrastructure.dll
-C:\dev_net\UnpakSipaksi\UnpakSipaksi.Modules.JumlahKolaboratorPublikasBereputasi.Infrastructure\bin\Debug\net8.0\UnpakSipaksi.Modules.JumlahKolaboratorPublikasBereputasi.PublicApi.dll
-C:\dev_net\UnpakSipaksi\UnpakSipaksi.Modules.JumlahKolaboratorPublikasBereputasi.Infrastructure\bin\Debug\net8.0\UnpakSipaksi.Modules.JumlahKolaboratorPublikasBereputasi.PublicApi.pdb
