@@ -14,7 +14,8 @@
           "UnpakSipaksi.Common.Infrastructure": "1.0.0",
           "UnpakSipaksi.Modules.PrioritasRiset.Application": "1.0.0",
           "UnpakSipaksi.Modules.PrioritasRiset.Domain": "1.0.0",
-          "UnpakSipaksi.Modules.PrioritasRiset.Presentation": "1.0.0"
+          "UnpakSipaksi.Modules.PrioritasRiset.Presentation": "1.0.0",
+          "UnpakSipaksi.Modules.PrioritasRiset.PublicApi": "1.0.0"
         },
         "runtime": {
           "UnpakSipaksi.Modules.PrioritasRiset.Infrastructure.dll": {}
@@ -699,6 +700,11 @@
         "runtime": {
           "UnpakSipaksi.Modules.PrioritasRiset.Presentation.dll": {}
         }
+      },
+      "UnpakSipaksi.Modules.PrioritasRiset.PublicApi/1.0.0": {
+        "runtime": {
+          "UnpakSipaksi.Modules.PrioritasRiset.PublicApi.dll": {}
+        }
       }
     }
   },
@@ -1215,6 +1221,11 @@
       "sha512": ""
     },
     "UnpakSipaksi.Modules.PrioritasRiset.Presentation/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    },
+    "UnpakSipaksi.Modules.PrioritasRiset.PublicApi/1.0.0": {
       "type": "project",
       "serviceable": false,
       "sha512": ""

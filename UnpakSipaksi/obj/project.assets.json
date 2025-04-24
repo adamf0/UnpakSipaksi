@@ -71,6 +71,15 @@
           }
         }
       },
+      "FuzzySharp/2.0.2": {
+        "type": "package",
+        "compile": {
+          "lib/netcoreapp2.1/FuzzySharp.dll": {}
+        },
+        "runtime": {
+          "lib/netcoreapp2.1/FuzzySharp.dll": {}
+        }
+      },
       "Google.Protobuf/3.25.1": {
         "type": "package",
         "compile": {
@@ -2927,7 +2936,8 @@
           "UnpakSipaksi.Common.Infrastructure": "1.0.0",
           "UnpakSipaksi.Modules.KategoriSkema.Application": "1.0.0",
           "UnpakSipaksi.Modules.KategoriSkema.Domain": "1.0.0",
-          "UnpakSipaksi.Modules.KategoriSkema.Presentation": "1.0.0"
+          "UnpakSipaksi.Modules.KategoriSkema.Presentation": "1.0.0",
+          "UnpakSipaksi.Modules.KategoriSkema.PublicApi": "1.0.0"
         },
         "compile": {
           "bin/placeholder/UnpakSipaksi.Modules.KategoriSkema.Infrastructure.dll": {}
@@ -2956,6 +2966,16 @@
         "frameworkReferences": [
           "Microsoft.AspNetCore.App"
         ]
+      },
+      "UnpakSipaksi.Modules.KategoriSkema.PublicApi/1.0.0": {
+        "type": "project",
+        "framework": ".NETCoreApp,Version=v8.0",
+        "compile": {
+          "bin/placeholder/UnpakSipaksi.Modules.KategoriSkema.PublicApi.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/UnpakSipaksi.Modules.KategoriSkema.PublicApi.dll": {}
+        }
       },
       "UnpakSipaksi.Modules.KategoriSumberDana.Application/1.0.0": {
         "type": "project",
@@ -4853,6 +4873,98 @@
           "bin/placeholder/UnpakSipaksi.Modules.ModelFeasibilityStudys.PublicApi.dll": {}
         }
       },
+      "UnpakSipaksi.Modules.PenelitianHibah.Application/1.0.0": {
+        "type": "project",
+        "framework": ".NETCoreApp,Version=v8.0",
+        "dependencies": {
+          "Dapper": "2.1.35",
+          "MediatR": "12.4.1",
+          "UnpakSipaksi.Common.Application": "1.0.0",
+          "UnpakSipaksi.Common.Domain": "1.0.0",
+          "UnpakSipaksi.Modules.FokusPenelitian.PublicApi": "1.0.0",
+          "UnpakSipaksi.Modules.KategoriSkema.PublicApi": "1.0.0",
+          "UnpakSipaksi.Modules.KategoriTkt.PublicApi": "1.0.0",
+          "UnpakSipaksi.Modules.PenelitianHibah.Domain": "1.0.0",
+          "UnpakSipaksi.Modules.PenelitianHibah.PublicApi": "1.0.0",
+          "UnpakSipaksi.Modules.PrioritasRiset.PublicApi": "1.0.0",
+          "UnpakSipaksi.Modules.RumpunIlmu1.PublicApi": "1.0.0",
+          "UnpakSipaksi.Modules.RumpunIlmu2.PublicApi": "1.0.0",
+          "UnpakSipaksi.Modules.RumpunIlmu3.PublicApi": "1.0.0",
+          "UnpakSipaksi.Modules.TemaPenelitian.PublicApi": "1.0.0",
+          "UnpakSipaksi.Modules.TopikPenelitian.PublicApi": "1.0.0"
+        },
+        "compile": {
+          "bin/placeholder/UnpakSipaksi.Modules.PenelitianHibah.Application.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/UnpakSipaksi.Modules.PenelitianHibah.Application.dll": {}
+        }
+      },
+      "UnpakSipaksi.Modules.PenelitianHibah.Domain/1.0.0": {
+        "type": "project",
+        "framework": ".NETCoreApp,Version=v8.0",
+        "dependencies": {
+          "UnpakSipaksi.Common.Domain": "1.0.0"
+        },
+        "compile": {
+          "bin/placeholder/UnpakSipaksi.Modules.PenelitianHibah.Domain.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/UnpakSipaksi.Modules.PenelitianHibah.Domain.dll": {}
+        }
+      },
+      "UnpakSipaksi.Modules.PenelitianHibah.Infrastructure/1.0.0": {
+        "type": "project",
+        "framework": ".NETCoreApp,Version=v8.0",
+        "dependencies": {
+          "FuzzySharp": "2.0.2",
+          "Microsoft.EntityFrameworkCore": "8.0.0",
+          "MySql.EntityFrameworkCore": "8.0.0",
+          "UnpakSipaksi.Common.Application": "1.0.0",
+          "UnpakSipaksi.Common.Infrastructure": "1.0.0",
+          "UnpakSipaksi.Modules.PenelitianHibah.Application": "1.0.0",
+          "UnpakSipaksi.Modules.PenelitianHibah.Domain": "1.0.0",
+          "UnpakSipaksi.Modules.PenelitianHibah.Presentation": "1.0.0",
+          "UnpakSipaksi.Modules.PenelitianHibah.PublicApi": "1.0.0"
+        },
+        "compile": {
+          "bin/placeholder/UnpakSipaksi.Modules.PenelitianHibah.Infrastructure.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/UnpakSipaksi.Modules.PenelitianHibah.Infrastructure.dll": {}
+        },
+        "frameworkReferences": [
+          "Microsoft.AspNetCore.App"
+        ]
+      },
+      "UnpakSipaksi.Modules.PenelitianHibah.Presentation/1.0.0": {
+        "type": "project",
+        "framework": ".NETCoreApp,Version=v8.0",
+        "dependencies": {
+          "UnpakSipaksi.Common.Domain": "1.0.0",
+          "UnpakSipaksi.Common.Presentation": "1.0.0",
+          "UnpakSipaksi.Modules.PenelitianHibah.Application": "1.0.0"
+        },
+        "compile": {
+          "bin/placeholder/UnpakSipaksi.Modules.PenelitianHibah.Presentation.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/UnpakSipaksi.Modules.PenelitianHibah.Presentation.dll": {}
+        },
+        "frameworkReferences": [
+          "Microsoft.AspNetCore.App"
+        ]
+      },
+      "UnpakSipaksi.Modules.PenelitianHibah.PublicApi/1.0.0": {
+        "type": "project",
+        "framework": ".NETCoreApp,Version=v8.0",
+        "compile": {
+          "bin/placeholder/UnpakSipaksi.Modules.PenelitianHibah.PublicApi.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/UnpakSipaksi.Modules.PenelitianHibah.PublicApi.dll": {}
+        }
+      },
       "UnpakSipaksi.Modules.Pengumuman.Application/1.0.0": {
         "type": "project",
         "framework": ".NETCoreApp,Version=v8.0",
@@ -5195,7 +5307,8 @@
           "UnpakSipaksi.Common.Infrastructure": "1.0.0",
           "UnpakSipaksi.Modules.PrioritasRiset.Application": "1.0.0",
           "UnpakSipaksi.Modules.PrioritasRiset.Domain": "1.0.0",
-          "UnpakSipaksi.Modules.PrioritasRiset.Presentation": "1.0.0"
+          "UnpakSipaksi.Modules.PrioritasRiset.Presentation": "1.0.0",
+          "UnpakSipaksi.Modules.PrioritasRiset.PublicApi": "1.0.0"
         },
         "compile": {
           "bin/placeholder/UnpakSipaksi.Modules.PrioritasRiset.Infrastructure.dll": {}
@@ -5224,6 +5337,16 @@
         "frameworkReferences": [
           "Microsoft.AspNetCore.App"
         ]
+      },
+      "UnpakSipaksi.Modules.PrioritasRiset.PublicApi/1.0.0": {
+        "type": "project",
+        "framework": ".NETCoreApp,Version=v8.0",
+        "compile": {
+          "bin/placeholder/UnpakSipaksi.Modules.PrioritasRiset.PublicApi.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/UnpakSipaksi.Modules.PrioritasRiset.PublicApi.dll": {}
+        }
       },
       "UnpakSipaksi.Modules.PublikasiDisitasiProposal.Application/1.0.0": {
         "type": "project",
@@ -6856,6 +6979,26 @@
         "lib/netstandard2.0/FluentValidation.DependencyInjectionExtensions.xml",
         "lib/netstandard2.1/FluentValidation.DependencyInjectionExtensions.dll",
         "lib/netstandard2.1/FluentValidation.DependencyInjectionExtensions.xml"
+      ]
+    },
+    "FuzzySharp/2.0.2": {
+      "sha512": "sBKqWxw3g//peYxDZ8JipRlyPbIyBtgzqBVA5GqwHVeqtIrw75maGXAllztf+1aJhchD+drcQIgf2mFho8ZV8A==",
+      "type": "package",
+      "path": "fuzzysharp/2.0.2",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "README.md",
+        "fuzzysharp.2.0.2.nupkg.sha512",
+        "fuzzysharp.nuspec",
+        "lib/net45/FuzzySharp.dll",
+        "lib/net46/FuzzySharp.dll",
+        "lib/net461/FuzzySharp.dll",
+        "lib/netcoreapp2.0/FuzzySharp.dll",
+        "lib/netcoreapp2.1/FuzzySharp.dll",
+        "lib/netstandard1.6/FuzzySharp.dll",
+        "lib/netstandard2.0/FuzzySharp.dll",
+        "lib/netstandard2.1/FuzzySharp.dll"
       ]
     },
     "Google.Protobuf/3.25.1": {
@@ -10686,6 +10829,11 @@
       "path": "../UnpakSipaksi.Modules.KategoriSkema.Presentation/UnpakSipaksi.Modules.KategoriSkema.Presentation.csproj",
       "msbuildProject": "../UnpakSipaksi.Modules.KategoriSkema.Presentation/UnpakSipaksi.Modules.KategoriSkema.Presentation.csproj"
     },
+    "UnpakSipaksi.Modules.KategoriSkema.PublicApi/1.0.0": {
+      "type": "project",
+      "path": "../UnpakSipaksi.Modules.KategoriSkema.PublicApi/UnpakSipaksi.Modules.KategoriSkema.PublicApi.csproj",
+      "msbuildProject": "../UnpakSipaksi.Modules.KategoriSkema.PublicApi/UnpakSipaksi.Modules.KategoriSkema.PublicApi.csproj"
+    },
     "UnpakSipaksi.Modules.KategoriSumberDana.Application/1.0.0": {
       "type": "project",
       "path": "../UnpakSipaksi.Modules.KategoriSumberDana.Application/UnpakSipaksi.Modules.KategoriSumberDana.Application.csproj",
@@ -11261,6 +11409,31 @@
       "path": "../UnpakSipaksi.Modules.ModelFeasibilityStudys.PublicApi/UnpakSipaksi.Modules.ModelFeasibilityStudys.PublicApi.csproj",
       "msbuildProject": "../UnpakSipaksi.Modules.ModelFeasibilityStudys.PublicApi/UnpakSipaksi.Modules.ModelFeasibilityStudys.PublicApi.csproj"
     },
+    "UnpakSipaksi.Modules.PenelitianHibah.Application/1.0.0": {
+      "type": "project",
+      "path": "../UnpakSipaksi.Modules.PenelitianHibah.Application/UnpakSipaksi.Modules.PenelitianHibah.Application.csproj",
+      "msbuildProject": "../UnpakSipaksi.Modules.PenelitianHibah.Application/UnpakSipaksi.Modules.PenelitianHibah.Application.csproj"
+    },
+    "UnpakSipaksi.Modules.PenelitianHibah.Domain/1.0.0": {
+      "type": "project",
+      "path": "../UnpakSipaksi.Modules.PenelitianHibah.Domain/UnpakSipaksi.Modules.PenelitianHibah.Domain.csproj",
+      "msbuildProject": "../UnpakSipaksi.Modules.PenelitianHibah.Domain/UnpakSipaksi.Modules.PenelitianHibah.Domain.csproj"
+    },
+    "UnpakSipaksi.Modules.PenelitianHibah.Infrastructure/1.0.0": {
+      "type": "project",
+      "path": "../UnpakSipaksi.Modules.PenelitianHibah.Infrastructure/UnpakSipaksi.Modules.PenelitianHibah.Infrastructure.csproj",
+      "msbuildProject": "../UnpakSipaksi.Modules.PenelitianHibah.Infrastructure/UnpakSipaksi.Modules.PenelitianHibah.Infrastructure.csproj"
+    },
+    "UnpakSipaksi.Modules.PenelitianHibah.Presentation/1.0.0": {
+      "type": "project",
+      "path": "../UnpakSipaksi.Modules.PenelitianHibah.Presentation/UnpakSipaksi.Modules.PenelitianHibah.Presentation.csproj",
+      "msbuildProject": "../UnpakSipaksi.Modules.PenelitianHibah.Presentation/UnpakSipaksi.Modules.PenelitianHibah.Presentation.csproj"
+    },
+    "UnpakSipaksi.Modules.PenelitianHibah.PublicApi/1.0.0": {
+      "type": "project",
+      "path": "../UnpakSipaksi.Modules.PenelitianHibah.PublicApi/UnpakSipaksi.Modules.PenelitianHibah.PublicApi.csproj",
+      "msbuildProject": "../UnpakSipaksi.Modules.PenelitianHibah.PublicApi/UnpakSipaksi.Modules.PenelitianHibah.PublicApi.csproj"
+    },
     "UnpakSipaksi.Modules.Pengumuman.Application/1.0.0": {
       "type": "project",
       "path": "../UnpakSipaksi.Modules.Pengumuman.Application/UnpakSipaksi.Modules.Pengumuman.Application.csproj",
@@ -11370,6 +11543,11 @@
       "type": "project",
       "path": "../UnpakSipaksi.Modules.PrioritasRiset.Presentation/UnpakSipaksi.Modules.PrioritasRiset.Presentation.csproj",
       "msbuildProject": "../UnpakSipaksi.Modules.PrioritasRiset.Presentation/UnpakSipaksi.Modules.PrioritasRiset.Presentation.csproj"
+    },
+    "UnpakSipaksi.Modules.PrioritasRiset.PublicApi/1.0.0": {
+      "type": "project",
+      "path": "../UnpakSipaksi.Modules.PrioritasRiset.PublicApi/UnpakSipaksi.Modules.PrioritasRiset.PublicApi.csproj",
+      "msbuildProject": "../UnpakSipaksi.Modules.PrioritasRiset.PublicApi/UnpakSipaksi.Modules.PrioritasRiset.PublicApi.csproj"
     },
     "UnpakSipaksi.Modules.PublikasiDisitasiProposal.Application/1.0.0": {
       "type": "project",
@@ -11901,6 +12079,8 @@
       "UnpakSipaksi.Modules.MetodeRencanaKegiatan.Infrastructure >= 1.0.0",
       "UnpakSipaksi.Modules.ModelFeasibilityStudys.Application >= 1.0.0",
       "UnpakSipaksi.Modules.ModelFeasibilityStudys.Infrastructure >= 1.0.0",
+      "UnpakSipaksi.Modules.PenelitianHibah.Application >= 1.0.0",
+      "UnpakSipaksi.Modules.PenelitianHibah.Infrastructure >= 1.0.0",
       "UnpakSipaksi.Modules.Pengumuman.Application >= 1.0.0",
       "UnpakSipaksi.Modules.Pengumuman.Infrastructure >= 1.0.0",
       "UnpakSipaksi.Modules.PeningkatanKeberdayaanMitra.Application >= 1.0.0",
@@ -12200,6 +12380,12 @@
             },
             "C:\\dev_net\\UnpakSipaksi\\UnpakSipaksi.Modules.ModelFeasibilityStudys.Infrastructure\\UnpakSipaksi.Modules.ModelFeasibilityStudys.Infrastructure.csproj": {
               "projectPath": "C:\\dev_net\\UnpakSipaksi\\UnpakSipaksi.Modules.ModelFeasibilityStudys.Infrastructure\\UnpakSipaksi.Modules.ModelFeasibilityStudys.Infrastructure.csproj"
+            },
+            "C:\\dev_net\\UnpakSipaksi\\UnpakSipaksi.Modules.PenelitianHibah.Application\\UnpakSipaksi.Modules.PenelitianHibah.Application.csproj": {
+              "projectPath": "C:\\dev_net\\UnpakSipaksi\\UnpakSipaksi.Modules.PenelitianHibah.Application\\UnpakSipaksi.Modules.PenelitianHibah.Application.csproj"
+            },
+            "C:\\dev_net\\UnpakSipaksi\\UnpakSipaksi.Modules.PenelitianHibah.Infrastructure\\UnpakSipaksi.Modules.PenelitianHibah.Infrastructure.csproj": {
+              "projectPath": "C:\\dev_net\\UnpakSipaksi\\UnpakSipaksi.Modules.PenelitianHibah.Infrastructure\\UnpakSipaksi.Modules.PenelitianHibah.Infrastructure.csproj"
             },
             "C:\\dev_net\\UnpakSipaksi\\UnpakSipaksi.Modules.Pengumuman.Application\\UnpakSipaksi.Modules.Pengumuman.Application.csproj": {
               "projectPath": "C:\\dev_net\\UnpakSipaksi\\UnpakSipaksi.Modules.Pengumuman.Application\\UnpakSipaksi.Modules.Pengumuman.Application.csproj"

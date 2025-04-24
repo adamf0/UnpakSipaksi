@@ -27,7 +27,6 @@
 		<ProjectReference Include="..\UnpakSipaksi.Modules.AkurasiPenelitian.Application\UnpakSipaksi.Modules.AkurasiPenelitian.Application.csproj" />
 		<ProjectReference Include="..\UnpakSipaksi.Modules.AkurasiPenelitian.Domain\UnpakSipaksi.Modules.AkurasiPenelitian.Domain.csproj" />
 		<ProjectReference Include="..\UnpakSipaksi.Modules.AkurasiPenelitian.Presentation\UnpakSipaksi.Modules.AkurasiPenelitian.Presentation.csproj" />
-		<ProjectReference Include="..\UnpakSipaksi.Modules.AkurasiPenelitian.Domain\UnpakSipaksi.Modules.AkurasiPenelitian.Domain.csproj" />
 		<ProjectReference Include="..\UnpakSipaksi.Modules.AkurasiPenelitian.PublicApi\UnpakSipaksi.Modules.AkurasiPenelitian.PublicApi.csproj" />
 	</ItemGroup>
 

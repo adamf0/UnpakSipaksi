@@ -21,7 +21,7 @@ namespace UnpakSipaksi.Modules.RumpunIlmu2.Application.GetRumpunIlmu2
                      id as Id,
                      CAST(NULLIF(uuid, '') AS VARCHAR(36)) AS Uuid,
                      nama as Nama  
-                 FROM rumpun_ilmu1
+                 FROM rumpun_ilmu2
                  WHERE uuid = @Uuid
                  """;
 

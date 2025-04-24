@@ -4293,6 +4293,9 @@
               },
               "C:\\dev_net\\UnpakSipaksi\\UnpakSipaksi.Modules.KategoriSkema.Presentation\\UnpakSipaksi.Modules.KategoriSkema.Presentation.csproj": {
                 "projectPath": "C:\\dev_net\\UnpakSipaksi\\UnpakSipaksi.Modules.KategoriSkema.Presentation\\UnpakSipaksi.Modules.KategoriSkema.Presentation.csproj"
+              },
+              "C:\\dev_net\\UnpakSipaksi\\UnpakSipaksi.Modules.KategoriSkema.PublicApi\\UnpakSipaksi.Modules.KategoriSkema.PublicApi.csproj": {
+                "projectPath": "C:\\dev_net\\UnpakSipaksi\\UnpakSipaksi.Modules.KategoriSkema.PublicApi\\UnpakSipaksi.Modules.KategoriSkema.PublicApi.csproj"
               }
             }
           }
@@ -4410,6 +4413,67 @@
             "Microsoft.AspNetCore.App": {
               "privateAssets": "none"
             },
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.302/PortableRuntimeIdentifierGraph.json"
+        }
+      }
+    },
+    "C:\\dev_net\\UnpakSipaksi\\UnpakSipaksi.Modules.KategoriSkema.PublicApi\\UnpakSipaksi.Modules.KategoriSkema.PublicApi.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "C:\\dev_net\\UnpakSipaksi\\UnpakSipaksi.Modules.KategoriSkema.PublicApi\\UnpakSipaksi.Modules.KategoriSkema.PublicApi.csproj",
+        "projectName": "UnpakSipaksi.Modules.KategoriSkema.PublicApi",
+        "projectPath": "C:\\dev_net\\UnpakSipaksi\\UnpakSipaksi.Modules.KategoriSkema.PublicApi\\UnpakSipaksi.Modules.KategoriSkema.PublicApi.csproj",
+        "packagesPath": "C:\\Users\\putik\\.nuget\\packages\\",
+        "outputPath": "C:\\dev_net\\UnpakSipaksi\\UnpakSipaksi.Modules.KategoriSkema.PublicApi\\obj\\",
+        "projectStyle": "PackageReference",
+        "configFilePaths": [
+          "C:\\Users\\putik\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+        ],
+        "originalTargetFrameworks": [
+          "net8.0"
+        ],
+        "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "C:\\Program Files\\dotnet\\library-packs": {},
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "net8.0": {
+            "targetAlias": "net8.0",
+            "projectReferences": {}
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        },
+        "restoreAuditProperties": {
+          "enableAudit": "true",
+          "auditLevel": "low",
+          "auditMode": "direct"
+        }
+      },
+      "frameworks": {
+        "net8.0": {
+          "targetAlias": "net8.0",
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48",
+            "net481"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
             "Microsoft.NETCore.App": {
               "privateAssets": "all"
             }
@@ -13095,6 +13159,414 @@
         }
       }
     },
+    "C:\\dev_net\\UnpakSipaksi\\UnpakSipaksi.Modules.PenelitianHibah.Application\\UnpakSipaksi.Modules.PenelitianHibah.Application.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "C:\\dev_net\\UnpakSipaksi\\UnpakSipaksi.Modules.PenelitianHibah.Application\\UnpakSipaksi.Modules.PenelitianHibah.Application.csproj",
+        "projectName": "UnpakSipaksi.Modules.PenelitianHibah.Application",
+        "projectPath": "C:\\dev_net\\UnpakSipaksi\\UnpakSipaksi.Modules.PenelitianHibah.Application\\UnpakSipaksi.Modules.PenelitianHibah.Application.csproj",
+        "packagesPath": "C:\\Users\\putik\\.nuget\\packages\\",
+        "outputPath": "C:\\dev_net\\UnpakSipaksi\\UnpakSipaksi.Modules.PenelitianHibah.Application\\obj\\",
+        "projectStyle": "PackageReference",
+        "configFilePaths": [
+          "C:\\Users\\putik\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+        ],
+        "originalTargetFrameworks": [
+          "net8.0"
+        ],
+        "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "C:\\Program Files\\dotnet\\library-packs": {},
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "net8.0": {
+            "targetAlias": "net8.0",
+            "projectReferences": {
+              "C:\\dev_net\\UnpakSipaksi\\UnpakSipaksi.Common.Application\\UnpakSipaksi.Common.Application.csproj": {
+                "projectPath": "C:\\dev_net\\UnpakSipaksi\\UnpakSipaksi.Common.Application\\UnpakSipaksi.Common.Application.csproj"
+              },
+              "C:\\dev_net\\UnpakSipaksi\\UnpakSipaksi.Common.Domain\\UnpakSipaksi.Common.Domain.csproj": {
+                "projectPath": "C:\\dev_net\\UnpakSipaksi\\UnpakSipaksi.Common.Domain\\UnpakSipaksi.Common.Domain.csproj"
+              },
+              "C:\\dev_net\\UnpakSipaksi\\UnpakSipaksi.Modules.FokusPenelitian.PublicApi\\UnpakSipaksi.Modules.FokusPenelitian.PublicApi.csproj": {
+                "projectPath": "C:\\dev_net\\UnpakSipaksi\\UnpakSipaksi.Modules.FokusPenelitian.PublicApi\\UnpakSipaksi.Modules.FokusPenelitian.PublicApi.csproj"
+              },
+              "C:\\dev_net\\UnpakSipaksi\\UnpakSipaksi.Modules.KategoriSkema.PublicApi\\UnpakSipaksi.Modules.KategoriSkema.PublicApi.csproj": {
+                "projectPath": "C:\\dev_net\\UnpakSipaksi\\UnpakSipaksi.Modules.KategoriSkema.PublicApi\\UnpakSipaksi.Modules.KategoriSkema.PublicApi.csproj"
+              },
+              "C:\\dev_net\\UnpakSipaksi\\UnpakSipaksi.Modules.KategoriTkt.PublicApi\\UnpakSipaksi.Modules.KategoriTkt.PublicApi.csproj": {
+                "projectPath": "C:\\dev_net\\UnpakSipaksi\\UnpakSipaksi.Modules.KategoriTkt.PublicApi\\UnpakSipaksi.Modules.KategoriTkt.PublicApi.csproj"
+              },
+              "C:\\dev_net\\UnpakSipaksi\\UnpakSipaksi.Modules.PenelitianHibah.Domain\\UnpakSipaksi.Modules.PenelitianHibah.Domain.csproj": {
+                "projectPath": "C:\\dev_net\\UnpakSipaksi\\UnpakSipaksi.Modules.PenelitianHibah.Domain\\UnpakSipaksi.Modules.PenelitianHibah.Domain.csproj"
+              },
+              "C:\\dev_net\\UnpakSipaksi\\UnpakSipaksi.Modules.PenelitianHibah.PublicApi\\UnpakSipaksi.Modules.PenelitianHibah.PublicApi.csproj": {
+                "projectPath": "C:\\dev_net\\UnpakSipaksi\\UnpakSipaksi.Modules.PenelitianHibah.PublicApi\\UnpakSipaksi.Modules.PenelitianHibah.PublicApi.csproj"
+              },
+              "C:\\dev_net\\UnpakSipaksi\\UnpakSipaksi.Modules.PrioritasRiset.PublicApi\\UnpakSipaksi.Modules.PrioritasRiset.PublicApi.csproj": {
+                "projectPath": "C:\\dev_net\\UnpakSipaksi\\UnpakSipaksi.Modules.PrioritasRiset.PublicApi\\UnpakSipaksi.Modules.PrioritasRiset.PublicApi.csproj"
+              },
+              "C:\\dev_net\\UnpakSipaksi\\UnpakSipaksi.Modules.RumpunIlmu1.PublicApi\\UnpakSipaksi.Modules.RumpunIlmu1.PublicApi.csproj": {
+                "projectPath": "C:\\dev_net\\UnpakSipaksi\\UnpakSipaksi.Modules.RumpunIlmu1.PublicApi\\UnpakSipaksi.Modules.RumpunIlmu1.PublicApi.csproj"
+              },
+              "C:\\dev_net\\UnpakSipaksi\\UnpakSipaksi.Modules.RumpunIlmu2.PublicApi\\UnpakSipaksi.Modules.RumpunIlmu2.PublicApi.csproj": {
+                "projectPath": "C:\\dev_net\\UnpakSipaksi\\UnpakSipaksi.Modules.RumpunIlmu2.PublicApi\\UnpakSipaksi.Modules.RumpunIlmu2.PublicApi.csproj"
+              },
+              "C:\\dev_net\\UnpakSipaksi\\UnpakSipaksi.Modules.RumpunIlmu3.PublicApi\\UnpakSipaksi.Modules.RumpunIlmu3.PublicApi.csproj": {
+                "projectPath": "C:\\dev_net\\UnpakSipaksi\\UnpakSipaksi.Modules.RumpunIlmu3.PublicApi\\UnpakSipaksi.Modules.RumpunIlmu3.PublicApi.csproj"
+              },
+              "C:\\dev_net\\UnpakSipaksi\\UnpakSipaksi.Modules.TemaPenelitian.PublicApi\\UnpakSipaksi.Modules.TemaPenelitian.PublicApi.csproj": {
+                "projectPath": "C:\\dev_net\\UnpakSipaksi\\UnpakSipaksi.Modules.TemaPenelitian.PublicApi\\UnpakSipaksi.Modules.TemaPenelitian.PublicApi.csproj"
+              },
+              "C:\\dev_net\\UnpakSipaksi\\UnpakSipaksi.Modules.TopikPenelitian.PublicApi\\UnpakSipaksi.Modules.TopikPenelitian.PublicApi.csproj": {
+                "projectPath": "C:\\dev_net\\UnpakSipaksi\\UnpakSipaksi.Modules.TopikPenelitian.PublicApi\\UnpakSipaksi.Modules.TopikPenelitian.PublicApi.csproj"
+              }
+            }
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        },
+        "restoreAuditProperties": {
+          "enableAudit": "true",
+          "auditLevel": "low",
+          "auditMode": "direct"
+        }
+      },
+      "frameworks": {
+        "net8.0": {
+          "targetAlias": "net8.0",
+          "dependencies": {
+            "Dapper": {
+              "target": "Package",
+              "version": "[2.1.35, )"
+            },
+            "MediatR": {
+              "target": "Package",
+              "version": "[12.4.1, )"
+            }
+          },
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48",
+            "net481"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.302/PortableRuntimeIdentifierGraph.json"
+        }
+      }
+    },
+    "C:\\dev_net\\UnpakSipaksi\\UnpakSipaksi.Modules.PenelitianHibah.Domain\\UnpakSipaksi.Modules.PenelitianHibah.Domain.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "C:\\dev_net\\UnpakSipaksi\\UnpakSipaksi.Modules.PenelitianHibah.Domain\\UnpakSipaksi.Modules.PenelitianHibah.Domain.csproj",
+        "projectName": "UnpakSipaksi.Modules.PenelitianHibah.Domain",
+        "projectPath": "C:\\dev_net\\UnpakSipaksi\\UnpakSipaksi.Modules.PenelitianHibah.Domain\\UnpakSipaksi.Modules.PenelitianHibah.Domain.csproj",
+        "packagesPath": "C:\\Users\\putik\\.nuget\\packages\\",
+        "outputPath": "C:\\dev_net\\UnpakSipaksi\\UnpakSipaksi.Modules.PenelitianHibah.Domain\\obj\\",
+        "projectStyle": "PackageReference",
+        "configFilePaths": [
+          "C:\\Users\\putik\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+        ],
+        "originalTargetFrameworks": [
+          "net8.0"
+        ],
+        "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "C:\\Program Files\\dotnet\\library-packs": {},
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "net8.0": {
+            "targetAlias": "net8.0",
+            "projectReferences": {
+              "C:\\dev_net\\UnpakSipaksi\\UnpakSipaksi.Common.Domain\\UnpakSipaksi.Common.Domain.csproj": {
+                "projectPath": "C:\\dev_net\\UnpakSipaksi\\UnpakSipaksi.Common.Domain\\UnpakSipaksi.Common.Domain.csproj"
+              }
+            }
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        },
+        "restoreAuditProperties": {
+          "enableAudit": "true",
+          "auditLevel": "low",
+          "auditMode": "direct"
+        }
+      },
+      "frameworks": {
+        "net8.0": {
+          "targetAlias": "net8.0",
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48",
+            "net481"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.302/PortableRuntimeIdentifierGraph.json"
+        }
+      }
+    },
+    "C:\\dev_net\\UnpakSipaksi\\UnpakSipaksi.Modules.PenelitianHibah.Infrastructure\\UnpakSipaksi.Modules.PenelitianHibah.Infrastructure.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "C:\\dev_net\\UnpakSipaksi\\UnpakSipaksi.Modules.PenelitianHibah.Infrastructure\\UnpakSipaksi.Modules.PenelitianHibah.Infrastructure.csproj",
+        "projectName": "UnpakSipaksi.Modules.PenelitianHibah.Infrastructure",
+        "projectPath": "C:\\dev_net\\UnpakSipaksi\\UnpakSipaksi.Modules.PenelitianHibah.Infrastructure\\UnpakSipaksi.Modules.PenelitianHibah.Infrastructure.csproj",
+        "packagesPath": "C:\\Users\\putik\\.nuget\\packages\\",
+        "outputPath": "C:\\dev_net\\UnpakSipaksi\\UnpakSipaksi.Modules.PenelitianHibah.Infrastructure\\obj\\",
+        "projectStyle": "PackageReference",
+        "configFilePaths": [
+          "C:\\Users\\putik\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+        ],
+        "originalTargetFrameworks": [
+          "net8.0"
+        ],
+        "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "C:\\Program Files\\dotnet\\library-packs": {},
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "net8.0": {
+            "targetAlias": "net8.0",
+            "projectReferences": {
+              "C:\\dev_net\\UnpakSipaksi\\UnpakSipaksi.Common.Application\\UnpakSipaksi.Common.Application.csproj": {
+                "projectPath": "C:\\dev_net\\UnpakSipaksi\\UnpakSipaksi.Common.Application\\UnpakSipaksi.Common.Application.csproj"
+              },
+              "C:\\dev_net\\UnpakSipaksi\\UnpakSipaksi.Common.Infrastructure\\UnpakSipaksi.Common.Infrastructure.csproj": {
+                "projectPath": "C:\\dev_net\\UnpakSipaksi\\UnpakSipaksi.Common.Infrastructure\\UnpakSipaksi.Common.Infrastructure.csproj"
+              },
+              "C:\\dev_net\\UnpakSipaksi\\UnpakSipaksi.Modules.PenelitianHibah.Application\\UnpakSipaksi.Modules.PenelitianHibah.Application.csproj": {
+                "projectPath": "C:\\dev_net\\UnpakSipaksi\\UnpakSipaksi.Modules.PenelitianHibah.Application\\UnpakSipaksi.Modules.PenelitianHibah.Application.csproj"
+              },
+              "C:\\dev_net\\UnpakSipaksi\\UnpakSipaksi.Modules.PenelitianHibah.Domain\\UnpakSipaksi.Modules.PenelitianHibah.Domain.csproj": {
+                "projectPath": "C:\\dev_net\\UnpakSipaksi\\UnpakSipaksi.Modules.PenelitianHibah.Domain\\UnpakSipaksi.Modules.PenelitianHibah.Domain.csproj"
+              },
+              "C:\\dev_net\\UnpakSipaksi\\UnpakSipaksi.Modules.PenelitianHibah.Presentation\\UnpakSipaksi.Modules.PenelitianHibah.Presentation.csproj": {
+                "projectPath": "C:\\dev_net\\UnpakSipaksi\\UnpakSipaksi.Modules.PenelitianHibah.Presentation\\UnpakSipaksi.Modules.PenelitianHibah.Presentation.csproj"
+              },
+              "C:\\dev_net\\UnpakSipaksi\\UnpakSipaksi.Modules.PenelitianHibah.PublicApi\\UnpakSipaksi.Modules.PenelitianHibah.PublicApi.csproj": {
+                "projectPath": "C:\\dev_net\\UnpakSipaksi\\UnpakSipaksi.Modules.PenelitianHibah.PublicApi\\UnpakSipaksi.Modules.PenelitianHibah.PublicApi.csproj"
+              }
+            }
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        },
+        "restoreAuditProperties": {
+          "enableAudit": "true",
+          "auditLevel": "low",
+          "auditMode": "direct"
+        }
+      },
+      "frameworks": {
+        "net8.0": {
+          "targetAlias": "net8.0",
+          "dependencies": {
+            "FuzzySharp": {
+              "target": "Package",
+              "version": "[2.0.2, )"
+            },
+            "Microsoft.EntityFrameworkCore": {
+              "target": "Package",
+              "version": "[8.0.0, )"
+            },
+            "MySql.EntityFrameworkCore": {
+              "target": "Package",
+              "version": "[8.0.0, )"
+            }
+          },
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48",
+            "net481"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
+            "Microsoft.AspNetCore.App": {
+              "privateAssets": "none"
+            },
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.302/PortableRuntimeIdentifierGraph.json"
+        }
+      }
+    },
+    "C:\\dev_net\\UnpakSipaksi\\UnpakSipaksi.Modules.PenelitianHibah.Presentation\\UnpakSipaksi.Modules.PenelitianHibah.Presentation.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "C:\\dev_net\\UnpakSipaksi\\UnpakSipaksi.Modules.PenelitianHibah.Presentation\\UnpakSipaksi.Modules.PenelitianHibah.Presentation.csproj",
+        "projectName": "UnpakSipaksi.Modules.PenelitianHibah.Presentation",
+        "projectPath": "C:\\dev_net\\UnpakSipaksi\\UnpakSipaksi.Modules.PenelitianHibah.Presentation\\UnpakSipaksi.Modules.PenelitianHibah.Presentation.csproj",
+        "packagesPath": "C:\\Users\\putik\\.nuget\\packages\\",
+        "outputPath": "C:\\dev_net\\UnpakSipaksi\\UnpakSipaksi.Modules.PenelitianHibah.Presentation\\obj\\",
+        "projectStyle": "PackageReference",
+        "configFilePaths": [
+          "C:\\Users\\putik\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+        ],
+        "originalTargetFrameworks": [
+          "net8.0"
+        ],
+        "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "C:\\Program Files\\dotnet\\library-packs": {},
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "net8.0": {
+            "targetAlias": "net8.0",
+            "projectReferences": {
+              "C:\\dev_net\\UnpakSipaksi\\UnpakSipaksi.Common.Domain\\UnpakSipaksi.Common.Domain.csproj": {
+                "projectPath": "C:\\dev_net\\UnpakSipaksi\\UnpakSipaksi.Common.Domain\\UnpakSipaksi.Common.Domain.csproj"
+              },
+              "C:\\dev_net\\UnpakSipaksi\\UnpakSipaksi.Common.Presentation\\UnpakSipaksi.Common.Presentation.csproj": {
+                "projectPath": "C:\\dev_net\\UnpakSipaksi\\UnpakSipaksi.Common.Presentation\\UnpakSipaksi.Common.Presentation.csproj"
+              },
+              "C:\\dev_net\\UnpakSipaksi\\UnpakSipaksi.Modules.PenelitianHibah.Application\\UnpakSipaksi.Modules.PenelitianHibah.Application.csproj": {
+                "projectPath": "C:\\dev_net\\UnpakSipaksi\\UnpakSipaksi.Modules.PenelitianHibah.Application\\UnpakSipaksi.Modules.PenelitianHibah.Application.csproj"
+              }
+            }
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        },
+        "restoreAuditProperties": {
+          "enableAudit": "true",
+          "auditLevel": "low",
+          "auditMode": "direct"
+        }
+      },
+      "frameworks": {
+        "net8.0": {
+          "targetAlias": "net8.0",
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48",
+            "net481"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
+            "Microsoft.AspNetCore.App": {
+              "privateAssets": "none"
+            },
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.302/PortableRuntimeIdentifierGraph.json"
+        }
+      }
+    },
+    "C:\\dev_net\\UnpakSipaksi\\UnpakSipaksi.Modules.PenelitianHibah.PublicApi\\UnpakSipaksi.Modules.PenelitianHibah.PublicApi.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "C:\\dev_net\\UnpakSipaksi\\UnpakSipaksi.Modules.PenelitianHibah.PublicApi\\UnpakSipaksi.Modules.PenelitianHibah.PublicApi.csproj",
+        "projectName": "UnpakSipaksi.Modules.PenelitianHibah.PublicApi",
+        "projectPath": "C:\\dev_net\\UnpakSipaksi\\UnpakSipaksi.Modules.PenelitianHibah.PublicApi\\UnpakSipaksi.Modules.PenelitianHibah.PublicApi.csproj",
+        "packagesPath": "C:\\Users\\putik\\.nuget\\packages\\",
+        "outputPath": "C:\\dev_net\\UnpakSipaksi\\UnpakSipaksi.Modules.PenelitianHibah.PublicApi\\obj\\",
+        "projectStyle": "PackageReference",
+        "configFilePaths": [
+          "C:\\Users\\putik\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+        ],
+        "originalTargetFrameworks": [
+          "net8.0"
+        ],
+        "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "C:\\Program Files\\dotnet\\library-packs": {},
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "net8.0": {
+            "targetAlias": "net8.0",
+            "projectReferences": {}
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        },
+        "restoreAuditProperties": {
+          "enableAudit": "true",
+          "auditLevel": "low",
+          "auditMode": "direct"
+        }
+      },
+      "frameworks": {
+        "net8.0": {
+          "targetAlias": "net8.0",
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48",
+            "net481"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.302/PortableRuntimeIdentifierGraph.json"
+        }
+      }
+    },
     "C:\\dev_net\\UnpakSipaksi\\UnpakSipaksi.Modules.Pengumuman.Application\\UnpakSipaksi.Modules.Pengumuman.Application.csproj": {
       "version": "1.0.0",
       "restore": {
@@ -14648,6 +15120,9 @@
               },
               "C:\\dev_net\\UnpakSipaksi\\UnpakSipaksi.Modules.PrioritasRiset.Presentation\\UnpakSipaksi.Modules.PrioritasRiset.Presentation.csproj": {
                 "projectPath": "C:\\dev_net\\UnpakSipaksi\\UnpakSipaksi.Modules.PrioritasRiset.Presentation\\UnpakSipaksi.Modules.PrioritasRiset.Presentation.csproj"
+              },
+              "C:\\dev_net\\UnpakSipaksi\\UnpakSipaksi.Modules.PrioritasRiset.PublicApi\\UnpakSipaksi.Modules.PrioritasRiset.PublicApi.csproj": {
+                "projectPath": "C:\\dev_net\\UnpakSipaksi\\UnpakSipaksi.Modules.PrioritasRiset.PublicApi\\UnpakSipaksi.Modules.PrioritasRiset.PublicApi.csproj"
               }
             }
           }
@@ -14765,6 +15240,67 @@
             "Microsoft.AspNetCore.App": {
               "privateAssets": "none"
             },
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.302/PortableRuntimeIdentifierGraph.json"
+        }
+      }
+    },
+    "C:\\dev_net\\UnpakSipaksi\\UnpakSipaksi.Modules.PrioritasRiset.PublicApi\\UnpakSipaksi.Modules.PrioritasRiset.PublicApi.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "C:\\dev_net\\UnpakSipaksi\\UnpakSipaksi.Modules.PrioritasRiset.PublicApi\\UnpakSipaksi.Modules.PrioritasRiset.PublicApi.csproj",
+        "projectName": "UnpakSipaksi.Modules.PrioritasRiset.PublicApi",
+        "projectPath": "C:\\dev_net\\UnpakSipaksi\\UnpakSipaksi.Modules.PrioritasRiset.PublicApi\\UnpakSipaksi.Modules.PrioritasRiset.PublicApi.csproj",
+        "packagesPath": "C:\\Users\\putik\\.nuget\\packages\\",
+        "outputPath": "C:\\dev_net\\UnpakSipaksi\\UnpakSipaksi.Modules.PrioritasRiset.PublicApi\\obj\\",
+        "projectStyle": "PackageReference",
+        "configFilePaths": [
+          "C:\\Users\\putik\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+        ],
+        "originalTargetFrameworks": [
+          "net8.0"
+        ],
+        "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "C:\\Program Files\\dotnet\\library-packs": {},
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "net8.0": {
+            "targetAlias": "net8.0",
+            "projectReferences": {}
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        },
+        "restoreAuditProperties": {
+          "enableAudit": "true",
+          "auditLevel": "low",
+          "auditMode": "direct"
+        }
+      },
+      "frameworks": {
+        "net8.0": {
+          "targetAlias": "net8.0",
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48",
+            "net481"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
             "Microsoft.NETCore.App": {
               "privateAssets": "all"
             }
@@ -21880,6 +22416,12 @@
               },
               "C:\\dev_net\\UnpakSipaksi\\UnpakSipaksi.Modules.ModelFeasibilityStudys.Infrastructure\\UnpakSipaksi.Modules.ModelFeasibilityStudys.Infrastructure.csproj": {
                 "projectPath": "C:\\dev_net\\UnpakSipaksi\\UnpakSipaksi.Modules.ModelFeasibilityStudys.Infrastructure\\UnpakSipaksi.Modules.ModelFeasibilityStudys.Infrastructure.csproj"
+              },
+              "C:\\dev_net\\UnpakSipaksi\\UnpakSipaksi.Modules.PenelitianHibah.Application\\UnpakSipaksi.Modules.PenelitianHibah.Application.csproj": {
+                "projectPath": "C:\\dev_net\\UnpakSipaksi\\UnpakSipaksi.Modules.PenelitianHibah.Application\\UnpakSipaksi.Modules.PenelitianHibah.Application.csproj"
+              },
+              "C:\\dev_net\\UnpakSipaksi\\UnpakSipaksi.Modules.PenelitianHibah.Infrastructure\\UnpakSipaksi.Modules.PenelitianHibah.Infrastructure.csproj": {
+                "projectPath": "C:\\dev_net\\UnpakSipaksi\\UnpakSipaksi.Modules.PenelitianHibah.Infrastructure\\UnpakSipaksi.Modules.PenelitianHibah.Infrastructure.csproj"
               },
               "C:\\dev_net\\UnpakSipaksi\\UnpakSipaksi.Modules.Pengumuman.Application\\UnpakSipaksi.Modules.Pengumuman.Application.csproj": {
                 "projectPath": "C:\\dev_net\\UnpakSipaksi\\UnpakSipaksi.Modules.Pengumuman.Application\\UnpakSipaksi.Modules.Pengumuman.Application.csproj"

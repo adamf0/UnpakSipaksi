@@ -3,7 +3,7 @@ using System;
 using UnpakSipaksi.Modules.KategoriSkema.Domain.KategoriSkema;
 using UnpakSipaksi.Modules.KategoriSkema.Infrastructure.Database;
 
-namespace UnpakSipaksi.Modules.KategoriSkema.Infrastructure.PeningkatanKeberdayaanMitra
+namespace UnpakSipaksi.Modules.KategoriSkema.Infrastructure.KategoriSkema
 {
     internal sealed class KategoriSkemaRepository(KategoriSkemaDbContext context) : IKategoriSkemaRepository
     {

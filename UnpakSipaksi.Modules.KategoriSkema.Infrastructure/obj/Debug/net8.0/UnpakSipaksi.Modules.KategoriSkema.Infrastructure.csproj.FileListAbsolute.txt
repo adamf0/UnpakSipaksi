@@ -26,3 +26,5 @@ C:\dev_net\UnpakSipaksi\UnpakSipaksi.Modules.KategoriSkema.Infrastructure\obj\De
 C:\dev_net\UnpakSipaksi\UnpakSipaksi.Modules.KategoriSkema.Infrastructure\obj\Debug\net8.0\refint\UnpakSipaksi.Modules.KategoriSkema.Infrastructure.dll
 C:\dev_net\UnpakSipaksi\UnpakSipaksi.Modules.KategoriSkema.Infrastructure\obj\Debug\net8.0\UnpakSipaksi.Modules.KategoriSkema.Infrastructure.pdb
 C:\dev_net\UnpakSipaksi\UnpakSipaksi.Modules.KategoriSkema.Infrastructure\obj\Debug\net8.0\ref\UnpakSipaksi.Modules.KategoriSkema.Infrastructure.dll
+C:\dev_net\UnpakSipaksi\UnpakSipaksi.Modules.KategoriSkema.Infrastructure\bin\Debug\net8.0\UnpakSipaksi.Modules.KategoriSkema.PublicApi.dll
+C:\dev_net\UnpakSipaksi\UnpakSipaksi.Modules.KategoriSkema.Infrastructure\bin\Debug\net8.0\UnpakSipaksi.Modules.KategoriSkema.PublicApi.pdb

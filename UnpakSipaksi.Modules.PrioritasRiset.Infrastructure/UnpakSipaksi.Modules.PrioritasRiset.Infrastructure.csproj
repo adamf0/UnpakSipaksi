@@ -28,6 +28,7 @@
 		<ProjectReference Include="..\UnpakSipaksi.Modules.PrioritasRiset.Domain\UnpakSipaksi.Modules.PrioritasRiset.Domain.csproj" />
 		<ProjectReference Include="..\UnpakSipaksi.Modules.PrioritasRiset.Presentation\UnpakSipaksi.Modules.PrioritasRiset.Presentation.csproj" />
 		<ProjectReference Include="..\UnpakSipaksi.Modules.PrioritasRiset.Domain\UnpakSipaksi.Modules.PrioritasRiset.Domain.csproj" />
+		<ProjectReference Include="..\UnpakSipaksi.Modules.PrioritasRiset.PublicApi\UnpakSipaksi.Modules.PrioritasRiset.PublicApi.csproj" />
 	</ItemGroup>
 
 </Project>

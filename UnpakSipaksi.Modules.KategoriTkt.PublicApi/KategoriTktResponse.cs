@@ -6,5 +6,5 @@ using System.Threading.Tasks;
 
 namespace UnpakSipaksi.Modules.KategoriTkt.PublicApi
 {
-    public sealed record KategoriTktResponse(string Id, string Uuid, string Nama, int BobotPDP, int BobotTerapan, int BobotKerjasama, int BobotPenelitianDasar, int Skor);
+    public sealed record KategoriTktResponse(string Id, string Uuid, string Nama);
 }

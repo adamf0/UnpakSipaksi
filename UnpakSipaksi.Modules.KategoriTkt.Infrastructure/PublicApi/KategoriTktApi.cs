@@ -22,12 +22,7 @@ namespace UnpakSipaksi.Modules.KategoriTkt.Infrastructure.PublicApi
             return new KategoriTktResponseApi(
                 result.Value.Id,
                 result.Value.Uuid,
-                result.Value.Nama,
-                result.Value.BobotPDP,
-                result.Value.BobotTerapan,
-                result.Value.BobotKerjasama,
-                result.Value.BobotPenelitianDasar,
-                result.Value.Skor
+                result.Value.Nama
             );
         }
 

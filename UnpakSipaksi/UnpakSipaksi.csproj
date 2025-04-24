@@ -106,6 +106,8 @@
 		<ProjectReference Include="..\UnpakSipaksi.Modules.MetodeRencanaKegiatan.Infrastructure\UnpakSipaksi.Modules.MetodeRencanaKegiatan.Infrastructure.csproj" />
 		<ProjectReference Include="..\UnpakSipaksi.Modules.ModelFeasibilityStudys.Application\UnpakSipaksi.Modules.ModelFeasibilityStudys.Application.csproj" />
 		<ProjectReference Include="..\UnpakSipaksi.Modules.ModelFeasibilityStudys.Infrastructure\UnpakSipaksi.Modules.ModelFeasibilityStudys.Infrastructure.csproj" />
+		<ProjectReference Include="..\UnpakSipaksi.Modules.PenelitianHibah.Application\UnpakSipaksi.Modules.PenelitianHibah.Application.csproj" />
+		<ProjectReference Include="..\UnpakSipaksi.Modules.PenelitianHibah.Infrastructure\UnpakSipaksi.Modules.PenelitianHibah.Infrastructure.csproj" />
 		<ProjectReference Include="..\UnpakSipaksi.Modules.Pengumuman.Application\UnpakSipaksi.Modules.Pengumuman.Application.csproj" />
 		<ProjectReference Include="..\UnpakSipaksi.Modules.Pengumuman.Infrastructure\UnpakSipaksi.Modules.Pengumuman.Infrastructure.csproj" />
 		<ProjectReference Include="..\UnpakSipaksi.Modules.PeningkatanKeberdayaanMitra.Application\UnpakSipaksi.Modules.PeningkatanKeberdayaanMitra.Application.csproj" />

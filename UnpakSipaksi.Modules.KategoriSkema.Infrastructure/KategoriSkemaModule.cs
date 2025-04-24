@@ -5,10 +5,12 @@ using Microsoft.Extensions.DependencyInjection;
 using UnpakSipaksi.Common.Application.Data;
 using UnpakSipaksi.Common.Infrastructure.Data;
 using UnpakSipaksi.Modules.KategoriSkema.Application.Abstractions.Data;
-using UnpakSipaksi.Modules.KategoriSkema.Infrastructure.PeningkatanKeberdayaanMitra;
 using UnpakSipaksi.Modules.KategoriSkema.Infrastructure.Database;
 using UnpakSipaksi.Modules.KategoriSkema.Presentation.KategoriSkema;
 using UnpakSipaksi.Modules.KategoriSkema.Domain.KategoriSkema;
+using UnpakSipaksi.Modules.KategoriSkema.Infrastructure.KategoriSkema;
+using UnpakSipaksi.Modules.KategoriSkema.Infrastructure.PublicApi;
+using UnpakSipaksi.Modules.KategoriSkema.PublicApi;
 
 namespace UnpakSipaksi.Modules.KategoriSkema.Infrastructure
 {
@@ -38,6 +40,8 @@ namespace UnpakSipaksi.Modules.KategoriSkema.Infrastructure
             services.AddDbContext<KategoriSkemaDbContext>(optionsBuilder => optionsBuilder.UseMySQL(databaseConnectionString));
 
             services.AddScoped<IKategoriSkemaRepository, KategoriSkemaRepository>();
+
+            services.AddScoped<IKategoriSkemaApi, KategoriSkemaApi>();
 
             services.AddScoped<IUnitOfWork>(sp => sp.GetRequiredService<KategoriSkemaDbContext>());
         }

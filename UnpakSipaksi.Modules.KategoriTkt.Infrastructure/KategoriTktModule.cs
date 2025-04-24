@@ -14,6 +14,8 @@ using UnpakSipaksi.Modules.KategoriTkt.Domain.KategoriTkt;
 using UnpakSipaksi.Modules.KategoriTkt.Presentation.KategoriTkt;
 using UnpakSipaksi.Modules.KategoriTkt.Infrastructure.Database;
 using UnpakSipaksi.Modules.KategoriTkt.Infrastructure.KategoriTkt;
+using UnpakSipaksi.Modules.KategoriTkt.Infrastructure.PublicApi;
+using UnpakSipaksi.Modules.KategoriTkt.PublicApi;
 
 namespace UnpakSipaksi.Modules.KategoriTkt.Infrastructure
 {
@@ -43,6 +45,8 @@ namespace UnpakSipaksi.Modules.KategoriTkt.Infrastructure
             services.AddDbContext<KategoriTktDbContext>(optionsBuilder => optionsBuilder.UseMySQL(databaseConnectionString));
 
             services.AddScoped<IKategoriTktRepository, KategoriTktRepository>();
+
+            services.AddScoped<IKategoriTktApi, KategoriTktApi>();
 
             services.AddScoped<IUnitOfWork>(sp => sp.GetRequiredService<KategoriTktDbContext>());
         }

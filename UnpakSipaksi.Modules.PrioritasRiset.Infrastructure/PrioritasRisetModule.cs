@@ -14,6 +14,8 @@ using UnpakSipaksi.Modules.PrioritasRiset.Domain.PrioritasRiset;
 using UnpakSipaksi.Modules.PrioritasRiset.Presentation.PrioritasRiset;
 using UnpakSipaksi.Modules.PrioritasRiset.Infrastructure.PrioritasRiset;
 using UnpakSipaksi.Modules.PrioritasRiset.Infrastructure.Database;
+using UnpakSipaksi.Modules.PrioritasRiset.Infrastructure.PublicApi;
+using UnpakSipaksi.Modules.PrioritasRiset.PublicApi;
 
 namespace UnpakSipaksi.Modules.PrioritasRiset.Infrastructure
 {
@@ -43,6 +45,8 @@ namespace UnpakSipaksi.Modules.PrioritasRiset.Infrastructure
             services.AddDbContext<PrioritasRisetDbContext>(optionsBuilder => optionsBuilder.UseMySQL(databaseConnectionString));
 
             services.AddScoped<IPrioritasRisetRepository, PrioritasRisetRepository>();
+
+            services.AddScoped<IPrioritasRisetApi, PrioritasRisetApi>();
 
             services.AddScoped<IUnitOfWork>(sp => sp.GetRequiredService<PrioritasRisetDbContext>());
         }

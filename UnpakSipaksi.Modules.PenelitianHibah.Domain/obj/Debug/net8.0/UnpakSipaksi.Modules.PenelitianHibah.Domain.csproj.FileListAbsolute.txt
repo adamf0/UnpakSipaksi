@@ -1,0 +1,16 @@
+C:\dev_net\UnpakSipaksi\UnpakSipaksi.Modules.PenelitianHibah.Domain\bin\Debug\net8.0\UnpakSipaksi.Modules.PenelitianHibah.Domain.deps.json
+C:\dev_net\UnpakSipaksi\UnpakSipaksi.Modules.PenelitianHibah.Domain\bin\Debug\net8.0\UnpakSipaksi.Modules.PenelitianHibah.Domain.dll
+C:\dev_net\UnpakSipaksi\UnpakSipaksi.Modules.PenelitianHibah.Domain\bin\Debug\net8.0\UnpakSipaksi.Modules.PenelitianHibah.Domain.pdb
+C:\dev_net\UnpakSipaksi\UnpakSipaksi.Modules.PenelitianHibah.Domain\bin\Debug\net8.0\UnpakSipaksi.Common.Domain.dll
+C:\dev_net\UnpakSipaksi\UnpakSipaksi.Modules.PenelitianHibah.Domain\bin\Debug\net8.0\UnpakSipaksi.Common.Domain.pdb
+C:\dev_net\UnpakSipaksi\UnpakSipaksi.Modules.PenelitianHibah.Domain\obj\Debug\net8.0\UnpakSipaksi.Modules.PenelitianHibah.Domain.csproj.AssemblyReference.cache
+C:\dev_net\UnpakSipaksi\UnpakSipaksi.Modules.PenelitianHibah.Domain\obj\Debug\net8.0\UnpakSipaksi.Modules.PenelitianHibah.Domain.GeneratedMSBuildEditorConfig.editorconfig
+C:\dev_net\UnpakSipaksi\UnpakSipaksi.Modules.PenelitianHibah.Domain\obj\Debug\net8.0\UnpakSipaksi.Modules.PenelitianHibah.Domain.AssemblyInfoInputs.cache
+C:\dev_net\UnpakSipaksi\UnpakSipaksi.Modules.PenelitianHibah.Domain\obj\Debug\net8.0\UnpakSipaksi.Modules.PenelitianHibah.Domain.AssemblyInfo.cs
+C:\dev_net\UnpakSipaksi\UnpakSipaksi.Modules.PenelitianHibah.Domain\obj\Debug\net8.0\UnpakSipaksi.Modules.PenelitianHibah.Domain.csproj.CoreCompileInputs.cache
+C:\dev_net\UnpakSipaksi\UnpakSipaksi.Modules.PenelitianHibah.Domain\obj\Debug\net8.0\UnpakSipaksi.Modules.PenelitianHibah.Domain.sourcelink.json
+C:\dev_net\UnpakSipaksi\UnpakSipaksi.Modules.PenelitianHibah.Domain\obj\Debug\net8.0\UnpakSip.A9333D47.Up2Date
+C:\dev_net\UnpakSipaksi\UnpakSipaksi.Modules.PenelitianHibah.Domain\obj\Debug\net8.0\UnpakSipaksi.Modules.PenelitianHibah.Domain.dll
+C:\dev_net\UnpakSipaksi\UnpakSipaksi.Modules.PenelitianHibah.Domain\obj\Debug\net8.0\refint\UnpakSipaksi.Modules.PenelitianHibah.Domain.dll
+C:\dev_net\UnpakSipaksi\UnpakSipaksi.Modules.PenelitianHibah.Domain\obj\Debug\net8.0\UnpakSipaksi.Modules.PenelitianHibah.Domain.pdb
+C:\dev_net\UnpakSipaksi\UnpakSipaksi.Modules.PenelitianHibah.Domain\obj\Debug\net8.0\ref\UnpakSipaksi.Modules.PenelitianHibah.Domain.dll
