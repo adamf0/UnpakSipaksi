@@ -3,7 +3,7 @@
 namespace UnpakSipaksi.Modules.PotensiKetercapaianLuaranDijanjikan.Application.UpdatePotensiKetercapaianLuaranDijanjikan
 {
     public sealed record UpdatePotensiKetercapaianLuaranDijanjikanCommand(
-        Guid Uuid,
+        string Uuid,
         string Nama,
         int Skor
     ) : ICommand;

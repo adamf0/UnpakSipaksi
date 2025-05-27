@@ -3,6 +3,6 @@
 namespace UnpakSipaksi.Modules.RumusanPrioritasMitra.Application.DeleteRumusanPrioritasMitra
 {
     public sealed record DeleteRumusanPrioritasMitraCommand(
-        Guid uuid
+        string uuid
     ) : ICommand;
 }

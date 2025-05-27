@@ -8,7 +8,7 @@ using UnpakSipaksi.Common.Application.Messaging;
 namespace UnpakSipaksi.Modules.FokusPenelitian.Application.UpdateFokusPenelitian
 {
     public sealed record UpdateFokusPenelitianCommand(
-        Guid Uuid,
+        string Uuid,
         string Nama
     ) : ICommand;
 }

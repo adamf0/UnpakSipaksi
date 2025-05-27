@@ -18,8 +18,8 @@ namespace UnpakSipaksi.Modules.KesesuaianTkt.Presentation.KesesuaianTkt
             {
                 Result result = await sender.Send(new UpdateKesesuaianTktCommand(
                     request.Id,
-                    HtmlEncoder.Default.Encode(request.Nama),
-                    int.Parse(HtmlEncoder.Default.Encode(request.Skor))
+                    request.Nama,
+                    request.Skor
                     )
                 );
 
@@ -29,9 +29,9 @@ namespace UnpakSipaksi.Modules.KesesuaianTkt.Presentation.KesesuaianTkt
 
         internal sealed class UpdateKesesuaianTktRequest
         {
-            public Guid Id { get; set; }
+            public string Id { get; set; }
             public string Nama { get; set; }
-            public string Skor { get; set; }
+            public int Skor { get; set; }
         }
     }
 }

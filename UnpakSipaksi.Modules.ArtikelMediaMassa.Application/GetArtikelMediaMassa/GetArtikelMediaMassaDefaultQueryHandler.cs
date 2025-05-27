@@ -3,10 +3,9 @@ using System.Data.Common;
 using UnpakSipaksi.Common.Application.Data;
 using UnpakSipaksi.Common.Application.Messaging;
 using UnpakSipaksi.Common.Domain;
-using UnpakSipaksi.Modules.ArtikelMediaMassa.Application.GetArtikelMediaMassa;
 using UnpakSipaksi.Modules.ArtikelMediaMassa.Domain.ArtikelMediaMassa;
 
-namespace UnpakSipaksi.Modules.ArtikelMediaMassa.Application.GetBobotArtikelMediaMassa
+namespace UnpakSipaksi.Modules.ArtikelMediaMassa.Application.GetArtikelMediaMassa
 {
     internal sealed class GetArtikelMediaMassaDefaultQueryHandler(IDbConnectionFactory dbConnectionFactory)
     : IQueryHandler<GetArtikelMediaMassaDefaultQuery, ArtikelMediaMassaDefaultResponse>

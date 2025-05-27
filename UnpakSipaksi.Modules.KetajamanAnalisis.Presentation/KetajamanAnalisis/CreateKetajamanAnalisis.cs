@@ -16,8 +16,8 @@ namespace UnpakSipaksi.Modules.KetajamanAnalisis.Presentation.KetajamanAnalisis
             app.MapPost("KetajamanAnalisis", async (CreateKetajamanAnalisisRequest request, ISender sender) =>
             {
                 Result<Guid> result = await sender.Send(new CreateKetajamanAnalisisCommand(
-                    HtmlEncoder.Default.Encode(request.Nama),
-                    int.Parse(HtmlEncoder.Default.Encode(request.Nilai))
+                    request.Nama,
+                    request.Nilai
                     )
                 );
 
@@ -29,7 +29,7 @@ namespace UnpakSipaksi.Modules.KetajamanAnalisis.Presentation.KetajamanAnalisis
         {
             public string Nama { get; set; }
 
-            public string Nilai { get; set; }
+            public int Nilai { get; set; }
         }
     }
 }

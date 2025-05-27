@@ -25,17 +25,17 @@ namespace UnpakSipaksi.Modules.Komponen.Domain.Komponen
             {
                 if (HasError) return this;
 
-                /*if (string.IsNullOrWhiteSpace(nama))
+                if (string.IsNullOrWhiteSpace(nama))
                 {
-                    _result = Result.Failure<Komponen>(KomponenErrors.NamaNotFound);
+                    _result = Result.Failure<Komponen>(KomponenErrors.NamaEmpty());
                     return this;
-                }*/
+                }
 
                 _akurasiPenelitian.Nama = nama;
                 return this;
             }
 
-            public KomponenBuilder ChangeMaxBiaya(int maxBiaya)
+            public KomponenBuilder ChangeMaxBiaya(int? maxBiaya)
             {
                 if (HasError) return this;
 

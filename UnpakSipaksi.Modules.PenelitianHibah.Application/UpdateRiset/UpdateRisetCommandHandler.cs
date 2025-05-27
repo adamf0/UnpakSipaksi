@@ -20,7 +20,7 @@ namespace UnpakSipaksi.Modules.PenelitianHibah.Application.UpdateRiset
     {
         public async Task<Result> Handle(UpdateRisetCommand request, CancellationToken cancellationToken)
         {
-            Domain.PenelitianHibah.PenelitianHibah? existingPenelitianHibah = await penelitianHibahRepository.GetAsync(Guid.Parse(request.Uuid), cancellationToken);
+            Domain.PenelitianHibah.PenelitianHibah? existingPenelitianHibah = await penelitianHibahRepository.GetAsync(Guid.Parse(request.UuidPenelitianHibah), cancellationToken);
 
             var prioritasRiset = await GetIfNotNull<PrioritasRisetResponse>(
                 request.PrioritasRiset, id => prioritasRisetApi.GetAsync(id));

@@ -8,6 +8,6 @@ using UnpakSipaksi.Common.Application.Messaging;
 namespace UnpakSipaksi.Modules.KategoriSumberDana.Application.DeleteKategoriSumberDana
 {
     public sealed record DeleteKategoriSumberDanaCommand(
-        Guid uuid
+        string uuid
     ) : ICommand;
 }

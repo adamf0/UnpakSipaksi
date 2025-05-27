@@ -17,11 +17,11 @@ namespace UnpakSipaksi.Modules.KesesuaianSolusiMasalahMitra.Application.DeleteKe
     {
         public async Task<Result> Handle(DeleteKesesuaianSolusiMasalahMitraCommand request, CancellationToken cancellationToken)
         {
-            Domain.KesesuaianSolusiMasalahMitra.KesesuaianSolusiMasalahMitra? existingKesesuaianSolusiMasalahMitra = await kesesuaianSolusiMasalahMitraRepository.GetAsync(request.uuid, cancellationToken);
+            Domain.KesesuaianSolusiMasalahMitra.KesesuaianSolusiMasalahMitra? existingKesesuaianSolusiMasalahMitra = await kesesuaianSolusiMasalahMitraRepository.GetAsync(Guid.Parse(request.uuid), cancellationToken);
 
             if (existingKesesuaianSolusiMasalahMitra is null)
             {
-                return Result.Failure(KesesuaianSolusiMasalahMitraErrors.NotFound(request.uuid));
+                return Result.Failure(KesesuaianSolusiMasalahMitraErrors.NotFound(Guid.Parse(request.uuid)));
             }
 
             await kesesuaianSolusiMasalahMitraRepository.DeleteAsync(existingKesesuaianSolusiMasalahMitra!);

@@ -17,11 +17,11 @@ namespace UnpakSipaksi.Modules.AuthorSinta.Application.UpdateAuthorSinta
     {
         public async Task<Result> Handle(UpdateAuthorSintaCommand request, CancellationToken cancellationToken)
         {
-            Domain.AuthorSinta.AuthorSinta? existingAuthorSinta = await authorSintaRepository.GetAsync(request.Uuid, cancellationToken);
+            Domain.AuthorSinta.AuthorSinta? existingAuthorSinta = await authorSintaRepository.GetAsync(Guid.Parse(request.Uuid), cancellationToken);
 
             if (existingAuthorSinta is null)
             {
-                Result.Failure(AuthorSintaErrors.NotFound(request.Uuid));
+                Result.Failure(AuthorSintaErrors.NotFound(Guid.Parse(request.Uuid)));
             }
 
             Result<Domain.AuthorSinta.AuthorSinta> asset = Domain.AuthorSinta.AuthorSinta.Update(existingAuthorSinta!)

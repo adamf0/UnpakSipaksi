@@ -9,20 +9,20 @@ namespace UnpakSipaksi.Modules.Komponen.Domain.Komponen
         {
         }
 
-        public int? Id { get; private set; } = null;
+        public int? Id { get; set; } = null;
 
         [Column(TypeName = "VARCHAR(36)")]
-        public Guid Uuid{ get; private set; }
+        public Guid Uuid{ get; set; }
 
         [Column("name")]
-        public string Nama { get; private set; } = null!;
-        public int MaxBiaya { get; private set; } = 0;
+        public string Nama { get; set; } = null!;
+        public int? MaxBiaya { get; set; } = null;
 
         public static KomponenBuilder Update(Komponen prev) => new KomponenBuilder(prev);
 
         public static Result<Komponen> Create(
         string Nama,
-        int MaxBiaya
+        int? MaxBiaya
         )
         {
             var asset = new Komponen

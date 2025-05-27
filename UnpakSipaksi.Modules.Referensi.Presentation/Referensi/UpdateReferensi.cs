@@ -4,7 +4,7 @@ using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Routing;
 using UnpakSipaksi.Common.Domain;
 using UnpakSipaksi.Common.Presentation.ApiResults;
-using UnpakSipaksi.Modules.Referensi.Application.UpdateAkurasiPenelitian;
+using UnpakSipaksi.Modules.Referensi.Application.UpdateReferensi;
 
 namespace UnpakSipaksi.Modules.Referensi.Presentation.Referensi
 {
@@ -29,7 +29,7 @@ namespace UnpakSipaksi.Modules.Referensi.Presentation.Referensi
 
         internal sealed class UpdateReferensiRequest
         {
-            public Guid Id { get; set; }
+            public string Id { get; set; }
             public string Nama { get; set; }
             public string UuidKebaruanReferensi { get; set; }
             public string UuidRelevansiKualitasReferensi { get; set; }

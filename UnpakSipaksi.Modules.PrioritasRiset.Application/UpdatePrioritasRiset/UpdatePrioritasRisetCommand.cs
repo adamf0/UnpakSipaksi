@@ -8,7 +8,7 @@ using UnpakSipaksi.Common.Application.Messaging;
 namespace UnpakSipaksi.Modules.PrioritasRiset.Application.UpdatePrioritasRiset
 {
     public sealed record UpdatePrioritasRisetCommand(
-        Guid Uuid,
+        string Uuid,
         string Nama
     ) : ICommand;
 }

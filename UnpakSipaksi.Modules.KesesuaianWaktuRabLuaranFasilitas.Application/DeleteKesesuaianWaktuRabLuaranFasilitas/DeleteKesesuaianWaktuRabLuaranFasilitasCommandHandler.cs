@@ -17,11 +17,11 @@ namespace UnpakSipaksi.Modules.KesesuaianWaktuRabLuaranFasilitas.Application.Del
     {
         public async Task<Result> Handle(DeleteKesesuaianWaktuRabLuaranFasilitasCommand request, CancellationToken cancellationToken)
         {
-            Domain.KesesuaianWaktuRabLuaranFasilitas.KesesuaianWaktuRabLuaranFasilitas? existingKesesuaianWaktuRabLuaranFasilitas = await kesesuaianTktRepository.GetAsync(request.uuid, cancellationToken);
+            Domain.KesesuaianWaktuRabLuaranFasilitas.KesesuaianWaktuRabLuaranFasilitas? existingKesesuaianWaktuRabLuaranFasilitas = await kesesuaianTktRepository.GetAsync(Guid.Parse(request.uuid), cancellationToken);
 
             if (existingKesesuaianWaktuRabLuaranFasilitas is null)
             {
-                return Result.Failure(KesesuaianWaktuRabLuaranFasilitasErrors.NotFound(request.uuid));
+                return Result.Failure(KesesuaianWaktuRabLuaranFasilitasErrors.NotFound(Guid.Parse(request.uuid)));
             }
 
             await kesesuaianTktRepository.DeleteAsync(existingKesesuaianWaktuRabLuaranFasilitas!);

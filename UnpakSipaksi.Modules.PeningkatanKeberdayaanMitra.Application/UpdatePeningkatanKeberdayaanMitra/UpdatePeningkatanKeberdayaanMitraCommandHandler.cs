@@ -12,11 +12,11 @@ namespace UnpakSipaksi.Modules.PeningkatanKeberdayaanMitra.Application.UpdatePen
     {
         public async Task<Result> Handle(UpdatePeningkatanKeberdayaanMitraCommand request, CancellationToken cancellationToken)
         {
-            Domain.PeningkatanKeberdayaanMitra.PeningkatanKeberdayaanMitra? existingPeningkatanKeberdayaanMitra = await PeningkatanKeberdayaanMitraRepository.GetAsync(request.Uuid, cancellationToken);
+            Domain.PeningkatanKeberdayaanMitra.PeningkatanKeberdayaanMitra? existingPeningkatanKeberdayaanMitra = await PeningkatanKeberdayaanMitraRepository.GetAsync(Guid.Parse(request.Uuid), cancellationToken);
 
             if (existingPeningkatanKeberdayaanMitra is null)
             {
-                Result.Failure(PeningkatanKeberdayaanMitraErrors.NotFound(request.Uuid));
+                Result.Failure(PeningkatanKeberdayaanMitraErrors.NotFound(Guid.Parse(request.Uuid)));
             }
 
             Result<Domain.PeningkatanKeberdayaanMitra.PeningkatanKeberdayaanMitra> asset = Domain.PeningkatanKeberdayaanMitra.PeningkatanKeberdayaanMitra.Update(existingPeningkatanKeberdayaanMitra!)

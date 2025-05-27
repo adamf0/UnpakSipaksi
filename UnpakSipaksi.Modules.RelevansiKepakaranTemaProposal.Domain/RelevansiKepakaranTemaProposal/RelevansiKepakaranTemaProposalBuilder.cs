@@ -35,62 +35,6 @@ namespace UnpakSipaksi.Modules.RelevansiKepakaranTemaProposal.Domain.RelevansiKe
                 return this;
             }
 
-            public RelevansiKepakaranTemaProposalBuilder ChangeBobotPDP(int bobotPDP)
-            {
-                if (HasError) return this;
-
-                /*if (string.IsNullOrWhiteSpace(nama))
-                {
-                    _result = Result.Failure<RelevansiKepakaranTemaProposal>(RelevansiKepakaranTemaProposalErrors.NamaNotFound);
-                    return this;
-                }*/
-
-                _akurasiPenelitian.BobotPDP = bobotPDP;
-                return this;
-            }
-
-            public RelevansiKepakaranTemaProposalBuilder ChangeBobotTerapan(int bobotTerapan)
-            {
-                if (HasError) return this;
-
-                /*if (string.IsNullOrWhiteSpace(nama))
-                {
-                    _result = Result.Failure<RelevansiKepakaranTemaProposal>(RelevansiKepakaranTemaProposalErrors.NamaNotFound);
-                    return this;
-                }*/
-
-                _akurasiPenelitian.BobotTerapan = bobotTerapan;
-                return this;
-            }
-
-            public RelevansiKepakaranTemaProposalBuilder ChangeBobotKerjasama(int bobotKerjasama)
-            {
-                if (HasError) return this;
-
-                /*if (string.IsNullOrWhiteSpace(nama))
-                {
-                    _result = Result.Failure<RelevansiKepakaranTemaProposal>(RelevansiKepakaranTemaProposalErrors.NamaNotFound);
-                    return this;
-                }*/
-
-                _akurasiPenelitian.BobotKerjasama = bobotKerjasama;
-                return this;
-            }
-
-            public RelevansiKepakaranTemaProposalBuilder ChangeBobotPenelitianDasar(int bobotPenelitianDasar)
-            {
-                if (HasError) return this;
-
-                /*if (string.IsNullOrWhiteSpace(nama))
-                {
-                    _result = Result.Failure<RelevansiKepakaranTemaProposal>(RelevansiKepakaranTemaProposalErrors.NamaNotFound);
-                    return this;
-                }*/
-
-                _akurasiPenelitian.BobotPenelitianDasar = bobotPenelitianDasar;
-                return this;
-            }
-
             public RelevansiKepakaranTemaProposalBuilder ChangeSkor(int skor)
             {
                 if (HasError) return this;

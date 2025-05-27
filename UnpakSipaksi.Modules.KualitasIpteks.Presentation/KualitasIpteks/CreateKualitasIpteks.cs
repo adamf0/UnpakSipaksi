@@ -16,8 +16,8 @@ namespace UnpakSipaksi.Modules.KualitasIpteks.Presentation.KualitasIpteks
             app.MapPost("KualitasIpteks", async (CreateKualitasIpteksRequest request, ISender sender) =>
             {
                 Result<Guid> result = await sender.Send(new CreateKualitasIpteksCommand(
-                    HtmlEncoder.Default.Encode(request.Nama),
-                    int.Parse(HtmlEncoder.Default.Encode(request.Nilai))
+                    request.Nama,
+                    request.Nilai
                     )
                 );
 
@@ -28,7 +28,7 @@ namespace UnpakSipaksi.Modules.KualitasIpteks.Presentation.KualitasIpteks
         internal sealed class CreateKualitasIpteksRequest
         {
             public string Nama { get; set; }
-            public string Nilai { get; set; }
+            public int Nilai { get; set; }
         }
     }
 }

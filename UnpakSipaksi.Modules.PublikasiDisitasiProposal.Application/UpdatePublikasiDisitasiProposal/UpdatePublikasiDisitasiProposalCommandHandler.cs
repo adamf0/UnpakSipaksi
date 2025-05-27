@@ -12,19 +12,15 @@ namespace UnpakSipaksi.Modules.PublikasiDisitasiProposal.Application.UpdatePubli
     {
         public async Task<Result> Handle(UpdatePublikasiDisitasiProposalCommand request, CancellationToken cancellationToken)
         {
-            Domain.PublikasiDisitasiProposal.PublikasiDisitasiProposal? existingPublikasiDisitasiProposal = await PublikasiDisitasiProposalRepository.GetAsync(request.Uuid, cancellationToken);
+            Domain.PublikasiDisitasiProposal.PublikasiDisitasiProposal? existingPublikasiDisitasiProposal = await PublikasiDisitasiProposalRepository.GetAsync(Guid.Parse(request.Uuid), cancellationToken);
 
             if (existingPublikasiDisitasiProposal is null)
             {
-                Result.Failure(PublikasiDisitasiProposalErrors.NotFound(request.Uuid));
+                Result.Failure(PublikasiDisitasiProposalErrors.NotFound(Guid.Parse(request.Uuid)));
             }
 
             Result<Domain.PublikasiDisitasiProposal.PublikasiDisitasiProposal> asset = Domain.PublikasiDisitasiProposal.PublikasiDisitasiProposal.Update(existingPublikasiDisitasiProposal!)
                          .ChangeNama(request.Nama)
-                         .ChangeBobotPDP(request.BobotPDP)
-                         .ChangeBobotTerapan(request.BobotTerapan)
-                         .ChangeBobotPenelitianDasar(request.BobotPenelitianDasar)
-                         .ChangeBobotKerjasama(request.BobotKerjasama)
                          .ChangeSkor(request.Skor)
                          .Build();
 

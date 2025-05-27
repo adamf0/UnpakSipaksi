@@ -8,6 +8,6 @@ using UnpakSipaksi.Common.Application.Messaging;
 namespace UnpakSipaksi.Modules.KesesuaianWaktuRabLuaranFasilitas.Application.DeleteKesesuaianWaktuRabLuaranFasilitas
 {
     public sealed record DeleteKesesuaianWaktuRabLuaranFasilitasCommand(
-        Guid uuid
+        string uuid
     ) : ICommand;
 }

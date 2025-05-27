@@ -3,6 +3,6 @@
 namespace UnpakSipaksi.Modules.KewajaranTahapanTarget.Application.DeleteKewajaranTahapanTarget
 {
     public sealed record DeleteKewajaranTahapanTargetCommand(
-        Guid uuid
+        string uuid
     ) : ICommand;
 }

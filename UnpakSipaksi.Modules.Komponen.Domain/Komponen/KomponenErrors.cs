@@ -10,5 +10,8 @@ namespace UnpakSipaksi.Modules.Komponen.Domain.Komponen
         public static Error NotFound(Guid Id) =>
             Error.NotFound("Komponen.NotFound", $"Komponen with the identifier {Id} was not found");
 
+        public static Error NamaEmpty() =>
+            Error.NotFound("Komponen.NamaEmpty", $"Nama can't be empty");
+
     }
 }

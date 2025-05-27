@@ -12,11 +12,11 @@ namespace UnpakSipaksi.Modules.MetodeRencanaKegiatan.Application.UpdateMetodeRen
     {
         public async Task<Result> Handle(UpdateMetodeRencanaKegiatanCommand request, CancellationToken cancellationToken)
         {
-            Domain.MetodeRencanaKegiatan.MetodeRencanaKegiatan? existingMetodeRencanaKegiatan = await MetodeRencanaKegiatanRepository.GetAsync(request.Uuid, cancellationToken);
+            Domain.MetodeRencanaKegiatan.MetodeRencanaKegiatan? existingMetodeRencanaKegiatan = await MetodeRencanaKegiatanRepository.GetAsync(Guid.Parse(request.Uuid), cancellationToken);
 
             if (existingMetodeRencanaKegiatan is null)
             {
-                Result.Failure(MetodeRencanaKegiatanErrors.NotFound(request.Uuid));
+                Result.Failure(MetodeRencanaKegiatanErrors.NotFound(Guid.Parse(request.Uuid)));
             }
 
             Result<Domain.MetodeRencanaKegiatan.MetodeRencanaKegiatan> asset = Domain.MetodeRencanaKegiatan.MetodeRencanaKegiatan.Update(existingMetodeRencanaKegiatan!)

@@ -17,11 +17,11 @@ namespace UnpakSipaksi.Modules.RumpunIlmu2.Application.DeleteRumpunIlmu2
     {
         public async Task<Result> Handle(DeleteRumpunIlmu2Command request, CancellationToken cancellationToken)
         {
-            Domain.RumpunIlmu2.RumpunIlmu2? existingRumpunIlmu2 = await RumpunIlmu2Repository.GetAsync(request.uuid, cancellationToken);
+            Domain.RumpunIlmu2.RumpunIlmu2? existingRumpunIlmu2 = await RumpunIlmu2Repository.GetAsync(Guid.Parse(request.uuid), cancellationToken);
 
             if (existingRumpunIlmu2 is null)
             {
-                return Result.Failure(RumpunIlmu2Errors.NotFound(request.uuid));
+                return Result.Failure(RumpunIlmu2Errors.NotFound(Guid.Parse(request.uuid)));
             }
 
             await RumpunIlmu2Repository.DeleteAsync(existingRumpunIlmu2!);

@@ -18,7 +18,7 @@ namespace UnpakSipaksi.Modules.KategoriMitraPenelitian.Presentation.KategoriMitr
             {
                 Result result = await sender.Send(new UpdateKategoriMitraPenelitianCommand(
                     request.Id,
-                    HtmlEncoder.Default.Encode(request.Nama)
+                    request.Nama
                     )
                 );
 
@@ -28,7 +28,7 @@ namespace UnpakSipaksi.Modules.KategoriMitraPenelitian.Presentation.KategoriMitr
 
         internal sealed class UpdateKategoriMitraPenelitianRequest
         {
-            public Guid Id { get; set; }
+            public string Id { get; set; }
             public string Nama { get; set; }
         }
     }

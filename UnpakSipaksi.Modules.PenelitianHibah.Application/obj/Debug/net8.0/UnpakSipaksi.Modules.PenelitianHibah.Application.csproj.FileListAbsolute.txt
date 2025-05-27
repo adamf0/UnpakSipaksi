@@ -7,6 +7,7 @@ C:\dev_net\UnpakSipaksi\UnpakSipaksi.Modules.PenelitianHibah.Application\bin\Deb
 C:\dev_net\UnpakSipaksi\UnpakSipaksi.Modules.PenelitianHibah.Application\bin\Debug\net8.0\UnpakSipaksi.Modules.KategoriSkema.PublicApi.dll
 C:\dev_net\UnpakSipaksi\UnpakSipaksi.Modules.PenelitianHibah.Application\bin\Debug\net8.0\UnpakSipaksi.Modules.KategoriTkt.PublicApi.dll
 C:\dev_net\UnpakSipaksi\UnpakSipaksi.Modules.PenelitianHibah.Application\bin\Debug\net8.0\UnpakSipaksi.Modules.PenelitianHibah.Domain.dll
+C:\dev_net\UnpakSipaksi\UnpakSipaksi.Modules.PenelitianHibah.Application\bin\Debug\net8.0\UnpakSipaksi.Modules.PenelitianHibah.PublicApi.dll
 C:\dev_net\UnpakSipaksi\UnpakSipaksi.Modules.PenelitianHibah.Application\bin\Debug\net8.0\UnpakSipaksi.Modules.PrioritasRiset.PublicApi.dll
 C:\dev_net\UnpakSipaksi\UnpakSipaksi.Modules.PenelitianHibah.Application\bin\Debug\net8.0\UnpakSipaksi.Modules.RumpunIlmu1.PublicApi.dll
 C:\dev_net\UnpakSipaksi\UnpakSipaksi.Modules.PenelitianHibah.Application\bin\Debug\net8.0\UnpakSipaksi.Modules.RumpunIlmu2.PublicApi.dll
@@ -19,6 +20,7 @@ C:\dev_net\UnpakSipaksi\UnpakSipaksi.Modules.PenelitianHibah.Application\bin\Deb
 C:\dev_net\UnpakSipaksi\UnpakSipaksi.Modules.PenelitianHibah.Application\bin\Debug\net8.0\UnpakSipaksi.Modules.KategoriSkema.PublicApi.pdb
 C:\dev_net\UnpakSipaksi\UnpakSipaksi.Modules.PenelitianHibah.Application\bin\Debug\net8.0\UnpakSipaksi.Modules.KategoriTkt.PublicApi.pdb
 C:\dev_net\UnpakSipaksi\UnpakSipaksi.Modules.PenelitianHibah.Application\bin\Debug\net8.0\UnpakSipaksi.Modules.PenelitianHibah.Domain.pdb
+C:\dev_net\UnpakSipaksi\UnpakSipaksi.Modules.PenelitianHibah.Application\bin\Debug\net8.0\UnpakSipaksi.Modules.PenelitianHibah.PublicApi.pdb
 C:\dev_net\UnpakSipaksi\UnpakSipaksi.Modules.PenelitianHibah.Application\bin\Debug\net8.0\UnpakSipaksi.Modules.PrioritasRiset.PublicApi.pdb
 C:\dev_net\UnpakSipaksi\UnpakSipaksi.Modules.PenelitianHibah.Application\bin\Debug\net8.0\UnpakSipaksi.Modules.RumpunIlmu1.PublicApi.pdb
 C:\dev_net\UnpakSipaksi\UnpakSipaksi.Modules.PenelitianHibah.Application\bin\Debug\net8.0\UnpakSipaksi.Modules.RumpunIlmu2.PublicApi.pdb
@@ -36,5 +38,7 @@ C:\dev_net\UnpakSipaksi\UnpakSipaksi.Modules.PenelitianHibah.Application\obj\Deb
 C:\dev_net\UnpakSipaksi\UnpakSipaksi.Modules.PenelitianHibah.Application\obj\Debug\net8.0\refint\UnpakSipaksi.Modules.PenelitianHibah.Application.dll
 C:\dev_net\UnpakSipaksi\UnpakSipaksi.Modules.PenelitianHibah.Application\obj\Debug\net8.0\UnpakSipaksi.Modules.PenelitianHibah.Application.pdb
 C:\dev_net\UnpakSipaksi\UnpakSipaksi.Modules.PenelitianHibah.Application\obj\Debug\net8.0\ref\UnpakSipaksi.Modules.PenelitianHibah.Application.dll
-C:\dev_net\UnpakSipaksi\UnpakSipaksi.Modules.PenelitianHibah.Application\bin\Debug\net8.0\UnpakSipaksi.Modules.PenelitianHibah.PublicApi.dll
-C:\dev_net\UnpakSipaksi\UnpakSipaksi.Modules.PenelitianHibah.Application\bin\Debug\net8.0\UnpakSipaksi.Modules.PenelitianHibah.PublicApi.pdb
+C:\dev_net\UnpakSipaksi\UnpakSipaksi.Modules.PenelitianHibah.Application\bin\Debug\net8.0\UnpakSipaksi.Modules.Kategori.PublicApi.dll
+C:\dev_net\UnpakSipaksi\UnpakSipaksi.Modules.PenelitianHibah.Application\bin\Debug\net8.0\UnpakSipaksi.Modules.KategoriLuaran.PublicApi.dll
+C:\dev_net\UnpakSipaksi\UnpakSipaksi.Modules.PenelitianHibah.Application\bin\Debug\net8.0\UnpakSipaksi.Modules.Kategori.PublicApi.pdb
+C:\dev_net\UnpakSipaksi\UnpakSipaksi.Modules.PenelitianHibah.Application\bin\Debug\net8.0\UnpakSipaksi.Modules.KategoriLuaran.PublicApi.pdb

@@ -3,6 +3,6 @@
 namespace UnpakSipaksi.Modules.SotaKebaharuan.Application.DeleteSotaKebaharuan
 {
     public sealed record DeleteSotaKebaharuanCommand(
-        Guid uuid
+        string uuid
     ) : ICommand;
 }

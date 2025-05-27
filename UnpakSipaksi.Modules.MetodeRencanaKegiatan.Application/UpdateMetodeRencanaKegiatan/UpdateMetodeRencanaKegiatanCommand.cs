@@ -3,7 +3,7 @@
 namespace UnpakSipaksi.Modules.MetodeRencanaKegiatan.Application.UpdateMetodeRencanaKegiatan
 {
     public sealed record UpdateMetodeRencanaKegiatanCommand(
-        Guid Uuid,
+        string Uuid,
         string Nama,
         int Nilai
     ) : ICommand;

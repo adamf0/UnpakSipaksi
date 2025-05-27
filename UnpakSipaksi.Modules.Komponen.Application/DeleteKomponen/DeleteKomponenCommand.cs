@@ -3,6 +3,6 @@
 namespace UnpakSipaksi.Modules.Komponen.Application.DeleteKomponen
 {
     public sealed record DeleteKomponenCommand(
-        Guid uuid
+        string uuid
     ) : ICommand;
 }

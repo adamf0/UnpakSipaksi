@@ -17,11 +17,11 @@ namespace UnpakSipaksi.Modules.KategoriMitraPenelitian.Application.DeleteKategor
     {
         public async Task<Result> Handle(DeleteKategoriMitraPenelitianCommand request, CancellationToken cancellationToken)
         {
-            Domain.KategoriMitraPenelitian.KategoriMitraPenelitian? existingKategoriMitraPenelitian = await kategoriMitraPenelitianRepository.GetAsync(request.uuid, cancellationToken);
+            Domain.KategoriMitraPenelitian.KategoriMitraPenelitian? existingKategoriMitraPenelitian = await kategoriMitraPenelitianRepository.GetAsync(Guid.Parse(request.uuid), cancellationToken);
 
             if (existingKategoriMitraPenelitian is null)
             {
-                return Result.Failure(KategoriMitraPenelitianErrors.NotFound(request.uuid));
+                return Result.Failure(KategoriMitraPenelitianErrors.NotFound(Guid.Parse(request.uuid)));
             }
 
             await kategoriMitraPenelitianRepository.DeleteAsync(existingKategoriMitraPenelitian!);

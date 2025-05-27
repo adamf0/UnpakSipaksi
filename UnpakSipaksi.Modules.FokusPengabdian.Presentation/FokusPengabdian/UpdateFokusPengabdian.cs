@@ -17,7 +17,7 @@ namespace UnpakSipaksi.Modules.FokusPengabdian.Presentation.FokusPengabdian
             {
                 Result result = await sender.Send(new UpdateFokusPengabdianCommand(
                     request.Id,
-                    HtmlEncoder.Default.Encode(request.Nama)
+                    request.Nama
                     )
                 );
 
@@ -27,7 +27,7 @@ namespace UnpakSipaksi.Modules.FokusPengabdian.Presentation.FokusPengabdian
 
         internal sealed class UpdateFokusPengabdianRequest
         {
-            public Guid Id { get; set; }
+            public string Id { get; set; }
             public string Nama { get; set; }
         }
     }

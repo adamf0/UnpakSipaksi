@@ -10,7 +10,7 @@ namespace UnpakSipaksi.Common.Application.Behaviors
     internal sealed class ValidationPipelineBehavior<TRequest, TResponse>(
     IEnumerable<IValidator<TRequest>> validators)
     : IPipelineBehavior<TRequest, TResponse>
-    where TRequest : IBaseCommand
+    where TRequest : IBaseCommand //null untuk semua
     {
         public async Task<TResponse> Handle(
             TRequest request,

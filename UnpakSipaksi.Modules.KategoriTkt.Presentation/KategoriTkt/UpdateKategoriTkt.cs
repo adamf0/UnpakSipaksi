@@ -18,7 +18,7 @@ namespace UnpakSipaksi.Modules.KategoriTkt.Presentation.KategoriTkt
             {
                 Result result = await sender.Send(new UpdateKategoriTktCommand(
                     request.Id,
-                    HtmlEncoder.Default.Encode(request.Nama)
+                    request.Nama
                     )
                 );
 
@@ -28,7 +28,7 @@ namespace UnpakSipaksi.Modules.KategoriTkt.Presentation.KategoriTkt
 
         internal sealed class UpdateKategoriTktRequest
         {
-            public Guid Id { get; set; }
+            public string Id { get; set; }
             public string Nama { get; set; }
         }
     }

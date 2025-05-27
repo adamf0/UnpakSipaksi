@@ -2,8 +2,8 @@
 
 namespace UnpakSipaksi.Modules.PenugasanReviewer.Application.UpdatePenugasanReviewer
 {
-    public sealed record StatusPenugasanReviewerCommand(
-        Guid Uuid,
+    public sealed record UpdatePenugasanReviewerCommand(
+        string Uuid,
         string Nidn,
         int Status
     ) : ICommand;

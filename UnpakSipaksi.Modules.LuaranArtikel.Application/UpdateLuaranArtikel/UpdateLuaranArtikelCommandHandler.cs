@@ -12,11 +12,11 @@ namespace UnpakSipaksi.Modules.LuaranArtikel.Application.UpdateLuaranArtikel
     {
         public async Task<Result> Handle(UpdateLuaranArtikelCommand request, CancellationToken cancellationToken)
         {
-            Domain.LuaranArtikel.LuaranArtikel? existingLuaranArtikel = await LuaranArtikelRepository.GetAsync(request.Uuid, cancellationToken);
+            Domain.LuaranArtikel.LuaranArtikel? existingLuaranArtikel = await LuaranArtikelRepository.GetAsync(Guid.Parse(request.Uuid), cancellationToken);
 
             if (existingLuaranArtikel is null)
             {
-                Result.Failure(LuaranArtikelErrors.NotFound(request.Uuid));
+                Result.Failure(LuaranArtikelErrors.NotFound(Guid.Parse(request.Uuid)));
             }
 
             Result<Domain.LuaranArtikel.LuaranArtikel> asset = Domain.LuaranArtikel.LuaranArtikel.Update(existingLuaranArtikel!)

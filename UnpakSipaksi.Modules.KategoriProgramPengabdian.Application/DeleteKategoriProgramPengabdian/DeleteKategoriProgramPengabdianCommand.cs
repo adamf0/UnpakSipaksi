@@ -3,6 +3,6 @@
 namespace UnpakSipaksi.Modules.KategoriProgramPengabdian.Application.DeleteKategoriProgramPengabdian
 {
     public sealed record DeleteKategoriProgramPengabdianCommand(
-        Guid uuid
+        string uuid
     ) : ICommand;
 }

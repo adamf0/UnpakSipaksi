@@ -17,11 +17,11 @@ namespace UnpakSipaksi.Modules.RumpunIlmu1.Application.UpdateRumpunIlmu1
     {
         public async Task<Result> Handle(UpdateRumpunIlmu1Command request, CancellationToken cancellationToken)
         {
-            Domain.RumpunIlmu1.RumpunIlmu1? existingRumpunIlmu1 = await RumpunIlmu1Repository.GetAsync(request.Uuid, cancellationToken);
+            Domain.RumpunIlmu1.RumpunIlmu1? existingRumpunIlmu1 = await RumpunIlmu1Repository.GetAsync(Guid.Parse(request.Uuid), cancellationToken);
 
             if (existingRumpunIlmu1 is null)
             {
-                Result.Failure(RumpunIlmu1Errors.NotFound(request.Uuid));
+                Result.Failure(RumpunIlmu1Errors.NotFound(Guid.Parse(request.Uuid)));
             }
 
             Result<Domain.RumpunIlmu1.RumpunIlmu1> asset = Domain.RumpunIlmu1.RumpunIlmu1.Update(existingRumpunIlmu1!)

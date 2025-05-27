@@ -3,6 +3,6 @@
 namespace UnpakSipaksi.Modules.MetodeRencanaKegiatan.Application.DeleteMetodeRencanaKegiatan
 {
     public sealed record DeleteMetodeRencanaKegiatanCommand(
-        Guid uuid
+        string uuid
     ) : ICommand;
 }

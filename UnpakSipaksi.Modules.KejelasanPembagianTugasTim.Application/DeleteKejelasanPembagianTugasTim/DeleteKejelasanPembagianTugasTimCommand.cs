@@ -8,6 +8,6 @@ using UnpakSipaksi.Common.Application.Messaging;
 namespace UnpakSipaksi.Modules.KejelasanPembagianTugasTim.Application.DeleteKejelasanPembagianTugasTim
 {
     public sealed record DeleteKejelasanPembagianTugasTimCommand(
-        Guid uuid
+        string uuid
     ) : ICommand;
 }

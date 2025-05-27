@@ -17,11 +17,11 @@ namespace UnpakSipaksi.Modules.KategoriSumberDana.Application.UpdateKategoriSumb
     {
         public async Task<Result> Handle(UpdateKategoriSumberDanaCommand request, CancellationToken cancellationToken)
         {
-            Domain.KategoriSumberDana.KategoriSumberDana? existingKategoriSumberDana = await kategoriSumberDanaRepository.GetAsync(request.Uuid, cancellationToken);
+            Domain.KategoriSumberDana.KategoriSumberDana? existingKategoriSumberDana = await kategoriSumberDanaRepository.GetAsync(Guid.Parse(request.Uuid), cancellationToken);
 
             if (existingKategoriSumberDana is null)
             {
-                Result.Failure(KategoriSumberDanaErrors.NotFound(request.Uuid));
+                Result.Failure(KategoriSumberDanaErrors.NotFound(Guid.Parse(request.Uuid)));
             }
 
             Result<Domain.KategoriSumberDana.KategoriSumberDana> asset = Domain.KategoriSumberDana.KategoriSumberDana.Update(existingKategoriSumberDana!)

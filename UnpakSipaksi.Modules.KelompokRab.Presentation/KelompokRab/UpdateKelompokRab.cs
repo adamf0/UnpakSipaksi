@@ -18,7 +18,7 @@ namespace UnpakSipaksi.Modules.KelompokRab.Presentation.KelompokRab
             {
                 Result result = await sender.Send(new UpdateKelompokRabCommand(
                     request.Id,
-                    HtmlEncoder.Default.Encode(request.Nama)
+                    request.Nama
                     )
                 );
 
@@ -28,7 +28,7 @@ namespace UnpakSipaksi.Modules.KelompokRab.Presentation.KelompokRab
 
         internal sealed class UpdateKelompokRabRequest
         {
-            public Guid Id { get; set; }
+            public string Id { get; set; }
             public string Nama { get; set; }
         }
     }

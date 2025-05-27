@@ -3,6 +3,6 @@
 namespace UnpakSipaksi.Modules.KategoriSkema.Application.DeleteKategoriSkema
 {
     public sealed record DeleteKategoriSkemaCommand(
-        Guid uuid
+        string uuid
     ) : ICommand;
 }

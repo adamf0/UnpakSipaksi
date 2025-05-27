@@ -3,10 +3,9 @@ using System.Data.Common;
 using UnpakSipaksi.Common.Application.Data;
 using UnpakSipaksi.Common.Application.Messaging;
 using UnpakSipaksi.Common.Domain;
-using UnpakSipaksi.Modules.Metode.Application.GetMetode;
 using UnpakSipaksi.Modules.Metode.Domain.Metode;
 
-namespace UnpakSipaksi.Modules.Metode.Application.Get
+namespace UnpakSipaksi.Modules.Metode.Application.GetMetode
 {
     internal sealed class GetMetodeQueryHandler(IDbConnectionFactory dbConnectionFactory)
     : IQueryHandler<GetMetodeQuery, MetodeResponse>

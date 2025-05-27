@@ -13,7 +13,7 @@ namespace UnpakSipaksi.Modules.KelompokRab.Presentation.KelompokRab
     {
         public static void MapEndpoint(IEndpointRouteBuilder app)
         {
-            app.MapDelete("KelompokRab/{id}", async (Guid id, ISender sender) =>
+            app.MapDelete("KelompokRab/{id}", async (string id, ISender sender) =>
             {
                 Result result = await sender.Send(
                     new DeleteKelompokRabCommand(id)

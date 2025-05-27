@@ -8,7 +8,7 @@ using UnpakSipaksi.Common.Application.Messaging;
 namespace UnpakSipaksi.Modules.PenelitianHibah.Application.UpdateRumpunIlmu
 {
     public sealed record UpdateRumpunIlmuCommand(
-          string Uuid,
+          string UuidPenelitianHibah,
           string? RumpunIlmu1Id,
           string? RumpunIlmu2Id,
           string? RumpunIlmu3Id

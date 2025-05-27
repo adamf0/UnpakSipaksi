@@ -8,7 +8,7 @@ using UnpakSipaksi.Common.Application.Messaging;
 namespace UnpakSipaksi.Modules.PenelitianHibah.Application.DeleteMemberDosen
 {
     public sealed record DeleteMemberDosenCommand(
-        Guid Uuid,
+        string Uuid,
         string NIDN
     ) : ICommand;
 }

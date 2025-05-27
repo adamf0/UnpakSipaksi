@@ -21,6 +21,8 @@
 		<ProjectReference Include="..\UnpakSipaksi.Common.Application\UnpakSipaksi.Common.Application.csproj" />
 		<ProjectReference Include="..\UnpakSipaksi.Common.Domain\UnpakSipaksi.Common.Domain.csproj" />
 		<ProjectReference Include="..\UnpakSipaksi.Modules.FokusPenelitian.PublicApi\UnpakSipaksi.Modules.FokusPenelitian.PublicApi.csproj" />
+		<ProjectReference Include="..\UnpakSipaksi.Modules.Kategori.PublicApi\UnpakSipaksi.Modules.Kategori.PublicApi.csproj" />
+		<ProjectReference Include="..\UnpakSipaksi.Modules.KategoriLuaran.PublicApi\UnpakSipaksi.Modules.KategoriLuaran.PublicApi.csproj" />
 		<ProjectReference Include="..\UnpakSipaksi.Modules.KategoriSkema.PublicApi\UnpakSipaksi.Modules.KategoriSkema.PublicApi.csproj" />
 		<ProjectReference Include="..\UnpakSipaksi.Modules.KategoriTkt.PublicApi\UnpakSipaksi.Modules.KategoriTkt.PublicApi.csproj" />
 		<ProjectReference Include="..\UnpakSipaksi.Modules.PenelitianHibah.Domain\UnpakSipaksi.Modules.PenelitianHibah.Domain.csproj" />

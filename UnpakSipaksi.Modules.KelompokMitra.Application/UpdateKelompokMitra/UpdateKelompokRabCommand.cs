@@ -8,7 +8,7 @@ using UnpakSipaksi.Common.Application.Messaging;
 namespace UnpakSipaksi.Modules.KelompokMitra.Application.UpdateKelompokMitra
 {
     public sealed record UpdateKelompokMitraCommand(
-        Guid Uuid,
+        string Uuid,
         string Nama
     ) : ICommand;
 }

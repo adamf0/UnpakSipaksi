@@ -12,11 +12,11 @@ namespace UnpakSipaksi.Modules.RelevansiProdukKepentinganNasional.Application.Up
     {
         public async Task<Result> Handle(UpdateRelevansiProdukKepentinganNasionalCommand request, CancellationToken cancellationToken)
         {
-            Domain.RelevansiProdukKepentinganNasional.RelevansiProdukKepentinganNasional? existingRelevansiProdukKepentinganNasional = await RelevansiProdukKepentinganNasionalRepository.GetAsync(request.Uuid, cancellationToken);
+            Domain.RelevansiProdukKepentinganNasional.RelevansiProdukKepentinganNasional? existingRelevansiProdukKepentinganNasional = await RelevansiProdukKepentinganNasionalRepository.GetAsync(Guid.Parse(request.Uuid), cancellationToken);
 
             if (existingRelevansiProdukKepentinganNasional is null)
             {
-                Result.Failure(RelevansiProdukKepentinganNasionalErrors.NotFound(request.Uuid));
+                Result.Failure(RelevansiProdukKepentinganNasionalErrors.NotFound(Guid.Parse(request.Uuid)));
             }
 
             Result<Domain.RelevansiProdukKepentinganNasional.RelevansiProdukKepentinganNasional> asset = Domain.RelevansiProdukKepentinganNasional.RelevansiProdukKepentinganNasional.Update(existingRelevansiProdukKepentinganNasional!)

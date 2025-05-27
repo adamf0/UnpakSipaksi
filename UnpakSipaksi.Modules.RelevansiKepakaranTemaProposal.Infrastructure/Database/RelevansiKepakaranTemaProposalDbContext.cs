@@ -35,17 +35,8 @@ namespace UnpakSipaksi.Modules.RelevansiKepakaranTemaProposal.Infrastructure.Dat
                 entity.Property(e => e.Nama)
                       .HasColumnName("name");
 
-                entity.Property(e => e.BobotPDP)
-                      .HasColumnName("bobot_pdp");
-
-                entity.Property(e => e.BobotTerapan)
-                      .HasColumnName("bobot_terapan");
-
-                entity.Property(e => e.BobotKerjasama)
-                      .HasColumnName("bobot_kerjasama");
-
-                entity.Property(e => e.BobotPenelitianDasar)
-                      .HasColumnName("bobot_penelitian_dasar");
+                entity.Property(e => e.Skor)
+                      .HasColumnName("skor");
             });
         }
     }

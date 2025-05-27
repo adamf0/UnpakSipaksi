@@ -12,11 +12,11 @@ namespace UnpakSipaksi.Modules.KualitasIpteks.Application.DeleteKualitasIpteks
     {
         public async Task<Result> Handle(DeleteKualitasIpteksCommand request, CancellationToken cancellationToken)
         {
-            Domain.KualitasIpteks.KualitasIpteks? existingKualitasIpteks = await KualitasIpteksRepository.GetAsync(request.uuid, cancellationToken);
+            Domain.KualitasIpteks.KualitasIpteks? existingKualitasIpteks = await KualitasIpteksRepository.GetAsync(Guid.Parse(request.uuid), cancellationToken);
 
             if (existingKualitasIpteks is null)
             {
-                return Result.Failure(KualitasIpteksErrors.NotFound(request.uuid));
+                return Result.Failure(KualitasIpteksErrors.NotFound(Guid.Parse(request.uuid)));
             }
 
             await KualitasIpteksRepository.DeleteAsync(existingKualitasIpteks!);

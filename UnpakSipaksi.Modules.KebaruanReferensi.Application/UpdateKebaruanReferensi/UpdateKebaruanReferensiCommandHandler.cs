@@ -17,11 +17,11 @@ namespace UnpakSipaksi.Modules.KebaruanReferensi.Application.UpdateKebaruanRefer
     {
         public async Task<Result> Handle(UpdateKebaruanReferensiCommand request, CancellationToken cancellationToken)
         {
-            Domain.KebaruanReferensi.KebaruanReferensi? existingKebaruanReferensi = await kebaruanReferensiRepository.GetAsync(request.Uuid, cancellationToken);
+            Domain.KebaruanReferensi.KebaruanReferensi? existingKebaruanReferensi = await kebaruanReferensiRepository.GetAsync(Guid.Parse(request.Uuid), cancellationToken);
 
             if (existingKebaruanReferensi is null)
             {
-                Result.Failure(KebaruanReferensiErrors.NotFound(request.Uuid));
+                Result.Failure(KebaruanReferensiErrors.NotFound(Guid.Parse(request.Uuid)));
             }
 
             Result<Domain.KebaruanReferensi.KebaruanReferensi> asset = Domain.KebaruanReferensi.KebaruanReferensi.Update(existingKebaruanReferensi!)

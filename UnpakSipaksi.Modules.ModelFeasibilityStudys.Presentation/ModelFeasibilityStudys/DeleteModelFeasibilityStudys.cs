@@ -12,7 +12,7 @@ namespace UnpakSipaksi.Modules.ModelFeasibilityStudys.Presentation.ModelFeasibil
     {
         public static void MapEndpoint(IEndpointRouteBuilder app)
         {
-            app.MapDelete("ModelFeasibilityStudys/{id}", async (Guid id, ISender sender) =>
+            app.MapDelete("ModelFeasibilityStudys/{id}", async (string id, ISender sender) =>
             {
                 Result result = await sender.Send(
                     new DeleteModelFeasibilityStudysCommand(id)

@@ -17,11 +17,11 @@ namespace UnpakSipaksi.Modules.Rirn.Application.UpdateRirn
     {
         public async Task<Result> Handle(UpdateRirnCommand request, CancellationToken cancellationToken)
         {
-            Domain.Rirn.Rirn? existingRirn = await RirnRepository.GetAsync(request.Uuid, cancellationToken);
+            Domain.Rirn.Rirn? existingRirn = await RirnRepository.GetAsync(Guid.Parse(request.Uuid), cancellationToken);
 
             if (existingRirn is null)
             {
-                Result.Failure(RirnErrors.NotFound(request.Uuid));
+                Result.Failure(RirnErrors.NotFound(Guid.Parse(request.Uuid)));
             }
 
             Result<Domain.Rirn.Rirn> asset = Domain.Rirn.Rirn.Update(existingRirn!)

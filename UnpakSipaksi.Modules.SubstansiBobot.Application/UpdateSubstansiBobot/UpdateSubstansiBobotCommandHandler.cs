@@ -9,6 +9,7 @@ namespace UnpakSipaksi.Modules.SubstansiBobot.Application.UpdateSubstansiBobot
     )
     : ICommandHandler<UpdateSubstansiBobotCommand>
     {
+        //[PR] belum di eksekusi
         public async Task<Result> Handle(UpdateSubstansiBobotCommand request, CancellationToken cancellationToken)
         {
             return Result.Success();

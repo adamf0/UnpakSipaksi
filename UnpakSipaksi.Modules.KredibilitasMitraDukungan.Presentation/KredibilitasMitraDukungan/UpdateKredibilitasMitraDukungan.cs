@@ -29,7 +29,7 @@ namespace UnpakSipaksi.Modules.KredibilitasMitraDukungan.Presentation.Kredibilit
 
         internal sealed class UpdateKredibilitasMitraDukunganRequest
         {
-            public Guid Id { get; set; }
+            public string Id { get; set; }
             public string Nama { get; set; }
             public string BobotSkor { get; set; }
         }

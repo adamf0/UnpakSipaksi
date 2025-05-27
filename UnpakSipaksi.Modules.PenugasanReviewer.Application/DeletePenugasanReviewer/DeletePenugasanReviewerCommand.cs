@@ -3,6 +3,6 @@
 namespace UnpakSipaksi.Modules.PenugasanReviewer.Application.DeletePenugasanReviewer
 {
     public sealed record DeletePenugasanReviewerCommand(
-        Guid uuid
+        string uuid
     ) : ICommand;
 }

@@ -8,6 +8,6 @@ using UnpakSipaksi.Common.Application.Messaging;
 namespace UnpakSipaksi.Modules.KebaruanReferensi.Application.DeleteKebaruanReferensi
 {
     public sealed record DeleteKebaruanReferensiCommand(
-        Guid uuid
+        string uuid
     ) : ICommand;
 }

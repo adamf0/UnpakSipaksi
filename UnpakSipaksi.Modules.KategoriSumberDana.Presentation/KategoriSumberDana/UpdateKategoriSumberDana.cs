@@ -17,7 +17,7 @@ namespace UnpakSipaksi.Modules.KategoriSumberDana.Presentation.KategoriSumberDan
             {
                 Result result = await sender.Send(new UpdateKategoriSumberDanaCommand(
                     request.Id,
-                    HtmlEncoder.Default.Encode(request.Nama)
+                    request.Nama
                     )
                 );
 
@@ -27,7 +27,7 @@ namespace UnpakSipaksi.Modules.KategoriSumberDana.Presentation.KategoriSumberDan
 
         internal sealed class UpdateKategoriSumberDanaRequest
         {
-            public Guid Id { get; set; }
+            public string Id { get; set; }
             public string Nama { get; set; }
         }
     }

@@ -3,6 +3,6 @@
 namespace UnpakSipaksi.Modules.KetajamanAnalisis.Application.DeleteKetajamanAnalisis
 {
     public sealed record DeleteKetajamanAnalisisCommand(
-        Guid uuid
+        string uuid
     ) : ICommand;
 }

@@ -12,11 +12,11 @@ namespace UnpakSipaksi.Modules.SotaKebaharuan.Application.UpdateSotaKebaharuan
     {
         public async Task<Result> Handle(UpdateSotaKebaharuanCommand request, CancellationToken cancellationToken)
         {
-            Domain.SotaKebaharuan.SotaKebaharuan? existingSotaKebaharuan = await SotaKebaharuanRepository.GetAsync(request.Uuid, cancellationToken);
+            Domain.SotaKebaharuan.SotaKebaharuan? existingSotaKebaharuan = await SotaKebaharuanRepository.GetAsync(Guid.Parse(request.Uuid), cancellationToken);
 
             if (existingSotaKebaharuan is null)
             {
-                Result.Failure(SotaKebaharuanErrors.NotFound(request.Uuid));
+                Result.Failure(SotaKebaharuanErrors.NotFound(Guid.Parse(request.Uuid)));
             }
 
             Result<Domain.SotaKebaharuan.SotaKebaharuan> asset = Domain.SotaKebaharuan.SotaKebaharuan.Update(existingSotaKebaharuan!)

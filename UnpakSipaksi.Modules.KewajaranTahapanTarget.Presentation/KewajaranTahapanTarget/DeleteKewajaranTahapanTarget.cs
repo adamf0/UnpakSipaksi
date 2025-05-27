@@ -12,7 +12,7 @@ namespace UnpakSipaksi.Modules.KewajaranTahapanTarget.Presentation.KewajaranTaha
     {
         public static void MapEndpoint(IEndpointRouteBuilder app)
         {
-            app.MapDelete("KewajaranTahapanTarget/{id}", async (Guid id, ISender sender) =>
+            app.MapDelete("KewajaranTahapanTarget/{id}", async (string id, ISender sender) =>
             {
                 Result result = await sender.Send(
                     new DeleteKewajaranTahapanTargetCommand(id)

@@ -8,6 +8,6 @@ using UnpakSipaksi.Common.Application.Messaging;
 namespace UnpakSipaksi.Modules.JenisPublikasi.Application.DeleteJenisPublikasi
 {
     public sealed record DeleteJenisPublikasiCommand(
-        Guid uuid
+        string uuid
     ) : ICommand;
 }

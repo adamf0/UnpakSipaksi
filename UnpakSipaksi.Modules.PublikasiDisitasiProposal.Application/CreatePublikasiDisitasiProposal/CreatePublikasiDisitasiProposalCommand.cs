@@ -4,10 +4,6 @@ namespace UnpakSipaksi.Modules.PublikasiDisitasiProposal.Application.CreatePubli
 {
     public sealed record CreatePublikasiDisitasiProposalCommand(
         string Nama,
-        int BobotPDP,
-        int BobotTerapan,
-        int BobotKerjasama,
-        int BobotPenelitianDasar,
         int Skor
     ) : ICommand<Guid>;
 }

@@ -12,11 +12,11 @@ namespace UnpakSipaksi.Modules.KualitasKuantitasPublikasiJurnalIlmiah.Applicatio
     {
         public async Task<Result> Handle(DeleteKualitasKuantitasPublikasiJurnalIlmiahCommand request, CancellationToken cancellationToken)
         {
-            Domain.KualitasKuantitasPublikasiJurnalIlmiah.KualitasKuantitasPublikasiJurnalIlmiah? existingKualitasKuantitasPublikasiJurnalIlmiah = await KualitasKuantitasPublikasiJurnalIlmiahRepository.GetAsync(request.uuid, cancellationToken);
+            Domain.KualitasKuantitasPublikasiJurnalIlmiah.KualitasKuantitasPublikasiJurnalIlmiah? existingKualitasKuantitasPublikasiJurnalIlmiah = await KualitasKuantitasPublikasiJurnalIlmiahRepository.GetAsync(Guid.Parse(request.uuid), cancellationToken);
 
             if (existingKualitasKuantitasPublikasiJurnalIlmiah is null)
             {
-                return Result.Failure(KualitasKuantitasPublikasiJurnalIlmiahErrors.NotFound(request.uuid));
+                return Result.Failure(KualitasKuantitasPublikasiJurnalIlmiahErrors.NotFound(Guid.Parse(request.uuid)));
             }
 
             await KualitasKuantitasPublikasiJurnalIlmiahRepository.DeleteAsync(existingKualitasKuantitasPublikasiJurnalIlmiah!);

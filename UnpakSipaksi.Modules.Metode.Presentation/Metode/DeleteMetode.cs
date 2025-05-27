@@ -13,7 +13,7 @@ namespace UnpakSipaksi.Modules.Metode.Presentation.Metode
     {
         public static void MapEndpoint(IEndpointRouteBuilder app)
         {
-            app.MapDelete("Metode/{id}", async (Guid id, ISender sender) =>
+            app.MapDelete("Metode/{id}", async (string id, ISender sender) =>
             {
                 Result result = await sender.Send(
                     new DeleteMetodeCommand(id)

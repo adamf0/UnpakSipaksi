@@ -17,7 +17,7 @@ namespace UnpakSipaksi.Modules.FokusPenelitian.Presentation.FokusPenelitian
             {
                 Result result = await sender.Send(new UpdateFokusPenelitianCommand(
                     request.Id,
-                    HtmlEncoder.Default.Encode(request.Nama)
+                    request.Nama
                     )
                 );
 
@@ -27,7 +27,7 @@ namespace UnpakSipaksi.Modules.FokusPenelitian.Presentation.FokusPenelitian
 
         internal sealed class UpdateFokusPenelitianRequest
         {
-            public Guid Id { get; set; }
+            public string Id { get; set; }
             public string Nama { get; set; }
         }
     }

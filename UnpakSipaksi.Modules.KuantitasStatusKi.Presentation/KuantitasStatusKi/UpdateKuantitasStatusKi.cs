@@ -17,8 +17,8 @@ namespace UnpakSipaksi.Modules.KuantitasStatusKi.Presentation.KuantitasStatusKi
             {
                 Result result = await sender.Send(new UpdateKuantitasStatusKiCommand(
                     request.Id,
-                    HtmlEncoder.Default.Encode(request.Nama),
-                    int.Parse(HtmlEncoder.Default.Encode(request.Nilai))
+                    request.Nama,
+                    request.Nilai
                     )
                 );
 
@@ -28,9 +28,9 @@ namespace UnpakSipaksi.Modules.KuantitasStatusKi.Presentation.KuantitasStatusKi
 
         internal sealed class UpdateKuantitasStatusKiRequest
         {
-            public Guid Id { get; set; }
+            public string Id { get; set; }
             public string Nama { get; set; }
-            public string Nilai { get; set; }
+            public int Nilai { get; set; }
         }
     }
 }

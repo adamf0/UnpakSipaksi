@@ -18,7 +18,7 @@ namespace UnpakSipaksi.Modules.RumpunIlmu2.Presentation.RumpunIlmu2
             {
                 Result result = await sender.Send(new UpdateRumpunIlmu2Command(
                     request.Id,
-                    HtmlEncoder.Default.Encode(request.Nama),
+                    request.Nama,
                     request.UuidRumpunIlmu1
                     )
                 );
@@ -29,9 +29,9 @@ namespace UnpakSipaksi.Modules.RumpunIlmu2.Presentation.RumpunIlmu2
 
         internal sealed class UpdateRumpunIlmu2Request
         {
-            public Guid Id { get; set; }
+            public string Id { get; set; }
             public string Nama { get; set; }
-            public Guid UuidRumpunIlmu1 { get; set; }
+            public string UuidRumpunIlmu1 { get; set; }
         }
     }
 }

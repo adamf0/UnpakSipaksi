@@ -17,11 +17,11 @@ namespace UnpakSipaksi.Modules.KelompokRab.Application.DeleteKelompokRab
     {
         public async Task<Result> Handle(DeleteKelompokRabCommand request, CancellationToken cancellationToken)
         {
-            Domain.KelompokRab.KelompokRab? existingKelompokRab = await kelompokRabRepository.GetAsync(request.uuid, cancellationToken);
+            Domain.KelompokRab.KelompokRab? existingKelompokRab = await kelompokRabRepository.GetAsync(Guid.Parse(request.uuid), cancellationToken);
 
             if (existingKelompokRab is null)
             {
-                return Result.Failure(KelompokRabErrors.NotFound(request.uuid));
+                return Result.Failure(KelompokRabErrors.NotFound(Guid.Parse(request.uuid)));
             }
 
             await kelompokRabRepository.DeleteAsync(existingKelompokRab!);

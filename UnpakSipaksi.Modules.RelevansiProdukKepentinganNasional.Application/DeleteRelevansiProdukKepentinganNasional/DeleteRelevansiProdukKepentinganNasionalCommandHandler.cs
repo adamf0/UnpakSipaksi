@@ -12,11 +12,11 @@ namespace UnpakSipaksi.Modules.RelevansiProdukKepentinganNasional.Application.De
     {
         public async Task<Result> Handle(DeleteRelevansiProdukKepentinganNasionalCommand request, CancellationToken cancellationToken)
         {
-            Domain.RelevansiProdukKepentinganNasional.RelevansiProdukKepentinganNasional? existingRelevansiProdukKepentinganNasional = await RelevansiProdukKepentinganNasionalRepository.GetAsync(request.uuid, cancellationToken);
+            Domain.RelevansiProdukKepentinganNasional.RelevansiProdukKepentinganNasional? existingRelevansiProdukKepentinganNasional = await RelevansiProdukKepentinganNasionalRepository.GetAsync(Guid.Parse(request.uuid), cancellationToken);
 
             if (existingRelevansiProdukKepentinganNasional is null)
             {
-                return Result.Failure(RelevansiProdukKepentinganNasionalErrors.NotFound(request.uuid));
+                return Result.Failure(RelevansiProdukKepentinganNasionalErrors.NotFound(Guid.Parse(request.uuid)));
             }
 
             await RelevansiProdukKepentinganNasionalRepository.DeleteAsync(existingRelevansiProdukKepentinganNasional!);

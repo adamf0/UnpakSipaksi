@@ -17,11 +17,11 @@ namespace UnpakSipaksi.Modules.KesesuaianJadwal.Application.DeleteKesesuaianJadw
     {
         public async Task<Result> Handle(DeleteKesesuaianJadwalCommand request, CancellationToken cancellationToken)
         {
-            Domain.KesesuaianJadwal.KesesuaianJadwal? existingKesesuaianJadwal = await kesesuaianJadwalRepository.GetAsync(request.uuid, cancellationToken);
+            Domain.KesesuaianJadwal.KesesuaianJadwal? existingKesesuaianJadwal = await kesesuaianJadwalRepository.GetAsync(Guid.Parse(request.uuid), cancellationToken);
 
             if (existingKesesuaianJadwal is null)
             {
-                return Result.Failure(KesesuaianJadwalErrors.NotFound(request.uuid));
+                return Result.Failure(KesesuaianJadwalErrors.NotFound(Guid.Parse(request.uuid)));
             }
 
             await kesesuaianJadwalRepository.DeleteAsync(existingKesesuaianJadwal!);

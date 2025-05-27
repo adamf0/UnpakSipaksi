@@ -17,7 +17,7 @@ namespace UnpakSipaksi.Modules.Rirn.Presentation.Rirn
             app.MapPost("Rirn", async (CreateRirnRequest request, ISender sender) =>
             {
                 Result<Guid> result = await sender.Send(new CreateRirnCommand(
-                    HtmlEncoder.Default.Encode(request.Nama)
+                    request.Nama
                     )
                 );
 
@@ -28,7 +28,6 @@ namespace UnpakSipaksi.Modules.Rirn.Presentation.Rirn
         internal sealed class CreateRirnRequest
         {
             public string Nama { get; set; }
-            public Guid TemaPenelitianId { get; set; }
         }
     }
 }

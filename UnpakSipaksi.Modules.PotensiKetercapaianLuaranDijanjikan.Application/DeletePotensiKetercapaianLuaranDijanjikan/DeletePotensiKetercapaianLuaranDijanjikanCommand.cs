@@ -3,6 +3,6 @@
 namespace UnpakSipaksi.Modules.PotensiKetercapaianLuaranDijanjikan.Application.DeletePotensiKetercapaianLuaranDijanjikan
 {
     public sealed record DeletePotensiKetercapaianLuaranDijanjikanCommand(
-        Guid uuid
+        string uuid
     ) : ICommand;
 }

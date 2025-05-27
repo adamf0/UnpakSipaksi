@@ -17,11 +17,11 @@ namespace UnpakSipaksi.Modules.PrioritasRiset.Application.DeletePrioritasRiset
     {
         public async Task<Result> Handle(DeletePrioritasRisetCommand request, CancellationToken cancellationToken)
         {
-            Domain.PrioritasRiset.PrioritasRiset? existingPrioritasRiset = await PrioritasRisetRepository.GetAsync(request.uuid, cancellationToken);
+            Domain.PrioritasRiset.PrioritasRiset? existingPrioritasRiset = await PrioritasRisetRepository.GetAsync(Guid.Parse(request.uuid), cancellationToken);
 
             if (existingPrioritasRiset is null)
             {
-                return Result.Failure(PrioritasRisetErrors.NotFound(request.uuid));
+                return Result.Failure(PrioritasRisetErrors.NotFound(Guid.Parse(request.uuid)));
             }
 
             await PrioritasRisetRepository.DeleteAsync(existingPrioritasRiset!);

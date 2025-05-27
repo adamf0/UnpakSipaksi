@@ -19,11 +19,11 @@ namespace UnpakSipaksi.Modules.TopikPenelitian.Application.CreateTopikPenelitian
     {
         public async Task<Result<Guid>> Handle(CreateTopikPenelitianCommand request, CancellationToken cancellationToken)
         {
-            TemaPenelitianResponse? temaPenelitian = await temaPenelitianApi.GetAsync(request.TemaPenelitianId, cancellationToken);
+            TemaPenelitianResponse? temaPenelitian = await temaPenelitianApi.GetAsync(Guid.Parse(request.TemaPenelitianId), cancellationToken);
 
             if (temaPenelitian is null)
             {
-                return Result.Failure<Guid>(TopikPenelitianErrors.TemaPenelitianNotFound(request.TemaPenelitianId));
+                return Result.Failure<Guid>(TopikPenelitianErrors.TemaPenelitianNotFound(Guid.Parse(request.TemaPenelitianId)));
             }
 
             Result<Domain.TopikPenelitian.TopikPenelitian> result = Domain.TopikPenelitian.TopikPenelitian.Create(

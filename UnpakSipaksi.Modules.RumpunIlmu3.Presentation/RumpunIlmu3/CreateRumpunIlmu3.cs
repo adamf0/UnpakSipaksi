@@ -17,7 +17,7 @@ namespace UnpakSipaksi.Modules.RumpunIlmu3.Presentation.RumpunIlmu3
             app.MapPost("RumpunIlmu3", async (CreateRumpunIlmu3Request request, ISender sender) =>
             {
                 Result<Guid> result = await sender.Send(new CreateRumpunIlmu3Command(
-                    HtmlEncoder.Default.Encode(request.Nama),
+                    request.Nama,
                     request.UuidRumpunIlmu2
                     )
                 );
@@ -29,7 +29,7 @@ namespace UnpakSipaksi.Modules.RumpunIlmu3.Presentation.RumpunIlmu3
         internal sealed class CreateRumpunIlmu3Request
         {
             public string Nama { get; set; }
-            public Guid UuidRumpunIlmu2 { get; set; }
+            public string UuidRumpunIlmu2 { get; set; }
         }
     }
 }

@@ -8,7 +8,7 @@ using UnpakSipaksi.Common.Application.Messaging;
 namespace UnpakSipaksi.Modules.JenisPublikasi.Application.UpdateJenisPublikasi
 {
     public sealed record UpdateJenisPublikasiCommand(
-        Guid Uuid,
+        string Uuid,
         string Nama,
         int Sbu
     ) : ICommand;

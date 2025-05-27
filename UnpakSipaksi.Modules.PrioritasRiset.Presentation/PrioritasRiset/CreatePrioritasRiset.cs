@@ -17,7 +17,7 @@ namespace UnpakSipaksi.Modules.PrioritasRiset.Presentation.PrioritasRiset
             app.MapPost("PrioritasRiset", async (CreatePrioritasRisetRequest request, ISender sender) =>
             {
                 Result<Guid> result = await sender.Send(new CreatePrioritasRisetCommand(
-                    HtmlEncoder.Default.Encode(request.Nama)
+                    request.Nama
                     )
                 );
 
@@ -28,7 +28,6 @@ namespace UnpakSipaksi.Modules.PrioritasRiset.Presentation.PrioritasRiset
         internal sealed class CreatePrioritasRisetRequest
         {
             public string Nama { get; set; }
-            public Guid TemaPenelitianId { get; set; }
         }
     }
 }

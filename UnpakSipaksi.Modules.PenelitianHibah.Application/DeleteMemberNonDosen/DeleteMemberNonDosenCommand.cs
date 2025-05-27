@@ -8,6 +8,6 @@ using UnpakSipaksi.Common.Application.Messaging;
 namespace UnpakSipaksi.Modules.PenelitianHibah.Application.DeleteMemberNonDosen
 {
     public sealed record DeleteMemberNonDosenCommand(
-        Guid Uuid
+        string Uuid
     ) : ICommand;
 }

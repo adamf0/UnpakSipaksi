@@ -229,6 +229,26 @@
           "bin/placeholder/UnpakSipaksi.Modules.FokusPenelitian.PublicApi.dll": {}
         }
       },
+      "UnpakSipaksi.Modules.Kategori.PublicApi/1.0.0": {
+        "type": "project",
+        "framework": ".NETCoreApp,Version=v8.0",
+        "compile": {
+          "bin/placeholder/UnpakSipaksi.Modules.Kategori.PublicApi.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/UnpakSipaksi.Modules.Kategori.PublicApi.dll": {}
+        }
+      },
+      "UnpakSipaksi.Modules.KategoriLuaran.PublicApi/1.0.0": {
+        "type": "project",
+        "framework": ".NETCoreApp,Version=v8.0",
+        "compile": {
+          "bin/placeholder/UnpakSipaksi.Modules.KategoriLuaran.PublicApi.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/UnpakSipaksi.Modules.KategoriLuaran.PublicApi.dll": {}
+        }
+      },
       "UnpakSipaksi.Modules.KategoriSkema.PublicApi/1.0.0": {
         "type": "project",
         "framework": ".NETCoreApp,Version=v8.0",
@@ -669,6 +689,16 @@
       "path": "../UnpakSipaksi.Modules.FokusPenelitian.PublicApi/UnpakSipaksi.Modules.FokusPenelitian.PublicApi.csproj",
       "msbuildProject": "../UnpakSipaksi.Modules.FokusPenelitian.PublicApi/UnpakSipaksi.Modules.FokusPenelitian.PublicApi.csproj"
     },
+    "UnpakSipaksi.Modules.Kategori.PublicApi/1.0.0": {
+      "type": "project",
+      "path": "../UnpakSipaksi.Modules.Kategori.PublicApi/UnpakSipaksi.Modules.Kategori.PublicApi.csproj",
+      "msbuildProject": "../UnpakSipaksi.Modules.Kategori.PublicApi/UnpakSipaksi.Modules.Kategori.PublicApi.csproj"
+    },
+    "UnpakSipaksi.Modules.KategoriLuaran.PublicApi/1.0.0": {
+      "type": "project",
+      "path": "../UnpakSipaksi.Modules.KategoriLuaran.PublicApi/UnpakSipaksi.Modules.KategoriLuaran.PublicApi.csproj",
+      "msbuildProject": "../UnpakSipaksi.Modules.KategoriLuaran.PublicApi/UnpakSipaksi.Modules.KategoriLuaran.PublicApi.csproj"
+    },
     "UnpakSipaksi.Modules.KategoriSkema.PublicApi/1.0.0": {
       "type": "project",
       "path": "../UnpakSipaksi.Modules.KategoriSkema.PublicApi/UnpakSipaksi.Modules.KategoriSkema.PublicApi.csproj",
@@ -727,6 +757,8 @@
       "UnpakSipaksi.Common.Application >= 1.0.0",
       "UnpakSipaksi.Common.Domain >= 1.0.0",
       "UnpakSipaksi.Modules.FokusPenelitian.PublicApi >= 1.0.0",
+      "UnpakSipaksi.Modules.Kategori.PublicApi >= 1.0.0",
+      "UnpakSipaksi.Modules.KategoriLuaran.PublicApi >= 1.0.0",
       "UnpakSipaksi.Modules.KategoriSkema.PublicApi >= 1.0.0",
       "UnpakSipaksi.Modules.KategoriTkt.PublicApi >= 1.0.0",
       "UnpakSipaksi.Modules.PenelitianHibah.Domain >= 1.0.0",
@@ -775,6 +807,12 @@
             },
             "C:\\dev_net\\UnpakSipaksi\\UnpakSipaksi.Modules.FokusPenelitian.PublicApi\\UnpakSipaksi.Modules.FokusPenelitian.PublicApi.csproj": {
               "projectPath": "C:\\dev_net\\UnpakSipaksi\\UnpakSipaksi.Modules.FokusPenelitian.PublicApi\\UnpakSipaksi.Modules.FokusPenelitian.PublicApi.csproj"
+            },
+            "C:\\dev_net\\UnpakSipaksi\\UnpakSipaksi.Modules.Kategori.PublicApi\\UnpakSipaksi.Modules.Kategori.PublicApi.csproj": {
+              "projectPath": "C:\\dev_net\\UnpakSipaksi\\UnpakSipaksi.Modules.Kategori.PublicApi\\UnpakSipaksi.Modules.Kategori.PublicApi.csproj"
+            },
+            "C:\\dev_net\\UnpakSipaksi\\UnpakSipaksi.Modules.KategoriLuaran.PublicApi\\UnpakSipaksi.Modules.KategoriLuaran.PublicApi.csproj": {
+              "projectPath": "C:\\dev_net\\UnpakSipaksi\\UnpakSipaksi.Modules.KategoriLuaran.PublicApi\\UnpakSipaksi.Modules.KategoriLuaran.PublicApi.csproj"
             },
             "C:\\dev_net\\UnpakSipaksi\\UnpakSipaksi.Modules.KategoriSkema.PublicApi\\UnpakSipaksi.Modules.KategoriSkema.PublicApi.csproj": {
               "projectPath": "C:\\dev_net\\UnpakSipaksi\\UnpakSipaksi.Modules.KategoriSkema.PublicApi\\UnpakSipaksi.Modules.KategoriSkema.PublicApi.csproj"

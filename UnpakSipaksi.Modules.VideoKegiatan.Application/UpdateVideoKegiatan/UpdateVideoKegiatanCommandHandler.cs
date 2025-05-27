@@ -12,11 +12,11 @@ namespace UnpakSipaksi.Modules.VideoKegiatan.Application.UpdateVideoKegiatan
     {
         public async Task<Result> Handle(UpdateVideoKegiatanCommand request, CancellationToken cancellationToken)
         {
-            Domain.VideoKegiatan.VideoKegiatan? existingVideoKegiatan = await VideoKegiatanRepository.GetAsync(request.Uuid, cancellationToken);
+            Domain.VideoKegiatan.VideoKegiatan? existingVideoKegiatan = await VideoKegiatanRepository.GetAsync(Guid.Parse(request.Uuid), cancellationToken);
 
             if (existingVideoKegiatan is null)
             {
-                Result.Failure(VideoKegiatanErrors.NotFound(request.Uuid));
+                Result.Failure(VideoKegiatanErrors.NotFound(Guid.Parse(request.Uuid)));
             }
 
             Result<Domain.VideoKegiatan.VideoKegiatan> asset = Domain.VideoKegiatan.VideoKegiatan.Update(existingVideoKegiatan!)

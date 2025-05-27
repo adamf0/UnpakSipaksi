@@ -12,7 +12,7 @@ namespace UnpakSipaksi.Modules.InovasiPemecahanMasalah.Presentation.InovasiPemec
     {
         public static void MapEndpoint(IEndpointRouteBuilder app)
         {
-            app.MapDelete("InovasiPemecahanMasalah/{id}", async (Guid id, ISender sender) =>
+            app.MapDelete("InovasiPemecahanMasalah/{id}", async (string id, ISender sender) =>
             {
                 Result result = await sender.Send(
                     new DeleteInovasiPemecahanMasalahCommand(id)

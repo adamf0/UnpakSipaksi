@@ -12,11 +12,11 @@ namespace UnpakSipaksi.Modules.RelevansiKepakaranTemaProposal.Application.Delete
     {
         public async Task<Result> Handle(DeleteRelevansiKepakaranTemaProposalCommand request, CancellationToken cancellationToken)
         {
-            Domain.RelevansiKepakaranTemaProposal.RelevansiKepakaranTemaProposal? existingRelevansiKepakaranTemaProposal = await RelevansiKepakaranTemaProposalRepository.GetAsync(request.uuid, cancellationToken);
+            Domain.RelevansiKepakaranTemaProposal.RelevansiKepakaranTemaProposal? existingRelevansiKepakaranTemaProposal = await RelevansiKepakaranTemaProposalRepository.GetAsync(Guid.Parse(request.uuid), cancellationToken);
 
             if (existingRelevansiKepakaranTemaProposal is null)
             {
-                return Result.Failure(RelevansiKepakaranTemaProposalErrors.NotFound(request.uuid));
+                return Result.Failure(RelevansiKepakaranTemaProposalErrors.NotFound(Guid.Parse(request.uuid)));
             }
 
             await RelevansiKepakaranTemaProposalRepository.DeleteAsync(existingRelevansiKepakaranTemaProposal!);

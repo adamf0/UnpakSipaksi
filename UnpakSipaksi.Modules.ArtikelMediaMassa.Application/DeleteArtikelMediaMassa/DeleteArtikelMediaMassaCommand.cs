@@ -8,6 +8,6 @@ using UnpakSipaksi.Common.Application.Messaging;
 namespace UnpakSipaksi.Modules.ArtikelMediaMassa.Application.DeleteArtikelMediaMassa
 {
     public sealed record DeleteArtikelMediaMassaCommand(
-        Guid uuid
+        string uuid
     ) : ICommand;
 }

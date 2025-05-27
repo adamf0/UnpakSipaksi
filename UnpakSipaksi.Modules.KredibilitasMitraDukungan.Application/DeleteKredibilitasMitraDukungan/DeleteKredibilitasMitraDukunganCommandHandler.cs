@@ -12,11 +12,11 @@ namespace UnpakSipaksi.Modules.KredibilitasMitraDukungan.Application.DeleteKredi
     {
         public async Task<Result> Handle(DeleteKredibilitasMitraDukunganCommand request, CancellationToken cancellationToken)
         {
-            Domain.KredibilitasMitraDukungan.KredibilitasMitraDukungan? existingKredibilitasMitraDukungan = await KredibilitasMitraDukunganRepository.GetAsync(request.uuid, cancellationToken);
+            Domain.KredibilitasMitraDukungan.KredibilitasMitraDukungan? existingKredibilitasMitraDukungan = await KredibilitasMitraDukunganRepository.GetAsync(Guid.Parse(request.uuid), cancellationToken);
 
             if (existingKredibilitasMitraDukungan is null)
             {
-                return Result.Failure(KredibilitasMitraDukunganErrors.NotFound(request.uuid));
+                return Result.Failure(KredibilitasMitraDukunganErrors.NotFound(Guid.Parse(request.uuid)));
             }
 
             await KredibilitasMitraDukunganRepository.DeleteAsync(existingKredibilitasMitraDukungan!);

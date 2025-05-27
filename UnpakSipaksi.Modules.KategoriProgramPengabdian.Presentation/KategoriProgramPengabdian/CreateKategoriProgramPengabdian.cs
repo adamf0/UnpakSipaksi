@@ -17,7 +17,7 @@ namespace UnpakSipaksi.Modules.KategoriProgramPengabdian.Presentation.KategoriPr
             app.MapPost("KategoriProgramPengabdian", async (CreateKategoriProgramPengabdianRequest request, ISender sender) =>
             {
                 Result<Guid> result = await sender.Send(new CreateKategoriProgramPengabdianCommand(
-                    HtmlEncoder.Default.Encode(request.Nama),
+                    request.Nama,
                     request.Rule
                     )
                 );

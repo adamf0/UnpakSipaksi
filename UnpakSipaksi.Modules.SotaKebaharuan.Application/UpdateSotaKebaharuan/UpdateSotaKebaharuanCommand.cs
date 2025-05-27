@@ -3,7 +3,7 @@
 namespace UnpakSipaksi.Modules.SotaKebaharuan.Application.UpdateSotaKebaharuan
 {
     public sealed record UpdateSotaKebaharuanCommand(
-        Guid Uuid,
+        string Uuid,
         string Nama,
         int Skor
     ) : ICommand;

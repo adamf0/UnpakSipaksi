@@ -17,11 +17,11 @@ namespace UnpakSipaksi.Modules.KejelasanPembagianTugasTim.Application.DeleteKeje
     {
         public async Task<Result> Handle(DeleteKejelasanPembagianTugasTimCommand request, CancellationToken cancellationToken)
         {
-            Domain.KejelasanPembagianTugasTim.KejelasanPembagianTugasTim? existingKejelasanPembagianTugasTim = await kejelasanPembagianTugasTimRepository.GetAsync(request.uuid, cancellationToken);
+            Domain.KejelasanPembagianTugasTim.KejelasanPembagianTugasTim? existingKejelasanPembagianTugasTim = await kejelasanPembagianTugasTimRepository.GetAsync(Guid.Parse(request.uuid), cancellationToken);
 
             if (existingKejelasanPembagianTugasTim is null)
             {
-                return Result.Failure(KejelasanPembagianTugasTimErrors.NotFound(request.uuid));
+                return Result.Failure(KejelasanPembagianTugasTimErrors.NotFound(Guid.Parse(request.uuid)));
             }
 
             await kejelasanPembagianTugasTimRepository.DeleteAsync(existingKejelasanPembagianTugasTim!);

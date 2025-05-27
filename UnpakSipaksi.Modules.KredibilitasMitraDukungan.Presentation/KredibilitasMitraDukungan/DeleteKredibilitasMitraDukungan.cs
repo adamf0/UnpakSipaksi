@@ -13,7 +13,7 @@ namespace UnpakSipaksi.Modules.KredibilitasMitraDukungan.Presentation.Kredibilit
     {
         public static void MapEndpoint(IEndpointRouteBuilder app)
         {
-            app.MapDelete("KredibilitasMitraDukungan/{id}", async (Guid id, ISender sender) =>
+            app.MapDelete("KredibilitasMitraDukungan/{id}", async (string id, ISender sender) =>
             {
                 Result result = await sender.Send(
                     new DeleteKredibilitasMitraDukunganCommand(id)

@@ -12,7 +12,7 @@ namespace UnpakSipaksi.Modules.AuthorSinta.Presentation.AuthorSinta
     {
         public static void MapEndpoint(IEndpointRouteBuilder app)
         {
-            app.MapDelete("AuthorSinta/{id}", async (Guid id, ISender sender) =>
+            app.MapDelete("AuthorSinta/{id}", async (string id, ISender sender) =>
             {
                 Result result = await sender.Send(
                     new DeleteAuthorSintaCommand(id)

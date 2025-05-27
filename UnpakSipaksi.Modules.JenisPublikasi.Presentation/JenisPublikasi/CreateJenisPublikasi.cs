@@ -16,8 +16,8 @@ namespace UnpakSipaksi.Modules.JenisPublikasi.Presentation.JenisPublikasi
             app.MapPost("JenisPublikasi", async (CreateJenisPublikasiRequest request, ISender sender) =>
             {
                 Result<Guid> result = await sender.Send(new CreateJenisPublikasiCommand(
-                    HtmlEncoder.Default.Encode(request.Nama),
-                    int.Parse(HtmlEncoder.Default.Encode(request.Sbu))
+                    request.Nama,
+                    request.Sbu
                     )
                 );
 
@@ -29,7 +29,7 @@ namespace UnpakSipaksi.Modules.JenisPublikasi.Presentation.JenisPublikasi
         {
             public string Nama { get; set; }
 
-            public string Sbu { get; set; }
+            public int Sbu { get; set; }
         }
     }
 }

@@ -17,11 +17,11 @@ namespace UnpakSipaksi.Modules.KategoriTkt.Application.UpdateKategoriTkt
     {
         public async Task<Result> Handle(UpdateKategoriTktCommand request, CancellationToken cancellationToken)
         {
-            Domain.KategoriTkt.KategoriTkt? existingKategoriTkt = await kategoriTktRepository.GetAsync(request.Uuid, cancellationToken);
+            Domain.KategoriTkt.KategoriTkt? existingKategoriTkt = await kategoriTktRepository.GetAsync(Guid.Parse(request.Uuid), cancellationToken);
 
             if (existingKategoriTkt is null)
             {
-                Result.Failure(KategoriTktErrors.NotFound(request.Uuid));
+                Result.Failure(KategoriTktErrors.NotFound(Guid.Parse(request.Uuid)));
             }
 
             Result<Domain.KategoriTkt.KategoriTkt> asset = Domain.KategoriTkt.KategoriTkt.Update(existingKategoriTkt!)

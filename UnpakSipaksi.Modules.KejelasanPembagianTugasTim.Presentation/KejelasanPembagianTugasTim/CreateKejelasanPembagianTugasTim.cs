@@ -17,8 +17,8 @@ namespace UnpakSipaksi.Modules.KejelasanPembagianTugasTim.Presentation.Kejelasan
             app.MapPost("KejelasanPembagianTugasTim", async (CreateKejelasanPembagianTugasTimRequest request, ISender sender) =>
             {
                 Result<Guid> result = await sender.Send(new CreateKejelasanPembagianTugasTimCommand(
-                    HtmlEncoder.Default.Encode(request.Nama),
-                    int.Parse(HtmlEncoder.Default.Encode(request.Skor))
+                    request.Nama,
+                    request.Skor
                     )
                 );
 
@@ -29,7 +29,7 @@ namespace UnpakSipaksi.Modules.KejelasanPembagianTugasTim.Presentation.Kejelasan
         internal sealed class CreateKejelasanPembagianTugasTimRequest
         {
             public string Nama { get; set; }
-            public string Skor { get; set; }
+            public int Skor { get; set; }
         }
     }
 }

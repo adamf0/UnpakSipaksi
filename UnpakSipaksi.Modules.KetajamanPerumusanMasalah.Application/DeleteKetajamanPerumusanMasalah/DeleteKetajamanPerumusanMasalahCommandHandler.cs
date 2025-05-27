@@ -12,11 +12,11 @@ namespace UnpakSipaksi.Modules.KetajamanPerumusanMasalah.Application.DeleteKetaj
     {
         public async Task<Result> Handle(DeleteKetajamanPerumusanMasalahCommand request, CancellationToken cancellationToken)
         {
-            Domain.KetajamanPerumusanMasalah.KetajamanPerumusanMasalah? existingKetajamanPerumusanMasalah = await KetajamanPerumusanMasalahRepository.GetAsync(request.uuid, cancellationToken);
+            Domain.KetajamanPerumusanMasalah.KetajamanPerumusanMasalah? existingKetajamanPerumusanMasalah = await KetajamanPerumusanMasalahRepository.GetAsync(Guid.Parse(request.uuid), cancellationToken);
 
             if (existingKetajamanPerumusanMasalah is null)
             {
-                return Result.Failure(KetajamanPerumusanMasalahErrors.NotFound(request.uuid));
+                return Result.Failure(KetajamanPerumusanMasalahErrors.NotFound(Guid.Parse(request.uuid)));
             }
 
             await KetajamanPerumusanMasalahRepository.DeleteAsync(existingKetajamanPerumusanMasalah!);

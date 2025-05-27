@@ -16,7 +16,7 @@ namespace UnpakSipaksi.Modules.FokusPengabdian.Presentation.FokusPengabdian
             app.MapPost("FokusPengabdian", async (CreateFokusPengabdianRequest request, ISender sender) =>
             {
                 Result<Guid> result = await sender.Send(new CreateFokusPengabdianCommand(
-                    HtmlEncoder.Default.Encode(request.Nama)
+                    request.Nama
                     )
                 );
 

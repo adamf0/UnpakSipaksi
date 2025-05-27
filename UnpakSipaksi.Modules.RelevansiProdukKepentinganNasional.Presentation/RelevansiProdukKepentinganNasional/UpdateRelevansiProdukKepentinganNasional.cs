@@ -28,7 +28,7 @@ namespace UnpakSipaksi.Modules.RelevansiProdukKepentinganNasional.Presentation.R
 
         internal sealed class UpdateRelevansiProdukKepentinganNasionalRequest
         {
-            public Guid Id { get; set; }
+            public string Id { get; set; }
             public string Nama { get; set; }
             public string BobotSkor { get; set; }
         }

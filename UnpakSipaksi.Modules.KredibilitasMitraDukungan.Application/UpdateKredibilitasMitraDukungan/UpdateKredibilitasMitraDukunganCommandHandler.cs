@@ -12,11 +12,11 @@ namespace UnpakSipaksi.Modules.KredibilitasMitraDukungan.Application.UpdateKredi
     {
         public async Task<Result> Handle(UpdateKredibilitasMitraDukunganCommand request, CancellationToken cancellationToken)
         {
-            Domain.KredibilitasMitraDukungan.KredibilitasMitraDukungan? existingKredibilitasMitraDukungan = await KredibilitasMitraDukunganRepository.GetAsync(request.Uuid, cancellationToken);
+            Domain.KredibilitasMitraDukungan.KredibilitasMitraDukungan? existingKredibilitasMitraDukungan = await KredibilitasMitraDukunganRepository.GetAsync(Guid.Parse(request.Uuid), cancellationToken);
 
             if (existingKredibilitasMitraDukungan is null)
             {
-                Result.Failure(KredibilitasMitraDukunganErrors.NotFound(request.Uuid));
+                Result.Failure(KredibilitasMitraDukunganErrors.NotFound(Guid.Parse(request.Uuid)));
             }
 
             Result<Domain.KredibilitasMitraDukungan.KredibilitasMitraDukungan> asset = Domain.KredibilitasMitraDukungan.KredibilitasMitraDukungan.Update(existingKredibilitasMitraDukungan!)

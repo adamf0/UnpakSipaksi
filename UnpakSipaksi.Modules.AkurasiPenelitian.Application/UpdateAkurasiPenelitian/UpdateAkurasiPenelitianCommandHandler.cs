@@ -17,11 +17,11 @@ namespace UnpakSipaksi.Modules.AkurasiPenelitian.Application.UpdateAkurasiPeneli
     {
         public async Task<Result> Handle(UpdateAkurasiPenelitianCommand request, CancellationToken cancellationToken)
         {
-            Domain.AkurasiPenelitian.AkurasiPenelitian? existingAkurasiPenelitian = await akurasiPenelitianRepository.GetAsync(request.Uuid, cancellationToken);
+            Domain.AkurasiPenelitian.AkurasiPenelitian? existingAkurasiPenelitian = await akurasiPenelitianRepository.GetAsync(Guid.Parse(request.Uuid), cancellationToken);
 
             if (existingAkurasiPenelitian is null)
             {
-                Result.Failure(AkurasiPenelitianErrors.NotFound(request.Uuid));
+                Result.Failure(AkurasiPenelitianErrors.NotFound(Guid.Parse(request.Uuid)));
             }
 
             Result<Domain.AkurasiPenelitian.AkurasiPenelitian> asset = Domain.AkurasiPenelitian.AkurasiPenelitian.Update(existingAkurasiPenelitian!)

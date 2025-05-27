@@ -8,7 +8,7 @@ using UnpakSipaksi.Common.Application.Messaging;
 namespace UnpakSipaksi.Modules.KesesuaianJadwal.Application.UpdateKesesuaianJadwal
 {
     public sealed record UpdateKesesuaianJadwalCommand(
-        Guid Uuid,
+        string Uuid,
         string Nama,
         int Nilai
     ) : ICommand;

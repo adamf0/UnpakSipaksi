@@ -3,7 +3,7 @@
 namespace UnpakSipaksi.Modules.Metode.Application.UpdateMetode
 {
     public sealed record UpdateMetodeCommand(
-        Guid Uuid,
+        string Uuid,
         string UuidAkurasiPenelitian,
         string UuidKejelasanPembagianTugasTim,
         string UuidKesesuaianWaktuRabLuaranFasilitas,

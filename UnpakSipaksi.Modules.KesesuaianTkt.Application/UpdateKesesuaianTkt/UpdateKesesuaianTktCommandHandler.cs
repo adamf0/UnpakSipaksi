@@ -17,11 +17,11 @@ namespace UnpakSipaksi.Modules.KesesuaianTkt.Application.UpdateKesesuaianTkt
     {
         public async Task<Result> Handle(UpdateKesesuaianTktCommand request, CancellationToken cancellationToken)
         {
-            Domain.KesesuaianTkt.KesesuaianTkt? existingKesesuaianTkt = await kesesuaianTktRepository.GetAsync(request.Uuid, cancellationToken);
+            Domain.KesesuaianTkt.KesesuaianTkt? existingKesesuaianTkt = await kesesuaianTktRepository.GetAsync(Guid.Parse(request.Uuid), cancellationToken);
 
             if (existingKesesuaianTkt is null)
             {
-                Result.Failure(KesesuaianTktErrors.NotFound(request.Uuid));
+                Result.Failure(KesesuaianTktErrors.NotFound(Guid.Parse(request.Uuid)));
             }
 
             Result<Domain.KesesuaianTkt.KesesuaianTkt> asset = Domain.KesesuaianTkt.KesesuaianTkt.Update(existingKesesuaianTkt!)

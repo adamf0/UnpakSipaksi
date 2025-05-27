@@ -3,7 +3,7 @@
 namespace UnpakSipaksi.Modules.KualitasKuantitasPublikasiJurnalIlmiah.Application.UpdateKualitasKuantitasPublikasiJurnalIlmiah
 {
     public sealed record UpdateKualitasKuantitasPublikasiJurnalIlmiahCommand(
-        Guid Uuid,
+        string Uuid,
         string Nama,
         int Nilai
     ) : ICommand;

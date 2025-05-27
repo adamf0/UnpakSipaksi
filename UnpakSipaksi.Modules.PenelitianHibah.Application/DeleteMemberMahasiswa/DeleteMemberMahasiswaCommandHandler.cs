@@ -18,11 +18,11 @@ namespace UnpakSipaksi.Modules.PenelitianHibah.Application.DeleteMemberMahasiswa
     {
         public async Task<Result> Handle(DeleteMemberMahasiswaCommand request, CancellationToken cancellationToken)
         {
-            Domain.MemberMahasiswa.MemberMahasiswa? existingMemberMahasiswa = await memberMahasiswaRepository.GetAsync(request.Uuid, request.Npm, cancellationToken);
+            Domain.MemberMahasiswa.MemberMahasiswa? existingMemberMahasiswa = await memberMahasiswaRepository.GetAsync(Guid.Parse(request.Uuid), request.Npm, cancellationToken);
 
             if (existingMemberMahasiswa is null)
             {
-                return Result.Failure(PenelitianHibahErrors.NotFound(request.Uuid));
+                return Result.Failure(PenelitianHibahErrors.NotFound(Guid.Parse(request.Uuid)));
             }
 
             await memberMahasiswaRepository.DeleteAsync(existingMemberMahasiswa!);

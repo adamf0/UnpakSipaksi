@@ -17,7 +17,7 @@ namespace UnpakSipaksi.Modules.KelompokMitra.Presentation.KelompokMitra
             app.MapPost("KelompokMitra", async (CreateKelompokMitraRequest request, ISender sender) =>
             {
                 Result<Guid> result = await sender.Send(new CreateKelompokMitraCommand(
-                    HtmlEncoder.Default.Encode(request.Nama)
+                    request.Nama
                     )
                 );
 

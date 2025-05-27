@@ -14,10 +14,6 @@ namespace UnpakSipaksi.Modules.PublikasiDisitasiProposal.Application.CreatePubli
         {
             Result<Domain.PublikasiDisitasiProposal.PublikasiDisitasiProposal> result = Domain.PublikasiDisitasiProposal.PublikasiDisitasiProposal.Create(
                 request.Nama,
-                request.BobotPDP,
-                request.BobotTerapan,
-                request.BobotKerjasama,
-                request.BobotPenelitianDasar,
                 request.Skor
             );
 

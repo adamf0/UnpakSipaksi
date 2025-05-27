@@ -12,7 +12,7 @@ namespace UnpakSipaksi.Modules.KualitasKuantitasPublikasiJurnalIlmiah.Presentati
     {
         public static void MapEndpoint(IEndpointRouteBuilder app)
         {
-            app.MapDelete("KualitasKuantitasPublikasiJurnalIlmiah/{id}", async (Guid id, ISender sender) =>
+            app.MapDelete("KualitasKuantitasPublikasiJurnalIlmiah/{id}", async (string id, ISender sender) =>
             {
                 Result result = await sender.Send(
                     new DeleteKualitasKuantitasPublikasiJurnalIlmiahCommand(id)

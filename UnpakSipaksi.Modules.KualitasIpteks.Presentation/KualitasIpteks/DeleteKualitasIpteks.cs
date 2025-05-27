@@ -12,7 +12,7 @@ namespace UnpakSipaksi.Modules.KualitasIpteks.Presentation.KualitasIpteks
     {
         public static void MapEndpoint(IEndpointRouteBuilder app)
         {
-            app.MapDelete("KualitasIpteks/{id}", async (Guid id, ISender sender) =>
+            app.MapDelete("KualitasIpteks/{id}", async (string id, ISender sender) =>
             {
                 Result result = await sender.Send(
                     new DeleteKualitasIpteksCommand(id)

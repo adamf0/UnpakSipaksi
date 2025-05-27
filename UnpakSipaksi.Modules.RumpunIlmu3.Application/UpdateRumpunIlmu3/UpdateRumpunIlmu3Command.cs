@@ -8,8 +8,8 @@ using UnpakSipaksi.Common.Application.Messaging;
 namespace UnpakSipaksi.Modules.RumpunIlmu3.Application.UpdateRumpunIlmu3
 {
     public sealed record UpdateRumpunIlmu3Command(
-        Guid Uuid,
+        string Uuid,
         string Nama,
-        Guid UuidRumpunIlmu2
+        string UuidRumpunIlmu2
     ) : ICommand;
 }

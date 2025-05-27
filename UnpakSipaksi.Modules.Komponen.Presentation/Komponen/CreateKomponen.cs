@@ -16,8 +16,8 @@ namespace UnpakSipaksi.Modules.Komponen.Presentation.Komponen
             app.MapPost("Komponen", async (CreateKomponenRequest request, ISender sender) =>
             {
                 Result<Guid> result = await sender.Send(new CreateKomponenCommand(
-                    HtmlEncoder.Default.Encode(request.Nama),
-                    int.Parse(HtmlEncoder.Default.Encode(request.MaxNilai))
+                    request.Nama,
+                    request?.MaxNilai
                     )
                 );
 
@@ -29,7 +29,7 @@ namespace UnpakSipaksi.Modules.Komponen.Presentation.Komponen
         {
             public string Nama { get; set; }
 
-            public string MaxNilai { get; set; }
+            public int? MaxNilai { get; set; }
         }
     }
 }

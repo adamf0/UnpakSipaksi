@@ -12,11 +12,11 @@ namespace UnpakSipaksi.Modules.PeningkatanKeberdayaanMitra.Application.DeletePen
     {
         public async Task<Result> Handle(DeletePeningkatanKeberdayaanMitraCommand request, CancellationToken cancellationToken)
         {
-            Domain.PeningkatanKeberdayaanMitra.PeningkatanKeberdayaanMitra? existingPeningkatanKeberdayaanMitra = await PeningkatanKeberdayaanMitraRepository.GetAsync(request.uuid, cancellationToken);
+            Domain.PeningkatanKeberdayaanMitra.PeningkatanKeberdayaanMitra? existingPeningkatanKeberdayaanMitra = await PeningkatanKeberdayaanMitraRepository.GetAsync(Guid.Parse(request.uuid), cancellationToken);
 
             if (existingPeningkatanKeberdayaanMitra is null)
             {
-                return Result.Failure(PeningkatanKeberdayaanMitraErrors.NotFound(request.uuid));
+                return Result.Failure(PeningkatanKeberdayaanMitraErrors.NotFound(Guid.Parse(request.uuid)));
             }
 
             await PeningkatanKeberdayaanMitraRepository.DeleteAsync(existingPeningkatanKeberdayaanMitra!);

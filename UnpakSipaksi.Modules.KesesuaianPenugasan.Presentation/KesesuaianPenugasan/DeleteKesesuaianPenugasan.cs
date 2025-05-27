@@ -13,7 +13,7 @@ namespace UnpakSipaksi.Modules.KesesuaianPenugasan.Presentation.KesesuaianPenuga
     {
         public static void MapEndpoint(IEndpointRouteBuilder app)
         {
-            app.MapDelete("KesesuaianPenugasan/{id}", async (Guid id, ISender sender) =>
+            app.MapDelete("KesesuaianPenugasan/{id}", async (string id, ISender sender) =>
             {
                 Result result = await sender.Send(
                     new DeleteKesesuaianPenugasanCommand(id)

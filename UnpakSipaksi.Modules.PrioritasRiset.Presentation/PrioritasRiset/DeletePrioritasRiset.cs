@@ -13,7 +13,7 @@ namespace UnpakSipaksi.Modules.PrioritasRiset.Presentation.PrioritasRiset
     {
         public static void MapEndpoint(IEndpointRouteBuilder app)
         {
-            app.MapDelete("PrioritasRiset/{id}", async (Guid id, ISender sender) =>
+            app.MapDelete("PrioritasRiset/{id}", async (string id, ISender sender) =>
             {
                 Result result = await sender.Send(
                     new DeletePrioritasRisetCommand(id)

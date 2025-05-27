@@ -17,8 +17,8 @@ namespace UnpakSipaksi.Modules.PeningkatanKeberdayaanMitra.Presentation.Peningka
             app.MapPost("PeningkatanKeberdayaanMitra", async (CreatePeningkatanKeberdayaanMitraRequest request, ISender sender) =>
             {
                 Result<Guid> result = await sender.Send(new CreatePeningkatanKeberdayaanMitraCommand(
-                    HtmlEncoder.Default.Encode(request.Nama),
-                    int.Parse(HtmlEncoder.Default.Encode(request.Nilai))
+                    request.Nama,
+                    request.Nilai
                     )
                 );
 
@@ -29,7 +29,7 @@ namespace UnpakSipaksi.Modules.PeningkatanKeberdayaanMitra.Presentation.Peningka
         internal sealed class CreatePeningkatanKeberdayaanMitraRequest
         {
             public string Nama { get; set; }
-            public string Nilai { get; set; }
+            public int Nilai { get; set; }
         }
     }
 }

@@ -13,7 +13,7 @@ namespace UnpakSipaksi.Modules.RumpunIlmu3.Presentation.RumpunIlmu3
     {
         public static void MapEndpoint(IEndpointRouteBuilder app)
         {
-            app.MapDelete("RumpunIlmu3/{id}", async (Guid id, ISender sender) =>
+            app.MapDelete("RumpunIlmu3/{id}", async (string id, ISender sender) =>
             {
                 Result result = await sender.Send(
                     new DeleteRumpunIlmu3Command(id)

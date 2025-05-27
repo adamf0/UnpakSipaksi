@@ -12,11 +12,11 @@ namespace UnpakSipaksi.Modules.KewajaranTahapanTarget.Application.UpdateKewajara
     {
         public async Task<Result> Handle(UpdateKewajaranTahapanTargetCommand request, CancellationToken cancellationToken)
         {
-            Domain.KewajaranTahapanTarget.KewajaranTahapanTarget? existingKewajaranTahapanTarget = await KewajaranTahapanTargetRepository.GetAsync(request.Uuid, cancellationToken);
+            Domain.KewajaranTahapanTarget.KewajaranTahapanTarget? existingKewajaranTahapanTarget = await KewajaranTahapanTargetRepository.GetAsync(Guid.Parse(request.Uuid), cancellationToken);
 
             if (existingKewajaranTahapanTarget is null)
             {
-                Result.Failure(KewajaranTahapanTargetErrors.NotFound(request.Uuid));
+                Result.Failure(KewajaranTahapanTargetErrors.NotFound(Guid.Parse(request.Uuid)));
             }
 
             Result<Domain.KewajaranTahapanTarget.KewajaranTahapanTarget> asset = Domain.KewajaranTahapanTarget.KewajaranTahapanTarget.Update(existingKewajaranTahapanTarget!)

@@ -3,8 +3,8 @@
 namespace UnpakSipaksi.Modules.Komponen.Application.UpdateKomponen
 {
     public sealed record UpdateKomponenCommand(
-        Guid Uuid,
+        string Uuid,
         string Nama,
-        int MaxBiaya
+        int? MaxBiaya
     ) : ICommand;
 }

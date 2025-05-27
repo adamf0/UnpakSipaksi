@@ -3,7 +3,7 @@
 namespace UnpakSipaksi.Modules.KredibilitasMitraDukungan.Application.UpdateKredibilitasMitraDukungan
 {
     public sealed record UpdateKredibilitasMitraDukunganCommand(
-        Guid Uuid,
+        string Uuid,
         string Nama,
         int Skor
     ) : ICommand;

@@ -18,8 +18,8 @@ namespace UnpakSipaksi.Modules.ArtikelMediaMassa.Presentation.ArtikelMediaMassa
             {
                 Result result = await sender.Send(new UpdateArtikelMediaMassaCommand(
                     request.Id,
-                    HtmlEncoder.Default.Encode(request.Nama),
-                    int.Parse(HtmlEncoder.Default.Encode(request.Nilai))
+                    request.Nama,
+                    request.Nilai
                     )
                 );
 
@@ -29,10 +29,10 @@ namespace UnpakSipaksi.Modules.ArtikelMediaMassa.Presentation.ArtikelMediaMassa
 
         internal sealed class UpdateArtikelMediaMassaRequest
         {
-            public Guid Id { get; set; }
+            public string Id { get; set; }
             public string Nama { get; set; }
 
-            public string Nilai { get; set; }
+            public int Nilai { get; set; }
         }
     }
 }

@@ -12,11 +12,11 @@ namespace UnpakSipaksi.Modules.KategoriSkema.Application.UpdateKategoriSkema
     {
         public async Task<Result> Handle(UpdateKategoriSkemaCommand request, CancellationToken cancellationToken)
         {
-            Domain.KategoriSkema.KategoriSkema? existingKategoriSkema = await KategoriSkemaRepository.GetAsync(request.Uuid, cancellationToken);
+            Domain.KategoriSkema.KategoriSkema? existingKategoriSkema = await KategoriSkemaRepository.GetAsync(Guid.Parse(request.Uuid), cancellationToken);
 
             if (existingKategoriSkema is null)
             {
-                Result.Failure(KategoriSkemaErrors.NotFound(request.Uuid));
+                Result.Failure(KategoriSkemaErrors.NotFound(Guid.Parse(request.Uuid)));
             }
 
             Result<Domain.KategoriSkema.KategoriSkema> asset = Domain.KategoriSkema.KategoriSkema.Update(existingKategoriSkema!)

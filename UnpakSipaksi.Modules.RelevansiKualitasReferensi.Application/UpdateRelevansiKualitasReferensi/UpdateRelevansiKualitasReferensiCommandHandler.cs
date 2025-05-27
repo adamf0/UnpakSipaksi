@@ -12,11 +12,11 @@ namespace UnpakSipaksi.Modules.RelevansiKualitasReferensi.Application.UpdateRele
     {
         public async Task<Result> Handle(UpdateRelevansiKualitasReferensiCommand request, CancellationToken cancellationToken)
         {
-            Domain.RelevansiKualitasReferensi.RelevansiKualitasReferensi? existingRelevansiKualitasReferensi = await RelevansiKualitasReferensiRepository.GetAsync(request.Uuid, cancellationToken);
+            Domain.RelevansiKualitasReferensi.RelevansiKualitasReferensi? existingRelevansiKualitasReferensi = await RelevansiKualitasReferensiRepository.GetAsync(Guid.Parse(request.Uuid), cancellationToken);
 
             if (existingRelevansiKualitasReferensi is null)
             {
-                Result.Failure(RelevansiKualitasReferensiErrors.NotFound(request.Uuid));
+                Result.Failure(RelevansiKualitasReferensiErrors.NotFound(Guid.Parse(request.Uuid)));
             }
 
             Result<Domain.RelevansiKualitasReferensi.RelevansiKualitasReferensi> asset = Domain.RelevansiKualitasReferensi.RelevansiKualitasReferensi.Update(existingRelevansiKualitasReferensi!)

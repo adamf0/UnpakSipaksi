@@ -8,7 +8,7 @@ using UnpakSipaksi.Common.Application.Messaging;
 namespace UnpakSipaksi.Modules.PenelitianHibah.Application.DeleteMemberMahasiswa
 {
     public sealed record DeleteMemberMahasiswaCommand(
-        Guid Uuid,
+        string Uuid,
         string Npm
     ) : ICommand;
 }

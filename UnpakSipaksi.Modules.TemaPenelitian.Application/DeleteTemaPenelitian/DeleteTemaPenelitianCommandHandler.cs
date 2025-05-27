@@ -17,11 +17,11 @@ namespace UnpakSipaksi.Modules.TemaPenelitian.Application.DeleteTemaPenelitian
     {
         public async Task<Result> Handle(DeleteTemaPenelitianCommand request, CancellationToken cancellationToken)
         {
-            Domain.TemaPenelitian.TemaPenelitian? existingTemaPenelitian = await temaPenelitianRepository.GetAsync(request.uuid, cancellationToken);
+            Domain.TemaPenelitian.TemaPenelitian? existingTemaPenelitian = await temaPenelitianRepository.GetAsync(Guid.Parse(request.uuid), cancellationToken);
 
             if (existingTemaPenelitian is null)
             {
-                return Result.Failure(TemaPenelitianErrors.NotFound(request.uuid));
+                return Result.Failure(TemaPenelitianErrors.NotFound(Guid.Parse(request.uuid)));
             }
 
             await temaPenelitianRepository.DeleteAsync(existingTemaPenelitian!);

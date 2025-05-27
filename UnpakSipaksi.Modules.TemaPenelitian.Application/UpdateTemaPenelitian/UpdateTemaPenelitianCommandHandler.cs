@@ -19,18 +19,18 @@ namespace UnpakSipaksi.Modules.TemaPenelitian.Application.UpdateTemaPenelitian
     {
         public async Task<Result> Handle(UpdateTemaPenelitianCommand request, CancellationToken cancellationToken)
         {
-            FokusPenelitianResponse? fokusPenelitian = await fokusPenelitianApi.GetAsync(request.FokusPenelitianId, cancellationToken);
+            FokusPenelitianResponse? fokusPenelitian = await fokusPenelitianApi.GetAsync(Guid.Parse(request.FokusPenelitianId), cancellationToken);
 
             if (fokusPenelitian is null)
             {
-                return Result.Failure<Guid>(TemaPenelitianErrors.FokusPenelitianNotFound(request.FokusPenelitianId));
+                return Result.Failure<Guid>(TemaPenelitianErrors.FokusPenelitianNotFound(Guid.Parse(request.FokusPenelitianId)));
             }
 
-            Domain.TemaPenelitian.TemaPenelitian? existingTemaPenelitian = await temaPenelitianRepository.GetAsync(request.Uuid, cancellationToken);
+            Domain.TemaPenelitian.TemaPenelitian? existingTemaPenelitian = await temaPenelitianRepository.GetAsync(Guid.Parse(request.Uuid), cancellationToken);
 
             if (existingTemaPenelitian is null)
             {
-                Result.Failure(TemaPenelitianErrors.NotFound(request.Uuid));
+                Result.Failure(TemaPenelitianErrors.NotFound(Guid.Parse(request.Uuid)));
             }
 
             Result<Domain.TemaPenelitian.TemaPenelitian> asset = Domain.TemaPenelitian.TemaPenelitian.Update(existingTemaPenelitian!)

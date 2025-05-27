@@ -17,7 +17,7 @@ namespace UnpakSipaksi.Modules.TopikPenelitian.Presentation.TopikPenelitian
             {
                 Result result = await sender.Send(new UpdateTopikPenelitianCommand(
                     request.Id,
-                    HtmlEncoder.Default.Encode(request.Nama),
+                    request.Nama,
                     request.TemaPenelitianId
                     )
                 );
@@ -28,9 +28,9 @@ namespace UnpakSipaksi.Modules.TopikPenelitian.Presentation.TopikPenelitian
 
         internal sealed class UpdateTopikPenelitianRequest
         {
-            public Guid Id { get; set; }
+            public string Id { get; set; }
             public string Nama { get; set; }
-            public Guid TemaPenelitianId { get; set; }
+            public string TemaPenelitianId { get; set; }
         }
     }
 }

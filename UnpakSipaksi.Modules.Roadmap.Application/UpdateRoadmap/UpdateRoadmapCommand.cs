@@ -3,7 +3,7 @@
 namespace UnpakSipaksi.Modules.Roadmap.Application.UpdateRoadmap
 {
     public sealed record UpdateRoadmapCommand(
-        Guid Uuid,
+        string Uuid,
         string Nidn,
         string Link
     ) : ICommand;

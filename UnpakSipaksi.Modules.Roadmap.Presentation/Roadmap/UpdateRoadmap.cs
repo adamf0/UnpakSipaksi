@@ -27,7 +27,7 @@ namespace UnpakSipaksi.Modules.Roadmap.Presentation.Roadmap
 
         internal sealed class UpdateRoadmapRequest
         {
-            public Guid Id { get; set; }
+            public string Id { get; set; }
             public string Nidn { get; set; }
             public string Link { get; set; }
         }

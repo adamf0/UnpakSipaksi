@@ -12,11 +12,11 @@ namespace UnpakSipaksi.Modules.PotensiKetercapaianLuaranDijanjikan.Application.U
     {
         public async Task<Result> Handle(UpdatePotensiKetercapaianLuaranDijanjikanCommand request, CancellationToken cancellationToken)
         {
-            Domain.PotensiKetercapaianLuaranDijanjikan.PotensiKetercapaianLuaranDijanjikan? existingPotensiKetercapaianLuaranDijanjikan = await PotensiKetercapaianLuaranDijanjikanRepository.GetAsync(request.Uuid, cancellationToken);
+            Domain.PotensiKetercapaianLuaranDijanjikan.PotensiKetercapaianLuaranDijanjikan? existingPotensiKetercapaianLuaranDijanjikan = await PotensiKetercapaianLuaranDijanjikanRepository.GetAsync(Guid.Parse(request.Uuid), cancellationToken);
 
             if (existingPotensiKetercapaianLuaranDijanjikan is null)
             {
-                Result.Failure(PotensiKetercapaianLuaranDijanjikanErrors.NotFound(request.Uuid));
+                Result.Failure(PotensiKetercapaianLuaranDijanjikanErrors.NotFound(Guid.Parse(request.Uuid)));
             }
 
             Result<Domain.PotensiKetercapaianLuaranDijanjikan.PotensiKetercapaianLuaranDijanjikan> asset = Domain.PotensiKetercapaianLuaranDijanjikan.PotensiKetercapaianLuaranDijanjikan.Update(existingPotensiKetercapaianLuaranDijanjikan!)

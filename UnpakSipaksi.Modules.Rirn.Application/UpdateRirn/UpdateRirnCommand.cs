@@ -8,7 +8,7 @@ using UnpakSipaksi.Common.Application.Messaging;
 namespace UnpakSipaksi.Modules.Rirn.Application.UpdateRirn
 {
     public sealed record UpdateRirnCommand(
-        Guid Uuid,
+        string Uuid,
         string Nama
     ) : ICommand;
 }

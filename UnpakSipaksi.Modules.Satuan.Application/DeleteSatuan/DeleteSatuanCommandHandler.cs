@@ -17,11 +17,11 @@ namespace UnpakSipaksi.Modules.Satuan.Application.DeleteSatuan
     {
         public async Task<Result> Handle(DeleteSatuanCommand request, CancellationToken cancellationToken)
         {
-            Domain.Satuan.Satuan? existingSatuan = await SatuanRepository.GetAsync(request.uuid, cancellationToken);
+            Domain.Satuan.Satuan? existingSatuan = await SatuanRepository.GetAsync(Guid.Parse(request.uuid), cancellationToken);
 
             if (existingSatuan is null)
             {
-                return Result.Failure(SatuanErrors.NotFound(request.uuid));
+                return Result.Failure(SatuanErrors.NotFound(Guid.Parse(request.uuid)));
             }
 
             await SatuanRepository.DeleteAsync(existingSatuan!);

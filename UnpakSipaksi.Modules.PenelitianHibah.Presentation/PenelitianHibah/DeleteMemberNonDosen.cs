@@ -2,6 +2,7 @@
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Routing;
+using System;
 using UnpakSipaksi.Common.Domain;
 using UnpakSipaksi.Common.Presentation.ApiResults;
 using UnpakSipaksi.Modules.PenelitianHibah.Application.DeleteMemberNonDosen;
@@ -12,10 +13,10 @@ namespace UnpakSipaksi.Modules.PenelitianHibah.Presentation.PenelitianHibah
     {
         public static void MapEndpoint(IEndpointRouteBuilder app)
         {
-            app.MapDelete("PenelitianHibah/MemberNonDosen/{id}", async (Guid id, ISender sender) =>
+            app.MapDelete("PenelitianHibah/MemberNonDosen/{uuid}", async (string uuid, ISender sender) =>
             {
                 Result result = await sender.Send(
-                    new DeleteMemberNonDosenCommand(id)
+                    new DeleteMemberNonDosenCommand(uuid)
                 );
 
                 return result.Match(() => Results.Ok(), ApiResults.Problem);

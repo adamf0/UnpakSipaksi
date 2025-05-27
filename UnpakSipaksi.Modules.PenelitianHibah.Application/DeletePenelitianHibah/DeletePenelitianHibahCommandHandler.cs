@@ -17,11 +17,11 @@ namespace UnpakSipaksi.Modules.PenelitianHibah.Application.DeletePenelitianHibah
     {
         public async Task<Result> Handle(DeletePenelitianHibahCommand request, CancellationToken cancellationToken)
         {
-            Domain.PenelitianHibah.PenelitianHibah? existingPenelitianHibah = await penelitianHibahRepository.GetAsync(request.Uuid, request.Nidn, cancellationToken);
+            Domain.PenelitianHibah.PenelitianHibah? existingPenelitianHibah = await penelitianHibahRepository.GetAsync(Guid.Parse(request.Uuid), request.Nidn, cancellationToken);
 
             if (existingPenelitianHibah is null)
             {
-                return Result.Failure(PenelitianHibahErrors.NotFound(request.Uuid));
+                return Result.Failure(PenelitianHibahErrors.NotFound(Guid.Parse(request.Uuid)));
             }
 
             await penelitianHibahRepository.DeleteAsync(existingPenelitianHibah!);

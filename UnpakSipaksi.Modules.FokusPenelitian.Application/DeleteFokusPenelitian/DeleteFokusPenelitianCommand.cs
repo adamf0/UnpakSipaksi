@@ -8,6 +8,6 @@ using UnpakSipaksi.Common.Application.Messaging;
 namespace UnpakSipaksi.Modules.FokusPenelitian.Application.DeleteFokusPenelitian
 {
     public sealed record DeleteFokusPenelitianCommand(
-        Guid uuid
+        string uuid
     ) : ICommand;
 }

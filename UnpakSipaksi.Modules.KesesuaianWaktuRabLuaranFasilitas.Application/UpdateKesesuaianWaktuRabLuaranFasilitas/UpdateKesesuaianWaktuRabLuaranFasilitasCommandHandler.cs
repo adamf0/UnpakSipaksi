@@ -17,11 +17,11 @@ namespace UnpakSipaksi.Modules.KesesuaianWaktuRabLuaranFasilitas.Application.Upd
     {
         public async Task<Result> Handle(UpdateKesesuaianWaktuRabLuaranFasilitasCommand request, CancellationToken cancellationToken)
         {
-            Domain.KesesuaianWaktuRabLuaranFasilitas.KesesuaianWaktuRabLuaranFasilitas? existingKesesuaianWaktuRabLuaranFasilitas = await kesesuaianWaktuRabLuaranFasilitasRepository.GetAsync(request.Uuid, cancellationToken);
+            Domain.KesesuaianWaktuRabLuaranFasilitas.KesesuaianWaktuRabLuaranFasilitas? existingKesesuaianWaktuRabLuaranFasilitas = await kesesuaianWaktuRabLuaranFasilitasRepository.GetAsync(Guid.Parse(request.Uuid), cancellationToken);
 
             if (existingKesesuaianWaktuRabLuaranFasilitas is null)
             {
-                Result.Failure(KesesuaianWaktuRabLuaranFasilitasErrors.NotFound(request.Uuid));
+                Result.Failure(KesesuaianWaktuRabLuaranFasilitasErrors.NotFound(Guid.Parse(request.Uuid)));
             }
 
             Result<Domain.KesesuaianWaktuRabLuaranFasilitas.KesesuaianWaktuRabLuaranFasilitas> asset = Domain.KesesuaianWaktuRabLuaranFasilitas.KesesuaianWaktuRabLuaranFasilitas.Update(existingKesesuaianWaktuRabLuaranFasilitas!)

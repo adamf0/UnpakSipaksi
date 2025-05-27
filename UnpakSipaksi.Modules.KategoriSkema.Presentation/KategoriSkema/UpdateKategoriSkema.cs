@@ -18,7 +18,7 @@ namespace UnpakSipaksi.Modules.KategoriSkema.Presentation.KategoriSkema
             {
                 Result result = await sender.Send(new UpdateKategoriSkemaCommand(
                     request.Id,
-                    HtmlEncoder.Default.Encode(request.Nama),
+                    request.Nama,
                     request.Rule
                     )
                 );
@@ -29,7 +29,7 @@ namespace UnpakSipaksi.Modules.KategoriSkema.Presentation.KategoriSkema
 
         internal sealed class UpdateKategoriSkemaRequest
         {
-            public Guid Id { get; set; }
+            public string Id { get; set; }
             public string Nama { get; set; }
             public string Rule { get; set; }
         }

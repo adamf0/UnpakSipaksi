@@ -13,7 +13,7 @@ namespace UnpakSipaksi.Modules.RumusanPrioritasMitra.Presentation.RumusanPriorit
     {
         public static void MapEndpoint(IEndpointRouteBuilder app)
         {
-            app.MapDelete("RumusanPrioritasMitra/{id}", async (Guid id, ISender sender) =>
+            app.MapDelete("RumusanPrioritasMitra/{id}", async (string id, ISender sender) =>
             {
                 Result result = await sender.Send(
                     new DeleteRumusanPrioritasMitraCommand(id)

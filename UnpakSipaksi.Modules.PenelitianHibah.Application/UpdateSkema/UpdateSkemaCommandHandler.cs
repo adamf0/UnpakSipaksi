@@ -16,7 +16,7 @@ namespace UnpakSipaksi.Modules.PenelitianHibah.Application.UpdateSkema
     {
         public async Task<Result> Handle(UpdateSkemaCommand request, CancellationToken cancellationToken)
         {
-            Domain.PenelitianHibah.PenelitianHibah? existingPenelitianHibah = await penelitianHibahRepository.GetAsync(Guid.Parse(request.Uuid), cancellationToken);
+            Domain.PenelitianHibah.PenelitianHibah? existingPenelitianHibah = await penelitianHibahRepository.GetAsync(Guid.Parse(request.UuidPenelitianHibah), cancellationToken);
 
             var kategoriSkema = await kategoriSkemaApi.GetAsync(Guid.Parse(request.SkemaId));
             if (kategoriSkema is null)

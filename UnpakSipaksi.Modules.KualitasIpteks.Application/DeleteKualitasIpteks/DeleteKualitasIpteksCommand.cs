@@ -3,6 +3,6 @@
 namespace UnpakSipaksi.Modules.KualitasIpteks.Application.DeleteKualitasIpteks
 {
     public sealed record DeleteKualitasIpteksCommand(
-        Guid uuid
+        string uuid
     ) : ICommand;
 }

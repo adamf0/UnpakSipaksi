@@ -3,7 +3,7 @@
 namespace UnpakSipaksi.Modules.KetajamanAnalisis.Application.UpdateKetajamanAnalisis
 {
     public sealed record UpdateKetajamanAnalisisCommand(
-        Guid Uuid,
+        string Uuid,
         string Nama,
         int Nilai
     ) : ICommand;

@@ -8,6 +8,6 @@ using UnpakSipaksi.Common.Application.Messaging;
 namespace UnpakSipaksi.Modules.PrioritasRiset.Application.DeletePrioritasRiset
 {
     public sealed record DeletePrioritasRisetCommand(
-        Guid uuid
+        string uuid
     ) : ICommand;
 }

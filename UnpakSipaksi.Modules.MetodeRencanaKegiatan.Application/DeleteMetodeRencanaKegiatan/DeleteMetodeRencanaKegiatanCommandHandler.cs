@@ -12,11 +12,11 @@ namespace UnpakSipaksi.Modules.MetodeRencanaKegiatan.Application.DeleteMetodeRen
     {
         public async Task<Result> Handle(DeleteMetodeRencanaKegiatanCommand request, CancellationToken cancellationToken)
         {
-            Domain.MetodeRencanaKegiatan.MetodeRencanaKegiatan? existingMetodeRencanaKegiatan = await MetodeRencanaKegiatanRepository.GetAsync(request.uuid, cancellationToken);
+            Domain.MetodeRencanaKegiatan.MetodeRencanaKegiatan? existingMetodeRencanaKegiatan = await MetodeRencanaKegiatanRepository.GetAsync(Guid.Parse(request.uuid), cancellationToken);
 
             if (existingMetodeRencanaKegiatan is null)
             {
-                return Result.Failure(MetodeRencanaKegiatanErrors.NotFound(request.uuid));
+                return Result.Failure(MetodeRencanaKegiatanErrors.NotFound(Guid.Parse(request.uuid)));
             }
 
             await MetodeRencanaKegiatanRepository.DeleteAsync(existingMetodeRencanaKegiatan!);

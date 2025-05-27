@@ -3,6 +3,6 @@
 namespace UnpakSipaksi.Modules.ModelFeasibilityStudys.Application.DeleteModelFeasibilityStudys
 {
     public sealed record DeleteModelFeasibilityStudysCommand(
-        Guid uuid
+        string uuid
     ) : ICommand;
 }

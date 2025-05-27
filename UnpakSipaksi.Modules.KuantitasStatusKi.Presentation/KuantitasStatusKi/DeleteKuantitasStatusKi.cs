@@ -12,7 +12,7 @@ namespace UnpakSipaksi.Modules.KuantitasStatusKi.Presentation.KuantitasStatusKi
     {
         public static void MapEndpoint(IEndpointRouteBuilder app)
         {
-            app.MapDelete("KuantitasStatusKi/{id}", async (Guid id, ISender sender) =>
+            app.MapDelete("KuantitasStatusKi/{id}", async (string id, ISender sender) =>
             {
                 Result result = await sender.Send(
                     new DeleteKuantitasStatusKiCommand(id)

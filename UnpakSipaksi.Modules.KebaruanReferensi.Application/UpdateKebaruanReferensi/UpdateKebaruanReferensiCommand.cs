@@ -8,7 +8,7 @@ using UnpakSipaksi.Common.Application.Messaging;
 namespace UnpakSipaksi.Modules.KebaruanReferensi.Application.UpdateKebaruanReferensi
 {
     public sealed record UpdateKebaruanReferensiCommand(
-        Guid Uuid,
+        string Uuid,
         string Nama,
         int Skor
     ) : ICommand;

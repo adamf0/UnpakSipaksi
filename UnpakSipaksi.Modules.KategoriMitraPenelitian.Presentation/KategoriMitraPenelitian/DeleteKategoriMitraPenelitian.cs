@@ -13,7 +13,7 @@ namespace UnpakSipaksi.Modules.KategoriMitraPenelitian.Presentation.KategoriMitr
     {
         public static void MapEndpoint(IEndpointRouteBuilder app)
         {
-            app.MapDelete("KategoriMitraPenelitian/{id}", async (Guid id, ISender sender) =>
+            app.MapDelete("KategoriMitraPenelitian/{id}", async (string id, ISender sender) =>
             {
                 Result result = await sender.Send(
                     new DeleteKategoriMitraPenelitianCommand(id)

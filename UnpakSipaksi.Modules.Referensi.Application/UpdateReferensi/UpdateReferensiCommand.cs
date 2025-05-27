@@ -5,10 +5,10 @@ using System.Text;
 using System.Threading.Tasks;
 using UnpakSipaksi.Common.Application.Messaging;
 
-namespace UnpakSipaksi.Modules.Referensi.Application.UpdateAkurasiPenelitian
+namespace UnpakSipaksi.Modules.Referensi.Application.UpdateReferensi
 {
     public sealed record UpdateReferensiCommand(
-        Guid Uuid,
+        string Uuid,
         string Nama,
         string UuidKebaruanReferensi,
         string UuidRelevansiKualitasReferensi,

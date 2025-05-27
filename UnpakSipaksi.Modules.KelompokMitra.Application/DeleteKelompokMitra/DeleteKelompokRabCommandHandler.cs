@@ -17,11 +17,11 @@ namespace UnpakSipaksi.Modules.KelompokMitra.Application.DeleteKelompokMitra
     {
         public async Task<Result> Handle(DeleteKelompokMitraCommand request, CancellationToken cancellationToken)
         {
-            Domain.KelompokMitra.KelompokMitra? existingKelompokMitra = await kelompokMitraRepository.GetAsync(request.uuid, cancellationToken);
+            Domain.KelompokMitra.KelompokMitra? existingKelompokMitra = await kelompokMitraRepository.GetAsync(Guid.Parse(request.uuid), cancellationToken);
 
             if (existingKelompokMitra is null)
             {
-                return Result.Failure(KelompokMitraErrors.NotFound(request.uuid));
+                return Result.Failure(KelompokMitraErrors.NotFound(Guid.Parse(request.uuid)));
             }
 
             await kelompokMitraRepository.DeleteAsync(existingKelompokMitra!);

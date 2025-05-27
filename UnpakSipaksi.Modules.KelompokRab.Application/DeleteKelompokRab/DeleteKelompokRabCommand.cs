@@ -8,6 +8,6 @@ using UnpakSipaksi.Common.Application.Messaging;
 namespace UnpakSipaksi.Modules.KelompokRab.Application.DeleteKelompokRab
 {
     public sealed record DeleteKelompokRabCommand(
-        Guid uuid
+        string uuid
     ) : ICommand;
 }

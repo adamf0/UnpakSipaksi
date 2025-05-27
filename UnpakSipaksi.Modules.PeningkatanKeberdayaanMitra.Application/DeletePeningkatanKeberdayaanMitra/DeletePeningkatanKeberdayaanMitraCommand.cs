@@ -3,6 +3,6 @@
 namespace UnpakSipaksi.Modules.PeningkatanKeberdayaanMitra.Application.DeletePeningkatanKeberdayaanMitra
 {
     public sealed record DeletePeningkatanKeberdayaanMitraCommand(
-        Guid uuid
+        string uuid
     ) : ICommand;
 }

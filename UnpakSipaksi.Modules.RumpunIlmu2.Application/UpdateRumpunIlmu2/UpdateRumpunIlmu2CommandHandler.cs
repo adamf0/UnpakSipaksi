@@ -19,18 +19,18 @@ namespace UnpakSipaksi.Modules.RumpunIlmu2.Application.UpdateRumpunIlmu2
     {
         public async Task<Result> Handle(UpdateRumpunIlmu2Command request, CancellationToken cancellationToken)
         {
-            RumpunIlmu1Response? RumpunIlmu1 = await RumpunIlmu1Api.GetAsync(request.UuidRumpunIlmu1, cancellationToken);
+            RumpunIlmu1Response? RumpunIlmu1 = await RumpunIlmu1Api.GetAsync(Guid.Parse(request.UuidRumpunIlmu1), cancellationToken);
 
             if (RumpunIlmu1 is null)
             {
-                return Result.Failure<Guid>(RumpunIlmu2Errors.RumpunIlmu1NotFound(request.UuidRumpunIlmu1));
+                return Result.Failure<Guid>(RumpunIlmu2Errors.RumpunIlmu1NotFound(Guid.Parse(request.UuidRumpunIlmu1)));
             }
 
-            Domain.RumpunIlmu2.RumpunIlmu2? existingRumpunIlmu2 = await RumpunIlmu2Repository.GetAsync(request.Uuid, cancellationToken);
+            Domain.RumpunIlmu2.RumpunIlmu2? existingRumpunIlmu2 = await RumpunIlmu2Repository.GetAsync(Guid.Parse(request.Uuid), cancellationToken);
 
             if (existingRumpunIlmu2 is null)
             {
-                Result.Failure(RumpunIlmu2Errors.NotFound(request.Uuid));
+                Result.Failure(RumpunIlmu2Errors.NotFound(Guid.Parse(request.Uuid)));
             }
 
             Result<Domain.RumpunIlmu2.RumpunIlmu2> asset = Domain.RumpunIlmu2.RumpunIlmu2.Update(existingRumpunIlmu2!)

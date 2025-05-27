@@ -17,8 +17,8 @@ namespace UnpakSipaksi.Modules.LuaranArtikel.Presentation.LuaranArtikel
             app.MapPost("LuaranArtikel", async (CreateLuaranArtikelRequest request, ISender sender) =>
             {
                 Result<Guid> result = await sender.Send(new CreateLuaranArtikelCommand(
-                    HtmlEncoder.Default.Encode(request.Nama),
-                    int.Parse(HtmlEncoder.Default.Encode(request.Nilai))
+                    request.Nama,
+                    request.Nilai
                     )
                 );
 
@@ -29,7 +29,7 @@ namespace UnpakSipaksi.Modules.LuaranArtikel.Presentation.LuaranArtikel
         internal sealed class CreateLuaranArtikelRequest
         {
             public string Nama { get; set; }
-            public string Nilai { get; set; }
+            public int Nilai { get; set; }
         }
     }
 }

@@ -12,11 +12,11 @@ namespace UnpakSipaksi.Modules.KategoriProgramPengabdian.Application.UpdateKateg
     {
         public async Task<Result> Handle(UpdateKategoriProgramPengabdianCommand request, CancellationToken cancellationToken)
         {
-            Domain.KategoriProgramPengabdian.KategoriProgramPengabdian? existingKategoriProgramPengabdian = await KategoriProgramPengabdianRepository.GetAsync(request.Uuid, cancellationToken);
+            Domain.KategoriProgramPengabdian.KategoriProgramPengabdian? existingKategoriProgramPengabdian = await KategoriProgramPengabdianRepository.GetAsync(Guid.Parse(request.Uuid), cancellationToken);
 
             if (existingKategoriProgramPengabdian is null)
             {
-                Result.Failure(KategoriProgramPengabdianErrors.NotFound(request.Uuid));
+                Result.Failure(KategoriProgramPengabdianErrors.NotFound(Guid.Parse(request.Uuid)));
             }
 
             Result<Domain.KategoriProgramPengabdian.KategoriProgramPengabdian> asset = Domain.KategoriProgramPengabdian.KategoriProgramPengabdian.Update(existingKategoriProgramPengabdian!)

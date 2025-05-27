@@ -17,8 +17,8 @@ namespace UnpakSipaksi.Modules.Komponen.Presentation.Komponen
             {
                 Result result = await sender.Send(new UpdateKomponenCommand(
                     request.Id,
-                    HtmlEncoder.Default.Encode(request.Nama),
-                    int.Parse(HtmlEncoder.Default.Encode(request.MaxNilai))
+                    request.Nama,
+                    request?.MaxNilai
                     )
                 );
 
@@ -28,9 +28,9 @@ namespace UnpakSipaksi.Modules.Komponen.Presentation.Komponen
 
         internal sealed class UpdateKomponenRequest
         {
-            public Guid Id { get; set; }
+            public string Id { get; set; }
             public string Nama { get; set; }
-            public string MaxNilai { get; set; }
+            public int? MaxNilai { get; set; }
         }
     }
 }

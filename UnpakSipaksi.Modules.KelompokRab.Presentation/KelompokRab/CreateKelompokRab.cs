@@ -17,7 +17,7 @@ namespace UnpakSipaksi.Modules.KelompokRab.Presentation.KelompokRab
             app.MapPost("KelompokRab", async (CreateKelompokRabRequest request, ISender sender) =>
             {
                 Result<Guid> result = await sender.Send(new CreateKelompokRabCommand(
-                    HtmlEncoder.Default.Encode(request.Nama)
+                    request.Nama
                     )
                 );
 

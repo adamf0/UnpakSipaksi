@@ -3,7 +3,7 @@
 namespace UnpakSipaksi.Modules.RumusanPrioritasMitra.Application.UpdateRumusanPrioritasMitra
 {
     public sealed record UpdateRumusanPrioritasMitraCommand(
-        Guid Uuid,
+        string Uuid,
         string Nama,
         int Nilai
     ) : ICommand;

@@ -27,7 +27,7 @@ namespace UnpakSipaksi.Modules.AkurasiPenelitian.Presentation.AkurasiPenelitian
 
         internal sealed class UpdateAkurasiPenelitianRequest
         {
-            public Guid Id { get; set; }
+            public string Id { get; set; }
             public string Nama { get; set; }
             public string BobotSkor { get; set; }
         }

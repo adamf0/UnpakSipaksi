@@ -12,11 +12,11 @@ namespace UnpakSipaksi.Modules.RoadmapPenelitian.Application.UpdateRoadmapPeneli
     {
         public async Task<Result> Handle(UpdateRoadmapPenelitianCommand request, CancellationToken cancellationToken)
         {
-            Domain.RoadmapPenelitian.RoadmapPenelitian? existingRoadmapPenelitian = await RoadmapPenelitianRepository.GetAsync(request.Uuid, cancellationToken);
+            Domain.RoadmapPenelitian.RoadmapPenelitian? existingRoadmapPenelitian = await RoadmapPenelitianRepository.GetAsync(Guid.Parse(request.Uuid), cancellationToken);
 
             if (existingRoadmapPenelitian is null)
             {
-                Result.Failure(RoadmapPenelitianErrors.NotFound(request.Uuid));
+                Result.Failure(RoadmapPenelitianErrors.NotFound(Guid.Parse(request.Uuid)));
             }
 
             Result<Domain.RoadmapPenelitian.RoadmapPenelitian> asset = Domain.RoadmapPenelitian.RoadmapPenelitian.Update(existingRoadmapPenelitian!)

@@ -17,11 +17,11 @@ namespace UnpakSipaksi.Modules.KelompokRab.Application.UpdateKelompokRab
     {
         public async Task<Result> Handle(UpdateKelompokRabCommand request, CancellationToken cancellationToken)
         {
-            Domain.KelompokRab.KelompokRab? existingKelompokRab = await kelompokRabRepository.GetAsync(request.Uuid, cancellationToken);
+            Domain.KelompokRab.KelompokRab? existingKelompokRab = await kelompokRabRepository.GetAsync(Guid.Parse(request.Uuid), cancellationToken);
 
             if (existingKelompokRab is null)
             {
-                Result.Failure(KelompokRabErrors.NotFound(request.Uuid));
+                Result.Failure(KelompokRabErrors.NotFound(Guid.Parse(request.Uuid)));
             }
 
             Result<Domain.KelompokRab.KelompokRab> asset = Domain.KelompokRab.KelompokRab.Update(existingKelompokRab!)

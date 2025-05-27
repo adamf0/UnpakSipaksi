@@ -8,6 +8,6 @@ using UnpakSipaksi.Common.Application.Messaging;
 namespace UnpakSipaksi.Modules.KesesuaianTkt.Application.DeleteKesesuaianTkt
 {
     public sealed record DeleteKesesuaianTktCommand(
-        Guid uuid
+        string uuid
     ) : ICommand;
 }

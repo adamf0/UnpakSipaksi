@@ -8,6 +8,6 @@ using UnpakSipaksi.Common.Application.Messaging;
 namespace UnpakSipaksi.Modules.Satuan.Application.DeleteSatuan
 {
     public sealed record DeleteSatuanCommand(
-        Guid uuid
+        string uuid
     ) : ICommand;
 }

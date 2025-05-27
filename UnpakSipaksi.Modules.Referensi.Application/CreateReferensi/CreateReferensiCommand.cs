@@ -5,7 +5,7 @@ using System.Text;
 using System.Threading.Tasks;
 using UnpakSipaksi.Common.Application.Messaging;
 
-namespace UnpakSipaksi.Modules.Referensi.Application.CreateAkurasiPenelitian
+namespace UnpakSipaksi.Modules.Referensi.Application.CreateReferensi
 {
     public sealed record CreateReferensiCommand(
         string Nama,

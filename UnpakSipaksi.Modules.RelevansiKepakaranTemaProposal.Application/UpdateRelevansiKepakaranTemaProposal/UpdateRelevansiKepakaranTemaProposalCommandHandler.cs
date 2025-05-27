@@ -12,19 +12,15 @@ namespace UnpakSipaksi.Modules.RelevansiKepakaranTemaProposal.Application.Update
     {
         public async Task<Result> Handle(UpdateRelevansiKepakaranTemaProposalCommand request, CancellationToken cancellationToken)
         {
-            Domain.RelevansiKepakaranTemaProposal.RelevansiKepakaranTemaProposal? existingRelevansiKepakaranTemaProposal = await RelevansiKepakaranTemaProposalRepository.GetAsync(request.Uuid, cancellationToken);
+            Domain.RelevansiKepakaranTemaProposal.RelevansiKepakaranTemaProposal? existingRelevansiKepakaranTemaProposal = await RelevansiKepakaranTemaProposalRepository.GetAsync(Guid.Parse(request.Uuid), cancellationToken);
 
             if (existingRelevansiKepakaranTemaProposal is null)
             {
-                Result.Failure(RelevansiKepakaranTemaProposalErrors.NotFound(request.Uuid));
+                Result.Failure(RelevansiKepakaranTemaProposalErrors.NotFound(Guid.Parse(request.Uuid)));
             }
 
             Result<Domain.RelevansiKepakaranTemaProposal.RelevansiKepakaranTemaProposal> asset = Domain.RelevansiKepakaranTemaProposal.RelevansiKepakaranTemaProposal.Update(existingRelevansiKepakaranTemaProposal!)
                          .ChangeNama(request.Nama)
-                         .ChangeBobotPDP(request.BobotPDP)
-                         .ChangeBobotTerapan(request.BobotTerapan)
-                         .ChangeBobotPenelitianDasar(request.BobotPenelitianDasar)
-                         .ChangeBobotKerjasama(request.BobotKerjasama)
                          .ChangeSkor(request.Skor)
                          .Build();
 

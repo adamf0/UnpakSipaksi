@@ -12,11 +12,11 @@ namespace UnpakSipaksi.Modules.SotaKebaharuan.Application.DeleteSotaKebaharuan
     {
         public async Task<Result> Handle(DeleteSotaKebaharuanCommand request, CancellationToken cancellationToken)
         {
-            Domain.SotaKebaharuan.SotaKebaharuan? existingSotaKebaharuan = await SotaKebaharuanRepository.GetAsync(request.uuid, cancellationToken);
+            Domain.SotaKebaharuan.SotaKebaharuan? existingSotaKebaharuan = await SotaKebaharuanRepository.GetAsync(Guid.Parse(request.uuid), cancellationToken);
 
             if (existingSotaKebaharuan is null)
             {
-                return Result.Failure(SotaKebaharuanErrors.NotFound(request.uuid));
+                return Result.Failure(SotaKebaharuanErrors.NotFound(Guid.Parse(request.uuid)));
             }
 
             await SotaKebaharuanRepository.DeleteAsync(existingSotaKebaharuan!);

@@ -12,11 +12,11 @@ namespace UnpakSipaksi.Modules.KetajamanAnalisis.Application.UpdateKetajamanAnal
     {
         public async Task<Result> Handle(UpdateKetajamanAnalisisCommand request, CancellationToken cancellationToken)
         {
-            Domain.KetajamanAnalisis.KetajamanAnalisis? existingKetajamanAnalisis = await KetajamanAnalisisRepository.GetAsync(request.Uuid, cancellationToken);
+            Domain.KetajamanAnalisis.KetajamanAnalisis? existingKetajamanAnalisis = await KetajamanAnalisisRepository.GetAsync(Guid.Parse(request.Uuid), cancellationToken);
 
             if (existingKetajamanAnalisis is null)
             {
-                Result.Failure(KetajamanAnalisisErrors.NotFound(request.Uuid));
+                Result.Failure(KetajamanAnalisisErrors.NotFound(Guid.Parse(request.Uuid)));
             }
 
             Result<Domain.KetajamanAnalisis.KetajamanAnalisis> asset = Domain.KetajamanAnalisis.KetajamanAnalisis.Update(existingKetajamanAnalisis!)

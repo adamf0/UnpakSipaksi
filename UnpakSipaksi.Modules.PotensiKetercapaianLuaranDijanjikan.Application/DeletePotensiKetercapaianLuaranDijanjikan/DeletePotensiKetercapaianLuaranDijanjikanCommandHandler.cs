@@ -12,11 +12,11 @@ namespace UnpakSipaksi.Modules.PotensiKetercapaianLuaranDijanjikan.Application.D
     {
         public async Task<Result> Handle(DeletePotensiKetercapaianLuaranDijanjikanCommand request, CancellationToken cancellationToken)
         {
-            Domain.PotensiKetercapaianLuaranDijanjikan.PotensiKetercapaianLuaranDijanjikan? existingPotensiKetercapaianLuaranDijanjikan = await PotensiKetercapaianLuaranDijanjikanRepository.GetAsync(request.uuid, cancellationToken);
+            Domain.PotensiKetercapaianLuaranDijanjikan.PotensiKetercapaianLuaranDijanjikan? existingPotensiKetercapaianLuaranDijanjikan = await PotensiKetercapaianLuaranDijanjikanRepository.GetAsync(Guid.Parse(request.uuid), cancellationToken);
 
             if (existingPotensiKetercapaianLuaranDijanjikan is null)
             {
-                return Result.Failure(PotensiKetercapaianLuaranDijanjikanErrors.NotFound(request.uuid));
+                return Result.Failure(PotensiKetercapaianLuaranDijanjikanErrors.NotFound(Guid.Parse(request.uuid)));
             }
 
             await PotensiKetercapaianLuaranDijanjikanRepository.DeleteAsync(existingPotensiKetercapaianLuaranDijanjikan!);

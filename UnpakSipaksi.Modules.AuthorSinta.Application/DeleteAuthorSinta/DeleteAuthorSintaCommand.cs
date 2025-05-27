@@ -8,6 +8,6 @@ using UnpakSipaksi.Common.Application.Messaging;
 namespace UnpakSipaksi.Modules.AuthorSinta.Application.DeleteAuthorSinta
 {
     public sealed record DeleteAuthorSintaCommand(
-        Guid uuid
+        string uuid
     ) : ICommand;
 }

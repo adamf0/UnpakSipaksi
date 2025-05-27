@@ -3,7 +3,7 @@
 namespace UnpakSipaksi.Modules.RelevansiProdukKepentinganNasional.Application.UpdateRelevansiProdukKepentinganNasional
 {
     public sealed record UpdateRelevansiProdukKepentinganNasionalCommand(
-        Guid Uuid,
+        string Uuid,
         string Nama,
         int Skor
     ) : ICommand;

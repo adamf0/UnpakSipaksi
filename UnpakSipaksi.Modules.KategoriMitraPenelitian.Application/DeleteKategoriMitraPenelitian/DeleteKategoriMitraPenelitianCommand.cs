@@ -8,6 +8,6 @@ using UnpakSipaksi.Common.Application.Messaging;
 namespace UnpakSipaksi.Modules.KategoriMitraPenelitian.Application.DeleteKategoriMitraPenelitian
 {
     public sealed record DeleteKategoriMitraPenelitianCommand(
-        Guid uuid
+        string uuid
     ) : ICommand;
 }

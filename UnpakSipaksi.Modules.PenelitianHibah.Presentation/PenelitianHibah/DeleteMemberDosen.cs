@@ -6,16 +6,16 @@ using UnpakSipaksi.Common.Domain;
 using UnpakSipaksi.Common.Presentation.ApiResults;
 using UnpakSipaksi.Modules.PenelitianHibah.Application.DeleteMemberDosen;
 
-namespace UnpakSipaksi.Modules.PenelitianHibah.Presentation.MemberDosen
+namespace UnpakSipaksi.Modules.PenelitianHibah.Presentation.PenelitianHibah
 {
     internal class DeleteMemberDosen
     {
         public static void MapEndpoint(IEndpointRouteBuilder app)
         {
-            app.MapDelete("PenelitianHibah/MemberDosen/{id}/{nidn}", async (Guid id, string nidn, ISender sender) =>
+            app.MapDelete("PenelitianHibah/MemberDosen/{uuid}/{nidn}", async (string uuid, string nidn, ISender sender) =>
             {
                 Result result = await sender.Send(
-                    new DeleteMemberDosenCommand(id, nidn)
+                    new DeleteMemberDosenCommand(uuid, nidn)
                 );
 
                 return result.Match(() => Results.Ok(), ApiResults.Problem);

@@ -3,6 +3,6 @@
 namespace UnpakSipaksi.Modules.Roadmap.Application.DeleteRoadmap
 {
     public sealed record DeleteRoadmapCommand(
-        Guid uuid
+        string uuid
     ) : ICommand;
 }

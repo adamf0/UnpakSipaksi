@@ -17,7 +17,7 @@ namespace UnpakSipaksi.Modules.KategoriTkt.Presentation.KategoriTkt
             app.MapPost("KategoriTkt", async (CreateKategoriTktRequest request, ISender sender) =>
             {
                 Result<Guid> result = await sender.Send(new CreateKategoriTktCommand(
-                    HtmlEncoder.Default.Encode(request.Nama)
+                    request.Nama
                     )
                 );
 

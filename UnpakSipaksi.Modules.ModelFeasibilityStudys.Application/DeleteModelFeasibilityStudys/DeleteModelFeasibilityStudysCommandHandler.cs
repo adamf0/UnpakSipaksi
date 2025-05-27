@@ -12,11 +12,11 @@ namespace UnpakSipaksi.Modules.ModelFeasibilityStudys.Application.DeleteModelFea
     {
         public async Task<Result> Handle(DeleteModelFeasibilityStudysCommand request, CancellationToken cancellationToken)
         {
-            Domain.ModelFeasibilityStudys.ModelFeasibilityStudys? existingModelFeasibilityStudys = await ModelFeasibilityStudysRepository.GetAsync(request.uuid, cancellationToken);
+            Domain.ModelFeasibilityStudys.ModelFeasibilityStudys? existingModelFeasibilityStudys = await ModelFeasibilityStudysRepository.GetAsync(Guid.Parse(request.uuid), cancellationToken);
 
             if (existingModelFeasibilityStudys is null)
             {
-                return Result.Failure(ModelFeasibilityStudysErrors.NotFound(request.uuid));
+                return Result.Failure(ModelFeasibilityStudysErrors.NotFound(Guid.Parse(request.uuid)));
             }
 
             await ModelFeasibilityStudysRepository.DeleteAsync(existingModelFeasibilityStudys!);

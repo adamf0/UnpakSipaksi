@@ -1,0 +1,16 @@
+C:\dev_net\UnpakSipaksi\UnpakSipaksi.Modules.KategoriLuaran.Domain\bin\Debug\net8.0\UnpakSipaksi.Modules.KategoriLuaran.Domain.deps.json
+C:\dev_net\UnpakSipaksi\UnpakSipaksi.Modules.KategoriLuaran.Domain\bin\Debug\net8.0\UnpakSipaksi.Modules.KategoriLuaran.Domain.dll
+C:\dev_net\UnpakSipaksi\UnpakSipaksi.Modules.KategoriLuaran.Domain\bin\Debug\net8.0\UnpakSipaksi.Modules.KategoriLuaran.Domain.pdb
+C:\dev_net\UnpakSipaksi\UnpakSipaksi.Modules.KategoriLuaran.Domain\bin\Debug\net8.0\UnpakSipaksi.Common.Domain.dll
+C:\dev_net\UnpakSipaksi\UnpakSipaksi.Modules.KategoriLuaran.Domain\bin\Debug\net8.0\UnpakSipaksi.Common.Domain.pdb
+C:\dev_net\UnpakSipaksi\UnpakSipaksi.Modules.KategoriLuaran.Domain\obj\Debug\net8.0\UnpakSipaksi.Modules.KategoriLuaran.Domain.csproj.AssemblyReference.cache
+C:\dev_net\UnpakSipaksi\UnpakSipaksi.Modules.KategoriLuaran.Domain\obj\Debug\net8.0\UnpakSipaksi.Modules.KategoriLuaran.Domain.GeneratedMSBuildEditorConfig.editorconfig
+C:\dev_net\UnpakSipaksi\UnpakSipaksi.Modules.KategoriLuaran.Domain\obj\Debug\net8.0\UnpakSipaksi.Modules.KategoriLuaran.Domain.AssemblyInfoInputs.cache
+C:\dev_net\UnpakSipaksi\UnpakSipaksi.Modules.KategoriLuaran.Domain\obj\Debug\net8.0\UnpakSipaksi.Modules.KategoriLuaran.Domain.AssemblyInfo.cs
+C:\dev_net\UnpakSipaksi\UnpakSipaksi.Modules.KategoriLuaran.Domain\obj\Debug\net8.0\UnpakSipaksi.Modules.KategoriLuaran.Domain.csproj.CoreCompileInputs.cache
+C:\dev_net\UnpakSipaksi\UnpakSipaksi.Modules.KategoriLuaran.Domain\obj\Debug\net8.0\UnpakSipaksi.Modules.KategoriLuaran.Domain.sourcelink.json
+C:\dev_net\UnpakSipaksi\UnpakSipaksi.Modules.KategoriLuaran.Domain\obj\Debug\net8.0\UnpakSip.CDF43882.Up2Date
+C:\dev_net\UnpakSipaksi\UnpakSipaksi.Modules.KategoriLuaran.Domain\obj\Debug\net8.0\UnpakSipaksi.Modules.KategoriLuaran.Domain.dll
+C:\dev_net\UnpakSipaksi\UnpakSipaksi.Modules.KategoriLuaran.Domain\obj\Debug\net8.0\refint\UnpakSipaksi.Modules.KategoriLuaran.Domain.dll
+C:\dev_net\UnpakSipaksi\UnpakSipaksi.Modules.KategoriLuaran.Domain\obj\Debug\net8.0\UnpakSipaksi.Modules.KategoriLuaran.Domain.pdb
+C:\dev_net\UnpakSipaksi\UnpakSipaksi.Modules.KategoriLuaran.Domain\obj\Debug\net8.0\ref\UnpakSipaksi.Modules.KategoriLuaran.Domain.dll

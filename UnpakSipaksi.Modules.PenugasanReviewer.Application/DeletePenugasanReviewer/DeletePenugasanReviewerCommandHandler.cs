@@ -12,11 +12,11 @@ namespace UnpakSipaksi.Modules.PenugasanReviewer.Application.DeletePenugasanRevi
     {
         public async Task<Result> Handle(DeletePenugasanReviewerCommand request, CancellationToken cancellationToken)
         {
-            Domain.PenugasanReviewer.PenugasanReviewer? existingPenugasanReviewer = await PenugasanReviewerRepository.GetAsync(request.uuid, cancellationToken);
+            Domain.PenugasanReviewer.PenugasanReviewer? existingPenugasanReviewer = await PenugasanReviewerRepository.GetAsync(Guid.Parse(request.uuid), cancellationToken);
 
             if (existingPenugasanReviewer is null)
             {
-                return Result.Failure(PenugasanReviewerErrors.NotFound(request.uuid));
+                return Result.Failure(PenugasanReviewerErrors.NotFound(Guid.Parse(request.uuid)));
             }
 
             await PenugasanReviewerRepository.DeleteAsync(existingPenugasanReviewer!);

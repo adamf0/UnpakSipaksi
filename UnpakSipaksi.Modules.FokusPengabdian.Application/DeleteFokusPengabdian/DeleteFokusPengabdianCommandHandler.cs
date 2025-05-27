@@ -17,11 +17,11 @@ namespace UnpakSipaksi.Modules.FokusPengabdian.Application.DeleteFokusPengabdian
     {
         public async Task<Result> Handle(DeleteFokusPengabdianCommand request, CancellationToken cancellationToken)
         {
-            Domain.FokusPengabdian.FokusPengabdian? existingFokusPengabdian = await fokusPengabdianRepository.GetAsync(request.uuid, cancellationToken);
+            Domain.FokusPengabdian.FokusPengabdian? existingFokusPengabdian = await fokusPengabdianRepository.GetAsync(Guid.Parse(request.uuid), cancellationToken);
 
             if (existingFokusPengabdian is null)
             {
-                return Result.Failure(FokusPengabdianErrors.NotFound(request.uuid));
+                return Result.Failure(FokusPengabdianErrors.NotFound(Guid.Parse(request.uuid)));
             }
 
             await fokusPengabdianRepository.DeleteAsync(existingFokusPengabdian!);

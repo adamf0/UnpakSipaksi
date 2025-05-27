@@ -9,6 +9,6 @@ namespace UnpakSipaksi.Modules.TemaPenelitian.Application.CreateTemaPenelitian
 {
     public sealed record CreateTemaPenelitianCommand(
         string Nama,
-        Guid FokusPenelitianId
+        string FokusPenelitianId
     ) : ICommand<Guid>;
 }

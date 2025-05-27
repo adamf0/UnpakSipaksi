@@ -17,9 +17,9 @@ namespace UnpakSipaksi.Modules.AuthorSinta.Presentation.AuthorSinta
             {
                 Result result = await sender.Send(new UpdateAuthorSintaCommand(
                     request.Id,
-                    HtmlEncoder.Default.Encode(request.NIDN),
-                    HtmlEncoder.Default.Encode(request.AuthorId),
-                    int.Parse(HtmlEncoder.Default.Encode(request.Score))
+                    request.NIDN,
+                    request.AuthorId,
+                    request.Score
                     )
                 );
 
@@ -29,11 +29,10 @@ namespace UnpakSipaksi.Modules.AuthorSinta.Presentation.AuthorSinta
 
         internal sealed class UpdateAuthorSintaRequest
         {
-            public Guid Id { get; set; }
+            public string Id { get; set; }
             public string NIDN { get; set; }
             public string AuthorId { get; set; }
-
-            public string Score { get; set; }
+            public int Score { get; set; }
         }
     }
 }

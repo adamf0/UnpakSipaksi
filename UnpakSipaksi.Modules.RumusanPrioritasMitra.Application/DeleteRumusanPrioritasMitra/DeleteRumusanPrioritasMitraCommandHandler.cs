@@ -12,11 +12,11 @@ namespace UnpakSipaksi.Modules.RumusanPrioritasMitra.Application.DeleteRumusanPr
     {
         public async Task<Result> Handle(DeleteRumusanPrioritasMitraCommand request, CancellationToken cancellationToken)
         {
-            Domain.RumusanPrioritasMitra.RumusanPrioritasMitra? existingRumusanPrioritasMitra = await RumusanPrioritasMitraRepository.GetAsync(request.uuid, cancellationToken);
+            Domain.RumusanPrioritasMitra.RumusanPrioritasMitra? existingRumusanPrioritasMitra = await RumusanPrioritasMitraRepository.GetAsync(Guid.Parse(request.uuid), cancellationToken);
 
             if (existingRumusanPrioritasMitra is null)
             {
-                return Result.Failure(RumusanPrioritasMitraErrors.NotFound(request.uuid));
+                return Result.Failure(RumusanPrioritasMitraErrors.NotFound(Guid.Parse(request.uuid)));
             }
 
             await RumusanPrioritasMitraRepository.DeleteAsync(existingRumusanPrioritasMitra!);

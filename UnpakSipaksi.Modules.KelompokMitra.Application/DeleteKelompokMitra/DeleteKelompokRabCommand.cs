@@ -8,6 +8,6 @@ using UnpakSipaksi.Common.Application.Messaging;
 namespace UnpakSipaksi.Modules.KelompokMitra.Application.DeleteKelompokMitra
 {
     public sealed record DeleteKelompokMitraCommand(
-        Guid uuid
+        string uuid
     ) : ICommand;
 }

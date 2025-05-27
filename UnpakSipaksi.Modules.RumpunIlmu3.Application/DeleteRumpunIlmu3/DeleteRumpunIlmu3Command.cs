@@ -8,6 +8,6 @@ using UnpakSipaksi.Common.Application.Messaging;
 namespace UnpakSipaksi.Modules.RumpunIlmu3.Application.DeleteRumpunIlmu3
 {
     public sealed record DeleteRumpunIlmu3Command(
-        Guid uuid
+        string uuid
     ) : ICommand;
 }

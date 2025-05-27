@@ -12,7 +12,7 @@ namespace UnpakSipaksi.Modules.PublikasiDisitasiProposal.Presentation.PublikasiD
     {
         public static void MapEndpoint(IEndpointRouteBuilder app)
         {
-            app.MapDelete("PublikasiDisitasiProposal/{id}", async (Guid id, ISender sender) =>
+            app.MapDelete("PublikasiDisitasiProposal/{id}", async (string id, ISender sender) =>
             {
                 Result result = await sender.Send(
                     new DeletePublikasiDisitasiProposalCommand(id)

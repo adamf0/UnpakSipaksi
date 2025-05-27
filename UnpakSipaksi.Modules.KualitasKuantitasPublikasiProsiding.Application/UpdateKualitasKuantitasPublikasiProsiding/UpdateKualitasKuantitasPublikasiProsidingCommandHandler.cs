@@ -12,11 +12,11 @@ namespace UnpakSipaksi.Modules.KualitasKuantitasPublikasiProsiding.Application.U
     {
         public async Task<Result> Handle(UpdateKualitasKuantitasPublikasiProsidingCommand request, CancellationToken cancellationToken)
         {
-            Domain.KualitasKuantitasPublikasiProsiding.KualitasKuantitasPublikasiProsiding? existingKualitasKuantitasPublikasiProsiding = await KualitasKuantitasPublikasiProsidingRepository.GetAsync(request.Uuid, cancellationToken);
+            Domain.KualitasKuantitasPublikasiProsiding.KualitasKuantitasPublikasiProsiding? existingKualitasKuantitasPublikasiProsiding = await KualitasKuantitasPublikasiProsidingRepository.GetAsync(Guid.Parse(request.Uuid), cancellationToken);
 
             if (existingKualitasKuantitasPublikasiProsiding is null)
             {
-                Result.Failure(KualitasKuantitasPublikasiProsidingErrors.NotFound(request.Uuid));
+                Result.Failure(KualitasKuantitasPublikasiProsidingErrors.NotFound(Guid.Parse(request.Uuid)));
             }
 
             Result<Domain.KualitasKuantitasPublikasiProsiding.KualitasKuantitasPublikasiProsiding> asset = Domain.KualitasKuantitasPublikasiProsiding.KualitasKuantitasPublikasiProsiding.Update(existingKualitasKuantitasPublikasiProsiding!)

@@ -8,7 +8,7 @@ using UnpakSipaksi.Common.Application.Messaging;
 namespace UnpakSipaksi.Modules.ArtikelMediaMassa.Application.UpdateArtikelMediaMassa
 {
     public sealed record UpdateArtikelMediaMassaCommand(
-        Guid Uuid,
+        string Uuid,
         string Nama,
         int Nilai
     ) : ICommand;

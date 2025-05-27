@@ -18,7 +18,7 @@ namespace UnpakSipaksi.Modules.Satuan.Presentation.Satuan
             {
                 Result result = await sender.Send(new UpdateSatuanCommand(
                     request.Id,
-                    HtmlEncoder.Default.Encode(request.Nama)
+                    request.Nama
                     )
                 );
 
@@ -28,9 +28,8 @@ namespace UnpakSipaksi.Modules.Satuan.Presentation.Satuan
 
         internal sealed class UpdateSatuanRequest
         {
-            public Guid Id { get; set; }
+            public string Id { get; set; }
             public string Nama { get; set; }
-            public Guid TemaPenelitianId { get; set; }
         }
     }
 }

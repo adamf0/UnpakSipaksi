@@ -17,11 +17,11 @@ namespace UnpakSipaksi.Modules.ArtikelMediaMassa.Application.UpdateArtikelMediaM
     {
         public async Task<Result> Handle(UpdateArtikelMediaMassaCommand request, CancellationToken cancellationToken)
         {
-            Domain.ArtikelMediaMassa.ArtikelMediaMassa? existingArtikelMediaMassa = await artikelMediaMassaRepository.GetAsync(request.Uuid, cancellationToken);
+            Domain.ArtikelMediaMassa.ArtikelMediaMassa? existingArtikelMediaMassa = await artikelMediaMassaRepository.GetAsync(Guid.Parse(request.Uuid), cancellationToken);
 
             if (existingArtikelMediaMassa is null)
             {
-                Result.Failure(ArtikelMediaMassaErrors.NotFound(request.Uuid));
+                Result.Failure(ArtikelMediaMassaErrors.NotFound(Guid.Parse(request.Uuid)));
             }
 
             Result<Domain.ArtikelMediaMassa.ArtikelMediaMassa> asset = Domain.ArtikelMediaMassa.ArtikelMediaMassa.Update(existingArtikelMediaMassa!)

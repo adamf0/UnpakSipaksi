@@ -17,7 +17,7 @@ namespace UnpakSipaksi.Modules.PenugasanReviewer.Presentation.PenugasanReviewer
             app.MapPost("PenugasanReviewer", async (CreatePenugasanReviewerRequest request, ISender sender) =>
             {
                 Result<Guid> result = await sender.Send(new CreatePenugasanReviewerCommand(
-                    HtmlEncoder.Default.Encode(request.Nidn),
+                    request.Nidn,
                     request.Status
                     )
                 );

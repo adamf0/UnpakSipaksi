@@ -1,10 +1,9 @@
 ﻿using UnpakSipaksi.Common.Application.Messaging;
 using UnpakSipaksi.Common.Domain;
 using UnpakSipaksi.Modules.PenelitianHibah.Application.Abstractions.Data;
-using UnpakSipaksi.Modules.PenelitianHibah.Application.UpdateMbkm;
 using UnpakSipaksi.Modules.PenelitianHibah.Domain.MemberMahasiswa;
 
-namespace UnpakSipaksi.Modules.PenelitianHibah.Application.UpdateMemberMbkm
+namespace UnpakSipaksi.Modules.PenelitianHibah.Application.UpdateMbkm
 {
     internal sealed class UpdateMemberMbkmCommandHandler(
         IMemberMahasiswaRepository memberRepository,
@@ -16,7 +15,7 @@ namespace UnpakSipaksi.Modules.PenelitianHibah.Application.UpdateMemberMbkm
             MemberMahasiswa? existingMemberMahasiswa = await memberRepository.GetAsync(
                 Guid.Parse(request.Uuid),
                 Guid.Parse(request.UuidPenelitianHibah),
-                request.NPM, 
+                request.NPM,
                 cancellationToken
             );
 

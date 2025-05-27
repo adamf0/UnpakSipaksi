@@ -8,7 +8,7 @@ using UnpakSipaksi.Common.Application.Messaging;
 namespace UnpakSipaksi.Modules.AkurasiPenelitian.Application.UpdateAkurasiPenelitian
 {
     public sealed record UpdateAkurasiPenelitianCommand(
-        Guid Uuid,
+        string Uuid,
         string Nama,
         int Skor
     ) : ICommand;

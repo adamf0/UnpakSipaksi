@@ -8,6 +8,6 @@ using UnpakSipaksi.Common.Application.Messaging;
 namespace UnpakSipaksi.Modules.AkurasiPenelitian.Application.DeleteAkurasiPenelitian
 {
     public sealed record DeleteAkurasiPenelitianCommand(
-        Guid uuid
+        string uuid
     ) : ICommand;
 }

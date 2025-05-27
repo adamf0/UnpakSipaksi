@@ -14,10 +14,6 @@ namespace UnpakSipaksi.Modules.RelevansiKepakaranTemaProposal.Application.Create
         {
             Result<Domain.RelevansiKepakaranTemaProposal.RelevansiKepakaranTemaProposal> result = Domain.RelevansiKepakaranTemaProposal.RelevansiKepakaranTemaProposal.Create(
                 request.Nama,
-                request.BobotPDP,
-                request.BobotTerapan,
-                request.BobotKerjasama,
-                request.BobotPenelitianDasar,
                 request.Skor
             );
 

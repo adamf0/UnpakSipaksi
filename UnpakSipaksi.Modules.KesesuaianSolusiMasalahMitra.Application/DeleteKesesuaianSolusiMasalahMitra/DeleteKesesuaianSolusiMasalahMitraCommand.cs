@@ -8,6 +8,6 @@ using UnpakSipaksi.Common.Application.Messaging;
 namespace UnpakSipaksi.Modules.KesesuaianSolusiMasalahMitra.Application.DeleteKesesuaianSolusiMasalahMitra
 {
     public sealed record DeleteKesesuaianSolusiMasalahMitraCommand(
-        Guid uuid
+        string uuid
     ) : ICommand;
 }

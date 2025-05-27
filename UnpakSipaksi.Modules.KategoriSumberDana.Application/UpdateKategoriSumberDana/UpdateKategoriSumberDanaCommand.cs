@@ -8,7 +8,7 @@ using UnpakSipaksi.Common.Application.Messaging;
 namespace UnpakSipaksi.Modules.KategoriSumberDana.Application.UpdateKategoriSumberDana
 {
     public sealed record UpdateKategoriSumberDanaCommand(
-        Guid Uuid,
+        string Uuid,
         string Nama
     ) : ICommand;
 }

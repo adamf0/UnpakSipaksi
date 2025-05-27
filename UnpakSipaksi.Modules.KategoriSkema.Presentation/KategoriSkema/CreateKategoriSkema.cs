@@ -17,7 +17,7 @@ namespace UnpakSipaksi.Modules.KategoriSkema.Presentation.KategoriSkema
             app.MapPost("KategoriSkema", async (CreateKategoriSkemaRequest request, ISender sender) =>
             {
                 Result<Guid> result = await sender.Send(new CreateKategoriSkemaCommand(
-                    HtmlEncoder.Default.Encode(request.Nama),
+                    request.Nama,
                     request.Rule
                     )
                 );

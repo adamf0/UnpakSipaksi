@@ -17,7 +17,7 @@ namespace UnpakSipaksi.Modules.Satuan.Presentation.Satuan
             app.MapPost("Satuan", async (CreateSatuanRequest request, ISender sender) =>
             {
                 Result<Guid> result = await sender.Send(new CreateSatuanCommand(
-                    HtmlEncoder.Default.Encode(request.Nama)
+                    request.Nama
                     )
                 );
 
@@ -28,7 +28,6 @@ namespace UnpakSipaksi.Modules.Satuan.Presentation.Satuan
         internal sealed class CreateSatuanRequest
         {
             public string Nama { get; set; }
-            public Guid TemaPenelitianId { get; set; }
         }
     }
 }

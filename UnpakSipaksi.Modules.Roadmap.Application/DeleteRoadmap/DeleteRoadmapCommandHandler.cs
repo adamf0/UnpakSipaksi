@@ -12,11 +12,11 @@ namespace UnpakSipaksi.Modules.Roadmap.Application.DeleteRoadmap
     {
         public async Task<Result> Handle(DeleteRoadmapCommand request, CancellationToken cancellationToken)
         {
-            Domain.Roadmap.Roadmap? existingRoadmap = await RoadmapRepository.GetAsync(request.uuid, cancellationToken);
+            Domain.Roadmap.Roadmap? existingRoadmap = await RoadmapRepository.GetAsync(Guid.Parse(request.uuid), cancellationToken);
 
             if (existingRoadmap is null)
             {
-                return Result.Failure(RoadmapErrors.NotFound(request.uuid));
+                return Result.Failure(RoadmapErrors.NotFound(Guid.Parse(request.uuid)));
             }
 
             await RoadmapRepository.DeleteAsync(existingRoadmap!);

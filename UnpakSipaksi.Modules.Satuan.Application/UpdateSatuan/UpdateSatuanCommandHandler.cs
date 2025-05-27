@@ -17,11 +17,11 @@ namespace UnpakSipaksi.Modules.Satuan.Application.UpdateSatuan
     {
         public async Task<Result> Handle(UpdateSatuanCommand request, CancellationToken cancellationToken)
         {
-            Domain.Satuan.Satuan? existingSatuan = await SatuanRepository.GetAsync(request.Uuid, cancellationToken);
+            Domain.Satuan.Satuan? existingSatuan = await SatuanRepository.GetAsync(Guid.Parse(request.Uuid), cancellationToken);
 
             if (existingSatuan is null)
             {
-                Result.Failure(SatuanErrors.NotFound(request.Uuid));
+                Result.Failure(SatuanErrors.NotFound(Guid.Parse(request.Uuid)));
             }
 
             Result<Domain.Satuan.Satuan> asset = Domain.Satuan.Satuan.Update(existingSatuan!)

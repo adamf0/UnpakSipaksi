@@ -17,11 +17,11 @@ namespace UnpakSipaksi.Modules.PrioritasRiset.Application.UpdatePrioritasRiset
     {
         public async Task<Result> Handle(UpdatePrioritasRisetCommand request, CancellationToken cancellationToken)
         {
-            Domain.PrioritasRiset.PrioritasRiset? existingPrioritasRiset = await PrioritasRisetRepository.GetAsync(request.Uuid, cancellationToken);
+            Domain.PrioritasRiset.PrioritasRiset? existingPrioritasRiset = await PrioritasRisetRepository.GetAsync(Guid.Parse(request.Uuid), cancellationToken);
 
             if (existingPrioritasRiset is null)
             {
-                Result.Failure(PrioritasRisetErrors.NotFound(request.Uuid));
+                Result.Failure(PrioritasRisetErrors.NotFound(Guid.Parse(request.Uuid)));
             }
 
             Result<Domain.PrioritasRiset.PrioritasRiset> asset = Domain.PrioritasRiset.PrioritasRiset.Update(existingPrioritasRiset!)

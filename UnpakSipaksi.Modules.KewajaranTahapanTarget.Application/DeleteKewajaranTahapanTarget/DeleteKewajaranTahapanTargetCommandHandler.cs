@@ -12,11 +12,11 @@ namespace UnpakSipaksi.Modules.KewajaranTahapanTarget.Application.DeleteKewajara
     {
         public async Task<Result> Handle(DeleteKewajaranTahapanTargetCommand request, CancellationToken cancellationToken)
         {
-            Domain.KewajaranTahapanTarget.KewajaranTahapanTarget? existingKewajaranTahapanTarget = await KewajaranTahapanTargetRepository.GetAsync(request.uuid, cancellationToken);
+            Domain.KewajaranTahapanTarget.KewajaranTahapanTarget? existingKewajaranTahapanTarget = await KewajaranTahapanTargetRepository.GetAsync(Guid.Parse(request.uuid), cancellationToken);
 
             if (existingKewajaranTahapanTarget is null)
             {
-                return Result.Failure(KewajaranTahapanTargetErrors.NotFound(request.uuid));
+                return Result.Failure(KewajaranTahapanTargetErrors.NotFound(Guid.Parse(request.uuid)));
             }
 
             await KewajaranTahapanTargetRepository.DeleteAsync(existingKewajaranTahapanTarget!);

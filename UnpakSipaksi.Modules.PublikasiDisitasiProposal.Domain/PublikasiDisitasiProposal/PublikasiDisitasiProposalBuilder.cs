@@ -35,62 +35,6 @@ namespace UnpakSipaksi.Modules.PublikasiDisitasiProposal.Domain.PublikasiDisitas
                 return this;
             }
 
-            public PublikasiDisitasiProposalBuilder ChangeBobotPDP(int bobotPDP)
-            {
-                if (HasError) return this;
-
-                /*if (string.IsNullOrWhiteSpace(nama))
-                {
-                    _result = Result.Failure<PublikasiDisitasiProposal>(PublikasiDisitasiProposalErrors.NamaNotFound);
-                    return this;
-                }*/
-
-                _akurasiPenelitian.BobotPDP = bobotPDP;
-                return this;
-            }
-
-            public PublikasiDisitasiProposalBuilder ChangeBobotTerapan(int bobotTerapan)
-            {
-                if (HasError) return this;
-
-                /*if (string.IsNullOrWhiteSpace(nama))
-                {
-                    _result = Result.Failure<PublikasiDisitasiProposal>(PublikasiDisitasiProposalErrors.NamaNotFound);
-                    return this;
-                }*/
-
-                _akurasiPenelitian.BobotTerapan = bobotTerapan;
-                return this;
-            }
-
-            public PublikasiDisitasiProposalBuilder ChangeBobotKerjasama(int bobotKerjasama)
-            {
-                if (HasError) return this;
-
-                /*if (string.IsNullOrWhiteSpace(nama))
-                {
-                    _result = Result.Failure<PublikasiDisitasiProposal>(PublikasiDisitasiProposalErrors.NamaNotFound);
-                    return this;
-                }*/
-
-                _akurasiPenelitian.BobotKerjasama = bobotKerjasama;
-                return this;
-            }
-
-            public PublikasiDisitasiProposalBuilder ChangeBobotPenelitianDasar(int bobotPenelitianDasar)
-            {
-                if (HasError) return this;
-
-                /*if (string.IsNullOrWhiteSpace(nama))
-                {
-                    _result = Result.Failure<PublikasiDisitasiProposal>(PublikasiDisitasiProposalErrors.NamaNotFound);
-                    return this;
-                }*/
-
-                _akurasiPenelitian.BobotPenelitianDasar = bobotPenelitianDasar;
-                return this;
-            }
-
             public PublikasiDisitasiProposalBuilder ChangeSkor(int skor)
             {
                 if (HasError) return this;

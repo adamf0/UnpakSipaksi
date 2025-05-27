@@ -8,7 +8,7 @@ using UnpakSipaksi.Common.Application.Messaging;
 namespace UnpakSipaksi.Modules.Satuan.Application.UpdateSatuan
 {
     public sealed record UpdateSatuanCommand(
-        Guid Uuid,
+        string Uuid,
         string Nama
     ) : ICommand;
 }

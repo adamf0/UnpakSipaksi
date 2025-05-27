@@ -12,11 +12,11 @@ namespace UnpakSipaksi.Modules.RelevansiKualitasReferensi.Application.DeleteRele
     {
         public async Task<Result> Handle(DeleteRelevansiKualitasReferensiCommand request, CancellationToken cancellationToken)
         {
-            Domain.RelevansiKualitasReferensi.RelevansiKualitasReferensi? existingRelevansiKualitasReferensi = await RelevansiKualitasReferensiRepository.GetAsync(request.uuid, cancellationToken);
+            Domain.RelevansiKualitasReferensi.RelevansiKualitasReferensi? existingRelevansiKualitasReferensi = await RelevansiKualitasReferensiRepository.GetAsync(Guid.Parse(request.uuid), cancellationToken);
 
             if (existingRelevansiKualitasReferensi is null)
             {
-                return Result.Failure(RelevansiKualitasReferensiErrors.NotFound(request.uuid));
+                return Result.Failure(RelevansiKualitasReferensiErrors.NotFound(Guid.Parse(request.uuid)));
             }
 
             await RelevansiKualitasReferensiRepository.DeleteAsync(existingRelevansiKualitasReferensi!);

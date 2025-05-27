@@ -5,18 +5,18 @@ using UnpakSipaksi.Modules.PenugasanReviewer.Domain.PenugasanReviewer;
 
 namespace UnpakSipaksi.Modules.PenugasanReviewer.Application.UpdatePenugasanReviewer
 {
-    internal sealed class StatusPenugasanReviewerCommandHandler(
+    internal sealed class UpdatePenugasanReviewerCommandHandler(
     IPenugasanReviewerRepository PenugasanReviewerRepository,
     IUnitOfWork unitOfWork)
-    : ICommandHandler<StatusPenugasanReviewerCommand>
+    : ICommandHandler<UpdatePenugasanReviewerCommand>
     {
-        public async Task<Result> Handle(StatusPenugasanReviewerCommand request, CancellationToken cancellationToken)
+        public async Task<Result> Handle(UpdatePenugasanReviewerCommand request, CancellationToken cancellationToken)
         {
-            Domain.PenugasanReviewer.PenugasanReviewer? existingPenugasanReviewer = await PenugasanReviewerRepository.GetAsync(request.Uuid, cancellationToken);
+            Domain.PenugasanReviewer.PenugasanReviewer? existingPenugasanReviewer = await PenugasanReviewerRepository.GetAsync(Guid.Parse(request.Uuid), cancellationToken);
 
             if (existingPenugasanReviewer is null)
             {
-                Result.Failure(PenugasanReviewerErrors.NotFound(request.Uuid));
+                Result.Failure(PenugasanReviewerErrors.NotFound(Guid.Parse(request.Uuid)));
             }
 
             Result<Domain.PenugasanReviewer.PenugasanReviewer> asset = Domain.PenugasanReviewer.PenugasanReviewer.Update(existingPenugasanReviewer!)

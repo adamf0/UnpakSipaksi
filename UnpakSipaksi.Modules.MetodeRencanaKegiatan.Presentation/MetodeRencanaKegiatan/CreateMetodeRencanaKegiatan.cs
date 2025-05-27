@@ -17,8 +17,8 @@ namespace UnpakSipaksi.Modules.MetodeRencanaKegiatan.Presentation.MetodeRencanaK
             app.MapPost("MetodeRencanaKegiatan", async (CreateMetodeRencanaKegiatanRequest request, ISender sender) =>
             {
                 Result<Guid> result = await sender.Send(new CreateMetodeRencanaKegiatanCommand(
-                    HtmlEncoder.Default.Encode(request.Nama),
-                    int.Parse(HtmlEncoder.Default.Encode(request.Nilai))
+                    request.Nama,
+                    request.Nilai
                     )
                 );
 
@@ -29,7 +29,7 @@ namespace UnpakSipaksi.Modules.MetodeRencanaKegiatan.Presentation.MetodeRencanaK
         internal sealed class CreateMetodeRencanaKegiatanRequest
         {
             public string Nama { get; set; }
-            public string Nilai { get; set; }
+            public int Nilai { get; set; }
         }
     }
 }

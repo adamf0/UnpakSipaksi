@@ -8,6 +8,6 @@ using UnpakSipaksi.Common.Application.Messaging;
 namespace UnpakSipaksi.Modules.Rirn.Application.DeleteRirn
 {
     public sealed record DeleteRirnCommand(
-        Guid uuid
+        string uuid
     ) : ICommand;
 }

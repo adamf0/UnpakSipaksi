@@ -62,6 +62,8 @@ using UnpakSipaksi.Modules.Metode.Infrastructure;
 using UnpakSipaksi.Modules.UrgensiPenelitian.Infrastructure;
 using UnpakSipaksi.Modules.SubstansiBobot.Infrastructure;
 using UnpakSipaksi.Modules.PenelitianHibah.Infrastructure;
+using UnpakSipaksi.Modules.Kategori.Infrastructure;
+using UnpakSipaksi.Modules.KategoriLuaran.Infrastructure;
 
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.ResponseCompression;
@@ -155,6 +157,8 @@ builder.Services.AddApplication([
     UnpakSipaksi.Modules.SubstansiBobot.Application.AssemblyReference.Assembly,
     UnpakSipaksi.Modules.Insentif.Application.AssemblyReference.Assembly,
     UnpakSipaksi.Modules.PenelitianHibah.Application.AssemblyReference.Assembly,
+    UnpakSipaksi.Modules.Kategori.Application.AssemblyReference.Assembly,
+    UnpakSipaksi.Modules.KategoriLuaran.Application.AssemblyReference.Assembly,
 ]);
 
 builder.Services.AddAntiforgery(options =>
@@ -225,6 +229,8 @@ builder.Services.AddUrgensiPenelitianModule(builder.Configuration);
 builder.Services.AddSubstansiBobotModule(builder.Configuration);
 builder.Services.AddInsentifModule(builder.Configuration);
 builder.Services.AddPenelitianHibahModule(builder.Configuration);
+builder.Services.AddKategoriModule(builder.Configuration);
+builder.Services.AddKategoriLuaranModule(builder.Configuration);
 
 builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen();
@@ -328,6 +334,8 @@ UrgensiPenelitianModule.MapEndpoints(app);
 SubstansiBobotModule.MapEndpoints(app);
 InsentifModule.MapEndpoints(app);
 PenelitianHibahModule.MapEndpoints(app);
+KategoriModule.MapEndpoints(app);
+KategoriLuaranModule.MapEndpoints(app);
 
 if (app.Environment.IsDevelopment())
 {

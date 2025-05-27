@@ -18,11 +18,11 @@ namespace UnpakSipaksi.Modules.FokusPenelitian.Application.UpdateFokusPenelitian
     {
         public async Task<Result> Handle(UpdateFokusPenelitianCommand request, CancellationToken cancellationToken)
         {
-            Domain.FokusPenelitian.FokusPenelitian? existingFokusPenelitian = await fokusPenelitianRepository.GetAsync(request.Uuid, cancellationToken);
+            Domain.FokusPenelitian.FokusPenelitian? existingFokusPenelitian = await fokusPenelitianRepository.GetAsync(Guid.Parse(request.Uuid), cancellationToken);
 
             if (existingFokusPenelitian is null)
             {
-                Result.Failure(FokusPenelitianErrors.NotFound(request.Uuid));
+                Result.Failure(FokusPenelitianErrors.NotFound(Guid.Parse(request.Uuid)));
             }
 
             Result<Domain.FokusPenelitian.FokusPenelitian> asset = Domain.FokusPenelitian.FokusPenelitian.Update(existingFokusPenelitian!)

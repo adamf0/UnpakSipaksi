@@ -12,11 +12,11 @@ namespace UnpakSipaksi.Modules.ModelFeasibilityStudys.Application.UpdateModelFea
     {
         public async Task<Result> Handle(UpdateModelFeasibilityStudysCommand request, CancellationToken cancellationToken)
         {
-            Domain.ModelFeasibilityStudys.ModelFeasibilityStudys? existingModelFeasibilityStudys = await ModelFeasibilityStudysRepository.GetAsync(request.Uuid, cancellationToken);
+            Domain.ModelFeasibilityStudys.ModelFeasibilityStudys? existingModelFeasibilityStudys = await ModelFeasibilityStudysRepository.GetAsync(Guid.Parse(request.Uuid), cancellationToken);
 
             if (existingModelFeasibilityStudys is null)
             {
-                Result.Failure(ModelFeasibilityStudysErrors.NotFound(request.Uuid));
+                Result.Failure(ModelFeasibilityStudysErrors.NotFound(Guid.Parse(request.Uuid)));
             }
 
             Result<Domain.ModelFeasibilityStudys.ModelFeasibilityStudys> asset = Domain.ModelFeasibilityStudys.ModelFeasibilityStudys.Update(existingModelFeasibilityStudys!)

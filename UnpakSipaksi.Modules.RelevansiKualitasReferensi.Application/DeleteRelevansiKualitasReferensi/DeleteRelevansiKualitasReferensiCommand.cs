@@ -3,6 +3,6 @@
 namespace UnpakSipaksi.Modules.RelevansiKualitasReferensi.Application.DeleteRelevansiKualitasReferensi
 {
     public sealed record DeleteRelevansiKualitasReferensiCommand(
-        Guid uuid
+        string uuid
     ) : ICommand;
 }

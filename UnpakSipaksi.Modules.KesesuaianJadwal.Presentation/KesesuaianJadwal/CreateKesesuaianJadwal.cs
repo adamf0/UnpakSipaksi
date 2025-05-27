@@ -17,8 +17,8 @@ namespace UnpakSipaksi.Modules.KesesuaianJadwal.Presentation.KesesuaianJadwal
             app.MapPost("KesesuaianJadwal", async (CreateKesesuaianJadwalRequest request, ISender sender) =>
             {
                 Result<Guid> result = await sender.Send(new CreateKesesuaianJadwalCommand(
-                    HtmlEncoder.Default.Encode(request.Nama),
-                    int.Parse(HtmlEncoder.Default.Encode(request.Nilai))
+                    request.Nama,
+                    request.Nilai
                     )
                 );
 
@@ -29,7 +29,7 @@ namespace UnpakSipaksi.Modules.KesesuaianJadwal.Presentation.KesesuaianJadwal
         internal sealed class CreateKesesuaianJadwalRequest
         {
             public string Nama { get; set; }
-            public string Nilai { get; set; }
+            public int Nilai { get; set; }
         }
     }
 }

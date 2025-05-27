@@ -12,11 +12,11 @@ namespace UnpakSipaksi.Modules.KetajamanPerumusanMasalah.Application.UpdateKetaj
     {
         public async Task<Result> Handle(UpdateKetajamanPerumusanMasalahCommand request, CancellationToken cancellationToken)
         {
-            Domain.KetajamanPerumusanMasalah.KetajamanPerumusanMasalah? existingKetajamanPerumusanMasalah = await KetajamanPerumusanMasalahRepository.GetAsync(request.Uuid, cancellationToken);
+            Domain.KetajamanPerumusanMasalah.KetajamanPerumusanMasalah? existingKetajamanPerumusanMasalah = await KetajamanPerumusanMasalahRepository.GetAsync(Guid.Parse(request.Uuid), cancellationToken);
 
             if (existingKetajamanPerumusanMasalah is null)
             {
-                Result.Failure(KetajamanPerumusanMasalahErrors.NotFound(request.Uuid));
+                Result.Failure(KetajamanPerumusanMasalahErrors.NotFound(Guid.Parse(request.Uuid)));
             }
 
             Result<Domain.KetajamanPerumusanMasalah.KetajamanPerumusanMasalah> asset = Domain.KetajamanPerumusanMasalah.KetajamanPerumusanMasalah.Update(existingKetajamanPerumusanMasalah!)

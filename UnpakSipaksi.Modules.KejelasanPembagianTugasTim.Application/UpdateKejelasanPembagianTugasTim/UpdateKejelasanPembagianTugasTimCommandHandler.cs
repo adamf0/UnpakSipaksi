@@ -17,11 +17,11 @@ namespace UnpakSipaksi.Modules.KejelasanPembagianTugasTim.Application.UpdateKeje
     {
         public async Task<Result> Handle(UpdateKejelasanPembagianTugasTimCommand request, CancellationToken cancellationToken)
         {
-            Domain.KejelasanPembagianTugasTim.KejelasanPembagianTugasTim? existingKejelasanPembagianTugasTim = await kejelasanPembagianTugasTimRepository.GetAsync(request.Uuid, cancellationToken);
+            Domain.KejelasanPembagianTugasTim.KejelasanPembagianTugasTim? existingKejelasanPembagianTugasTim = await kejelasanPembagianTugasTimRepository.GetAsync(Guid.Parse(request.Uuid), cancellationToken);
 
             if (existingKejelasanPembagianTugasTim is null)
             {
-                Result.Failure(KejelasanPembagianTugasTimErrors.NotFound(request.Uuid));
+                Result.Failure(KejelasanPembagianTugasTimErrors.NotFound(Guid.Parse(request.Uuid)));
             }
 
             Result<Domain.KejelasanPembagianTugasTim.KejelasanPembagianTugasTim> asset = Domain.KejelasanPembagianTugasTim.KejelasanPembagianTugasTim.Update(existingKejelasanPembagianTugasTim!)

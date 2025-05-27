@@ -26,11 +26,11 @@ namespace UnpakSipaksi.Modules.Metode.Application.UpdateMetode
     {
         public async Task<Result> Handle(UpdateMetodeCommand request, CancellationToken cancellationToken)
         {
-            var existingMetode = await metodeRepository.GetAsync(request.Uuid, cancellationToken);
+            var existingMetode = await metodeRepository.GetAsync(Guid.Parse(request.Uuid), cancellationToken);
 
             if (existingMetode is null)
             {
-                return Result.Failure(MetodeErrors.NotFound(request.Uuid));
+                return Result.Failure(MetodeErrors.NotFound(Guid.Parse(request.Uuid)));
             }
 
             var akurasiPenelitianTask = akurasiPenelitianApi.GetAsync(Guid.Parse(request.UuidAkurasiPenelitian));

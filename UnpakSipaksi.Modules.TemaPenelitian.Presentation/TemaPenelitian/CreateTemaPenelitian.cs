@@ -17,7 +17,7 @@ namespace UnpakSipaksi.Modules.TemaPenelitian.Presentation.TemaPenelitian
             app.MapPost("TemaPenelitian", async (CreateTemaPenelitianRequest request, ISender sender) =>
             {
                 Result<Guid> result = await sender.Send(new CreateTemaPenelitianCommand(
-                    HtmlEncoder.Default.Encode(request.Nama),
+                    request.Nama,
                     request.FokusPenelitianId
                     )
                 );
@@ -29,7 +29,7 @@ namespace UnpakSipaksi.Modules.TemaPenelitian.Presentation.TemaPenelitian
         internal sealed class CreateTemaPenelitianRequest
         {
             public string Nama { get; set; }
-            public Guid FokusPenelitianId { get; set; }
+            public string FokusPenelitianId { get; set; }
         }
     }
 }

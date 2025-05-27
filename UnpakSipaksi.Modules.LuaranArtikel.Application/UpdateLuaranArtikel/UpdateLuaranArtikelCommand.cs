@@ -3,7 +3,7 @@
 namespace UnpakSipaksi.Modules.LuaranArtikel.Application.UpdateLuaranArtikel
 {
     public sealed record UpdateLuaranArtikelCommand(
-        Guid Uuid,
+        string Uuid,
         string Nama,
         int Nilai
     ) : ICommand;

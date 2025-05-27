@@ -13,7 +13,7 @@ namespace UnpakSipaksi.Modules.KelompokMitra.Presentation.KelompokMitra
     {
         public static void MapEndpoint(IEndpointRouteBuilder app)
         {
-            app.MapDelete("KelompokMitra/{id}", async (Guid id, ISender sender) =>
+            app.MapDelete("KelompokMitra/{id}", async (string id, ISender sender) =>
             {
                 Result result = await sender.Send(
                     new DeleteKelompokMitraCommand(id)

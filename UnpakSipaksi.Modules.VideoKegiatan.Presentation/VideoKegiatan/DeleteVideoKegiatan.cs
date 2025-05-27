@@ -13,7 +13,7 @@ namespace UnpakSipaksi.Modules.VideoKegiatan.Presentation.VideoKegiatan
     {
         public static void MapEndpoint(IEndpointRouteBuilder app)
         {
-            app.MapDelete("VideoKegiatan/{id}", async (Guid id, ISender sender) =>
+            app.MapDelete("VideoKegiatan/{id}", async (string id, ISender sender) =>
             {
                 Result result = await sender.Send(
                     new DeleteVideoKegiatanCommand(id)

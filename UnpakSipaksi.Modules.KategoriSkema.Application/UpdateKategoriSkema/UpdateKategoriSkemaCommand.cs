@@ -3,7 +3,7 @@
 namespace UnpakSipaksi.Modules.KategoriSkema.Application.UpdateKategoriSkema
 {
     public sealed record UpdateKategoriSkemaCommand(
-        Guid Uuid,
+        string Uuid,
         string Nama,
         string Rule
     ) : ICommand;

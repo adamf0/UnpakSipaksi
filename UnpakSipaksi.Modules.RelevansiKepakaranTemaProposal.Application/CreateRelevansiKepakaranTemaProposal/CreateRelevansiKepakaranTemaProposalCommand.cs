@@ -4,10 +4,6 @@ namespace UnpakSipaksi.Modules.RelevansiKepakaranTemaProposal.Application.Create
 {
     public sealed record CreateRelevansiKepakaranTemaProposalCommand(
         string Nama,
-        int BobotPDP,
-        int BobotTerapan,
-        int BobotKerjasama,
-        int BobotPenelitianDasar,
         int Skor
     ) : ICommand<Guid>;
 }

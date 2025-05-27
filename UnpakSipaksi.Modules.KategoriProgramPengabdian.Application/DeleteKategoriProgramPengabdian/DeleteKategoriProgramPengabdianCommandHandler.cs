@@ -12,11 +12,11 @@ namespace UnpakSipaksi.Modules.KategoriProgramPengabdian.Application.DeleteKateg
     {
         public async Task<Result> Handle(DeleteKategoriProgramPengabdianCommand request, CancellationToken cancellationToken)
         {
-            Domain.KategoriProgramPengabdian.KategoriProgramPengabdian? existingKategoriProgramPengabdian = await KategoriProgramPengabdianRepository.GetAsync(request.uuid, cancellationToken);
+            Domain.KategoriProgramPengabdian.KategoriProgramPengabdian? existingKategoriProgramPengabdian = await KategoriProgramPengabdianRepository.GetAsync(Guid.Parse(request.uuid), cancellationToken);
 
             if (existingKategoriProgramPengabdian is null)
             {
-                return Result.Failure(KategoriProgramPengabdianErrors.NotFound(request.uuid));
+                return Result.Failure(KategoriProgramPengabdianErrors.NotFound(Guid.Parse(request.uuid)));
             }
 
             await KategoriProgramPengabdianRepository.DeleteAsync(existingKategoriProgramPengabdian!);

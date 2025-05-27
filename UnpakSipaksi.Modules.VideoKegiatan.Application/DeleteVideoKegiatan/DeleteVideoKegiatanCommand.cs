@@ -3,6 +3,6 @@
 namespace UnpakSipaksi.Modules.VideoKegiatan.Application.DeleteVideoKegiatan
 {
     public sealed record DeleteVideoKegiatanCommand(
-        Guid uuid
+        string uuid
     ) : ICommand;
 }

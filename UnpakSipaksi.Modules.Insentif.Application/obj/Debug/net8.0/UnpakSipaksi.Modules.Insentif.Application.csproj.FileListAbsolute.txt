@@ -4,9 +4,11 @@ C:\dev_net\UnpakSipaksi\UnpakSipaksi.Modules.Insentif.Application\bin\Debug\net8
 C:\dev_net\UnpakSipaksi\UnpakSipaksi.Modules.Insentif.Application\bin\Debug\net8.0\UnpakSipaksi.Common.Application.dll
 C:\dev_net\UnpakSipaksi\UnpakSipaksi.Modules.Insentif.Application\bin\Debug\net8.0\UnpakSipaksi.Common.Domain.dll
 C:\dev_net\UnpakSipaksi\UnpakSipaksi.Modules.Insentif.Application\bin\Debug\net8.0\UnpakSipaksi.Modules.Insentif.Domain.dll
+C:\dev_net\UnpakSipaksi\UnpakSipaksi.Modules.Insentif.Application\bin\Debug\net8.0\UnpakSipaksi.Modules.JenisPublikasi.PublicApi.dll
 C:\dev_net\UnpakSipaksi\UnpakSipaksi.Modules.Insentif.Application\bin\Debug\net8.0\UnpakSipaksi.Common.Application.pdb
 C:\dev_net\UnpakSipaksi\UnpakSipaksi.Modules.Insentif.Application\bin\Debug\net8.0\UnpakSipaksi.Common.Domain.pdb
 C:\dev_net\UnpakSipaksi\UnpakSipaksi.Modules.Insentif.Application\bin\Debug\net8.0\UnpakSipaksi.Modules.Insentif.Domain.pdb
+C:\dev_net\UnpakSipaksi\UnpakSipaksi.Modules.Insentif.Application\bin\Debug\net8.0\UnpakSipaksi.Modules.JenisPublikasi.PublicApi.pdb
 C:\dev_net\UnpakSipaksi\UnpakSipaksi.Modules.Insentif.Application\obj\Debug\net8.0\UnpakSipaksi.Modules.Insentif.Application.csproj.AssemblyReference.cache
 C:\dev_net\UnpakSipaksi\UnpakSipaksi.Modules.Insentif.Application\obj\Debug\net8.0\UnpakSipaksi.Modules.Insentif.Application.GeneratedMSBuildEditorConfig.editorconfig
 C:\dev_net\UnpakSipaksi\UnpakSipaksi.Modules.Insentif.Application\obj\Debug\net8.0\UnpakSipaksi.Modules.Insentif.Application.AssemblyInfoInputs.cache
@@ -18,5 +20,3 @@ C:\dev_net\UnpakSipaksi\UnpakSipaksi.Modules.Insentif.Application\obj\Debug\net8
 C:\dev_net\UnpakSipaksi\UnpakSipaksi.Modules.Insentif.Application\obj\Debug\net8.0\refint\UnpakSipaksi.Modules.Insentif.Application.dll
 C:\dev_net\UnpakSipaksi\UnpakSipaksi.Modules.Insentif.Application\obj\Debug\net8.0\UnpakSipaksi.Modules.Insentif.Application.pdb
 C:\dev_net\UnpakSipaksi\UnpakSipaksi.Modules.Insentif.Application\obj\Debug\net8.0\ref\UnpakSipaksi.Modules.Insentif.Application.dll
-C:\dev_net\UnpakSipaksi\UnpakSipaksi.Modules.Insentif.Application\bin\Debug\net8.0\UnpakSipaksi.Modules.JenisPublikasi.PublicApi.dll
-C:\dev_net\UnpakSipaksi\UnpakSipaksi.Modules.Insentif.Application\bin\Debug\net8.0\UnpakSipaksi.Modules.JenisPublikasi.PublicApi.pdb

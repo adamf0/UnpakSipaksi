@@ -12,11 +12,11 @@ namespace UnpakSipaksi.Modules.KetajamanAnalisis.Application.DeleteKetajamanAnal
     {
         public async Task<Result> Handle(DeleteKetajamanAnalisisCommand request, CancellationToken cancellationToken)
         {
-            Domain.KetajamanAnalisis.KetajamanAnalisis? existingKetajamanAnalisis = await KetajamanAnalisisRepository.GetAsync(request.uuid, cancellationToken);
+            Domain.KetajamanAnalisis.KetajamanAnalisis? existingKetajamanAnalisis = await KetajamanAnalisisRepository.GetAsync(Guid.Parse(request.uuid), cancellationToken);
 
             if (existingKetajamanAnalisis is null)
             {
-                return Result.Failure(KetajamanAnalisisErrors.NotFound(request.uuid));
+                return Result.Failure(KetajamanAnalisisErrors.NotFound(Guid.Parse(request.uuid)));
             }
 
             await KetajamanAnalisisRepository.DeleteAsync(existingKetajamanAnalisis!);

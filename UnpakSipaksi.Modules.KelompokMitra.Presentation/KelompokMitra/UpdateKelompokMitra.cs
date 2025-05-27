@@ -18,7 +18,7 @@ namespace UnpakSipaksi.Modules.KelompokMitra.Presentation.KelompokMitra
             {
                 Result result = await sender.Send(new UpdateKelompokMitraCommand(
                     request.Id,
-                    HtmlEncoder.Default.Encode(request.Nama)
+                    request.Nama
                     )
                 );
 
@@ -28,7 +28,7 @@ namespace UnpakSipaksi.Modules.KelompokMitra.Presentation.KelompokMitra
 
         internal sealed class UpdateKelompokMitraRequest
         {
-            public Guid Id { get; set; }
+            public string Id { get; set; }
             public string Nama { get; set; }
         }
     }

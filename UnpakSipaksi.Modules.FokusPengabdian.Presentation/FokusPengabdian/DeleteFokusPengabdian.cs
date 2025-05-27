@@ -12,7 +12,7 @@ namespace UnpakSipaksi.Modules.FokusPengabdian.Presentation.FokusPengabdian
     {
         public static void MapEndpoint(IEndpointRouteBuilder app)
         {
-            app.MapDelete("FokusPengabdian/{id}", async (Guid id, ISender sender) =>
+            app.MapDelete("FokusPengabdian/{id}", async (string id, ISender sender) =>
             {
                 Result result = await sender.Send(
                     new DeleteFokusPengabdianCommand(id)

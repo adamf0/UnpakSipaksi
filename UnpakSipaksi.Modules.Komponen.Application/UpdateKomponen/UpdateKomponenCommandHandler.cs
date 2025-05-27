@@ -12,11 +12,11 @@ namespace UnpakSipaksi.Modules.Komponen.Application.UpdateKomponen
     {
         public async Task<Result> Handle(UpdateKomponenCommand request, CancellationToken cancellationToken)
         {
-            Domain.Komponen.Komponen? existingKomponen = await KomponenRepository.GetAsync(request.Uuid, cancellationToken);
+            Domain.Komponen.Komponen? existingKomponen = await KomponenRepository.GetAsync(Guid.Parse(request.Uuid), cancellationToken);
 
             if (existingKomponen is null)
             {
-                Result.Failure(KomponenErrors.NotFound(request.Uuid));
+                Result.Failure(KomponenErrors.NotFound(Guid.Parse(request.Uuid)));
             }
 
             Result<Domain.Komponen.Komponen> asset = Domain.Komponen.Komponen.Update(existingKomponen!)

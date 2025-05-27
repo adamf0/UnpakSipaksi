@@ -29,7 +29,7 @@ namespace UnpakSipaksi.Modules.RelevansiKualitasReferensi.Presentation.Relevansi
 
         internal sealed class UpdateRelevansiKualitasReferensiRequest
         {
-            public Guid Id { get; set; }
+            public string Id { get; set; }
             public string Nama { get; set; }
             public string BobotSkor { get; set; }
         }

@@ -13,7 +13,7 @@ namespace UnpakSipaksi.Modules.KesesuaianTkt.Presentation.KesesuaianTkt
     {
         public static void MapEndpoint(IEndpointRouteBuilder app)
         {
-            app.MapDelete("KesesuaianTkt/{id}", async (Guid id, ISender sender) =>
+            app.MapDelete("KesesuaianTkt/{id}", async (string id, ISender sender) =>
             {
                 Result result = await sender.Send(
                     new DeleteKesesuaianTktCommand(id)

@@ -3,6 +3,6 @@
 namespace UnpakSipaksi.Modules.KualitasKuantitasPublikasiProsiding.Application.DeleteKualitasKuantitasPublikasiProsiding
 {
     public sealed record DeleteKualitasKuantitasPublikasiProsidingCommand(
-        Guid uuid
+        string uuid
     ) : ICommand;
 }

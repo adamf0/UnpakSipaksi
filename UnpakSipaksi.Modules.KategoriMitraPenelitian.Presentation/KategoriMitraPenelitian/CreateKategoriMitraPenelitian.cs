@@ -17,7 +17,7 @@ namespace UnpakSipaksi.Modules.KategoriMitraPenelitian.Presentation.KategoriMitr
             app.MapPost("KategoriMitraPenelitian", async (CreateKategoriMitraPenelitianRequest request, ISender sender) =>
             {
                 Result<Guid> result = await sender.Send(new CreateKategoriMitraPenelitianCommand(
-                    HtmlEncoder.Default.Encode(request.Nama)
+                    request.Nama
                     )
                 );
 

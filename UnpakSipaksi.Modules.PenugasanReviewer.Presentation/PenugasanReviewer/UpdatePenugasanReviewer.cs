@@ -5,7 +5,6 @@ using Microsoft.AspNetCore.Routing;
 using System.Text.Encodings.Web;
 using UnpakSipaksi.Common.Domain;
 using UnpakSipaksi.Common.Presentation.ApiResults;
-using UnpakSipaksi.Modules.PenugasanReviewer.Presentation;
 using UnpakSipaksi.Modules.PenugasanReviewer.Application.UpdatePenugasanReviewer;
 
 namespace UnpakSipaksi.Modules.PenugasanReviewer.Presentation.PenugasanReviewer
@@ -16,9 +15,9 @@ namespace UnpakSipaksi.Modules.PenugasanReviewer.Presentation.PenugasanReviewer
         {
             app.MapPut("PenugasanReviewer", async (UpdatePenugasanReviewerRequest request, ISender sender) =>
             {
-                Result result = await sender.Send(new StatusPenugasanReviewerCommand(
+                Result result = await sender.Send(new UpdatePenugasanReviewerCommand(
                     request.Id,
-                    HtmlEncoder.Default.Encode(request.Nidn),
+                    request.Nidn,
                     request.Status
                     )
                 );
@@ -29,7 +28,7 @@ namespace UnpakSipaksi.Modules.PenugasanReviewer.Presentation.PenugasanReviewer
 
         internal sealed class UpdatePenugasanReviewerRequest
         {
-            public Guid Id { get; set; }
+            public string Id { get; set; }
             public string Nidn { get; set; }
             public int Status { get; set; }
         }

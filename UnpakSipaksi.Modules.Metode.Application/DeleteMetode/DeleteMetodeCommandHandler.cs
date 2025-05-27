@@ -12,11 +12,11 @@ namespace UnpakSipaksi.Modules.Metode.Application.DeleteMetode
     {
         public async Task<Result> Handle(DeleteMetodeCommand request, CancellationToken cancellationToken)
         {
-            Domain.Metode.Metode? existingMetode = await MetodeRepository.GetAsync(request.uuid, cancellationToken);
+            Domain.Metode.Metode? existingMetode = await MetodeRepository.GetAsync(Guid.Parse(request.uuid), cancellationToken);
 
             if (existingMetode is null)
             {
-                return Result.Failure(MetodeErrors.NotFound(request.uuid));
+                return Result.Failure(MetodeErrors.NotFound(Guid.Parse(request.uuid)));
             }
 
             await MetodeRepository.DeleteAsync(existingMetode!);

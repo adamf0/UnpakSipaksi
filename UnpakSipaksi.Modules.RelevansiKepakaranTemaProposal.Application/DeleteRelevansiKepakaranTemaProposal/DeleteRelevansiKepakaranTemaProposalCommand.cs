@@ -3,6 +3,6 @@
 namespace UnpakSipaksi.Modules.RelevansiKepakaranTemaProposal.Application.DeleteRelevansiKepakaranTemaProposal
 {
     public sealed record DeleteRelevansiKepakaranTemaProposalCommand(
-        Guid uuid
+        string uuid
     ) : ICommand;
 }

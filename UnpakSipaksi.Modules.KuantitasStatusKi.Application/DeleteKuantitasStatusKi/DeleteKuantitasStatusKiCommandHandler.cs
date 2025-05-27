@@ -12,11 +12,11 @@ namespace UnpakSipaksi.Modules.KuantitasStatusKi.Application.DeleteKuantitasStat
     {
         public async Task<Result> Handle(DeleteKuantitasStatusKiCommand request, CancellationToken cancellationToken)
         {
-            Domain.KuantitasStatusKi.KuantitasStatusKi? existingKuantitasStatusKi = await KuantitasStatusKiRepository.GetAsync(request.uuid, cancellationToken);
+            Domain.KuantitasStatusKi.KuantitasStatusKi? existingKuantitasStatusKi = await KuantitasStatusKiRepository.GetAsync(Guid.Parse(request.uuid), cancellationToken);
 
             if (existingKuantitasStatusKi is null)
             {
-                return Result.Failure(KuantitasStatusKiErrors.NotFound(request.uuid));
+                return Result.Failure(KuantitasStatusKiErrors.NotFound(Guid.Parse(request.uuid)));
             }
 
             await KuantitasStatusKiRepository.DeleteAsync(existingKuantitasStatusKi!);

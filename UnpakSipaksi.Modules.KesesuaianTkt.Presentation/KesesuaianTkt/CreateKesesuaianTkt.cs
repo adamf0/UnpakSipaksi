@@ -17,8 +17,8 @@ namespace UnpakSipaksi.Modules.KesesuaianTkt.Presentation.KesesuaianTkt
             app.MapPost("KesesuaianTkt", async (CreateKesesuaianTktRequest request, ISender sender) =>
             {
                 Result<Guid> result = await sender.Send(new CreateKesesuaianTktCommand(
-                    HtmlEncoder.Default.Encode(request.Nama),
-                    int.Parse(HtmlEncoder.Default.Encode(request.Skor))
+                    request.Nama,
+                    request.Skor
                     )
                 );
 
@@ -29,7 +29,7 @@ namespace UnpakSipaksi.Modules.KesesuaianTkt.Presentation.KesesuaianTkt
         internal sealed class CreateKesesuaianTktRequest
         {
             public string Nama { get; set; }
-            public string Skor { get; set; }
+            public int Skor { get; set; }
         }
     }
 }

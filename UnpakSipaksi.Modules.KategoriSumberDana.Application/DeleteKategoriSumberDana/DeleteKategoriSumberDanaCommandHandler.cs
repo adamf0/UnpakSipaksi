@@ -17,11 +17,11 @@ namespace UnpakSipaksi.Modules.KategoriSumberDana.Application.DeleteKategoriSumb
     {
         public async Task<Result> Handle(DeleteKategoriSumberDanaCommand request, CancellationToken cancellationToken)
         {
-            Domain.KategoriSumberDana.KategoriSumberDana? existingKategoriSumberDana = await kategoriSumberDanaRepository.GetAsync(request.uuid, cancellationToken);
+            Domain.KategoriSumberDana.KategoriSumberDana? existingKategoriSumberDana = await kategoriSumberDanaRepository.GetAsync(Guid.Parse(request.uuid), cancellationToken);
 
             if (existingKategoriSumberDana is null)
             {
-                return Result.Failure(KategoriSumberDanaErrors.NotFound(request.uuid));
+                return Result.Failure(KategoriSumberDanaErrors.NotFound(Guid.Parse(request.uuid)));
             }
 
             await kategoriSumberDanaRepository.DeleteAsync(existingKategoriSumberDana!);

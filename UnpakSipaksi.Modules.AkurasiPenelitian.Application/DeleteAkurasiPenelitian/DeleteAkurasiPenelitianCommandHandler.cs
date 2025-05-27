@@ -17,11 +17,11 @@ namespace UnpakSipaksi.Modules.AkurasiPenelitian.Application.DeleteAkurasiPeneli
     {
         public async Task<Result> Handle(DeleteAkurasiPenelitianCommand request, CancellationToken cancellationToken)
         {
-            Domain.AkurasiPenelitian.AkurasiPenelitian? existingAkurasiPenelitian = await akurasiPenelitianRepository.GetAsync(request.uuid, cancellationToken);
+            Domain.AkurasiPenelitian.AkurasiPenelitian? existingAkurasiPenelitian = await akurasiPenelitianRepository.GetAsync(Guid.Parse(request.uuid), cancellationToken);
 
             if (existingAkurasiPenelitian is null)
             {
-                return Result.Failure(AkurasiPenelitianErrors.NotFound(request.uuid));
+                return Result.Failure(AkurasiPenelitianErrors.NotFound(Guid.Parse(request.uuid)));
             }
 
             await akurasiPenelitianRepository.DeleteAsync(existingAkurasiPenelitian!);

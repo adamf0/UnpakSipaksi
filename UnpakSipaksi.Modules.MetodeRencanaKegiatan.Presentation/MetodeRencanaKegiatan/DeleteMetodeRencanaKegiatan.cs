@@ -13,7 +13,7 @@ namespace UnpakSipaksi.Modules.MetodeRencanaKegiatan.Presentation.MetodeRencanaK
     {
         public static void MapEndpoint(IEndpointRouteBuilder app)
         {
-            app.MapDelete("MetodeRencanaKegiatan/{id}", async (Guid id, ISender sender) =>
+            app.MapDelete("MetodeRencanaKegiatan/{id}", async (string id, ISender sender) =>
             {
                 Result result = await sender.Send(
                     new DeleteMetodeRencanaKegiatanCommand(id)

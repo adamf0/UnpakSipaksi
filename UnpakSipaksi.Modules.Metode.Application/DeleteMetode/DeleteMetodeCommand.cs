@@ -3,6 +3,6 @@
 namespace UnpakSipaksi.Modules.Metode.Application.DeleteMetode
 {
     public sealed record DeleteMetodeCommand(
-        Guid uuid
+        string uuid
     ) : ICommand;
 }

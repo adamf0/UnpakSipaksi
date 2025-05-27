@@ -16,8 +16,8 @@ namespace UnpakSipaksi.Modules.KualitasKuantitasPublikasiJurnalIlmiah.Presentati
             app.MapPost("KualitasKuantitasPublikasiJurnalIlmiah", async (CreateKualitasKuantitasPublikasiJurnalIlmiahRequest request, ISender sender) =>
             {
                 Result<Guid> result = await sender.Send(new CreateKualitasKuantitasPublikasiJurnalIlmiahCommand(
-                    HtmlEncoder.Default.Encode(request.Nama),
-                    int.Parse(HtmlEncoder.Default.Encode(request.Nilai))
+                    request.Nama,
+                    request.Nilai
                     )
                 );
 
@@ -28,7 +28,7 @@ namespace UnpakSipaksi.Modules.KualitasKuantitasPublikasiJurnalIlmiah.Presentati
         internal sealed class CreateKualitasKuantitasPublikasiJurnalIlmiahRequest
         {
             public string Nama { get; set; }
-            public string Nilai { get; set; }
+            public int Nilai { get; set; }
         }
     }
 }

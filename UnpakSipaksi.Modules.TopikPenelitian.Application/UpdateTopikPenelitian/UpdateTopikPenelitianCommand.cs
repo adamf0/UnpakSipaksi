@@ -8,8 +8,8 @@ using UnpakSipaksi.Common.Application.Messaging;
 namespace UnpakSipaksi.Modules.TopikPenelitian.Application.UpdateTopikPenelitian
 {
     public sealed record UpdateTopikPenelitianCommand(
-        Guid Uuid,
+        string Uuid,
         string Nama,
-        Guid TemaPenelitianId
+        string TemaPenelitianId
     ) : ICommand;
 }

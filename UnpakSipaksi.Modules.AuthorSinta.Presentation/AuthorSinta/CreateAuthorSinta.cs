@@ -16,9 +16,9 @@ namespace UnpakSipaksi.Modules.AuthorSinta.Presentation.AuthorSinta
             app.MapPost("AuthorSinta", async (CreateAuthorSintaRequest request, ISender sender) =>
             {
                 Result<Guid> result = await sender.Send(new CreateAuthorSintaCommand(
-                    HtmlEncoder.Default.Encode(request.NIDN),
-                    HtmlEncoder.Default.Encode(request.AuthorId),
-                    int.Parse(HtmlEncoder.Default.Encode(request.Score))
+                    request.NIDN,
+                    request.AuthorId,
+                    request.Score
                     )
                 );
 
@@ -30,8 +30,7 @@ namespace UnpakSipaksi.Modules.AuthorSinta.Presentation.AuthorSinta
         {
             public string NIDN { get; set; }
             public string AuthorId { get; set; }
-
-            public string Score { get; set; }
+            public int Score { get; set; }
         }
     }
 }

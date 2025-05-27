@@ -13,7 +13,7 @@ namespace UnpakSipaksi.Modules.Referensi.Presentation.Referensi
     {
         public static void MapEndpoint(IEndpointRouteBuilder app)
         {
-            app.MapDelete("Referensi/{id}", async (Guid id, ISender sender) =>
+            app.MapDelete("Referensi/{id}", async (string id, ISender sender) =>
             {
                 Result result = await sender.Send(
                     new DeleteReferensiCommand(id)

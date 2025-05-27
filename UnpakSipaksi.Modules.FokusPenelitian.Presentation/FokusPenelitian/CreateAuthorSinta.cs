@@ -16,7 +16,7 @@ namespace UnpakSipaksi.Modules.FokusPenelitian.Presentation.FokusPenelitian
             app.MapPost("FokusPenelitian", async (CreateFokusPenelitianRequest request, ISender sender) =>
             {
                 Result<Guid> result = await sender.Send(new CreateFokusPenelitianCommand(
-                    HtmlEncoder.Default.Encode(request.Nama)
+                    request.Nama
                     )
                 );
 

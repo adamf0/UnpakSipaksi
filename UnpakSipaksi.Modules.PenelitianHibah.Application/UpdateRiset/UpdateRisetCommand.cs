@@ -8,7 +8,7 @@ using UnpakSipaksi.Common.Application.Messaging;
 namespace UnpakSipaksi.Modules.PenelitianHibah.Application.UpdateRiset
 {
     public sealed record UpdateRisetCommand(
-          string Uuid,
+          string UuidPenelitianHibah,
           string? PrioritasRiset,
           string? BidangFokusPenelitianId,
           string? BidangFokusPenelitianTemaId,

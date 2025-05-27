@@ -8,6 +8,6 @@ using UnpakSipaksi.Common.Application.Messaging;
 namespace UnpakSipaksi.Modules.KesesuaianJadwal.Application.DeleteKesesuaianJadwal
 {
     public sealed record DeleteKesesuaianJadwalCommand(
-        Guid uuid
+        string uuid
     ) : ICommand;
 }

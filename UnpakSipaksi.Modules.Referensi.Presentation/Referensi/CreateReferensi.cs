@@ -4,7 +4,7 @@ using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Routing;
 using UnpakSipaksi.Common.Domain;
 using UnpakSipaksi.Common.Presentation.ApiResults;
-using UnpakSipaksi.Modules.Referensi.Application.CreateAkurasiPenelitian;
+using UnpakSipaksi.Modules.Referensi.Application.CreateReferensi;
 
 namespace UnpakSipaksi.Modules.Referensi.Presentation.Referensi
 {

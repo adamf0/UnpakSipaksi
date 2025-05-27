@@ -12,11 +12,11 @@ namespace UnpakSipaksi.Modules.KualitasIpteks.Application.UpdateKualitasIpteks
     {
         public async Task<Result> Handle(UpdateKualitasIpteksCommand request, CancellationToken cancellationToken)
         {
-            Domain.KualitasIpteks.KualitasIpteks? existingKualitasIpteks = await KualitasIpteksRepository.GetAsync(request.Uuid, cancellationToken);
+            Domain.KualitasIpteks.KualitasIpteks? existingKualitasIpteks = await KualitasIpteksRepository.GetAsync(Guid.Parse(request.Uuid), cancellationToken);
 
             if (existingKualitasIpteks is null)
             {
-                Result.Failure(KualitasIpteksErrors.NotFound(request.Uuid));
+                Result.Failure(KualitasIpteksErrors.NotFound(Guid.Parse(request.Uuid)));
             }
 
             Result<Domain.KualitasIpteks.KualitasIpteks> asset = Domain.KualitasIpteks.KualitasIpteks.Update(existingKualitasIpteks!)

@@ -18,7 +18,7 @@ namespace UnpakSipaksi.Modules.PenelitianHibah.Application.UpdateRumpunIlmu
     {
         public async Task<Result> Handle(UpdateRumpunIlmuCommand request, CancellationToken cancellationToken)
         {
-            Domain.PenelitianHibah.PenelitianHibah? existingPenelitianHibah = await penelitianHibahRepository.GetAsync(Guid.Parse(request.Uuid), cancellationToken);
+            Domain.PenelitianHibah.PenelitianHibah? existingPenelitianHibah = await penelitianHibahRepository.GetAsync(Guid.Parse(request.UuidPenelitianHibah), cancellationToken);
 
             var rumpunIlmu1 = await GetIfNotNull<RumpunIlmu1Response>(
                 request.RumpunIlmu1Id, id1 => rumpunIlmu1Api.GetAsync(id1));

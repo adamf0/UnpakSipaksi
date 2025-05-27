@@ -1,0 +1,16 @@
+C:\dev_net\UnpakSipaksi\UnpakSipaksi.Modules.Kategori.Domain\bin\Debug\net8.0\UnpakSipaksi.Modules.Kategori.Domain.deps.json
+C:\dev_net\UnpakSipaksi\UnpakSipaksi.Modules.Kategori.Domain\bin\Debug\net8.0\UnpakSipaksi.Modules.Kategori.Domain.dll
+C:\dev_net\UnpakSipaksi\UnpakSipaksi.Modules.Kategori.Domain\bin\Debug\net8.0\UnpakSipaksi.Modules.Kategori.Domain.pdb
+C:\dev_net\UnpakSipaksi\UnpakSipaksi.Modules.Kategori.Domain\bin\Debug\net8.0\UnpakSipaksi.Common.Domain.dll
+C:\dev_net\UnpakSipaksi\UnpakSipaksi.Modules.Kategori.Domain\bin\Debug\net8.0\UnpakSipaksi.Common.Domain.pdb
+C:\dev_net\UnpakSipaksi\UnpakSipaksi.Modules.Kategori.Domain\obj\Debug\net8.0\UnpakSipaksi.Modules.Kategori.Domain.csproj.AssemblyReference.cache
+C:\dev_net\UnpakSipaksi\UnpakSipaksi.Modules.Kategori.Domain\obj\Debug\net8.0\UnpakSipaksi.Modules.Kategori.Domain.GeneratedMSBuildEditorConfig.editorconfig
+C:\dev_net\UnpakSipaksi\UnpakSipaksi.Modules.Kategori.Domain\obj\Debug\net8.0\UnpakSipaksi.Modules.Kategori.Domain.AssemblyInfoInputs.cache
+C:\dev_net\UnpakSipaksi\UnpakSipaksi.Modules.Kategori.Domain\obj\Debug\net8.0\UnpakSipaksi.Modules.Kategori.Domain.AssemblyInfo.cs
+C:\dev_net\UnpakSipaksi\UnpakSipaksi.Modules.Kategori.Domain\obj\Debug\net8.0\UnpakSipaksi.Modules.Kategori.Domain.csproj.CoreCompileInputs.cache
+C:\dev_net\UnpakSipaksi\UnpakSipaksi.Modules.Kategori.Domain\obj\Debug\net8.0\UnpakSipaksi.Modules.Kategori.Domain.sourcelink.json
+C:\dev_net\UnpakSipaksi\UnpakSipaksi.Modules.Kategori.Domain\obj\Debug\net8.0\UnpakSip.1F5B8E2F.Up2Date
+C:\dev_net\UnpakSipaksi\UnpakSipaksi.Modules.Kategori.Domain\obj\Debug\net8.0\UnpakSipaksi.Modules.Kategori.Domain.dll
+C:\dev_net\UnpakSipaksi\UnpakSipaksi.Modules.Kategori.Domain\obj\Debug\net8.0\refint\UnpakSipaksi.Modules.Kategori.Domain.dll
+C:\dev_net\UnpakSipaksi\UnpakSipaksi.Modules.Kategori.Domain\obj\Debug\net8.0\UnpakSipaksi.Modules.Kategori.Domain.pdb
+C:\dev_net\UnpakSipaksi\UnpakSipaksi.Modules.Kategori.Domain\obj\Debug\net8.0\ref\UnpakSipaksi.Modules.Kategori.Domain.dll

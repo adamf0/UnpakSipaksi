@@ -13,7 +13,7 @@ namespace UnpakSipaksi.Modules.PenugasanReviewer.Presentation.PenugasanReviewer
     {
         public static void MapEndpoint(IEndpointRouteBuilder app)
         {
-            app.MapDelete("PenugasanReviewer/{id}", async (Guid id, ISender sender) =>
+            app.MapDelete("PenugasanReviewer/{id}", async (string id, ISender sender) =>
             {
                 Result result = await sender.Send(
                     new DeletePenugasanReviewerCommand(id)

@@ -34,7 +34,7 @@ namespace UnpakSipaksi.Modules.Metode.Presentation.Metode
 
         internal sealed class UpdateMetodeRequest
         {
-            public Guid Id { get; set; }
+            public string Id { get; set; }
             public string UuidAkurasiPenelitian { get; private set; }
             public string UuidKejelasanPembagianTugasTim { get; private set; }
             public string UuidKesesuaianWaktuRabLuaranFasilitas { get; private set; }

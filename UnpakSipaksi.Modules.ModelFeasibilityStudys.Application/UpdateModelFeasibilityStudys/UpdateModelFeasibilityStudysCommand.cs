@@ -3,7 +3,7 @@
 namespace UnpakSipaksi.Modules.ModelFeasibilityStudys.Application.UpdateModelFeasibilityStudys
 {
     public sealed record UpdateModelFeasibilityStudysCommand(
-        Guid Uuid,
+        string Uuid,
         string Nama,
         int Skor
     ) : ICommand;

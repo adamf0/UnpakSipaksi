@@ -12,11 +12,11 @@ namespace UnpakSipaksi.Modules.VideoKegiatan.Application.DeleteVideoKegiatan
     {
         public async Task<Result> Handle(DeleteVideoKegiatanCommand request, CancellationToken cancellationToken)
         {
-            Domain.VideoKegiatan.VideoKegiatan? existingVideoKegiatan = await VideoKegiatanRepository.GetAsync(request.uuid, cancellationToken);
+            Domain.VideoKegiatan.VideoKegiatan? existingVideoKegiatan = await VideoKegiatanRepository.GetAsync(Guid.Parse(request.uuid), cancellationToken);
 
             if (existingVideoKegiatan is null)
             {
-                return Result.Failure(VideoKegiatanErrors.NotFound(request.uuid));
+                return Result.Failure(VideoKegiatanErrors.NotFound(Guid.Parse(request.uuid)));
             }
 
             await VideoKegiatanRepository.DeleteAsync(existingVideoKegiatan!);

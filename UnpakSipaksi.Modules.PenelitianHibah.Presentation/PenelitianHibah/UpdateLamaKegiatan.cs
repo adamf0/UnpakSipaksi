@@ -16,7 +16,7 @@ namespace UnpakSipaksi.Modules.PenelitianHibah.Presentation.PenelitianHibah
             app.MapPut("PenelitianHibah/LamaKegiatan", async (UpdateLamaKegiatanRequest request, ISender sender) =>
             {
                 Result result = await sender.Send(new UpdateMemberDosenCommand(
-                    request.Id,
+                    request.Uuid,
                     request.LamaKegiatan
                 ));
 
@@ -26,7 +26,7 @@ namespace UnpakSipaksi.Modules.PenelitianHibah.Presentation.PenelitianHibah
 
         internal sealed class UpdateLamaKegiatanRequest
         {
-            public string Id { get; set; }
+            public string Uuid { get; set; }
             public int LamaKegiatan { get; set; }
         }
     }

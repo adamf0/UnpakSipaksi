@@ -12,11 +12,11 @@ namespace UnpakSipaksi.Modules.Komponen.Application.DeleteKomponen
     {
         public async Task<Result> Handle(DeleteKomponenCommand request, CancellationToken cancellationToken)
         {
-            Domain.Komponen.Komponen? existingKomponen = await KomponenRepository.GetAsync(request.uuid, cancellationToken);
+            Domain.Komponen.Komponen? existingKomponen = await KomponenRepository.GetAsync(Guid.Parse(request.uuid), cancellationToken);
 
             if (existingKomponen is null)
             {
-                return Result.Failure(KomponenErrors.NotFound(request.uuid));
+                return Result.Failure(KomponenErrors.NotFound(Guid.Parse(request.uuid)));
             }
 
             await KomponenRepository.DeleteAsync(existingKomponen!);

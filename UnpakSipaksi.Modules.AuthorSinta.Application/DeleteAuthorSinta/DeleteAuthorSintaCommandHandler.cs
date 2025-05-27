@@ -17,11 +17,11 @@ namespace UnpakSipaksi.Modules.AuthorSinta.Application.DeleteAuthorSinta
     {
         public async Task<Result> Handle(DeleteAuthorSintaCommand request, CancellationToken cancellationToken)
         {
-            Domain.AuthorSinta.AuthorSinta? existingAuthorSinta = await authorSintaRepository.GetAsync(request.uuid, cancellationToken);
+            Domain.AuthorSinta.AuthorSinta? existingAuthorSinta = await authorSintaRepository.GetAsync(Guid.Parse(request.uuid), cancellationToken);
 
             if (existingAuthorSinta is null)
             {
-                return Result.Failure(AuthorSintaErrors.NotFound(request.uuid));
+                return Result.Failure(AuthorSintaErrors.NotFound(Guid.Parse(request.uuid)));
             }
 
             await authorSintaRepository.DeleteAsync(existingAuthorSinta!);

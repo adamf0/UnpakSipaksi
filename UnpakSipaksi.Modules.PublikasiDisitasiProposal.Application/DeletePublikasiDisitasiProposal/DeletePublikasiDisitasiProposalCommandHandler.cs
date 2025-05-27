@@ -12,11 +12,11 @@ namespace UnpakSipaksi.Modules.PublikasiDisitasiProposal.Application.DeletePubli
     {
         public async Task<Result> Handle(DeletePublikasiDisitasiProposalCommand request, CancellationToken cancellationToken)
         {
-            Domain.PublikasiDisitasiProposal.PublikasiDisitasiProposal? existingPublikasiDisitasiProposal = await PublikasiDisitasiProposalRepository.GetAsync(request.uuid, cancellationToken);
+            Domain.PublikasiDisitasiProposal.PublikasiDisitasiProposal? existingPublikasiDisitasiProposal = await PublikasiDisitasiProposalRepository.GetAsync(Guid.Parse(request.uuid), cancellationToken);
 
             if (existingPublikasiDisitasiProposal is null)
             {
-                return Result.Failure(PublikasiDisitasiProposalErrors.NotFound(request.uuid));
+                return Result.Failure(PublikasiDisitasiProposalErrors.NotFound(Guid.Parse(request.uuid)));
             }
 
             await PublikasiDisitasiProposalRepository.DeleteAsync(existingPublikasiDisitasiProposal!);

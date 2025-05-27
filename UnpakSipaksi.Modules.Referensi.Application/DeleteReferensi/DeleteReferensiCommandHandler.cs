@@ -17,11 +17,11 @@ namespace UnpakSipaksi.Modules.Referensi.Application.DeleteReferensi
     {
         public async Task<Result> Handle(DeleteReferensiCommand request, CancellationToken cancellationToken)
         {
-            Domain.Referensi.Referensi? existingReferensi = await ReferensiRepository.GetAsync(request.uuid, cancellationToken);
+            Domain.Referensi.Referensi? existingReferensi = await ReferensiRepository.GetAsync(Guid.Parse(request.uuid), cancellationToken);
 
             if (existingReferensi is null)
             {
-                return Result.Failure(ReferensiErrors.NotFound(request.uuid));
+                return Result.Failure(ReferensiErrors.NotFound(Guid.Parse(request.uuid)));
             }
 
             await ReferensiRepository.DeleteAsync(existingReferensi!);

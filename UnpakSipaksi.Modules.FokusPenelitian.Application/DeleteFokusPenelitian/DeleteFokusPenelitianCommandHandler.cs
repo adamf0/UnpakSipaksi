@@ -18,11 +18,11 @@ namespace UnpakSipaksi.Modules.FokusPenelitian.Application.DeleteFokusPenelitian
     {
         public async Task<Result> Handle(DeleteFokusPenelitianCommand request, CancellationToken cancellationToken)
         {
-            Domain.FokusPenelitian.FokusPenelitian? existingFokusPenelitian = await fokusPenelitianRepository.GetAsync(request.uuid, cancellationToken);
+            Domain.FokusPenelitian.FokusPenelitian? existingFokusPenelitian = await fokusPenelitianRepository.GetAsync(Guid.Parse(request.uuid), cancellationToken);
 
             if (existingFokusPenelitian is null)
             {
-                return Result.Failure(FokusPenelitianErrors.NotFound(request.uuid));
+                return Result.Failure(FokusPenelitianErrors.NotFound(Guid.Parse(request.uuid)));
             }
 
             await fokusPenelitianRepository.DeleteAsync(existingFokusPenelitian!);

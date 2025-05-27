@@ -18,11 +18,11 @@ namespace UnpakSipaksi.Modules.PenelitianHibah.Application.DeleteMemberNonDosen
     {
         public async Task<Result> Handle(DeleteMemberNonDosenCommand request, CancellationToken cancellationToken)
         {
-            Domain.MemberNonDosen.MemberNonDosen? existingMemberNonDosen = await memberNonDosenRepository.GetAsync(request.Uuid, cancellationToken);
+            Domain.MemberNonDosen.MemberNonDosen? existingMemberNonDosen = await memberNonDosenRepository.GetAsync(Guid.Parse(request.Uuid), cancellationToken);
 
             if (existingMemberNonDosen is null)
             {
-                return Result.Failure(PenelitianHibahErrors.NotFound(request.Uuid));
+                return Result.Failure(PenelitianHibahErrors.NotFound(Guid.Parse(request.Uuid)));
             }
 
             await memberNonDosenRepository.DeleteAsync(existingMemberNonDosen!);

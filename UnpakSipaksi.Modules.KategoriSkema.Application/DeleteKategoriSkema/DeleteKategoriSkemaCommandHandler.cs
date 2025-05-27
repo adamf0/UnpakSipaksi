@@ -12,11 +12,11 @@ namespace UnpakSipaksi.Modules.KategoriSkema.Application.DeleteKategoriSkema
     {
         public async Task<Result> Handle(DeleteKategoriSkemaCommand request, CancellationToken cancellationToken)
         {
-            Domain.KategoriSkema.KategoriSkema? existingKategoriSkema = await KategoriSkemaRepository.GetAsync(request.uuid, cancellationToken);
+            Domain.KategoriSkema.KategoriSkema? existingKategoriSkema = await KategoriSkemaRepository.GetAsync(Guid.Parse(request.uuid), cancellationToken);
 
             if (existingKategoriSkema is null)
             {
-                return Result.Failure(KategoriSkemaErrors.NotFound(request.uuid));
+                return Result.Failure(KategoriSkemaErrors.NotFound(Guid.Parse(request.uuid)));
             }
 
             await KategoriSkemaRepository.DeleteAsync(existingKategoriSkema!);

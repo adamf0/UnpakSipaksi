@@ -3,6 +3,6 @@
 namespace UnpakSipaksi.Modules.KetajamanPerumusanMasalah.Application.DeleteKetajamanPerumusanMasalah
 {
     public sealed record DeleteKetajamanPerumusanMasalahCommand(
-        Guid uuid
+        string uuid
     ) : ICommand;
 }

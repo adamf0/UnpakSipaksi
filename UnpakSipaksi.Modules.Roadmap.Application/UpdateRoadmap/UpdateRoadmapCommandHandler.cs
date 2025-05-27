@@ -12,11 +12,11 @@ namespace UnpakSipaksi.Modules.Roadmap.Application.UpdateRoadmap
     {
         public async Task<Result> Handle(UpdateRoadmapCommand request, CancellationToken cancellationToken)
         {
-            Domain.Roadmap.Roadmap? existingRoadmap = await RoadmapRepository.GetAsync(request.Uuid, cancellationToken);
+            Domain.Roadmap.Roadmap? existingRoadmap = await RoadmapRepository.GetAsync(Guid.Parse(request.Uuid), cancellationToken);
 
             if (existingRoadmap is null)
             {
-                Result.Failure(RoadmapErrors.NotFound(request.Uuid));
+                Result.Failure(RoadmapErrors.NotFound(Guid.Parse(request.Uuid)));
             }
 
             Result<Domain.Roadmap.Roadmap> asset = Domain.Roadmap.Roadmap.Update(existingRoadmap!)

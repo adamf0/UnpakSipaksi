@@ -17,11 +17,11 @@ namespace UnpakSipaksi.Modules.KesesuaianPenugasan.Application.DeleteKesesuaianP
     {
         public async Task<Result> Handle(DeleteKesesuaianPenugasanCommand request, CancellationToken cancellationToken)
         {
-            Domain.KesesuaianPenugasan.KesesuaianPenugasan? existingKesesuaianPenugasan = await kesesuaianPenugasanRepository.GetAsync(request.uuid, cancellationToken);
+            Domain.KesesuaianPenugasan.KesesuaianPenugasan? existingKesesuaianPenugasan = await kesesuaianPenugasanRepository.GetAsync(Guid.Parse(request.uuid), cancellationToken);
 
             if (existingKesesuaianPenugasan is null)
             {
-                return Result.Failure(KesesuaianPenugasanErrors.NotFound(request.uuid));
+                return Result.Failure(KesesuaianPenugasanErrors.NotFound(Guid.Parse(request.uuid)));
             }
 
             await kesesuaianPenugasanRepository.DeleteAsync(existingKesesuaianPenugasan!);

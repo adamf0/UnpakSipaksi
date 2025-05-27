@@ -3,7 +3,7 @@
 namespace UnpakSipaksi.Modules.VideoKegiatan.Application.UpdateVideoKegiatan
 {
     public sealed record UpdateVideoKegiatanCommand(
-        Guid Uuid,
+        string Uuid,
         string Nama,
         int Nilai
     ) : ICommand;

@@ -7,7 +7,6 @@ using UnpakSipaksi.Common.Application.Messaging;
 using UnpakSipaksi.Common.Domain;
 using UnpakSipaksi.Modules.KebaruanReferensi.PublicApi;
 using UnpakSipaksi.Modules.Referensi.Application.Abstractions.Data;
-using UnpakSipaksi.Modules.Referensi.Application.UpdateAkurasiPenelitian;
 using UnpakSipaksi.Modules.Referensi.Domain.Referensi;
 using UnpakSipaksi.Modules.RelevansiKualitasReferensi.PublicApi;
 
@@ -30,11 +29,11 @@ namespace UnpakSipaksi.Modules.Referensi.Application.UpdateReferensi
             KebaruanReferensiResponse? KebaruanReferensi = await kebaruanTask;
             RelevansiKualitasReferensiResponse? RelevansiKualitasReferensi = await relevansiTask;
 
-            Domain.Referensi.Referensi? existingReferensi = await ReferensiRepository.GetAsync(request.Uuid, cancellationToken);
+            Domain.Referensi.Referensi? existingReferensi = await ReferensiRepository.GetAsync(Guid.Parse(request.Uuid), cancellationToken);
 
             if (existingReferensi is null)
             {
-                Result.Failure(ReferensiErrors.NotFound(request.Uuid));
+                Result.Failure(ReferensiErrors.NotFound(Guid.Parse(request.Uuid)));
             }
 
             Result<Domain.Referensi.Referensi> asset = Domain.Referensi.Referensi.Update(existingReferensi!)

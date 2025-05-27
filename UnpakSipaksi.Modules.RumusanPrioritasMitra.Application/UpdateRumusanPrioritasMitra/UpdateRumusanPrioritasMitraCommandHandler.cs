@@ -12,11 +12,11 @@ namespace UnpakSipaksi.Modules.RumusanPrioritasMitra.Application.UpdateRumusanPr
     {
         public async Task<Result> Handle(UpdateRumusanPrioritasMitraCommand request, CancellationToken cancellationToken)
         {
-            Domain.RumusanPrioritasMitra.RumusanPrioritasMitra? existingRumusanPrioritasMitra = await RumusanPrioritasMitraRepository.GetAsync(request.Uuid, cancellationToken);
+            Domain.RumusanPrioritasMitra.RumusanPrioritasMitra? existingRumusanPrioritasMitra = await RumusanPrioritasMitraRepository.GetAsync(Guid.Parse(request.Uuid), cancellationToken);
 
             if (existingRumusanPrioritasMitra is null)
             {
-                Result.Failure(RumusanPrioritasMitraErrors.NotFound(request.Uuid));
+                Result.Failure(RumusanPrioritasMitraErrors.NotFound(Guid.Parse(request.Uuid)));
             }
 
             Result<Domain.RumusanPrioritasMitra.RumusanPrioritasMitra> asset = Domain.RumusanPrioritasMitra.RumusanPrioritasMitra.Update(existingRumusanPrioritasMitra!)

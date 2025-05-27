@@ -17,11 +17,11 @@ namespace UnpakSipaksi.Modules.JenisPublikasi.Application.DeleteJenisPublikasi
     {
         public async Task<Result> Handle(DeleteJenisPublikasiCommand request, CancellationToken cancellationToken)
         {
-            Domain.JenisPublikasi.JenisPublikasi? existingJenisPublikasi = await jenisPublikasiRepository.GetAsync(request.uuid, cancellationToken);
+            Domain.JenisPublikasi.JenisPublikasi? existingJenisPublikasi = await jenisPublikasiRepository.GetAsync(Guid.Parse(request.uuid), cancellationToken);
 
             if (existingJenisPublikasi is null)
             {
-                return Result.Failure(JenisPublikasiErrors.NotFound(request.uuid));
+                return Result.Failure(JenisPublikasiErrors.NotFound(Guid.Parse(request.uuid)));
             }
 
             await jenisPublikasiRepository.DeleteAsync(existingJenisPublikasi!);

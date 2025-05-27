@@ -3,6 +3,6 @@
 namespace UnpakSipaksi.Modules.RelevansiProdukKepentinganNasional.Application.DeleteRelevansiProdukKepentinganNasional
 {
     public sealed record DeleteRelevansiProdukKepentinganNasionalCommand(
-        Guid uuid
+        string uuid
     ) : ICommand;
 }

@@ -16,7 +16,7 @@ namespace UnpakSipaksi.Modules.KategoriSumberDana.Presentation.KategoriSumberDan
             app.MapPost("KategoriSumberDana", async (CreateKategoriSumberDanaRequest request, ISender sender) =>
             {
                 Result<Guid> result = await sender.Send(new CreateKategoriSumberDanaCommand(
-                    HtmlEncoder.Default.Encode(request.Nama)
+                    request.Nama
                     )
                 );
 

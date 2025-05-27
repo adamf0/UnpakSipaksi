@@ -17,8 +17,8 @@ namespace UnpakSipaksi.Modules.KebaruanReferensi.Presentation.KebaruanReferensi
             app.MapPost("KebaruanReferensi", async (CreateKebaruanReferensiRequest request, ISender sender) =>
             {
                 Result<Guid> result = await sender.Send(new CreateKebaruanReferensiCommand(
-                    HtmlEncoder.Default.Encode(request.Nama),
-                    int.Parse(HtmlEncoder.Default.Encode(request.Skor))
+                    request.Nama,
+                    request.Skor
                     )
                 );
 
@@ -29,7 +29,7 @@ namespace UnpakSipaksi.Modules.KebaruanReferensi.Presentation.KebaruanReferensi
         internal sealed class CreateKebaruanReferensiRequest
         {
             public string Nama { get; set; }
-            public string Skor { get; set; }
+            public int Skor { get; set; }
         }
     }
 }

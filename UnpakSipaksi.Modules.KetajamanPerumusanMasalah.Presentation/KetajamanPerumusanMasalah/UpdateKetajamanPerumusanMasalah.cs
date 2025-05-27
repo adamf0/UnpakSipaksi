@@ -28,14 +28,8 @@ namespace UnpakSipaksi.Modules.KetajamanPerumusanMasalah.Presentation.KetajamanP
 
         internal sealed class UpdateKetajamanPerumusanMasalahRequest
         {
-            public Guid Id { get; set; }
+            public string Id { get; set; }
             public string Nama { get; set; }
-
-            public string BobotPDP { get; set; }
-            public string BobotTerapan { get; set; }
-
-            public string BobotKerjasama { get; set; }
-            public string BobotPenelitianDasar { get; set; }
             public string BobotSkor { get; set; }
         }
     }

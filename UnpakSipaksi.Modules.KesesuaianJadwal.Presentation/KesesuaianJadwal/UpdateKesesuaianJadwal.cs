@@ -18,8 +18,8 @@ namespace UnpakSipaksi.Modules.KesesuaianJadwal.Presentation.KesesuaianJadwal
             {
                 Result result = await sender.Send(new UpdateKesesuaianJadwalCommand(
                     request.Id,
-                    HtmlEncoder.Default.Encode(request.Nama),
-                    int.Parse(HtmlEncoder.Default.Encode(request.Nilai))
+                    request.Nama,
+                    request.Nilai
                     )
                 );
 
@@ -29,9 +29,9 @@ namespace UnpakSipaksi.Modules.KesesuaianJadwal.Presentation.KesesuaianJadwal
 
         internal sealed class UpdateKesesuaianJadwalRequest
         {
-            public Guid Id { get; set; }
+            public string Id { get; set; }
             public string Nama { get; set; }
-            public string Nilai { get; set; }
+            public int Nilai { get; set; }
         }
     }
 }

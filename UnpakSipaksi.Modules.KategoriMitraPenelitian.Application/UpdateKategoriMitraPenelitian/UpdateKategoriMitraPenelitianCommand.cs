@@ -8,7 +8,7 @@ using UnpakSipaksi.Common.Application.Messaging;
 namespace UnpakSipaksi.Modules.KategoriMitraPenelitian.Application.UpdateKategoriMitraPenelitian
 {
     public sealed record UpdateKategoriMitraPenelitianCommand(
-        Guid Uuid,
+        string Uuid,
         string Nama
     ) : ICommand;
 }

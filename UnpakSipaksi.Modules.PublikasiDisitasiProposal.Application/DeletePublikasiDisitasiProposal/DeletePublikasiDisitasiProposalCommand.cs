@@ -3,6 +3,6 @@
 namespace UnpakSipaksi.Modules.PublikasiDisitasiProposal.Application.DeletePublikasiDisitasiProposal
 {
     public sealed record DeletePublikasiDisitasiProposalCommand(
-        Guid uuid
+        string uuid
     ) : ICommand;
 }

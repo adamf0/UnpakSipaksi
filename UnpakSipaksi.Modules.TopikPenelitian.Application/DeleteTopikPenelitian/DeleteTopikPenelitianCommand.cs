@@ -8,6 +8,6 @@ using UnpakSipaksi.Common.Application.Messaging;
 namespace UnpakSipaksi.Modules.TopikPenelitian.Application.DeleteTopikPenelitian
 {
     public sealed record DeleteTopikPenelitianCommand(
-        Guid uuid
+        string uuid
     ) : ICommand;
 }

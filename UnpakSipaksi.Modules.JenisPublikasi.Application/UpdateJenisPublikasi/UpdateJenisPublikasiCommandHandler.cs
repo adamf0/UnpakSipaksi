@@ -17,11 +17,11 @@ namespace UnpakSipaksi.Modules.JenisPublikasi.Application.UpdateJenisPublikasi
     {
         public async Task<Result> Handle(UpdateJenisPublikasiCommand request, CancellationToken cancellationToken)
         {
-            Domain.JenisPublikasi.JenisPublikasi? existingJenisPublikasi = await jenisPublikasiRepository.GetAsync(request.Uuid, cancellationToken);
+            Domain.JenisPublikasi.JenisPublikasi? existingJenisPublikasi = await jenisPublikasiRepository.GetAsync(Guid.Parse(request.Uuid), cancellationToken);
 
             if (existingJenisPublikasi is null)
             {
-                Result.Failure(JenisPublikasiErrors.NotFound(request.Uuid));
+                Result.Failure(JenisPublikasiErrors.NotFound(Guid.Parse(request.Uuid)));
             }
 
             Result<Domain.JenisPublikasi.JenisPublikasi> asset = Domain.JenisPublikasi.JenisPublikasi.Update(existingJenisPublikasi!)

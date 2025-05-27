@@ -3,7 +3,7 @@
 namespace UnpakSipaksi.Modules.KualitasIpteks.Application.UpdateKualitasIpteks
 {
     public sealed record UpdateKualitasIpteksCommand(
-        Guid Uuid,
+        string Uuid,
         string Nama,
         int Nilai
     ) : ICommand;

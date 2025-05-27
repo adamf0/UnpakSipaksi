@@ -18,8 +18,8 @@ namespace UnpakSipaksi.Modules.LuaranArtikel.Presentation.LuaranArtikel
             {
                 Result result = await sender.Send(new UpdateLuaranArtikelCommand(
                     request.Id,
-                    HtmlEncoder.Default.Encode(request.Nama),
-                    int.Parse(HtmlEncoder.Default.Encode(request.Nilai))
+                    request.Nama,
+                    request.Nilai
                     )
                 );
 
@@ -29,9 +29,9 @@ namespace UnpakSipaksi.Modules.LuaranArtikel.Presentation.LuaranArtikel
 
         internal sealed class UpdateLuaranArtikelRequest
         {
-            public Guid Id { get; set; }
+            public string Id { get; set; }
             public string Nama { get; set; }
-            public string Nilai { get; set; }
+            public int Nilai { get; set; }
         }
     }
 }

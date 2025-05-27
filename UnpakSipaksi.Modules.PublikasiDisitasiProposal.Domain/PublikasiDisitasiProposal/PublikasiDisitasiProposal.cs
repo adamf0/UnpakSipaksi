@@ -16,20 +16,12 @@ namespace UnpakSipaksi.Modules.PublikasiDisitasiProposal.Domain.PublikasiDisitas
 
         [Column("name")]
         public string Nama { get; private set; } = null!;
-        public int BobotPDP { get; private set; } = 0;
-        public int BobotTerapan { get; private set; } = 0;
-        public int BobotKerjasama { get; private set; } = 0;
-        public int BobotPenelitianDasar { get; private set; } = 0;
         public int Skor { get; private set; } = 0;
 
         public static PublikasiDisitasiProposalBuilder Update(PublikasiDisitasiProposal prev) => new PublikasiDisitasiProposalBuilder(prev);
 
         public static Result<PublikasiDisitasiProposal> Create(
         string Nama,
-        int BobotPDP,
-        int BobotTerapan,
-        int BobotKerjasama,
-        int BobotPenelitianDasar,
         int Skor
         )
         {
@@ -37,10 +29,6 @@ namespace UnpakSipaksi.Modules.PublikasiDisitasiProposal.Domain.PublikasiDisitas
             {
                 Uuid = Guid.NewGuid(),
                 Nama = Nama,
-                BobotPDP = BobotPDP,
-                BobotTerapan = BobotTerapan,
-                BobotKerjasama = BobotKerjasama,
-                BobotPenelitianDasar = BobotPenelitianDasar,
                 Skor = Skor,
             };
 

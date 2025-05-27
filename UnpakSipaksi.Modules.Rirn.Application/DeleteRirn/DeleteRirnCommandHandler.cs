@@ -17,11 +17,11 @@ namespace UnpakSipaksi.Modules.Rirn.Application.DeleteRirn
     {
         public async Task<Result> Handle(DeleteRirnCommand request, CancellationToken cancellationToken)
         {
-            Domain.Rirn.Rirn? existingRirn = await RirnRepository.GetAsync(request.uuid, cancellationToken);
+            Domain.Rirn.Rirn? existingRirn = await RirnRepository.GetAsync(Guid.Parse(request.uuid), cancellationToken);
 
             if (existingRirn is null)
             {
-                return Result.Failure(RirnErrors.NotFound(request.uuid));
+                return Result.Failure(RirnErrors.NotFound(Guid.Parse(request.uuid)));
             }
 
             await RirnRepository.DeleteAsync(existingRirn!);

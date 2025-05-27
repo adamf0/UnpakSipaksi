@@ -7,7 +7,6 @@ using UnpakSipaksi.Common.Application.Messaging;
 using UnpakSipaksi.Common.Domain;
 using UnpakSipaksi.Modules.KebaruanReferensi.PublicApi;
 using UnpakSipaksi.Modules.Referensi.Application.Abstractions.Data;
-using UnpakSipaksi.Modules.Referensi.Application.CreateAkurasiPenelitian;
 using UnpakSipaksi.Modules.Referensi.Domain.Referensi;
 using UnpakSipaksi.Modules.RelevansiKualitasReferensi.PublicApi;
 

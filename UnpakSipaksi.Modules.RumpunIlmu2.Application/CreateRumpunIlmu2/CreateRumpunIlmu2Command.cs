@@ -9,6 +9,6 @@ namespace UnpakSipaksi.Modules.RumpunIlmu2.Application.CreateRumpunIlmu2
 {
     public sealed record CreateRumpunIlmu2Command(
         string Nama,
-        Guid UuidRumpunIlmu1
+        string UuidRumpunIlmu1
     ) : ICommand<Guid>;
 }

@@ -13,7 +13,7 @@ namespace UnpakSipaksi.Modules.SotaKebaharuan.Presentation.SotaKebaharuan
     {
         public static void MapEndpoint(IEndpointRouteBuilder app)
         {
-            app.MapDelete("SotaKebaharuan/{id}", async (Guid id, ISender sender) =>
+            app.MapDelete("SotaKebaharuan/{id}", async (string id, ISender sender) =>
             {
                 Result result = await sender.Send(
                     new DeleteSotaKebaharuanCommand(id)

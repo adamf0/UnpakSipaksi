@@ -13,7 +13,7 @@ namespace UnpakSipaksi.Modules.ArtikelMediaMassa.Presentation.ArtikelMediaMassa
     {
         public static void MapEndpoint(IEndpointRouteBuilder app)
         {
-            app.MapDelete("ArtikelMediaMassa/{id}", async (Guid id, ISender sender) =>
+            app.MapDelete("ArtikelMediaMassa/{id}", async (string id, ISender sender) =>
             {
                 Result result = await sender.Send(
                     new DeleteArtikelMediaMassaCommand(id)

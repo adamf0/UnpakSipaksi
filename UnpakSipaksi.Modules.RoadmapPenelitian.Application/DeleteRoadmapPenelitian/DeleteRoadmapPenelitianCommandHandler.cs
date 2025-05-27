@@ -12,11 +12,11 @@ namespace UnpakSipaksi.Modules.RoadmapPenelitian.Application.DeleteRoadmapPeneli
     {
         public async Task<Result> Handle(DeleteRoadmapPenelitianCommand request, CancellationToken cancellationToken)
         {
-            Domain.RoadmapPenelitian.RoadmapPenelitian? existingRoadmapPenelitian = await RoadmapPenelitianRepository.GetAsync(request.uuid, cancellationToken);
+            Domain.RoadmapPenelitian.RoadmapPenelitian? existingRoadmapPenelitian = await RoadmapPenelitianRepository.GetAsync(Guid.Parse(request.uuid), cancellationToken);
 
             if (existingRoadmapPenelitian is null)
             {
-                return Result.Failure(RoadmapPenelitianErrors.NotFound(request.uuid));
+                return Result.Failure(RoadmapPenelitianErrors.NotFound(Guid.Parse(request.uuid)));
             }
 
             await RoadmapPenelitianRepository.DeleteAsync(existingRoadmapPenelitian!);

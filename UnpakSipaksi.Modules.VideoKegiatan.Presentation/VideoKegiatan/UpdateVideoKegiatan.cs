@@ -18,8 +18,8 @@ namespace UnpakSipaksi.Modules.VideoKegiatan.Presentation.VideoKegiatan
             {
                 Result result = await sender.Send(new UpdateVideoKegiatanCommand(
                     request.Id,
-                    HtmlEncoder.Default.Encode(request.Nama),
-                    int.Parse(HtmlEncoder.Default.Encode(request.Nilai))
+                    request.Nama,
+                    request.Nilai
                     )
                 );
 
@@ -29,9 +29,9 @@ namespace UnpakSipaksi.Modules.VideoKegiatan.Presentation.VideoKegiatan
 
         internal sealed class UpdateVideoKegiatanRequest
         {
-            public Guid Id { get; set; }
+            public string Id { get; set; }
             public string Nama { get; set; }
-            public string Nilai { get; set; }
+            public int Nilai { get; set; }
         }
     }
 }

@@ -8,7 +8,7 @@ using UnpakSipaksi.Common.Application.Messaging;
 namespace UnpakSipaksi.Modules.FokusPengabdian.Application.UpdateFokusPengabdian
 {
     public sealed record UpdateFokusPengabdianCommand(
-        Guid Uuid,
+        string Uuid,
         string Nama
     ) : ICommand;
 }

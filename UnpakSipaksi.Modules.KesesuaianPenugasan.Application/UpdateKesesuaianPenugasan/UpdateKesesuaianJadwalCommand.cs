@@ -8,7 +8,7 @@ using UnpakSipaksi.Common.Application.Messaging;
 namespace UnpakSipaksi.Modules.KesesuaianPenugasan.Application.UpdateKesesuaianPenugasan
 {
     public sealed record UpdateKesesuaianPenugasanCommand(
-        Guid Uuid,
+        string Uuid,
         string Nama,
         int Nilai
     ) : ICommand;

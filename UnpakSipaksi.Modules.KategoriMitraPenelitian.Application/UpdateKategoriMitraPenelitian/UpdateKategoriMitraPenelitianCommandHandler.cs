@@ -17,11 +17,11 @@ namespace UnpakSipaksi.Modules.KategoriMitraPenelitian.Application.UpdateKategor
     {
         public async Task<Result> Handle(UpdateKategoriMitraPenelitianCommand request, CancellationToken cancellationToken)
         {
-            Domain.KategoriMitraPenelitian.KategoriMitraPenelitian? existingKategoriMitraPenelitian = await kategoriMitraPenelitianRepository.GetAsync(request.Uuid, cancellationToken);
+            Domain.KategoriMitraPenelitian.KategoriMitraPenelitian? existingKategoriMitraPenelitian = await kategoriMitraPenelitianRepository.GetAsync(Guid.Parse(request.Uuid), cancellationToken);
 
             if (existingKategoriMitraPenelitian is null)
             {
-                Result.Failure(KategoriMitraPenelitianErrors.NotFound(request.Uuid));
+                Result.Failure(KategoriMitraPenelitianErrors.NotFound(Guid.Parse(request.Uuid)));
             }
 
             Result<Domain.KategoriMitraPenelitian.KategoriMitraPenelitian> asset = Domain.KategoriMitraPenelitian.KategoriMitraPenelitian.Update(existingKategoriMitraPenelitian!)

@@ -16,8 +16,8 @@ namespace UnpakSipaksi.Modules.KuantitasStatusKi.Presentation.KuantitasStatusKi
             app.MapPost("KuantitasStatusKi", async (CreateKuantitasStatusKiRequest request, ISender sender) =>
             {
                 Result<Guid> result = await sender.Send(new CreateKuantitasStatusKiCommand(
-                    HtmlEncoder.Default.Encode(request.Nama),
-                    int.Parse(HtmlEncoder.Default.Encode(request.Nilai))
+                    request.Nama,
+                    request.Nilai
                     )
                 );
 
@@ -28,7 +28,7 @@ namespace UnpakSipaksi.Modules.KuantitasStatusKi.Presentation.KuantitasStatusKi
         internal sealed class CreateKuantitasStatusKiRequest
         {
             public string Nama { get; set; }
-            public string Nilai { get; set; }
+            public int Nilai { get; set; }
         }
     }
 }

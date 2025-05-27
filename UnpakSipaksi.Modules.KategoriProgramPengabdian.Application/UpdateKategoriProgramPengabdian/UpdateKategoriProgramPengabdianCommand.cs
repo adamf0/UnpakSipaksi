@@ -3,7 +3,7 @@
 namespace UnpakSipaksi.Modules.KategoriProgramPengabdian.Application.UpdateKategoriProgramPengabdian
 {
     public sealed record UpdateKategoriProgramPengabdianCommand(
-        Guid Uuid,
+        string Uuid,
         string Nama,
         string Rule
     ) : ICommand;

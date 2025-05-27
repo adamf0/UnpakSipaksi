@@ -19,11 +19,11 @@ namespace UnpakSipaksi.Modules.RumpunIlmu3.Application.CreateRumpunIlmu3
     {
         public async Task<Result<Guid>> Handle(CreateRumpunIlmu3Command request, CancellationToken cancellationToken)
         {
-            RumpunIlmu2Response? RumpunIlmu2 = await RumpunIlmu2Api.GetAsync(request.UuidRumpunIlmu2, cancellationToken);
+            RumpunIlmu2Response? RumpunIlmu2 = await RumpunIlmu2Api.GetAsync(Guid.Parse(request.UuidRumpunIlmu2), cancellationToken);
 
             if (RumpunIlmu2 is null)
             {
-                return Result.Failure<Guid>(RumpunIlmu3Errors.RumpunIlmu2NotFound(request.UuidRumpunIlmu2));
+                return Result.Failure<Guid>(RumpunIlmu3Errors.RumpunIlmu2NotFound(Guid.Parse(request.UuidRumpunIlmu2)));
             }
 
             Result<Domain.RumpunIlmu3.RumpunIlmu3> result = Domain.RumpunIlmu3.RumpunIlmu3.Create(

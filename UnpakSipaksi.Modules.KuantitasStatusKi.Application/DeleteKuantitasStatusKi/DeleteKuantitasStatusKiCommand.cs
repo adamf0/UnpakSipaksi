@@ -3,6 +3,6 @@
 namespace UnpakSipaksi.Modules.KuantitasStatusKi.Application.DeleteKuantitasStatusKi
 {
     public sealed record DeleteKuantitasStatusKiCommand(
-        Guid uuid
+        string uuid
     ) : ICommand;
 }

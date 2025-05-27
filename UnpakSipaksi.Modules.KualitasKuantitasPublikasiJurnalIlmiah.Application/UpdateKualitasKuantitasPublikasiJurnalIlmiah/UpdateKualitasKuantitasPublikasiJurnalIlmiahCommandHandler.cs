@@ -12,11 +12,11 @@ namespace UnpakSipaksi.Modules.KualitasKuantitasPublikasiJurnalIlmiah.Applicatio
     {
         public async Task<Result> Handle(UpdateKualitasKuantitasPublikasiJurnalIlmiahCommand request, CancellationToken cancellationToken)
         {
-            Domain.KualitasKuantitasPublikasiJurnalIlmiah.KualitasKuantitasPublikasiJurnalIlmiah? existingKualitasKuantitasPublikasiJurnalIlmiah = await KualitasKuantitasPublikasiJurnalIlmiahRepository.GetAsync(request.Uuid, cancellationToken);
+            Domain.KualitasKuantitasPublikasiJurnalIlmiah.KualitasKuantitasPublikasiJurnalIlmiah? existingKualitasKuantitasPublikasiJurnalIlmiah = await KualitasKuantitasPublikasiJurnalIlmiahRepository.GetAsync(Guid.Parse(request.Uuid), cancellationToken);
 
             if (existingKualitasKuantitasPublikasiJurnalIlmiah is null)
             {
-                Result.Failure(KualitasKuantitasPublikasiJurnalIlmiahErrors.NotFound(request.Uuid));
+                Result.Failure(KualitasKuantitasPublikasiJurnalIlmiahErrors.NotFound(Guid.Parse(request.Uuid)));
             }
 
             Result<Domain.KualitasKuantitasPublikasiJurnalIlmiah.KualitasKuantitasPublikasiJurnalIlmiah> asset = Domain.KualitasKuantitasPublikasiJurnalIlmiah.KualitasKuantitasPublikasiJurnalIlmiah.Update(existingKualitasKuantitasPublikasiJurnalIlmiah!)

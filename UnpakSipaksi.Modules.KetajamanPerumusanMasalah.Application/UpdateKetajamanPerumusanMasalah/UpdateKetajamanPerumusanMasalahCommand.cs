@@ -3,7 +3,7 @@
 namespace UnpakSipaksi.Modules.KetajamanPerumusanMasalah.Application.UpdateKetajamanPerumusanMasalah
 {
     public sealed record UpdateKetajamanPerumusanMasalahCommand(
-        Guid Uuid,
+        string Uuid,
         string Nama,
         int Skor
     ) : ICommand;

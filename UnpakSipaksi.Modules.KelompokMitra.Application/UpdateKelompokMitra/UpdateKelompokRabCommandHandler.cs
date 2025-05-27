@@ -17,11 +17,11 @@ namespace UnpakSipaksi.Modules.KelompokMitra.Application.UpdateKelompokMitra
     {
         public async Task<Result> Handle(UpdateKelompokMitraCommand request, CancellationToken cancellationToken)
         {
-            Domain.KelompokMitra.KelompokMitra? existingKelompokMitra = await kelompokMitraRepository.GetAsync(request.Uuid, cancellationToken);
+            Domain.KelompokMitra.KelompokMitra? existingKelompokMitra = await kelompokMitraRepository.GetAsync(Guid.Parse(request.Uuid), cancellationToken);
 
             if (existingKelompokMitra is null)
             {
-                Result.Failure(KelompokMitraErrors.NotFound(request.Uuid));
+                Result.Failure(KelompokMitraErrors.NotFound(Guid.Parse(request.Uuid)));
             }
 
             Result<Domain.KelompokMitra.KelompokMitra> asset = Domain.KelompokMitra.KelompokMitra.Update(existingKelompokMitra!)

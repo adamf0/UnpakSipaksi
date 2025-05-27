@@ -18,7 +18,7 @@ namespace UnpakSipaksi.Modules.KategoriProgramPengabdian.Presentation.KategoriPr
             {
                 Result result = await sender.Send(new UpdateKategoriProgramPengabdianCommand(
                     request.Id,
-                    HtmlEncoder.Default.Encode(request.Nama),
+                    request.Nama,
                     request.Rule
                     )
                 );
@@ -29,7 +29,7 @@ namespace UnpakSipaksi.Modules.KategoriProgramPengabdian.Presentation.KategoriPr
 
         internal sealed class UpdateKategoriProgramPengabdianRequest
         {
-            public Guid Id { get; set; }
+            public string Id { get; set; }
             public string Nama { get; set; }
             public string Rule { get; set; }
         }

@@ -3,6 +3,6 @@
 namespace UnpakSipaksi.Modules.KredibilitasMitraDukungan.Application.DeleteKredibilitasMitraDukungan
 {
     public sealed record DeleteKredibilitasMitraDukunganCommand(
-        Guid uuid
+        string uuid
     ) : ICommand;
 }
