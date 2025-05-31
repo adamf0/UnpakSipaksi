@@ -21,7 +21,7 @@ namespace UnpakSipaksi.Modules.KesesuaianPenugasan.Application.UpdateKesesuaianP
 
             if (existingKesesuaianPenugasan is null)
             {
-                Result.Failure(KesesuaianPenugasanErrors.NotFound(Guid.Parse(request.Uuid)));
+                return Result.Failure(KesesuaianPenugasanErrors.NotFound(Guid.Parse(request.Uuid)));
             }
 
             Result<Domain.KesesuaianPenugasan.KesesuaianPenugasan> asset = Domain.KesesuaianPenugasan.KesesuaianPenugasan.Update(existingKesesuaianPenugasan!)

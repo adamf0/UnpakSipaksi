@@ -21,7 +21,7 @@ namespace UnpakSipaksi.Modules.KesesuaianTkt.Application.UpdateKesesuaianTkt
 
             if (existingKesesuaianTkt is null)
             {
-                Result.Failure(KesesuaianTktErrors.NotFound(Guid.Parse(request.Uuid)));
+                return Result.Failure(KesesuaianTktErrors.NotFound(Guid.Parse(request.Uuid)));
             }
 
             Result<Domain.KesesuaianTkt.KesesuaianTkt> asset = Domain.KesesuaianTkt.KesesuaianTkt.Update(existingKesesuaianTkt!)

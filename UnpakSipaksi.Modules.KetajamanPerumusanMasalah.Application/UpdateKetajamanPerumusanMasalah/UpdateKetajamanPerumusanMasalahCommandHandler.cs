@@ -16,7 +16,7 @@ namespace UnpakSipaksi.Modules.KetajamanPerumusanMasalah.Application.UpdateKetaj
 
             if (existingKetajamanPerumusanMasalah is null)
             {
-                Result.Failure(KetajamanPerumusanMasalahErrors.NotFound(Guid.Parse(request.Uuid)));
+                return Result.Failure(KetajamanPerumusanMasalahErrors.NotFound(Guid.Parse(request.Uuid)));
             }
 
             Result<Domain.KetajamanPerumusanMasalah.KetajamanPerumusanMasalah> asset = Domain.KetajamanPerumusanMasalah.KetajamanPerumusanMasalah.Update(existingKetajamanPerumusanMasalah!)

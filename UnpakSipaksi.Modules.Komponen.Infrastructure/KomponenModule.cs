@@ -9,6 +9,8 @@ using UnpakSipaksi.Modules.Komponen.Domain.Komponen;
 using UnpakSipaksi.Modules.Komponen.Presentation.Komponen;
 using UnpakSipaksi.Modules.Komponen.Infrastructure.Database;
 using UnpakSipaksi.Modules.Komponen.Infrastructure.Komponen;
+using UnpakSipaksi.Modules.Komponen.PublicApi;
+using UnpakSipaksi.Modules.Komponen.Infrastructure.PublicApi;
 
 namespace UnpakSipaksi.Modules.Komponen.Infrastructure
 {
@@ -40,6 +42,8 @@ namespace UnpakSipaksi.Modules.Komponen.Infrastructure
             services.AddScoped<IKomponenRepository, KomponenRepository>();
 
             services.AddScoped<IUnitOfWork>(sp => sp.GetRequiredService<KomponenContext>());
+
+            services.AddScoped<IKomponenApi, KomponenApi>();
         }
     }
 }

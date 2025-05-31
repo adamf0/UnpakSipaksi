@@ -21,7 +21,7 @@ namespace UnpakSipaksi.Modules.JenisPublikasi.Application.UpdateJenisPublikasi
 
             if (existingJenisPublikasi is null)
             {
-                Result.Failure(JenisPublikasiErrors.NotFound(Guid.Parse(request.Uuid)));
+                return Result.Failure(JenisPublikasiErrors.NotFound(Guid.Parse(request.Uuid)));
             }
 
             Result<Domain.JenisPublikasi.JenisPublikasi> asset = Domain.JenisPublikasi.JenisPublikasi.Update(existingJenisPublikasi!)

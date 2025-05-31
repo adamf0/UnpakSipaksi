@@ -23,7 +23,7 @@ namespace UnpakSipaksi.Modules.Insentif.Application.UpdateInsentifJurnal
 
             if (existingInsentif is null)
             {
-                Result.Failure(InsentifErrors.NotFound(request.Uuid));
+                return Result.Failure(InsentifErrors.NotFound(request.Uuid));
             }
 
             JenisPublikasiResponse? JenisPublikasi = await JenisPublikasiApi.GetAsync(Guid.Parse(request.IndexJenisPublikasi));

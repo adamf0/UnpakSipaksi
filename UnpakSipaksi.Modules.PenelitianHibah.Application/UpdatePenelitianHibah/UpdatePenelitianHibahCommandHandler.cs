@@ -24,7 +24,7 @@ namespace UnpakSipaksi.Modules.PenelitianHibah.Application.UpdatePenelitianHibah
 
             if (existingPenelitianHibah is null)
             {
-                Result.Failure(PenelitianHibahErrors.NotFound(Guid.Parse(request.Uuid)));
+                return Result.Failure(PenelitianHibahErrors.NotFound(Guid.Parse(request.Uuid)));
             }
 
             bool isUnique = await penelitianHibahRepository.HasUniqueDataAsync(

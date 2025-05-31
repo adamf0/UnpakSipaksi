@@ -21,7 +21,7 @@ namespace UnpakSipaksi.Modules.InovasiPemecahanMasalah.Application.UpdateInovasi
 
             if (existingInovasiPemecahanMasalah is null)
             {
-                Result.Failure(InovasiPemecahanMasalahErrors.NotFound(Guid.Parse(request.Uuid)));
+                return Result.Failure(InovasiPemecahanMasalahErrors.NotFound(Guid.Parse(request.Uuid)));
             }
 
             Result<Domain.InovasiPemecahanMasalah.InovasiPemecahanMasalah> asset = Domain.InovasiPemecahanMasalah.InovasiPemecahanMasalah.Update(existingInovasiPemecahanMasalah!)

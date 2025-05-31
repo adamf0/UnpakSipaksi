@@ -16,7 +16,7 @@ namespace UnpakSipaksi.Modules.VideoKegiatan.Application.UpdateVideoKegiatan
 
             if (existingVideoKegiatan is null)
             {
-                Result.Failure(VideoKegiatanErrors.NotFound(Guid.Parse(request.Uuid)));
+                return Result.Failure(VideoKegiatanErrors.NotFound(Guid.Parse(request.Uuid)));
             }
 
             Result<Domain.VideoKegiatan.VideoKegiatan> asset = Domain.VideoKegiatan.VideoKegiatan.Update(existingVideoKegiatan!)

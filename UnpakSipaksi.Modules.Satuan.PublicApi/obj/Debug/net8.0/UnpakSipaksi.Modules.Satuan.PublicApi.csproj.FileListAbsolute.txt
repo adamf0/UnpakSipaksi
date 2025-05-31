@@ -1,0 +1,12 @@
+C:\dev_net\UnpakSipaksi\UnpakSipaksi.Modules.Satuan.PublicApi\bin\Debug\net8.0\UnpakSipaksi.Modules.Satuan.PublicApi.deps.json
+C:\dev_net\UnpakSipaksi\UnpakSipaksi.Modules.Satuan.PublicApi\bin\Debug\net8.0\UnpakSipaksi.Modules.Satuan.PublicApi.dll
+C:\dev_net\UnpakSipaksi\UnpakSipaksi.Modules.Satuan.PublicApi\bin\Debug\net8.0\UnpakSipaksi.Modules.Satuan.PublicApi.pdb
+C:\dev_net\UnpakSipaksi\UnpakSipaksi.Modules.Satuan.PublicApi\obj\Debug\net8.0\UnpakSipaksi.Modules.Satuan.PublicApi.GeneratedMSBuildEditorConfig.editorconfig
+C:\dev_net\UnpakSipaksi\UnpakSipaksi.Modules.Satuan.PublicApi\obj\Debug\net8.0\UnpakSipaksi.Modules.Satuan.PublicApi.AssemblyInfoInputs.cache
+C:\dev_net\UnpakSipaksi\UnpakSipaksi.Modules.Satuan.PublicApi\obj\Debug\net8.0\UnpakSipaksi.Modules.Satuan.PublicApi.AssemblyInfo.cs
+C:\dev_net\UnpakSipaksi\UnpakSipaksi.Modules.Satuan.PublicApi\obj\Debug\net8.0\UnpakSipaksi.Modules.Satuan.PublicApi.csproj.CoreCompileInputs.cache
+C:\dev_net\UnpakSipaksi\UnpakSipaksi.Modules.Satuan.PublicApi\obj\Debug\net8.0\UnpakSipaksi.Modules.Satuan.PublicApi.sourcelink.json
+C:\dev_net\UnpakSipaksi\UnpakSipaksi.Modules.Satuan.PublicApi\obj\Debug\net8.0\UnpakSipaksi.Modules.Satuan.PublicApi.dll
+C:\dev_net\UnpakSipaksi\UnpakSipaksi.Modules.Satuan.PublicApi\obj\Debug\net8.0\refint\UnpakSipaksi.Modules.Satuan.PublicApi.dll
+C:\dev_net\UnpakSipaksi\UnpakSipaksi.Modules.Satuan.PublicApi\obj\Debug\net8.0\UnpakSipaksi.Modules.Satuan.PublicApi.pdb
+C:\dev_net\UnpakSipaksi\UnpakSipaksi.Modules.Satuan.PublicApi\obj\Debug\net8.0\ref\UnpakSipaksi.Modules.Satuan.PublicApi.dll

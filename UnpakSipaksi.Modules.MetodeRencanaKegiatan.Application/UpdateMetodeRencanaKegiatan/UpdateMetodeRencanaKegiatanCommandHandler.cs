@@ -16,7 +16,7 @@ namespace UnpakSipaksi.Modules.MetodeRencanaKegiatan.Application.UpdateMetodeRen
 
             if (existingMetodeRencanaKegiatan is null)
             {
-                Result.Failure(MetodeRencanaKegiatanErrors.NotFound(Guid.Parse(request.Uuid)));
+                return Result.Failure(MetodeRencanaKegiatanErrors.NotFound(Guid.Parse(request.Uuid)));
             }
 
             Result<Domain.MetodeRencanaKegiatan.MetodeRencanaKegiatan> asset = Domain.MetodeRencanaKegiatan.MetodeRencanaKegiatan.Update(existingMetodeRencanaKegiatan!)

@@ -27,6 +27,7 @@
 		<ProjectReference Include="..\UnpakSipaksi.Modules.Satuan.Application\UnpakSipaksi.Modules.Satuan.Application.csproj" />
 		<ProjectReference Include="..\UnpakSipaksi.Modules.Satuan.Domain\UnpakSipaksi.Modules.Satuan.Domain.csproj" />
 		<ProjectReference Include="..\UnpakSipaksi.Modules.Satuan.Presentation\UnpakSipaksi.Modules.Satuan.Presentation.csproj" />
+		<ProjectReference Include="..\UnpakSipaksi.Modules.Satuan.PublicApi\UnpakSipaksi.Modules.Satuan.PublicApi.csproj" />
 	</ItemGroup>
 
 </Project>

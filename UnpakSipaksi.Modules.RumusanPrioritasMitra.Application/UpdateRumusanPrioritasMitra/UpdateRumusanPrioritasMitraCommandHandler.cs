@@ -16,7 +16,7 @@ namespace UnpakSipaksi.Modules.RumusanPrioritasMitra.Application.UpdateRumusanPr
 
             if (existingRumusanPrioritasMitra is null)
             {
-                Result.Failure(RumusanPrioritasMitraErrors.NotFound(Guid.Parse(request.Uuid)));
+                return Result.Failure(RumusanPrioritasMitraErrors.NotFound(Guid.Parse(request.Uuid)));
             }
 
             Result<Domain.RumusanPrioritasMitra.RumusanPrioritasMitra> asset = Domain.RumusanPrioritasMitra.RumusanPrioritasMitra.Update(existingRumusanPrioritasMitra!)

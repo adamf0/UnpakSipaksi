@@ -1,6 +1,6 @@
 ﻿using UnpakSipaksi.Common.Domain;
 
-namespace UnpakSipaksi.Modules.PenelitianHibah.Domain.MemberDosen
+namespace UnpakSipaksi.Modules.PenelitianHibah.Domain.MemberNonDosen
 {
     public static class MemberNonDosenErrors
     {

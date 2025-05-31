@@ -16,7 +16,7 @@ namespace UnpakSipaksi.Modules.KredibilitasMitraDukungan.Application.UpdateKredi
 
             if (existingKredibilitasMitraDukungan is null)
             {
-                Result.Failure(KredibilitasMitraDukunganErrors.NotFound(Guid.Parse(request.Uuid)));
+                return Result.Failure(KredibilitasMitraDukunganErrors.NotFound(Guid.Parse(request.Uuid)));
             }
 
             Result<Domain.KredibilitasMitraDukungan.KredibilitasMitraDukungan> asset = Domain.KredibilitasMitraDukungan.KredibilitasMitraDukungan.Update(existingKredibilitasMitraDukungan!)

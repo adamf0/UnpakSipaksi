@@ -21,7 +21,7 @@ namespace UnpakSipaksi.Modules.KelompokMitra.Application.UpdateKelompokMitra
 
             if (existingKelompokMitra is null)
             {
-                Result.Failure(KelompokMitraErrors.NotFound(Guid.Parse(request.Uuid)));
+                return Result.Failure(KelompokMitraErrors.NotFound(Guid.Parse(request.Uuid)));
             }
 
             Result<Domain.KelompokMitra.KelompokMitra> asset = Domain.KelompokMitra.KelompokMitra.Update(existingKelompokMitra!)

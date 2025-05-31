@@ -21,7 +21,7 @@ namespace UnpakSipaksi.Modules.KesesuaianWaktuRabLuaranFasilitas.Application.Upd
 
             if (existingKesesuaianWaktuRabLuaranFasilitas is null)
             {
-                Result.Failure(KesesuaianWaktuRabLuaranFasilitasErrors.NotFound(Guid.Parse(request.Uuid)));
+                return Result.Failure(KesesuaianWaktuRabLuaranFasilitasErrors.NotFound(Guid.Parse(request.Uuid)));
             }
 
             Result<Domain.KesesuaianWaktuRabLuaranFasilitas.KesesuaianWaktuRabLuaranFasilitas> asset = Domain.KesesuaianWaktuRabLuaranFasilitas.KesesuaianWaktuRabLuaranFasilitas.Update(existingKesesuaianWaktuRabLuaranFasilitas!)

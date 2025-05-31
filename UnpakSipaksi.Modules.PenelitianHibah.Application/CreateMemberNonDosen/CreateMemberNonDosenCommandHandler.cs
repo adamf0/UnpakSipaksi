@@ -1,7 +1,6 @@
 ﻿using UnpakSipaksi.Common.Application.Messaging;
 using UnpakSipaksi.Common.Domain;
 using UnpakSipaksi.Modules.PenelitianHibah.Application.Abstractions.Data;
-using UnpakSipaksi.Modules.PenelitianHibah.Domain.MemberDosen;
 using UnpakSipaksi.Modules.PenelitianHibah.Domain.MemberNonDosen;
 using UnpakSipaksi.Modules.PenelitianHibah.PublicApi;
 

@@ -16,7 +16,7 @@ namespace UnpakSipaksi.Modules.PublikasiDisitasiProposal.Application.UpdatePubli
 
             if (existingPublikasiDisitasiProposal is null)
             {
-                Result.Failure(PublikasiDisitasiProposalErrors.NotFound(Guid.Parse(request.Uuid)));
+                return Result.Failure(PublikasiDisitasiProposalErrors.NotFound(Guid.Parse(request.Uuid)));
             }
 
             Result<Domain.PublikasiDisitasiProposal.PublikasiDisitasiProposal> asset = Domain.PublikasiDisitasiProposal.PublikasiDisitasiProposal.Update(existingPublikasiDisitasiProposal!)

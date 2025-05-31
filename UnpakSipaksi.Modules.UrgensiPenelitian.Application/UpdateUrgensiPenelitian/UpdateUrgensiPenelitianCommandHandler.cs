@@ -26,7 +26,7 @@ namespace UnpakSipaksi.Modules.UrgensiPenelitian.Application.UpdateUrgensiPeneli
 
             if (existingUrgensiPenelitian is null)
             {
-                Result.Failure(UrgensiPenelitianErrors.NotFound(request.Uuid));
+                return Result.Failure(UrgensiPenelitianErrors.NotFound(request.Uuid));
             }
 
             var RelevansiProdukKepentinganNasionalTask = RelevansiProdukKepentinganNasionalApi.GetAsync(Guid.Parse(request.UuidRelevansiProdukKepentinganNasional));

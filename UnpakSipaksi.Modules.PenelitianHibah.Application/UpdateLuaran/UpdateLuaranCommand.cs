@@ -10,5 +10,5 @@ namespace UnpakSipaksi.Modules.PenelitianHibah.Application.UpdateLuaran
           string? Keterangan,
           string? Link,
           string Jenis
-    ) : ICommand<Guid>;
+    ) : ICommand;
 }

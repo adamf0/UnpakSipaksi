@@ -21,7 +21,7 @@ namespace UnpakSipaksi.Modules.KelompokRab.Application.UpdateKelompokRab
 
             if (existingKelompokRab is null)
             {
-                Result.Failure(KelompokRabErrors.NotFound(Guid.Parse(request.Uuid)));
+                return Result.Failure(KelompokRabErrors.NotFound(Guid.Parse(request.Uuid)));
             }
 
             Result<Domain.KelompokRab.KelompokRab> asset = Domain.KelompokRab.KelompokRab.Update(existingKelompokRab!)

@@ -16,7 +16,7 @@ namespace UnpakSipaksi.Modules.KategoriSkema.Application.UpdateKategoriSkema
 
             if (existingKategoriSkema is null)
             {
-                Result.Failure(KategoriSkemaErrors.NotFound(Guid.Parse(request.Uuid)));
+                return Result.Failure(KategoriSkemaErrors.NotFound(Guid.Parse(request.Uuid)));
             }
 
             Result<Domain.KategoriSkema.KategoriSkema> asset = Domain.KategoriSkema.KategoriSkema.Update(existingKategoriSkema!)

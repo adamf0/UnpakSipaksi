@@ -14,6 +14,8 @@ using UnpakSipaksi.Modules.KelompokRab.Domain.KelompokRab;
 using UnpakSipaksi.Modules.KelompokRab.Presentation.KelompokRab;
 using UnpakSipaksi.Modules.KelompokRab.Infrastructure.Database;
 using UnpakSipaksi.Modules.KelompokRab.Infrastructure.KelompokRab;
+using UnpakSipaksi.Modules.KelompokRab.PublicApi;
+using UnpakSipaksi.Modules.KelompokRab.Infrastructure.PublicApi;
 
 namespace UnpakSipaksi.Modules.KelompokRab.Infrastructure
 {
@@ -45,6 +47,8 @@ namespace UnpakSipaksi.Modules.KelompokRab.Infrastructure
             services.AddScoped<IKelompokRabRepository, KelompokRabRepository>();
 
             services.AddScoped<IUnitOfWork>(sp => sp.GetRequiredService<KelompokRabDbContext>());
+
+            services.AddScoped<IKelompokRabApi, KelompokRabApi>();
         }
     }
 }

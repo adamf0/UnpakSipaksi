@@ -16,7 +16,7 @@ namespace UnpakSipaksi.Modules.RelevansiKepakaranTemaProposal.Application.Update
 
             if (existingRelevansiKepakaranTemaProposal is null)
             {
-                Result.Failure(RelevansiKepakaranTemaProposalErrors.NotFound(Guid.Parse(request.Uuid)));
+                return Result.Failure(RelevansiKepakaranTemaProposalErrors.NotFound(Guid.Parse(request.Uuid)));
             }
 
             Result<Domain.RelevansiKepakaranTemaProposal.RelevansiKepakaranTemaProposal> asset = Domain.RelevansiKepakaranTemaProposal.RelevansiKepakaranTemaProposal.Update(existingRelevansiKepakaranTemaProposal!)

@@ -3564,7 +3564,8 @@
           "UnpakSipaksi.Common.Infrastructure": "1.0.0",
           "UnpakSipaksi.Modules.KelompokRab.Application": "1.0.0",
           "UnpakSipaksi.Modules.KelompokRab.Domain": "1.0.0",
-          "UnpakSipaksi.Modules.KelompokRab.Presentation": "1.0.0"
+          "UnpakSipaksi.Modules.KelompokRab.Presentation": "1.0.0",
+          "UnpakSipaksi.Modules.KelompokRab.PublicApi": "1.0.0"
         },
         "compile": {
           "bin/placeholder/UnpakSipaksi.Modules.KelompokRab.Infrastructure.dll": {}
@@ -3593,6 +3594,16 @@
         "frameworkReferences": [
           "Microsoft.AspNetCore.App"
         ]
+      },
+      "UnpakSipaksi.Modules.KelompokRab.PublicApi/1.0.0": {
+        "type": "project",
+        "framework": ".NETCoreApp,Version=v8.0",
+        "compile": {
+          "bin/placeholder/UnpakSipaksi.Modules.KelompokRab.PublicApi.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/UnpakSipaksi.Modules.KelompokRab.PublicApi.dll": {}
+        }
       },
       "UnpakSipaksi.Modules.KesesuaianJadwal.Application/1.0.0": {
         "type": "project",
@@ -4282,7 +4293,8 @@
           "UnpakSipaksi.Common.Infrastructure": "1.0.0",
           "UnpakSipaksi.Modules.Komponen.Application": "1.0.0",
           "UnpakSipaksi.Modules.Komponen.Domain": "1.0.0",
-          "UnpakSipaksi.Modules.Komponen.Presentation": "1.0.0"
+          "UnpakSipaksi.Modules.Komponen.Presentation": "1.0.0",
+          "UnpakSipaksi.Modules.Komponen.PublicApi": "1.0.0"
         },
         "compile": {
           "bin/placeholder/UnpakSipaksi.Modules.Komponen.Infrastructure.dll": {}
@@ -4311,6 +4323,16 @@
         "frameworkReferences": [
           "Microsoft.AspNetCore.App"
         ]
+      },
+      "UnpakSipaksi.Modules.Komponen.PublicApi/1.0.0": {
+        "type": "project",
+        "framework": ".NETCoreApp,Version=v8.0",
+        "compile": {
+          "bin/placeholder/UnpakSipaksi.Modules.Komponen.PublicApi.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/UnpakSipaksi.Modules.Komponen.PublicApi.dll": {}
+        }
       },
       "UnpakSipaksi.Modules.KredibilitasMitraDukungan.Application/1.0.0": {
         "type": "project",
@@ -5050,12 +5072,16 @@
           "UnpakSipaksi.Modules.KategoriLuaran.PublicApi": "1.0.0",
           "UnpakSipaksi.Modules.KategoriSkema.PublicApi": "1.0.0",
           "UnpakSipaksi.Modules.KategoriTkt.PublicApi": "1.0.0",
+          "UnpakSipaksi.Modules.KelompokRab.PublicApi": "1.0.0",
+          "UnpakSipaksi.Modules.Komponen.Application": "1.0.0",
+          "UnpakSipaksi.Modules.Komponen.PublicApi": "1.0.0",
           "UnpakSipaksi.Modules.PenelitianHibah.Domain": "1.0.0",
           "UnpakSipaksi.Modules.PenelitianHibah.PublicApi": "1.0.0",
           "UnpakSipaksi.Modules.PrioritasRiset.PublicApi": "1.0.0",
           "UnpakSipaksi.Modules.RumpunIlmu1.PublicApi": "1.0.0",
           "UnpakSipaksi.Modules.RumpunIlmu2.PublicApi": "1.0.0",
           "UnpakSipaksi.Modules.RumpunIlmu3.PublicApi": "1.0.0",
+          "UnpakSipaksi.Modules.Satuan.PublicApi": "1.0.0",
           "UnpakSipaksi.Modules.TemaPenelitian.PublicApi": "1.0.0",
           "UnpakSipaksi.Modules.TopikPenelitian.PublicApi": "1.0.0"
         },
@@ -6500,7 +6526,8 @@
           "UnpakSipaksi.Common.Infrastructure": "1.0.0",
           "UnpakSipaksi.Modules.Satuan.Application": "1.0.0",
           "UnpakSipaksi.Modules.Satuan.Domain": "1.0.0",
-          "UnpakSipaksi.Modules.Satuan.Presentation": "1.0.0"
+          "UnpakSipaksi.Modules.Satuan.Presentation": "1.0.0",
+          "UnpakSipaksi.Modules.Satuan.PublicApi": "1.0.0"
         },
         "compile": {
           "bin/placeholder/UnpakSipaksi.Modules.Satuan.Infrastructure.dll": {}
@@ -6529,6 +6556,16 @@
         "frameworkReferences": [
           "Microsoft.AspNetCore.App"
         ]
+      },
+      "UnpakSipaksi.Modules.Satuan.PublicApi/1.0.0": {
+        "type": "project",
+        "framework": ".NETCoreApp,Version=v8.0",
+        "compile": {
+          "bin/placeholder/UnpakSipaksi.Modules.Satuan.PublicApi.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/UnpakSipaksi.Modules.Satuan.PublicApi.dll": {}
+        }
       },
       "UnpakSipaksi.Modules.SotaKebaharuan.Application/1.0.0": {
         "type": "project",
@@ -11185,6 +11222,11 @@
       "path": "../UnpakSipaksi.Modules.KelompokRab.Presentation/UnpakSipaksi.Modules.KelompokRab.Presentation.csproj",
       "msbuildProject": "../UnpakSipaksi.Modules.KelompokRab.Presentation/UnpakSipaksi.Modules.KelompokRab.Presentation.csproj"
     },
+    "UnpakSipaksi.Modules.KelompokRab.PublicApi/1.0.0": {
+      "type": "project",
+      "path": "../UnpakSipaksi.Modules.KelompokRab.PublicApi/UnpakSipaksi.Modules.KelompokRab.PublicApi.csproj",
+      "msbuildProject": "../UnpakSipaksi.Modules.KelompokRab.PublicApi/UnpakSipaksi.Modules.KelompokRab.PublicApi.csproj"
+    },
     "UnpakSipaksi.Modules.KesesuaianJadwal.Application/1.0.0": {
       "type": "project",
       "path": "../UnpakSipaksi.Modules.KesesuaianJadwal.Application/UnpakSipaksi.Modules.KesesuaianJadwal.Application.csproj",
@@ -11404,6 +11446,11 @@
       "type": "project",
       "path": "../UnpakSipaksi.Modules.Komponen.Presentation/UnpakSipaksi.Modules.Komponen.Presentation.csproj",
       "msbuildProject": "../UnpakSipaksi.Modules.Komponen.Presentation/UnpakSipaksi.Modules.Komponen.Presentation.csproj"
+    },
+    "UnpakSipaksi.Modules.Komponen.PublicApi/1.0.0": {
+      "type": "project",
+      "path": "../UnpakSipaksi.Modules.Komponen.PublicApi/UnpakSipaksi.Modules.Komponen.PublicApi.csproj",
+      "msbuildProject": "../UnpakSipaksi.Modules.Komponen.PublicApi/UnpakSipaksi.Modules.Komponen.PublicApi.csproj"
     },
     "UnpakSipaksi.Modules.KredibilitasMitraDukungan.Application/1.0.0": {
       "type": "project",
@@ -12069,6 +12116,11 @@
       "type": "project",
       "path": "../UnpakSipaksi.Modules.Satuan.Presentation/UnpakSipaksi.Modules.Satuan.Presentation.csproj",
       "msbuildProject": "../UnpakSipaksi.Modules.Satuan.Presentation/UnpakSipaksi.Modules.Satuan.Presentation.csproj"
+    },
+    "UnpakSipaksi.Modules.Satuan.PublicApi/1.0.0": {
+      "type": "project",
+      "path": "../UnpakSipaksi.Modules.Satuan.PublicApi/UnpakSipaksi.Modules.Satuan.PublicApi.csproj",
+      "msbuildProject": "../UnpakSipaksi.Modules.Satuan.PublicApi/UnpakSipaksi.Modules.Satuan.PublicApi.csproj"
     },
     "UnpakSipaksi.Modules.SotaKebaharuan.Application/1.0.0": {
       "type": "project",

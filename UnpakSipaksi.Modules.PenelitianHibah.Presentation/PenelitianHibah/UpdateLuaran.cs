@@ -14,7 +14,7 @@ namespace UnpakSipaksi.Modules.PenelitianHibah.Presentation.PenelitianHibah
         {
             app.MapPut("PenelitianHibah/Luaran", async (UpdateLuaranRequest request, ISender sender) =>
             {
-                Result<Guid> result = await sender.Send(new UpdateLuaranCommand(
+                Result result = await sender.Send(new UpdateLuaranCommand(
                   request.Uuid,
                   request.UuidPenelitianHibah,
                   request.UuidKategori,
@@ -24,7 +24,7 @@ namespace UnpakSipaksi.Modules.PenelitianHibah.Presentation.PenelitianHibah
                   request.Jenis
                 ));
 
-                return result.Match(Results.Ok, ApiResults.Problem);
+                return result.Match(() => Results.Ok(), ApiResults.Problem);
             }).WithTags(Tags.PenelitianHibah);
         }
 

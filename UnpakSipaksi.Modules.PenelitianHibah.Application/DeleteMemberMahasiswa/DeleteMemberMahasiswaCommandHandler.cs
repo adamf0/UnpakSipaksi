@@ -24,6 +24,10 @@ namespace UnpakSipaksi.Modules.PenelitianHibah.Application.DeleteMemberMahasiswa
             {
                 return Result.Failure(PenelitianHibahErrors.NotFound(Guid.Parse(request.Uuid)));
             }
+            if (existingMemberMahasiswa.NPM != request.Npm)
+            {
+                return Result.Failure(PenelitianHibahErrors.InvalidData());
+            }
 
             await memberMahasiswaRepository.DeleteAsync(existingMemberMahasiswa!);
             //event update change table position asset, order desc + select first

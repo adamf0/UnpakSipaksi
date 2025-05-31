@@ -16,7 +16,7 @@ namespace UnpakSipaksi.Modules.ModelFeasibilityStudys.Application.UpdateModelFea
 
             if (existingModelFeasibilityStudys is null)
             {
-                Result.Failure(ModelFeasibilityStudysErrors.NotFound(Guid.Parse(request.Uuid)));
+                return Result.Failure(ModelFeasibilityStudysErrors.NotFound(Guid.Parse(request.Uuid)));
             }
 
             Result<Domain.ModelFeasibilityStudys.ModelFeasibilityStudys> asset = Domain.ModelFeasibilityStudys.ModelFeasibilityStudys.Update(existingModelFeasibilityStudys!)

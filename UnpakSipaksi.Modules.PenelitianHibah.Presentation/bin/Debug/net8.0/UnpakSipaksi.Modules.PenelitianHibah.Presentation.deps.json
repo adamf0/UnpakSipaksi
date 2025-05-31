@@ -249,6 +249,36 @@
           "UnpakSipaksi.Modules.KategoriTkt.PublicApi.dll": {}
         }
       },
+      "UnpakSipaksi.Modules.KelompokRab.PublicApi/1.0.0": {
+        "runtime": {
+          "UnpakSipaksi.Modules.KelompokRab.PublicApi.dll": {}
+        }
+      },
+      "UnpakSipaksi.Modules.Komponen.Application/1.0.0": {
+        "dependencies": {
+          "Dapper": "2.1.35",
+          "MediatR": "12.4.1",
+          "UnpakSipaksi.Common.Application": "1.0.0",
+          "UnpakSipaksi.Common.Domain": "1.0.0",
+          "UnpakSipaksi.Modules.Komponen.Domain": "1.0.0"
+        },
+        "runtime": {
+          "UnpakSipaksi.Modules.Komponen.Application.dll": {}
+        }
+      },
+      "UnpakSipaksi.Modules.Komponen.Domain/1.0.0": {
+        "dependencies": {
+          "UnpakSipaksi.Common.Domain": "1.0.0"
+        },
+        "runtime": {
+          "UnpakSipaksi.Modules.Komponen.Domain.dll": {}
+        }
+      },
+      "UnpakSipaksi.Modules.Komponen.PublicApi/1.0.0": {
+        "runtime": {
+          "UnpakSipaksi.Modules.Komponen.PublicApi.dll": {}
+        }
+      },
       "UnpakSipaksi.Modules.PenelitianHibah.Application/1.0.0": {
         "dependencies": {
           "Dapper": "2.1.35",
@@ -260,12 +290,16 @@
           "UnpakSipaksi.Modules.KategoriLuaran.PublicApi": "1.0.0",
           "UnpakSipaksi.Modules.KategoriSkema.PublicApi": "1.0.0",
           "UnpakSipaksi.Modules.KategoriTkt.PublicApi": "1.0.0",
+          "UnpakSipaksi.Modules.KelompokRab.PublicApi": "1.0.0",
+          "UnpakSipaksi.Modules.Komponen.Application": "1.0.0",
+          "UnpakSipaksi.Modules.Komponen.PublicApi": "1.0.0",
           "UnpakSipaksi.Modules.PenelitianHibah.Domain": "1.0.0",
           "UnpakSipaksi.Modules.PenelitianHibah.PublicApi": "1.0.0",
           "UnpakSipaksi.Modules.PrioritasRiset.PublicApi": "1.0.0",
           "UnpakSipaksi.Modules.RumpunIlmu1.PublicApi": "1.0.0",
           "UnpakSipaksi.Modules.RumpunIlmu2.PublicApi": "1.0.0",
           "UnpakSipaksi.Modules.RumpunIlmu3.PublicApi": "1.0.0",
+          "UnpakSipaksi.Modules.Satuan.PublicApi": "1.0.0",
           "UnpakSipaksi.Modules.TemaPenelitian.PublicApi": "1.0.0",
           "UnpakSipaksi.Modules.TopikPenelitian.PublicApi": "1.0.0"
         },
@@ -304,6 +338,11 @@
       "UnpakSipaksi.Modules.RumpunIlmu3.PublicApi/1.0.0": {
         "runtime": {
           "UnpakSipaksi.Modules.RumpunIlmu3.PublicApi.dll": {}
+        }
+      },
+      "UnpakSipaksi.Modules.Satuan.PublicApi/1.0.0": {
+        "runtime": {
+          "UnpakSipaksi.Modules.Satuan.PublicApi.dll": {}
         }
       },
       "UnpakSipaksi.Modules.TemaPenelitian.PublicApi/1.0.0": {
@@ -504,6 +543,26 @@
       "serviceable": false,
       "sha512": ""
     },
+    "UnpakSipaksi.Modules.KelompokRab.PublicApi/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    },
+    "UnpakSipaksi.Modules.Komponen.Application/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    },
+    "UnpakSipaksi.Modules.Komponen.Domain/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    },
+    "UnpakSipaksi.Modules.Komponen.PublicApi/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    },
     "UnpakSipaksi.Modules.PenelitianHibah.Application/1.0.0": {
       "type": "project",
       "serviceable": false,
@@ -535,6 +594,11 @@
       "sha512": ""
     },
     "UnpakSipaksi.Modules.RumpunIlmu3.PublicApi/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    },
+    "UnpakSipaksi.Modules.Satuan.PublicApi/1.0.0": {
       "type": "project",
       "serviceable": false,
       "sha512": ""

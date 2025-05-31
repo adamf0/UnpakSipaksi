@@ -24,6 +24,10 @@ namespace UnpakSipaksi.Modules.PenelitianHibah.Application.DeleteMemberDosen
             {
                 return Result.Failure(PenelitianHibahErrors.NotFound(Guid.Parse(request.Uuid)));
             }
+            if (existingMemberDosen.NIDN != request.NIDN)
+            {
+                return Result.Failure(PenelitianHibahErrors.InvalidData());
+            }
 
             await memberDosenRepository.DeleteAsync(existingMemberDosen!);
             //event update change table position asset, order desc + select first

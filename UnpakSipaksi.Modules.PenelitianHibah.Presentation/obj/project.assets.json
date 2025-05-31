@@ -417,6 +417,56 @@
           "bin/placeholder/UnpakSipaksi.Modules.KategoriTkt.PublicApi.dll": {}
         }
       },
+      "UnpakSipaksi.Modules.KelompokRab.PublicApi/1.0.0": {
+        "type": "project",
+        "framework": ".NETCoreApp,Version=v8.0",
+        "compile": {
+          "bin/placeholder/UnpakSipaksi.Modules.KelompokRab.PublicApi.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/UnpakSipaksi.Modules.KelompokRab.PublicApi.dll": {}
+        }
+      },
+      "UnpakSipaksi.Modules.Komponen.Application/1.0.0": {
+        "type": "project",
+        "framework": ".NETCoreApp,Version=v8.0",
+        "dependencies": {
+          "Dapper": "2.1.35",
+          "MediatR": "12.4.1",
+          "UnpakSipaksi.Common.Application": "1.0.0",
+          "UnpakSipaksi.Common.Domain": "1.0.0",
+          "UnpakSipaksi.Modules.Komponen.Domain": "1.0.0"
+        },
+        "compile": {
+          "bin/placeholder/UnpakSipaksi.Modules.Komponen.Application.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/UnpakSipaksi.Modules.Komponen.Application.dll": {}
+        }
+      },
+      "UnpakSipaksi.Modules.Komponen.Domain/1.0.0": {
+        "type": "project",
+        "framework": ".NETCoreApp,Version=v8.0",
+        "dependencies": {
+          "UnpakSipaksi.Common.Domain": "1.0.0"
+        },
+        "compile": {
+          "bin/placeholder/UnpakSipaksi.Modules.Komponen.Domain.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/UnpakSipaksi.Modules.Komponen.Domain.dll": {}
+        }
+      },
+      "UnpakSipaksi.Modules.Komponen.PublicApi/1.0.0": {
+        "type": "project",
+        "framework": ".NETCoreApp,Version=v8.0",
+        "compile": {
+          "bin/placeholder/UnpakSipaksi.Modules.Komponen.PublicApi.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/UnpakSipaksi.Modules.Komponen.PublicApi.dll": {}
+        }
+      },
       "UnpakSipaksi.Modules.PenelitianHibah.Application/1.0.0": {
         "type": "project",
         "framework": ".NETCoreApp,Version=v8.0",
@@ -430,12 +480,16 @@
           "UnpakSipaksi.Modules.KategoriLuaran.PublicApi": "1.0.0",
           "UnpakSipaksi.Modules.KategoriSkema.PublicApi": "1.0.0",
           "UnpakSipaksi.Modules.KategoriTkt.PublicApi": "1.0.0",
+          "UnpakSipaksi.Modules.KelompokRab.PublicApi": "1.0.0",
+          "UnpakSipaksi.Modules.Komponen.Application": "1.0.0",
+          "UnpakSipaksi.Modules.Komponen.PublicApi": "1.0.0",
           "UnpakSipaksi.Modules.PenelitianHibah.Domain": "1.0.0",
           "UnpakSipaksi.Modules.PenelitianHibah.PublicApi": "1.0.0",
           "UnpakSipaksi.Modules.PrioritasRiset.PublicApi": "1.0.0",
           "UnpakSipaksi.Modules.RumpunIlmu1.PublicApi": "1.0.0",
           "UnpakSipaksi.Modules.RumpunIlmu2.PublicApi": "1.0.0",
           "UnpakSipaksi.Modules.RumpunIlmu3.PublicApi": "1.0.0",
+          "UnpakSipaksi.Modules.Satuan.PublicApi": "1.0.0",
           "UnpakSipaksi.Modules.TemaPenelitian.PublicApi": "1.0.0",
           "UnpakSipaksi.Modules.TopikPenelitian.PublicApi": "1.0.0"
         },
@@ -507,6 +561,16 @@
         },
         "runtime": {
           "bin/placeholder/UnpakSipaksi.Modules.RumpunIlmu3.PublicApi.dll": {}
+        }
+      },
+      "UnpakSipaksi.Modules.Satuan.PublicApi/1.0.0": {
+        "type": "project",
+        "framework": ".NETCoreApp,Version=v8.0",
+        "compile": {
+          "bin/placeholder/UnpakSipaksi.Modules.Satuan.PublicApi.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/UnpakSipaksi.Modules.Satuan.PublicApi.dll": {}
         }
       },
       "UnpakSipaksi.Modules.TemaPenelitian.PublicApi/1.0.0": {
@@ -1067,6 +1131,26 @@
       "path": "../UnpakSipaksi.Modules.KategoriTkt.PublicApi/UnpakSipaksi.Modules.KategoriTkt.PublicApi.csproj",
       "msbuildProject": "../UnpakSipaksi.Modules.KategoriTkt.PublicApi/UnpakSipaksi.Modules.KategoriTkt.PublicApi.csproj"
     },
+    "UnpakSipaksi.Modules.KelompokRab.PublicApi/1.0.0": {
+      "type": "project",
+      "path": "../UnpakSipaksi.Modules.KelompokRab.PublicApi/UnpakSipaksi.Modules.KelompokRab.PublicApi.csproj",
+      "msbuildProject": "../UnpakSipaksi.Modules.KelompokRab.PublicApi/UnpakSipaksi.Modules.KelompokRab.PublicApi.csproj"
+    },
+    "UnpakSipaksi.Modules.Komponen.Application/1.0.0": {
+      "type": "project",
+      "path": "../UnpakSipaksi.Modules.Komponen.Application/UnpakSipaksi.Modules.Komponen.Application.csproj",
+      "msbuildProject": "../UnpakSipaksi.Modules.Komponen.Application/UnpakSipaksi.Modules.Komponen.Application.csproj"
+    },
+    "UnpakSipaksi.Modules.Komponen.Domain/1.0.0": {
+      "type": "project",
+      "path": "../UnpakSipaksi.Modules.Komponen.Domain/UnpakSipaksi.Modules.Komponen.Domain.csproj",
+      "msbuildProject": "../UnpakSipaksi.Modules.Komponen.Domain/UnpakSipaksi.Modules.Komponen.Domain.csproj"
+    },
+    "UnpakSipaksi.Modules.Komponen.PublicApi/1.0.0": {
+      "type": "project",
+      "path": "../UnpakSipaksi.Modules.Komponen.PublicApi/UnpakSipaksi.Modules.Komponen.PublicApi.csproj",
+      "msbuildProject": "../UnpakSipaksi.Modules.Komponen.PublicApi/UnpakSipaksi.Modules.Komponen.PublicApi.csproj"
+    },
     "UnpakSipaksi.Modules.PenelitianHibah.Application/1.0.0": {
       "type": "project",
       "path": "../UnpakSipaksi.Modules.PenelitianHibah.Application/UnpakSipaksi.Modules.PenelitianHibah.Application.csproj",
@@ -1101,6 +1185,11 @@
       "type": "project",
       "path": "../UnpakSipaksi.Modules.RumpunIlmu3.PublicApi/UnpakSipaksi.Modules.RumpunIlmu3.PublicApi.csproj",
       "msbuildProject": "../UnpakSipaksi.Modules.RumpunIlmu3.PublicApi/UnpakSipaksi.Modules.RumpunIlmu3.PublicApi.csproj"
+    },
+    "UnpakSipaksi.Modules.Satuan.PublicApi/1.0.0": {
+      "type": "project",
+      "path": "../UnpakSipaksi.Modules.Satuan.PublicApi/UnpakSipaksi.Modules.Satuan.PublicApi.csproj",
+      "msbuildProject": "../UnpakSipaksi.Modules.Satuan.PublicApi/UnpakSipaksi.Modules.Satuan.PublicApi.csproj"
     },
     "UnpakSipaksi.Modules.TemaPenelitian.PublicApi/1.0.0": {
       "type": "project",

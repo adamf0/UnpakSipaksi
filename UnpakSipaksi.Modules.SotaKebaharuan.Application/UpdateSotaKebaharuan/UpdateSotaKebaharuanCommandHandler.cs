@@ -16,7 +16,7 @@ namespace UnpakSipaksi.Modules.SotaKebaharuan.Application.UpdateSotaKebaharuan
 
             if (existingSotaKebaharuan is null)
             {
-                Result.Failure(SotaKebaharuanErrors.NotFound(Guid.Parse(request.Uuid)));
+                return Result.Failure(SotaKebaharuanErrors.NotFound(Guid.Parse(request.Uuid)));
             }
 
             Result<Domain.SotaKebaharuan.SotaKebaharuan> asset = Domain.SotaKebaharuan.SotaKebaharuan.Update(existingSotaKebaharuan!)

@@ -16,7 +16,7 @@ namespace UnpakSipaksi.Modules.RoadmapPenelitian.Application.UpdateRoadmapPeneli
 
             if (existingRoadmapPenelitian is null)
             {
-                Result.Failure(RoadmapPenelitianErrors.NotFound(Guid.Parse(request.Uuid)));
+                return Result.Failure(RoadmapPenelitianErrors.NotFound(Guid.Parse(request.Uuid)));
             }
 
             Result<Domain.RoadmapPenelitian.RoadmapPenelitian> asset = Domain.RoadmapPenelitian.RoadmapPenelitian.Update(existingRoadmapPenelitian!)

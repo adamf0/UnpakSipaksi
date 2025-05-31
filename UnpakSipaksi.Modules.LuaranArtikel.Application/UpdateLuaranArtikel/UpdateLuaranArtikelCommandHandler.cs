@@ -16,7 +16,7 @@ namespace UnpakSipaksi.Modules.LuaranArtikel.Application.UpdateLuaranArtikel
 
             if (existingLuaranArtikel is null)
             {
-                Result.Failure(LuaranArtikelErrors.NotFound(Guid.Parse(request.Uuid)));
+                return Result.Failure(LuaranArtikelErrors.NotFound(Guid.Parse(request.Uuid)));
             }
 
             Result<Domain.LuaranArtikel.LuaranArtikel> asset = Domain.LuaranArtikel.LuaranArtikel.Update(existingLuaranArtikel!)

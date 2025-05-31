@@ -25,12 +25,16 @@
 		<ProjectReference Include="..\UnpakSipaksi.Modules.KategoriLuaran.PublicApi\UnpakSipaksi.Modules.KategoriLuaran.PublicApi.csproj" />
 		<ProjectReference Include="..\UnpakSipaksi.Modules.KategoriSkema.PublicApi\UnpakSipaksi.Modules.KategoriSkema.PublicApi.csproj" />
 		<ProjectReference Include="..\UnpakSipaksi.Modules.KategoriTkt.PublicApi\UnpakSipaksi.Modules.KategoriTkt.PublicApi.csproj" />
+		<ProjectReference Include="..\UnpakSipaksi.Modules.KelompokRab.PublicApi\UnpakSipaksi.Modules.KelompokRab.PublicApi.csproj" />
+		<ProjectReference Include="..\UnpakSipaksi.Modules.Komponen.Application\UnpakSipaksi.Modules.Komponen.Application.csproj" />
+		<ProjectReference Include="..\UnpakSipaksi.Modules.Komponen.PublicApi\UnpakSipaksi.Modules.Komponen.PublicApi.csproj" />
 		<ProjectReference Include="..\UnpakSipaksi.Modules.PenelitianHibah.Domain\UnpakSipaksi.Modules.PenelitianHibah.Domain.csproj" />
 		<ProjectReference Include="..\UnpakSipaksi.Modules.PenelitianHibah.PublicApi\UnpakSipaksi.Modules.PenelitianHibah.PublicApi.csproj" />
 		<ProjectReference Include="..\UnpakSipaksi.Modules.PrioritasRiset.PublicApi\UnpakSipaksi.Modules.PrioritasRiset.PublicApi.csproj" />
 		<ProjectReference Include="..\UnpakSipaksi.Modules.RumpunIlmu1.PublicApi\UnpakSipaksi.Modules.RumpunIlmu1.PublicApi.csproj" />
 		<ProjectReference Include="..\UnpakSipaksi.Modules.RumpunIlmu2.PublicApi\UnpakSipaksi.Modules.RumpunIlmu2.PublicApi.csproj" />
 		<ProjectReference Include="..\UnpakSipaksi.Modules.RumpunIlmu3.PublicApi\UnpakSipaksi.Modules.RumpunIlmu3.PublicApi.csproj" />
+		<ProjectReference Include="..\UnpakSipaksi.Modules.Satuan.PublicApi\UnpakSipaksi.Modules.Satuan.PublicApi.csproj" />
 		<ProjectReference Include="..\UnpakSipaksi.Modules.TemaPenelitian.PublicApi\UnpakSipaksi.Modules.TemaPenelitian.PublicApi.csproj" />
 		<ProjectReference Include="..\UnpakSipaksi.Modules.TopikPenelitian.PublicApi\UnpakSipaksi.Modules.TopikPenelitian.PublicApi.csproj" />
 	</ItemGroup>

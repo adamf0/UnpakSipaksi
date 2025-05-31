@@ -21,7 +21,7 @@ namespace UnpakSipaksi.Modules.AuthorSinta.Application.UpdateAuthorSinta
 
             if (existingAuthorSinta is null)
             {
-                Result.Failure(AuthorSintaErrors.NotFound(Guid.Parse(request.Uuid)));
+                return Result.Failure(AuthorSintaErrors.NotFound(Guid.Parse(request.Uuid)));
             }
 
             Result<Domain.AuthorSinta.AuthorSinta> asset = Domain.AuthorSinta.AuthorSinta.Update(existingAuthorSinta!)

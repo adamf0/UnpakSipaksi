@@ -21,7 +21,7 @@ namespace UnpakSipaksi.Modules.FokusPengabdian.Application.UpdateFokusPengabdian
 
             if (existingFokusPengabdian is null)
             {
-                Result.Failure(FokusPengabdianErrors.NotFound(Guid.Parse(request.Uuid)));
+                return Result.Failure(FokusPengabdianErrors.NotFound(Guid.Parse(request.Uuid)));
             }
 
             Result<Domain.FokusPengabdian.FokusPengabdian> asset = Domain.FokusPengabdian.FokusPengabdian.Update(existingFokusPengabdian!)

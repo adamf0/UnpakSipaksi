@@ -21,7 +21,7 @@ namespace UnpakSipaksi.Modules.JumlahKolaboratorPublikasBereputasi.Application.U
 
             if (existingJumlahKolaboratorPublikasBereputasi is null)
             {
-                Result.Failure(JumlahKolaboratorPublikasBereputasiErrors.NotFound(Guid.Parse(request.Uuid)));
+                return Result.Failure(JumlahKolaboratorPublikasBereputasiErrors.NotFound(Guid.Parse(request.Uuid)));
             }
 
             Result<Domain.JumlahKolaboratorPublikasBereputasi.JumlahKolaboratorPublikasBereputasi> asset = Domain.JumlahKolaboratorPublikasBereputasi.JumlahKolaboratorPublikasBereputasi.Update(existingJumlahKolaboratorPublikasBereputasi!)

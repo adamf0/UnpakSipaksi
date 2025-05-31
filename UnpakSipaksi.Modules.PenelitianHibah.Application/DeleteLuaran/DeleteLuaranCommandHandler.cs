@@ -22,13 +22,13 @@ namespace UnpakSipaksi.Modules.PenelitianHibah.Application.DeleteLuaran
         public async Task<Result> Handle(DeleteLuaranCommand request, CancellationToken cancellationToken)
         {
             Domain.Luaran.Luaran? existingLuaran = await luaranRepository.GetAsync(Guid.Parse(request.Uuid), cancellationToken);
-            if (existingLuaran != null)
+            if (existingLuaran == null)
             {
                 return Result.Failure<Guid>(LuaranErrors.NotFound(Guid.Parse(request.Uuid)));
             }
 
             Domain.PenelitianHibah.PenelitianHibah? existingPenelitianHibah = await penelitianHibahRepository.GetAsync(Guid.Parse(request.UuidPenelitianHibah), cancellationToken);
-            if (existingPenelitianHibah != null)
+            if (existingPenelitianHibah == null)
             {
                 return Result.Failure<Guid>(LuaranErrors.NotFoundHibah(Guid.Parse(request.UuidPenelitianHibah)));
             }

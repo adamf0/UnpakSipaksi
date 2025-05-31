@@ -23,6 +23,9 @@ namespace UnpakSipaksi.Modules.PenelitianHibah.Application.DeletePenelitianHibah
             {
                 return Result.Failure(PenelitianHibahErrors.NotFound(Guid.Parse(request.Uuid)));
             }
+            if (existingPenelitianHibah.NIDN != request.Nidn) {
+                return Result.Failure(PenelitianHibahErrors.InvalidData());
+            }
 
             await penelitianHibahRepository.DeleteAsync(existingPenelitianHibah!);
             //event update change table position asset, order desc + select first

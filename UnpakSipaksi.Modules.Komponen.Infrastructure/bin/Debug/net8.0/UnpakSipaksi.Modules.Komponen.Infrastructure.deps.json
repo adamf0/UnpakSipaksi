@@ -14,7 +14,8 @@
           "UnpakSipaksi.Common.Infrastructure": "1.0.0",
           "UnpakSipaksi.Modules.Komponen.Application": "1.0.0",
           "UnpakSipaksi.Modules.Komponen.Domain": "1.0.0",
-          "UnpakSipaksi.Modules.Komponen.Presentation": "1.0.0"
+          "UnpakSipaksi.Modules.Komponen.Presentation": "1.0.0",
+          "UnpakSipaksi.Modules.Komponen.PublicApi": "1.0.0"
         },
         "runtime": {
           "UnpakSipaksi.Modules.Komponen.Infrastructure.dll": {}
@@ -699,6 +700,11 @@
         "runtime": {
           "UnpakSipaksi.Modules.Komponen.Presentation.dll": {}
         }
+      },
+      "UnpakSipaksi.Modules.Komponen.PublicApi/1.0.0": {
+        "runtime": {
+          "UnpakSipaksi.Modules.Komponen.PublicApi.dll": {}
+        }
       }
     }
   },
@@ -1215,6 +1221,11 @@
       "sha512": ""
     },
     "UnpakSipaksi.Modules.Komponen.Presentation/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    },
+    "UnpakSipaksi.Modules.Komponen.PublicApi/1.0.0": {
       "type": "project",
       "serviceable": false,
       "sha512": ""

@@ -16,7 +16,7 @@ namespace UnpakSipaksi.Modules.RelevansiKualitasReferensi.Application.UpdateRele
 
             if (existingRelevansiKualitasReferensi is null)
             {
-                Result.Failure(RelevansiKualitasReferensiErrors.NotFound(Guid.Parse(request.Uuid)));
+                return Result.Failure(RelevansiKualitasReferensiErrors.NotFound(Guid.Parse(request.Uuid)));
             }
 
             Result<Domain.RelevansiKualitasReferensi.RelevansiKualitasReferensi> asset = Domain.RelevansiKualitasReferensi.RelevansiKualitasReferensi.Update(existingRelevansiKualitasReferensi!)

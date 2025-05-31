@@ -21,7 +21,7 @@ namespace UnpakSipaksi.Modules.KategoriMitraPenelitian.Application.UpdateKategor
 
             if (existingKategoriMitraPenelitian is null)
             {
-                Result.Failure(KategoriMitraPenelitianErrors.NotFound(Guid.Parse(request.Uuid)));
+                return Result.Failure(KategoriMitraPenelitianErrors.NotFound(Guid.Parse(request.Uuid)));
             }
 
             Result<Domain.KategoriMitraPenelitian.KategoriMitraPenelitian> asset = Domain.KategoriMitraPenelitian.KategoriMitraPenelitian.Update(existingKategoriMitraPenelitian!)

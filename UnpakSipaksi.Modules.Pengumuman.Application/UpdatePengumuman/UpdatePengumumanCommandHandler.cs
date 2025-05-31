@@ -38,7 +38,7 @@ namespace UnpakSipaksi.Modules.Pengumuman.Application.UpdatePengumuman
 
             if (existingPengumuman is null)
             {
-                Result.Failure(PengumumanErrors.NotFound(request.Uuid));
+                return Result.Failure(PengumumanErrors.NotFound(request.Uuid));
             }
 
             var expiredTypeParsed = request.TypeExpired.ToEnumFromString<ExpiredType>();

@@ -21,7 +21,7 @@ namespace UnpakSipaksi.Modules.Kategori.Application.UpdateKategori
 
             if (existingKategori is null)
             {
-                Result.Failure(KategoriErrors.NotFound(Guid.Parse(request.Uuid)));
+                return Result.Failure(KategoriErrors.NotFound(Guid.Parse(request.Uuid)));
             }
 
             Result<Domain.Kategori.Kategori> asset = Domain.Kategori.Kategori.Update(existingKategori!)

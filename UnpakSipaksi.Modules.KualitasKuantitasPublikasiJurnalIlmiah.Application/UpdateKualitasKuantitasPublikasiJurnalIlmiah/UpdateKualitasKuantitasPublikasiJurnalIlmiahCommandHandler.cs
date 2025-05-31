@@ -16,7 +16,7 @@ namespace UnpakSipaksi.Modules.KualitasKuantitasPublikasiJurnalIlmiah.Applicatio
 
             if (existingKualitasKuantitasPublikasiJurnalIlmiah is null)
             {
-                Result.Failure(KualitasKuantitasPublikasiJurnalIlmiahErrors.NotFound(Guid.Parse(request.Uuid)));
+                return Result.Failure(KualitasKuantitasPublikasiJurnalIlmiahErrors.NotFound(Guid.Parse(request.Uuid)));
             }
 
             Result<Domain.KualitasKuantitasPublikasiJurnalIlmiah.KualitasKuantitasPublikasiJurnalIlmiah> asset = Domain.KualitasKuantitasPublikasiJurnalIlmiah.KualitasKuantitasPublikasiJurnalIlmiah.Update(existingKualitasKuantitasPublikasiJurnalIlmiah!)

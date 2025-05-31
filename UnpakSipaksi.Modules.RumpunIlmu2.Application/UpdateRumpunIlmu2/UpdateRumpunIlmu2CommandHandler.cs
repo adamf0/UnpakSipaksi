@@ -30,7 +30,7 @@ namespace UnpakSipaksi.Modules.RumpunIlmu2.Application.UpdateRumpunIlmu2
 
             if (existingRumpunIlmu2 is null)
             {
-                Result.Failure(RumpunIlmu2Errors.NotFound(Guid.Parse(request.Uuid)));
+                return Result.Failure(RumpunIlmu2Errors.NotFound(Guid.Parse(request.Uuid)));
             }
 
             Result<Domain.RumpunIlmu2.RumpunIlmu2> asset = Domain.RumpunIlmu2.RumpunIlmu2.Update(existingRumpunIlmu2!)

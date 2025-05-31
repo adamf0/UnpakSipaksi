@@ -16,7 +16,7 @@ namespace UnpakSipaksi.Modules.RelevansiProdukKepentinganNasional.Application.Up
 
             if (existingRelevansiProdukKepentinganNasional is null)
             {
-                Result.Failure(RelevansiProdukKepentinganNasionalErrors.NotFound(Guid.Parse(request.Uuid)));
+                return Result.Failure(RelevansiProdukKepentinganNasionalErrors.NotFound(Guid.Parse(request.Uuid)));
             }
 
             Result<Domain.RelevansiProdukKepentinganNasional.RelevansiProdukKepentinganNasional> asset = Domain.RelevansiProdukKepentinganNasional.RelevansiProdukKepentinganNasional.Update(existingRelevansiProdukKepentinganNasional!)

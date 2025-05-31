@@ -16,7 +16,7 @@ namespace UnpakSipaksi.Modules.Komponen.Application.UpdateKomponen
 
             if (existingKomponen is null)
             {
-                Result.Failure(KomponenErrors.NotFound(Guid.Parse(request.Uuid)));
+                return Result.Failure(KomponenErrors.NotFound(Guid.Parse(request.Uuid)));
             }
 
             Result<Domain.Komponen.Komponen> asset = Domain.Komponen.Komponen.Update(existingKomponen!)

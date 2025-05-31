@@ -1,9 +1,3 @@
-C:\dev_net\UnpakSipaksi\UnpakSipaksi.Modules.Referensi.Presentation\obj\Debug\net8.0\UnpakSipaksi.Modules.Referensi.Presentation.csproj.AssemblyReference.cache
-C:\dev_net\UnpakSipaksi\UnpakSipaksi.Modules.Referensi.Presentation\obj\Debug\net8.0\UnpakSipaksi.Modules.Referensi.Presentation.GeneratedMSBuildEditorConfig.editorconfig
-C:\dev_net\UnpakSipaksi\UnpakSipaksi.Modules.Referensi.Presentation\obj\Debug\net8.0\UnpakSipaksi.Modules.Referensi.Presentation.AssemblyInfoInputs.cache
-C:\dev_net\UnpakSipaksi\UnpakSipaksi.Modules.Referensi.Presentation\obj\Debug\net8.0\UnpakSipaksi.Modules.Referensi.Presentation.AssemblyInfo.cs
-C:\dev_net\UnpakSipaksi\UnpakSipaksi.Modules.Referensi.Presentation\obj\Debug\net8.0\UnpakSipaksi.Modules.Referensi.Presentation.csproj.CoreCompileInputs.cache
-C:\dev_net\UnpakSipaksi\UnpakSipaksi.Modules.Referensi.Presentation\obj\Debug\net8.0\UnpakSipaksi.Modules.Referensi.Presentation.sourcelink.json
 C:\dev_net\UnpakSipaksi\UnpakSipaksi.Modules.Referensi.Presentation\bin\Debug\net8.0\UnpakSipaksi.Modules.Referensi.Presentation.deps.json
 C:\dev_net\UnpakSipaksi\UnpakSipaksi.Modules.Referensi.Presentation\bin\Debug\net8.0\UnpakSipaksi.Modules.Referensi.Presentation.dll
 C:\dev_net\UnpakSipaksi\UnpakSipaksi.Modules.Referensi.Presentation\bin\Debug\net8.0\UnpakSipaksi.Modules.Referensi.Presentation.pdb
@@ -21,6 +15,12 @@ C:\dev_net\UnpakSipaksi\UnpakSipaksi.Modules.Referensi.Presentation\bin\Debug\ne
 C:\dev_net\UnpakSipaksi\UnpakSipaksi.Modules.Referensi.Presentation\bin\Debug\net8.0\UnpakSipaksi.Modules.KebaruanReferensi.PublicApi.pdb
 C:\dev_net\UnpakSipaksi\UnpakSipaksi.Modules.Referensi.Presentation\bin\Debug\net8.0\UnpakSipaksi.Modules.Referensi.Domain.pdb
 C:\dev_net\UnpakSipaksi\UnpakSipaksi.Modules.Referensi.Presentation\bin\Debug\net8.0\UnpakSipaksi.Modules.RelevansiKualitasReferensi.PublicApi.pdb
+C:\dev_net\UnpakSipaksi\UnpakSipaksi.Modules.Referensi.Presentation\obj\Debug\net8.0\UnpakSipaksi.Modules.Referensi.Presentation.csproj.AssemblyReference.cache
+C:\dev_net\UnpakSipaksi\UnpakSipaksi.Modules.Referensi.Presentation\obj\Debug\net8.0\UnpakSipaksi.Modules.Referensi.Presentation.GeneratedMSBuildEditorConfig.editorconfig
+C:\dev_net\UnpakSipaksi\UnpakSipaksi.Modules.Referensi.Presentation\obj\Debug\net8.0\UnpakSipaksi.Modules.Referensi.Presentation.AssemblyInfoInputs.cache
+C:\dev_net\UnpakSipaksi\UnpakSipaksi.Modules.Referensi.Presentation\obj\Debug\net8.0\UnpakSipaksi.Modules.Referensi.Presentation.AssemblyInfo.cs
+C:\dev_net\UnpakSipaksi\UnpakSipaksi.Modules.Referensi.Presentation\obj\Debug\net8.0\UnpakSipaksi.Modules.Referensi.Presentation.csproj.CoreCompileInputs.cache
+C:\dev_net\UnpakSipaksi\UnpakSipaksi.Modules.Referensi.Presentation\obj\Debug\net8.0\UnpakSipaksi.Modules.Referensi.Presentation.sourcelink.json
 C:\dev_net\UnpakSipaksi\UnpakSipaksi.Modules.Referensi.Presentation\obj\Debug\net8.0\UnpakSip.5FDEF610.Up2Date
 C:\dev_net\UnpakSipaksi\UnpakSipaksi.Modules.Referensi.Presentation\obj\Debug\net8.0\UnpakSipaksi.Modules.Referensi.Presentation.dll
 C:\dev_net\UnpakSipaksi\UnpakSipaksi.Modules.Referensi.Presentation\obj\Debug\net8.0\refint\UnpakSipaksi.Modules.Referensi.Presentation.dll

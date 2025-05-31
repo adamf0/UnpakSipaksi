@@ -21,7 +21,7 @@ namespace UnpakSipaksi.Modules.AkurasiPenelitian.Application.UpdateAkurasiPeneli
 
             if (existingAkurasiPenelitian is null)
             {
-                Result.Failure(AkurasiPenelitianErrors.NotFound(Guid.Parse(request.Uuid)));
+                return Result.Failure(AkurasiPenelitianErrors.NotFound(Guid.Parse(request.Uuid)));
             }
 
             Result<Domain.AkurasiPenelitian.AkurasiPenelitian> asset = Domain.AkurasiPenelitian.AkurasiPenelitian.Update(existingAkurasiPenelitian!)

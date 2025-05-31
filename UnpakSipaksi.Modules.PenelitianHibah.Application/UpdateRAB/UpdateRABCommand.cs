@@ -1,0 +1,15 @@
+﻿using UnpakSipaksi.Common.Application.Messaging;
+
+namespace UnpakSipaksi.Modules.PenelitianHibah.Application.UpdateRAB
+{
+    public sealed record UpdateRABCommand(
+          string Uuid,
+          string UuidPenelitianHibah,
+          string? UuidKelompokRab,
+          string? UuidKomponen,
+          int? Item,
+          string? UuidSatuan,
+          int? HargaSatuan,
+          int? Total
+    ) : ICommand;
+}

@@ -21,7 +21,7 @@ namespace UnpakSipaksi.Modules.KesesuaianJadwal.Application.UpdateKesesuaianJadw
 
             if (existingKesesuaianJadwal is null)
             {
-                Result.Failure(KesesuaianJadwalErrors.NotFound(Guid.Parse(request.Uuid)));
+                return Result.Failure(KesesuaianJadwalErrors.NotFound(Guid.Parse(request.Uuid)));
             }
 
             Result<Domain.KesesuaianJadwal.KesesuaianJadwal> asset = Domain.KesesuaianJadwal.KesesuaianJadwal.Update(existingKesesuaianJadwal!)

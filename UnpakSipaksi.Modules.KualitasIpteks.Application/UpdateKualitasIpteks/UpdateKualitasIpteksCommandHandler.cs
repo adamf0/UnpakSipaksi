@@ -16,7 +16,7 @@ namespace UnpakSipaksi.Modules.KualitasIpteks.Application.UpdateKualitasIpteks
 
             if (existingKualitasIpteks is null)
             {
-                Result.Failure(KualitasIpteksErrors.NotFound(Guid.Parse(request.Uuid)));
+                return Result.Failure(KualitasIpteksErrors.NotFound(Guid.Parse(request.Uuid)));
             }
 
             Result<Domain.KualitasIpteks.KualitasIpteks> asset = Domain.KualitasIpteks.KualitasIpteks.Update(existingKualitasIpteks!)

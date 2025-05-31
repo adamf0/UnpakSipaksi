@@ -16,7 +16,7 @@ namespace UnpakSipaksi.Modules.KategoriProgramPengabdian.Application.UpdateKateg
 
             if (existingKategoriProgramPengabdian is null)
             {
-                Result.Failure(KategoriProgramPengabdianErrors.NotFound(Guid.Parse(request.Uuid)));
+                return Result.Failure(KategoriProgramPengabdianErrors.NotFound(Guid.Parse(request.Uuid)));
             }
 
             Result<Domain.KategoriProgramPengabdian.KategoriProgramPengabdian> asset = Domain.KategoriProgramPengabdian.KategoriProgramPengabdian.Update(existingKategoriProgramPengabdian!)

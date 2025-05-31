@@ -16,7 +16,7 @@ namespace UnpakSipaksi.Modules.KuantitasStatusKi.Application.UpdateKuantitasStat
 
             if (existingKuantitasStatusKi is null)
             {
-                Result.Failure(KuantitasStatusKiErrors.NotFound(Guid.Parse(request.Uuid)));
+                return Result.Failure(KuantitasStatusKiErrors.NotFound(Guid.Parse(request.Uuid)));
             }
 
             Result<Domain.KuantitasStatusKi.KuantitasStatusKi> asset = Domain.KuantitasStatusKi.KuantitasStatusKi.Update(existingKuantitasStatusKi!)

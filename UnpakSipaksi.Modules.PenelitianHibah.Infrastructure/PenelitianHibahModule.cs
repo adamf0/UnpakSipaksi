@@ -12,19 +12,25 @@ using UnpakSipaksi.Common.Application.Data;
 using UnpakSipaksi.Common.Infrastructure.Data;
 using UnpakSipaksi.Common.Presentation.FileManager;
 using UnpakSipaksi.Modules.PenelitianHibah.Application.Abstractions.Data;
+using UnpakSipaksi.Modules.PenelitianHibah.Domain.DokumenKontrak;
+using UnpakSipaksi.Modules.PenelitianHibah.Domain.DokumenPendukung;
 using UnpakSipaksi.Modules.PenelitianHibah.Domain.Luaran;
 using UnpakSipaksi.Modules.PenelitianHibah.Domain.MemberDosen;
 using UnpakSipaksi.Modules.PenelitianHibah.Domain.MemberMahasiswa;
 using UnpakSipaksi.Modules.PenelitianHibah.Domain.MemberNonDosen;
 using UnpakSipaksi.Modules.PenelitianHibah.Domain.PenelitianHibah;
+using UnpakSipaksi.Modules.PenelitianHibah.Domain.RAB;
 using UnpakSipaksi.Modules.PenelitianHibah.Domain.Substansi;
 using UnpakSipaksi.Modules.PenelitianHibah.Infrastructure.Database;
+using UnpakSipaksi.Modules.PenelitianHibah.Infrastructure.DokumenKontrak;
+using UnpakSipaksi.Modules.PenelitianHibah.Infrastructure.DokumenPendukung;
 using UnpakSipaksi.Modules.PenelitianHibah.Infrastructure.Luaran;
 using UnpakSipaksi.Modules.PenelitianHibah.Infrastructure.MemberDosen;
 using UnpakSipaksi.Modules.PenelitianHibah.Infrastructure.MemberMahasiswa;
 using UnpakSipaksi.Modules.PenelitianHibah.Infrastructure.MemberNonDosen;
 using UnpakSipaksi.Modules.PenelitianHibah.Infrastructure.PenelitianHibah;
 using UnpakSipaksi.Modules.PenelitianHibah.Infrastructure.PublicApi;
+using UnpakSipaksi.Modules.PenelitianHibah.Infrastructure.RAB;
 using UnpakSipaksi.Modules.PenelitianHibah.Infrastructure.Substansi;
 using UnpakSipaksi.Modules.PenelitianHibah.Presentation.PenelitianHibah;
 using UnpakSipaksi.Modules.PenelitianHibah.PublicApi;
@@ -69,6 +75,12 @@ namespace UnpakSipaksi.Modules.PenelitianHibah.Infrastructure
 
             services.AddDbContext<LuaranDbContext>(optionsBuilder => optionsBuilder.UseMySQL(databaseConnectionString));
 
+            services.AddDbContext<RABDbContext>(optionsBuilder => optionsBuilder.UseMySQL(databaseConnectionString));
+
+            services.AddDbContext<DokumenPendukungDbContext>(optionsBuilder => optionsBuilder.UseMySQL(databaseConnectionString));
+
+            services.AddDbContext<DokumenKontrakDbContext>(optionsBuilder => optionsBuilder.UseMySQL(databaseConnectionString));
+
 
 
             services.AddScoped<IPenelitianHibahRepository, PenelitianHibahRepository>();
@@ -83,6 +95,11 @@ namespace UnpakSipaksi.Modules.PenelitianHibah.Infrastructure
 
             services.AddScoped<ILuaranRepository, LuaranRepository>();
 
+            services.AddScoped<IRABRepository, RABRepository>();
+
+            services.AddScoped<IDokumenPendukungRepository, DokumenPendukungRepository>();
+
+            services.AddScoped<IDokumenKontrakRepository, DokumenKontrakRepository>();
 
 
             services.AddScoped<IPenelitianHibahApi, PenelitianHibahApi>();
@@ -100,6 +117,12 @@ namespace UnpakSipaksi.Modules.PenelitianHibah.Infrastructure
             services.AddScoped<IUnitOfWorkSubstansi>(sp => sp.GetRequiredService<SubstansiDbContext>());
 
             services.AddScoped<IUnitOfWorkLuaran>(sp => sp.GetRequiredService<LuaranDbContext>());
+
+            services.AddScoped<IUnitOfWorkRAB>(sp => sp.GetRequiredService<RABDbContext>());
+
+            services.AddScoped<IUnitOfWorkDokumenPendukung>(sp => sp.GetRequiredService<DokumenPendukungDbContext>());
+
+            services.AddScoped<IUnitOfWorkDokumenKontrak>(sp => sp.GetRequiredService<DokumenKontrakDbContext>());
         }
     }
 }

@@ -14,7 +14,8 @@
           "UnpakSipaksi.Common.Infrastructure": "1.0.0",
           "UnpakSipaksi.Modules.Satuan.Application": "1.0.0",
           "UnpakSipaksi.Modules.Satuan.Domain": "1.0.0",
-          "UnpakSipaksi.Modules.Satuan.Presentation": "1.0.0"
+          "UnpakSipaksi.Modules.Satuan.Presentation": "1.0.0",
+          "UnpakSipaksi.Modules.Satuan.PublicApi": "1.0.0"
         },
         "runtime": {
           "UnpakSipaksi.Modules.Satuan.Infrastructure.dll": {}
@@ -699,6 +700,11 @@
         "runtime": {
           "UnpakSipaksi.Modules.Satuan.Presentation.dll": {}
         }
+      },
+      "UnpakSipaksi.Modules.Satuan.PublicApi/1.0.0": {
+        "runtime": {
+          "UnpakSipaksi.Modules.Satuan.PublicApi.dll": {}
+        }
       }
     }
   },
@@ -1215,6 +1221,11 @@
       "sha512": ""
     },
     "UnpakSipaksi.Modules.Satuan.Presentation/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    },
+    "UnpakSipaksi.Modules.Satuan.PublicApi/1.0.0": {
       "type": "project",
       "serviceable": false,
       "sha512": ""

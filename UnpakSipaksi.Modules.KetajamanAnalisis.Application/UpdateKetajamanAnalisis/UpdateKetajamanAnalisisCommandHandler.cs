@@ -16,7 +16,7 @@ namespace UnpakSipaksi.Modules.KetajamanAnalisis.Application.UpdateKetajamanAnal
 
             if (existingKetajamanAnalisis is null)
             {
-                Result.Failure(KetajamanAnalisisErrors.NotFound(Guid.Parse(request.Uuid)));
+                return Result.Failure(KetajamanAnalisisErrors.NotFound(Guid.Parse(request.Uuid)));
             }
 
             Result<Domain.KetajamanAnalisis.KetajamanAnalisis> asset = Domain.KetajamanAnalisis.KetajamanAnalisis.Update(existingKetajamanAnalisis!)

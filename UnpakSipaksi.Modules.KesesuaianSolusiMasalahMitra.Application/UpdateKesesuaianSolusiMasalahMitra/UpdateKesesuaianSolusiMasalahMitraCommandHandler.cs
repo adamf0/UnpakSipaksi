@@ -21,7 +21,7 @@ namespace UnpakSipaksi.Modules.KesesuaianSolusiMasalahMitra.Application.UpdateKe
 
             if (existingKesesuaianSolusiMasalahMitra is null)
             {
-                Result.Failure(KesesuaianSolusiMasalahMitraErrors.NotFound(Guid.Parse(request.Uuid)));
+                return Result.Failure(KesesuaianSolusiMasalahMitraErrors.NotFound(Guid.Parse(request.Uuid)));
             }
 
             Result<Domain.KesesuaianSolusiMasalahMitra.KesesuaianSolusiMasalahMitra> asset = Domain.KesesuaianSolusiMasalahMitra.KesesuaianSolusiMasalahMitra.Update(existingKesesuaianSolusiMasalahMitra!)

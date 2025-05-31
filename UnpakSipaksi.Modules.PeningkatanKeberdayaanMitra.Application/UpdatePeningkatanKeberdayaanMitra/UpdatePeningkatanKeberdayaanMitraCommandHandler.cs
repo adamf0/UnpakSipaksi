@@ -16,7 +16,7 @@ namespace UnpakSipaksi.Modules.PeningkatanKeberdayaanMitra.Application.UpdatePen
 
             if (existingPeningkatanKeberdayaanMitra is null)
             {
-                Result.Failure(PeningkatanKeberdayaanMitraErrors.NotFound(Guid.Parse(request.Uuid)));
+                return Result.Failure(PeningkatanKeberdayaanMitraErrors.NotFound(Guid.Parse(request.Uuid)));
             }
 
             Result<Domain.PeningkatanKeberdayaanMitra.PeningkatanKeberdayaanMitra> asset = Domain.PeningkatanKeberdayaanMitra.PeningkatanKeberdayaanMitra.Update(existingPeningkatanKeberdayaanMitra!)

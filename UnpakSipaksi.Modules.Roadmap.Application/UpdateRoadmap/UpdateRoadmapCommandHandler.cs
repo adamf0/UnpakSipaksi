@@ -16,7 +16,7 @@ namespace UnpakSipaksi.Modules.Roadmap.Application.UpdateRoadmap
 
             if (existingRoadmap is null)
             {
-                Result.Failure(RoadmapErrors.NotFound(Guid.Parse(request.Uuid)));
+                return Result.Failure(RoadmapErrors.NotFound(Guid.Parse(request.Uuid)));
             }
 
             Result<Domain.Roadmap.Roadmap> asset = Domain.Roadmap.Roadmap.Update(existingRoadmap!)

@@ -16,7 +16,7 @@ namespace UnpakSipaksi.Modules.PotensiKetercapaianLuaranDijanjikan.Application.U
 
             if (existingPotensiKetercapaianLuaranDijanjikan is null)
             {
-                Result.Failure(PotensiKetercapaianLuaranDijanjikanErrors.NotFound(Guid.Parse(request.Uuid)));
+                return Result.Failure(PotensiKetercapaianLuaranDijanjikanErrors.NotFound(Guid.Parse(request.Uuid)));
             }
 
             Result<Domain.PotensiKetercapaianLuaranDijanjikan.PotensiKetercapaianLuaranDijanjikan> asset = Domain.PotensiKetercapaianLuaranDijanjikan.PotensiKetercapaianLuaranDijanjikan.Update(existingPotensiKetercapaianLuaranDijanjikan!)

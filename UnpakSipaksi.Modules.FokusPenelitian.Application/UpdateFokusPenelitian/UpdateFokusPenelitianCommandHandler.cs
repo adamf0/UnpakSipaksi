@@ -22,7 +22,7 @@ namespace UnpakSipaksi.Modules.FokusPenelitian.Application.UpdateFokusPenelitian
 
             if (existingFokusPenelitian is null)
             {
-                Result.Failure(FokusPenelitianErrors.NotFound(Guid.Parse(request.Uuid)));
+                return Result.Failure(FokusPenelitianErrors.NotFound(Guid.Parse(request.Uuid)));
             }
 
             Result<Domain.FokusPenelitian.FokusPenelitian> asset = Domain.FokusPenelitian.FokusPenelitian.Update(existingFokusPenelitian!)

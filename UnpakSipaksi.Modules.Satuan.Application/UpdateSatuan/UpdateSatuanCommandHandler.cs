@@ -21,7 +21,7 @@ namespace UnpakSipaksi.Modules.Satuan.Application.UpdateSatuan
 
             if (existingSatuan is null)
             {
-                Result.Failure(SatuanErrors.NotFound(Guid.Parse(request.Uuid)));
+                return Result.Failure(SatuanErrors.NotFound(Guid.Parse(request.Uuid)));
             }
 
             Result<Domain.Satuan.Satuan> asset = Domain.Satuan.Satuan.Update(existingSatuan!)

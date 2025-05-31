@@ -16,7 +16,7 @@ namespace UnpakSipaksi.Modules.PenugasanReviewer.Application.StatusPenugasanRevi
 
             if (existingPenugasanReviewer is null)
             {
-                Result.Failure(PenugasanReviewerErrors.NotFound(request.Uuid));
+                return Result.Failure(PenugasanReviewerErrors.NotFound(request.Uuid));
             }
 
             Result<Domain.PenugasanReviewer.PenugasanReviewer> asset = Domain.PenugasanReviewer.PenugasanReviewer.Update(existingPenugasanReviewer!)

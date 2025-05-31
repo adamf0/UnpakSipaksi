@@ -21,7 +21,7 @@ namespace UnpakSipaksi.Modules.KategoriSumberDana.Application.UpdateKategoriSumb
 
             if (existingKategoriSumberDana is null)
             {
-                Result.Failure(KategoriSumberDanaErrors.NotFound(Guid.Parse(request.Uuid)));
+                return Result.Failure(KategoriSumberDanaErrors.NotFound(Guid.Parse(request.Uuid)));
             }
 
             Result<Domain.KategoriSumberDana.KategoriSumberDana> asset = Domain.KategoriSumberDana.KategoriSumberDana.Update(existingKategoriSumberDana!)

@@ -16,7 +16,7 @@ namespace UnpakSipaksi.Modules.KualitasKuantitasPublikasiProsiding.Application.U
 
             if (existingKualitasKuantitasPublikasiProsiding is null)
             {
-                Result.Failure(KualitasKuantitasPublikasiProsidingErrors.NotFound(Guid.Parse(request.Uuid)));
+                return Result.Failure(KualitasKuantitasPublikasiProsidingErrors.NotFound(Guid.Parse(request.Uuid)));
             }
 
             Result<Domain.KualitasKuantitasPublikasiProsiding.KualitasKuantitasPublikasiProsiding> asset = Domain.KualitasKuantitasPublikasiProsiding.KualitasKuantitasPublikasiProsiding.Update(existingKualitasKuantitasPublikasiProsiding!)

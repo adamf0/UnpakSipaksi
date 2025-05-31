@@ -14,6 +14,8 @@ using UnpakSipaksi.Modules.Satuan.Application.Abstractions.Data;
 using UnpakSipaksi.Modules.Satuan.Infrastructure.Satuan;
 using UnpakSipaksi.Modules.Satuan.Infrastructure.Database;
 using UnpakSipaksi.Modules.Satuan.Presentation.Satuan;
+using UnpakSipaksi.Modules.Satuan.PublicApi;
+using UnpakSipaksi.Modules.Satuan.Infrastructure.PublicApi;
 
 namespace UnpakSipaksi.Modules.Satuan.Infrastructure
 {
@@ -45,6 +47,8 @@ namespace UnpakSipaksi.Modules.Satuan.Infrastructure
             services.AddScoped<ISatuanRepository, SatuanRepository>();
 
             services.AddScoped<IUnitOfWork>(sp => sp.GetRequiredService<SatuanDbContext>());
+
+            services.AddScoped<ISatuanApi, SatuanApi>();
         }
     }
 }

@@ -23,7 +23,7 @@ namespace UnpakSipaksi.Modules.KategoriLuaran.Application.UpdateKategoriLuaran
 
             if (existingKategoriLuaran is null)
             {
-                Result.Failure(KategoriLuaranErrors.NotFound(Guid.Parse(request.Uuid)));
+                return Result.Failure(KategoriLuaranErrors.NotFound(Guid.Parse(request.Uuid)));
             }
 
             KategoriResponse? kategori = await kategoriApi.GetAsync(Guid.Parse(request.UuidKategori));

@@ -30,7 +30,7 @@ namespace UnpakSipaksi.Modules.TemaPenelitian.Application.UpdateTemaPenelitian
 
             if (existingTemaPenelitian is null)
             {
-                Result.Failure(TemaPenelitianErrors.NotFound(Guid.Parse(request.Uuid)));
+                return Result.Failure(TemaPenelitianErrors.NotFound(Guid.Parse(request.Uuid)));
             }
 
             Result<Domain.TemaPenelitian.TemaPenelitian> asset = Domain.TemaPenelitian.TemaPenelitian.Update(existingTemaPenelitian!)

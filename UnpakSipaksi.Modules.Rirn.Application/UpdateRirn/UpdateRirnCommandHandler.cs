@@ -21,7 +21,7 @@ namespace UnpakSipaksi.Modules.Rirn.Application.UpdateRirn
 
             if (existingRirn is null)
             {
-                Result.Failure(RirnErrors.NotFound(Guid.Parse(request.Uuid)));
+                return Result.Failure(RirnErrors.NotFound(Guid.Parse(request.Uuid)));
             }
 
             Result<Domain.Rirn.Rirn> asset = Domain.Rirn.Rirn.Update(existingRirn!)

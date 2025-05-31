@@ -21,7 +21,7 @@ namespace UnpakSipaksi.Modules.KebaruanReferensi.Application.UpdateKebaruanRefer
 
             if (existingKebaruanReferensi is null)
             {
-                Result.Failure(KebaruanReferensiErrors.NotFound(Guid.Parse(request.Uuid)));
+                return Result.Failure(KebaruanReferensiErrors.NotFound(Guid.Parse(request.Uuid)));
             }
 
             Result<Domain.KebaruanReferensi.KebaruanReferensi> asset = Domain.KebaruanReferensi.KebaruanReferensi.Update(existingKebaruanReferensi!)

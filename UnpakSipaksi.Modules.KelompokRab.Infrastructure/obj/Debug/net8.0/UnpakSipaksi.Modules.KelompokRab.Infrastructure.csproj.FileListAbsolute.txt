@@ -8,11 +8,13 @@ C:\dev_net\UnpakSipaksi\UnpakSipaksi.Modules.KelompokRab.Infrastructure\bin\Debu
 C:\dev_net\UnpakSipaksi\UnpakSipaksi.Modules.KelompokRab.Infrastructure\bin\Debug\net8.0\UnpakSipaksi.Modules.KelompokRab.Application.dll
 C:\dev_net\UnpakSipaksi\UnpakSipaksi.Modules.KelompokRab.Infrastructure\bin\Debug\net8.0\UnpakSipaksi.Modules.KelompokRab.Domain.dll
 C:\dev_net\UnpakSipaksi\UnpakSipaksi.Modules.KelompokRab.Infrastructure\bin\Debug\net8.0\UnpakSipaksi.Modules.KelompokRab.Presentation.dll
+C:\dev_net\UnpakSipaksi\UnpakSipaksi.Modules.KelompokRab.Infrastructure\bin\Debug\net8.0\UnpakSipaksi.Modules.KelompokRab.PublicApi.dll
 C:\dev_net\UnpakSipaksi\UnpakSipaksi.Modules.KelompokRab.Infrastructure\bin\Debug\net8.0\UnpakSipaksi.Common.Application.pdb
 C:\dev_net\UnpakSipaksi\UnpakSipaksi.Modules.KelompokRab.Infrastructure\bin\Debug\net8.0\UnpakSipaksi.Common.Infrastructure.pdb
 C:\dev_net\UnpakSipaksi\UnpakSipaksi.Modules.KelompokRab.Infrastructure\bin\Debug\net8.0\UnpakSipaksi.Modules.KelompokRab.Application.pdb
 C:\dev_net\UnpakSipaksi\UnpakSipaksi.Modules.KelompokRab.Infrastructure\bin\Debug\net8.0\UnpakSipaksi.Modules.KelompokRab.Domain.pdb
 C:\dev_net\UnpakSipaksi\UnpakSipaksi.Modules.KelompokRab.Infrastructure\bin\Debug\net8.0\UnpakSipaksi.Modules.KelompokRab.Presentation.pdb
+C:\dev_net\UnpakSipaksi\UnpakSipaksi.Modules.KelompokRab.Infrastructure\bin\Debug\net8.0\UnpakSipaksi.Modules.KelompokRab.PublicApi.pdb
 C:\dev_net\UnpakSipaksi\UnpakSipaksi.Modules.KelompokRab.Infrastructure\bin\Debug\net8.0\UnpakSipaksi.Common.Domain.pdb
 C:\dev_net\UnpakSipaksi\UnpakSipaksi.Modules.KelompokRab.Infrastructure\bin\Debug\net8.0\UnpakSipaksi.Common.Presentation.pdb
 C:\dev_net\UnpakSipaksi\UnpakSipaksi.Modules.KelompokRab.Infrastructure\obj\Debug\net8.0\UnpakSipaksi.Modules.KelompokRab.Infrastructure.csproj.AssemblyReference.cache

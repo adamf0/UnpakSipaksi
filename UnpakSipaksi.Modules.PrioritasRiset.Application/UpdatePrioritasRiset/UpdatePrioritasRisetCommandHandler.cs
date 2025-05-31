@@ -21,7 +21,7 @@ namespace UnpakSipaksi.Modules.PrioritasRiset.Application.UpdatePrioritasRiset
 
             if (existingPrioritasRiset is null)
             {
-                Result.Failure(PrioritasRisetErrors.NotFound(Guid.Parse(request.Uuid)));
+                return Result.Failure(PrioritasRisetErrors.NotFound(Guid.Parse(request.Uuid)));
             }
 
             Result<Domain.PrioritasRiset.PrioritasRiset> asset = Domain.PrioritasRiset.PrioritasRiset.Update(existingPrioritasRiset!)

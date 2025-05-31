@@ -21,7 +21,7 @@ namespace UnpakSipaksi.Modules.ArtikelMediaMassa.Application.UpdateArtikelMediaM
 
             if (existingArtikelMediaMassa is null)
             {
-                Result.Failure(ArtikelMediaMassaErrors.NotFound(Guid.Parse(request.Uuid)));
+                return Result.Failure(ArtikelMediaMassaErrors.NotFound(Guid.Parse(request.Uuid)));
             }
 
             Result<Domain.ArtikelMediaMassa.ArtikelMediaMassa> asset = Domain.ArtikelMediaMassa.ArtikelMediaMassa.Update(existingArtikelMediaMassa!)

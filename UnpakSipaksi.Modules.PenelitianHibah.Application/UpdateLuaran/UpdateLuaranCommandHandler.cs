@@ -14,14 +14,14 @@ namespace UnpakSipaksi.Modules.PenelitianHibah.Application.UpdateLuaran
         IKategoriApi kategoriApi,
         IKategoriLuaranApi kategoriLuaranApi,
         IUnitOfWorkLuaran unitOfWork)
-        : ICommandHandler<UpdateLuaranCommand, Guid>
+        : ICommandHandler<UpdateLuaranCommand>
     {
-        public async Task<Result<Guid>> Handle(UpdateLuaranCommand request, CancellationToken cancellationToken)
+        public async Task<Result> Handle(UpdateLuaranCommand request, CancellationToken cancellationToken)
         {
             Domain.Luaran.Luaran? existingLuaran = await luaranRepository.GetAsync(Guid.Parse(request.Uuid), cancellationToken);
             if (existingLuaran is null)
             {
-                Result.Failure(LuaranErrors.NotFound(Guid.Parse(request.Uuid)));
+                return Result.Failure(LuaranErrors.NotFound(Guid.Parse(request.Uuid)));
             }
 
             Domain.PenelitianHibah.PenelitianHibah? existingPenelitianHibah = await penelitianHibahRepository.GetAsync(Guid.Parse(request.UuidPenelitianHibah), cancellationToken);
@@ -45,7 +45,7 @@ namespace UnpakSipaksi.Modules.PenelitianHibah.Application.UpdateLuaran
 
             await unitOfWork.SaveChangesAsync(cancellationToken);
 
-            return Result.Success(createResult.Value.Uuid);
+            return Result.Success();
         }
     }
 }

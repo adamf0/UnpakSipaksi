@@ -1,9 +1,3 @@
-C:\dev_net\UnpakSipaksi\UnpakSipaksi.Modules.KategoriLuaran.Presentation\obj\Debug\net8.0\UnpakSipaksi.Modules.KategoriLuaran.Presentation.csproj.AssemblyReference.cache
-C:\dev_net\UnpakSipaksi\UnpakSipaksi.Modules.KategoriLuaran.Presentation\obj\Debug\net8.0\UnpakSipaksi.Modules.KategoriLuaran.Presentation.GeneratedMSBuildEditorConfig.editorconfig
-C:\dev_net\UnpakSipaksi\UnpakSipaksi.Modules.KategoriLuaran.Presentation\obj\Debug\net8.0\UnpakSipaksi.Modules.KategoriLuaran.Presentation.AssemblyInfoInputs.cache
-C:\dev_net\UnpakSipaksi\UnpakSipaksi.Modules.KategoriLuaran.Presentation\obj\Debug\net8.0\UnpakSipaksi.Modules.KategoriLuaran.Presentation.AssemblyInfo.cs
-C:\dev_net\UnpakSipaksi\UnpakSipaksi.Modules.KategoriLuaran.Presentation\obj\Debug\net8.0\UnpakSipaksi.Modules.KategoriLuaran.Presentation.csproj.CoreCompileInputs.cache
-C:\dev_net\UnpakSipaksi\UnpakSipaksi.Modules.KategoriLuaran.Presentation\obj\Debug\net8.0\UnpakSipaksi.Modules.KategoriLuaran.Presentation.sourcelink.json
 C:\dev_net\UnpakSipaksi\UnpakSipaksi.Modules.KategoriLuaran.Presentation\bin\Debug\net8.0\UnpakSipaksi.Modules.KategoriLuaran.Presentation.deps.json
 C:\dev_net\UnpakSipaksi\UnpakSipaksi.Modules.KategoriLuaran.Presentation\bin\Debug\net8.0\UnpakSipaksi.Modules.KategoriLuaran.Presentation.dll
 C:\dev_net\UnpakSipaksi\UnpakSipaksi.Modules.KategoriLuaran.Presentation\bin\Debug\net8.0\UnpakSipaksi.Modules.KategoriLuaran.Presentation.pdb
@@ -21,6 +15,12 @@ C:\dev_net\UnpakSipaksi\UnpakSipaksi.Modules.KategoriLuaran.Presentation\bin\Deb
 C:\dev_net\UnpakSipaksi\UnpakSipaksi.Modules.KategoriLuaran.Presentation\bin\Debug\net8.0\UnpakSipaksi.Modules.Kategori.PublicApi.pdb
 C:\dev_net\UnpakSipaksi\UnpakSipaksi.Modules.KategoriLuaran.Presentation\bin\Debug\net8.0\UnpakSipaksi.Modules.KategoriLuaran.Domain.pdb
 C:\dev_net\UnpakSipaksi\UnpakSipaksi.Modules.KategoriLuaran.Presentation\bin\Debug\net8.0\UnpakSipaksi.Modules.KategoriLuaran.PublicApi.pdb
+C:\dev_net\UnpakSipaksi\UnpakSipaksi.Modules.KategoriLuaran.Presentation\obj\Debug\net8.0\UnpakSipaksi.Modules.KategoriLuaran.Presentation.csproj.AssemblyReference.cache
+C:\dev_net\UnpakSipaksi\UnpakSipaksi.Modules.KategoriLuaran.Presentation\obj\Debug\net8.0\UnpakSipaksi.Modules.KategoriLuaran.Presentation.GeneratedMSBuildEditorConfig.editorconfig
+C:\dev_net\UnpakSipaksi\UnpakSipaksi.Modules.KategoriLuaran.Presentation\obj\Debug\net8.0\UnpakSipaksi.Modules.KategoriLuaran.Presentation.AssemblyInfoInputs.cache
+C:\dev_net\UnpakSipaksi\UnpakSipaksi.Modules.KategoriLuaran.Presentation\obj\Debug\net8.0\UnpakSipaksi.Modules.KategoriLuaran.Presentation.AssemblyInfo.cs
+C:\dev_net\UnpakSipaksi\UnpakSipaksi.Modules.KategoriLuaran.Presentation\obj\Debug\net8.0\UnpakSipaksi.Modules.KategoriLuaran.Presentation.csproj.CoreCompileInputs.cache
+C:\dev_net\UnpakSipaksi\UnpakSipaksi.Modules.KategoriLuaran.Presentation\obj\Debug\net8.0\UnpakSipaksi.Modules.KategoriLuaran.Presentation.sourcelink.json
 C:\dev_net\UnpakSipaksi\UnpakSipaksi.Modules.KategoriLuaran.Presentation\obj\Debug\net8.0\UnpakSip.2CF24D55.Up2Date
 C:\dev_net\UnpakSipaksi\UnpakSipaksi.Modules.KategoriLuaran.Presentation\obj\Debug\net8.0\UnpakSipaksi.Modules.KategoriLuaran.Presentation.dll
 C:\dev_net\UnpakSipaksi\UnpakSipaksi.Modules.KategoriLuaran.Presentation\obj\Debug\net8.0\refint\UnpakSipaksi.Modules.KategoriLuaran.Presentation.dll

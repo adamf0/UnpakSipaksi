@@ -32,5 +32,7 @@ namespace UnpakSipaksi.Modules.PenelitianHibah.Domain.PenelitianHibah
             Error.NotFound("PenelitianHibah.InvalidTahunPengajuan", "Tahun pengajuan is invalid format date");
         public static Error NotFound(Guid Id) =>
             Error.NotFound("PenelitianHibah.NotFound", $"Penelitian hibah with identifier {Id} not found");
+        public  static Error InvalidData() =>
+           Error.NotFound("PenelitianHibah.InvalidData", $"Hibah penelitian is not match existing data");
     }
 }

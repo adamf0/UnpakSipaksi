@@ -1,0 +1,23 @@
+{
+  "runtimeTarget": {
+    "name": ".NETCoreApp,Version=v8.0",
+    "signature": ""
+  },
+  "compilationOptions": {},
+  "targets": {
+    ".NETCoreApp,Version=v8.0": {
+      "UnpakSipaksi.Modules.Komponen.PublicApi/1.0.0": {
+        "runtime": {
+          "UnpakSipaksi.Modules.Komponen.PublicApi.dll": {}
+        }
+      }
+    }
+  },
+  "libraries": {
+    "UnpakSipaksi.Modules.Komponen.PublicApi/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    }
+  }
+}

@@ -33,7 +33,7 @@ namespace UnpakSipaksi.Modules.Referensi.Application.UpdateReferensi
 
             if (existingReferensi is null)
             {
-                Result.Failure(ReferensiErrors.NotFound(Guid.Parse(request.Uuid)));
+                return Result.Failure(ReferensiErrors.NotFound(Guid.Parse(request.Uuid)));
             }
 
             Result<Domain.Referensi.Referensi> asset = Domain.Referensi.Referensi.Update(existingReferensi!)

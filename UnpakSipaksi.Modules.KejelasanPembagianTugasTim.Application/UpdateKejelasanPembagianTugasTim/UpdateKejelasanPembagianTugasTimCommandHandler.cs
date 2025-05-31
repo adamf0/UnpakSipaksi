@@ -21,7 +21,7 @@ namespace UnpakSipaksi.Modules.KejelasanPembagianTugasTim.Application.UpdateKeje
 
             if (existingKejelasanPembagianTugasTim is null)
             {
-                Result.Failure(KejelasanPembagianTugasTimErrors.NotFound(Guid.Parse(request.Uuid)));
+                return Result.Failure(KejelasanPembagianTugasTimErrors.NotFound(Guid.Parse(request.Uuid)));
             }
 
             Result<Domain.KejelasanPembagianTugasTim.KejelasanPembagianTugasTim> asset = Domain.KejelasanPembagianTugasTim.KejelasanPembagianTugasTim.Update(existingKejelasanPembagianTugasTim!)
