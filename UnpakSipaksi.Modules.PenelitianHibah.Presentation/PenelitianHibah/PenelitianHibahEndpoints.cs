@@ -1,6 +1,4 @@
 ﻿using Microsoft.AspNetCore.Routing;
-using UnpakSipaksi.Modules.PenelitianHibah.Presentation.AllMemberDosen;
-using UnpakSipaksi.Modules.PenelitianHibah.Presentation.MemberDosen;
 
 namespace UnpakSipaksi.Modules.PenelitianHibah.Presentation.PenelitianHibah
 {
@@ -24,38 +22,44 @@ namespace UnpakSipaksi.Modules.PenelitianHibah.Presentation.PenelitianHibah
             DeleteMemberDosen.MapEndpoint(app);
             ApprovalMemberDosen.MapEndpoint(app);
 
-            //[PR] list
+            GetAllMemberNonDosen.MapEndpoint(app);
+            GetMemberNonDosen.MapEndpoint(app);
             CreateMemberNonDosen.MapEndpoint(app);
             UpdateMemberNonDosen.MapEndpoint(app);
             DeleteMemberNonDosen.MapEndpoint(app);
 
-            //[PR] list
+            GetAllMemberMahasiswa.MapEndpoint(app);
+            GetMemberMahasiswa.MapEndpoint(app);
             CreateMemberMahasiswa.MapEndpoint(app);
             UpdateMemberMahasiswa.MapEndpoint(app);
             DeleteMemberMahasiswa.MapEndpoint(app);
             UpdateMbkm.MapEndpoint(app);
 
-            //[PR] single data
+            GetSubstansiUsulan.MapEndpoint(app);
             CreateSubstansiUsulan.MapEndpoint(app);
             UpdateSubstansiUsulan.MapEndpoint(app);
             DeleteSubstansiUsulan.MapEndpoint(app);
 
-            //[PR] list
+            GetAllLuaran.MapEndpoint(app);
+            GetLuaran.MapEndpoint(app);
             CreateLuaran.MapEndpoint(app);
             UpdateLuaran.MapEndpoint(app);
             DeleteLuaran.MapEndpoint(app);
 
-            //[PR] list
+            GetAllRab.MapEndpoint(app);
+            GetRab.MapEndpoint(app);
             CreateRAB.MapEndpoint(app);
             UpdateRAB.MapEndpoint(app);
             DeleteRAB.MapEndpoint(app);
 
-            //[PR] list
+            GetAllDokumenPendukung.MapEndpoint(app);
+            GetDokumenPendukung.MapEndpoint(app);
             CreateDokumenPendukung.MapEndpoint(app);
             UpdateDokumenPendukung.MapEndpoint(app);
             DeleteDokumenPendukung.MapEndpoint(app);
 
-            //[PR] list
+            GetAllDokumenKontrak.MapEndpoint(app);
+            GetDokumenKontrak.MapEndpoint(app);
             CreateDokumenKontrak.MapEndpoint(app);
             UpdateDokumenKontrak.MapEndpoint(app);
             DeleteDokumenKontrak.MapEndpoint(app);

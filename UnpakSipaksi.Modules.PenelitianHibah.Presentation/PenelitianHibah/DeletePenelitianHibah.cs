@@ -12,10 +12,10 @@ namespace UnpakSipaksi.Modules.PenelitianHibah.Presentation.PenelitianHibah
     {
         public static void MapEndpoint(IEndpointRouteBuilder app)
         {
-            app.MapDelete("PenelitianHibah/{uuid}/{nidn}", async (string uuid, string nidn, ISender sender) =>
+            app.MapDelete("PenelitianHibah/{UuidPenelitianHibah}/{nidn}", async (string UuidPenelitianHibah, string nidn, ISender sender) =>
             {
                 Result result = await sender.Send(
-                    new DeletePenelitianHibahCommand(uuid, nidn)
+                    new DeletePenelitianHibahCommand(UuidPenelitianHibah, nidn)
                 );
 
                 return result.Match(() => Results.Ok(), ApiResults.Problem);

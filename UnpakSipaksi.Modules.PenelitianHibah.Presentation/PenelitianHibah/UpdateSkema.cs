@@ -4,8 +4,6 @@ using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Routing;
 using UnpakSipaksi.Common.Domain;
 using UnpakSipaksi.Common.Presentation.ApiResults;
-using UnpakSipaksi.Modules.PenelitianHibah.Application.UpdateLamaKegiatan;
-using UnpakSipaksi.Modules.PenelitianHibah.Application.UpdatePenelitianHibah;
 using UnpakSipaksi.Modules.PenelitianHibah.Application.UpdateSkema;
 
 namespace UnpakSipaksi.Modules.PenelitianHibah.Presentation.PenelitianHibah
@@ -17,10 +15,10 @@ namespace UnpakSipaksi.Modules.PenelitianHibah.Presentation.PenelitianHibah
             app.MapPut("PenelitianHibah/Skema", async (UpdateSkemaRequest request, ISender sender) =>
             {
                 Result result = await sender.Send(new UpdateSkemaCommand(
-                    request.Id,
-                    request.SkemaId,
+                    request.UuidPenelitianHibah,
+                    request.UuidSkema,
                     request.TKT,
-                    request.KategoriTKT
+                    request.UuidKategoriTKT
                 ));
 
                 return result.Match(() => Results.Ok(), ApiResults.Problem);
@@ -29,10 +27,10 @@ namespace UnpakSipaksi.Modules.PenelitianHibah.Presentation.PenelitianHibah
 
         internal sealed class UpdateSkemaRequest
         {
-            public string Id { get; set; }
-            public string SkemaId { get; set; }
+            public string UuidPenelitianHibah { get; set; }
+            public string UuidSkema { get; set; }
             public int TKT { get; set; }
-            public string KategoriTKT { get; set; }
+            public string UuidKategoriTKT { get; set; }
         }
     }
 }

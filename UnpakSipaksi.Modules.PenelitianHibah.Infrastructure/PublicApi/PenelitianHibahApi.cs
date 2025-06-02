@@ -15,7 +15,7 @@ namespace UnpakSipaksi.Modules.PenelitianHibah.Infrastructure.PublicApi
     {
         public async Task<PenelitianHibahResponseApi?> GetAsync(Guid PenelitianHibahUuid, CancellationToken cancellationToken = default)
         {
-            Result<PenelitianHibahDefaultResponse> result = await sender.Send(new GetPenelitianHibahDefaultQuery(PenelitianHibahUuid), cancellationToken);
+            Result<PenelitianHibahDefaultResponse> result = await sender.Send(new GetPenelitianHibahDefaultQuery(PenelitianHibahUuid.ToString()), cancellationToken);
 
             if (result.IsFailure)
             {

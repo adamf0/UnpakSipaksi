@@ -7,5 +7,5 @@ using UnpakSipaksi.Common.Application.Messaging;
 
 namespace UnpakSipaksi.Modules.PenelitianHibah.Application.GetPenelitianHibah
 {
-    public sealed record GetPenelitianHibahQuery(Guid PenelitianHibahUuid) : IQuery<PenelitianHibahResponse>;
+    public sealed record GetPenelitianHibahQuery(string PenelitianHibahUuid) : IQuery<PenelitianHibahResponse>;
 }

@@ -15,10 +15,10 @@ namespace UnpakSipaksi.Modules.PenelitianHibah.Presentation.PenelitianHibah
             app.MapPut("PenelitianHibah/RumpunIlmu", async (UpdateRumpunIlmuRequest request, ISender sender) =>
             {
                 Result result = await sender.Send(new UpdateRumpunIlmuCommand(
-                    request.Id,
-                    request.RumpunIlmu1,
-                    request.RumpunIlmu2,
-                    request.RumpunIlmu3
+                    request.UuidPenelitianHibah,
+                    request.UuidRumpunIlmu1,
+                    request.UuidRumpunIlmu2,
+                    request.UuidRumpunIlmu3
                 ));
 
                 return result.Match(() => Results.Ok(), ApiResults.Problem);
@@ -27,10 +27,10 @@ namespace UnpakSipaksi.Modules.PenelitianHibah.Presentation.PenelitianHibah
 
         internal sealed class UpdateRumpunIlmuRequest
         {
-            public string Id { get; set; }
-            public string? RumpunIlmu1 { get; set; }
-            public string? RumpunIlmu2 { get; set; }
-            public string? RumpunIlmu3 { get; set; }
+            public string UuidPenelitianHibah { get; set; }
+            public string? UuidRumpunIlmu1 { get; set; }
+            public string? UuidRumpunIlmu2 { get; set; }
+            public string? UuidRumpunIlmu3 { get; set; }
         }
     }
 }

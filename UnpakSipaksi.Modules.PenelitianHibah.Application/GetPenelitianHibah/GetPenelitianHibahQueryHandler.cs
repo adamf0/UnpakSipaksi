@@ -63,7 +63,11 @@ namespace UnpakSipaksi.Modules.PenelitianHibah.Application.GetPenelitianHibah
                     pr.nama AS NamaPrioritasRiset,
                 
                     pi.lama_kegiatan AS LamaKegiatan,
-                    pi.status AS Status,
+                    CASE 
+                        WHEN pi.status IS TRUE THEN 1
+                        WHEN pi.status IS FALSE THEN 0
+                        ELSE NULL
+                    END AS Status,
                     pi.type AS `Type` 
                 FROM penelitian_internal pi 
                 LEFT JOIN kategori_skema ks ON pi.id_skema = ks.id
@@ -80,10 +84,10 @@ namespace UnpakSipaksi.Modules.PenelitianHibah.Application.GetPenelitianHibah
 
             DefaultTypeMap.MatchNamesWithUnderscores = true;
 
-            var result = await connection.QuerySingleOrDefaultAsync(sql, new { Uuid = request.PenelitianHibahUuid });
+            var result = await connection.QuerySingleOrDefaultAsync(sql, new { Uuid = Guid.Parse(request.PenelitianHibahUuid) });
             if (result == null)
             {
-                return Result.Failure<PenelitianHibahResponse>(PenelitianHibahErrors.NotFound(request.PenelitianHibahUuid));
+                return Result.Failure<PenelitianHibahResponse>(PenelitianHibahErrors.NotFound(Guid.Parse(request.PenelitianHibahUuid)));
             }
 
             PenelitianHibahResponse data = new PenelitianHibahResponse

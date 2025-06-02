@@ -1,10 +1,3 @@
-C:\dev_net\UnpakSipaksi\UnpakSipaksi\obj\Debug\net8.0\UnpakSipaksi.csproj.AssemblyReference.cache
-C:\dev_net\UnpakSipaksi\UnpakSipaksi\obj\Debug\net8.0\UnpakSipaksi.GeneratedMSBuildEditorConfig.editorconfig
-C:\dev_net\UnpakSipaksi\UnpakSipaksi\obj\Debug\net8.0\UnpakSipaksi.AssemblyInfoInputs.cache
-C:\dev_net\UnpakSipaksi\UnpakSipaksi\obj\Debug\net8.0\UnpakSipaksi.AssemblyInfo.cs
-C:\dev_net\UnpakSipaksi\UnpakSipaksi\obj\Debug\net8.0\UnpakSipaksi.csproj.CoreCompileInputs.cache
-C:\dev_net\UnpakSipaksi\UnpakSipaksi\obj\Debug\net8.0\UnpakSipaksi.MvcApplicationPartsAssemblyInfo.cache
-C:\dev_net\UnpakSipaksi\UnpakSipaksi\obj\Debug\net8.0\UnpakSipaksi.sourcelink.json
 C:\dev_net\UnpakSipaksi\UnpakSipaksi\bin\Debug\net8.0\appsettings.Development.json
 C:\dev_net\UnpakSipaksi\UnpakSipaksi\bin\Debug\net8.0\appsettings.json
 C:\dev_net\UnpakSipaksi\UnpakSipaksi\bin\Debug\net8.0\UnpakSipaksi.staticwebassets.runtime.json
@@ -751,6 +744,14 @@ C:\dev_net\UnpakSipaksi\UnpakSipaksi\bin\Debug\net8.0\UnpakSipaksi.Modules.Urgen
 C:\dev_net\UnpakSipaksi\UnpakSipaksi\bin\Debug\net8.0\UnpakSipaksi.Modules.VideoKegiatan.Domain.pdb
 C:\dev_net\UnpakSipaksi\UnpakSipaksi\bin\Debug\net8.0\UnpakSipaksi.Modules.VideoKegiatan.Presentation.pdb
 C:\dev_net\UnpakSipaksi\UnpakSipaksi\bin\Debug\net8.0\UnpakSipaksi.Modules.VideoKegiatan.PublicApi.pdb
+C:\dev_net\UnpakSipaksi\UnpakSipaksi\obj\Debug\net8.0\UnpakSipaksi.csproj.AssemblyReference.cache
+C:\dev_net\UnpakSipaksi\UnpakSipaksi\obj\Debug\net8.0\UnpakSipaksi.GeneratedMSBuildEditorConfig.editorconfig
+C:\dev_net\UnpakSipaksi\UnpakSipaksi\obj\Debug\net8.0\UnpakSipaksi.AssemblyInfoInputs.cache
+C:\dev_net\UnpakSipaksi\UnpakSipaksi\obj\Debug\net8.0\UnpakSipaksi.AssemblyInfo.cs
+C:\dev_net\UnpakSipaksi\UnpakSipaksi\obj\Debug\net8.0\UnpakSipaksi.csproj.CoreCompileInputs.cache
+C:\dev_net\UnpakSipaksi\UnpakSipaksi\obj\Debug\net8.0\UnpakSipaksi.MvcApplicationPartsAssemblyInfo.cs
+C:\dev_net\UnpakSipaksi\UnpakSipaksi\obj\Debug\net8.0\UnpakSipaksi.MvcApplicationPartsAssemblyInfo.cache
+C:\dev_net\UnpakSipaksi\UnpakSipaksi\obj\Debug\net8.0\UnpakSipaksi.sourcelink.json
 C:\dev_net\UnpakSipaksi\UnpakSipaksi\obj\Debug\net8.0\staticwebassets.build.json
 C:\dev_net\UnpakSipaksi\UnpakSipaksi\obj\Debug\net8.0\staticwebassets.development.json
 C:\dev_net\UnpakSipaksi\UnpakSipaksi\obj\Debug\net8.0\staticwebassets\msbuild.UnpakSipaksi.Microsoft.AspNetCore.StaticWebAssets.props

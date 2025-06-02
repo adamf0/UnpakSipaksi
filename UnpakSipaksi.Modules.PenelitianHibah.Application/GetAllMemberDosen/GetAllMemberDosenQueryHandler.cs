@@ -21,14 +21,19 @@ namespace UnpakSipaksi.Modules.PenelitianHibah.Application.GetAllMemberDosen
                 CAST(NULLIF(md.uuid, '') AS VARCHAR(36)) AS Uuid,
                 CAST(NULLIF(pi.uuid, '') AS VARCHAR(36)) AS UuidPenelitianHibah,
                 md.NIDN AS NIDN,
-                md.status AS Status 
+                CASE 
+                    WHEN md.status IS TRUE THEN 1
+                    WHEN md.status IS FALSE THEN 0
+                    ELSE NULL
+                END AS Status
             FROM penelitian_internal_anggota_dosen md 
-            LEFT JOIN penelitian_internal pi ON md.pdp = pi.id
+            LEFT JOIN penelitian_internal pi ON md.id_pdp = pi.id 
+            WHERE pi.uuid = @UuidPenelitianHibah
             """;
 
             DefaultTypeMap.MatchNamesWithUnderscores = true;
 
-            var result = await connection.QueryAsync<MemberDosenResponse>(sql);
+            var result = await connection.QueryAsync<MemberDosenResponse>(sql, new { UuidPenelitianHibah = request.UuidPenelitianHibah});
 
             if (result == null || !result.Any())
             {

@@ -62,7 +62,11 @@ namespace UnpakSipaksi.Modules.PenelitianHibah.Application.GetAllPenelitianHibah
                 pr.nama AS NamaPrioritasRiset,
             
                 pi.lama_kegiatan AS LamaKegiatan,
-                pi.status AS Status,
+                CASE 
+                    WHEN pi.status IS TRUE THEN 1
+                    WHEN pi.status IS FALSE THEN 0
+                    ELSE NULL
+                END AS Status,
                 pi.type AS `Type` 
             FROM penelitian_internal pi 
             LEFT JOIN kategori_skema ks ON pi.id_skema = ks.id

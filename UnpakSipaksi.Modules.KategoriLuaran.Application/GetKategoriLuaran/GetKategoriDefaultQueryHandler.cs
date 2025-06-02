@@ -23,7 +23,7 @@ namespace UnpakSipaksi.Modules.KategoriLuaran.Application.GetKategoriLuaran
                      CAST(NULLIF(pik.uuid, '') AS VARCHAR(36)) as uuidKategori,
                      pik.id AS KategoriId
                      pikl.nama as Nama,
-                     pikl.status as Status
+                     pikl.status AS Status
                  FROM penelitian_internal_kategori_luaran pikl
                  LEFT JOIN penelitian_internal_kategori pik ON pikl.id_pdp_kategori = pik.id
                  WHERE pikl.uuid = @Uuid

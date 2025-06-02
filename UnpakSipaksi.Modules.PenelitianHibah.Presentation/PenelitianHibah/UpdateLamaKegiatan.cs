@@ -5,7 +5,6 @@ using Microsoft.AspNetCore.Routing;
 using UnpakSipaksi.Common.Domain;
 using UnpakSipaksi.Common.Presentation.ApiResults;
 using UnpakSipaksi.Modules.PenelitianHibah.Application.UpdateLamaKegiatan;
-using UnpakSipaksi.Modules.PenelitianHibah.Application.UpdatePenelitianHibah;
 
 namespace UnpakSipaksi.Modules.PenelitianHibah.Presentation.PenelitianHibah
 {
@@ -16,7 +15,7 @@ namespace UnpakSipaksi.Modules.PenelitianHibah.Presentation.PenelitianHibah
             app.MapPut("PenelitianHibah/LamaKegiatan", async (UpdateLamaKegiatanRequest request, ISender sender) =>
             {
                 Result result = await sender.Send(new UpdateMemberDosenCommand(
-                    request.Uuid,
+                    request.UuidPenelitianHibah,
                     request.LamaKegiatan
                 ));
 
@@ -26,7 +25,7 @@ namespace UnpakSipaksi.Modules.PenelitianHibah.Presentation.PenelitianHibah
 
         internal sealed class UpdateLamaKegiatanRequest
         {
-            public string Uuid { get; set; }
+            public string UuidPenelitianHibah { get; set; }
             public int LamaKegiatan { get; set; }
         }
     }

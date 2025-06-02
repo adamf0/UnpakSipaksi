@@ -1,9 +1,3 @@
-C:\dev_net\UnpakSipaksi\UnpakSipaksi.Modules.PenelitianHibah.Application\obj\Debug\net8.0\UnpakSipaksi.Modules.PenelitianHibah.Application.csproj.AssemblyReference.cache
-C:\dev_net\UnpakSipaksi\UnpakSipaksi.Modules.PenelitianHibah.Application\obj\Debug\net8.0\UnpakSipaksi.Modules.PenelitianHibah.Application.GeneratedMSBuildEditorConfig.editorconfig
-C:\dev_net\UnpakSipaksi\UnpakSipaksi.Modules.PenelitianHibah.Application\obj\Debug\net8.0\UnpakSipaksi.Modules.PenelitianHibah.Application.AssemblyInfoInputs.cache
-C:\dev_net\UnpakSipaksi\UnpakSipaksi.Modules.PenelitianHibah.Application\obj\Debug\net8.0\UnpakSipaksi.Modules.PenelitianHibah.Application.AssemblyInfo.cs
-C:\dev_net\UnpakSipaksi\UnpakSipaksi.Modules.PenelitianHibah.Application\obj\Debug\net8.0\UnpakSipaksi.Modules.PenelitianHibah.Application.csproj.CoreCompileInputs.cache
-C:\dev_net\UnpakSipaksi\UnpakSipaksi.Modules.PenelitianHibah.Application\obj\Debug\net8.0\UnpakSipaksi.Modules.PenelitianHibah.Application.sourcelink.json
 C:\dev_net\UnpakSipaksi\UnpakSipaksi.Modules.PenelitianHibah.Application\bin\Debug\net8.0\UnpakSipaksi.Modules.PenelitianHibah.Application.deps.json
 C:\dev_net\UnpakSipaksi\UnpakSipaksi.Modules.PenelitianHibah.Application\bin\Debug\net8.0\UnpakSipaksi.Modules.PenelitianHibah.Application.dll
 C:\dev_net\UnpakSipaksi\UnpakSipaksi.Modules.PenelitianHibah.Application\bin\Debug\net8.0\UnpakSipaksi.Modules.PenelitianHibah.Application.pdb
@@ -47,6 +41,12 @@ C:\dev_net\UnpakSipaksi\UnpakSipaksi.Modules.PenelitianHibah.Application\bin\Deb
 C:\dev_net\UnpakSipaksi\UnpakSipaksi.Modules.PenelitianHibah.Application\bin\Debug\net8.0\UnpakSipaksi.Modules.TemaPenelitian.PublicApi.pdb
 C:\dev_net\UnpakSipaksi\UnpakSipaksi.Modules.PenelitianHibah.Application\bin\Debug\net8.0\UnpakSipaksi.Modules.TopikPenelitian.PublicApi.pdb
 C:\dev_net\UnpakSipaksi\UnpakSipaksi.Modules.PenelitianHibah.Application\bin\Debug\net8.0\UnpakSipaksi.Modules.Komponen.Domain.pdb
+C:\dev_net\UnpakSipaksi\UnpakSipaksi.Modules.PenelitianHibah.Application\obj\Debug\net8.0\UnpakSipaksi.Modules.PenelitianHibah.Application.csproj.AssemblyReference.cache
+C:\dev_net\UnpakSipaksi\UnpakSipaksi.Modules.PenelitianHibah.Application\obj\Debug\net8.0\UnpakSipaksi.Modules.PenelitianHibah.Application.GeneratedMSBuildEditorConfig.editorconfig
+C:\dev_net\UnpakSipaksi\UnpakSipaksi.Modules.PenelitianHibah.Application\obj\Debug\net8.0\UnpakSipaksi.Modules.PenelitianHibah.Application.AssemblyInfoInputs.cache
+C:\dev_net\UnpakSipaksi\UnpakSipaksi.Modules.PenelitianHibah.Application\obj\Debug\net8.0\UnpakSipaksi.Modules.PenelitianHibah.Application.AssemblyInfo.cs
+C:\dev_net\UnpakSipaksi\UnpakSipaksi.Modules.PenelitianHibah.Application\obj\Debug\net8.0\UnpakSipaksi.Modules.PenelitianHibah.Application.csproj.CoreCompileInputs.cache
+C:\dev_net\UnpakSipaksi\UnpakSipaksi.Modules.PenelitianHibah.Application\obj\Debug\net8.0\UnpakSipaksi.Modules.PenelitianHibah.Application.sourcelink.json
 C:\dev_net\UnpakSipaksi\UnpakSipaksi.Modules.PenelitianHibah.Application\obj\Debug\net8.0\UnpakSip.370363F2.Up2Date
 C:\dev_net\UnpakSipaksi\UnpakSipaksi.Modules.PenelitianHibah.Application\obj\Debug\net8.0\UnpakSipaksi.Modules.PenelitianHibah.Application.dll
 C:\dev_net\UnpakSipaksi\UnpakSipaksi.Modules.PenelitianHibah.Application\obj\Debug\net8.0\refint\UnpakSipaksi.Modules.PenelitianHibah.Application.dll

@@ -12,9 +12,9 @@ namespace UnpakSipaksi.Modules.PenelitianHibah.Presentation.PenelitianHibah
     {
         public static void MapEndpoint(IEndpointRouteBuilder app)
         {
-            app.MapGet("PenelitianHibah/{id}", async (Guid id, ISender sender) =>
+            app.MapGet("PenelitianHibah/{UuidPenelitianHibah}", async (string UuidPenelitianHibah, ISender sender) =>
             {
-                Result<PenelitianHibahResponse> result = await sender.Send(new GetPenelitianHibahQuery(id));
+                Result<PenelitianHibahResponse> result = await sender.Send(new GetPenelitianHibahQuery(UuidPenelitianHibah));
 
                 return result.Match(Results.Ok, ApiResults.Problem);
             }).WithTags(Tags.PenelitianHibah);
