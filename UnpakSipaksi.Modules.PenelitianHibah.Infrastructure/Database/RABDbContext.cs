@@ -31,6 +31,9 @@ namespace UnpakSipaksi.Modules.PenelitianHibah.Infrastructure.Database
                       .HasColumnType("VARCHAR(36)")
                       .HasConversion(guidConverter);
 
+                entity.Property(e => e.PenelitianHibahId)
+                      .HasColumnName("id_pdp");
+
                 entity.Property(e => e.KelompokRabId) //null
                       .HasColumnName("kelompok_rab");
 

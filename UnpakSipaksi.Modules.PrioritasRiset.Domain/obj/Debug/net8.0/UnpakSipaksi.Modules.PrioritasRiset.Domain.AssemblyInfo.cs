@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("UnpakSipaksi.Modules.PrioritasRiset.Domain")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+cad38e19beab8421d2a5b64a5ab004f8fe7db9b8")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+3e306e9869eaabad02fbc278de2e4c8908b938c8")]
 [assembly: System.Reflection.AssemblyProductAttribute("UnpakSipaksi.Modules.PrioritasRiset.Domain")]
 [assembly: System.Reflection.AssemblyTitleAttribute("UnpakSipaksi.Modules.PrioritasRiset.Domain")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

@@ -8,7 +8,7 @@ namespace UnpakSipaksi.Modules.PenelitianHibah.Application.GetLuaran
 {
     public sealed record KategoriResponse
     {
-        public string Uuid { get; set; }
-        public string Kategori { get; set; }
+        public string? Uuid { get; set; }
+        public string? Kategori { get; set; }
     }
 }

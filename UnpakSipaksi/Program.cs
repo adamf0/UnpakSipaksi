@@ -64,6 +64,9 @@ using UnpakSipaksi.Modules.SubstansiBobot.Infrastructure;
 using UnpakSipaksi.Modules.PenelitianHibah.Infrastructure;
 using UnpakSipaksi.Modules.Kategori.Infrastructure;
 using UnpakSipaksi.Modules.KategoriLuaran.Infrastructure;
+using UnpakSipaksi.Modules.JenisLuaran.Infrastructure;
+using UnpakSipaksi.Modules.IndikatorCapaian.Infrastructure;
+using UnpakSipaksi.Modules.PenelitianPkm.Infrastructure;
 
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.ResponseCompression;
@@ -159,6 +162,9 @@ builder.Services.AddApplication([
     UnpakSipaksi.Modules.PenelitianHibah.Application.AssemblyReference.Assembly,
     UnpakSipaksi.Modules.Kategori.Application.AssemblyReference.Assembly,
     UnpakSipaksi.Modules.KategoriLuaran.Application.AssemblyReference.Assembly,
+    UnpakSipaksi.Modules.JenisLuaran.Application.AssemblyReference.Assembly,
+    UnpakSipaksi.Modules.IndikatorCapaian.Application.AssemblyReference.Assembly,
+    UnpakSipaksi.Modules.PenelitianPkm.Application.AssemblyReference.Assembly,
 ]);
 
 builder.Services.AddAntiforgery(options =>
@@ -231,6 +237,9 @@ builder.Services.AddInsentifModule(builder.Configuration);
 builder.Services.AddPenelitianHibahModule(builder.Configuration);
 builder.Services.AddKategoriModule(builder.Configuration);
 builder.Services.AddKategoriLuaranModule(builder.Configuration);
+builder.Services.AddJenisLuaranModule(builder.Configuration);
+builder.Services.AddIndikatorCapaianModule(builder.Configuration);
+builder.Services.AddPenelitianPkmModule(builder.Configuration);
 
 builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen();
@@ -336,6 +345,9 @@ InsentifModule.MapEndpoints(app);
 PenelitianHibahModule.MapEndpoints(app);
 KategoriModule.MapEndpoints(app);
 KategoriLuaranModule.MapEndpoints(app);
+JenisLuaranModule.MapEndpoints(app);
+IndikatorCapaianModule.MapEndpoints(app);
+PenelitianPkmModule.MapEndpoints(app);
 
 if (app.Environment.IsDevelopment())
 {

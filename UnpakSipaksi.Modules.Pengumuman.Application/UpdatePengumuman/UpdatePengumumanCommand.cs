@@ -3,7 +3,7 @@
 namespace UnpakSipaksi.Modules.Pengumuman.Application.UpdatePengumuman
 {
     public sealed record UpdatePengumumanCommand(
-        Guid Uuid,
+        string Uuid,
         string Pesan,
         string? File,
         string? Url,

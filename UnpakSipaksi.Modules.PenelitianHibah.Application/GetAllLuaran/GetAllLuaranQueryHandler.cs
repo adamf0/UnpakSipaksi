@@ -51,13 +51,13 @@ namespace UnpakSipaksi.Modules.PenelitianHibah.Application.GetAllLuaran
                 UuidPenelitianHibah = row.UuidPenelitianHibah?.ToString(),
                 Kategori = (string.IsNullOrEmpty(row?.UuidKategori) && string.IsNullOrEmpty(row?.Kategori)) ? null : new KategoriResponse
                 {
-                    Uuid = row.UuidKategori.ToString(),
-                    Kategori = row.Kategori.ToString()
+                    Uuid = row.UuidKategori?.ToString(),
+                    Kategori = row.Kategori?.ToString()
                 },
                 KategoriLuaran = (string.IsNullOrEmpty(row?.UuidKategoriLuaran) && string.IsNullOrEmpty(row?.KategoriLuaran)) ? null : new KategoriLuaranResponse
                 {
-                    Uuid = row.UuidKategoriLuaran.ToString(),
-                    KategoriLuaran = row.KategoriLuaran.ToString()
+                    Uuid = row.UuidKategoriLuaran?.ToString(),
+                    KategoriLuaran = row.KategoriLuaran?.ToString()
                 }
             });
 

@@ -34,11 +34,11 @@ namespace UnpakSipaksi.Modules.Pengumuman.Application.UpdatePengumuman
 
         public async Task<Result> Handle(UpdatePengumumanCommand request, CancellationToken cancellationToken)
         {
-            Domain.Pengumuman.Pengumuman? existingPengumuman = await PengumumanRepository.GetAsync(request.Uuid, cancellationToken);
+            Domain.Pengumuman.Pengumuman? existingPengumuman = await PengumumanRepository.GetAsync(Guid.Parse(request.Uuid), cancellationToken);
 
             if (existingPengumuman is null)
             {
-                return Result.Failure(PengumumanErrors.NotFound(request.Uuid));
+                return Result.Failure(PengumumanErrors.NotFound(Guid.Parse(request.Uuid)));
             }
 
             var expiredTypeParsed = request.TypeExpired.ToEnumFromString<ExpiredType>();

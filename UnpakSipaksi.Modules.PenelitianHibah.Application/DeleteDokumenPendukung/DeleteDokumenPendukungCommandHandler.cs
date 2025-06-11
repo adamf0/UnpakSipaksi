@@ -17,7 +17,6 @@ namespace UnpakSipaksi.Modules.PenelitianHibah.Application.DeleteDokumenPendukun
     IUnitOfWorkDokumenPendukung unitOfWork)
     : ICommandHandler<DeleteDokumenPendukungCommand>
     {
-        //[PR] ini masih 2 query, seharusnya jadi 1 query atau mungkin ini benar sisanya salah. i dont know
         public async Task<Result> Handle(DeleteDokumenPendukungCommand request, CancellationToken cancellationToken)
         {
             Domain.DokumenPendukung.DokumenPendukung? existingDokumenPendukung = await dokumenPendukungRepository.GetAsync(Guid.Parse(request.Uuid), cancellationToken);

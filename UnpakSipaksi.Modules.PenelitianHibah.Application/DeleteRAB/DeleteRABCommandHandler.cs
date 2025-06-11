@@ -17,7 +17,6 @@ namespace UnpakSipaksi.Modules.PenelitianHibah.Application.DeleteRAB
     IUnitOfWorkRAB unitOfWork)
     : ICommandHandler<DeleteRABCommand>
     {
-        //[PR] ini masih 2 query, seharusnya jadi 1 query atau mungkin ini benar sisanya salah. i dont know
         public async Task<Result> Handle(DeleteRABCommand request, CancellationToken cancellationToken)
         {
             Domain.RAB.RAB? existingRAB = await rabRepository.GetAsync(Guid.Parse(request.Uuid), cancellationToken);

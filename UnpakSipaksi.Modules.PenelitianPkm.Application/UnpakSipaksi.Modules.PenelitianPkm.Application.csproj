@@ -1,9 +1,35 @@
 ﻿<Project Sdk="Microsoft.NET.Sdk">
 
-  <PropertyGroup>
-    <TargetFramework>net8.0</TargetFramework>
-    <ImplicitUsings>enable</ImplicitUsings>
-    <Nullable>enable</Nullable>
-  </PropertyGroup>
+	<PropertyGroup>
+		<TargetFramework>net8.0</TargetFramework>
+		<ImplicitUsings>enable</ImplicitUsings>
+		<Nullable>enable</Nullable>
+	</PropertyGroup>
+
+	<Target Name="DisableNullableForVisualStudioBuild" BeforeTargets="CoreCompile" Condition="'$(BuildingInsideVisualStudio)' == 'True' And '$(BuildingProject)' == 'True' And '$(Configuration)' == 'Debug'">
+		<PropertyGroup>
+			<Nullable>disable</Nullable>
+		</PropertyGroup>
+	</Target>
+
+	<ItemGroup>
+		<PackageReference Include="Dapper" Version="2.1.35" />
+		<PackageReference Include="MediatR" Version="12.4.1" />
+	</ItemGroup>
+
+	<ItemGroup>
+		<ProjectReference Include="..\UnpakSipaksi.Common.Application\UnpakSipaksi.Common.Application.csproj" />
+		<ProjectReference Include="..\UnpakSipaksi.Common.Domain\UnpakSipaksi.Common.Domain.csproj" />
+		<ProjectReference Include="..\UnpakSipaksi.Modules.IndikatorCapaian.PublicApi\UnpakSipaksi.Modules.IndikatorCapaian.PublicApi.csproj" />
+		<ProjectReference Include="..\UnpakSipaksi.Modules.JenisLuaran.PublicApi\UnpakSipaksi.Modules.JenisLuaran.PublicApi.csproj" />
+		<ProjectReference Include="..\UnpakSipaksi.Modules.KelompokRab.PublicApi\UnpakSipaksi.Modules.KelompokRab.PublicApi.csproj" />
+		<ProjectReference Include="..\UnpakSipaksi.Modules.Komponen.PublicApi\UnpakSipaksi.Modules.Komponen.PublicApi.csproj" />
+		<ProjectReference Include="..\UnpakSipaksi.Modules.PenelitianPkm.Domain\UnpakSipaksi.Modules.PenelitianPkm.Domain.csproj" />
+		<ProjectReference Include="..\UnpakSipaksi.Modules.PenelitianPkm.PublicApi\UnpakSipaksi.Modules.PenelitianPkm.PublicApi.csproj" />
+		<ProjectReference Include="..\UnpakSipaksi.Modules.RumpunIlmu1.PublicApi\UnpakSipaksi.Modules.RumpunIlmu1.PublicApi.csproj" />
+		<ProjectReference Include="..\UnpakSipaksi.Modules.RumpunIlmu2.PublicApi\UnpakSipaksi.Modules.RumpunIlmu2.PublicApi.csproj" />
+		<ProjectReference Include="..\UnpakSipaksi.Modules.RumpunIlmu3.PublicApi\UnpakSipaksi.Modules.RumpunIlmu3.PublicApi.csproj" />
+		<ProjectReference Include="..\UnpakSipaksi.Modules.Satuan.PublicApi\UnpakSipaksi.Modules.Satuan.PublicApi.csproj" />
+	</ItemGroup>
 
 </Project>

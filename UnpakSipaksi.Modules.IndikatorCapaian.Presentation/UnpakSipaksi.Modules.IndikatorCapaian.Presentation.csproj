@@ -1,0 +1,25 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+	<PropertyGroup>
+		<TargetFramework>net8.0</TargetFramework>
+		<ImplicitUsings>enable</ImplicitUsings>
+		<Nullable>enable</Nullable>
+	</PropertyGroup>
+
+	<Target Name="DisableNullableForVisualStudioBuild" BeforeTargets="CoreCompile" Condition="'$(BuildingInsideVisualStudio)' == 'True' And '$(BuildingProject)' == 'True' And '$(Configuration)' == 'Debug'">
+		<PropertyGroup>
+			<Nullable>disable</Nullable>
+		</PropertyGroup>
+	</Target>
+
+	<ItemGroup>
+		<FrameworkReference Include="Microsoft.AspNetCore.App" />
+	</ItemGroup>
+
+	<ItemGroup>
+		<ProjectReference Include="..\UnpakSipaksi.Common.Domain\UnpakSipaksi.Common.Domain.csproj" />
+		<ProjectReference Include="..\UnpakSipaksi.Common.Presentation\UnpakSipaksi.Common.Presentation.csproj" />
+		<ProjectReference Include="..\UnpakSipaksi.Modules.IndikatorCapaian.Application\UnpakSipaksi.Modules.IndikatorCapaian.Application.csproj" />
+	</ItemGroup>
+
+</Project>

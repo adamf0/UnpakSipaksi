@@ -18,7 +18,6 @@ namespace UnpakSipaksi.Modules.PenelitianHibah.Application.DeleteLuaran
     IUnitOfWorkLuaran unitOfWork)
     : ICommandHandler<DeleteLuaranCommand>
     {
-        //[PR] ini masih 2 query, seharusnya jadi 1 query atau mungkin ini benar sisanya salah. i dont know
         public async Task<Result> Handle(DeleteLuaranCommand request, CancellationToken cancellationToken)
         {
             Domain.Luaran.Luaran? existingLuaran = await luaranRepository.GetAsync(Guid.Parse(request.Uuid), cancellationToken);
