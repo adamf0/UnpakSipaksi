@@ -1,10 +1,3 @@
-C:\dev_net\UnpakSipaksi\UnpakSipaksi\obj\Debug\net8.0\UnpakSipaksi.csproj.AssemblyReference.cache
-C:\dev_net\UnpakSipaksi\UnpakSipaksi\obj\Debug\net8.0\UnpakSipaksi.GeneratedMSBuildEditorConfig.editorconfig
-C:\dev_net\UnpakSipaksi\UnpakSipaksi\obj\Debug\net8.0\UnpakSipaksi.AssemblyInfoInputs.cache
-C:\dev_net\UnpakSipaksi\UnpakSipaksi\obj\Debug\net8.0\UnpakSipaksi.AssemblyInfo.cs
-C:\dev_net\UnpakSipaksi\UnpakSipaksi\obj\Debug\net8.0\UnpakSipaksi.csproj.CoreCompileInputs.cache
-C:\dev_net\UnpakSipaksi\UnpakSipaksi\obj\Debug\net8.0\UnpakSipaksi.MvcApplicationPartsAssemblyInfo.cache
-C:\dev_net\UnpakSipaksi\UnpakSipaksi\obj\Debug\net8.0\UnpakSipaksi.sourcelink.json
 C:\dev_net\UnpakSipaksi\UnpakSipaksi\bin\Debug\net8.0\appsettings.Development.json
 C:\dev_net\UnpakSipaksi\UnpakSipaksi\bin\Debug\net8.0\appsettings.json
 C:\dev_net\UnpakSipaksi\UnpakSipaksi\bin\Debug\net8.0\UnpakSipaksi.staticwebassets.runtime.json
@@ -170,6 +163,7 @@ C:\dev_net\UnpakSipaksi\UnpakSipaksi\bin\Debug\net8.0\UnpakSipaksi.Modules.Fokus
 C:\dev_net\UnpakSipaksi\UnpakSipaksi\bin\Debug\net8.0\UnpakSipaksi.Modules.FokusPengabdian.Domain.dll
 C:\dev_net\UnpakSipaksi\UnpakSipaksi\bin\Debug\net8.0\UnpakSipaksi.Modules.FokusPengabdian.Infrastructure.dll
 C:\dev_net\UnpakSipaksi\UnpakSipaksi\bin\Debug\net8.0\UnpakSipaksi.Modules.FokusPengabdian.Presentation.dll
+C:\dev_net\UnpakSipaksi\UnpakSipaksi\bin\Debug\net8.0\UnpakSipaksi.Modules.FokusPengabdian.PublicApi.dll
 C:\dev_net\UnpakSipaksi\UnpakSipaksi\bin\Debug\net8.0\UnpakSipaksi.Modules.IndikatorCapaian.Application.dll
 C:\dev_net\UnpakSipaksi\UnpakSipaksi\bin\Debug\net8.0\UnpakSipaksi.Modules.IndikatorCapaian.Domain.dll
 C:\dev_net\UnpakSipaksi\UnpakSipaksi\bin\Debug\net8.0\UnpakSipaksi.Modules.IndikatorCapaian.Infrastructure.dll
@@ -217,6 +211,7 @@ C:\dev_net\UnpakSipaksi\UnpakSipaksi\bin\Debug\net8.0\UnpakSipaksi.Modules.Kateg
 C:\dev_net\UnpakSipaksi\UnpakSipaksi\bin\Debug\net8.0\UnpakSipaksi.Modules.KategoriProgramPengabdian.Domain.dll
 C:\dev_net\UnpakSipaksi\UnpakSipaksi\bin\Debug\net8.0\UnpakSipaksi.Modules.KategoriProgramPengabdian.Infrastructure.dll
 C:\dev_net\UnpakSipaksi\UnpakSipaksi\bin\Debug\net8.0\UnpakSipaksi.Modules.KategoriProgramPengabdian.Presentation.dll
+C:\dev_net\UnpakSipaksi\UnpakSipaksi\bin\Debug\net8.0\UnpakSipaksi.Modules.KategoriProgramPengabdian.PublicApi.dll
 C:\dev_net\UnpakSipaksi\UnpakSipaksi\bin\Debug\net8.0\UnpakSipaksi.Modules.KategoriSkema.Application.dll
 C:\dev_net\UnpakSipaksi\UnpakSipaksi\bin\Debug\net8.0\UnpakSipaksi.Modules.KategoriSkema.Domain.dll
 C:\dev_net\UnpakSipaksi\UnpakSipaksi\bin\Debug\net8.0\UnpakSipaksi.Modules.KategoriSkema.Infrastructure.dll
@@ -400,6 +395,7 @@ C:\dev_net\UnpakSipaksi\UnpakSipaksi\bin\Debug\net8.0\UnpakSipaksi.Modules.Rirn.
 C:\dev_net\UnpakSipaksi\UnpakSipaksi\bin\Debug\net8.0\UnpakSipaksi.Modules.Rirn.Domain.dll
 C:\dev_net\UnpakSipaksi\UnpakSipaksi\bin\Debug\net8.0\UnpakSipaksi.Modules.Rirn.Infrastructure.dll
 C:\dev_net\UnpakSipaksi\UnpakSipaksi\bin\Debug\net8.0\UnpakSipaksi.Modules.Rirn.Presentation.dll
+C:\dev_net\UnpakSipaksi\UnpakSipaksi\bin\Debug\net8.0\UnpakSipaksi.Modules.Rirn.PublicApi.dll
 C:\dev_net\UnpakSipaksi\UnpakSipaksi\bin\Debug\net8.0\UnpakSipaksi.Modules.Roadmap.Application.dll
 C:\dev_net\UnpakSipaksi\UnpakSipaksi\bin\Debug\net8.0\UnpakSipaksi.Modules.Roadmap.Domain.dll
 C:\dev_net\UnpakSipaksi\UnpakSipaksi\bin\Debug\net8.0\UnpakSipaksi.Modules.Roadmap.Infrastructure.dll
@@ -611,6 +607,7 @@ C:\dev_net\UnpakSipaksi\UnpakSipaksi\bin\Debug\net8.0\UnpakSipaksi.Modules.Fokus
 C:\dev_net\UnpakSipaksi\UnpakSipaksi\bin\Debug\net8.0\UnpakSipaksi.Modules.FokusPenelitian.PublicApi.pdb
 C:\dev_net\UnpakSipaksi\UnpakSipaksi\bin\Debug\net8.0\UnpakSipaksi.Modules.FokusPengabdian.Domain.pdb
 C:\dev_net\UnpakSipaksi\UnpakSipaksi\bin\Debug\net8.0\UnpakSipaksi.Modules.FokusPengabdian.Presentation.pdb
+C:\dev_net\UnpakSipaksi\UnpakSipaksi\bin\Debug\net8.0\UnpakSipaksi.Modules.FokusPengabdian.PublicApi.pdb
 C:\dev_net\UnpakSipaksi\UnpakSipaksi\bin\Debug\net8.0\UnpakSipaksi.Modules.IndikatorCapaian.Domain.pdb
 C:\dev_net\UnpakSipaksi\UnpakSipaksi\bin\Debug\net8.0\UnpakSipaksi.Modules.IndikatorCapaian.Presentation.pdb
 C:\dev_net\UnpakSipaksi\UnpakSipaksi\bin\Debug\net8.0\UnpakSipaksi.Modules.IndikatorCapaian.PublicApi.pdb
@@ -638,6 +635,7 @@ C:\dev_net\UnpakSipaksi\UnpakSipaksi\bin\Debug\net8.0\UnpakSipaksi.Modules.Kateg
 C:\dev_net\UnpakSipaksi\UnpakSipaksi\bin\Debug\net8.0\UnpakSipaksi.Modules.KategoriMitraPenelitian.Presentation.pdb
 C:\dev_net\UnpakSipaksi\UnpakSipaksi\bin\Debug\net8.0\UnpakSipaksi.Modules.KategoriProgramPengabdian.Domain.pdb
 C:\dev_net\UnpakSipaksi\UnpakSipaksi\bin\Debug\net8.0\UnpakSipaksi.Modules.KategoriProgramPengabdian.Presentation.pdb
+C:\dev_net\UnpakSipaksi\UnpakSipaksi\bin\Debug\net8.0\UnpakSipaksi.Modules.KategoriProgramPengabdian.PublicApi.pdb
 C:\dev_net\UnpakSipaksi\UnpakSipaksi\bin\Debug\net8.0\UnpakSipaksi.Modules.KategoriSkema.Domain.pdb
 C:\dev_net\UnpakSipaksi\UnpakSipaksi\bin\Debug\net8.0\UnpakSipaksi.Modules.KategoriSkema.Presentation.pdb
 C:\dev_net\UnpakSipaksi\UnpakSipaksi\bin\Debug\net8.0\UnpakSipaksi.Modules.KategoriSkema.PublicApi.pdb
@@ -746,6 +744,7 @@ C:\dev_net\UnpakSipaksi\UnpakSipaksi\bin\Debug\net8.0\UnpakSipaksi.Modules.Relev
 C:\dev_net\UnpakSipaksi\UnpakSipaksi\bin\Debug\net8.0\UnpakSipaksi.Modules.RelevansiProdukKepentinganNasional.PublicApi.pdb
 C:\dev_net\UnpakSipaksi\UnpakSipaksi\bin\Debug\net8.0\UnpakSipaksi.Modules.Rirn.Domain.pdb
 C:\dev_net\UnpakSipaksi\UnpakSipaksi\bin\Debug\net8.0\UnpakSipaksi.Modules.Rirn.Presentation.pdb
+C:\dev_net\UnpakSipaksi\UnpakSipaksi\bin\Debug\net8.0\UnpakSipaksi.Modules.Rirn.PublicApi.pdb
 C:\dev_net\UnpakSipaksi\UnpakSipaksi\bin\Debug\net8.0\UnpakSipaksi.Modules.Roadmap.Domain.pdb
 C:\dev_net\UnpakSipaksi\UnpakSipaksi\bin\Debug\net8.0\UnpakSipaksi.Modules.Roadmap.Presentation.pdb
 C:\dev_net\UnpakSipaksi\UnpakSipaksi\bin\Debug\net8.0\UnpakSipaksi.Modules.RoadmapPenelitian.Domain.pdb
@@ -781,6 +780,14 @@ C:\dev_net\UnpakSipaksi\UnpakSipaksi\bin\Debug\net8.0\UnpakSipaksi.Modules.Urgen
 C:\dev_net\UnpakSipaksi\UnpakSipaksi\bin\Debug\net8.0\UnpakSipaksi.Modules.VideoKegiatan.Domain.pdb
 C:\dev_net\UnpakSipaksi\UnpakSipaksi\bin\Debug\net8.0\UnpakSipaksi.Modules.VideoKegiatan.Presentation.pdb
 C:\dev_net\UnpakSipaksi\UnpakSipaksi\bin\Debug\net8.0\UnpakSipaksi.Modules.VideoKegiatan.PublicApi.pdb
+C:\dev_net\UnpakSipaksi\UnpakSipaksi\obj\Debug\net8.0\UnpakSipaksi.csproj.AssemblyReference.cache
+C:\dev_net\UnpakSipaksi\UnpakSipaksi\obj\Debug\net8.0\UnpakSipaksi.GeneratedMSBuildEditorConfig.editorconfig
+C:\dev_net\UnpakSipaksi\UnpakSipaksi\obj\Debug\net8.0\UnpakSipaksi.AssemblyInfoInputs.cache
+C:\dev_net\UnpakSipaksi\UnpakSipaksi\obj\Debug\net8.0\UnpakSipaksi.AssemblyInfo.cs
+C:\dev_net\UnpakSipaksi\UnpakSipaksi\obj\Debug\net8.0\UnpakSipaksi.csproj.CoreCompileInputs.cache
+C:\dev_net\UnpakSipaksi\UnpakSipaksi\obj\Debug\net8.0\UnpakSipaksi.MvcApplicationPartsAssemblyInfo.cs
+C:\dev_net\UnpakSipaksi\UnpakSipaksi\obj\Debug\net8.0\UnpakSipaksi.MvcApplicationPartsAssemblyInfo.cache
+C:\dev_net\UnpakSipaksi\UnpakSipaksi\obj\Debug\net8.0\UnpakSipaksi.sourcelink.json
 C:\dev_net\UnpakSipaksi\UnpakSipaksi\obj\Debug\net8.0\staticwebassets.build.json
 C:\dev_net\UnpakSipaksi\UnpakSipaksi\obj\Debug\net8.0\staticwebassets.development.json
 C:\dev_net\UnpakSipaksi\UnpakSipaksi\obj\Debug\net8.0\staticwebassets\msbuild.UnpakSipaksi.Microsoft.AspNetCore.StaticWebAssets.props
@@ -795,3 +802,5 @@ C:\dev_net\UnpakSipaksi\UnpakSipaksi\obj\Debug\net8.0\refint\UnpakSipaksi.dll
 C:\dev_net\UnpakSipaksi\UnpakSipaksi\obj\Debug\net8.0\UnpakSipaksi.pdb
 C:\dev_net\UnpakSipaksi\UnpakSipaksi\obj\Debug\net8.0\UnpakSipaksi.genruntimeconfig.cache
 C:\dev_net\UnpakSipaksi\UnpakSipaksi\obj\Debug\net8.0\ref\UnpakSipaksi.dll
+C:\dev_net\UnpakSipaksi\UnpakSipaksi\bin\Debug\net8.0\UnpakSipaksi.Modules.KelompokMitra.PublicApi.dll
+C:\dev_net\UnpakSipaksi\UnpakSipaksi\bin\Debug\net8.0\UnpakSipaksi.Modules.KelompokMitra.PublicApi.pdb

@@ -13,10 +13,10 @@ namespace UnpakSipaksi.Modules.KejelasanPembagianTugasTim.Presentation.Kejelasan
     {
         public static void MapEndpoint(IEndpointRouteBuilder app)
         {
-            app.MapDelete("KejelasanPembagianTugasTim/{id}", async (string id, ISender sender) =>
+            app.MapDelete("KejelasanPembagianTugasTim/{Uuid}", async (string Uuid, ISender sender) =>
             {
                 Result result = await sender.Send(
-                    new DeleteKejelasanPembagianTugasTimCommand(id)
+                    new DeleteKejelasanPembagianTugasTimCommand(Uuid)
                 );
 
                 return result.Match(() => Results.Ok(), ApiResults.Problem);

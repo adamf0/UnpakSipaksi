@@ -12,10 +12,10 @@ namespace UnpakSipaksi.Modules.Komponen.Presentation.Komponen
     {
         public static void MapEndpoint(IEndpointRouteBuilder app)
         {
-            app.MapDelete("Komponen/{id}", async (string id, ISender sender) =>
+            app.MapDelete("Komponen/{Uuid}", async (string Uuid, ISender sender) =>
             {
                 Result result = await sender.Send(
-                    new DeleteKomponenCommand(id)
+                    new DeleteKomponenCommand(Uuid)
                 );
 
                 return result.Match(() => Results.Ok(), ApiResults.Problem);

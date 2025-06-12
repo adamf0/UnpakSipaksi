@@ -50,6 +50,18 @@ namespace UnpakSipaksi.Modules.PenelitianPkm.Presentation.PenelitianPkm
             UpdateRAB.MapEndpoint(app);
             DeleteRAB.MapEndpoint(app);
 
+            GetAllDokumenLainnya.MapEndpoint(app);
+            GetDokumenLainnya.MapEndpoint(app);
+            CreateDokumenLainnya.MapEndpoint(app);
+            UpdateDokumenLainnya.MapEndpoint(app);
+            DeleteDokumenLainnya.MapEndpoint(app);
+
+            GetAllDokumenMitra.MapEndpoint(app);
+            GetDokumenMitra.MapEndpoint(app);
+            CreateDokumenMitra.MapEndpoint(app);
+            UpdateDokumenMitra.MapEndpoint(app);
+            DeleteDokumenMitra.MapEndpoint(app);
+
         }
     }
 }

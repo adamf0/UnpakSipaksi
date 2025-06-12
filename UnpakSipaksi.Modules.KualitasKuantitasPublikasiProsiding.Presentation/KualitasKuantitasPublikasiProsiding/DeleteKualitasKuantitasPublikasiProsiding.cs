@@ -12,10 +12,10 @@ namespace UnpakSipaksi.Modules.KualitasKuantitasPublikasiProsiding.Presentation.
     {
         public static void MapEndpoint(IEndpointRouteBuilder app)
         {
-            app.MapDelete("KualitasKuantitasPublikasiProsiding/{id}", async (string id, ISender sender) =>
+            app.MapDelete("KualitasKuantitasPublikasiProsiding/{Uuid}", async (string Uuid, ISender sender) =>
             {
                 Result result = await sender.Send(
-                    new DeleteKualitasKuantitasPublikasiProsidingCommand(id)
+                    new DeleteKualitasKuantitasPublikasiProsidingCommand(Uuid)
                 );
 
                 return result.Match(() => Results.Ok(), ApiResults.Problem);

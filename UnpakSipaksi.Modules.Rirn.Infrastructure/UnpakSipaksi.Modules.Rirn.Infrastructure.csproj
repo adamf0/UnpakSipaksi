@@ -27,6 +27,7 @@
 		<ProjectReference Include="..\UnpakSipaksi.Modules.Rirn.Application\UnpakSipaksi.Modules.Rirn.Application.csproj" />
 		<ProjectReference Include="..\UnpakSipaksi.Modules.Rirn.Domain\UnpakSipaksi.Modules.Rirn.Domain.csproj" />
 		<ProjectReference Include="..\UnpakSipaksi.Modules.Rirn.Presentation\UnpakSipaksi.Modules.Rirn.Presentation.csproj" />
+		<ProjectReference Include="..\UnpakSipaksi.Modules.Rirn.PublicApi\UnpakSipaksi.Modules.Rirn.PublicApi.csproj" />
 	</ItemGroup>
 
 </Project>

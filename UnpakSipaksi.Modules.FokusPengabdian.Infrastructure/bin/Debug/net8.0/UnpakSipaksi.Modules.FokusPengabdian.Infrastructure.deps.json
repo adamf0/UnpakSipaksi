@@ -14,7 +14,8 @@
           "UnpakSipaksi.Common.Infrastructure": "1.0.0",
           "UnpakSipaksi.Modules.FokusPengabdian.Application": "1.0.0",
           "UnpakSipaksi.Modules.FokusPengabdian.Domain": "1.0.0",
-          "UnpakSipaksi.Modules.FokusPengabdian.Presentation": "1.0.0"
+          "UnpakSipaksi.Modules.FokusPengabdian.Presentation": "1.0.0",
+          "UnpakSipaksi.Modules.FokusPengabdian.PublicApi": "1.0.0"
         },
         "runtime": {
           "UnpakSipaksi.Modules.FokusPengabdian.Infrastructure.dll": {}
@@ -699,6 +700,11 @@
         "runtime": {
           "UnpakSipaksi.Modules.FokusPengabdian.Presentation.dll": {}
         }
+      },
+      "UnpakSipaksi.Modules.FokusPengabdian.PublicApi/1.0.0": {
+        "runtime": {
+          "UnpakSipaksi.Modules.FokusPengabdian.PublicApi.dll": {}
+        }
       }
     }
   },
@@ -1215,6 +1221,11 @@
       "sha512": ""
     },
     "UnpakSipaksi.Modules.FokusPengabdian.Presentation/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    },
+    "UnpakSipaksi.Modules.FokusPengabdian.PublicApi/1.0.0": {
       "type": "project",
       "serviceable": false,
       "sha512": ""

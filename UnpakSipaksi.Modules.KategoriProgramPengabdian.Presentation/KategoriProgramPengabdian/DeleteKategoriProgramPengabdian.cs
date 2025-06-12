@@ -13,10 +13,10 @@ namespace UnpakSipaksi.Modules.KategoriProgramPengabdian.Presentation.KategoriPr
     {
         public static void MapEndpoint(IEndpointRouteBuilder app)
         {
-            app.MapDelete("KategoriProgramPengabdian/{id}", async (string id, ISender sender) =>
+            app.MapDelete("KategoriProgramPengabdian/{Uuid}", async (string Uuid, ISender sender) =>
             {
                 Result result = await sender.Send(
-                    new DeleteKategoriProgramPengabdianCommand(id)
+                    new DeleteKategoriProgramPengabdianCommand(Uuid)
                 );
 
                 return result.Match(() => Results.Ok(), ApiResults.Problem);

@@ -1,0 +1,12 @@
+C:\dev_net\UnpakSipaksi\UnpakSipaksi.Modules.KategoriProgramPengabdian.PublicApi\bin\Debug\net8.0\UnpakSipaksi.Modules.KategoriProgramPengabdian.PublicApi.deps.json
+C:\dev_net\UnpakSipaksi\UnpakSipaksi.Modules.KategoriProgramPengabdian.PublicApi\bin\Debug\net8.0\UnpakSipaksi.Modules.KategoriProgramPengabdian.PublicApi.dll
+C:\dev_net\UnpakSipaksi\UnpakSipaksi.Modules.KategoriProgramPengabdian.PublicApi\bin\Debug\net8.0\UnpakSipaksi.Modules.KategoriProgramPengabdian.PublicApi.pdb
+C:\dev_net\UnpakSipaksi\UnpakSipaksi.Modules.KategoriProgramPengabdian.PublicApi\obj\Debug\net8.0\UnpakSipaksi.Modules.KategoriProgramPengabdian.PublicApi.GeneratedMSBuildEditorConfig.editorconfig
+C:\dev_net\UnpakSipaksi\UnpakSipaksi.Modules.KategoriProgramPengabdian.PublicApi\obj\Debug\net8.0\UnpakSipaksi.Modules.KategoriProgramPengabdian.PublicApi.AssemblyInfoInputs.cache
+C:\dev_net\UnpakSipaksi\UnpakSipaksi.Modules.KategoriProgramPengabdian.PublicApi\obj\Debug\net8.0\UnpakSipaksi.Modules.KategoriProgramPengabdian.PublicApi.AssemblyInfo.cs
+C:\dev_net\UnpakSipaksi\UnpakSipaksi.Modules.KategoriProgramPengabdian.PublicApi\obj\Debug\net8.0\UnpakSipaksi.Modules.KategoriProgramPengabdian.PublicApi.csproj.CoreCompileInputs.cache
+C:\dev_net\UnpakSipaksi\UnpakSipaksi.Modules.KategoriProgramPengabdian.PublicApi\obj\Debug\net8.0\UnpakSipaksi.Modules.KategoriProgramPengabdian.PublicApi.sourcelink.json
+C:\dev_net\UnpakSipaksi\UnpakSipaksi.Modules.KategoriProgramPengabdian.PublicApi\obj\Debug\net8.0\UnpakSipaksi.Modules.KategoriProgramPengabdian.PublicApi.dll
+C:\dev_net\UnpakSipaksi\UnpakSipaksi.Modules.KategoriProgramPengabdian.PublicApi\obj\Debug\net8.0\refint\UnpakSipaksi.Modules.KategoriProgramPengabdian.PublicApi.dll
+C:\dev_net\UnpakSipaksi\UnpakSipaksi.Modules.KategoriProgramPengabdian.PublicApi\obj\Debug\net8.0\UnpakSipaksi.Modules.KategoriProgramPengabdian.PublicApi.pdb
+C:\dev_net\UnpakSipaksi\UnpakSipaksi.Modules.KategoriProgramPengabdian.PublicApi\obj\Debug\net8.0\ref\UnpakSipaksi.Modules.KategoriProgramPengabdian.PublicApi.dll

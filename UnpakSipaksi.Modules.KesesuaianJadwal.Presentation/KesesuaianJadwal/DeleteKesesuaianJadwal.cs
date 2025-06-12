@@ -13,10 +13,10 @@ namespace UnpakSipaksi.Modules.KesesuaianJadwal.Presentation.KesesuaianJadwal
     {
         public static void MapEndpoint(IEndpointRouteBuilder app)
         {
-            app.MapDelete("KesesuaianJadwal/{id}", async (string id, ISender sender) =>
+            app.MapDelete("KesesuaianJadwal/{Uuid}", async (string Uuid, ISender sender) =>
             {
                 Result result = await sender.Send(
-                    new DeleteKesesuaianJadwalCommand(id)
+                    new DeleteKesesuaianJadwalCommand(Uuid)
                 );
 
                 return result.Match(() => Results.Ok(), ApiResults.Problem);

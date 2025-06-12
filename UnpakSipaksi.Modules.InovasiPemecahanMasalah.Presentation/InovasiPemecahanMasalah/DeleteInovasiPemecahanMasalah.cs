@@ -12,10 +12,10 @@ namespace UnpakSipaksi.Modules.InovasiPemecahanMasalah.Presentation.InovasiPemec
     {
         public static void MapEndpoint(IEndpointRouteBuilder app)
         {
-            app.MapDelete("InovasiPemecahanMasalah/{id}", async (string id, ISender sender) =>
+            app.MapDelete("InovasiPemecahanMasalah/{Uuid}", async (string Uuid, ISender sender) =>
             {
                 Result result = await sender.Send(
-                    new DeleteInovasiPemecahanMasalahCommand(id)
+                    new DeleteInovasiPemecahanMasalahCommand(Uuid)
                 );
 
                 return result.Match(() => Results.Ok(), ApiResults.Problem);

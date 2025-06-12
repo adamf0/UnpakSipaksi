@@ -115,6 +115,9 @@ namespace UnpakSipaksi.Modules.PenelitianPkm.Domain.PenelitianPkm
             {
                 return Result.Failure<PenelitianPkm>(PenelitianPkmErrors.EmptyData());
             }
+            if (KategoriProgramPengabdianId == 0) {
+                return Result.Failure<PenelitianPkm>(PenelitianPkmErrors.InvalidKategoriPengabdian());
+            }
             prev.KategoriProgramPengabdianId = KategoriProgramPengabdianId;
 
             return prev;
@@ -130,9 +133,13 @@ namespace UnpakSipaksi.Modules.PenelitianPkm.Domain.PenelitianPkm
             {
                 return Result.Failure<PenelitianPkm>(PenelitianPkmErrors.EmptyData());
             }
+            if (FokusPenelitianId == 0 && RirnId == 0)
+            {
+                return Result.Failure<PenelitianPkm>(PenelitianPkmErrors.InvalidProgramPengabdian());
+            }
 
-            prev.FokusPenelitianId = FokusPenelitianId;
-            prev.RirnId = RirnId;
+            prev.FokusPenelitianId = FokusPenelitianId==0? null: FokusPenelitianId;
+            prev.RirnId = RirnId == 0 ? null : RirnId;
 
             return prev;
         }

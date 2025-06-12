@@ -12,10 +12,10 @@ namespace UnpakSipaksi.Modules.JenisPublikasi.Presentation.JenisPublikasi
     {
         public static void MapEndpoint(IEndpointRouteBuilder app)
         {
-            app.MapDelete("JenisPublikasi/{id}", async (string id, ISender sender) =>
+            app.MapDelete("JenisPublikasi/{Uuid}", async (string Uuid, ISender sender) =>
             {
                 Result result = await sender.Send(
-                    new DeleteJenisPublikasiCommand(id)
+                    new DeleteJenisPublikasiCommand(Uuid)
                 );
 
                 return result.Match(() => Results.Ok(), ApiResults.Problem);

@@ -13,9 +13,9 @@ namespace UnpakSipaksi.Modules.Rirn.Presentation.Rirn
     {
         public static void MapEndpoint(IEndpointRouteBuilder app)
         {
-            app.MapGet("Rirn/{id}", async (Guid id, ISender sender) =>
+            app.MapGet("Rirn/{Uuid}", async (Guid Uuid, ISender sender) =>
             {
-                Result<RirnResponse> result = await sender.Send(new GetRirnQuery(id));
+                Result<RirnResponse> result = await sender.Send(new GetRirnQuery(Uuid));
 
                 return result.Match(Results.Ok, ApiResults.Problem);
             }).WithTags(Tags.Rirn);

@@ -17,7 +17,7 @@ namespace UnpakSipaksi.Modules.Rirn.Presentation.Rirn
             app.MapPut("Rirn", async (UpdateRirnRequest request, ISender sender) =>
             {
                 Result result = await sender.Send(new UpdateRirnCommand(
-                    request.Id,
+                    request.Uuid,
                     request.Nama
                     )
                 );
@@ -28,7 +28,7 @@ namespace UnpakSipaksi.Modules.Rirn.Presentation.Rirn
 
         internal sealed class UpdateRirnRequest
         {
-            public string Id { get; set; }
+            public string Uuid { get; set; }
             public string Nama { get; set; }
         }
     }

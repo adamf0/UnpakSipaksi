@@ -14,6 +14,8 @@ using UnpakSipaksi.Modules.FokusPengabdian.Domain.FokusPengabdian;
 using UnpakSipaksi.Modules.FokusPengabdian.Presentation.FokusPengabdian;
 using UnpakSipaksi.Modules.FokusPengabdian.Infrastructure.Database;
 using UnpakSipaksi.Modules.FokusPengabdian.Infrastructure.FokusPengabdian;
+using UnpakSipaksi.Modules.FokusPengabdian.PublicApi;
+using UnpakSipaksi.Modules.FokusPengabdian.Infrastructure.PublicApi;
 
 namespace UnpakSipaksi.Modules.FokusPengabdian.Infrastructure
 {
@@ -43,6 +45,8 @@ namespace UnpakSipaksi.Modules.FokusPengabdian.Infrastructure
             services.AddDbContext<FokusPengabdianDbContext>(optionsBuilder => optionsBuilder.UseMySQL(databaseConnectionString));
 
             services.AddScoped<IFokusPengabdianRepository, FokusPengabdianRepository>();
+
+            services.AddScoped<IFokusPengabdianApi, FokusPengabdianApi>();
 
             services.AddScoped<IUnitOfWork>(sp => sp.GetRequiredService<FokusPengabdianDbContext>());
         }

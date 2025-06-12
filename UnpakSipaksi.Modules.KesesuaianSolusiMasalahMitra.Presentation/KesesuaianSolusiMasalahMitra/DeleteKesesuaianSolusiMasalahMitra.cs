@@ -13,10 +13,10 @@ namespace UnpakSipaksi.Modules.KesesuaianSolusiMasalahMitra.Presentation.Kesesua
     {
         public static void MapEndpoint(IEndpointRouteBuilder app)
         {
-            app.MapDelete("KesesuaianSolusiMasalahMitra/{id}", async (string id, ISender sender) =>
+            app.MapDelete("KesesuaianSolusiMasalahMitra/{Uuid}", async (string Uuid, ISender sender) =>
             {
                 Result result = await sender.Send(
-                    new DeleteKesesuaianSolusiMasalahMitraCommand(id)
+                    new DeleteKesesuaianSolusiMasalahMitraCommand(Uuid)
                 );
 
                 return result.Match(() => Results.Ok(), ApiResults.Problem);

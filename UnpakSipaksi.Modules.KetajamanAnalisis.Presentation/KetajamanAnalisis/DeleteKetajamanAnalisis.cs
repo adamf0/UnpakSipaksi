@@ -12,10 +12,10 @@ namespace UnpakSipaksi.Modules.KetajamanAnalisis.Presentation.KetajamanAnalisis
     {
         public static void MapEndpoint(IEndpointRouteBuilder app)
         {
-            app.MapDelete("KetajamanAnalisis/{id}", async (string id, ISender sender) =>
+            app.MapDelete("KetajamanAnalisis/{Uuid}", async (string Uuid, ISender sender) =>
             {
                 Result result = await sender.Send(
-                    new DeleteKetajamanAnalisisCommand(id)
+                    new DeleteKetajamanAnalisisCommand(Uuid)
                 );
 
                 return result.Match(() => Results.Ok(), ApiResults.Problem);

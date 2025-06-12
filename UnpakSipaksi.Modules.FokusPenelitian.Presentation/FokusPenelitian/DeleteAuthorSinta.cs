@@ -12,10 +12,10 @@ namespace UnpakSipaksi.Modules.FokusPenelitian.Presentation.FokusPenelitian
     {
         public static void MapEndpoint(IEndpointRouteBuilder app)
         {
-            app.MapDelete("FokusPenelitian/{id}", async (string id, ISender sender) =>
+            app.MapDelete("FokusPenelitian/{Uuid}", async (string Uuid, ISender sender) =>
             {
                 Result result = await sender.Send(
-                    new DeleteFokusPenelitianCommand(id)
+                    new DeleteFokusPenelitianCommand(Uuid)
                 );
 
                 return result.Match(() => Results.Ok(), ApiResults.Problem);

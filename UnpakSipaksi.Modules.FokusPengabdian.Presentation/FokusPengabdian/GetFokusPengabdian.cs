@@ -13,9 +13,9 @@ namespace UnpakSipaksi.Modules.FokusPengabdian.Presentation.FokusPengabdian
     {
         public static void MapEndpoint(IEndpointRouteBuilder app)
         {
-            app.MapGet("FokusPengabdian/{id}", async (Guid id, ISender sender) =>
+            app.MapGet("FokusPengabdian/{Uuid}", async (Guid Uuid, ISender sender) =>
             {
-                Result<FokusPengabdianResponse> result = await sender.Send(new GetFokusPengabdianQuery(id));
+                Result<FokusPengabdianResponse> result = await sender.Send(new GetFokusPengabdianQuery(Uuid));
 
                 return result.Match(Results.Ok, ApiResults.Problem);
             }).WithTags(Tags.FokusPengabdian);

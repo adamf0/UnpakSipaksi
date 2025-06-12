@@ -14,6 +14,8 @@ using UnpakSipaksi.Modules.Rirn.Application.Abstractions.Data;
 using UnpakSipaksi.Modules.Rirn.Presentation.Rirn;
 using UnpakSipaksi.Modules.Rirn.Infrastructure.Rirn;
 using UnpakSipaksi.Modules.Rirn.Infrastructure.Database;
+using UnpakSipaksi.Modules.Rirn.PublicApi;
+using UnpakSipaksi.Modules.Rirn.Infrastructure.PublicApi;
 
 namespace UnpakSipaksi.Modules.Rirn.Infrastructure
 {
@@ -43,6 +45,8 @@ namespace UnpakSipaksi.Modules.Rirn.Infrastructure
             services.AddDbContext<RirnDbContext>(optionsBuilder => optionsBuilder.UseMySQL(databaseConnectionString));
 
             services.AddScoped<IRirnRepository, RirnRepository>();
+
+            services.AddScoped<IRirnApi, RirnApi>();
 
             services.AddScoped<IUnitOfWork>(sp => sp.GetRequiredService<RirnDbContext>());
         }

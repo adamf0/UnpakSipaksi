@@ -14,6 +14,8 @@ using UnpakSipaksi.Modules.KelompokMitra.Domain.KelompokMitra;
 using UnpakSipaksi.Modules.KelompokMitra.Presentation.KelompokMitra;
 using UnpakSipaksi.Modules.KelompokMitra.Infrastructure.KelompokMitra;
 using UnpakSipaksi.Modules.KelompokMitra.Infrastructure.Database;
+using UnpakSipaksi.Modules.KelompokMitra.PublicApi;
+using UnpakSipaksi.Modules.KelompokMitra.Infrastructure.PublicApi;
 
 namespace UnpakSipaksi.Modules.KelompokMitra.Infrastructure
 {
@@ -43,6 +45,8 @@ namespace UnpakSipaksi.Modules.KelompokMitra.Infrastructure
             services.AddDbContext<KelompokMitraDbContext>(optionsBuilder => optionsBuilder.UseMySQL(databaseConnectionString));
 
             services.AddScoped<IKelompokMitraRepository, KelompokMitraRepository>();
+
+            services.AddScoped<IKelompokMitraApi, KelompokMitraApi>();
 
             services.AddScoped<IUnitOfWork>(sp => sp.GetRequiredService<KelompokMitraDbContext>());
         }

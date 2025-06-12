@@ -219,6 +219,16 @@
           "bin/placeholder/UnpakSipaksi.Common.Domain.dll": {}
         }
       },
+      "UnpakSipaksi.Modules.FokusPengabdian.PublicApi/1.0.0": {
+        "type": "project",
+        "framework": ".NETCoreApp,Version=v8.0",
+        "compile": {
+          "bin/placeholder/UnpakSipaksi.Modules.FokusPengabdian.PublicApi.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/UnpakSipaksi.Modules.FokusPengabdian.PublicApi.dll": {}
+        }
+      },
       "UnpakSipaksi.Modules.IndikatorCapaian.PublicApi/1.0.0": {
         "type": "project",
         "framework": ".NETCoreApp,Version=v8.0",
@@ -237,6 +247,26 @@
         },
         "runtime": {
           "bin/placeholder/UnpakSipaksi.Modules.JenisLuaran.PublicApi.dll": {}
+        }
+      },
+      "UnpakSipaksi.Modules.KategoriProgramPengabdian.PublicApi/1.0.0": {
+        "type": "project",
+        "framework": ".NETCoreApp,Version=v8.0",
+        "compile": {
+          "bin/placeholder/UnpakSipaksi.Modules.KategoriProgramPengabdian.PublicApi.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/UnpakSipaksi.Modules.KategoriProgramPengabdian.PublicApi.dll": {}
+        }
+      },
+      "UnpakSipaksi.Modules.KelompokMitra.PublicApi/1.0.0": {
+        "type": "project",
+        "framework": ".NETCoreApp,Version=v8.0",
+        "compile": {
+          "bin/placeholder/UnpakSipaksi.Modules.KelompokMitra.PublicApi.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/UnpakSipaksi.Modules.KelompokMitra.PublicApi.dll": {}
         }
       },
       "UnpakSipaksi.Modules.KelompokRab.PublicApi/1.0.0": {
@@ -280,6 +310,16 @@
         },
         "runtime": {
           "bin/placeholder/UnpakSipaksi.Modules.PenelitianPkm.PublicApi.dll": {}
+        }
+      },
+      "UnpakSipaksi.Modules.Rirn.PublicApi/1.0.0": {
+        "type": "project",
+        "framework": ".NETCoreApp,Version=v8.0",
+        "compile": {
+          "bin/placeholder/UnpakSipaksi.Modules.Rirn.PublicApi.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/UnpakSipaksi.Modules.Rirn.PublicApi.dll": {}
         }
       },
       "UnpakSipaksi.Modules.RumpunIlmu1.PublicApi/1.0.0": {
@@ -654,6 +694,11 @@
       "path": "../UnpakSipaksi.Common.Domain/UnpakSipaksi.Common.Domain.csproj",
       "msbuildProject": "../UnpakSipaksi.Common.Domain/UnpakSipaksi.Common.Domain.csproj"
     },
+    "UnpakSipaksi.Modules.FokusPengabdian.PublicApi/1.0.0": {
+      "type": "project",
+      "path": "../UnpakSipaksi.Modules.FokusPengabdian.PublicApi/UnpakSipaksi.Modules.FokusPengabdian.PublicApi.csproj",
+      "msbuildProject": "../UnpakSipaksi.Modules.FokusPengabdian.PublicApi/UnpakSipaksi.Modules.FokusPengabdian.PublicApi.csproj"
+    },
     "UnpakSipaksi.Modules.IndikatorCapaian.PublicApi/1.0.0": {
       "type": "project",
       "path": "../UnpakSipaksi.Modules.IndikatorCapaian.PublicApi/UnpakSipaksi.Modules.IndikatorCapaian.PublicApi.csproj",
@@ -663,6 +708,16 @@
       "type": "project",
       "path": "../UnpakSipaksi.Modules.JenisLuaran.PublicApi/UnpakSipaksi.Modules.JenisLuaran.PublicApi.csproj",
       "msbuildProject": "../UnpakSipaksi.Modules.JenisLuaran.PublicApi/UnpakSipaksi.Modules.JenisLuaran.PublicApi.csproj"
+    },
+    "UnpakSipaksi.Modules.KategoriProgramPengabdian.PublicApi/1.0.0": {
+      "type": "project",
+      "path": "../UnpakSipaksi.Modules.KategoriProgramPengabdian.PublicApi/UnpakSipaksi.Modules.KategoriProgramPengabdian.PublicApi.csproj",
+      "msbuildProject": "../UnpakSipaksi.Modules.KategoriProgramPengabdian.PublicApi/UnpakSipaksi.Modules.KategoriProgramPengabdian.PublicApi.csproj"
+    },
+    "UnpakSipaksi.Modules.KelompokMitra.PublicApi/1.0.0": {
+      "type": "project",
+      "path": "../UnpakSipaksi.Modules.KelompokMitra.PublicApi/UnpakSipaksi.Modules.KelompokMitra.PublicApi.csproj",
+      "msbuildProject": "../UnpakSipaksi.Modules.KelompokMitra.PublicApi/UnpakSipaksi.Modules.KelompokMitra.PublicApi.csproj"
     },
     "UnpakSipaksi.Modules.KelompokRab.PublicApi/1.0.0": {
       "type": "project",
@@ -683,6 +738,11 @@
       "type": "project",
       "path": "../UnpakSipaksi.Modules.PenelitianPkm.PublicApi/UnpakSipaksi.Modules.PenelitianPkm.PublicApi.csproj",
       "msbuildProject": "../UnpakSipaksi.Modules.PenelitianPkm.PublicApi/UnpakSipaksi.Modules.PenelitianPkm.PublicApi.csproj"
+    },
+    "UnpakSipaksi.Modules.Rirn.PublicApi/1.0.0": {
+      "type": "project",
+      "path": "../UnpakSipaksi.Modules.Rirn.PublicApi/UnpakSipaksi.Modules.Rirn.PublicApi.csproj",
+      "msbuildProject": "../UnpakSipaksi.Modules.Rirn.PublicApi/UnpakSipaksi.Modules.Rirn.PublicApi.csproj"
     },
     "UnpakSipaksi.Modules.RumpunIlmu1.PublicApi/1.0.0": {
       "type": "project",
@@ -711,12 +771,16 @@
       "MediatR >= 12.4.1",
       "UnpakSipaksi.Common.Application >= 1.0.0",
       "UnpakSipaksi.Common.Domain >= 1.0.0",
+      "UnpakSipaksi.Modules.FokusPengabdian.PublicApi >= 1.0.0",
       "UnpakSipaksi.Modules.IndikatorCapaian.PublicApi >= 1.0.0",
       "UnpakSipaksi.Modules.JenisLuaran.PublicApi >= 1.0.0",
+      "UnpakSipaksi.Modules.KategoriProgramPengabdian.PublicApi >= 1.0.0",
+      "UnpakSipaksi.Modules.KelompokMitra.PublicApi >= 1.0.0",
       "UnpakSipaksi.Modules.KelompokRab.PublicApi >= 1.0.0",
       "UnpakSipaksi.Modules.Komponen.PublicApi >= 1.0.0",
       "UnpakSipaksi.Modules.PenelitianPkm.Domain >= 1.0.0",
       "UnpakSipaksi.Modules.PenelitianPkm.PublicApi >= 1.0.0",
+      "UnpakSipaksi.Modules.Rirn.PublicApi >= 1.0.0",
       "UnpakSipaksi.Modules.RumpunIlmu1.PublicApi >= 1.0.0",
       "UnpakSipaksi.Modules.RumpunIlmu2.PublicApi >= 1.0.0",
       "UnpakSipaksi.Modules.RumpunIlmu3.PublicApi >= 1.0.0",
@@ -757,11 +821,20 @@
             "C:\\dev_net\\UnpakSipaksi\\UnpakSipaksi.Common.Domain\\UnpakSipaksi.Common.Domain.csproj": {
               "projectPath": "C:\\dev_net\\UnpakSipaksi\\UnpakSipaksi.Common.Domain\\UnpakSipaksi.Common.Domain.csproj"
             },
+            "C:\\dev_net\\UnpakSipaksi\\UnpakSipaksi.Modules.FokusPengabdian.PublicApi\\UnpakSipaksi.Modules.FokusPengabdian.PublicApi.csproj": {
+              "projectPath": "C:\\dev_net\\UnpakSipaksi\\UnpakSipaksi.Modules.FokusPengabdian.PublicApi\\UnpakSipaksi.Modules.FokusPengabdian.PublicApi.csproj"
+            },
             "C:\\dev_net\\UnpakSipaksi\\UnpakSipaksi.Modules.IndikatorCapaian.PublicApi\\UnpakSipaksi.Modules.IndikatorCapaian.PublicApi.csproj": {
               "projectPath": "C:\\dev_net\\UnpakSipaksi\\UnpakSipaksi.Modules.IndikatorCapaian.PublicApi\\UnpakSipaksi.Modules.IndikatorCapaian.PublicApi.csproj"
             },
             "C:\\dev_net\\UnpakSipaksi\\UnpakSipaksi.Modules.JenisLuaran.PublicApi\\UnpakSipaksi.Modules.JenisLuaran.PublicApi.csproj": {
               "projectPath": "C:\\dev_net\\UnpakSipaksi\\UnpakSipaksi.Modules.JenisLuaran.PublicApi\\UnpakSipaksi.Modules.JenisLuaran.PublicApi.csproj"
+            },
+            "C:\\dev_net\\UnpakSipaksi\\UnpakSipaksi.Modules.KategoriProgramPengabdian.PublicApi\\UnpakSipaksi.Modules.KategoriProgramPengabdian.PublicApi.csproj": {
+              "projectPath": "C:\\dev_net\\UnpakSipaksi\\UnpakSipaksi.Modules.KategoriProgramPengabdian.PublicApi\\UnpakSipaksi.Modules.KategoriProgramPengabdian.PublicApi.csproj"
+            },
+            "C:\\dev_net\\UnpakSipaksi\\UnpakSipaksi.Modules.KelompokMitra.PublicApi\\UnpakSipaksi.Modules.KelompokMitra.PublicApi.csproj": {
+              "projectPath": "C:\\dev_net\\UnpakSipaksi\\UnpakSipaksi.Modules.KelompokMitra.PublicApi\\UnpakSipaksi.Modules.KelompokMitra.PublicApi.csproj"
             },
             "C:\\dev_net\\UnpakSipaksi\\UnpakSipaksi.Modules.KelompokRab.PublicApi\\UnpakSipaksi.Modules.KelompokRab.PublicApi.csproj": {
               "projectPath": "C:\\dev_net\\UnpakSipaksi\\UnpakSipaksi.Modules.KelompokRab.PublicApi\\UnpakSipaksi.Modules.KelompokRab.PublicApi.csproj"
@@ -774,6 +847,9 @@
             },
             "C:\\dev_net\\UnpakSipaksi\\UnpakSipaksi.Modules.PenelitianPkm.PublicApi\\UnpakSipaksi.Modules.PenelitianPkm.PublicApi.csproj": {
               "projectPath": "C:\\dev_net\\UnpakSipaksi\\UnpakSipaksi.Modules.PenelitianPkm.PublicApi\\UnpakSipaksi.Modules.PenelitianPkm.PublicApi.csproj"
+            },
+            "C:\\dev_net\\UnpakSipaksi\\UnpakSipaksi.Modules.Rirn.PublicApi\\UnpakSipaksi.Modules.Rirn.PublicApi.csproj": {
+              "projectPath": "C:\\dev_net\\UnpakSipaksi\\UnpakSipaksi.Modules.Rirn.PublicApi\\UnpakSipaksi.Modules.Rirn.PublicApi.csproj"
             },
             "C:\\dev_net\\UnpakSipaksi\\UnpakSipaksi.Modules.RumpunIlmu1.PublicApi\\UnpakSipaksi.Modules.RumpunIlmu1.PublicApi.csproj": {
               "projectPath": "C:\\dev_net\\UnpakSipaksi\\UnpakSipaksi.Modules.RumpunIlmu1.PublicApi\\UnpakSipaksi.Modules.RumpunIlmu1.PublicApi.csproj"

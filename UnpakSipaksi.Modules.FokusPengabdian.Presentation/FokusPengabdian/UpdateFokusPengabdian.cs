@@ -16,7 +16,7 @@ namespace UnpakSipaksi.Modules.FokusPengabdian.Presentation.FokusPengabdian
             app.MapPut("FokusPengabdian", async (UpdateFokusPengabdianRequest request, ISender sender) =>
             {
                 Result result = await sender.Send(new UpdateFokusPengabdianCommand(
-                    request.Id,
+                    request.Uuid,
                     request.Nama
                     )
                 );
@@ -27,7 +27,7 @@ namespace UnpakSipaksi.Modules.FokusPengabdian.Presentation.FokusPengabdian
 
         internal sealed class UpdateFokusPengabdianRequest
         {
-            public string Id { get; set; }
+            public string Uuid { get; set; }
             public string Nama { get; set; }
         }
     }

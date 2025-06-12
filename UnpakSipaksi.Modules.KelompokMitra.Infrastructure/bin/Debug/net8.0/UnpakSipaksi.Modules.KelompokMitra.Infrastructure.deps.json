@@ -14,7 +14,8 @@
           "UnpakSipaksi.Common.Infrastructure": "1.0.0",
           "UnpakSipaksi.Modules.KelompokMitra.Application": "1.0.0",
           "UnpakSipaksi.Modules.KelompokMitra.Domain": "1.0.0",
-          "UnpakSipaksi.Modules.KelompokMitra.Presentation": "1.0.0"
+          "UnpakSipaksi.Modules.KelompokMitra.Presentation": "1.0.0",
+          "UnpakSipaksi.Modules.KelompokMitra.PublicApi": "1.0.0"
         },
         "runtime": {
           "UnpakSipaksi.Modules.KelompokMitra.Infrastructure.dll": {}
@@ -699,6 +700,11 @@
         "runtime": {
           "UnpakSipaksi.Modules.KelompokMitra.Presentation.dll": {}
         }
+      },
+      "UnpakSipaksi.Modules.KelompokMitra.PublicApi/1.0.0": {
+        "runtime": {
+          "UnpakSipaksi.Modules.KelompokMitra.PublicApi.dll": {}
+        }
       }
     }
   },
@@ -1215,6 +1221,11 @@
       "sha512": ""
     },
     "UnpakSipaksi.Modules.KelompokMitra.Presentation/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    },
+    "UnpakSipaksi.Modules.KelompokMitra.PublicApi/1.0.0": {
       "type": "project",
       "serviceable": false,
       "sha512": ""

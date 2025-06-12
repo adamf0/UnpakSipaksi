@@ -16,7 +16,7 @@ namespace UnpakSipaksi.Modules.FokusPenelitian.Presentation.FokusPenelitian
             app.MapPut("FokusPenelitian", async (UpdateFokusPenelitianRequest request, ISender sender) =>
             {
                 Result result = await sender.Send(new UpdateFokusPenelitianCommand(
-                    request.Id,
+                    request.Uuid,
                     request.Nama
                     )
                 );
@@ -27,7 +27,7 @@ namespace UnpakSipaksi.Modules.FokusPenelitian.Presentation.FokusPenelitian
 
         internal sealed class UpdateFokusPenelitianRequest
         {
-            public string Id { get; set; }
+            public string Uuid { get; set; }
             public string Nama { get; set; }
         }
     }

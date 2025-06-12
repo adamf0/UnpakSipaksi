@@ -12,10 +12,10 @@ namespace UnpakSipaksi.Modules.IndikatorCapaian.Presentation.IndikatorCapaian
     {
         public static void MapEndpoint(IEndpointRouteBuilder app)
         {
-            app.MapDelete("IndikatorCapaian/{id}", async (string id, ISender sender) =>
+            app.MapDelete("IndikatorCapaian/{Uuid}", async (string Uuid, ISender sender) =>
             {
                 Result result = await sender.Send(
-                    new DeleteIndikatorCapaianCommand(id)
+                    new DeleteIndikatorCapaianCommand(Uuid)
                 );
 
                 return result.Match(() => Results.Ok(), ApiResults.Problem);

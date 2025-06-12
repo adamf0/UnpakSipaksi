@@ -12,10 +12,10 @@ namespace UnpakSipaksi.Modules.AkurasiPenelitian.Presentation.AkurasiPenelitian
     {
         public static void MapEndpoint(IEndpointRouteBuilder app)
         {
-            app.MapDelete("AkurasiPenelitian/{id}", async (string id, ISender sender) =>
+            app.MapDelete("AkurasiPenelitian/{Uuid}", async (string Uuid, ISender sender) =>
             {
                 Result result = await sender.Send(
-                    new DeleteAkurasiPenelitianCommand(id)
+                    new DeleteAkurasiPenelitianCommand(Uuid)
                 );
 
                 return result.Match(() => Results.Ok(), ApiResults.Problem);

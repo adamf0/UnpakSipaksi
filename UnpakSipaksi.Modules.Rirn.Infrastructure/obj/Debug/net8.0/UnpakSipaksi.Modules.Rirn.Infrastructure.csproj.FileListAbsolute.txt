@@ -8,11 +8,13 @@ C:\dev_net\UnpakSipaksi\UnpakSipaksi.Modules.Rirn.Infrastructure\bin\Debug\net8.
 C:\dev_net\UnpakSipaksi\UnpakSipaksi.Modules.Rirn.Infrastructure\bin\Debug\net8.0\UnpakSipaksi.Modules.Rirn.Application.dll
 C:\dev_net\UnpakSipaksi\UnpakSipaksi.Modules.Rirn.Infrastructure\bin\Debug\net8.0\UnpakSipaksi.Modules.Rirn.Domain.dll
 C:\dev_net\UnpakSipaksi\UnpakSipaksi.Modules.Rirn.Infrastructure\bin\Debug\net8.0\UnpakSipaksi.Modules.Rirn.Presentation.dll
+C:\dev_net\UnpakSipaksi\UnpakSipaksi.Modules.Rirn.Infrastructure\bin\Debug\net8.0\UnpakSipaksi.Modules.Rirn.PublicApi.dll
 C:\dev_net\UnpakSipaksi\UnpakSipaksi.Modules.Rirn.Infrastructure\bin\Debug\net8.0\UnpakSipaksi.Common.Application.pdb
 C:\dev_net\UnpakSipaksi\UnpakSipaksi.Modules.Rirn.Infrastructure\bin\Debug\net8.0\UnpakSipaksi.Common.Infrastructure.pdb
 C:\dev_net\UnpakSipaksi\UnpakSipaksi.Modules.Rirn.Infrastructure\bin\Debug\net8.0\UnpakSipaksi.Modules.Rirn.Application.pdb
 C:\dev_net\UnpakSipaksi\UnpakSipaksi.Modules.Rirn.Infrastructure\bin\Debug\net8.0\UnpakSipaksi.Modules.Rirn.Domain.pdb
 C:\dev_net\UnpakSipaksi\UnpakSipaksi.Modules.Rirn.Infrastructure\bin\Debug\net8.0\UnpakSipaksi.Modules.Rirn.Presentation.pdb
+C:\dev_net\UnpakSipaksi\UnpakSipaksi.Modules.Rirn.Infrastructure\bin\Debug\net8.0\UnpakSipaksi.Modules.Rirn.PublicApi.pdb
 C:\dev_net\UnpakSipaksi\UnpakSipaksi.Modules.Rirn.Infrastructure\bin\Debug\net8.0\UnpakSipaksi.Common.Domain.pdb
 C:\dev_net\UnpakSipaksi\UnpakSipaksi.Modules.Rirn.Infrastructure\bin\Debug\net8.0\UnpakSipaksi.Common.Presentation.pdb
 C:\dev_net\UnpakSipaksi\UnpakSipaksi.Modules.Rirn.Infrastructure\obj\Debug\net8.0\UnpakSipaksi.Modules.Rirn.Infrastructure.csproj.AssemblyReference.cache

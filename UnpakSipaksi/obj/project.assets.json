@@ -2412,7 +2412,8 @@
           "UnpakSipaksi.Common.Infrastructure": "1.0.0",
           "UnpakSipaksi.Modules.FokusPengabdian.Application": "1.0.0",
           "UnpakSipaksi.Modules.FokusPengabdian.Domain": "1.0.0",
-          "UnpakSipaksi.Modules.FokusPengabdian.Presentation": "1.0.0"
+          "UnpakSipaksi.Modules.FokusPengabdian.Presentation": "1.0.0",
+          "UnpakSipaksi.Modules.FokusPengabdian.PublicApi": "1.0.0"
         },
         "compile": {
           "bin/placeholder/UnpakSipaksi.Modules.FokusPengabdian.Infrastructure.dll": {}
@@ -2441,6 +2442,16 @@
         "frameworkReferences": [
           "Microsoft.AspNetCore.App"
         ]
+      },
+      "UnpakSipaksi.Modules.FokusPengabdian.PublicApi/1.0.0": {
+        "type": "project",
+        "framework": ".NETCoreApp,Version=v8.0",
+        "compile": {
+          "bin/placeholder/UnpakSipaksi.Modules.FokusPengabdian.PublicApi.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/UnpakSipaksi.Modules.FokusPengabdian.PublicApi.dll": {}
+        }
       },
       "UnpakSipaksi.Modules.IndikatorCapaian.Application/1.0.0": {
         "type": "project",
@@ -3193,7 +3204,8 @@
           "UnpakSipaksi.Common.Infrastructure": "1.0.0",
           "UnpakSipaksi.Modules.KategoriProgramPengabdian.Application": "1.0.0",
           "UnpakSipaksi.Modules.KategoriProgramPengabdian.Domain": "1.0.0",
-          "UnpakSipaksi.Modules.KategoriProgramPengabdian.Presentation": "1.0.0"
+          "UnpakSipaksi.Modules.KategoriProgramPengabdian.Presentation": "1.0.0",
+          "UnpakSipaksi.Modules.KategoriProgramPengabdian.PublicApi": "1.0.0"
         },
         "compile": {
           "bin/placeholder/UnpakSipaksi.Modules.KategoriProgramPengabdian.Infrastructure.dll": {}
@@ -3222,6 +3234,16 @@
         "frameworkReferences": [
           "Microsoft.AspNetCore.App"
         ]
+      },
+      "UnpakSipaksi.Modules.KategoriProgramPengabdian.PublicApi/1.0.0": {
+        "type": "project",
+        "framework": ".NETCoreApp,Version=v8.0",
+        "compile": {
+          "bin/placeholder/UnpakSipaksi.Modules.KategoriProgramPengabdian.PublicApi.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/UnpakSipaksi.Modules.KategoriProgramPengabdian.PublicApi.dll": {}
+        }
       },
       "UnpakSipaksi.Modules.KategoriSkema.Application/1.0.0": {
         "type": "project",
@@ -3657,7 +3679,8 @@
           "UnpakSipaksi.Common.Infrastructure": "1.0.0",
           "UnpakSipaksi.Modules.KelompokMitra.Application": "1.0.0",
           "UnpakSipaksi.Modules.KelompokMitra.Domain": "1.0.0",
-          "UnpakSipaksi.Modules.KelompokMitra.Presentation": "1.0.0"
+          "UnpakSipaksi.Modules.KelompokMitra.Presentation": "1.0.0",
+          "UnpakSipaksi.Modules.KelompokMitra.PublicApi": "1.0.0"
         },
         "compile": {
           "bin/placeholder/UnpakSipaksi.Modules.KelompokMitra.Infrastructure.dll": {}
@@ -3686,6 +3709,16 @@
         "frameworkReferences": [
           "Microsoft.AspNetCore.App"
         ]
+      },
+      "UnpakSipaksi.Modules.KelompokMitra.PublicApi/1.0.0": {
+        "type": "project",
+        "framework": ".NETCoreApp,Version=v8.0",
+        "compile": {
+          "bin/placeholder/UnpakSipaksi.Modules.KelompokMitra.PublicApi.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/UnpakSipaksi.Modules.KelompokMitra.PublicApi.dll": {}
+        }
       },
       "UnpakSipaksi.Modules.KelompokRab.Application/1.0.0": {
         "type": "project",
@@ -5328,12 +5361,16 @@
           "MediatR": "12.4.1",
           "UnpakSipaksi.Common.Application": "1.0.0",
           "UnpakSipaksi.Common.Domain": "1.0.0",
+          "UnpakSipaksi.Modules.FokusPengabdian.PublicApi": "1.0.0",
           "UnpakSipaksi.Modules.IndikatorCapaian.PublicApi": "1.0.0",
           "UnpakSipaksi.Modules.JenisLuaran.PublicApi": "1.0.0",
+          "UnpakSipaksi.Modules.KategoriProgramPengabdian.PublicApi": "1.0.0",
+          "UnpakSipaksi.Modules.KelompokMitra.PublicApi": "1.0.0",
           "UnpakSipaksi.Modules.KelompokRab.PublicApi": "1.0.0",
           "UnpakSipaksi.Modules.Komponen.PublicApi": "1.0.0",
           "UnpakSipaksi.Modules.PenelitianPkm.Domain": "1.0.0",
           "UnpakSipaksi.Modules.PenelitianPkm.PublicApi": "1.0.0",
+          "UnpakSipaksi.Modules.Rirn.PublicApi": "1.0.0",
           "UnpakSipaksi.Modules.RumpunIlmu1.PublicApi": "1.0.0",
           "UnpakSipaksi.Modules.RumpunIlmu2.PublicApi": "1.0.0",
           "UnpakSipaksi.Modules.RumpunIlmu3.PublicApi": "1.0.0",
@@ -5389,6 +5426,7 @@
         "dependencies": {
           "UnpakSipaksi.Common.Domain": "1.0.0",
           "UnpakSipaksi.Common.Presentation": "1.0.0",
+          "UnpakSipaksi.Modules.KategoriProgramPengabdian.Application": "1.0.0",
           "UnpakSipaksi.Modules.PenelitianPkm.Application": "1.0.0"
         },
         "compile": {
@@ -6231,7 +6269,8 @@
           "UnpakSipaksi.Common.Infrastructure": "1.0.0",
           "UnpakSipaksi.Modules.Rirn.Application": "1.0.0",
           "UnpakSipaksi.Modules.Rirn.Domain": "1.0.0",
-          "UnpakSipaksi.Modules.Rirn.Presentation": "1.0.0"
+          "UnpakSipaksi.Modules.Rirn.Presentation": "1.0.0",
+          "UnpakSipaksi.Modules.Rirn.PublicApi": "1.0.0"
         },
         "compile": {
           "bin/placeholder/UnpakSipaksi.Modules.Rirn.Infrastructure.dll": {}
@@ -6260,6 +6299,16 @@
         "frameworkReferences": [
           "Microsoft.AspNetCore.App"
         ]
+      },
+      "UnpakSipaksi.Modules.Rirn.PublicApi/1.0.0": {
+        "type": "project",
+        "framework": ".NETCoreApp,Version=v8.0",
+        "compile": {
+          "bin/placeholder/UnpakSipaksi.Modules.Rirn.PublicApi.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/UnpakSipaksi.Modules.Rirn.PublicApi.dll": {}
+        }
       },
       "UnpakSipaksi.Modules.Roadmap.Application/1.0.0": {
         "type": "project",
@@ -11131,6 +11180,11 @@
       "path": "../UnpakSipaksi.Modules.FokusPengabdian.Presentation/UnpakSipaksi.Modules.FokusPengabdian.Presentation.csproj",
       "msbuildProject": "../UnpakSipaksi.Modules.FokusPengabdian.Presentation/UnpakSipaksi.Modules.FokusPengabdian.Presentation.csproj"
     },
+    "UnpakSipaksi.Modules.FokusPengabdian.PublicApi/1.0.0": {
+      "type": "project",
+      "path": "../UnpakSipaksi.Modules.FokusPengabdian.PublicApi/UnpakSipaksi.Modules.FokusPengabdian.PublicApi.csproj",
+      "msbuildProject": "../UnpakSipaksi.Modules.FokusPengabdian.PublicApi/UnpakSipaksi.Modules.FokusPengabdian.PublicApi.csproj"
+    },
     "UnpakSipaksi.Modules.IndikatorCapaian.Application/1.0.0": {
       "type": "project",
       "path": "../UnpakSipaksi.Modules.IndikatorCapaian.Application/UnpakSipaksi.Modules.IndikatorCapaian.Application.csproj",
@@ -11366,6 +11420,11 @@
       "path": "../UnpakSipaksi.Modules.KategoriProgramPengabdian.Presentation/UnpakSipaksi.Modules.KategoriProgramPengabdian.Presentation.csproj",
       "msbuildProject": "../UnpakSipaksi.Modules.KategoriProgramPengabdian.Presentation/UnpakSipaksi.Modules.KategoriProgramPengabdian.Presentation.csproj"
     },
+    "UnpakSipaksi.Modules.KategoriProgramPengabdian.PublicApi/1.0.0": {
+      "type": "project",
+      "path": "../UnpakSipaksi.Modules.KategoriProgramPengabdian.PublicApi/UnpakSipaksi.Modules.KategoriProgramPengabdian.PublicApi.csproj",
+      "msbuildProject": "../UnpakSipaksi.Modules.KategoriProgramPengabdian.PublicApi/UnpakSipaksi.Modules.KategoriProgramPengabdian.PublicApi.csproj"
+    },
     "UnpakSipaksi.Modules.KategoriSkema.Application/1.0.0": {
       "type": "project",
       "path": "../UnpakSipaksi.Modules.KategoriSkema.Application/UnpakSipaksi.Modules.KategoriSkema.Application.csproj",
@@ -11505,6 +11564,11 @@
       "type": "project",
       "path": "../UnpakSipaksi.Modules.KelompokMitra.Presentation/UnpakSipaksi.Modules.KelompokMitra.Presentation.csproj",
       "msbuildProject": "../UnpakSipaksi.Modules.KelompokMitra.Presentation/UnpakSipaksi.Modules.KelompokMitra.Presentation.csproj"
+    },
+    "UnpakSipaksi.Modules.KelompokMitra.PublicApi/1.0.0": {
+      "type": "project",
+      "path": "../UnpakSipaksi.Modules.KelompokMitra.PublicApi/UnpakSipaksi.Modules.KelompokMitra.PublicApi.csproj",
+      "msbuildProject": "../UnpakSipaksi.Modules.KelompokMitra.PublicApi/UnpakSipaksi.Modules.KelompokMitra.PublicApi.csproj"
     },
     "UnpakSipaksi.Modules.KelompokRab.Application/1.0.0": {
       "type": "project",
@@ -12280,6 +12344,11 @@
       "type": "project",
       "path": "../UnpakSipaksi.Modules.Rirn.Presentation/UnpakSipaksi.Modules.Rirn.Presentation.csproj",
       "msbuildProject": "../UnpakSipaksi.Modules.Rirn.Presentation/UnpakSipaksi.Modules.Rirn.Presentation.csproj"
+    },
+    "UnpakSipaksi.Modules.Rirn.PublicApi/1.0.0": {
+      "type": "project",
+      "path": "../UnpakSipaksi.Modules.Rirn.PublicApi/UnpakSipaksi.Modules.Rirn.PublicApi.csproj",
+      "msbuildProject": "../UnpakSipaksi.Modules.Rirn.PublicApi/UnpakSipaksi.Modules.Rirn.PublicApi.csproj"
     },
     "UnpakSipaksi.Modules.Roadmap.Application/1.0.0": {
       "type": "project",

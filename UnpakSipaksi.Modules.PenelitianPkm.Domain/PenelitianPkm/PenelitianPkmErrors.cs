@@ -17,6 +17,14 @@ namespace UnpakSipaksi.Modules.PenelitianPkm.Domain.PenelitianPkm
             Error.NotFound("PenelitianPkm.InvalidInputRumpunIlmu", "Rumpun ilmu must be filled in");
         public static Error InvalidStatusMember() =>
             Error.NotFound("PenelitianPkm.InvalidStatusMember", "Don't recognize status command sent");
+        public static Error InvalidKategoriPengabdian() =>
+            Error.NotFound("PenelitianPkm.InvalidKategoriPengabdian", "Don't recognize kategori pengabdian value");
+        public static Error InvalidFokusPenelitian() =>
+            Error.NotFound("PenelitianPkm.InvalidFokusPenelitian", "Don't recognize fokus penelitian value");
+        public static Error InvalidProgramPengabdian() =>
+            Error.NotFound("PenelitianPkm.InvalidProgramPengabdian", "Don't recognize program pengabdian value");
+        public static Error InvalidRirn() =>
+            Error.NotFound("PenelitianPkm.InvalidRirn", "Don't recognize rirn value");
 
         public static Error InvalidTahunPengajuan() =>
             Error.NotFound("PenelitianPkm.InvalidTahunPengajuan", "Tahun pengajuan is invalid format date");

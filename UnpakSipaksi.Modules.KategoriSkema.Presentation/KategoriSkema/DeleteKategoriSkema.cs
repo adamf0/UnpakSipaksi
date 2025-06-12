@@ -13,10 +13,10 @@ namespace UnpakSipaksi.Modules.KategoriSkema.Presentation.KategoriSkema
     {
         public static void MapEndpoint(IEndpointRouteBuilder app)
         {
-            app.MapDelete("KategoriSkema/{id}", async (string id, ISender sender) =>
+            app.MapDelete("KategoriSkema/{Uuid}", async (string Uuid, ISender sender) =>
             {
                 Result result = await sender.Send(
-                    new DeleteKategoriSkemaCommand(id)
+                    new DeleteKategoriSkemaCommand(Uuid)
                 );
 
                 return result.Match(() => Results.Ok(), ApiResults.Problem);

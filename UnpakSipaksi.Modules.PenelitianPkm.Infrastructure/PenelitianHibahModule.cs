@@ -30,6 +30,10 @@ using UnpakSipaksi.Modules.PenelitianPkm.Infrastructure.RAB;
 using UnpakSipaksi.Modules.PenelitianPkm.Infrastructure.Substansi;
 using UnpakSipaksi.Modules.PenelitianPkm.Presentation.PenelitianPkm;
 using UnpakSipaksi.Modules.PenelitianPkm.Domain.PenelitianPkm;
+using UnpakSipaksi.Modules.PenelitianPkm.Infrastructure.DokumenLainnya;
+using UnpakSipaksi.Modules.PenelitianPkm.Domain.DokumenLainnya;
+using UnpakSipaksi.Modules.PenelitianPkm.Domain.DokumenMitra;
+using UnpakSipaksi.Modules.PenelitianPkm.Infrastructure.DokumenMitra;
 
 namespace UnpakSipaksi.Modules.PenelitianPkm.Infrastructure
 {
@@ -73,6 +77,10 @@ namespace UnpakSipaksi.Modules.PenelitianPkm.Infrastructure
 
             services.AddDbContext<RABDbContext>(optionsBuilder => optionsBuilder.UseMySQL(databaseConnectionString));
 
+            services.AddDbContext<DokumenLainnyaDbContext>(optionsBuilder => optionsBuilder.UseMySQL(databaseConnectionString));
+
+            services.AddDbContext<DokumenMitraDbContext>(optionsBuilder => optionsBuilder.UseMySQL(databaseConnectionString));
+
 
 
             services.AddScoped<IPenelitianPkmRepository, PenelitianPkmRepository>();
@@ -88,6 +96,10 @@ namespace UnpakSipaksi.Modules.PenelitianPkm.Infrastructure
             services.AddScoped<ILuaranRepository, LuaranRepository>();
 
             services.AddScoped<IRABRepository, RABRepository>();
+
+            services.AddScoped<IDokumenLainnyaRepository, DokumenLainnyaRepository>();
+
+            services.AddScoped<IDokumenMitraRepository, DokumenMitraRepository>();
 
 
             services.AddScoped<IPenelitianPkmApi, PenelitianPkmApi>();
@@ -107,6 +119,10 @@ namespace UnpakSipaksi.Modules.PenelitianPkm.Infrastructure
             services.AddScoped<IUnitOfWorkLuaran>(sp => sp.GetRequiredService<LuaranDbContext>());
 
             services.AddScoped<IUnitOfWorkRAB>(sp => sp.GetRequiredService<RABDbContext>());
+
+            services.AddScoped<IUnitOfWorkDokumenLainnya>(sp => sp.GetRequiredService<DokumenLainnyaDbContext>());
+
+            services.AddScoped<IUnitOfWorkDokumenMitra>(sp => sp.GetRequiredService<DokumenMitraDbContext>());
 
         }
     }

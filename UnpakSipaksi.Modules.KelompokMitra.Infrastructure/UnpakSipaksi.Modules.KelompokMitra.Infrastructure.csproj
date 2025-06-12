@@ -28,6 +28,7 @@
 		<ProjectReference Include="..\UnpakSipaksi.Modules.KelompokMitra.Domain\UnpakSipaksi.Modules.KelompokMitra.Domain.csproj" />
 		<ProjectReference Include="..\UnpakSipaksi.Modules.KelompokMitra.Presentation\UnpakSipaksi.Modules.KelompokMitra.Presentation.csproj" />
 		<ProjectReference Include="..\UnpakSipaksi.Modules.KelompokMitra.Domain\UnpakSipaksi.Modules.KelompokMitra.Domain.csproj" />
+		<ProjectReference Include="..\UnpakSipaksi.Modules.KelompokMitra.PublicApi\UnpakSipaksi.Modules.KelompokMitra.PublicApi.csproj" />
 	</ItemGroup>
 
 </Project>

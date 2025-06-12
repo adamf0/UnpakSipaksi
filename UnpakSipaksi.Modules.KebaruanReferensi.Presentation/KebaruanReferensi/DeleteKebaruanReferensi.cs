@@ -13,10 +13,10 @@ namespace UnpakSipaksi.Modules.KebaruanReferensi.Presentation.KebaruanReferensi
     {
         public static void MapEndpoint(IEndpointRouteBuilder app)
         {
-            app.MapDelete("KebaruanReferensi/{id}", async (string id, ISender sender) =>
+            app.MapDelete("KebaruanReferensi/{Uuid}", async (string Uuid, ISender sender) =>
             {
                 Result result = await sender.Send(
-                    new DeleteKebaruanReferensiCommand(id)
+                    new DeleteKebaruanReferensiCommand(Uuid)
                 );
 
                 return result.Match(() => Results.Ok(), ApiResults.Problem);

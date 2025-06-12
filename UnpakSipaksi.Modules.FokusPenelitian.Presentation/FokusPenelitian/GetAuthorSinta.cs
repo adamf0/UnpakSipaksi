@@ -12,9 +12,9 @@ namespace UnpakSipaksi.Modules.FokusPenelitian.Presentation.FokusPenelitian
     {
         public static void MapEndpoint(IEndpointRouteBuilder app)
         {
-            app.MapGet("FokusPenelitian/{id}", async (Guid id, ISender sender) =>
+            app.MapGet("FokusPenelitian/{Uuid}", async (Guid Uuid, ISender sender) =>
             {
-                Result<FokusPenelitianResponse> result = await sender.Send(new GetFokusPenelitianQuery(id));
+                Result<FokusPenelitianResponse> result = await sender.Send(new GetFokusPenelitianQuery(Uuid));
 
                 return result.Match(Results.Ok, ApiResults.Problem);
             }).WithTags(Tags.FokusPenelitian);

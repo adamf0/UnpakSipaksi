@@ -1574,7 +1574,8 @@
           "UnpakSipaksi.Common.Infrastructure": "1.0.0",
           "UnpakSipaksi.Modules.FokusPengabdian.Application": "1.0.0",
           "UnpakSipaksi.Modules.FokusPengabdian.Domain": "1.0.0",
-          "UnpakSipaksi.Modules.FokusPengabdian.Presentation": "1.0.0"
+          "UnpakSipaksi.Modules.FokusPengabdian.Presentation": "1.0.0",
+          "UnpakSipaksi.Modules.FokusPengabdian.PublicApi": "1.0.0"
         },
         "runtime": {
           "UnpakSipaksi.Modules.FokusPengabdian.Infrastructure.dll": {}
@@ -1588,6 +1589,11 @@
         },
         "runtime": {
           "UnpakSipaksi.Modules.FokusPengabdian.Presentation.dll": {}
+        }
+      },
+      "UnpakSipaksi.Modules.FokusPengabdian.PublicApi/1.0.0": {
+        "runtime": {
+          "UnpakSipaksi.Modules.FokusPengabdian.PublicApi.dll": {}
         }
       },
       "UnpakSipaksi.Modules.IndikatorCapaian.Application/1.0.0": {
@@ -2060,7 +2066,8 @@
           "UnpakSipaksi.Common.Infrastructure": "1.0.0",
           "UnpakSipaksi.Modules.KategoriProgramPengabdian.Application": "1.0.0",
           "UnpakSipaksi.Modules.KategoriProgramPengabdian.Domain": "1.0.0",
-          "UnpakSipaksi.Modules.KategoriProgramPengabdian.Presentation": "1.0.0"
+          "UnpakSipaksi.Modules.KategoriProgramPengabdian.Presentation": "1.0.0",
+          "UnpakSipaksi.Modules.KategoriProgramPengabdian.PublicApi": "1.0.0"
         },
         "runtime": {
           "UnpakSipaksi.Modules.KategoriProgramPengabdian.Infrastructure.dll": {}
@@ -2074,6 +2081,11 @@
         },
         "runtime": {
           "UnpakSipaksi.Modules.KategoriProgramPengabdian.Presentation.dll": {}
+        }
+      },
+      "UnpakSipaksi.Modules.KategoriProgramPengabdian.PublicApi/1.0.0": {
+        "runtime": {
+          "UnpakSipaksi.Modules.KategoriProgramPengabdian.PublicApi.dll": {}
         }
       },
       "UnpakSipaksi.Modules.KategoriSkema.Application/1.0.0": {
@@ -2348,7 +2360,8 @@
           "UnpakSipaksi.Common.Infrastructure": "1.0.0",
           "UnpakSipaksi.Modules.KelompokMitra.Application": "1.0.0",
           "UnpakSipaksi.Modules.KelompokMitra.Domain": "1.0.0",
-          "UnpakSipaksi.Modules.KelompokMitra.Presentation": "1.0.0"
+          "UnpakSipaksi.Modules.KelompokMitra.Presentation": "1.0.0",
+          "UnpakSipaksi.Modules.KelompokMitra.PublicApi": "1.0.0"
         },
         "runtime": {
           "UnpakSipaksi.Modules.KelompokMitra.Infrastructure.dll": {}
@@ -2362,6 +2375,11 @@
         },
         "runtime": {
           "UnpakSipaksi.Modules.KelompokMitra.Presentation.dll": {}
+        }
+      },
+      "UnpakSipaksi.Modules.KelompokMitra.PublicApi/1.0.0": {
+        "runtime": {
+          "UnpakSipaksi.Modules.KelompokMitra.PublicApi.dll": {}
         }
       },
       "UnpakSipaksi.Modules.KelompokRab.Application/1.0.0": {
@@ -3388,12 +3406,16 @@
           "MediatR": "12.4.1",
           "UnpakSipaksi.Common.Application": "1.0.0",
           "UnpakSipaksi.Common.Domain": "1.0.0",
+          "UnpakSipaksi.Modules.FokusPengabdian.PublicApi": "1.0.0",
           "UnpakSipaksi.Modules.IndikatorCapaian.PublicApi": "1.0.0",
           "UnpakSipaksi.Modules.JenisLuaran.PublicApi": "1.0.0",
+          "UnpakSipaksi.Modules.KategoriProgramPengabdian.PublicApi": "1.0.0",
+          "UnpakSipaksi.Modules.KelompokMitra.PublicApi": "1.0.0",
           "UnpakSipaksi.Modules.KelompokRab.PublicApi": "1.0.0",
           "UnpakSipaksi.Modules.Komponen.PublicApi": "1.0.0",
           "UnpakSipaksi.Modules.PenelitianPkm.Domain": "1.0.0",
           "UnpakSipaksi.Modules.PenelitianPkm.PublicApi": "1.0.0",
+          "UnpakSipaksi.Modules.Rirn.PublicApi": "1.0.0",
           "UnpakSipaksi.Modules.RumpunIlmu1.PublicApi": "1.0.0",
           "UnpakSipaksi.Modules.RumpunIlmu2.PublicApi": "1.0.0",
           "UnpakSipaksi.Modules.RumpunIlmu3.PublicApi": "1.0.0",
@@ -3431,6 +3453,7 @@
         "dependencies": {
           "UnpakSipaksi.Common.Domain": "1.0.0",
           "UnpakSipaksi.Common.Presentation": "1.0.0",
+          "UnpakSipaksi.Modules.KategoriProgramPengabdian.Application": "1.0.0",
           "UnpakSipaksi.Modules.PenelitianPkm.Application": "1.0.0"
         },
         "runtime": {
@@ -3955,7 +3978,8 @@
           "UnpakSipaksi.Common.Infrastructure": "1.0.0",
           "UnpakSipaksi.Modules.Rirn.Application": "1.0.0",
           "UnpakSipaksi.Modules.Rirn.Domain": "1.0.0",
-          "UnpakSipaksi.Modules.Rirn.Presentation": "1.0.0"
+          "UnpakSipaksi.Modules.Rirn.Presentation": "1.0.0",
+          "UnpakSipaksi.Modules.Rirn.PublicApi": "1.0.0"
         },
         "runtime": {
           "UnpakSipaksi.Modules.Rirn.Infrastructure.dll": {}
@@ -3969,6 +3993,11 @@
         },
         "runtime": {
           "UnpakSipaksi.Modules.Rirn.Presentation.dll": {}
+        }
+      },
+      "UnpakSipaksi.Modules.Rirn.PublicApi/1.0.0": {
+        "runtime": {
+          "UnpakSipaksi.Modules.Rirn.PublicApi.dll": {}
         }
       },
       "UnpakSipaksi.Modules.Roadmap.Application/1.0.0": {
@@ -5554,6 +5583,11 @@
       "serviceable": false,
       "sha512": ""
     },
+    "UnpakSipaksi.Modules.FokusPengabdian.PublicApi/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    },
     "UnpakSipaksi.Modules.IndikatorCapaian.Application/1.0.0": {
       "type": "project",
       "serviceable": false,
@@ -5789,6 +5823,11 @@
       "serviceable": false,
       "sha512": ""
     },
+    "UnpakSipaksi.Modules.KategoriProgramPengabdian.PublicApi/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    },
     "UnpakSipaksi.Modules.KategoriSkema.Application/1.0.0": {
       "type": "project",
       "serviceable": false,
@@ -5925,6 +5964,11 @@
       "sha512": ""
     },
     "UnpakSipaksi.Modules.KelompokMitra.Presentation/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    },
+    "UnpakSipaksi.Modules.KelompokMitra.PublicApi/1.0.0": {
       "type": "project",
       "serviceable": false,
       "sha512": ""
@@ -6700,6 +6744,11 @@
       "sha512": ""
     },
     "UnpakSipaksi.Modules.Rirn.Presentation/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    },
+    "UnpakSipaksi.Modules.Rirn.PublicApi/1.0.0": {
       "type": "project",
       "serviceable": false,
       "sha512": ""

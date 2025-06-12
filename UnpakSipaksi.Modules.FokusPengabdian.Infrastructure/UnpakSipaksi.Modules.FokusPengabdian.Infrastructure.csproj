@@ -28,6 +28,7 @@
 		<ProjectReference Include="..\UnpakSipaksi.Modules.FokusPengabdian.Domain\UnpakSipaksi.Modules.FokusPengabdian.Domain.csproj" />
 		<ProjectReference Include="..\UnpakSipaksi.Modules.FokusPengabdian.Presentation\UnpakSipaksi.Modules.FokusPengabdian.Presentation.csproj" />
 		<ProjectReference Include="..\UnpakSipaksi.Modules.FokusPengabdian.Domain\UnpakSipaksi.Modules.FokusPengabdian.Domain.csproj" />
+		<ProjectReference Include="..\UnpakSipaksi.Modules.FokusPengabdian.PublicApi\UnpakSipaksi.Modules.FokusPengabdian.PublicApi.csproj" />
 	</ItemGroup>
 
 </Project>

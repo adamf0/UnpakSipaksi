@@ -8,11 +8,13 @@ C:\dev_net\UnpakSipaksi\UnpakSipaksi.Modules.KategoriProgramPengabdian.Infrastru
 C:\dev_net\UnpakSipaksi\UnpakSipaksi.Modules.KategoriProgramPengabdian.Infrastructure\bin\Debug\net8.0\UnpakSipaksi.Modules.KategoriProgramPengabdian.Application.dll
 C:\dev_net\UnpakSipaksi\UnpakSipaksi.Modules.KategoriProgramPengabdian.Infrastructure\bin\Debug\net8.0\UnpakSipaksi.Modules.KategoriProgramPengabdian.Domain.dll
 C:\dev_net\UnpakSipaksi\UnpakSipaksi.Modules.KategoriProgramPengabdian.Infrastructure\bin\Debug\net8.0\UnpakSipaksi.Modules.KategoriProgramPengabdian.Presentation.dll
+C:\dev_net\UnpakSipaksi\UnpakSipaksi.Modules.KategoriProgramPengabdian.Infrastructure\bin\Debug\net8.0\UnpakSipaksi.Modules.KategoriProgramPengabdian.PublicApi.dll
 C:\dev_net\UnpakSipaksi\UnpakSipaksi.Modules.KategoriProgramPengabdian.Infrastructure\bin\Debug\net8.0\UnpakSipaksi.Common.Application.pdb
 C:\dev_net\UnpakSipaksi\UnpakSipaksi.Modules.KategoriProgramPengabdian.Infrastructure\bin\Debug\net8.0\UnpakSipaksi.Common.Infrastructure.pdb
 C:\dev_net\UnpakSipaksi\UnpakSipaksi.Modules.KategoriProgramPengabdian.Infrastructure\bin\Debug\net8.0\UnpakSipaksi.Modules.KategoriProgramPengabdian.Application.pdb
 C:\dev_net\UnpakSipaksi\UnpakSipaksi.Modules.KategoriProgramPengabdian.Infrastructure\bin\Debug\net8.0\UnpakSipaksi.Modules.KategoriProgramPengabdian.Domain.pdb
 C:\dev_net\UnpakSipaksi\UnpakSipaksi.Modules.KategoriProgramPengabdian.Infrastructure\bin\Debug\net8.0\UnpakSipaksi.Modules.KategoriProgramPengabdian.Presentation.pdb
+C:\dev_net\UnpakSipaksi\UnpakSipaksi.Modules.KategoriProgramPengabdian.Infrastructure\bin\Debug\net8.0\UnpakSipaksi.Modules.KategoriProgramPengabdian.PublicApi.pdb
 C:\dev_net\UnpakSipaksi\UnpakSipaksi.Modules.KategoriProgramPengabdian.Infrastructure\bin\Debug\net8.0\UnpakSipaksi.Common.Domain.pdb
 C:\dev_net\UnpakSipaksi\UnpakSipaksi.Modules.KategoriProgramPengabdian.Infrastructure\bin\Debug\net8.0\UnpakSipaksi.Common.Presentation.pdb
 C:\dev_net\UnpakSipaksi\UnpakSipaksi.Modules.KategoriProgramPengabdian.Infrastructure\obj\Debug\net8.0\UnpakSipaksi.Modules.KategoriProgramPengabdian.Infrastructure.csproj.AssemblyReference.cache

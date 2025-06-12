@@ -9,6 +9,8 @@ using UnpakSipaksi.Modules.KategoriProgramPengabdian.Application.Abstractions.Da
 using UnpakSipaksi.Modules.KategoriProgramPengabdian.Infrastructure.KategoriProgramPengabdian;
 using UnpakSipaksi.Modules.KategoriProgramPengabdian.Infrastructure.Database;
 using UnpakSipaksi.Modules.KategoriProgramPengabdian.Presentation.KategoriProgramPengabdian;
+using UnpakSipaksi.Modules.KategoriProgramPengabdian.PublicApi;
+using UnpakSipaksi.Modules.KategoriProgramPengabdian.Infrastructure.PublicApi;
 
 namespace UnpakSipaksi.Modules.KategoriProgramPengabdian.Infrastructure
 {
@@ -38,6 +40,8 @@ namespace UnpakSipaksi.Modules.KategoriProgramPengabdian.Infrastructure
             services.AddDbContext<KategoriProgramPengabdianDbContext>(optionsBuilder => optionsBuilder.UseMySQL(databaseConnectionString));
 
             services.AddScoped<IKategoriProgramPengabdianRepository, KategoriProgramPengabdianRepository>();
+
+            services.AddScoped<IKategoriProgramPengabdianApi, KategoriProgramPengabdianApi>();
 
             services.AddScoped<IUnitOfWork>(sp => sp.GetRequiredService<KategoriProgramPengabdianDbContext>());
         }
