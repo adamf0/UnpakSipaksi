@@ -13,10 +13,10 @@ namespace UnpakSipaksi.Modules.PenugasanReviewer.Presentation.PenugasanReviewer
     {
         public static void MapEndpoint(IEndpointRouteBuilder app)
         {
-            app.MapDelete("PenugasanReviewer/{id}", async (string id, ISender sender) =>
+            app.MapDelete("PenugasanReviewer/{Uuid}", async (string Uuid, ISender sender) =>
             {
                 Result result = await sender.Send(
-                    new DeletePenugasanReviewerCommand(id)
+                    new DeletePenugasanReviewerCommand(Uuid)
                 );
 
                 return result.Match(() => Results.Ok(), ApiResults.Problem);

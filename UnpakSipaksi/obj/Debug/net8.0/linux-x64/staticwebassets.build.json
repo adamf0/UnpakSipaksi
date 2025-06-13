@@ -1,0 +1,19 @@
+{
+  "Version": 1,
+  "Hash": "ZXxQP7EXW9tpy2jfy5OUaWmDMqMao3QZg/tqrIhascI=",
+  "Source": "UnpakSipaksi",
+  "BasePath": "_content/UnpakSipaksi",
+  "Mode": "Default",
+  "ManifestType": "Build",
+  "ReferencedProjectsConfiguration": [],
+  "DiscoveryPatterns": [
+    {
+      "Name": "UnpakSipaksi\\wwwroot",
+      "Source": "UnpakSipaksi",
+      "ContentRoot": "C:\\dev_net\\UnpakSipaksi\\UnpakSipaksi\\wwwroot\\",
+      "BasePath": "_content/UnpakSipaksi",
+      "Pattern": "**"
+    }
+  ],
+  "Assets": []
+}

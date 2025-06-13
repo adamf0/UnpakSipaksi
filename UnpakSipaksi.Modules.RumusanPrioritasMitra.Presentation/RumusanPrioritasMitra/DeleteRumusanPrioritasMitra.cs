@@ -13,10 +13,10 @@ namespace UnpakSipaksi.Modules.RumusanPrioritasMitra.Presentation.RumusanPriorit
     {
         public static void MapEndpoint(IEndpointRouteBuilder app)
         {
-            app.MapDelete("RumusanPrioritasMitra/{id}", async (string id, ISender sender) =>
+            app.MapDelete("RumusanPrioritasMitra/{Uuid}", async (string Uuid, ISender sender) =>
             {
                 Result result = await sender.Send(
-                    new DeleteRumusanPrioritasMitraCommand(id)
+                    new DeleteRumusanPrioritasMitraCommand(Uuid)
                 );
 
                 return result.Match(() => Results.Ok(), ApiResults.Problem);

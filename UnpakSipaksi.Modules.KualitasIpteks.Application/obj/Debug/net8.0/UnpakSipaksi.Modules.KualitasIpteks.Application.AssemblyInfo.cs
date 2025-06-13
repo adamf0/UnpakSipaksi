@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("UnpakSipaksi.Modules.KualitasIpteks.Application")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+243443acb4b33d82759248e9461ef48f9f31a42a")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+4153c7acf42ec8be534d28c14c22f84bb734ff61")]
 [assembly: System.Reflection.AssemblyProductAttribute("UnpakSipaksi.Modules.KualitasIpteks.Application")]
 [assembly: System.Reflection.AssemblyTitleAttribute("UnpakSipaksi.Modules.KualitasIpteks.Application")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

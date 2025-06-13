@@ -13,10 +13,10 @@ namespace UnpakSipaksi.Modules.PotensiKetercapaianLuaranDijanjikan.Presentation.
     {
         public static void MapEndpoint(IEndpointRouteBuilder app)
         {
-            app.MapDelete("PotensiKetercapaianLuaranDijanjikan/{id}", async (string id, ISender sender) =>
+            app.MapDelete("PotensiKetercapaianLuaranDijanjikan/{Uuid}", async (string Uuid, ISender sender) =>
             {
                 Result result = await sender.Send(
-                    new DeletePotensiKetercapaianLuaranDijanjikanCommand(id)
+                    new DeletePotensiKetercapaianLuaranDijanjikanCommand(Uuid)
                 );
 
                 return result.Match(() => Results.Ok(), ApiResults.Problem);

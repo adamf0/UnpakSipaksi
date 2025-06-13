@@ -7,6 +7,7 @@ C:\dev_net\UnpakSipaksi\UnpakSipaksi.Modules.PenelitianPkm.Application\bin\Debug
 C:\dev_net\UnpakSipaksi\UnpakSipaksi.Modules.PenelitianPkm.Application\bin\Debug\net8.0\UnpakSipaksi.Modules.IndikatorCapaian.PublicApi.dll
 C:\dev_net\UnpakSipaksi\UnpakSipaksi.Modules.PenelitianPkm.Application\bin\Debug\net8.0\UnpakSipaksi.Modules.JenisLuaran.PublicApi.dll
 C:\dev_net\UnpakSipaksi\UnpakSipaksi.Modules.PenelitianPkm.Application\bin\Debug\net8.0\UnpakSipaksi.Modules.KategoriProgramPengabdian.PublicApi.dll
+C:\dev_net\UnpakSipaksi\UnpakSipaksi.Modules.PenelitianPkm.Application\bin\Debug\net8.0\UnpakSipaksi.Modules.KelompokMitra.PublicApi.dll
 C:\dev_net\UnpakSipaksi\UnpakSipaksi.Modules.PenelitianPkm.Application\bin\Debug\net8.0\UnpakSipaksi.Modules.KelompokRab.PublicApi.dll
 C:\dev_net\UnpakSipaksi\UnpakSipaksi.Modules.PenelitianPkm.Application\bin\Debug\net8.0\UnpakSipaksi.Modules.Komponen.PublicApi.dll
 C:\dev_net\UnpakSipaksi\UnpakSipaksi.Modules.PenelitianPkm.Application\bin\Debug\net8.0\UnpakSipaksi.Modules.PenelitianPkm.Domain.dll
@@ -22,6 +23,7 @@ C:\dev_net\UnpakSipaksi\UnpakSipaksi.Modules.PenelitianPkm.Application\bin\Debug
 C:\dev_net\UnpakSipaksi\UnpakSipaksi.Modules.PenelitianPkm.Application\bin\Debug\net8.0\UnpakSipaksi.Modules.IndikatorCapaian.PublicApi.pdb
 C:\dev_net\UnpakSipaksi\UnpakSipaksi.Modules.PenelitianPkm.Application\bin\Debug\net8.0\UnpakSipaksi.Modules.JenisLuaran.PublicApi.pdb
 C:\dev_net\UnpakSipaksi\UnpakSipaksi.Modules.PenelitianPkm.Application\bin\Debug\net8.0\UnpakSipaksi.Modules.KategoriProgramPengabdian.PublicApi.pdb
+C:\dev_net\UnpakSipaksi\UnpakSipaksi.Modules.PenelitianPkm.Application\bin\Debug\net8.0\UnpakSipaksi.Modules.KelompokMitra.PublicApi.pdb
 C:\dev_net\UnpakSipaksi\UnpakSipaksi.Modules.PenelitianPkm.Application\bin\Debug\net8.0\UnpakSipaksi.Modules.KelompokRab.PublicApi.pdb
 C:\dev_net\UnpakSipaksi\UnpakSipaksi.Modules.PenelitianPkm.Application\bin\Debug\net8.0\UnpakSipaksi.Modules.Komponen.PublicApi.pdb
 C:\dev_net\UnpakSipaksi\UnpakSipaksi.Modules.PenelitianPkm.Application\bin\Debug\net8.0\UnpakSipaksi.Modules.PenelitianPkm.Domain.pdb
@@ -42,5 +44,3 @@ C:\dev_net\UnpakSipaksi\UnpakSipaksi.Modules.PenelitianPkm.Application\obj\Debug
 C:\dev_net\UnpakSipaksi\UnpakSipaksi.Modules.PenelitianPkm.Application\obj\Debug\net8.0\refint\UnpakSipaksi.Modules.PenelitianPkm.Application.dll
 C:\dev_net\UnpakSipaksi\UnpakSipaksi.Modules.PenelitianPkm.Application\obj\Debug\net8.0\UnpakSipaksi.Modules.PenelitianPkm.Application.pdb
 C:\dev_net\UnpakSipaksi\UnpakSipaksi.Modules.PenelitianPkm.Application\obj\Debug\net8.0\ref\UnpakSipaksi.Modules.PenelitianPkm.Application.dll
-C:\dev_net\UnpakSipaksi\UnpakSipaksi.Modules.PenelitianPkm.Application\bin\Debug\net8.0\UnpakSipaksi.Modules.KelompokMitra.PublicApi.dll
-C:\dev_net\UnpakSipaksi\UnpakSipaksi.Modules.PenelitianPkm.Application\bin\Debug\net8.0\UnpakSipaksi.Modules.KelompokMitra.PublicApi.pdb

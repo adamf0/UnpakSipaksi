@@ -25,6 +25,7 @@ namespace UnpakSipaksi.Modules.PenelitianHibah.Presentation.PenelitianHibah
                     Directory.CreateDirectory(uploadsFolder);
                 }
 
+                //[Review] untuk ini harus cek ulang apakah file name perlu di check file tranversal atau tidak
                 if (request.File != null && request.File.Length > 0)
                 {
                     string safeFileName = fileProvider.GenerateFileName(request.File);

@@ -2058,6 +2058,78 @@
           "Microsoft.AspNetCore.App"
         ]
       },
+      "UnpakSipaksi.Modules.Administrasi.Application/1.0.0": {
+        "type": "project",
+        "framework": ".NETCoreApp,Version=v8.0",
+        "dependencies": {
+          "Dapper": "2.1.35",
+          "MediatR": "12.4.1",
+          "UnpakSipaksi.Common.Application": "1.0.0",
+          "UnpakSipaksi.Common.Domain": "1.0.0",
+          "UnpakSipaksi.Modules.Administrasi.Domain": "1.0.0",
+          "UnpakSipaksi.Modules.PenelitianHibah.PublicApi": "1.0.0",
+          "UnpakSipaksi.Modules.PenelitianPkm.PublicApi": "1.0.0"
+        },
+        "compile": {
+          "bin/placeholder/UnpakSipaksi.Modules.Administrasi.Application.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/UnpakSipaksi.Modules.Administrasi.Application.dll": {}
+        }
+      },
+      "UnpakSipaksi.Modules.Administrasi.Domain/1.0.0": {
+        "type": "project",
+        "framework": ".NETCoreApp,Version=v8.0",
+        "dependencies": {
+          "UnpakSipaksi.Common.Domain": "1.0.0"
+        },
+        "compile": {
+          "bin/placeholder/UnpakSipaksi.Modules.Administrasi.Domain.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/UnpakSipaksi.Modules.Administrasi.Domain.dll": {}
+        }
+      },
+      "UnpakSipaksi.Modules.Administrasi.Infrastructure/1.0.0": {
+        "type": "project",
+        "framework": ".NETCoreApp,Version=v8.0",
+        "dependencies": {
+          "Microsoft.EntityFrameworkCore": "8.0.0",
+          "MySql.EntityFrameworkCore": "8.0.0",
+          "UnpakSipaksi.Common.Application": "1.0.0",
+          "UnpakSipaksi.Common.Infrastructure": "1.0.0",
+          "UnpakSipaksi.Modules.Administrasi.Application": "1.0.0",
+          "UnpakSipaksi.Modules.Administrasi.Domain": "1.0.0",
+          "UnpakSipaksi.Modules.Administrasi.Presentation": "1.0.0"
+        },
+        "compile": {
+          "bin/placeholder/UnpakSipaksi.Modules.Administrasi.Infrastructure.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/UnpakSipaksi.Modules.Administrasi.Infrastructure.dll": {}
+        },
+        "frameworkReferences": [
+          "Microsoft.AspNetCore.App"
+        ]
+      },
+      "UnpakSipaksi.Modules.Administrasi.Presentation/1.0.0": {
+        "type": "project",
+        "framework": ".NETCoreApp,Version=v8.0",
+        "dependencies": {
+          "UnpakSipaksi.Common.Domain": "1.0.0",
+          "UnpakSipaksi.Common.Presentation": "1.0.0",
+          "UnpakSipaksi.Modules.Administrasi.Application": "1.0.0"
+        },
+        "compile": {
+          "bin/placeholder/UnpakSipaksi.Modules.Administrasi.Presentation.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/UnpakSipaksi.Modules.Administrasi.Presentation.dll": {}
+        },
+        "frameworkReferences": [
+          "Microsoft.AspNetCore.App"
+        ]
+      },
       "UnpakSipaksi.Modules.AkurasiPenelitian.Application/1.0.0": {
         "type": "project",
         "framework": ".NETCoreApp,Version=v8.0",
@@ -11065,6 +11137,26 @@
       "path": "../UnpakSipaksi.Common.Presentation/UnpakSipaksi.Common.Presentation.csproj",
       "msbuildProject": "../UnpakSipaksi.Common.Presentation/UnpakSipaksi.Common.Presentation.csproj"
     },
+    "UnpakSipaksi.Modules.Administrasi.Application/1.0.0": {
+      "type": "project",
+      "path": "../UnpakSipaksi.Modules.Administrasi.Application/UnpakSipaksi.Modules.Administrasi.Application.csproj",
+      "msbuildProject": "../UnpakSipaksi.Modules.Administrasi.Application/UnpakSipaksi.Modules.Administrasi.Application.csproj"
+    },
+    "UnpakSipaksi.Modules.Administrasi.Domain/1.0.0": {
+      "type": "project",
+      "path": "../UnpakSipaksi.Modules.Administrasi.Domain/UnpakSipaksi.Modules.Administrasi.Domain.csproj",
+      "msbuildProject": "../UnpakSipaksi.Modules.Administrasi.Domain/UnpakSipaksi.Modules.Administrasi.Domain.csproj"
+    },
+    "UnpakSipaksi.Modules.Administrasi.Infrastructure/1.0.0": {
+      "type": "project",
+      "path": "../UnpakSipaksi.Modules.Administrasi.Infrastructure/UnpakSipaksi.Modules.Administrasi.Infrastructure.csproj",
+      "msbuildProject": "../UnpakSipaksi.Modules.Administrasi.Infrastructure/UnpakSipaksi.Modules.Administrasi.Infrastructure.csproj"
+    },
+    "UnpakSipaksi.Modules.Administrasi.Presentation/1.0.0": {
+      "type": "project",
+      "path": "../UnpakSipaksi.Modules.Administrasi.Presentation/UnpakSipaksi.Modules.Administrasi.Presentation.csproj",
+      "msbuildProject": "../UnpakSipaksi.Modules.Administrasi.Presentation/UnpakSipaksi.Modules.Administrasi.Presentation.csproj"
+    },
     "UnpakSipaksi.Modules.AkurasiPenelitian.Application/1.0.0": {
       "type": "project",
       "path": "../UnpakSipaksi.Modules.AkurasiPenelitian.Application/UnpakSipaksi.Modules.AkurasiPenelitian.Application.csproj",
@@ -12673,6 +12765,8 @@
       "Swashbuckle.AspNetCore >= 7.0.0",
       "UnpakSipaksi.Common.Application >= 1.0.0",
       "UnpakSipaksi.Common.Infrastructure >= 1.0.0",
+      "UnpakSipaksi.Modules.Administrasi.Application >= 1.0.0",
+      "UnpakSipaksi.Modules.Administrasi.Infrastructure >= 1.0.0",
       "UnpakSipaksi.Modules.AkurasiPenelitian.Application >= 1.0.0",
       "UnpakSipaksi.Modules.AkurasiPenelitian.Infrastructure >= 1.0.0",
       "UnpakSipaksi.Modules.ArtikelMediaMassa.Application >= 1.0.0",
@@ -12840,6 +12934,12 @@
             },
             "C:\\dev_net\\UnpakSipaksi\\UnpakSipaksi.Common.Infrastructure\\UnpakSipaksi.Common.Infrastructure.csproj": {
               "projectPath": "C:\\dev_net\\UnpakSipaksi\\UnpakSipaksi.Common.Infrastructure\\UnpakSipaksi.Common.Infrastructure.csproj"
+            },
+            "C:\\dev_net\\UnpakSipaksi\\UnpakSipaksi.Modules.Administrasi.Application\\UnpakSipaksi.Modules.Administrasi.Application.csproj": {
+              "projectPath": "C:\\dev_net\\UnpakSipaksi\\UnpakSipaksi.Modules.Administrasi.Application\\UnpakSipaksi.Modules.Administrasi.Application.csproj"
+            },
+            "C:\\dev_net\\UnpakSipaksi\\UnpakSipaksi.Modules.Administrasi.Infrastructure\\UnpakSipaksi.Modules.Administrasi.Infrastructure.csproj": {
+              "projectPath": "C:\\dev_net\\UnpakSipaksi\\UnpakSipaksi.Modules.Administrasi.Infrastructure\\UnpakSipaksi.Modules.Administrasi.Infrastructure.csproj"
             },
             "C:\\dev_net\\UnpakSipaksi\\UnpakSipaksi.Modules.AkurasiPenelitian.Application\\UnpakSipaksi.Modules.AkurasiPenelitian.Application.csproj": {
               "projectPath": "C:\\dev_net\\UnpakSipaksi\\UnpakSipaksi.Modules.AkurasiPenelitian.Application\\UnpakSipaksi.Modules.AkurasiPenelitian.Application.csproj"
@@ -13303,6 +13403,12 @@
         ],
         "assetTargetFallback": true,
         "warn": true,
+        "downloadDependencies": [
+          {
+            "name": "Microsoft.NETCore.App.Crossgen2.win-x64",
+            "version": "[8.0.6, 8.0.6]"
+          }
+        ],
         "frameworkReferences": {
           "Microsoft.AspNetCore.App": {
             "privateAssets": "none"

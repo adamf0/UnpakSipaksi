@@ -20,7 +20,8 @@ namespace UnpakSipaksi.Common.Presentation.FileManager
         };
 
         private static readonly string[] AllowedMimeTypes = {
-            "image/jpg", "image/jpeg", "image/png",
+            "image/jpeg", 
+            "image/png",
             "application/pdf",
             "application/msword",
             "application/vnd.openxmlformats-officedocument.wordprocessingml.document",
@@ -30,27 +31,27 @@ namespace UnpakSipaksi.Common.Presentation.FileManager
             "application/vnd.openxmlformats-officedocument.spreadsheetml.sheet"
         };
 
-        private static readonly Dictionary<string, string> MimeTypeAllowedExtension = new(StringComparer.OrdinalIgnoreCase){
-            { "image/jpg", "jpg" },
-            { "image/jpeg", "jpeg" },
-            { "image/png", "png" },
-            { "application/pdf", "pdf" },
-            { "application/msword", "doc" },
-            { "application/vnd.openxmlformats-officedocument.wordprocessingml.document", "docx" },
-            { "application/vnd.ms-powerpoint", "ppt" },
-            { "application/vnd.openxmlformats-officedocument.presentationml.presentation", "pptx" },
-            { "application/vnd.ms-excel", "xls" },
-            { "application/vnd.openxmlformats-officedocument.spreadsheetml.sheet", "xlsx" }
+        private static readonly Dictionary<string, string[]> MimeTypeAllowedExtensions = new(StringComparer.OrdinalIgnoreCase)
+        {
+            { "image/jpeg", new[] { "jpg", "jpeg" } },
+            { "image/png", new[] { "png" } },
+            { "application/pdf", new[] { "pdf" } },
+            { "application/msword", new[] { "doc" } },
+            { "application/vnd.openxmlformats-officedocument.wordprocessingml.document", new[] { "docx" } },
+            { "application/vnd.ms-powerpoint", new[] { "ppt" } },
+            { "application/vnd.openxmlformats-officedocument.presentationml.presentation", new[] { "pptx" } },
+            { "application/vnd.ms-excel", new[] { "xls" } },
+            { "application/vnd.openxmlformats-officedocument.spreadsheetml.sheet", new[] { "xlsx" } }
         };
 
         public FileProvider() { }
 
         public string GenerateFileName(IFormFile file)
         {
-            string fileNameWithoutExt = Path.GetFileNameWithoutExtension(file.FileName);
+            //string fileNameWithoutExt = Path.GetFileNameWithoutExtension(file.FileName);
             string safeExtension = GetSafeExtension(file);
 
-            return $"{Guid.NewGuid()}_{fileNameWithoutExt[..Math.Min(fileNameWithoutExt.Length, 50)]}.{safeExtension}";
+            return $"{Guid.NewGuid()}.{safeExtension}";
         }
 
         public string GetSafeExtension(IFormFile file)
@@ -91,9 +92,9 @@ namespace UnpakSipaksi.Common.Presentation.FileManager
 
         public bool IsValidMimeTypeAllowedExtension(string mimeType, string extension)
         {
-            if (MimeTypeAllowedExtension.TryGetValue(mimeType, out var expectedExtension))
+            if (MimeTypeAllowedExtensions.TryGetValue(mimeType, out var allowedExtensions))
             {
-                return string.Equals(expectedExtension, extension, StringComparison.OrdinalIgnoreCase);
+                return allowedExtensions.Any(ext => string.Equals(ext, extension, StringComparison.OrdinalIgnoreCase));
             }
 
             return false;

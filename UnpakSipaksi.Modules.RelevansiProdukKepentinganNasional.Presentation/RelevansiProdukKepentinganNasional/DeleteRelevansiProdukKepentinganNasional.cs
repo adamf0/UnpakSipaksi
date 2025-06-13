@@ -13,10 +13,10 @@ namespace UnpakSipaksi.Modules.RelevansiProdukKepentinganNasional.Presentation.R
     {
         public static void MapEndpoint(IEndpointRouteBuilder app)
         {
-            app.MapDelete("RelevansiProdukKepentinganNasional/{id}", async (string id, ISender sender) =>
+            app.MapDelete("RelevansiProdukKepentinganNasional/{Uuid}", async (string Uuid, ISender sender) =>
             {
                 Result result = await sender.Send(
-                    new DeleteRelevansiProdukKepentinganNasionalCommand(id)
+                    new DeleteRelevansiProdukKepentinganNasionalCommand(Uuid)
                 );
 
                 return result.Match(() => Results.Ok(), ApiResults.Problem);

@@ -13,10 +13,10 @@ namespace UnpakSipaksi.Modules.TemaPenelitian.Presentation.TemaPenelitian
     {
         public static void MapEndpoint(IEndpointRouteBuilder app)
         {
-            app.MapDelete("TemaPenelitian/{id}", async (string id, ISender sender) =>
+            app.MapDelete("TemaPenelitian/{Uuid}", async (string Uuid, ISender sender) =>
             {
                 Result result = await sender.Send(
-                    new DeleteTemaPenelitianCommand(id)
+                    new DeleteTemaPenelitianCommand(Uuid)
                 );
 
                 return result.Match(() => Results.Ok(), ApiResults.Problem);

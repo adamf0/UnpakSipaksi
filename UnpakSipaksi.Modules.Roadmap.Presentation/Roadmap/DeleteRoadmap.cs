@@ -13,10 +13,10 @@ namespace UnpakSipaksi.Modules.Roadmap.Presentation.Roadmap
     {
         public static void MapEndpoint(IEndpointRouteBuilder app)
         {
-            app.MapDelete("Roadmap/{id}", async (string id, ISender sender) =>
+            app.MapDelete("Roadmap/{Uuid}", async (string Uuid, ISender sender) =>
             {
                 Result result = await sender.Send(
-                    new DeleteRoadmapCommand(id)
+                    new DeleteRoadmapCommand(Uuid)
                 );
 
                 return result.Match(() => Results.Ok(), ApiResults.Problem);

@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.Globalization;
 using System.Linq;
+using System.Net;
 using System.Text;
 using System.Text.RegularExpressions;
 using System.Threading.Tasks;
@@ -17,6 +18,21 @@ namespace UnpakSipaksi.Common.Application
         public static bool BeValidGuidV4(string guid)
         {
             return GuidV4Regex.IsMatch(guid);
+        }
+
+        public static bool IsFileTransversal(string inputPath)
+        {
+            if (string.IsNullOrWhiteSpace(inputPath))
+                return false;
+
+            string decodedPath = WebUtility.UrlDecode(WebUtility.UrlDecode(inputPath));
+            //string fullPath = Path.GetFullPath(decodedPath);
+            string normalized = decodedPath.Replace('\\', '/');
+
+            var traversalPattern = new Regex(@"(^|/)\.\.(?=/|$)", RegexOptions.Compiled | RegexOptions.IgnoreCase);
+            var percentPattern = new Regex("%", RegexOptions.Compiled);
+
+            return percentPattern.IsMatch(normalized) && traversalPattern.IsMatch(normalized);
         }
 
         public static bool BeAValidDriveLink(string link, string? domain = null)

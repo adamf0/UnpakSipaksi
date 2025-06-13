@@ -30,10 +30,16 @@
 			<Nullable>disable</Nullable>
 		</PropertyGroup>
 	</Target>
+	
+	<PropertyGroup>
+	  <PublishReadyToRun>true</PublishReadyToRun>
+	</PropertyGroup>
 
 	<ItemGroup>
 		<ProjectReference Include="..\UnpakSipaksi.Common.Application\UnpakSipaksi.Common.Application.csproj" />
 		<ProjectReference Include="..\UnpakSipaksi.Common.Infrastructure\UnpakSipaksi.Common.Infrastructure.csproj" />
+		<ProjectReference Include="..\UnpakSipaksi.Modules.Administrasi.Application\UnpakSipaksi.Modules.Administrasi.Application.csproj" />
+		<ProjectReference Include="..\UnpakSipaksi.Modules.Administrasi.Infrastructure\UnpakSipaksi.Modules.Administrasi.Infrastructure.csproj" />
 		<ProjectReference Include="..\UnpakSipaksi.Modules.AkurasiPenelitian.Application\UnpakSipaksi.Modules.AkurasiPenelitian.Application.csproj" />
 		<ProjectReference Include="..\UnpakSipaksi.Modules.AkurasiPenelitian.Infrastructure\UnpakSipaksi.Modules.AkurasiPenelitian.Infrastructure.csproj" />
 		<ProjectReference Include="..\UnpakSipaksi.Modules.ArtikelMediaMassa.Application\UnpakSipaksi.Modules.ArtikelMediaMassa.Application.csproj" />

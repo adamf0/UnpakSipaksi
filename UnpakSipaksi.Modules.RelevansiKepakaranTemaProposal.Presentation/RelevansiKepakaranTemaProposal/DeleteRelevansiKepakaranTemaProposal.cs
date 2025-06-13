@@ -13,10 +13,10 @@ namespace UnpakSipaksi.Modules.RelevansiKepakaranTemaProposal.Presentation.Relev
     {
         public static void MapEndpoint(IEndpointRouteBuilder app)
         {
-            app.MapDelete("RelevansiKepakaranTemaProposal/{id}", async (string id, ISender sender) =>
+            app.MapDelete("RelevansiKepakaranTemaProposal/{Uuid}", async (string Uuid, ISender sender) =>
             {
                 Result result = await sender.Send(
-                    new DeleteRelevansiKepakaranTemaProposalCommand(id)
+                    new DeleteRelevansiKepakaranTemaProposalCommand(Uuid)
                 );
 
                 return result.Match(() => Results.Ok(), ApiResults.Problem);

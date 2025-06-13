@@ -13,10 +13,10 @@ namespace UnpakSipaksi.Modules.RoadmapPenelitian.Presentation.RoadmapPenelitian
     {
         public static void MapEndpoint(IEndpointRouteBuilder app)
         {
-            app.MapDelete("RoadmapPenelitian/{id}", async (string id, ISender sender) =>
+            app.MapDelete("RoadmapPenelitian/{Uuid}", async (string Uuid, ISender sender) =>
             {
                 Result result = await sender.Send(
-                    new DeleteRoadmapPenelitianCommand(id)
+                    new DeleteRoadmapPenelitianCommand(Uuid)
                 );
 
                 return result.Match(() => Results.Ok(), ApiResults.Problem);

@@ -18,6 +18,8 @@
           "Swashbuckle.AspNetCore": "7.0.0",
           "UnpakSipaksi.Common.Application": "1.0.0",
           "UnpakSipaksi.Common.Infrastructure": "1.0.0",
+          "UnpakSipaksi.Modules.Administrasi.Application": "1.0.0",
+          "UnpakSipaksi.Modules.Administrasi.Infrastructure": "1.0.0",
           "UnpakSipaksi.Modules.AkurasiPenelitian.Application": "1.0.0",
           "UnpakSipaksi.Modules.AkurasiPenelitian.Infrastructure": "1.0.0",
           "UnpakSipaksi.Modules.ArtikelMediaMassa.Application": "1.0.0",
@@ -1349,6 +1351,52 @@
         },
         "runtime": {
           "UnpakSipaksi.Common.Presentation.dll": {}
+        }
+      },
+      "UnpakSipaksi.Modules.Administrasi.Application/1.0.0": {
+        "dependencies": {
+          "Dapper": "2.1.35",
+          "MediatR": "12.4.1",
+          "UnpakSipaksi.Common.Application": "1.0.0",
+          "UnpakSipaksi.Common.Domain": "1.0.0",
+          "UnpakSipaksi.Modules.Administrasi.Domain": "1.0.0",
+          "UnpakSipaksi.Modules.PenelitianHibah.PublicApi": "1.0.0",
+          "UnpakSipaksi.Modules.PenelitianPkm.PublicApi": "1.0.0"
+        },
+        "runtime": {
+          "UnpakSipaksi.Modules.Administrasi.Application.dll": {}
+        }
+      },
+      "UnpakSipaksi.Modules.Administrasi.Domain/1.0.0": {
+        "dependencies": {
+          "UnpakSipaksi.Common.Domain": "1.0.0"
+        },
+        "runtime": {
+          "UnpakSipaksi.Modules.Administrasi.Domain.dll": {}
+        }
+      },
+      "UnpakSipaksi.Modules.Administrasi.Infrastructure/1.0.0": {
+        "dependencies": {
+          "Microsoft.EntityFrameworkCore": "8.0.0",
+          "MySql.EntityFrameworkCore": "8.0.0",
+          "UnpakSipaksi.Common.Application": "1.0.0",
+          "UnpakSipaksi.Common.Infrastructure": "1.0.0",
+          "UnpakSipaksi.Modules.Administrasi.Application": "1.0.0",
+          "UnpakSipaksi.Modules.Administrasi.Domain": "1.0.0",
+          "UnpakSipaksi.Modules.Administrasi.Presentation": "1.0.0"
+        },
+        "runtime": {
+          "UnpakSipaksi.Modules.Administrasi.Infrastructure.dll": {}
+        }
+      },
+      "UnpakSipaksi.Modules.Administrasi.Presentation/1.0.0": {
+        "dependencies": {
+          "UnpakSipaksi.Common.Domain": "1.0.0",
+          "UnpakSipaksi.Common.Presentation": "1.0.0",
+          "UnpakSipaksi.Modules.Administrasi.Application": "1.0.0"
+        },
+        "runtime": {
+          "UnpakSipaksi.Modules.Administrasi.Presentation.dll": {}
         }
       },
       "UnpakSipaksi.Modules.AkurasiPenelitian.Application/1.0.0": {
@@ -5464,6 +5512,26 @@
       "sha512": ""
     },
     "UnpakSipaksi.Common.Presentation/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    },
+    "UnpakSipaksi.Modules.Administrasi.Application/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    },
+    "UnpakSipaksi.Modules.Administrasi.Domain/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    },
+    "UnpakSipaksi.Modules.Administrasi.Infrastructure/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    },
+    "UnpakSipaksi.Modules.Administrasi.Presentation/1.0.0": {
       "type": "project",
       "serviceable": false,
       "sha512": ""

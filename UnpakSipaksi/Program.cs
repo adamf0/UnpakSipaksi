@@ -67,6 +67,7 @@ using UnpakSipaksi.Modules.KategoriLuaran.Infrastructure;
 using UnpakSipaksi.Modules.JenisLuaran.Infrastructure;
 using UnpakSipaksi.Modules.IndikatorCapaian.Infrastructure;
 using UnpakSipaksi.Modules.PenelitianPkm.Infrastructure;
+using UnpakSipaksi.Modules.Administrasi.Infrastructure;
 
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.ResponseCompression;
@@ -165,6 +166,7 @@ builder.Services.AddApplication([
     UnpakSipaksi.Modules.JenisLuaran.Application.AssemblyReference.Assembly,
     UnpakSipaksi.Modules.IndikatorCapaian.Application.AssemblyReference.Assembly,
     UnpakSipaksi.Modules.PenelitianPkm.Application.AssemblyReference.Assembly,
+    UnpakSipaksi.Modules.Administrasi.Application.AssemblyReference.Assembly,
 ]);
 
 builder.Services.AddAntiforgery(options =>
@@ -240,6 +242,7 @@ builder.Services.AddKategoriLuaranModule(builder.Configuration);
 builder.Services.AddJenisLuaranModule(builder.Configuration);
 builder.Services.AddIndikatorCapaianModule(builder.Configuration);
 builder.Services.AddPenelitianPkmModule(builder.Configuration);
+builder.Services.AddAdministrasiModule(builder.Configuration);
 
 builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen();
@@ -348,6 +351,7 @@ KategoriLuaranModule.MapEndpoints(app);
 JenisLuaranModule.MapEndpoints(app);
 IndikatorCapaianModule.MapEndpoints(app);
 PenelitianPkmModule.MapEndpoints(app);
+AdministrasiModule.MapEndpoints(app);
 
 if (app.Environment.IsDevelopment())
 {
