@@ -3,110 +3,58 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using UnpakSipaksi.Common.Domain;
+using UnpakSipaksi.Modules.Insentif.Domain.CheckInsentif;
+using UnpakSipaksi.Modules.Insentif.Domain.VerifikasiFakultas;
 
 namespace UnpakSipaksi.Modules.Insentif.Domain.Insentif
 {
-    public class InsentifCalculator
+    public static class InsentifCalculator
     {
-        private decimal _sbu;
-        private int _jumlahCoAuthor;
-
-        public decimal IFA { get; private set; }
-        public decimal ICA { get; private set; }
-        public decimal TotalInsentif { get; private set; }
-        public int PorsiSBU { get; private set; }
-
-        public InsentifCalculator(decimal sbu, int jumlahCoAuthor)
+        public static Result<InsentifResult> Hitung(InsentifInput input)
         {
-            _sbu = sbu;
-            _jumlahCoAuthor = jumlahCoAuthor;
+            if (input.PeranPenulis.Equals(Peran.CoAuthor) && input.JumlahCoAuthor<=1) {
+                return Result.Failure<InsentifResult>(InsentifErrors.InvalidDataVerifikasi());
+            }
+
+            InsentifResult result = new InsentifResult();
+
+            // Aturan porsi SBU
+            (decimal ifaRatio, decimal icaRatio, int porsi) = GetRatio(input.JenisJurnal, input.Mahasiswa, input.PeranPenulis);
+
+            result.IFA = input.SBU * ifaRatio;
+            result.ICA = input.SBU * icaRatio;
+            result.PorsiSBU = porsi;
+
+            if (input.PeranPenulis == Peran.FirstAuthor || input.JumlahCoAuthor <= 1)
+            {
+                result.TotalInsentif = result.IFA + result.ICA;
+            }
+            else
+            {
+                result.TotalInsentif = (result.IFA + result.ICA) / (input.JumlahCoAuthor - 1);
+            }
+
+            return result;
         }
 
-        public void HitungInsentif(
-            JenisJurnal jenisJurnal,
-            LibatkanMahasiswa mahasiswa,
-            Peran peran)
+        private static (decimal ifaRatio, decimal icaRatio, int porsiSBU) GetRatio(JenisJurnal jenis, bool mahasiswa, Peran peran)
         {
-            SetPorsi(jenisJurnal, mahasiswa, peran);
+            return (jenis, mahasiswa, peran) switch
+            {
+                (JenisJurnal.External, false, Peran.FirstAuthor) => (0.6m, 0m, 60),
+                (JenisJurnal.External, false, Peran.CoAuthor) => (0m, 0.4m, 40),
+                (JenisJurnal.External, true, Peran.FirstAuthor) => (0.3m, 0m, 30),
+                (JenisJurnal.External, true, Peran.CoAuthor) => (0m, 0.2m, 20),
 
-            if (peran == Peran.FirstAuthor)
-            {
-                TotalInsentif = IFA + ICA;
-            }
-            else if (peran == Peran.CoAuthor)
-            {
-                if (_jumlahCoAuthor == 1)
-                {
-                    // Auto switch to First Author logic
-                    SetPorsi(jenisJurnal, mahasiswa, Peran.FirstAuthor);
-                    TotalInsentif = IFA + ICA;
-                }
-                else
-                {
-                    TotalInsentif = (IFA + ICA) / (_jumlahCoAuthor - 1);
-                }
-            }
-        }
+                (JenisJurnal.Internal, false, Peran.FirstAuthor) => (0.3m, 0m, 30),
+                (JenisJurnal.Internal, false, Peran.CoAuthor) => (0m, 0.2m, 20),
+                (JenisJurnal.Internal, true, Peran.FirstAuthor) => (0.15m, 0m, 15),
+                (JenisJurnal.Internal, true, Peran.CoAuthor) => (0m, 0.1m, 10),
 
-        private void SetPorsi(
-            JenisJurnal jenisJurnal,
-            LibatkanMahasiswa mahasiswa,
-            Peran peran)
-        {
-            if (jenisJurnal == JenisJurnal.External)
-            {
-                if (mahasiswa == LibatkanMahasiswa.Tidak && peran == Peran.FirstAuthor)
-                {
-                    IFA = _sbu * 0.6m;
-                    ICA = 0;
-                    PorsiSBU = 60;
-                }
-                else if (mahasiswa == LibatkanMahasiswa.Tidak && peran == Peran.CoAuthor)
-                {
-                    IFA = 0;
-                    ICA = _sbu * 0.4m;
-                    PorsiSBU = 40;
-                }
-                else if (mahasiswa == LibatkanMahasiswa.Ya && peran == Peran.FirstAuthor)
-                {
-                    IFA = _sbu * 0.3m;
-                    ICA = 0;
-                    PorsiSBU = 30;
-                }
-                else if (mahasiswa == LibatkanMahasiswa.Ya && peran == Peran.CoAuthor)
-                {
-                    IFA = 0;
-                    ICA = _sbu * 0.2m;
-                    PorsiSBU = 20;
-                }
-            }
-            else if (jenisJurnal == JenisJurnal.Internal)
-            {
-                if (mahasiswa == LibatkanMahasiswa.Tidak && peran == Peran.FirstAuthor)
-                {
-                    IFA = _sbu * 0.3m;
-                    ICA = 0;
-                    PorsiSBU = 30;
-                }
-                else if (mahasiswa == LibatkanMahasiswa.Tidak && peran == Peran.CoAuthor)
-                {
-                    IFA = 0;
-                    ICA = _sbu * 0.2m;
-                    PorsiSBU = 20;
-                }
-                else if (mahasiswa == LibatkanMahasiswa.Ya && peran == Peran.FirstAuthor)
-                {
-                    IFA = _sbu * 0.15m;
-                    ICA = 0;
-                    PorsiSBU = 15;
-                }
-                else if (mahasiswa == LibatkanMahasiswa.Ya && peran == Peran.CoAuthor)
-                {
-                    IFA = 0;
-                    ICA = _sbu * 0.1m;
-                    PorsiSBU = 10;
-                }
-            }
+                _ => throw new ArgumentException("Kombinasi input tidak valid")
+            };
         }
     }
+
 }

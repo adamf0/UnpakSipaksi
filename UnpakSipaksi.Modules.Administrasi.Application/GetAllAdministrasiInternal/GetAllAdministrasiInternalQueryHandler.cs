@@ -29,7 +29,7 @@ namespace UnpakSipaksi.Modules.Administrasi.Application.GetAllAdministrasiIntern
                 a.halamanSampul AS HalamanSampul,
                 a.halamanPengesahan AS HalamanPengesahan,
                 a.identitasPengusul AS IdentitasPengusul,
-                a.identitasMahasiswaAS IdentitasMahasiswa,
+                a.identitasMahasiswa AS IdentitasMahasiswa,
                 a.mitraKerjasama AS MitraKerjasama,
                 a.luaranTargetCapaian AS LuaranTargetCapaian,
                 a.rab AS Rab,

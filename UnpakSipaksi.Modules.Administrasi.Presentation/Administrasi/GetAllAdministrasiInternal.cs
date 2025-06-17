@@ -13,9 +13,9 @@ namespace UnpakSipaksi.Modules.Administrasi.Presentation.AdministrasiInternal
     {
         public static void MapEndpoint(IEndpointRouteBuilder app)
         {
-            app.MapGet("AdministrasiInternal", async (ISender sender) =>
+            app.MapGet("AdministrasiInternal/{UuidPenelitianHibah}", async (Guid UuidPenelitianHibah, ISender sender) =>
             {
-                Result<List<AdministrasiInternalResponse>> result = await sender.Send(new GetAllAdministrasiInternalQuery());
+                Result<List<AdministrasiInternalResponse>> result = await sender.Send(new GetAllAdministrasiInternalQuery(UuidPenelitianHibah));
 
                 return result.Match(Results.Ok, ApiResults.Problem);
             }).WithTags(Tags.Administrasi);

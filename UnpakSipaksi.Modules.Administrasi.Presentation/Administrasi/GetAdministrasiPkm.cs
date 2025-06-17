@@ -12,9 +12,9 @@ namespace UnpakSipaksi.Modules.Administrasi.Presentation.AdministrasiPkm
     {
         public static void MapEndpoint(IEndpointRouteBuilder app)
         {
-            app.MapGet("AdministrasiPkm/{Uuid}", async (Guid Uuid, ISender sender) =>
+            app.MapGet("AdministrasiPkm/{Uuid}/{UuidPenelitianPkm}", async (Guid Uuid, Guid UuidPenelitianPkm, ISender sender) =>
             {
-                Result<AdministrasiPkmResponse> result = await sender.Send(new GetAdministrasiPkmQuery(Uuid));
+                Result<AdministrasiPkmResponse> result = await sender.Send(new GetAdministrasiPkmQuery(Uuid, UuidPenelitianPkm));
 
                 return result.Match(Results.Ok, ApiResults.Problem);
             }).WithTags(Tags.Administrasi);

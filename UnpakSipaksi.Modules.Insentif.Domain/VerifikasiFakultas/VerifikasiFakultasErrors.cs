@@ -5,7 +5,7 @@ using System.Text;
 using System.Threading.Tasks;
 using UnpakSipaksi.Common.Domain;
 
-namespace UnpakSipaksi.Modules.VerifikasiFakultas.Domain.VerifikasiFakultas
+namespace UnpakSipaksi.Modules.Insentif.Domain.VerifikasiFakultas
 {
     public static class VerifikasiFakultasErrors
     {

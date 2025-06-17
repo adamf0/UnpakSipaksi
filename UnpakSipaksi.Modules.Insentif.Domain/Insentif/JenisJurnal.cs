@@ -1,6 +1,6 @@
 ﻿using System.Runtime.Serialization;
 
-namespace UnpakSipaksi.Modules.Insentif.Domain.VerifikasiFakultas
+namespace UnpakSipaksi.Modules.Insentif.Domain.Insentif
 {
     public enum BuktiPublikasi
     {

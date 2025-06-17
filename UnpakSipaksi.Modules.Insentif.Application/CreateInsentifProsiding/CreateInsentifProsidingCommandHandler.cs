@@ -7,6 +7,7 @@ using UnpakSipaksi.Common.Application.Messaging;
 using UnpakSipaksi.Common.Domain;
 using UnpakSipaksi.Modules.Insentif.Application.Abstractions.Data;
 using UnpakSipaksi.Modules.Insentif.Domain.Insentif;
+using UnpakSipaksi.Modules.Insentif.Domain.VerifikasiFakultas;
 using UnpakSipaksi.Modules.JenisPublikasi.PublicApi;
 
 namespace UnpakSipaksi.Modules.Insentif.Application.CreateInsentifProsiding

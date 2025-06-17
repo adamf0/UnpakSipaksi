@@ -102,9 +102,18 @@ namespace UnpakSipaksi.Modules.Administrasi.Domain.AdministrasiPkm
             };
 
             var emptyFields = entity.GetContentAttributes()
-                                .Where(kv => string.IsNullOrWhiteSpace(kv.Value))
+                                .Where(kv =>
+                                    string.IsNullOrWhiteSpace(kv.Value) ||
+                                    kv.Value != Options.TidakAda.ToString() ||
+                                    kv.Value != Options.AdaTapiTidakSesuai.ToString() ||
+                                    kv.Value != Options.AdaSesuai.ToString())
                                 .Select(kv => kv.Key)
                                 .ToList();
+
+            if (emptyFields.Any() && emptyFields.Count < 21)
+            {
+                return Result.Failure<AdministrasiPkm>(AdministrasiInternalErrors.InvalidArgument());
+            }
 
             var adaSesuaiFields = entity.GetContentAttributes()
                                 .Where(kv => kv.Value == Options.AdaSesuai.ToString())
@@ -113,9 +122,6 @@ namespace UnpakSipaksi.Modules.Administrasi.Domain.AdministrasiPkm
 
             var expectationKeputusan = adaSesuaiFields.Count != 21 ? Domain.Keputusan.PerluPerbaikan.ToString() : keputusan;
 
-            if (emptyFields.Any() && emptyFields.Count < 21) {
-                return Result.Failure<AdministrasiPkm>(AdministrasiInternalErrors.InvalidArgument());
-            }
             if (adaSesuaiFields.Any() && keputusan != expectationKeputusan) {
                 return Result.Failure<AdministrasiPkm>(AdministrasiInternalErrors.InvalidKeputusan());
             }
@@ -185,9 +191,18 @@ namespace UnpakSipaksi.Modules.Administrasi.Domain.AdministrasiPkm
             prev.Komentar = komentar;
 
             var emptyFields = prev.GetContentAttributes()
-                                .Where(kv => string.IsNullOrWhiteSpace(kv.Value))
+                                .Where(kv =>
+                                    string.IsNullOrWhiteSpace(kv.Value) ||
+                                    kv.Value != Options.TidakAda.ToString() ||
+                                    kv.Value != Options.AdaTapiTidakSesuai.ToString() ||
+                                    kv.Value != Options.AdaSesuai.ToString())
                                 .Select(kv => kv.Key)
                                 .ToList();
+
+            if (emptyFields.Any() && emptyFields.Count < 21)
+            {
+                return Result.Failure<AdministrasiPkm>(AdministrasiInternalErrors.InvalidArgument());
+            }
 
             var adaSesuaiFields = prev.GetContentAttributes()
                                 .Where(kv => kv.Value == Options.AdaSesuai.ToString())
@@ -196,10 +211,6 @@ namespace UnpakSipaksi.Modules.Administrasi.Domain.AdministrasiPkm
 
             var expectationKeputusan = adaSesuaiFields.Count != 21 ? Domain.Keputusan.PerluPerbaikan.ToString() : keputusan;
 
-            if (emptyFields.Any() && emptyFields.Count < 21)
-            {
-                return Result.Failure<AdministrasiPkm>(AdministrasiInternalErrors.InvalidArgument());
-            }
             if (adaSesuaiFields.Any() && keputusan != expectationKeputusan)
             {
                 return Result.Failure<AdministrasiPkm>(AdministrasiInternalErrors.InvalidKeputusan());

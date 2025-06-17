@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("UnpakSipaksi.Modules.RumpunIlmu1.Domain")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+4153c7acf42ec8be534d28c14c22f84bb734ff61")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+2ead85558680950679f1ab5922525a4927d288e6")]
 [assembly: System.Reflection.AssemblyProductAttribute("UnpakSipaksi.Modules.RumpunIlmu1.Domain")]
 [assembly: System.Reflection.AssemblyTitleAttribute("UnpakSipaksi.Modules.RumpunIlmu1.Domain")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

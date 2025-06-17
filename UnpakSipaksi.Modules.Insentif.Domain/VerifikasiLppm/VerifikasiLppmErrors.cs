@@ -5,7 +5,7 @@ using System.Text;
 using System.Threading.Tasks;
 using UnpakSipaksi.Common.Domain;
 
-namespace UnpakSipaksi.Modules.VerifikasiLppm.Domain.VerifikasiLppm
+namespace UnpakSipaksi.Modules.Insentif.Domain.VerifikasiLppm
 {
     public static class VerifikasiLppmErrors
     {

@@ -1,8 +1,8 @@
 ﻿using System.ComponentModel.DataAnnotations.Schema;
 using UnpakSipaksi.Common.Domain;
+using UnpakSipaksi.Modules.Insentif.Domain.CheckInsentif;
 using UnpakSipaksi.Modules.Insentif.Domain.Insentif;
 using UnpakSipaksi.Modules.Insentif.Domain.VerifikasiFakultas;
-using UnpakSipaksi.Modules.VerifikasiLppm.Domain.VerifikasiLppm;
 
 namespace UnpakSipaksi.Modules.Insentif.Domain.VerifikasiLppm
 {
@@ -104,23 +104,24 @@ namespace UnpakSipaksi.Modules.Insentif.Domain.VerifikasiLppm
                 return Result.Failure<VerifikasiLppm>(VerifikasiLppmErrors.EmptyCatatan());
             }
 
-            var calculator = new InsentifCalculator(sbu: 1000000, jumlahCoAuthor: 2);
-
-            calculator.HitungInsentif(
-                jenisJurnal: JenisJurnal,
-                mahasiswa: LibatkanMahasiswa,
-                peran: PeranPenulis
-            );
-
-            if (calculator.PorsiSBU < 1)
+            var input = new InsentifInput
             {
-                return Result.Failure<VerifikasiLppm>(VerifikasiLppmErrors.InvalidPorsi());
-            }
+                JenisJurnal = JenisJurnal,
+                Mahasiswa = LibatkanMahasiswa == LibatkanMahasiswa.Ya ? true : false,
+                PeranPenulis = PeranPenulis,
+                SBU = SBU,
+                JumlahCoAuthor = JumlahPenulis
+            };
+            var calculator = InsentifCalculator.Hitung(input);
 
-            if ((calculator.IFA + calculator.ICA) < 1)
-            {
-                return Result.Failure<VerifikasiLppm>(VerifikasiLppmErrors.InvalidCalculateMoney());
-            }
+            if (calculator.IsFailure)
+                return Result.Failure<VerifikasiLppm>(calculator.Error);
+
+            if (calculator.Value.PorsiSBU < 1)
+                return Result.Failure<VerifikasiLppm>(VerifikasiFakultasErrors.InvalidPorsi());
+
+            if (calculator.Value.TotalInsentif <= 0)
+                return Result.Failure<VerifikasiLppm>(VerifikasiFakultasErrors.InvalidCalculateMoney());
 
             var asset = new VerifikasiLppm
             {
@@ -133,8 +134,8 @@ namespace UnpakSipaksi.Modules.Insentif.Domain.VerifikasiLppm
                 JenisJurnal = (int)JenisJurnal,
                 LibatkanMahasiswa = (int)LibatkanMahasiswa,
                 SBU = SBU,
-                Porsi = calculator.PorsiSBU,
-                Insentif = calculator.IFA + calculator.ICA,
+                Porsi = calculator.Value.PorsiSBU,
+                Insentif = calculator.Value.TotalInsentif,
                 StatusPengajuan = (int)StatusPengajuan,
                 Catatan = Catatan
             };

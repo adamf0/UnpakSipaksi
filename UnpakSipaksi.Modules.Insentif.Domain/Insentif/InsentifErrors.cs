@@ -43,5 +43,7 @@ namespace UnpakSipaksi.Modules.Insentif.Domain.Insentif
             Error.NotFound("Insentif.EmptyLibatkanMahasiswa", "Libatkan mahasiswa is empty");
         public static Error EmptyNamaKegiatanSeminar() =>
             Error.NotFound("Insentif.EmptyNamaKegiatanSeminar", "Nama kegiatan seminar is empty");
+        public static Error InvalidDataVerifikasi() =>
+            Error.NotFound("Insentif.InvalidDataVerifikasi", "Verifikasi is invalid data");
     }
 }

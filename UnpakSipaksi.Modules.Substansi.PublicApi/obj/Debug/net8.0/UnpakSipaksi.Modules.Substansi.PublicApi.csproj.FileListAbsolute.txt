@@ -1,0 +1,12 @@
+C:\dev_net\UnpakSipaksi\UnpakSipaksi.Modules.Substansi.PublicApi\bin\Debug\net8.0\UnpakSipaksi.Modules.Substansi.PublicApi.deps.json
+C:\dev_net\UnpakSipaksi\UnpakSipaksi.Modules.Substansi.PublicApi\bin\Debug\net8.0\UnpakSipaksi.Modules.Substansi.PublicApi.dll
+C:\dev_net\UnpakSipaksi\UnpakSipaksi.Modules.Substansi.PublicApi\bin\Debug\net8.0\UnpakSipaksi.Modules.Substansi.PublicApi.pdb
+C:\dev_net\UnpakSipaksi\UnpakSipaksi.Modules.Substansi.PublicApi\obj\Debug\net8.0\UnpakSipaksi.Modules.Substansi.PublicApi.GeneratedMSBuildEditorConfig.editorconfig
+C:\dev_net\UnpakSipaksi\UnpakSipaksi.Modules.Substansi.PublicApi\obj\Debug\net8.0\UnpakSipaksi.Modules.Substansi.PublicApi.AssemblyInfoInputs.cache
+C:\dev_net\UnpakSipaksi\UnpakSipaksi.Modules.Substansi.PublicApi\obj\Debug\net8.0\UnpakSipaksi.Modules.Substansi.PublicApi.AssemblyInfo.cs
+C:\dev_net\UnpakSipaksi\UnpakSipaksi.Modules.Substansi.PublicApi\obj\Debug\net8.0\UnpakSipaksi.Modules.Substansi.PublicApi.csproj.CoreCompileInputs.cache
+C:\dev_net\UnpakSipaksi\UnpakSipaksi.Modules.Substansi.PublicApi\obj\Debug\net8.0\UnpakSipaksi.Modules.Substansi.PublicApi.sourcelink.json
+C:\dev_net\UnpakSipaksi\UnpakSipaksi.Modules.Substansi.PublicApi\obj\Debug\net8.0\UnpakSipaksi.Modules.Substansi.PublicApi.dll
+C:\dev_net\UnpakSipaksi\UnpakSipaksi.Modules.Substansi.PublicApi\obj\Debug\net8.0\refint\UnpakSipaksi.Modules.Substansi.PublicApi.dll
+C:\dev_net\UnpakSipaksi\UnpakSipaksi.Modules.Substansi.PublicApi\obj\Debug\net8.0\UnpakSipaksi.Modules.Substansi.PublicApi.pdb
+C:\dev_net\UnpakSipaksi\UnpakSipaksi.Modules.Substansi.PublicApi\obj\Debug\net8.0\ref\UnpakSipaksi.Modules.Substansi.PublicApi.dll

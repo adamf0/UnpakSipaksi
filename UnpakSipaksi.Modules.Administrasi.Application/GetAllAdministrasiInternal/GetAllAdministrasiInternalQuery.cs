@@ -8,5 +8,5 @@ using UnpakSipaksi.Modules.Administrasi.Application.GetAdministrasiInternal;
 
 namespace UnpakSipaksi.Modules.Administrasi.Application.GetAllAdministrasiInternal
 {
-    public sealed record GetAllAdministrasiInternalQuery() : IQuery<List<AdministrasiInternalResponse>>;
+    public sealed record GetAllAdministrasiInternalQuery(Guid UuidPenelitianHibah) : IQuery<List<AdministrasiInternalResponse>>;
 }

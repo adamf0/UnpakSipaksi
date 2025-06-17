@@ -44,13 +44,13 @@ namespace UnpakSipaksi.Modules.Administrasi.Application.GetAdministrasiPkm
                      a.keputusan AS Keputusan,
                      a.komentar AS Komentar
                  FROM pkm_administrasi a 
-                 JOIN pkm p ON a.id_pdp = p.id
-                 WHERE p.uuid = @Uuid
+                 JOIN pkm p ON a.id_pkm = p.id
+                 WHERE a.uuid = @Uuid and p.uuid = @UuidPenelitianPkm
                  """;
 
             DefaultTypeMap.MatchNamesWithUnderscores = true;
 
-            var result = await connection.QuerySingleOrDefaultAsync<AdministrasiPkmResponse?>(sql, new { Uuid = request.AdministrasiPkmUuid });
+            var result = await connection.QuerySingleOrDefaultAsync<AdministrasiPkmResponse?>(sql, new { Uuid = request.AdministrasiPkmUuid, UuidPenelitianPkm = request.UuidPenelitianPkm });
             if (result == null)
             {
                 return Result.Failure<AdministrasiPkmResponse>(AdministrasiPkmErrors.NotFound(request.AdministrasiPkmUuid));

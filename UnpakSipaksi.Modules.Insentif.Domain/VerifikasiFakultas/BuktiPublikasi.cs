@@ -1,6 +1,6 @@
 ﻿using System.Runtime.Serialization;
 
-namespace UnpakSipaksi.Modules.Insentif.Domain.Insentif
+namespace UnpakSipaksi.Modules.Insentif.Domain.VerifikasiFakultas
 {
     public enum JenisJurnal
     {

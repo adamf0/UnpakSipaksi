@@ -8,5 +8,5 @@ using UnpakSipaksi.Modules.Administrasi.Application.GetAdministrasiInternal;
 
 namespace UnpakSipaksi.Modules.Administrasi.Application.GetAdministrasiPkm
 {
-    public sealed record GetAdministrasiInternalQuery(Guid AdministrasiInternalUuid) : IQuery<AdministrasiInternalResponse>;
+    public sealed record GetAdministrasiInternalQuery(Guid AdministrasiInternalUuid, Guid UuidPenelitianHibah) : IQuery<AdministrasiInternalResponse>;
 }

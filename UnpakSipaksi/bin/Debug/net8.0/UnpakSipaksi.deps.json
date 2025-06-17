@@ -141,6 +141,8 @@
           "UnpakSipaksi.Modules.Satuan.Infrastructure": "1.0.0",
           "UnpakSipaksi.Modules.SotaKebaharuan.Application": "1.0.0",
           "UnpakSipaksi.Modules.SotaKebaharuan.Infrastructure": "1.0.0",
+          "UnpakSipaksi.Modules.Substansi.Application": "1.0.0",
+          "UnpakSipaksi.Modules.Substansi.Infrastructure": "1.0.0",
           "UnpakSipaksi.Modules.SubstansiBobot.Application": "1.0.0",
           "UnpakSipaksi.Modules.SubstansiBobot.Infrastructure": "1.0.0",
           "UnpakSipaksi.Modules.TemaPenelitian.Application": "1.0.0",
@@ -4449,6 +4451,74 @@
           "UnpakSipaksi.Modules.SotaKebaharuan.PublicApi.dll": {}
         }
       },
+      "UnpakSipaksi.Modules.Substansi.Application/1.0.0": {
+        "dependencies": {
+          "Dapper": "2.1.35",
+          "MediatR": "12.4.1",
+          "UnpakSipaksi.Common.Application": "1.0.0",
+          "UnpakSipaksi.Common.Domain": "1.0.0",
+          "UnpakSipaksi.Modules.AkurasiPenelitian.PublicApi": "1.0.0",
+          "UnpakSipaksi.Modules.InovasiPemecahanMasalah.PublicApi": "1.0.0",
+          "UnpakSipaksi.Modules.JumlahKolaboratorPublikasBereputasi.PublicApi": "1.0.0",
+          "UnpakSipaksi.Modules.KebaruanReferensi.PublicApi": "1.0.0",
+          "UnpakSipaksi.Modules.KejelasanPembagianTugasTim.PublicApi": "1.0.0",
+          "UnpakSipaksi.Modules.KesesuaianTkt.PublicApi": "1.0.0",
+          "UnpakSipaksi.Modules.KesesuaianWaktuRabLuaranFasilitas.PublicApi": "1.0.0",
+          "UnpakSipaksi.Modules.KetajamanPerumusanMasalah.PublicApi": "1.0.0",
+          "UnpakSipaksi.Modules.KredibilitasMitraDukungan.PublicApi": "1.0.0",
+          "UnpakSipaksi.Modules.ModelFeasibilityStudys.PublicApi": "1.0.0",
+          "UnpakSipaksi.Modules.PenelitianHibah.PublicApi": "1.0.0",
+          "UnpakSipaksi.Modules.PotensiKetercapaianLuaranDijanjikan.PublicApi": "1.0.0",
+          "UnpakSipaksi.Modules.PublikasiDisitasiProposal.PublicApi": "1.0.0",
+          "UnpakSipaksi.Modules.RelevansiKepakaranTemaProposal.PublicApi": "1.0.0",
+          "UnpakSipaksi.Modules.RelevansiKualitasReferensi.PublicApi": "1.0.0",
+          "UnpakSipaksi.Modules.RelevansiProdukKepentinganNasional.PublicApi": "1.0.0",
+          "UnpakSipaksi.Modules.RoadmapPenelitian.PublicApi": "1.0.0",
+          "UnpakSipaksi.Modules.SotaKebaharuan.PublicApi": "1.0.0",
+          "UnpakSipaksi.Modules.Substansi.Domain": "1.0.0"
+        },
+        "runtime": {
+          "UnpakSipaksi.Modules.Substansi.Application.dll": {}
+        }
+      },
+      "UnpakSipaksi.Modules.Substansi.Domain/1.0.0": {
+        "dependencies": {
+          "UnpakSipaksi.Common.Domain": "1.0.0"
+        },
+        "runtime": {
+          "UnpakSipaksi.Modules.Substansi.Domain.dll": {}
+        }
+      },
+      "UnpakSipaksi.Modules.Substansi.Infrastructure/1.0.0": {
+        "dependencies": {
+          "Microsoft.EntityFrameworkCore": "8.0.0",
+          "MySql.EntityFrameworkCore": "8.0.0",
+          "UnpakSipaksi.Common.Application": "1.0.0",
+          "UnpakSipaksi.Common.Infrastructure": "1.0.0",
+          "UnpakSipaksi.Modules.Substansi.Application": "1.0.0",
+          "UnpakSipaksi.Modules.Substansi.Domain": "1.0.0",
+          "UnpakSipaksi.Modules.Substansi.Presentation": "1.0.0",
+          "UnpakSipaksi.Modules.Substansi.PublicApi": "1.0.0"
+        },
+        "runtime": {
+          "UnpakSipaksi.Modules.Substansi.Infrastructure.dll": {}
+        }
+      },
+      "UnpakSipaksi.Modules.Substansi.Presentation/1.0.0": {
+        "dependencies": {
+          "UnpakSipaksi.Common.Domain": "1.0.0",
+          "UnpakSipaksi.Common.Presentation": "1.0.0",
+          "UnpakSipaksi.Modules.Substansi.Application": "1.0.0"
+        },
+        "runtime": {
+          "UnpakSipaksi.Modules.Substansi.Presentation.dll": {}
+        }
+      },
+      "UnpakSipaksi.Modules.Substansi.PublicApi/1.0.0": {
+        "runtime": {
+          "UnpakSipaksi.Modules.Substansi.PublicApi.dll": {}
+        }
+      },
       "UnpakSipaksi.Modules.SubstansiBobot.Application/1.0.0": {
         "dependencies": {
           "Dapper": "2.1.35",
@@ -7012,6 +7082,31 @@
       "sha512": ""
     },
     "UnpakSipaksi.Modules.SotaKebaharuan.PublicApi/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    },
+    "UnpakSipaksi.Modules.Substansi.Application/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    },
+    "UnpakSipaksi.Modules.Substansi.Domain/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    },
+    "UnpakSipaksi.Modules.Substansi.Infrastructure/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    },
+    "UnpakSipaksi.Modules.Substansi.Presentation/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    },
+    "UnpakSipaksi.Modules.Substansi.PublicApi/1.0.0": {
       "type": "project",
       "serviceable": false,
       "sha512": ""

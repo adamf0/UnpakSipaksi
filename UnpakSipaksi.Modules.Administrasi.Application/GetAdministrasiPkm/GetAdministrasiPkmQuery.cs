@@ -7,5 +7,5 @@ using UnpakSipaksi.Common.Application.Messaging;
 
 namespace UnpakSipaksi.Modules.Administrasi.Application.GetAdministrasiPkm
 {
-    public sealed record GetAdministrasiPkmQuery(Guid AdministrasiPkmUuid) : IQuery<AdministrasiPkmResponse>;
+    public sealed record GetAdministrasiPkmQuery(Guid AdministrasiPkmUuid, Guid UuidPenelitianPkm) : IQuery<AdministrasiPkmResponse>;
 }

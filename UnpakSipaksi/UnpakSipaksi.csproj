@@ -161,6 +161,8 @@
 		<ProjectReference Include="..\UnpakSipaksi.Modules.Satuan.Infrastructure\UnpakSipaksi.Modules.Satuan.Infrastructure.csproj" />
 		<ProjectReference Include="..\UnpakSipaksi.Modules.SotaKebaharuan.Application\UnpakSipaksi.Modules.SotaKebaharuan.Application.csproj" />
 		<ProjectReference Include="..\UnpakSipaksi.Modules.SotaKebaharuan.Infrastructure\UnpakSipaksi.Modules.SotaKebaharuan.Infrastructure.csproj" />
+		<ProjectReference Include="..\UnpakSipaksi.Modules.Substansi.Application\UnpakSipaksi.Modules.Substansi.Application.csproj" />
+		<ProjectReference Include="..\UnpakSipaksi.Modules.Substansi.Infrastructure\UnpakSipaksi.Modules.Substansi.Infrastructure.csproj" />
 		<ProjectReference Include="..\UnpakSipaksi.Modules.SubstansiBobot.Application\UnpakSipaksi.Modules.SubstansiBobot.Application.csproj" />
 		<ProjectReference Include="..\UnpakSipaksi.Modules.SubstansiBobot.Infrastructure\UnpakSipaksi.Modules.SubstansiBobot.Infrastructure.csproj" />
 		<ProjectReference Include="..\UnpakSipaksi.Modules.TemaPenelitian.Application\UnpakSipaksi.Modules.TemaPenelitian.Application.csproj" />

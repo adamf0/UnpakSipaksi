@@ -25,7 +25,7 @@ namespace UnpakSipaksi.Modules.Administrasi.Application.GetAdministrasiInternal
                      a.halamanSampul AS HalamanSampul,
                      a.halamanPengesahan AS HalamanPengesahan,
                      a.identitasPengusul AS IdentitasPengusul,
-                     a.identitasMahasiswaAS IdentitasMahasiswa,
+                     a.identitasMahasiswa AS IdentitasMahasiswa,
                      a.mitraKerjasama AS MitraKerjasama,
                      a.luaranTargetCapaian AS LuaranTargetCapaian,
                      a.rab AS Rab,
@@ -45,12 +45,12 @@ namespace UnpakSipaksi.Modules.Administrasi.Application.GetAdministrasiInternal
                      a.komentar AS Komentar
                  FROM penelitian_internal_administrasi a 
                  JOIN penelitian_internal p ON a.id_pdp = p.id
-                 WHERE p.uuid = @Uuid
+                 WHERE a.uuid = @Uuid and p.uuid = @UuidPenelitianPkm
                  """;
 
             DefaultTypeMap.MatchNamesWithUnderscores = true;
 
-            var result = await connection.QuerySingleOrDefaultAsync<AdministrasiInternalResponse?>(sql, new { Uuid = request.AdministrasiInternalUuid });
+            var result = await connection.QuerySingleOrDefaultAsync<AdministrasiInternalResponse?>(sql, new { Uuid = request.AdministrasiInternalUuid, UuidPenelitianPkm = request.UuidPenelitianHibah });
             if (result == null)
             {
                 return Result.Failure<AdministrasiInternalResponse>(AdministrasiInternalErrors.NotFound(request.AdministrasiInternalUuid));

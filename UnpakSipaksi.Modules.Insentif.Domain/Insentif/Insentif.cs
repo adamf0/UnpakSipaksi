@@ -1,6 +1,7 @@
 ﻿using System.ComponentModel.DataAnnotations.Schema;
 using System.Globalization;
 using UnpakSipaksi.Common.Domain;
+using UnpakSipaksi.Modules.Insentif.Domain.VerifikasiFakultas;
 
 namespace UnpakSipaksi.Modules.Insentif.Domain.Insentif
 {

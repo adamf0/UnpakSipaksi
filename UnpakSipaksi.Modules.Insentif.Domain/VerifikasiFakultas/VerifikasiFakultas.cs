@@ -1,7 +1,7 @@
 ﻿using System.ComponentModel.DataAnnotations.Schema;
 using UnpakSipaksi.Common.Domain;
+using UnpakSipaksi.Modules.Insentif.Domain.CheckInsentif;
 using UnpakSipaksi.Modules.Insentif.Domain.Insentif;
-using UnpakSipaksi.Modules.VerifikasiFakultas.Domain.VerifikasiFakultas;
 
 namespace UnpakSipaksi.Modules.Insentif.Domain.VerifikasiFakultas
 {
@@ -103,23 +103,24 @@ namespace UnpakSipaksi.Modules.Insentif.Domain.VerifikasiFakultas
                 return Result.Failure<VerifikasiFakultas>(VerifikasiFakultasErrors.EmptyCatatan());
             }
 
-            var calculator = new InsentifCalculator(sbu: 1000000, jumlahCoAuthor: 2);
-
-            calculator.HitungInsentif(
-                jenisJurnal: JenisJurnal,
-                mahasiswa: LibatkanMahasiswa,
-                peran: PeranPenulis
-            );
-
-            if (calculator.PorsiSBU < 1)
+            var input = new InsentifInput
             {
+                JenisJurnal = JenisJurnal,
+                Mahasiswa = LibatkanMahasiswa == LibatkanMahasiswa.Ya ? true : false,
+                PeranPenulis = PeranPenulis,
+                SBU = SBU,
+                JumlahCoAuthor = JumlahPenulis
+            };
+            var calculator = InsentifCalculator.Hitung(input);
+
+            if (calculator.IsFailure) 
+                return Result.Failure<VerifikasiFakultas>(calculator.Error);
+
+            if (calculator.Value.PorsiSBU < 1)
                 return Result.Failure<VerifikasiFakultas>(VerifikasiFakultasErrors.InvalidPorsi());
-            }
 
-            if ((calculator.IFA + calculator.ICA) < 1)
-            {
+            if (calculator.Value.TotalInsentif <= 0)
                 return Result.Failure<VerifikasiFakultas>(VerifikasiFakultasErrors.InvalidCalculateMoney());
-            }
 
             var asset = new VerifikasiFakultas
             {
@@ -132,8 +133,8 @@ namespace UnpakSipaksi.Modules.Insentif.Domain.VerifikasiFakultas
                 JenisJurnal = (int) JenisJurnal,
                 LibatkanMahasiswa = (int) LibatkanMahasiswa,
                 SBU = SBU,
-                Porsi = calculator.PorsiSBU,
-                Insentif = calculator.IFA + calculator.ICA,
+                Porsi = calculator.Value.PorsiSBU,
+                Insentif = calculator.Value.TotalInsentif,
                 StatusPengajuan = (int) StatusPengajuan,
                 Catatan = Catatan
             };

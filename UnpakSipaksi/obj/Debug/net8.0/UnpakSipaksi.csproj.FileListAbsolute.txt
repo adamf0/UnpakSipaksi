@@ -447,6 +447,11 @@ C:\dev_net\UnpakSipaksi\UnpakSipaksi\bin\Debug\net8.0\UnpakSipaksi.Modules.SotaK
 C:\dev_net\UnpakSipaksi\UnpakSipaksi\bin\Debug\net8.0\UnpakSipaksi.Modules.SotaKebaharuan.Infrastructure.dll
 C:\dev_net\UnpakSipaksi\UnpakSipaksi\bin\Debug\net8.0\UnpakSipaksi.Modules.SotaKebaharuan.Presentation.dll
 C:\dev_net\UnpakSipaksi\UnpakSipaksi\bin\Debug\net8.0\UnpakSipaksi.Modules.SotaKebaharuan.PublicApi.dll
+C:\dev_net\UnpakSipaksi\UnpakSipaksi\bin\Debug\net8.0\UnpakSipaksi.Modules.Substansi.Application.dll
+C:\dev_net\UnpakSipaksi\UnpakSipaksi\bin\Debug\net8.0\UnpakSipaksi.Modules.Substansi.Domain.dll
+C:\dev_net\UnpakSipaksi\UnpakSipaksi\bin\Debug\net8.0\UnpakSipaksi.Modules.Substansi.Infrastructure.dll
+C:\dev_net\UnpakSipaksi\UnpakSipaksi\bin\Debug\net8.0\UnpakSipaksi.Modules.Substansi.Presentation.dll
+C:\dev_net\UnpakSipaksi\UnpakSipaksi\bin\Debug\net8.0\UnpakSipaksi.Modules.Substansi.PublicApi.dll
 C:\dev_net\UnpakSipaksi\UnpakSipaksi\bin\Debug\net8.0\UnpakSipaksi.Modules.SubstansiBobot.Application.dll
 C:\dev_net\UnpakSipaksi\UnpakSipaksi\bin\Debug\net8.0\UnpakSipaksi.Modules.SubstansiBobot.Domain.dll
 C:\dev_net\UnpakSipaksi\UnpakSipaksi\bin\Debug\net8.0\UnpakSipaksi.Modules.SubstansiBobot.Infrastructure.dll
@@ -595,6 +600,8 @@ C:\dev_net\UnpakSipaksi\UnpakSipaksi\bin\Debug\net8.0\UnpakSipaksi.Modules.Satua
 C:\dev_net\UnpakSipaksi\UnpakSipaksi\bin\Debug\net8.0\UnpakSipaksi.Modules.Satuan.Infrastructure.pdb
 C:\dev_net\UnpakSipaksi\UnpakSipaksi\bin\Debug\net8.0\UnpakSipaksi.Modules.SotaKebaharuan.Application.pdb
 C:\dev_net\UnpakSipaksi\UnpakSipaksi\bin\Debug\net8.0\UnpakSipaksi.Modules.SotaKebaharuan.Infrastructure.pdb
+C:\dev_net\UnpakSipaksi\UnpakSipaksi\bin\Debug\net8.0\UnpakSipaksi.Modules.Substansi.Application.pdb
+C:\dev_net\UnpakSipaksi\UnpakSipaksi\bin\Debug\net8.0\UnpakSipaksi.Modules.Substansi.Infrastructure.pdb
 C:\dev_net\UnpakSipaksi\UnpakSipaksi\bin\Debug\net8.0\UnpakSipaksi.Modules.SubstansiBobot.Application.pdb
 C:\dev_net\UnpakSipaksi\UnpakSipaksi\bin\Debug\net8.0\UnpakSipaksi.Modules.SubstansiBobot.Infrastructure.pdb
 C:\dev_net\UnpakSipaksi\UnpakSipaksi\bin\Debug\net8.0\UnpakSipaksi.Modules.TemaPenelitian.Application.pdb
@@ -785,6 +792,9 @@ C:\dev_net\UnpakSipaksi\UnpakSipaksi\bin\Debug\net8.0\UnpakSipaksi.Modules.Satua
 C:\dev_net\UnpakSipaksi\UnpakSipaksi\bin\Debug\net8.0\UnpakSipaksi.Modules.SotaKebaharuan.Domain.pdb
 C:\dev_net\UnpakSipaksi\UnpakSipaksi\bin\Debug\net8.0\UnpakSipaksi.Modules.SotaKebaharuan.Presentation.pdb
 C:\dev_net\UnpakSipaksi\UnpakSipaksi\bin\Debug\net8.0\UnpakSipaksi.Modules.SotaKebaharuan.PublicApi.pdb
+C:\dev_net\UnpakSipaksi\UnpakSipaksi\bin\Debug\net8.0\UnpakSipaksi.Modules.Substansi.Domain.pdb
+C:\dev_net\UnpakSipaksi\UnpakSipaksi\bin\Debug\net8.0\UnpakSipaksi.Modules.Substansi.Presentation.pdb
+C:\dev_net\UnpakSipaksi\UnpakSipaksi\bin\Debug\net8.0\UnpakSipaksi.Modules.Substansi.PublicApi.pdb
 C:\dev_net\UnpakSipaksi\UnpakSipaksi\bin\Debug\net8.0\UnpakSipaksi.Modules.SubstansiBobot.Domain.pdb
 C:\dev_net\UnpakSipaksi\UnpakSipaksi\bin\Debug\net8.0\UnpakSipaksi.Modules.SubstansiBobot.Presentation.pdb
 C:\dev_net\UnpakSipaksi\UnpakSipaksi\bin\Debug\net8.0\UnpakSipaksi.Modules.TemaPenelitian.Domain.pdb
@@ -811,4 +821,3 @@ C:\dev_net\UnpakSipaksi\UnpakSipaksi\obj\Debug\net8.0\refint\UnpakSipaksi.dll
 C:\dev_net\UnpakSipaksi\UnpakSipaksi\obj\Debug\net8.0\UnpakSipaksi.pdb
 C:\dev_net\UnpakSipaksi\UnpakSipaksi\obj\Debug\net8.0\UnpakSipaksi.genruntimeconfig.cache
 C:\dev_net\UnpakSipaksi\UnpakSipaksi\obj\Debug\net8.0\ref\UnpakSipaksi.dll
-C:\dev_net\UnpakSipaksi\UnpakSipaksi\obj\Debug\net8.0\UnpakSipaksi.MvcApplicationPartsAssemblyInfo.cs

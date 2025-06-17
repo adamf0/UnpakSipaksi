@@ -48,7 +48,7 @@ namespace UnpakSipaksi.Modules.Administrasi.Application.GetAllAdministrasiPkm
                 a.keputusan AS Keputusan,
                 a.komentar AS Komentar
             FROM pkm_administrasi a 
-            JOIN pkm p ON a.id_pdp = p.id
+            JOIN pkm p ON a.id_pkm = p.id
             """;
 
             DefaultTypeMap.MatchNamesWithUnderscores = true;
