@@ -95,11 +95,11 @@ namespace UnpakSipaksi.Modules.ModelFeasibilityStudys.Domain.ModelFeasibilityStu
             {
                 if (HasError) return this;
 
-                /*if (string.IsNullOrWhiteSpace(nama))
+                if (skor < 0)
                 {
-                    _result = Result.Failure<ModelFeasibilityStudys>(ModelFeasibilityStudysErrors.NamaNotFound);
+                    _result = Result.Failure<ModelFeasibilityStudys>(ModelFeasibilityStudysErrors.InvalidValueSkor());
                     return this;
-                }*/
+                }
 
                 _akurasiPenelitian.Skor = skor;
                 return this;

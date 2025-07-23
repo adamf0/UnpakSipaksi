@@ -39,11 +39,11 @@ namespace UnpakSipaksi.Modules.PenugasanReviewer.Domain.PenugasanReviewer
             {
                 if (HasError) return this;
 
-                /*if (string.IsNullOrWhiteSpace(nama))
+                if (status < 0 | status > 1)
                 {
-                    _result = Result.Failure<PenugasanReviewer>(PenugasanReviewerErrors.NamaNotFound);
+                    _result = Result.Failure<PenugasanReviewer>(PenugasanReviewerErrors.InvalidValueStatus());
                     return this;
-                }*/
+                }
 
                 _akurasiPenelitian.Status = status;
                 return this;

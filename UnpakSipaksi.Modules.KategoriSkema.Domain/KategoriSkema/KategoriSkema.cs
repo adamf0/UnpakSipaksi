@@ -1,5 +1,6 @@
 ﻿using System.ComponentModel.DataAnnotations.Schema;
 using UnpakSipaksi.Common.Domain;
+using System.Text.Json;
 
 namespace UnpakSipaksi.Modules.KategoriSkema.Domain.KategoriSkema
 {
@@ -25,6 +26,19 @@ namespace UnpakSipaksi.Modules.KategoriSkema.Domain.KategoriSkema
         string Rule
         )
         {
+            try
+            {
+                using var doc = JsonDocument.Parse(Rule);
+                if (doc.RootElement.ValueKind != JsonValueKind.Array)
+                {
+                    return Result.Failure<KategoriSkema>(KategoriSkemaErrors.InvalidFormatRule());
+                }
+            }
+            catch (JsonException)
+            {
+                return Result.Failure<KategoriSkema>(KategoriSkemaErrors.InvalidFormatRule());
+            }
+
             var asset = new KategoriSkema
             {
                 Uuid = Guid.NewGuid(),

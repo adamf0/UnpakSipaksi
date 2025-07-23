@@ -28,6 +28,25 @@ namespace UnpakSipaksi.Modules.Komponen.DomainTest
         }
 
         [Fact]
+        public void Create_ShouldFail_WhenMaxBiayaIsNegative()
+        {
+            // Arrange
+            string nama = "Komponen A";
+            int? maxBiaya = -1000;
+
+            // Act
+            var result = Domain.Komponen.Komponen.Create(
+                nama,
+                maxBiaya
+            );
+
+            // Assert
+            result.IsFailure.Should().BeTrue();
+            result.Error.Code.Should().Be("Komponen.InvalidMaxBiaya");
+            result.Error.Description.Should().Be("MaxBiaya is invalid format");
+        }
+
+        [Fact]
         public void Create_ShouldRaiseKomponenCreatedDomainEvent()
         {
             // Arrange

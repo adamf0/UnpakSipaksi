@@ -95,11 +95,11 @@ namespace UnpakSipaksi.Modules.KredibilitasMitraDukungan.Domain.KredibilitasMitr
             {
                 if (HasError) return this;
 
-                /*if (string.IsNullOrWhiteSpace(nama))
+                if (skor < 0)
                 {
-                    _result = Result.Failure<KredibilitasMitraDukungan>(KredibilitasMitraDukunganErrors.NamaNotFound);
+                    _result = Result.Failure<KredibilitasMitraDukungan>(KredibilitasMitraDukunganErrors.InvalidValueSkor());
                     return this;
-                }*/
+                }
 
                 _akurasiPenelitian.Skor = skor;
                 return this;

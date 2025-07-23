@@ -95,11 +95,11 @@ namespace UnpakSipaksi.Modules.RelevansiKualitasReferensi.Domain.RelevansiKualit
             {
                 if (HasError) return this;
 
-                /*if (string.IsNullOrWhiteSpace(nama))
+                if (skor < 0)
                 {
-                    _result = Result.Failure<RelevansiKualitasReferensi>(RelevansiKualitasReferensiErrors.NamaNotFound);
+                    _result = Result.Failure<RelevansiKualitasReferensi>(RelevansiKualitasReferensiErrors.InvalidValueSkor());
                     return this;
-                }*/
+                }
 
                 _akurasiPenelitian.Skor = skor;
                 return this;

@@ -10,6 +10,8 @@ namespace UnpakSipaksi.Modules.MetodeRencanaKegiatan.Domain.MetodeRencanaKegiata
             Error.NotFound("MetodeRencanaKegiatan.NotSameValue", "not the same value in data 'nilai'");
         public static Error UnknownKategoriSkema() =>
             Error.NotFound("MetodeRencanaKegiatan.UnknownKategoriSkema", "Unknown schema category");
+        public static Error InvalidValueNilai() =>
+            Error.NotFound("MetodeRencanaKegiatan.InvalidValueNilai", "Invalid value 'nilai'");
         public static Error NotFound(Guid Id) =>
             Error.NotFound("MetodeRencanaKegiatan.NotFound", $"Metode rencana kegiatan with the identifier {Id} was not found");
 

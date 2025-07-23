@@ -39,11 +39,11 @@ namespace UnpakSipaksi.Modules.MetodeRencanaKegiatan.Domain.MetodeRencanaKegiata
             {
                 if (HasError) return this;
 
-                /*if (string.IsNullOrWhiteSpace(nama))
+                if (nilai < 0)
                 {
-                    _result = Result.Failure<MetodeRencanaKegiatan>(MetodeRencanaKegiatanErrors.NamaNotFound);
+                    _result = Result.Failure<MetodeRencanaKegiatan>(MetodeRencanaKegiatanErrors.InvalidValueNilai());
                     return this;
-                }*/
+                }
 
                 _akurasiPenelitian.Nilai = nilai;
                 return this;

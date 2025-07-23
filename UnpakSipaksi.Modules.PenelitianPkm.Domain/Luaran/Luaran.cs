@@ -46,7 +46,7 @@ namespace UnpakSipaksi.Modules.PenelitianPkm.Domain.Luaran
             {
                 return Result.Failure<Luaran>(LuaranErrors.UnknownJenisLuaran());
             }
-            if (IndikatorCapaianId == null || IndikatorCapaianId == 0)
+            if (IndikatorCapaianId == null || IndikatorCapaianId <= 0)
             {
                 return Result.Failure<Luaran>(LuaranErrors.UnknownIndikatorCapaian());
             }*/
@@ -91,11 +91,11 @@ namespace UnpakSipaksi.Modules.PenelitianPkm.Domain.Luaran
             {
                 return Result.Failure<Luaran>(LuaranErrors.InvalidData());
             }
-            /*if (JenisLuaranId == null || JenisLuaranId == 0)
+            /*if (JenisLuaranId == null || JenisLuaranId <= 0)
             {
                 return Result.Failure<Luaran>(LuaranErrors.UnknownJenisLuaran());
             }
-            if (IndikatorCapaianId == null || IndikatorCapaianId == 0)
+            if (IndikatorCapaianId == null || IndikatorCapaianId <= 0)
             {
                 return Result.Failure<Luaran>(LuaranErrors.UnknownIndikatorCapaian());
             }*/

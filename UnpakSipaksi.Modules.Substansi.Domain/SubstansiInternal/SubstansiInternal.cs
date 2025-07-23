@@ -111,7 +111,7 @@ namespace UnpakSipaksi.Modules.Substansi.Domain.SubstansiInternal
             string TanggalBerakhir
         )
         {
-            if (PenelitianHibahId == 0)
+            if (PenelitianHibahId <= 0)
             {
                 return Result.Failure<SubstansiInternal>(SubstansiInternalErrors.InvalidPenelitianHibah());
             }
@@ -206,7 +206,7 @@ namespace UnpakSipaksi.Modules.Substansi.Domain.SubstansiInternal
             {
                 return Result.Failure<SubstansiInternal>(SubstansiInternalErrors.NotFound(Uuid));
             }
-            if (PenelitianHibahId == 0 || PenelitianHibahId != prev?.PenelitianHibahId)
+            if (PenelitianHibahId <= 0 || PenelitianHibahId != prev?.PenelitianHibahId)
             {
                 return Result.Failure<SubstansiInternal>(SubstansiInternalErrors.InvalidPenelitianHibah());
             }

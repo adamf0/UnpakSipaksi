@@ -16,10 +16,13 @@ namespace UnpakSipaksi.Modules.Referensi.Domain.Referensi
             Error.NotFound("Referensi.NotFound", $"Referensi with the identifier {Id} was not found");
 
         public static Error NotFoundKebaruanReferensiId() =>
-            Error.NotFound("Referensi.NotFoundKebaruanReferensiId", $"data kebaruanReferensiId is not found");
+            Error.NotFound("Referensi.NotFoundKebaruanReferensiId", "data kebaruanReferensiId is not found");
+
+        public static Error InvalidValueNilai() =>
+            Error.NotFound("Referensi.InvalidValueNilai", "Invalid value 'nilai'");
 
         public static Error NotFoundRelevansiKualitasReferensiId() =>
-            Error.NotFound("Referensi.NotFoundRelevansiKualitasReferensiId", $"data relevansiKualitasReferensiId is not found");
+            Error.NotFound("Referensi.NotFoundRelevansiKualitasReferensiId", "data relevansiKualitasReferensiId is not found");
 
     }
 }

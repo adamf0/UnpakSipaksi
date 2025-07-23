@@ -39,11 +39,11 @@ namespace UnpakSipaksi.Modules.PeningkatanKeberdayaanMitra.Domain.PeningkatanKeb
             {
                 if (HasError) return this;
 
-                /*if (string.IsNullOrWhiteSpace(nama))
+                if (nilai < 0)
                 {
-                    _result = Result.Failure<PeningkatanKeberdayaanMitra>(PeningkatanKeberdayaanMitraErrors.NamaNotFound);
+                    _result = Result.Failure<PeningkatanKeberdayaanMitra>(PeningkatanKeberdayaanMitraErrors.InvalidValueNilai());
                     return this;
-                }*/
+                }
 
                 _akurasiPenelitian.Nilai = nilai;
                 return this;

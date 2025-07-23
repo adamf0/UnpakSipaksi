@@ -15,6 +15,8 @@ namespace UnpakSipaksi.Modules.ArtikelMediaMassa.Domain.ArtikelMediaMassa
             Error.NotFound("ArtikelMediaMassa.NotSameValue", "not the same value in data 'nilai'");
         public static Error UnknownKategoriSkema() =>
             Error.NotFound("ArtikelMediaMassa.UnknownKategoriSkema", "Unknown schema category");
+        public static Error InvalidNilai() =>
+            Error.NotFound("ArtikelMediaMassa.InvalidNilai", "Nilai is invalid format");
         public static Error NotFound(Guid Id) =>
             Error.NotFound("ArtikelMediaMassa.NotFound", $"Artikel media massa with identifier {Id} not found");
 

@@ -39,11 +39,11 @@ namespace UnpakSipaksi.Modules.KetajamanAnalisis.Domain.KetajamanAnalisis
             {
                 if (HasError) return this;
 
-                /*if (string.IsNullOrWhiteSpace(nama))
+                if (nilai < 0)
                 {
-                    _result = Result.Failure<KetajamanAnalisis>(KetajamanAnalisisErrors.NamaNotFound);
+                    _result = Result.Failure<KetajamanAnalisis>(KetajamanAnalisisErrors.InvalidValueNilai());
                     return this;
-                }*/
+                }
 
                 _akurasiPenelitian.Nilai = nilai;
                 return this;

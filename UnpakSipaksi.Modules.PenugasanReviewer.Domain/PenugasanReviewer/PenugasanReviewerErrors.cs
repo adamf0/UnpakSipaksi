@@ -6,7 +6,8 @@ namespace UnpakSipaksi.Modules.PenugasanReviewer.Domain.PenugasanReviewer
     {
         public static Error EmptyData() =>
             Error.NotFound("PenugasanReviewer.EmptyData", "data is not found");
-
+        public static Error InvalidValueStatus() =>
+            Error.NotFound("PenugasanReviewer.InvalidValueStatus", "Invalid value 'status'");
         public static Error NotFound(Guid Id) =>
             Error.NotFound("PenugasanReviewer.NotFound", $"Penugasan reviewer with the identifier {Id} was not found");
 

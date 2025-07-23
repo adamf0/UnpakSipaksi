@@ -44,11 +44,11 @@ namespace UnpakSipaksi.Modules.KesesuaianJadwal.Domain.KesesuaianJadwal
             {
                 if (HasError) return this;
 
-                /*if (string.IsNullOrWhiteSpace(nama))
+                if (nilai < 0)
                 {
-                    _result = Result.Failure<KesesuaianJadwal>(KesesuaianJadwalErrors.NamaNotFound);
+                    _result = Result.Failure<KesesuaianJadwal>(KesesuaianJadwalErrors.InvalidValueNilai());
                     return this;
-                }*/
+                }
 
                 _akurasiPenelitian.Nilai = nilai;
                 return this;

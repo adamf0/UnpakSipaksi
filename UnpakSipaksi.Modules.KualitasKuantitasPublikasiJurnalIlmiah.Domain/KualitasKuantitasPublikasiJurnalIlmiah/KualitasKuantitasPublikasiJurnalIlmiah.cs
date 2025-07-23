@@ -24,6 +24,10 @@ namespace UnpakSipaksi.Modules.KualitasKuantitasPublikasiJurnalIlmiah.Domain.Kua
         int Nilai
         )
         {
+            if (Nilai < 0)
+            {
+                return Result.Failure<KualitasKuantitasPublikasiJurnalIlmiah>(KualitasKuantitasPublikasiJurnalIlmiahErrors.InvalidValueNilai());
+            }
             var asset = new KualitasKuantitasPublikasiJurnalIlmiah
             {
                 Uuid = Guid.NewGuid(),

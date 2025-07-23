@@ -33,6 +33,10 @@ namespace UnpakSipaksi.Modules.KebaruanReferensi.Domain.KebaruanReferensi
         int Skor
         )
         {
+            if (Skor <0) {
+                return Result.Failure<KebaruanReferensi>(KebaruanReferensiErrors.InvalidValueSkor());
+            }
+
             var asset = new KebaruanReferensi
             {
                 Uuid = Guid.NewGuid(),

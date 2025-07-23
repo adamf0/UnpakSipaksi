@@ -38,6 +38,7 @@ namespace UnpakSipaksi.Modules.Insentif.Domain.Insentif
             return result;
         }
 
+        //[PR] jadikan ke database
         private static (decimal ifaRatio, decimal icaRatio, int porsiSBU) GetRatio(JenisJurnal jenis, bool mahasiswa, Peran peran)
         {
             return (jenis, mahasiswa, peran) switch

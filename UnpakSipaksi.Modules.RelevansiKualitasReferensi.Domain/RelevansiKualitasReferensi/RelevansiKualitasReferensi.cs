@@ -29,6 +29,9 @@ namespace UnpakSipaksi.Modules.RelevansiKualitasReferensi.Domain.RelevansiKualit
         int Skor
         )
         {
+            if (Skor < 0) {
+                return Result.Failure<RelevansiKualitasReferensi>(RelevansiKualitasReferensiErrors.InvalidValueSkor());
+            }
             var asset = new RelevansiKualitasReferensi
             {
                 Uuid = Guid.NewGuid(),

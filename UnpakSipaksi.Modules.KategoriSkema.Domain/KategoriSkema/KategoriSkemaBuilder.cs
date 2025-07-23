@@ -1,4 +1,5 @@
-﻿using UnpakSipaksi.Common.Domain;
+﻿using System.Text.Json;
+using UnpakSipaksi.Common.Domain;
 
 namespace UnpakSipaksi.Modules.KategoriSkema.Domain.KategoriSkema
 {
@@ -39,11 +40,20 @@ namespace UnpakSipaksi.Modules.KategoriSkema.Domain.KategoriSkema
             {
                 if (HasError) return this;
 
-                /*if (string.IsNullOrWhiteSpace(nama))
+                try
                 {
-                    _result = Result.Failure<KategoriSkema>(KategoriSkemaErrors.NamaNotFound);
+                    using var doc = JsonDocument.Parse(rule);
+                    if (doc.RootElement.ValueKind != JsonValueKind.Array)
+                    {
+                        _result = Result.Failure<KategoriSkema>(KategoriSkemaErrors.InvalidFormatRule());
+                        return this;
+                    }
+                }
+                catch (JsonException)
+                {
+                    _result = Result.Failure<KategoriSkema>(KategoriSkemaErrors.InvalidFormatRule());
                     return this;
-                }*/
+                }
 
                 _akurasiPenelitian.Rule = rule;
                 return this;

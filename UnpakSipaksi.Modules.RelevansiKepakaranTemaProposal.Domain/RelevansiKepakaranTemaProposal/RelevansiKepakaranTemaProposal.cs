@@ -25,6 +25,9 @@ namespace UnpakSipaksi.Modules.RelevansiKepakaranTemaProposal.Domain.RelevansiKe
         int Skor
         )
         {
+            if (Skor < 0) {
+                return Result.Failure<RelevansiKepakaranTemaProposal>(RelevansiKepakaranTemaProposalErrors.InvalidValueSkor());
+            }
             var asset = new RelevansiKepakaranTemaProposal
             {
                 Uuid = Guid.NewGuid(),

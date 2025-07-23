@@ -10,6 +10,8 @@ namespace UnpakSipaksi.Modules.LuaranArtikel.Domain.LuaranArtikel
             Error.NotFound("LuaranArtikel.NotSameValue", "not the same value in data 'nilai'");
         public static Error UnknownKategoriSkema() =>
             Error.NotFound("LuaranArtikel.UnknownKategoriSkema", "Unknown schema category");
+        public static Error InvalidValueNilai() =>
+            Error.NotFound("LuaranArtikel.InvalidValueNilai", "Invalid value 'nilai'");
         public static Error NotFound(Guid Id) =>
             Error.NotFound("LuaranArtikel.NotFound", $"Luaran artikel with the identifier {Id} was not found");
 

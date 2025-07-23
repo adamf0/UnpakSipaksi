@@ -39,11 +39,11 @@ namespace UnpakSipaksi.Modules.LuaranArtikel.Domain.LuaranArtikel
             {
                 if (HasError) return this;
 
-                /*if (string.IsNullOrWhiteSpace(nama))
+                if (nilai < 0)
                 {
-                    _result = Result.Failure<LuaranArtikel>(LuaranArtikelErrors.NamaNotFound);
+                    _result =  Result.Failure<LuaranArtikel>(LuaranArtikelErrors.InvalidValueNilai());
                     return this;
-                }*/
+                }
 
                 _akurasiPenelitian.Nilai = nilai;
                 return this;

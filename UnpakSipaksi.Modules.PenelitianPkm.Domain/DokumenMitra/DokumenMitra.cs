@@ -50,7 +50,7 @@ namespace UnpakSipaksi.Modules.PenelitianPkm.Domain.DokumenMitra
             if (string.IsNullOrEmpty(File)) {
                 return Result.Failure<DokumenMitra>((DokumenMitraErrors.EmptyResource()));
             }
-            if (KelompokMitraId == 0) {
+            if (KelompokMitraId <= 0) {
                 return Result.Failure<DokumenMitra>((DokumenMitraErrors.InvalidKelompokMitra()));
             }
             //[PR] penambahan validasi provinsi & kota sesuai db
@@ -99,7 +99,7 @@ namespace UnpakSipaksi.Modules.PenelitianPkm.Domain.DokumenMitra
             {
                 return Result.Failure<DokumenMitra>((DokumenMitraErrors.EmptyResource()));
             }
-            if (KelompokMitraId == 0)
+            if (KelompokMitraId <= 0)
             {
                 return Result.Failure<DokumenMitra>((DokumenMitraErrors.InvalidKelompokMitra()));
             }

@@ -95,11 +95,11 @@ namespace UnpakSipaksi.Modules.RelevansiProdukKepentinganNasional.Domain.Relevan
             {
                 if (HasError) return this;
 
-                /*if (string.IsNullOrWhiteSpace(nama))
+                if (skor < 0)
                 {
-                    _result = Result.Failure<RelevansiProdukKepentinganNasional>(RelevansiProdukKepentinganNasionalErrors.NamaNotFound);
+                    _result = Result.Failure<RelevansiProdukKepentinganNasional>(RelevansiProdukKepentinganNasionalErrors.InvalidValueSkor());
                     return this;
-                }*/
+                }
 
                 _akurasiPenelitian.Skor = skor;
                 return this;

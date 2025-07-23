@@ -15,6 +15,8 @@ namespace UnpakSipaksi.Modules.KesesuaianSolusiMasalahMitra.Domain.KesesuaianSol
             Error.NotFound("KesesuaianSolusiMasalahMitra.NotSameValue", "not the same value in data 'nilai'");
         public static Error UnknownKategoriSkema() =>
             Error.NotFound("KesesuaianSolusiMasalahMitra.UnknownKategoriSkema", "Unknown schema category");
+        public static Error InvalidValueNilai() =>
+            Error.NotFound("KesesuaianSolusiMasalahMitra.InvalidValueNilai", "Invalid value 'nilai'");
         public static Error NotFound(Guid Id) =>
             Error.NotFound("KesesuaianSolusiMasalahMitra.NotFound", $"Kesesuaian solusi masalah mitra with the identifier {Id} was not found");
 

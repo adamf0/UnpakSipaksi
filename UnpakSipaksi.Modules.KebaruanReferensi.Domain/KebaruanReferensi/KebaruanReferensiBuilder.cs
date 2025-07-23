@@ -44,11 +44,11 @@ namespace UnpakSipaksi.Modules.KebaruanReferensi.Domain.KebaruanReferensi
             {
                 if (HasError) return this;
 
-                /*if (string.IsNullOrWhiteSpace(nama))
+                if (skor < 0)
                 {
-                    _result = Result.Failure<KebaruanReferensi>(KebaruanReferensiErrors.NamaNotFound);
+                    _result = Result.Failure<KebaruanReferensi>(KebaruanReferensiErrors.InvalidValueSkor());
                     return this;
-                }*/
+                }
 
                 _akurasiPenelitian.Skor = skor;
                 return this;

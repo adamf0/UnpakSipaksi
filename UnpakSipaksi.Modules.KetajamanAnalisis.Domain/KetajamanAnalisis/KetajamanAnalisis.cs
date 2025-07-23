@@ -25,6 +25,9 @@ namespace UnpakSipaksi.Modules.KetajamanAnalisis.Domain.KetajamanAnalisis
         int Nilai
         )
         {
+            if (Nilai < 0) {
+                return Result.Failure<KetajamanAnalisis>(KetajamanAnalisisErrors.InvalidValueNilai());
+            }
             var asset = new KetajamanAnalisis
             {
                 Uuid = Guid.NewGuid(),

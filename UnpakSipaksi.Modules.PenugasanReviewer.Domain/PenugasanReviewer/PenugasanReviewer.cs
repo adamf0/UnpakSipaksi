@@ -1,6 +1,7 @@
 ﻿using System.ComponentModel.DataAnnotations.Schema;
 using UnpakSipaksi.Common.Domain;
 
+//[PR] perlu validasi panjang max nidn di domain
 namespace UnpakSipaksi.Modules.PenugasanReviewer.Domain.PenugasanReviewer
 {
     public sealed partial class PenugasanReviewer : Entity
@@ -25,6 +26,9 @@ namespace UnpakSipaksi.Modules.PenugasanReviewer.Domain.PenugasanReviewer
         int Status
         )
         {
+            if (Status < 0 | Status > 1) {
+                return Result.Failure<PenugasanReviewer>(PenugasanReviewerErrors.InvalidValueStatus());
+            }
             var asset = new PenugasanReviewer
             {
                 Uuid = Guid.NewGuid(),

@@ -7,16 +7,25 @@ namespace UnpakSipaksi.Modules.Komponen.DomainTest
 {
     public class KomponenErrorsTests
     {
-        [Fact]
-        public void EmptyData_ShouldReturnCorrectError()
+        [Theory]
+        [InlineData("Komponen.EmptyData", "data is not found", ErrorType.NotFound)]
+        [InlineData("Komponen.NamaEmpty", "Nama can't be empty", ErrorType.NotFound)]
+        [InlineData("Komponen.InvalidMaxBiaya", "MaxBiaya is invalid format", ErrorType.NotFound)]
+        public void StaticError_ShouldReturnCorrectValues(string expectedCode, string expectedDescription, ErrorType expectedType)
         {
             // Act
-            var error = KomponenErrors.EmptyData();
+            Error error = expectedCode switch
+            {
+                "Komponen.EmptyData" => KomponenErrors.EmptyData(),
+                "Komponen.NamaEmpty" => KomponenErrors.NamaEmpty(),
+                "Komponen.InvalidMaxBiaya" => KomponenErrors.InvalidMaxBiaya(),
+                _ => throw new ArgumentException("Unknown error code", nameof(expectedCode))
+            };
 
             // Assert
-            error.Code.Should().Be("Komponen.EmptyData");
-            error.Description.Should().Be("data is not found");
-            error.Type.Should().Be(ErrorType.NotFound);
+            error.Code.Should().Be(expectedCode);
+            error.Description.Should().Be(expectedDescription);
+            error.Type.Should().Be(expectedType);
         }
 
         [Fact]
@@ -35,14 +44,14 @@ namespace UnpakSipaksi.Modules.Komponen.DomainTest
         }
 
         [Fact]
-        public void NamaEmpty_ShouldReturnCorrectError()
+        public void InvalidMaxBiaya_ShouldReturnCorrectError()
         {
             // Act
-            var error = KomponenErrors.NamaEmpty();
+            var error = KomponenErrors.InvalidMaxBiaya();
 
             // Assert
-            error.Code.Should().Be("Komponen.NamaEmpty");
-            error.Description.Should().Be("Nama can't be empty");
+            error.Code.Should().Be("Komponen.InvalidMaxBiaya");
+            error.Description.Should().Be("MaxBiaya is invalid format");
             error.Type.Should().Be(ErrorType.NotFound);
         }
     }

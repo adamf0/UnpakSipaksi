@@ -1,6 +1,7 @@
 ﻿using System.ComponentModel.DataAnnotations.Schema;
 using UnpakSipaksi.Common.Domain;
 
+//[PR] kurang validasi panjang max nidn
 namespace UnpakSipaksi.Modules.Roadmap.Domain.Roadmap
 {
     public sealed partial class Roadmap : Entity
@@ -25,6 +26,9 @@ namespace UnpakSipaksi.Modules.Roadmap.Domain.Roadmap
         string Link
         )
         {
+            if (DomainValidator.IsValidGoogleDriveUrl(Link, "drive.google.com")) {
+                return Result.Failure<Roadmap>(RoadmapErrors.InvalidLink());
+            }
             var asset = new Roadmap
             {
                 Uuid = Guid.NewGuid(),

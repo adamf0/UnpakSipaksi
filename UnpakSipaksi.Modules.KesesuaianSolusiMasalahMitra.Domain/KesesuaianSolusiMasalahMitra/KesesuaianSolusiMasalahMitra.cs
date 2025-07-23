@@ -29,6 +29,9 @@ namespace UnpakSipaksi.Modules.KesesuaianSolusiMasalahMitra.Domain.KesesuaianSol
         int Nilai
         )
         {
+            if (Nilai < 0) {
+                return Result.Failure<KesesuaianSolusiMasalahMitra>(KesesuaianSolusiMasalahMitraErrors.InvalidValueNilai());
+            }
             var asset = new KesesuaianSolusiMasalahMitra
             {
                 Uuid = Guid.NewGuid(),

@@ -10,6 +10,8 @@ namespace UnpakSipaksi.Modules.KewajaranTahapanTarget.Domain.KewajaranTahapanTar
             Error.NotFound("KewajaranTahapanTarget.NotSameValue", "not the same value in data 'nilai'");
         public static Error UnknownKategoriSkema() =>
             Error.NotFound("KewajaranTahapanTarget.UnknownKategoriSkema", "Unknown schema category");
+        public static Error InvalidValueNilai() =>
+            Error.NotFound("KewajaranTahapanTarget.InvalidValueNilai", "Invalid value 'nilai'");
         public static Error NotFound(Guid Id) =>
             Error.NotFound("KewajaranTahapanTarget.NotFound", $"Kewajaran tahapan target with the identifier {Id} was not found");
 

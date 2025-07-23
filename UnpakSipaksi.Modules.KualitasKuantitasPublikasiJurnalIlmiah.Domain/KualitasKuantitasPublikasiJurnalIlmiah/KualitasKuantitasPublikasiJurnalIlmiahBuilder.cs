@@ -39,11 +39,11 @@ namespace UnpakSipaksi.Modules.KualitasKuantitasPublikasiJurnalIlmiah.Domain.Kua
             {
                 if (HasError) return this;
 
-                /*if (string.IsNullOrWhiteSpace(nama))
+                if (nilai < 0)
                 {
-                    _result = Result.Failure<KualitasKuantitasPublikasiJurnalIlmiah>(KualitasKuantitasPublikasiJurnalIlmiahErrors.NamaNotFound);
+                    _result = Result.Failure<KualitasKuantitasPublikasiJurnalIlmiah>(KualitasKuantitasPublikasiJurnalIlmiahErrors.InvalidValueNilai());
                     return this;
-                }*/
+                }
 
                 _akurasiPenelitian.Nilai = nilai;
                 return this;

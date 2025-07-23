@@ -12,9 +12,11 @@ namespace UnpakSipaksi.Modules.KesesuaianTkt.Domain.KesesuaianTkt
         public static Error EmptyData() =>
             Error.NotFound("KesesuaianTkt.EmptyData", "data is not found");
         public static Error NotSameValue() =>
-           Error.NotFound("KesesuaianTkt.NotSameValue", "not the same value in data 'nilai'");
+           Error.NotFound("KesesuaianTkt.NotSameValue", "not the same value in data 'skor'");
         public static Error UnknownKategoriSkema() =>
             Error.NotFound("KesesuaianTkt.UnknownKategoriSkema", "Unknown schema category");
+        public static Error InvalidValueSkor() =>
+            Error.NotFound("KesesuaianTkt.InvalidValueSkor", "Invalid value 'skor'");
         public static Error NotFound(Guid Id) =>
             Error.NotFound("KesesuaianTkt.NotFound", $"Kesesuaian tkt with the identifier {Id} was not found");
 

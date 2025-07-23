@@ -4,6 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using UnpakSipaksi.Common.Domain;
+using UnpakSipaksi.Modules.KategoriLuaran.Domain.Kategori;
 
 namespace UnpakSipaksi.Modules.KategoriLuaran.Domain.KategoriLuaran
 {
@@ -30,11 +31,11 @@ namespace UnpakSipaksi.Modules.KategoriLuaran.Domain.KategoriLuaran
             {
                 if (HasError) return this;
 
-                /*if (string.IsNullOrWhiteSpace(nama))
+                if (kategoriId <= 0)
                 {
-                    _result = Result.Failure<KategoriLuaran>(KategoriLuaranErrors.NamaNotFound);
+                    _result = Result.Failure<KategoriLuaran>(KategoriLuaranErrors.KategoriNotFound());
                     return this;
-                }*/
+                }
 
                 _akurasiPenelitian.KategoriId = kategoriId;
                 return this;

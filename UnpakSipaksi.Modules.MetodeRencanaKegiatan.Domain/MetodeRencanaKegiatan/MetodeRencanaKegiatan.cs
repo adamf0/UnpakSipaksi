@@ -24,6 +24,9 @@ namespace UnpakSipaksi.Modules.MetodeRencanaKegiatan.Domain.MetodeRencanaKegiata
         int Nilai
         )
         {
+            if (Nilai < 0) {
+                return Result.Failure<MetodeRencanaKegiatan>(MetodeRencanaKegiatanErrors.InvalidValueNilai());
+            }
             var asset = new MetodeRencanaKegiatan
             {
                 Uuid = Guid.NewGuid(),

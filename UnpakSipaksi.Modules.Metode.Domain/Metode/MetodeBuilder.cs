@@ -24,6 +24,12 @@ namespace UnpakSipaksi.Modules.Metode.Domain.Metode
             public MetodeBuilder ChangeAkurasiPenelitian(int AkurasiPenelitianId)
             {
                 if (HasError) return this;
+                
+                if (AkurasiPenelitianId <= 0)
+                {
+                    _result = Result.Failure<Metode>(MetodeErrors.AkurasiPenelitianNotFound());
+                    return this;
+                }
 
                 _akurasiPenelitian.AkurasiPenelitianId = AkurasiPenelitianId;
                 return this;
@@ -33,6 +39,12 @@ namespace UnpakSipaksi.Modules.Metode.Domain.Metode
             {
                 if (HasError) return this;
 
+                if (KejelasanPembagianTugasTimId <= 0)
+                {
+                    _result = Result.Failure<Metode>(MetodeErrors.KejelasanPembagianTugasTimTaskNotFound());
+                    return this;
+                }
+
                 _akurasiPenelitian.KejelasanPembagianTugasTimId = KejelasanPembagianTugasTimId;
                 return this;
             }
@@ -41,12 +53,24 @@ namespace UnpakSipaksi.Modules.Metode.Domain.Metode
             {
                 if (HasError) return this;
 
+                if (KesesuaianWaktuRabLuaranFasilitasId <= 0)
+                {
+                    _result = Result.Failure<Metode>(MetodeErrors.KesesuaianWaktuRabLuaranFasilitasNotFound());
+                    return this;
+                }
+
                 _akurasiPenelitian.KesesuaianWaktuRabLuaranFasilitasId = KesesuaianWaktuRabLuaranFasilitasId;
                 return this;
             }
             public MetodeBuilder ChangePotensiKetercapaianLuaranDijanjikan(int PotensiKetercapaianLuaranDijanjikanId)
             {
                 if (HasError) return this;
+
+                if (PotensiKetercapaianLuaranDijanjikanId <= 0)
+                {
+                    _result = Result.Failure<Metode>(MetodeErrors.PotensiKetercapaianLuaranDijanjikanNotFound());
+                    return this;
+                }
 
                 _akurasiPenelitian.PotensiKetercapaianLuaranDijanjikanId = PotensiKetercapaianLuaranDijanjikanId;
                 return this;
@@ -56,6 +80,12 @@ namespace UnpakSipaksi.Modules.Metode.Domain.Metode
             {
                 if (HasError) return this;
 
+                if (ModelFeasibilityStudyId <= 0)
+                {
+                    _result = Result.Failure<Metode>(MetodeErrors.ModelFeasibilityStudyNotFound());
+                    return this;
+                }
+
                 _akurasiPenelitian.ModelFeasibilityStudyId = ModelFeasibilityStudyId;
                 return this;
             }
@@ -63,12 +93,24 @@ namespace UnpakSipaksi.Modules.Metode.Domain.Metode
             {
                 if (HasError) return this;
 
+                if (KesesuaianTktId <= 0)
+                {
+                    _result = Result.Failure<Metode>(MetodeErrors.KesesuaianTktNotFound());
+                    return this;
+                }
+
                 _akurasiPenelitian.KesesuaianTktId = KesesuaianTktId;
                 return this;
             }
             public MetodeBuilder ChangeKredibilitasMitraDukungan(int KredibilitasMitraDukunganId)
             {
                 if (HasError) return this;
+
+                if (KredibilitasMitraDukunganId <= 0)
+                {
+                    _result = Result.Failure<Metode>(MetodeErrors.KredibilitasMitraDukunganNotFound());
+                    return this;
+                }
 
                 _akurasiPenelitian.KredibilitasMitraDukunganId = KredibilitasMitraDukunganId;
                 return this;

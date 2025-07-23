@@ -39,11 +39,11 @@ namespace UnpakSipaksi.Modules.PublikasiDisitasiProposal.Domain.PublikasiDisitas
             {
                 if (HasError) return this;
 
-                /*if (string.IsNullOrWhiteSpace(nama))
+                if (skor < 0)
                 {
-                    _result = Result.Failure<PublikasiDisitasiProposal>(PublikasiDisitasiProposalErrors.NamaNotFound);
+                    _result = Result.Failure<PublikasiDisitasiProposal>(PublikasiDisitasiProposalErrors.InvalidValueSkor());
                     return this;
-                }*/
+                }
 
                 _akurasiPenelitian.Skor = skor;
                 return this;

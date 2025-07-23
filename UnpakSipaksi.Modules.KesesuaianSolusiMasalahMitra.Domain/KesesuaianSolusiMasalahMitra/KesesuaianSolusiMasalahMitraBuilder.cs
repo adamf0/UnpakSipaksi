@@ -44,11 +44,11 @@ namespace UnpakSipaksi.Modules.KesesuaianSolusiMasalahMitra.Domain.KesesuaianSol
             {
                 if (HasError) return this;
 
-                /*if (string.IsNullOrWhiteSpace(nama))
+                if (nilai < 0)
                 {
-                    _result = Result.Failure<KesesuaianSolusiMasalahMitra>(KesesuaianSolusiMasalahMitraErrors.NamaNotFound);
+                    _result = Result.Failure<KesesuaianSolusiMasalahMitra>(KesesuaianSolusiMasalahMitraErrors.InvalidValueNilai());
                     return this;
-                }*/
+                }
 
                 _akurasiPenelitian.Nilai = nilai;
                 return this;

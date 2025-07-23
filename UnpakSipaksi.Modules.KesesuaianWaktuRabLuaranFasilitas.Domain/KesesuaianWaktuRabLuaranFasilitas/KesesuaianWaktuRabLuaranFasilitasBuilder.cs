@@ -44,11 +44,11 @@ namespace UnpakSipaksi.Modules.KesesuaianWaktuRabLuaranFasilitas.Domain.Kesesuai
             {
                 if (HasError) return this;
 
-                /*if (string.IsNullOrWhiteSpace(nama))
+                if (skor < 0)
                 {
-                    _result = Result.Failure<KesesuaianWaktuRabLuaranFasilitas>(KesesuaianWaktuRabLuaranFasilitasErrors.NamaNotFound);
+                    _result = Result.Failure<KesesuaianWaktuRabLuaranFasilitas>(KesesuaianWaktuRabLuaranFasilitasErrors.InvalidValueSkor());
                     return this;
-                }*/
+                }
 
                 _akurasiPenelitian.Skor = skor;
                 return this;

@@ -10,6 +10,8 @@ namespace UnpakSipaksi.Modules.KuantitasStatusKi.Domain.KuantitasStatusKi
             Error.NotFound("KuantitasStatusKi.NotSameValue", "not the same value in data 'nilai'");
         public static Error UnknownKategoriSkema() =>
             Error.NotFound("KuantitasStatusKi.UnknownKategoriSkema", "Unknown schema category");
+        public static Error InvalidValueNilai() =>
+            Error.NotFound("KuantitasStatusKi.InvalidValueNilai", "Invalid value 'nilai'");
         public static Error NotFound(Guid Id) =>
             Error.NotFound("KuantitasStatusKi.NotFound", $"Kuantitas status KI with the identifier {Id} was not found");
 

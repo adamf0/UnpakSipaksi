@@ -15,6 +15,8 @@ namespace UnpakSipaksi.Modules.KejelasanPembagianTugasTim.Domain.KejelasanPembag
             Error.NotFound("KejelasanPembagianTugasTim.NotSameValue", "not the same value in data 'nilai'");
         public static Error UnknownKategoriSkema() =>
             Error.NotFound("KejelasanPembagianTugasTim.UnknownKategoriSkema", "Unknown schema category");
+        public static Error InvalidValueSkor() =>
+            Error.NotFound("KejelasanPembagianTugasTim.InvalidValueSkor", "Invalid value 'skor'");
         public static Error NotFound(Guid Id) =>
             Error.NotFound("KejelasanPembagianTugasTim.NotFound", $"Kejelasan pembagian tugas tim with identifier {Id} not found");
 

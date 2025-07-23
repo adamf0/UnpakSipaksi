@@ -25,6 +25,10 @@ namespace UnpakSipaksi.Modules.PeningkatanKeberdayaanMitra.Domain.PeningkatanKeb
         int Nilai
         )
         {
+            if (Nilai < 0)
+            {
+                return Result.Failure<PeningkatanKeberdayaanMitra>(PeningkatanKeberdayaanMitraErrors.InvalidValueNilai());
+            }
             var asset = new PeningkatanKeberdayaanMitra
             {
                 Uuid = Guid.NewGuid(),

@@ -29,6 +29,10 @@ namespace UnpakSipaksi.Modules.KesesuaianTkt.Domain.KesesuaianTkt
         int Skor
         )
         {
+            if (Skor < 0)
+            {
+                return Result.Failure<KesesuaianTkt>(KesesuaianTktErrors.InvalidValueSkor());
+            }
             var asset = new KesesuaianTkt
             {
                 Uuid = Guid.NewGuid(),

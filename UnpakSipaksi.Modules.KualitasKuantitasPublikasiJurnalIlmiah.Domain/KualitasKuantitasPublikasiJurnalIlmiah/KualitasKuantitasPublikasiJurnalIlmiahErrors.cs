@@ -11,7 +11,8 @@ namespace UnpakSipaksi.Modules.KualitasKuantitasPublikasiJurnalIlmiah.Domain.Kua
             Error.NotFound("KualitasKuantitasPublikasiJurnalIlmiah.NotSameValue", "not the same value in data 'nilai'");
         public static Error UnknownKategoriSkema() =>
             Error.NotFound("KualitasKuantitasPublikasiJurnalIlmiah.UnknownKategoriSkema", "Unknown schema category");
-
+        public static Error InvalidValueNilai() =>
+            Error.NotFound("KualitasKuantitasPublikasiJurnalIlmiah.InvalidValueNilai", "Invalid value 'nilai'");
         public static Error NotFound(Guid Id) =>
             Error.NotFound("KualitasKuantitasPublikasiJurnalIlmiah.NotFound", $"Kualitas kuantitas publikasi jurnal ilmiah with the identifier {Id} was not found");
 

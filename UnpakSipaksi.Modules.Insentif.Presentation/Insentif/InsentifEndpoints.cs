@@ -9,6 +9,8 @@ namespace UnpakSipaksi.Modules.Insentif.Presentation.Insentif
             CreateInsentif.MapEndpoint(app);
             UpdateInsentif.MapEndpoint(app);
             DeleteInsentif.MapEndpoint(app);
+            CreateReviewInsentif.MapEndpoint(app);
+            CalculateSbuInsentif.MapEndpoint(app);
             GetInsentif.MapEndpoint(app);
             GetAllInsentif.MapEndpoint(app);
         }

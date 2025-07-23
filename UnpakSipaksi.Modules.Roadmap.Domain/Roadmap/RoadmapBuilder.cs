@@ -33,6 +33,12 @@ namespace UnpakSipaksi.Modules.Roadmap.Domain.Roadmap
             {
                 if (HasError) return this;
 
+                if (DomainValidator.IsValidGoogleDriveUrl(Link, "drive.google.com"))
+                {
+                    _result = Result.Failure<Roadmap>(RoadmapErrors.InvalidLink());
+                    return this;
+                }
+
                 _akurasiPenelitian.Link = Link;
                 return this;
             }

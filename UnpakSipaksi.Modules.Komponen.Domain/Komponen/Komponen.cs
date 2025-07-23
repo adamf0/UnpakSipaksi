@@ -32,6 +32,10 @@ namespace UnpakSipaksi.Modules.Komponen.Domain.Komponen
                 MaxBiaya = MaxBiaya
             };
 
+            if (MaxBiaya!=null && MaxBiaya<=0) {
+                return Result.Failure<Komponen>(KomponenErrors.InvalidMaxBiaya());
+            }
+
             asset.Raise(new KomponenCreatedDomainEvent(asset.Uuid));
 
             return asset;

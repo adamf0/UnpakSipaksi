@@ -24,6 +24,9 @@ namespace UnpakSipaksi.Modules.KualitasKuantitasPublikasiProsiding.Domain.Kualit
         int Nilai
         )
         {
+            if (Nilai < 0) {
+                return Result.Failure<KualitasKuantitasPublikasiProsiding>(KualitasKuantitasPublikasiProsidingErrors.InvalidValueNilai());
+            }
             var asset = new KualitasKuantitasPublikasiProsiding
             {
                 Uuid = Guid.NewGuid(),

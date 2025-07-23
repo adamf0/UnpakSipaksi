@@ -10,6 +10,8 @@ namespace UnpakSipaksi.Modules.KualitasIpteks.Domain.KualitasIpteks
             Error.NotFound("KualitasIpteks.NotSameValue", "not the same value in data 'nilai'");
         public static Error UnknownKategoriSkema() =>
             Error.NotFound("KualitasIpteks.UnknownKategoriSkema", "Unknown schema category");
+        public static Error InvalidValueNilai() =>
+            Error.NotFound("KualitasIpteks.InvalidValueNilai", "Invalid value 'nilai'");
         public static Error NotFound(Guid Id) =>
             Error.NotFound("KualitasIpteks.NotFound", $"Kualitas ipteks with the identifier {Id} was not found");
 

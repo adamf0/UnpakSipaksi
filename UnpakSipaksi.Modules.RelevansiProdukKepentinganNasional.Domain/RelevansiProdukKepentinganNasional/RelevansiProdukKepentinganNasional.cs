@@ -29,6 +29,9 @@ namespace UnpakSipaksi.Modules.RelevansiProdukKepentinganNasional.Domain.Relevan
         int Skor
         )
         {
+            if (Skor < 0) {
+                return Result.Failure<RelevansiProdukKepentinganNasional>(RelevansiProdukKepentinganNasionalErrors.InvalidValueSkor());
+            }
             var asset = new RelevansiProdukKepentinganNasional
             {
                 Uuid = Guid.NewGuid(),

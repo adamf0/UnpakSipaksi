@@ -11,7 +11,9 @@ namespace UnpakSipaksi.Modules.Komponen.Domain.Komponen
             Error.NotFound("Komponen.NotFound", $"Komponen with the identifier {Id} was not found");
 
         public static Error NamaEmpty() =>
-            Error.NotFound("Komponen.NamaEmpty", $"Nama can't be empty");
+            Error.NotFound("Komponen.NamaEmpty", "Nama can't be empty");
+        public static Error InvalidMaxBiaya() =>
+            Error.NotFound("Komponen.InvalidMaxBiaya", "MaxBiaya is invalid format");
 
     }
 }

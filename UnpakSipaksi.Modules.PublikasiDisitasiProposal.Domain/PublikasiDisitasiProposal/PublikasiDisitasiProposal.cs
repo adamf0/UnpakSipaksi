@@ -25,6 +25,9 @@ namespace UnpakSipaksi.Modules.PublikasiDisitasiProposal.Domain.PublikasiDisitas
         int Skor
         )
         {
+            if (Skor < 0) {
+                return Result.Failure<PublikasiDisitasiProposal>(PublikasiDisitasiProposalErrors.InvalidValueSkor());
+            }
             var asset = new PublikasiDisitasiProposal
             {
                 Uuid = Guid.NewGuid(),

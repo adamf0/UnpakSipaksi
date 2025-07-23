@@ -39,11 +39,11 @@ namespace UnpakSipaksi.Modules.RelevansiKepakaranTemaProposal.Domain.RelevansiKe
             {
                 if (HasError) return this;
 
-                /*if (string.IsNullOrWhiteSpace(nama))
+                if (skor < 0)
                 {
-                    _result = Result.Failure<RelevansiKepakaranTemaProposal>(RelevansiKepakaranTemaProposalErrors.NamaNotFound);
+                    _result = Result.Failure<RelevansiKepakaranTemaProposal>(RelevansiKepakaranTemaProposalErrors.InvalidValueSkor());
                     return this;
-                }*/
+                }
 
                 _akurasiPenelitian.Skor = skor;
                 return this;

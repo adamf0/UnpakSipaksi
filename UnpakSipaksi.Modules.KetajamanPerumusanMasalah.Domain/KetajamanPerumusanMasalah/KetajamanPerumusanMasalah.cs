@@ -29,6 +29,9 @@ namespace UnpakSipaksi.Modules.KetajamanPerumusanMasalah.Domain.KetajamanPerumus
         int Skor
         )
         {
+            if (Skor < 0) {
+                return Result.Failure<KetajamanPerumusanMasalah>(KetajamanPerumusanMasalahErrors.InvalidValueSkor());
+            }
             var asset = new KetajamanPerumusanMasalah
             {
                 Uuid = Guid.NewGuid(),

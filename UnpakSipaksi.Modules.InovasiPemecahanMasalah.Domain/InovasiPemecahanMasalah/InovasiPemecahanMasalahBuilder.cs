@@ -44,11 +44,11 @@ namespace UnpakSipaksi.Modules.InovasiPemecahanMasalah.Domain.InovasiPemecahanMa
             {
                 if (HasError) return this;
 
-                /*if (string.IsNullOrWhiteSpace(nama))
+                if (bobotPDP < 0)
                 {
-                    _result = Result.Failure<InovasiPemecahanMasalah>(InovasiPemecahanMasalahErrors.NamaNotFound);
+                    _result = Result.Failure<InovasiPemecahanMasalah>(InovasiPemecahanMasalahErrors.InvalidBobotPDP());
                     return this;
-                }*/
+                }
 
                 _inovasiPemecahanMasalah.BobotPDP = bobotPDP;
                 return this;
@@ -58,11 +58,11 @@ namespace UnpakSipaksi.Modules.InovasiPemecahanMasalah.Domain.InovasiPemecahanMa
             {
                 if (HasError) return this;
 
-                /*if (string.IsNullOrWhiteSpace(nama))
+                if (bobotTerapan < 0)
                 {
-                    _result = Result.Failure<InovasiPemecahanMasalah>(InovasiPemecahanMasalahErrors.NamaNotFound);
+                    _result = Result.Failure<InovasiPemecahanMasalah>(InovasiPemecahanMasalahErrors.InvalidBobotTerapan());
                     return this;
-                }*/
+                }
 
                 _inovasiPemecahanMasalah.BobotTerapan = bobotTerapan;
                 return this;
@@ -72,11 +72,10 @@ namespace UnpakSipaksi.Modules.InovasiPemecahanMasalah.Domain.InovasiPemecahanMa
             {
                 if (HasError) return this;
 
-                /*if (string.IsNullOrWhiteSpace(nama))
+                if (bobotKerjasama < 0)
                 {
-                    _result = Result.Failure<InovasiPemecahanMasalah>(InovasiPemecahanMasalahErrors.NamaNotFound);
-                    return this;
-                }*/
+                    _result = Result.Failure<InovasiPemecahanMasalah>(InovasiPemecahanMasalahErrors.InvalidBobotKerjasama());
+                }
 
                 _inovasiPemecahanMasalah.BobotKerjasama = bobotKerjasama;
                 return this;
@@ -86,11 +85,11 @@ namespace UnpakSipaksi.Modules.InovasiPemecahanMasalah.Domain.InovasiPemecahanMa
             {
                 if (HasError) return this;
 
-                /*if (string.IsNullOrWhiteSpace(nama))
+                if (bobotPenelitianDasar < 0)
                 {
-                    _result = Result.Failure<InovasiPemecahanMasalah>(InovasiPemecahanMasalahErrors.NamaNotFound);
+                    _result = Result.Failure<InovasiPemecahanMasalah>(InovasiPemecahanMasalahErrors.InvalidBobotPenelitianDasar());
                     return this;
-                }*/
+                }
 
                 _inovasiPemecahanMasalah.BobotPenelitianDasar = bobotPenelitianDasar;
                 return this;
@@ -100,11 +99,11 @@ namespace UnpakSipaksi.Modules.InovasiPemecahanMasalah.Domain.InovasiPemecahanMa
             {
                 if (HasError) return this;
 
-                /*if (string.IsNullOrWhiteSpace(nama))
+                if (skor < 0)
                 {
-                    _result = Result.Failure<InovasiPemecahanMasalah>(InovasiPemecahanMasalahErrors.NamaNotFound);
+                    _result = Result.Failure<InovasiPemecahanMasalah>(InovasiPemecahanMasalahErrors.InvalidSkor());
                     return this;
-                }*/
+                }
 
                 _inovasiPemecahanMasalah.Skor = skor;
                 return this;

@@ -11,6 +11,8 @@ namespace UnpakSipaksi.Modules.JenisPublikasi.Domain.JenisPublikasi
     {
         public static Error EmptyData() =>
             Error.NotFound("JenisPublikasi.EmptyData", "data is not found");
+        public static Error InvalidSbu() =>
+            Error.NotFound("JenisPublikasi.InvalidSbu", "Sbu invalid format");
 
         public static Error NotFound(Guid Id) =>
             Error.NotFound("JenisPublikasi.NotFound", $"Jenis publikasi with identifier {Id} not found");

@@ -15,6 +15,8 @@ namespace UnpakSipaksi.Modules.KebaruanReferensi.Domain.KebaruanReferensi
            Error.NotFound("KebaruanReferensi.NotSameValue", "not the same value in data 'nilai'");
         public static Error UnknownKategoriSkema() =>
             Error.NotFound("KebaruanReferensi.UnknownKategoriSkema", "Unknown schema category");
+        public static Error InvalidValueSkor() =>
+            Error.NotFound("KebaruanReferensi.InvalidValueSkor", "Invalid value 'skor'");
         public static Error NotFound(Guid Id) =>
             Error.NotFound("KebaruanReferensi.NotFound", $"Kebaruan referensi with identifier {Id} not found");
 

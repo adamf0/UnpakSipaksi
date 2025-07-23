@@ -15,6 +15,8 @@ namespace UnpakSipaksi.Modules.AkurasiPenelitian.Domain.AkurasiPenelitian
             Error.NotFound("AkurasiPenelitian.NotSameValue", "not the same value in data 'nilai'");
         public static Error UnknownKategoriSkema() =>
             Error.NotFound("AkurasiPenelitian.UnknownKategoriSkema", "Unknown schema category");
+        public static Error InvalidSkor() =>
+            Error.NotFound("AkurasiPenelitian.InvalidSkor", "Skor is invalid format");
         public static Error NotFound(Guid Id) =>
             Error.NotFound("AkurasiPenelitian.NotFound", $"Akurasi penelitian with identifier {Id} not found");
         

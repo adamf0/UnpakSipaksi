@@ -11,6 +11,8 @@ namespace UnpakSipaksi.Modules.KualitasKuantitasPublikasiProsiding.Domain.Kualit
             Error.NotFound("KualitasKuantitasPublikasiProsiding.NotSameValue", "not the same value in data 'nilai'");
         public static Error UnknownKategoriSkema() =>
             Error.NotFound("KualitasKuantitasPublikasiProsiding.UnknownKategoriSkema", "Unknown schema category");
+        public static Error InvalidValueNilai() =>
+            Error.NotFound("KualitasKuantitasPublikasiProsiding.InvalidValueNilai", "Invalid value 'nilai'");
         public static Error NotFound(Guid Id) =>
             Error.NotFound("KualitasKuantitasPublikasiProsiding.NotFound", $"Kualitas kuantitas publikasi prosiding with the identifier {Id} was not found");
 

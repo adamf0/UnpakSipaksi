@@ -30,6 +30,11 @@ namespace UnpakSipaksi.Modules.ArtikelMediaMassa.Domain.ArtikelMediaMassa
         int Nilai
         )
         {
+            if (Nilai < 0 || Nilai > int.MaxValue)
+            {
+                return Result.Failure<ArtikelMediaMassa>(ArtikelMediaMassaErrors.InvalidNilai());
+            }
+
             var asset = new ArtikelMediaMassa
             {
                 Uuid = Guid.NewGuid(),

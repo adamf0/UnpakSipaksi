@@ -35,6 +35,34 @@ namespace UnpakSipaksi.Modules.Metode.Domain.Metode
 
         )
         {
+            if (AkurasiPenelitianId <= 0) {
+                return Result.Failure<Metode>(MetodeErrors.AkurasiPenelitianNotFound());
+            }
+            if (KejelasanPembagianTugasTimId <= 0)
+            {
+                return Result.Failure<Metode>(MetodeErrors.KejelasanPembagianTugasTimTaskNotFound());
+            }
+            if (KesesuaianWaktuRabLuaranFasilitasId <= 0)
+            {
+                return Result.Failure<Metode>(MetodeErrors.KesesuaianWaktuRabLuaranFasilitasNotFound());
+            }
+            if (PotensiKetercapaianLuaranDijanjikanId <= 0)
+            {
+                return Result.Failure<Metode>(MetodeErrors.PotensiKetercapaianLuaranDijanjikanNotFound());
+            }
+            if (ModelFeasibilityStudyId <= 0)
+            {
+                return Result.Failure<Metode>(MetodeErrors.ModelFeasibilityStudyNotFound());
+            }
+            if (KesesuaianTktId <= 0)
+            {
+                return Result.Failure<Metode>(MetodeErrors.KesesuaianTktNotFound());
+            }
+            if (KredibilitasMitraDukunganId <= 0)
+            {
+                return Result.Failure<Metode>(MetodeErrors.KredibilitasMitraDukunganNotFound());
+            }
+
             var asset = new Metode
             {
                 Uuid = Guid.NewGuid(),

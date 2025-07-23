@@ -35,7 +35,7 @@ namespace UnpakSipaksi.Modules.KategoriLuaran.Domain.KategoriLuaran
         string Status
         )
         {
-            if (KategoriId==0) { 
+            if (KategoriId<=0) { 
                 return Result.Failure<KategoriLuaran>(KategoriLuaranErrors.KategoriNotFound());
             }
 

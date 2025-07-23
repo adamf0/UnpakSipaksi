@@ -29,6 +29,10 @@ namespace UnpakSipaksi.Modules.KesesuaianWaktuRabLuaranFasilitas.Domain.Kesesuai
         int Skor
         )
         {
+            if (Skor < 0)
+            {
+                return Result.Failure<KesesuaianWaktuRabLuaranFasilitas>(KesesuaianWaktuRabLuaranFasilitasErrors.InvalidValueSkor());
+            }
             var asset = new KesesuaianWaktuRabLuaranFasilitas
             {
                 Uuid = Guid.NewGuid(),

@@ -2,6 +2,7 @@
 using UnpakSipaksi.Common.Domain;
 using UnpakSipaksi.Modules.Insentif.Domain.CheckInsentif;
 using UnpakSipaksi.Modules.Insentif.Domain.Insentif;
+using UnpakSipaksi.Modules.Insentif.Domain.VerifikasiLppm;
 
 namespace UnpakSipaksi.Modules.Insentif.Domain.VerifikasiFakultas
 {
@@ -39,7 +40,8 @@ namespace UnpakSipaksi.Modules.Insentif.Domain.VerifikasiFakultas
         public string? Catatan { get; private set; }
 
         public static Result<VerifikasiFakultas> Review(
-            Domain.Insentif.Insentif prev,
+            Guid Uuid,
+            Domain.VerifikasiFakultas.VerifikasiFakultas? prev,
             BuktiPublikasi BuktiPublikasi,
             int StatusJurnal,
             Peran PeranPenulis,
@@ -51,6 +53,10 @@ namespace UnpakSipaksi.Modules.Insentif.Domain.VerifikasiFakultas
             string? Catatan
         )
         {
+            if (prev == null)
+            {
+                return Result.Failure<VerifikasiFakultas>(VerifikasiFakultasErrors.NotFound(Uuid));
+            }
             if (
                 !EnumExtensions.GetAllEnumValues<BuktiPublikasi>().Contains(Convert.ToInt32(BuktiPublikasi))
             )

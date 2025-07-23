@@ -724,6 +724,7 @@ namespace UnpakSipaksi.Modules.Insentif.DomainTest
             result.Error.Description.Should().Be("Verifikasi is invalid data");
         }
 
+        //[PR] kurang pengecekan jumlah ca yg minus
         [Theory(Skip = "JumlahCoAuthor terlalu besar, di loloskan dan dianggap 0")]
         [InlineData(JenisJurnal.External, true, Peran.CoAuthor, 2147483647)]
         [InlineData(JenisJurnal.Internal, true, Peran.CoAuthor, 2147483647)]

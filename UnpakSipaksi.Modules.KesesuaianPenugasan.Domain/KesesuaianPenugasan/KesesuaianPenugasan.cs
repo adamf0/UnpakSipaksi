@@ -29,6 +29,9 @@ namespace UnpakSipaksi.Modules.KesesuaianPenugasan.Domain.KesesuaianPenugasan
         int Nilai
         )
         {
+            if (Nilai < 0) {
+                return Result.Failure<KesesuaianPenugasan>(KesesuaianPenugasanErrors.InvalidValueNilai());
+            }
             var asset = new KesesuaianPenugasan
             {
                 Uuid = Guid.NewGuid(),

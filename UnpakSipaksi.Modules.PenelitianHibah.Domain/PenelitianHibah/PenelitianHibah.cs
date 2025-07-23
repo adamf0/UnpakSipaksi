@@ -192,5 +192,22 @@ namespace UnpakSipaksi.Modules.PenelitianHibah.Domain.PenelitianHibah
 
             return prev;
         }
+
+        public static Result<PenelitianHibah> UpdateStatus(
+          PenelitianHibah? prev,
+          string Status
+        )
+        {
+            if (prev is null)
+            {
+                return Result.Failure<PenelitianHibah>(PenelitianHibahErrors.EmptyData());
+            }
+            if (!EnumExtensions.GetAllEnumStrings<StatusPengajuan>().Contains(Status, StringComparer.OrdinalIgnoreCase)) {
+                return Result.Failure<PenelitianHibah>(PenelitianHibahErrors.InvalidStatus());
+            }
+            prev.Status = Status;
+
+            return prev;
+        }
     }
 }

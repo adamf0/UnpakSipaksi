@@ -29,6 +29,9 @@ namespace UnpakSipaksi.Modules.JenisPublikasi.Domain.JenisPublikasi
         int Sbu
         )
         {
+            if (Sbu < 0) {
+                return Result.Failure<JenisPublikasi>(JenisPublikasiErrors.InvalidSbu());
+            }
             var asset = new JenisPublikasi
             {
                 Uuid = Guid.NewGuid(),

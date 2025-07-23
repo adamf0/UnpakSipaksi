@@ -29,6 +29,9 @@ namespace UnpakSipaksi.Modules.KesesuaianJadwal.Domain.KesesuaianJadwal
         int Nilai
         )
         {
+            if (Nilai < 0) {
+                return Result.Failure<KesesuaianJadwal>(KesesuaianJadwalErrors.InvalidValueNilai());
+            }
             var asset = new KesesuaianJadwal
             {
                 Uuid = Guid.NewGuid(),

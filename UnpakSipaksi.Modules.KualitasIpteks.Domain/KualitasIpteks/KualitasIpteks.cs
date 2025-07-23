@@ -24,6 +24,10 @@ namespace UnpakSipaksi.Modules.KualitasIpteks.Domain.KualitasIpteks
         int Nilai
         )
         {
+            if (Nilai < 0)
+            {
+                return Result.Failure<KualitasIpteks>(KualitasIpteksErrors.InvalidValueNilai());
+            }
             var asset = new KualitasIpteks
             {
                 Uuid = Guid.NewGuid(),

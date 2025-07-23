@@ -24,6 +24,9 @@ namespace UnpakSipaksi.Modules.LuaranArtikel.Domain.LuaranArtikel
         int Nilai
         )
         {
+            if (Nilai < 0) {
+                return Result.Failure<LuaranArtikel>(LuaranArtikelErrors.InvalidValueNilai());
+            }
             var asset = new LuaranArtikel
             {
                 Uuid = Guid.NewGuid(),

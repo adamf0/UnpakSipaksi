@@ -821,3 +821,4 @@ C:\dev_net\UnpakSipaksi\UnpakSipaksi\obj\Debug\net8.0\refint\UnpakSipaksi.dll
 C:\dev_net\UnpakSipaksi\UnpakSipaksi\obj\Debug\net8.0\UnpakSipaksi.pdb
 C:\dev_net\UnpakSipaksi\UnpakSipaksi\obj\Debug\net8.0\UnpakSipaksi.genruntimeconfig.cache
 C:\dev_net\UnpakSipaksi\UnpakSipaksi\obj\Debug\net8.0\ref\UnpakSipaksi.dll
+C:\dev_net\UnpakSipaksi\UnpakSipaksi\obj\Debug\net8.0\UnpakSipaksi.MvcApplicationPartsAssemblyInfo.cs

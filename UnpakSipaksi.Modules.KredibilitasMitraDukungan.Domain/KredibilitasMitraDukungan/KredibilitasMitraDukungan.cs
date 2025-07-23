@@ -29,6 +29,9 @@ namespace UnpakSipaksi.Modules.KredibilitasMitraDukungan.Domain.KredibilitasMitr
         int Skor
         )
         {
+            if (Skor < 0) {
+                return Result.Failure<KredibilitasMitraDukungan>(KredibilitasMitraDukunganErrors.InvalidValueSkor());
+            }
             var asset = new KredibilitasMitraDukungan
             {
                 Uuid = Guid.NewGuid(),

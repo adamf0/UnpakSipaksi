@@ -34,6 +34,9 @@ namespace UnpakSipaksi.Modules.InovasiPemecahanMasalah.Domain.InovasiPemecahanMa
         int Skor
         )
         {
+            if (Skor < 0) {
+                return Result.Failure<InovasiPemecahanMasalah>(InovasiPemecahanMasalahErrors.InvalidSkor());
+            }
             var asset = new InovasiPemecahanMasalah
             {
                 Uuid = Guid.NewGuid(),

@@ -44,11 +44,10 @@ namespace UnpakSipaksi.Modules.ArtikelMediaMassa.Domain.ArtikelMediaMassa
             {
                 if (HasError) return this;
 
-                /*if (string.IsNullOrWhiteSpace(nama))
+                if (nilai < 0 || nilai > int.MaxValue)
                 {
-                    _result = Result.Failure<ArtikelMediaMassa>(ArtikelMediaMassaErrors.NamaNotFound);
-                    return this;
-                }*/
+                    _result = Result.Failure<ArtikelMediaMassa>(ArtikelMediaMassaErrors.InvalidNilai());
+                }
 
                 _akurasiPenelitian.Nilai = nilai;
                 return this;

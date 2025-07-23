@@ -29,6 +29,17 @@ namespace UnpakSipaksi.Modules.Insentif.Domain.Insentif
             }
             throw new ArgumentException($"Invalid value for {typeof(T).Name}: {stringValue}");
         } //"Co Author".ToEnumFromString<JenisPublikasi>();
+        public static T? ToEnumFromStringWithoutThrow<T>(this string stringValue) where T : struct, Enum
+        {
+            foreach (T enumValue in Enum.GetValues(typeof(T)))
+            {
+                if (enumValue.ToEnumString().Equals(stringValue, StringComparison.OrdinalIgnoreCase))
+                {
+                    return enumValue;
+                }
+            }
+            return null;
+        }
 
         public static T ToEnumFromInt<T>(this int intValue) where T : struct, Enum
         {

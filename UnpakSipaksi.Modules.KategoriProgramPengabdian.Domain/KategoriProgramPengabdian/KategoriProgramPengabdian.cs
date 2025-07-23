@@ -1,5 +1,6 @@
 ﻿using System.ComponentModel.DataAnnotations.Schema;
 using UnpakSipaksi.Common.Domain;
+using System.Text.Json;
 
 namespace UnpakSipaksi.Modules.KategoriProgramPengabdian.Domain.KategoriProgramPengabdian
 {
@@ -25,6 +26,19 @@ namespace UnpakSipaksi.Modules.KategoriProgramPengabdian.Domain.KategoriProgramP
         string Rule
         )
         {
+            try
+            {
+                using var doc = JsonDocument.Parse(Rule);
+                if (doc.RootElement.ValueKind != JsonValueKind.Array)
+                {
+                    return Result.Failure<KategoriProgramPengabdian>(KategoriProgramPengabdianErrors.InvalidFormatRule());
+                }
+            }
+            catch (JsonException)
+            {
+                return Result.Failure<KategoriProgramPengabdian>(KategoriProgramPengabdianErrors.InvalidFormatRule());
+            }
+
             var asset = new KategoriProgramPengabdian
             {
                 Uuid = Guid.NewGuid(),

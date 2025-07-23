@@ -24,6 +24,9 @@ namespace UnpakSipaksi.Modules.KuantitasStatusKi.Domain.KuantitasStatusKi
         int Nilai
         )
         {
+            if (Nilai < 0) {
+                return Result.Failure<KuantitasStatusKi>(KuantitasStatusKiErrors.InvalidValueNilai());
+            }
             var asset = new KuantitasStatusKi
             {
                 Uuid = Guid.NewGuid(),

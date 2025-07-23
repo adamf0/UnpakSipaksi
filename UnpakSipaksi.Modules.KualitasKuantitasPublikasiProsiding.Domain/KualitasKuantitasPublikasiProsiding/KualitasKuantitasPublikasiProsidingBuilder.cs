@@ -39,11 +39,11 @@ namespace UnpakSipaksi.Modules.KualitasKuantitasPublikasiProsiding.Domain.Kualit
             {
                 if (HasError) return this;
 
-                /*if (string.IsNullOrWhiteSpace(nama))
+                if (nilai < 0)
                 {
-                    _result = Result.Failure<KualitasKuantitasPublikasiProsiding>(KualitasKuantitasPublikasiProsidingErrors.NamaNotFound);
+                    _result = Result.Failure<KualitasKuantitasPublikasiProsiding>(KualitasKuantitasPublikasiProsidingErrors.InvalidValueNilai());
                     return this;
-                }*/
+                }
 
                 _akurasiPenelitian.Nilai = nilai;
                 return this;

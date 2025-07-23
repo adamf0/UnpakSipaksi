@@ -44,11 +44,11 @@ namespace UnpakSipaksi.Modules.JenisPublikasi.Domain.JenisPublikasi
             {
                 if (HasError) return this;
 
-                /*if (string.IsNullOrWhiteSpace(nama))
+                if (sbu < 0)
                 {
-                    _result = Result.Failure<JenisPublikasi>(JenisPublikasiErrors.NamaNotFound);
+                    _result = Result.Failure<JenisPublikasi>(JenisPublikasiErrors.InvalidSbu());
                     return this;
-                }*/
+                }
 
                 _akurasiPenelitian.Sbu = sbu;
                 return this;

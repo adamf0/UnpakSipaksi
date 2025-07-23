@@ -29,6 +29,9 @@ namespace UnpakSipaksi.Modules.PotensiKetercapaianLuaranDijanjikan.Domain.Potens
         int Skor
         )
         {
+            if (Skor < 0) {
+                return Result.Failure<PotensiKetercapaianLuaranDijanjikan>(PotensiKetercapaianLuaranDijanjikanErrors.InvalidValueSkor());
+            }
             var asset = new PotensiKetercapaianLuaranDijanjikan
             {
                 Uuid = Guid.NewGuid(),

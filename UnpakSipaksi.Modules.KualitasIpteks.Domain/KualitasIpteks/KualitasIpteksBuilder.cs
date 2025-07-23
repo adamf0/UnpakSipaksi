@@ -39,11 +39,11 @@ namespace UnpakSipaksi.Modules.KualitasIpteks.Domain.KualitasIpteks
             {
                 if (HasError) return this;
 
-                /*if (string.IsNullOrWhiteSpace(nama))
+                if (nilai < 0)
                 {
-                    _result = Result.Failure<KualitasIpteks>(KualitasIpteksErrors.NamaNotFound);
+                    _result = Result.Failure<KualitasIpteks>(KualitasIpteksErrors.InvalidValueNilai());
                     return this;
-                }*/
+                }
 
                 _akurasiPenelitian.Nilai = nilai;
                 return this;

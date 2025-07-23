@@ -44,11 +44,11 @@ namespace UnpakSipaksi.Modules.KesesuaianTkt.Domain.KesesuaianTkt
             {
                 if (HasError) return this;
 
-                /*if (string.IsNullOrWhiteSpace(nama))
+                if (skor < 0)
                 {
-                    _result = Result.Failure<KesesuaianTkt>(KesesuaianTktErrors.NamaNotFound);
+                    _result = Result.Failure<KesesuaianTkt>(KesesuaianTktErrors.InvalidValueSkor());
                     return this;
-                }*/
+                }
 
                 _akurasiPenelitian.Skor = skor;
                 return this;

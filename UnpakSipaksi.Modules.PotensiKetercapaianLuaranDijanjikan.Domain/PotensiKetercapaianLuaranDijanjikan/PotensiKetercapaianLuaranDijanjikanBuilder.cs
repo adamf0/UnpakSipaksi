@@ -95,11 +95,11 @@ namespace UnpakSipaksi.Modules.PotensiKetercapaianLuaranDijanjikan.Domain.Potens
             {
                 if (HasError) return this;
 
-                /*if (string.IsNullOrWhiteSpace(nama))
+                if (skor < 0)
                 {
-                    _result = Result.Failure<PotensiKetercapaianLuaranDijanjikan>(PotensiKetercapaianLuaranDijanjikanErrors.NamaNotFound);
+                    _result = Result.Failure<PotensiKetercapaianLuaranDijanjikan>(PotensiKetercapaianLuaranDijanjikanErrors.InvalidValueSkor());
                     return this;
-                }*/
+                }
 
                 _akurasiPenelitian.Skor = skor;
                 return this;

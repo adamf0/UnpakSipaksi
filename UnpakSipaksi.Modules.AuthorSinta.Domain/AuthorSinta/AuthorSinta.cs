@@ -35,6 +35,14 @@ namespace UnpakSipaksi.Modules.AuthorSinta.Domain.AuthorSinta
         int Score
         )
         {
+            if (string.IsNullOrEmpty(AuthorId) || AuthorId.Length != 7) {
+                return Result.Failure<AuthorSinta>(AuthorSintaErrors.InvalidAuthorId());
+            }
+            if (Score <= 0)
+            {
+                return Result.Failure<AuthorSinta>(AuthorSintaErrors.InvalidSkor());
+            }
+
             var asset = new AuthorSinta
             {
                 Uuid = Guid.NewGuid(),

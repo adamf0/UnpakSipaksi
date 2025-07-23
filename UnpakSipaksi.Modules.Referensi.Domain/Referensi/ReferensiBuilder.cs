@@ -44,8 +44,10 @@ namespace UnpakSipaksi.Modules.Referensi.Domain.Referensi
             {
                 if (HasError) return this;
 
-                if (_Referensi.KebaruanReferensiId == 0)
+                if (KebaruanReferensiId <= 0) {
                     _result = Result.Failure<Referensi>(ReferensiErrors.NotFoundKebaruanReferensiId());
+                    return this;
+                }
 
                 _Referensi.KebaruanReferensiId = KebaruanReferensiId;
                 return this;
@@ -55,8 +57,10 @@ namespace UnpakSipaksi.Modules.Referensi.Domain.Referensi
             {
                 if (HasError) return this;
 
-                if (_Referensi.RelevansiKualitasReferensiId == 0)
+                if (RelevansiKualitasReferensiId <= 0) {
                     _result = Result.Failure<Referensi>(ReferensiErrors.NotFoundRelevansiKualitasReferensiId());
+                    return this;
+                }
 
                 _Referensi.RelevansiKualitasReferensiId = RelevansiKualitasReferensiId;
                 return this;
@@ -66,11 +70,10 @@ namespace UnpakSipaksi.Modules.Referensi.Domain.Referensi
             {
                 if (HasError) return this;
 
-                /*if (string.IsNullOrWhiteSpace(nama))
-                {
-                    _result = Result.Failure<Referensi>(ReferensiErrors.NamaNotFound);
+                if (Nilai < 0) {
+                    _result = Result.Failure<Referensi>(ReferensiErrors.InvalidValueNilai());
                     return this;
-                }*/
+                }
 
                 _Referensi.Nilai = Nilai;
                 return this;

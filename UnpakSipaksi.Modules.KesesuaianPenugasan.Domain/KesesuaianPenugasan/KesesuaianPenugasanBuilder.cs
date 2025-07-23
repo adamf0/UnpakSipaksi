@@ -44,11 +44,11 @@ namespace UnpakSipaksi.Modules.KesesuaianPenugasan.Domain.KesesuaianPenugasan
             {
                 if (HasError) return this;
 
-                /*if (string.IsNullOrWhiteSpace(nama))
+                if (nilai < 0)
                 {
-                    _result = Result.Failure<KesesuaianPenugasan>(KesesuaianPenugasanErrors.NamaNotFound);
+                    _result = Result.Failure<KesesuaianPenugasan>(KesesuaianPenugasanErrors.InvalidValueNilai());
                     return this;
-                }*/
+                }
 
                 _akurasiPenelitian.Nilai = nilai;
                 return this;

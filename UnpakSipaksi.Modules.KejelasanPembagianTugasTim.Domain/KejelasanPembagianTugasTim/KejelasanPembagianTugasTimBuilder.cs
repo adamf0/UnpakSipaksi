@@ -44,11 +44,11 @@ namespace UnpakSipaksi.Modules.KejelasanPembagianTugasTim.Domain.KejelasanPembag
             {
                 if (HasError) return this;
 
-                /*if (string.IsNullOrWhiteSpace(nama))
+                if (skor < 0)
                 {
-                    _result = Result.Failure<KejelasanPembagianTugasTim>(KejelasanPembagianTugasTimErrors.NamaNotFound);
+                    _result = Result.Failure<KejelasanPembagianTugasTim>(KejelasanPembagianTugasTimErrors.InvalidValueSkor());
                     return this;
-                }*/
+                }
 
                 _akurasiPenelitian.Skor = skor;
                 return this;

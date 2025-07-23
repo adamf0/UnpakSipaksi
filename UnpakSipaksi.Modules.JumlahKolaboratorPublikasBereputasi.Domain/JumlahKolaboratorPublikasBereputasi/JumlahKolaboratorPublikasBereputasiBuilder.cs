@@ -30,12 +30,6 @@ namespace UnpakSipaksi.Modules.JumlahKolaboratorPublikasBereputasi.Domain.Jumlah
             {
                 if (HasError) return this;
 
-                /*if (string.IsNullOrWhiteSpace(nama))
-                {
-                    _result = Result.Failure<JumlahKolaboratorPublikasBereputasi>(JumlahKolaboratorPublikasBereputasiErrors.NamaNotFound);
-                    return this;
-                }*/
-
                 _akurasiPenelitian.Nama = nama;
                 return this;
             }
@@ -44,11 +38,11 @@ namespace UnpakSipaksi.Modules.JumlahKolaboratorPublikasBereputasi.Domain.Jumlah
             {
                 if (HasError) return this;
 
-                /*if (string.IsNullOrWhiteSpace(nama))
+                if (bobotPDP < 0)
                 {
-                    _result = Result.Failure<JumlahKolaboratorPublikasBereputasi>(JumlahKolaboratorPublikasBereputasiErrors.NamaNotFound);
+                    _result = Result.Failure<JumlahKolaboratorPublikasBereputasi>(JumlahKolaboratorPublikasBereputasiErrors.InvalidBobotPDP());
                     return this;
-                }*/
+                }
 
                 _akurasiPenelitian.BobotPDP = bobotPDP;
                 return this;
@@ -58,11 +52,11 @@ namespace UnpakSipaksi.Modules.JumlahKolaboratorPublikasBereputasi.Domain.Jumlah
             {
                 if (HasError) return this;
 
-                /*if (string.IsNullOrWhiteSpace(nama))
+                if (bobotTerapan < 0)
                 {
-                    _result = Result.Failure<JumlahKolaboratorPublikasBereputasi>(JumlahKolaboratorPublikasBereputasiErrors.NamaNotFound);
+                    _result = Result.Failure<JumlahKolaboratorPublikasBereputasi>(JumlahKolaboratorPublikasBereputasiErrors.InvalidBobotTerapan());
                     return this;
-                }*/
+                }
 
                 _akurasiPenelitian.BobotTerapan = bobotTerapan;
                 return this;
@@ -72,11 +66,11 @@ namespace UnpakSipaksi.Modules.JumlahKolaboratorPublikasBereputasi.Domain.Jumlah
             {
                 if (HasError) return this;
 
-                /*if (string.IsNullOrWhiteSpace(nama))
+                if (bobotKerjasama < 0)
                 {
-                    _result = Result.Failure<JumlahKolaboratorPublikasBereputasi>(JumlahKolaboratorPublikasBereputasiErrors.NamaNotFound);
+                    _result = Result.Failure<JumlahKolaboratorPublikasBereputasi>(JumlahKolaboratorPublikasBereputasiErrors.InvalidBobotKerjasama());
                     return this;
-                }*/
+                }
 
                 _akurasiPenelitian.BobotKerjasama = bobotKerjasama;
                 return this;
@@ -86,11 +80,11 @@ namespace UnpakSipaksi.Modules.JumlahKolaboratorPublikasBereputasi.Domain.Jumlah
             {
                 if (HasError) return this;
 
-                /*if (string.IsNullOrWhiteSpace(nama))
+                if (bobotPenelitianDasar < 0)
                 {
-                    _result = Result.Failure<JumlahKolaboratorPublikasBereputasi>(JumlahKolaboratorPublikasBereputasiErrors.NamaNotFound);
+                    _result = Result.Failure<JumlahKolaboratorPublikasBereputasi>(JumlahKolaboratorPublikasBereputasiErrors.InvalidBobotPenelitianDasar());
                     return this;
-                }*/
+                }
 
                 _akurasiPenelitian.BobotPenelitianDasar = bobotPenelitianDasar;
                 return this;
@@ -100,11 +94,11 @@ namespace UnpakSipaksi.Modules.JumlahKolaboratorPublikasBereputasi.Domain.Jumlah
             {
                 if (HasError) return this;
 
-                /*if (string.IsNullOrWhiteSpace(nama))
+                if (skor < 0)
                 {
-                    _result = Result.Failure<JumlahKolaboratorPublikasBereputasi>(JumlahKolaboratorPublikasBereputasiErrors.NamaNotFound);
+                    _result = Result.Failure<JumlahKolaboratorPublikasBereputasi>(JumlahKolaboratorPublikasBereputasiErrors.InvalidSkor());
                     return this;
-                }*/
+                }
 
                 _akurasiPenelitian.Skor = skor;
                 return this;

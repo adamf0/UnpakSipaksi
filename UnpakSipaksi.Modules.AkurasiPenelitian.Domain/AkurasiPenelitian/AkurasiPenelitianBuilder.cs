@@ -100,11 +100,10 @@ namespace UnpakSipaksi.Modules.AkurasiPenelitian.Domain.AkurasiPenelitian
             {
                 if (HasError) return this;
 
-                /*if (string.IsNullOrWhiteSpace(nama))
+                if (skor < 0 || skor > int.MaxValue)
                 {
-                    _result = Result.Failure<AkurasiPenelitian>(AkurasiPenelitianErrors.NamaNotFound);
-                    return this;
-                }*/
+                    _result = Result.Failure<AkurasiPenelitian>(AkurasiPenelitianErrors.InvalidSkor());
+                }
 
                 _akurasiPenelitian.Skor = skor;
                 return this;

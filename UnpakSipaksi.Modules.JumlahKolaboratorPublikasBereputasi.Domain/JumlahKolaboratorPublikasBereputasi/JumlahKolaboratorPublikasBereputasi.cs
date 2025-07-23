@@ -29,6 +29,10 @@ namespace UnpakSipaksi.Modules.JumlahKolaboratorPublikasBereputasi.Domain.Jumlah
         int Skor
         )
         {
+            if (Skor < 0) {
+                return Result.Failure<JumlahKolaboratorPublikasBereputasi>(JumlahKolaboratorPublikasBereputasiErrors.InvalidSkor());
+            }
+
             var asset = new JumlahKolaboratorPublikasBereputasi
             {
                 Uuid = Guid.NewGuid(),

@@ -1,4 +1,5 @@
-﻿using UnpakSipaksi.Common.Domain;
+﻿using System.Text.Json;
+using UnpakSipaksi.Common.Domain;
 
 namespace UnpakSipaksi.Modules.KategoriProgramPengabdian.Domain.KategoriProgramPengabdian
 {
@@ -39,12 +40,21 @@ namespace UnpakSipaksi.Modules.KategoriProgramPengabdian.Domain.KategoriProgramP
             {
                 if (HasError) return this;
 
-                /*if (string.IsNullOrWhiteSpace(nama))
+                try
                 {
-                    _result = Result.Failure<KategoriProgramPengabdian>(KategoriProgramPengabdianErrors.NamaNotFound);
+                    using var doc = JsonDocument.Parse(rule);
+                    if (doc.RootElement.ValueKind != JsonValueKind.Array)
+                    {
+                        _result = Result.Failure<KategoriProgramPengabdian>(KategoriProgramPengabdianErrors.InvalidFormatRule());
+                        return this;
+                    }
+                }
+                catch (JsonException)
+                {
+                    _result = Result.Failure<KategoriProgramPengabdian>(KategoriProgramPengabdianErrors.InvalidFormatRule());
                     return this;
-                }*/
-
+                }
+                
                 _akurasiPenelitian.Rule = rule;
                 return this;
             }

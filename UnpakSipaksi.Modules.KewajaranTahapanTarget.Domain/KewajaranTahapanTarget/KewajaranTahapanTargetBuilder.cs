@@ -39,11 +39,11 @@ namespace UnpakSipaksi.Modules.KewajaranTahapanTarget.Domain.KewajaranTahapanTar
             {
                 if (HasError) return this;
 
-                /*if (string.IsNullOrWhiteSpace(nama))
+                if (nilai < 0)
                 {
-                    _result = Result.Failure<KewajaranTahapanTarget>(KewajaranTahapanTargetErrors.NamaNotFound);
+                    _result = Result.Failure<KewajaranTahapanTarget>(KewajaranTahapanTargetErrors.InvalidValueNilai());
                     return this;
-                }*/
+                }
 
                 _akurasiPenelitian.Nilai = nilai;
                 return this;

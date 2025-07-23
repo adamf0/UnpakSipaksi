@@ -40,15 +40,14 @@ namespace UnpakSipaksi.Modules.AuthorSinta.Domain.AuthorSinta
                 return this;
             }
 
-            public AuthorSintaBuilder ChangeAuthorId(string authorId)
+            public AuthorSintaBuilder ChangeAuthorId(string? authorId)
             {
                 if (HasError) return this;
 
-                /*if (string.IsNullOrWhiteSpace(nama))
+                if (string.IsNullOrEmpty(authorId) || authorId.Length != 7)
                 {
-                    _result = Result.Failure<AuthorSinta>(AuthorSintaErrors.NamaNotFound);
-                    return this;
-                }*/
+                    _result = Result.Failure<AuthorSinta>(AuthorSintaErrors.InvalidAuthorId());
+                }
 
                 _akurasiPenelitian.AuthorId = authorId;
                 return this;
@@ -58,11 +57,11 @@ namespace UnpakSipaksi.Modules.AuthorSinta.Domain.AuthorSinta
             {
                 if (HasError) return this;
 
-                /*if (string.IsNullOrWhiteSpace(nama))
+                if (score <= 0)
                 {
-                    _result = Result.Failure<AuthorSinta>(AuthorSintaErrors.NamaNotFound);
-                    return this;
-                }*/
+                    
+                    _result = Result.Failure<AuthorSinta>(AuthorSintaErrors.InvalidSkor());
+                }
 
                 _akurasiPenelitian.Score = score;
                 return this;

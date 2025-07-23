@@ -32,7 +32,7 @@ namespace UnpakSipaksi.Modules.IndikatorCapaian.Domain
         string? Status
         )
         {
-            if (JenisLuaranId == 0)
+            if (JenisLuaranId <= 0)
             {
                 return Result.Failure<IndikatorCapaian>(IndikatorCapaianErrors.UnknownJenisLuaran());
             }
@@ -62,7 +62,7 @@ namespace UnpakSipaksi.Modules.IndikatorCapaian.Domain
             {
                 return Result.Failure<IndikatorCapaian>(IndikatorCapaianErrors.NotFound(id));
             }
-            if (JenisLuaranId == 0)
+            if (JenisLuaranId <= 0)
             {
                 return Result.Failure<IndikatorCapaian>(IndikatorCapaianErrors.UnknownJenisLuaran());
             }

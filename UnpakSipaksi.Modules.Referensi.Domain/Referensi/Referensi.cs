@@ -34,11 +34,14 @@ namespace UnpakSipaksi.Modules.Referensi.Domain.Referensi
         int Nilai
         )
         {
-            if (KebaruanReferensiId == 0)
+            if (KebaruanReferensiId <= 0)
                 return Result.Failure<Referensi>(ReferensiErrors.NotFoundKebaruanReferensiId());
 
-            if (RelevansiKualitasReferensiId == 0)
+            if (RelevansiKualitasReferensiId <= 0)
                 return Result.Failure<Referensi>(ReferensiErrors.NotFoundRelevansiKualitasReferensiId());
+
+            if(Nilai < 0)
+                return Result.Failure<Referensi>(ReferensiErrors.InvalidValueNilai());
 
             var asset = new Referensi
             {

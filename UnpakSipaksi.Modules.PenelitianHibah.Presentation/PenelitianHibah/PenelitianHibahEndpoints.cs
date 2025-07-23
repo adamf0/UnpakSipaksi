@@ -13,6 +13,7 @@ namespace UnpakSipaksi.Modules.PenelitianHibah.Presentation.PenelitianHibah
             UpdateSkema.MapEndpoint(app);
             UpdateRumpunIlmu.MapEndpoint(app);
             UpdateLamaKegiatan.MapEndpoint(app);
+            UpdateStatus.MapEndpoint(app);
             DeletePenelitianHibah.MapEndpoint(app);
 
             GetAllMemberDosen.MapEndpoint(app);

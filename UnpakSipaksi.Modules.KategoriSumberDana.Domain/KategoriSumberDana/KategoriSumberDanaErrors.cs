@@ -13,7 +13,7 @@ namespace UnpakSipaksi.Modules.KategoriSumberDana.Domain.KategoriSumberDana
             Error.NotFound("KategoriSumberDana.EmptyData", "data is not found");
 
         public static Error NotFound(Guid Id) =>
-            Error.NotFound("KategoriSumberDana.NotFound", $"KategoriSsumber dana with identifier {Id} not found");
+            Error.NotFound("KategoriSumberDana.NotFound", $"Kategori sumber dana with identifier {Id} not found");
 
     }
 }

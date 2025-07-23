@@ -40,7 +40,8 @@ namespace UnpakSipaksi.Modules.Insentif.Domain.VerifikasiLppm
         public string? Catatan { get; private set; }
 
         public static Result<VerifikasiLppm> Review(
-            Domain.Insentif.Insentif prev,
+            Guid Uuid,
+            Domain.VerifikasiLppm.VerifikasiLppm? prev,
             BuktiPublikasi BuktiPublikasi,
             int StatusJurnal,
             Peran PeranPenulis,
@@ -52,6 +53,9 @@ namespace UnpakSipaksi.Modules.Insentif.Domain.VerifikasiLppm
             string? Catatan
         )
         {
+            if (prev==null) {
+                return Result.Failure<VerifikasiLppm>(VerifikasiLppmErrors.NotFound(Uuid));
+            }
             if (
                 !EnumExtensions.GetAllEnumValues<BuktiPublikasi>().Contains(Convert.ToInt32(BuktiPublikasi))
             )

@@ -95,11 +95,11 @@ namespace UnpakSipaksi.Modules.KetajamanPerumusanMasalah.Domain.KetajamanPerumus
             {
                 if (HasError) return this;
 
-                /*if (string.IsNullOrWhiteSpace(nama))
+                if (skor < 0)
                 {
-                    _result = Result.Failure<KetajamanPerumusanMasalah>(KetajamanPerumusanMasalahErrors.NamaNotFound);
+                    _result = Result.Failure<KetajamanPerumusanMasalah>(KetajamanPerumusanMasalahErrors.InvalidValueSkor());
                     return this;
-                }*/
+                }
 
                 _akurasiPenelitian.Skor = skor;
                 return this;

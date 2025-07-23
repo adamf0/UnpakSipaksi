@@ -25,6 +25,9 @@ namespace UnpakSipaksi.Modules.KewajaranTahapanTarget.Domain.KewajaranTahapanTar
         int Nilai
         )
         {
+            if(Nilai < 0){
+                return Result.Failure<KewajaranTahapanTarget>(KewajaranTahapanTargetErrors.InvalidValueNilai());
+            }
             var asset = new KewajaranTahapanTarget
             {
                 Uuid = Guid.NewGuid(),

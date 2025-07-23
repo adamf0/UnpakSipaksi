@@ -29,6 +29,10 @@ namespace UnpakSipaksi.Modules.ModelFeasibilityStudys.Domain.ModelFeasibilityStu
         int Skor
         )
         {
+            if (Skor < 0)
+            {
+                return Result.Failure<ModelFeasibilityStudys>(ModelFeasibilityStudysErrors.InvalidValueSkor());
+            }
             var asset = new ModelFeasibilityStudys
             {
                 Uuid = Guid.NewGuid(),

@@ -29,6 +29,11 @@ namespace UnpakSipaksi.Modules.KejelasanPembagianTugasTim.Domain.KejelasanPembag
         int Skor
         )
         {
+            if (Skor < 0)
+            {
+                return Result.Failure<KejelasanPembagianTugasTim>(KejelasanPembagianTugasTimErrors.InvalidValueSkor());
+            }
+
             var asset = new KejelasanPembagianTugasTim
             {
                 Uuid = Guid.NewGuid(),
