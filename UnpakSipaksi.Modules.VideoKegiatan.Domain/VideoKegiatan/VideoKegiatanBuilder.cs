@@ -39,11 +39,11 @@ namespace UnpakSipaksi.Modules.VideoKegiatan.Domain.VideoKegiatan
             {
                 if (HasError) return this;
 
-                /*if (string.IsNullOrWhiteSpace(nama))
+                if (nilai < 0)
                 {
-                    _result = Result.Failure<VideoKegiatan>(VideoKegiatanErrors.NamaNotFound);
+                    _result = Result.Failure<VideoKegiatan>(VideoKegiatanErrors.InvalidValueNilai());
                     return this;
-                }*/
+                }
 
                 _akurasiPenelitian.Nilai = nilai;
                 return this;

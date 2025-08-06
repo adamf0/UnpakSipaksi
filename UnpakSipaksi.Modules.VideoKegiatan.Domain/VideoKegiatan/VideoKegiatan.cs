@@ -25,6 +25,9 @@ namespace UnpakSipaksi.Modules.VideoKegiatan.Domain.VideoKegiatan
         int Nilai
         )
         {
+            if (Nilai < 0) {
+                return Result.Failure<VideoKegiatan>(VideoKegiatanErrors.InvalidValueNilai());
+            }
             var asset = new VideoKegiatan
             {
                 Uuid = Guid.NewGuid(),

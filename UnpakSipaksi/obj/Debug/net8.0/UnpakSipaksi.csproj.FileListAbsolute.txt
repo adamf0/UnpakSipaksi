@@ -809,11 +809,6 @@ C:\dev_net\UnpakSipaksi\UnpakSipaksi\bin\Debug\net8.0\UnpakSipaksi.Modules.Video
 C:\dev_net\UnpakSipaksi\UnpakSipaksi\bin\Debug\net8.0\UnpakSipaksi.Modules.VideoKegiatan.PublicApi.pdb
 C:\dev_net\UnpakSipaksi\UnpakSipaksi\obj\Debug\net8.0\staticwebassets.build.json
 C:\dev_net\UnpakSipaksi\UnpakSipaksi\obj\Debug\net8.0\staticwebassets.development.json
-C:\dev_net\UnpakSipaksi\UnpakSipaksi\obj\Debug\net8.0\staticwebassets\msbuild.UnpakSipaksi.Microsoft.AspNetCore.StaticWebAssets.props
-C:\dev_net\UnpakSipaksi\UnpakSipaksi\obj\Debug\net8.0\staticwebassets\msbuild.build.UnpakSipaksi.props
-C:\dev_net\UnpakSipaksi\UnpakSipaksi\obj\Debug\net8.0\staticwebassets\msbuild.buildMultiTargeting.UnpakSipaksi.props
-C:\dev_net\UnpakSipaksi\UnpakSipaksi\obj\Debug\net8.0\staticwebassets\msbuild.buildTransitive.UnpakSipaksi.props
-C:\dev_net\UnpakSipaksi\UnpakSipaksi\obj\Debug\net8.0\staticwebassets.pack.json
 C:\dev_net\UnpakSipaksi\UnpakSipaksi\obj\Debug\net8.0\scopedcss\bundle\UnpakSipaksi.styles.css
 C:\dev_net\UnpakSipaksi\UnpakSipaksi\obj\Debug\net8.0\UnpakSip.721D288C.Up2Date
 C:\dev_net\UnpakSipaksi\UnpakSipaksi\obj\Debug\net8.0\UnpakSipaksi.dll
@@ -822,3 +817,11 @@ C:\dev_net\UnpakSipaksi\UnpakSipaksi\obj\Debug\net8.0\UnpakSipaksi.pdb
 C:\dev_net\UnpakSipaksi\UnpakSipaksi\obj\Debug\net8.0\UnpakSipaksi.genruntimeconfig.cache
 C:\dev_net\UnpakSipaksi\UnpakSipaksi\obj\Debug\net8.0\ref\UnpakSipaksi.dll
 C:\dev_net\UnpakSipaksi\UnpakSipaksi\obj\Debug\net8.0\UnpakSipaksi.MvcApplicationPartsAssemblyInfo.cs
+C:\dev_net\UnpakSipaksi\UnpakSipaksi\bin\Debug\net8.0\UnpakSipaksi.staticwebassets.endpoints.json
+C:\dev_net\UnpakSipaksi\UnpakSipaksi\obj\Debug\net8.0\rpswa.dswa.cache.json
+C:\dev_net\UnpakSipaksi\UnpakSipaksi\obj\Debug\net8.0\rjimswa.dswa.cache.json
+C:\dev_net\UnpakSipaksi\UnpakSipaksi\obj\Debug\net8.0\rjsmrazor.dswa.cache.json
+C:\dev_net\UnpakSipaksi\UnpakSipaksi\obj\Debug\net8.0\rjsmcshtml.dswa.cache.json
+C:\dev_net\UnpakSipaksi\UnpakSipaksi\obj\Debug\net8.0\staticwebassets.build.json.cache
+C:\dev_net\UnpakSipaksi\UnpakSipaksi\obj\Debug\net8.0\staticwebassets.build.endpoints.json
+C:\dev_net\UnpakSipaksi\UnpakSipaksi\obj\Debug\net8.0\staticwebassets.upToDateCheck.txt
