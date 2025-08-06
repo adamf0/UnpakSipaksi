@@ -8,6 +8,7 @@ namespace UnpakSipaksi.Modules.PenelitianHibah.Application.UpdateMemberMahasiswa
 {
     internal sealed class UpdateMemberMahasiswaCommandHandler(
         IMemberMahasiswaRepository memberRepository,
+        IPenelitianHibahRepository hibahRepository,
         IUnitOfWorkMemberMahasiswa unitOfWork)
         : ICommandHandler<UpdateMemberMahasiswaCommand>
     {
@@ -20,17 +21,13 @@ namespace UnpakSipaksi.Modules.PenelitianHibah.Application.UpdateMemberMahasiswa
                 return Result.Failure(PenelitianHibahErrors.NotFound(Guid.Parse(request.Uuid)));
             }
             
-            //[PR] check valid npm
-
             int checkData = await memberRepository.CheckUniqueDataAsync(existingMemberMahasiswa.Id??0, request.NPM, cancellationToken);
-
-            if (checkData>0)
-            {
-                return Result.Failure<Guid>(MemberMahasiswaErrors.NotUnique(request.NPM));
-            }
+            Domain.PenelitianHibah.PenelitianHibah? existingPenelitianHibah = await hibahRepository.GetAsync(Guid.Parse(request.UuidPenelitianHibah), cancellationToken);
 
             Result<MemberMahasiswa> result = MemberMahasiswa.Update(
+                checkData,
                 existingMemberMahasiswa!,
+                existingPenelitianHibah,
                 request.NPM
             );
 

@@ -207,12 +207,18 @@
           "UnpakSipaksi.Common.Domain": "1.0.0"
         },
         "runtime": {
-          "UnpakSipaksi.Common.Application.dll": {}
+          "UnpakSipaksi.Common.Application.dll": {
+            "assemblyVersion": "1.0.0.0",
+            "fileVersion": "1.0.0.0"
+          }
         }
       },
       "UnpakSipaksi.Common.Domain/1.0.0": {
         "runtime": {
-          "UnpakSipaksi.Common.Domain.dll": {}
+          "UnpakSipaksi.Common.Domain.dll": {
+            "assemblyVersion": "1.0.0.0",
+            "fileVersion": "1.0.0.0"
+          }
         }
       },
       "UnpakSipaksi.Common.Presentation/1.0.0": {
@@ -221,7 +227,10 @@
           "UnpakSipaksi.Common.Domain": "1.0.0"
         },
         "runtime": {
-          "UnpakSipaksi.Common.Presentation.dll": {}
+          "UnpakSipaksi.Common.Presentation.dll": {
+            "assemblyVersion": "1.0.0.0",
+            "fileVersion": "1.0.0.0"
+          }
         }
       },
       "UnpakSipaksi.Modules.KesesuaianPenugasan.Application/1.0.0": {
@@ -233,7 +242,10 @@
           "UnpakSipaksi.Modules.KesesuaianPenugasan.Domain": "1.0.0"
         },
         "runtime": {
-          "UnpakSipaksi.Modules.KesesuaianPenugasan.Application.dll": {}
+          "UnpakSipaksi.Modules.KesesuaianPenugasan.Application.dll": {
+            "assemblyVersion": "1.0.0.0",
+            "fileVersion": "1.0.0.0"
+          }
         }
       },
       "UnpakSipaksi.Modules.KesesuaianPenugasan.Domain/1.0.0": {
@@ -241,7 +253,10 @@
           "UnpakSipaksi.Common.Domain": "1.0.0"
         },
         "runtime": {
-          "UnpakSipaksi.Modules.KesesuaianPenugasan.Domain.dll": {}
+          "UnpakSipaksi.Modules.KesesuaianPenugasan.Domain.dll": {
+            "assemblyVersion": "1.0.0.0",
+            "fileVersion": "1.0.0.0"
+          }
         }
       }
     }

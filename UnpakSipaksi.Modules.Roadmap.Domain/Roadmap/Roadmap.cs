@@ -26,7 +26,7 @@ namespace UnpakSipaksi.Modules.Roadmap.Domain.Roadmap
         string Link
         )
         {
-            if (DomainValidator.IsValidGoogleDriveUrl(Link, "drive.google.com")) {
+            if (!DomainValidator.IsValidGoogleDriveUrl(Link, "drive.google.com")) {
                 return Result.Failure<Roadmap>(RoadmapErrors.InvalidLink());
             }
             var asset = new Roadmap

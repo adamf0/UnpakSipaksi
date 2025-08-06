@@ -95,11 +95,11 @@ namespace UnpakSipaksi.Modules.SotaKebaharuan.Domain.SotaKebaharuan
             {
                 if (HasError) return this;
 
-                /*if (string.IsNullOrWhiteSpace(nama))
+                if (skor < 0)
                 {
-                    _result = Result.Failure<SotaKebaharuan>(SotaKebaharuanErrors.NamaNotFound);
+                    _result = Result.Failure<SotaKebaharuan>(SotaKebaharuanErrors.InvalidValueSkor());
                     return this;
-                }*/
+                }
 
                 _akurasiPenelitian.Skor = skor;
                 return this;

@@ -551,12 +551,18 @@
           "UnpakSipaksi.Common.Domain": "1.0.0"
         },
         "runtime": {
-          "UnpakSipaksi.Common.Application.dll": {}
+          "UnpakSipaksi.Common.Application.dll": {
+            "assemblyVersion": "1.0.0.0",
+            "fileVersion": "1.0.0.0"
+          }
         }
       },
       "UnpakSipaksi.Common.Domain/1.0.0": {
         "runtime": {
-          "UnpakSipaksi.Common.Domain.dll": {}
+          "UnpakSipaksi.Common.Domain.dll": {
+            "assemblyVersion": "1.0.0.0",
+            "fileVersion": "1.0.0.0"
+          }
         }
       }
     }

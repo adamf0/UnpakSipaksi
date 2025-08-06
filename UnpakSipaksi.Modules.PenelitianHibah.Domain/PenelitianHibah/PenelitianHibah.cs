@@ -74,7 +74,6 @@ namespace UnpakSipaksi.Modules.PenelitianHibah.Domain.PenelitianHibah
         //[Column("catatan_tolak")]
         //public string? CatatanTolak { get; private set; }
 
-
         public static async Task<Result<PenelitianHibah>> Create(
           IPenelitianHibahRepository penelitianHibahRepository,
           string NIDN,
@@ -92,14 +91,27 @@ namespace UnpakSipaksi.Modules.PenelitianHibah.Domain.PenelitianHibah
                 return Result.Failure<PenelitianHibah>(PenelitianHibahErrors.NotUnique(NIDN, Judul));
             }
 
-            var validTanggal = DateTime.TryParseExact(TahunPengajuan, "yyyy-MM-dd", CultureInfo.InvariantCulture, DateTimeStyles.None, out var parsedTanggal);
+            DateTime parsedTanggal;
+            try
+            {
+                parsedTanggal = DateTime.ParseExact(TahunPengajuan, "yyyy-MM-dd", CultureInfo.InvariantCulture, DateTimeStyles.None);
+            }
+            catch (FormatException)
+            {
+                return Result.Failure<PenelitianHibah>(PenelitianHibahErrors.InvalidFormatTahunPengajuan());
+            }
+            catch (ArgumentNullException)
+            {
+                return Result.Failure<PenelitianHibah>(PenelitianHibahErrors.InvalidFormatTahunPengajuan());
+            }
 
             var asset = new PenelitianHibah
             {
                 Uuid = Guid.NewGuid(),
                 NIDN = NIDN,
                 Judul = Judul,
-                TahunPengajuan = parsedTanggal
+                TahunPengajuan = parsedTanggal,
+                Status = StatusPengajuan.Draf.ToString()
             };
 
             asset.Raise(new PenelitianHibahCreatedDomainEvent(asset.Uuid));
@@ -113,7 +125,19 @@ namespace UnpakSipaksi.Modules.PenelitianHibah.Domain.PenelitianHibah
           string Judul
         )
         {
-            var validTanggal = DateTime.TryParseExact(TahunPengajuan, "yyyy-MM-dd", CultureInfo.InvariantCulture, DateTimeStyles.None, out var parsedTanggal);
+            DateTime parsedTanggal;
+            try
+            {
+                parsedTanggal = DateTime.ParseExact(TahunPengajuan, "yyyy-MM-dd", CultureInfo.InvariantCulture, DateTimeStyles.None);
+            }
+            catch (FormatException)
+            {
+                return Result.Failure<PenelitianHibah>(PenelitianHibahErrors.InvalidFormatTahunPengajuan());
+            }
+            catch (ArgumentNullException)
+            {
+                return Result.Failure<PenelitianHibah>(PenelitianHibahErrors.InvalidFormatTahunPengajuan());
+            }
 
             prev.Judul = Judul;
             prev.TahunPengajuan = parsedTanggal;

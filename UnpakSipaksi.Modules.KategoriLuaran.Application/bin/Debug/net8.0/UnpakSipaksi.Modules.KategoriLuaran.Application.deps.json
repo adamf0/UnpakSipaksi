@@ -143,17 +143,26 @@
           "UnpakSipaksi.Common.Domain": "1.0.0"
         },
         "runtime": {
-          "UnpakSipaksi.Common.Application.dll": {}
+          "UnpakSipaksi.Common.Application.dll": {
+            "assemblyVersion": "1.0.0.0",
+            "fileVersion": "1.0.0.0"
+          }
         }
       },
       "UnpakSipaksi.Common.Domain/1.0.0": {
         "runtime": {
-          "UnpakSipaksi.Common.Domain.dll": {}
+          "UnpakSipaksi.Common.Domain.dll": {
+            "assemblyVersion": "1.0.0.0",
+            "fileVersion": "1.0.0.0"
+          }
         }
       },
       "UnpakSipaksi.Modules.Kategori.PublicApi/1.0.0": {
         "runtime": {
-          "UnpakSipaksi.Modules.Kategori.PublicApi.dll": {}
+          "UnpakSipaksi.Modules.Kategori.PublicApi.dll": {
+            "assemblyVersion": "1.0.0.0",
+            "fileVersion": "1.0.0.0"
+          }
         }
       },
       "UnpakSipaksi.Modules.KategoriLuaran.Domain/1.0.0": {
@@ -161,12 +170,18 @@
           "UnpakSipaksi.Common.Domain": "1.0.0"
         },
         "runtime": {
-          "UnpakSipaksi.Modules.KategoriLuaran.Domain.dll": {}
+          "UnpakSipaksi.Modules.KategoriLuaran.Domain.dll": {
+            "assemblyVersion": "1.0.0.0",
+            "fileVersion": "1.0.0.0"
+          }
         }
       },
       "UnpakSipaksi.Modules.KategoriLuaran.PublicApi/1.0.0": {
         "runtime": {
-          "UnpakSipaksi.Modules.KategoriLuaran.PublicApi.dll": {}
+          "UnpakSipaksi.Modules.KategoriLuaran.PublicApi.dll": {
+            "assemblyVersion": "1.0.0.0",
+            "fileVersion": "1.0.0.0"
+          }
         }
       }
     }

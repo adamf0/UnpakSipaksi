@@ -41,9 +41,11 @@ namespace UnpakSipaksi.Modules.PenelitianHibah.Domain.DokumenPendukung
             {
                 return Result.Failure<DokumenPendukung>((DokumenPendukungErrors.DuplicateResource()));
             }
-            if (!string.IsNullOrEmpty(Link) && !IsValidGoogleDriveUrl(Link))
+
+            var allowedHost = "drive.google.com";
+            if (!string.IsNullOrEmpty(Link) && !DomainValidator.IsValidGoogleDriveUrl(Link, allowedHost))
             {
-                return Result.Failure<DokumenPendukung>((DokumenPendukungErrors.IvalidLink()));
+                return Result.Failure<DokumenPendukung>((DokumenPendukungErrors.InvalidLink()));
             }
 
             var asset = new DokumenPendukung
@@ -90,29 +92,18 @@ namespace UnpakSipaksi.Modules.PenelitianHibah.Domain.DokumenPendukung
             {
                 return Result.Failure<DokumenPendukung>((DokumenPendukungErrors.DuplicateResource()));
             }
-            if (!string.IsNullOrEmpty(Link) && !IsValidGoogleDriveUrl(Link))
+
+            var allowedHost = "drive.google.com";
+            if (!string.IsNullOrEmpty(Link) && !DomainValidator.IsValidGoogleDriveUrl(Link, allowedHost))
             {
-                return Result.Failure<DokumenPendukung>((DokumenPendukungErrors.IvalidLink()));
+                return Result.Failure<DokumenPendukung>((DokumenPendukungErrors.InvalidLink()));
             }
 
-            prev.File = File;
+            prev.File = File; //[PR] hanya pdf saja
             prev.Link = Link;
             prev.Kategori = Kategori;
 
             return prev;
-        }
-
-        private static bool IsValidGoogleDriveUrl(string url)
-        {
-            if (Uri.TryCreate(url, UriKind.Absolute, out var uri))
-            {
-                var isHttpOrHttps = uri.Scheme == Uri.UriSchemeHttp || uri.Scheme == Uri.UriSchemeHttps;
-                var isDirectDriveLink = uri.Host.Equals("drive.google.com", StringComparison.OrdinalIgnoreCase);
-
-                return isHttpOrHttps && isDirectDriveLink;
-            }
-
-            return false;
         }
     }
 }

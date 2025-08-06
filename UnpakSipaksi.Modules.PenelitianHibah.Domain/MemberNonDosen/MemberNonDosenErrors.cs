@@ -10,6 +10,9 @@ namespace UnpakSipaksi.Modules.PenelitianHibah.Domain.MemberNonDosen
             Error.NotFound("MemberNonDosen.NotFound", $"Member hibah dosen with identifier {Id} not found");
         public static Error NotFoundHibah(Guid Id) =>
             Error.NotFound("MemberNonDosen.NotFoundHibah", $"Penelitian hibah with identifier {Id} not found");
-
+        public static Error NotFoundHibah() =>
+            Error.NotFound("MemberNonDosen.NotFoundHibah", "Penelitian hibah not found");
+        public static Error InvalidData() =>
+            Error.NotFound("MemberNonDosen.InvalidData", "Hibah penelitian is not match existing data");
     }
 }

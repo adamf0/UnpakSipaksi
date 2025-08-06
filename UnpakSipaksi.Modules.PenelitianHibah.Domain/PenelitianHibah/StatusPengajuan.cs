@@ -9,6 +9,9 @@ namespace UnpakSipaksi.Modules.PenelitianHibah.Domain.PenelitianHibah
 {
     public enum StatusPengajuan
     {
+        [Display(Name = "Draf")]
+        Draf,
+
         [Display(Name = "Tolak")]
         Tolak,
 

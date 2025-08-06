@@ -95,11 +95,11 @@ namespace UnpakSipaksi.Modules.RoadmapPenelitian.Domain.RoadmapPenelitian
             {
                 if (HasError) return this;
 
-                /*if (string.IsNullOrWhiteSpace(nama))
+                if (skor < 0)
                 {
-                    _result = Result.Failure<RoadmapPenelitian>(RoadmapPenelitianErrors.NamaNotFound);
+                    _result = Result.Failure<RoadmapPenelitian>(RoadmapPenelitianErrors.InvalidValueSkor());
                     return this;
-                }*/
+                }
 
                 _akurasiPenelitian.Skor = skor;
                 return this;

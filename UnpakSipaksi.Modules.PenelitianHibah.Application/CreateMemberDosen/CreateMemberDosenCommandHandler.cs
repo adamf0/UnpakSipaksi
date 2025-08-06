@@ -14,7 +14,6 @@ namespace UnpakSipaksi.Modules.PenelitianHibah.Application.CreateMemberDosen
     {
         public async Task<Result<Guid>> Handle(CreateMemberDosenCommand request, CancellationToken cancellationToken)
         {
-            //harus pindah ke domain
             PenelitianHibahResponse? existData = await penelitianHibahApi.GetAsync(Guid.Parse(request.UuidPenelitianHibah));
             if (existData == null)
             {
@@ -22,16 +21,9 @@ namespace UnpakSipaksi.Modules.PenelitianHibah.Application.CreateMemberDosen
             }
 
             int checkData = await memberRepository.CheckUniqueDataAsync(int.Parse(existData!.Id), request.NIDN, cancellationToken);
-
-            if (checkData>0)
-            {
-                return Result.Failure<Guid>(MemberDosenErrors.NotUnique(request.NIDN));
-            }
-            //harus pindah ke domain
-
             //[PR] check valid nidn
-
             Result<Domain.MemberDosen.MemberDosen> result = Domain.MemberDosen.MemberDosen.Create(
+                checkData,
                 int.Parse(existData!.Id),
                 request.NIDN
             );

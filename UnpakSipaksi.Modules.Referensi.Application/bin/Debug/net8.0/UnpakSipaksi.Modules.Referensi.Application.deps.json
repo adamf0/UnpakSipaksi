@@ -143,17 +143,26 @@
           "UnpakSipaksi.Common.Domain": "1.0.0"
         },
         "runtime": {
-          "UnpakSipaksi.Common.Application.dll": {}
+          "UnpakSipaksi.Common.Application.dll": {
+            "assemblyVersion": "1.0.0.0",
+            "fileVersion": "1.0.0.0"
+          }
         }
       },
       "UnpakSipaksi.Common.Domain/1.0.0": {
         "runtime": {
-          "UnpakSipaksi.Common.Domain.dll": {}
+          "UnpakSipaksi.Common.Domain.dll": {
+            "assemblyVersion": "1.0.0.0",
+            "fileVersion": "1.0.0.0"
+          }
         }
       },
       "UnpakSipaksi.Modules.KebaruanReferensi.PublicApi/1.0.0": {
         "runtime": {
-          "UnpakSipaksi.Modules.KebaruanReferensi.PublicApi.dll": {}
+          "UnpakSipaksi.Modules.KebaruanReferensi.PublicApi.dll": {
+            "assemblyVersion": "1.0.0.0",
+            "fileVersion": "1.0.0.0"
+          }
         }
       },
       "UnpakSipaksi.Modules.Referensi.Domain/1.0.0": {
@@ -161,12 +170,18 @@
           "UnpakSipaksi.Common.Domain": "1.0.0"
         },
         "runtime": {
-          "UnpakSipaksi.Modules.Referensi.Domain.dll": {}
+          "UnpakSipaksi.Modules.Referensi.Domain.dll": {
+            "assemblyVersion": "1.0.0.0",
+            "fileVersion": "1.0.0.0"
+          }
         }
       },
       "UnpakSipaksi.Modules.RelevansiKualitasReferensi.PublicApi/1.0.0": {
         "runtime": {
-          "UnpakSipaksi.Modules.RelevansiKualitasReferensi.PublicApi.dll": {}
+          "UnpakSipaksi.Modules.RelevansiKualitasReferensi.PublicApi.dll": {
+            "assemblyVersion": "1.0.0.0",
+            "fileVersion": "1.0.0.0"
+          }
         }
       }
     }

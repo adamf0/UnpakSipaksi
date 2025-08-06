@@ -8,6 +8,7 @@ namespace UnpakSipaksi.Modules.PenelitianPkm.Application.ApprovalMemberDosen
 {
     internal sealed class ApprovalMemberDosenCommandHandler(
         IMemberDosenRepository memberRepository,
+        IPenelitianPkmRepository hibahRepository,
         IUnitOfWorkMember unitOfWork)
         : ICommandHandler<ApprovalMemberDosenCommand>
     {
@@ -23,6 +24,7 @@ namespace UnpakSipaksi.Modules.PenelitianPkm.Application.ApprovalMemberDosen
             {
                 return Result.Failure(PenelitianPkmErrors.InvalidStatusMember());
             }
+            Domain.PenelitianPkm.PenelitianPkm? existingPenelitianPkm = await hibahRepository.GetAsync(Guid.Parse(request.UuidPenelitianPkm), cancellationToken);
 
             //[PR] check valid nidn
             //[PR] check nidn input with token
@@ -30,11 +32,11 @@ namespace UnpakSipaksi.Modules.PenelitianPkm.Application.ApprovalMemberDosen
             Result<MemberDosen> result;
             if (request.Status.ToLower() == "approve")
             {
-                result = MemberDosen.Approve(existingMemberDosen);
+                result = MemberDosen.Approve(existingMemberDosen, existingPenelitianPkm);
             }
             else
             {
-                result = MemberDosen.Reject(existingMemberDosen);
+                result = MemberDosen.Reject(existingMemberDosen, existingPenelitianPkm);
             }
 
             if (result.IsFailure)

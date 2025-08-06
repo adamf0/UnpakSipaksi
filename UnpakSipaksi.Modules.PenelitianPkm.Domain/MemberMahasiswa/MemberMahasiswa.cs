@@ -24,10 +24,21 @@ namespace UnpakSipaksi.Modules.PenelitianPkm.Domain.MemberMahasiswa
 
 
         public static Result<MemberMahasiswa> Create(
-          int PenelitianPkmId,
-          string NPM
+            int checkData,
+            int PenelitianPkmId,
+            string NPM
         )
         {
+            if (checkData > 0)
+            {
+                return Result.Failure<MemberMahasiswa>(MemberMahasiswaErrors.NotUnique(NPM));
+            }
+
+            if (!DomainValidator.IsValidNPM(NPM))
+            {
+                return Result.Failure<MemberMahasiswa>(MemberMahasiswaErrors.InvalidNpm());
+            }
+
             var asset = new MemberMahasiswa
             {
                 Uuid = Guid.NewGuid(),
@@ -41,10 +52,25 @@ namespace UnpakSipaksi.Modules.PenelitianPkm.Domain.MemberMahasiswa
         }
 
         public static Result<MemberMahasiswa> Update(
-          MemberMahasiswa prev,
-          string NPM
+            int checkData,
+            MemberMahasiswa prev,
+            Domain.PenelitianPkm.PenelitianPkm? existingPenelitianHibah,
+            string NPM
         )
         {
+            if (checkData > 0)
+            {
+                return Result.Failure<MemberMahasiswa>(MemberMahasiswaErrors.NotUnique(NPM));
+            }
+            if (prev?.PenelitianPkmId != existingPenelitianHibah?.Id)
+            {
+                return Result.Failure<MemberMahasiswa>(MemberMahasiswaErrors.InvalidData());
+            }
+            if (!DomainValidator.IsValidNPM(NPM))
+            {
+                return Result.Failure<MemberMahasiswa>(MemberMahasiswaErrors.InvalidNpm());
+            }
+
             prev.NPM = NPM;
 
             return prev;
@@ -52,6 +78,7 @@ namespace UnpakSipaksi.Modules.PenelitianPkm.Domain.MemberMahasiswa
 
         public static Result<MemberMahasiswa> UpdateMbkm(
           MemberMahasiswa? prev,
+          Domain.PenelitianPkm.PenelitianPkm? existingPenelitianHibah,
           string BuktiMbkm
         )
         {
@@ -59,7 +86,10 @@ namespace UnpakSipaksi.Modules.PenelitianPkm.Domain.MemberMahasiswa
             {
                 return Result.Failure<MemberMahasiswa>(PenelitianPkmErrors.EmptyData());
             }
-
+            if (prev?.PenelitianPkmId != existingPenelitianHibah?.Id)
+            {
+                return Result.Failure<MemberMahasiswa>(MemberMahasiswaErrors.InvalidData());
+            }
             if (!Uri.TryCreate(BuktiMbkm, UriKind.Absolute, out var uriResult) || uriResult.Scheme != Uri.UriSchemeHttps)
             {
                 return Result.Failure<MemberMahasiswa>(MemberMahasiswaErrors.InvalidUrlBuktiMbkm());

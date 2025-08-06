@@ -23,6 +23,8 @@ namespace UnpakSipaksi.Modules.PenelitianHibah.Domain.PenelitianHibah
             Error.NotFound("PenelitianHibah.NotFoundKategoriTkt", $"Kategori tkt {id} is not found");
         public static Error InvalidInputPrioritasFokus() =>
             Error.NotFound("PenelitianHibah.InvalidInputPrioritasFokus", "Prioritas riset / Bidang fokus penelitian must be filled in");
+        public static Error InvalidFormatTahunPengajuan() =>
+            Error.NotFound("PenelitianHibah.InvalidFormatTahunPengajuan", "Invalid format tahun pengajuan");
         public static Error InvalidInputRumpunIlmu() =>
             Error.NotFound("PenelitianHibah.InvalidInputRumpunIlmu", "Rumpun ilmu must be filled in");
         public static Error InvalidStatusMember() =>
@@ -35,6 +37,6 @@ namespace UnpakSipaksi.Modules.PenelitianHibah.Domain.PenelitianHibah
         public static Error NotFound(Guid Id) =>
             Error.NotFound("PenelitianHibah.NotFound", $"Penelitian hibah with identifier {Id} not found");
         public  static Error InvalidData() =>
-           Error.NotFound("PenelitianHibah.InvalidData", $"Hibah penelitian is not match existing data");
+           Error.NotFound("PenelitianHibah.InvalidData", "Hibah penelitian is not match existing data");
     }
 }

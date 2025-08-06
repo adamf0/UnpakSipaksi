@@ -8,15 +8,18 @@ namespace UnpakSipaksi.Modules.PenelitianPkm.Application.UpdateMemberNonDosen
 {
     internal sealed class UpdateMemberNonDosenCommandHandler(
         IMemberNonDosenRepository memberRepository,
+        IPenelitianPkmRepository hibahRepository,
         IUnitOfWorkNonMember unitOfWork)
         : ICommandHandler<UpdateMemberNonDosenCommand>
     {
         public async Task<Result> Handle(UpdateMemberNonDosenCommand request, CancellationToken cancellationToken)
         {
             MemberNonDosen? existingMemberNonDosen = await memberRepository.GetAsync(Guid.Parse(request.Uuid), cancellationToken);
+            Domain.PenelitianPkm.PenelitianPkm? existingPenelitianPkm = await hibahRepository.GetAsync(Guid.Parse(request.UuidPenelitianPkm), cancellationToken);
 
             Result<MemberNonDosen> result = MemberNonDosen.Update(
                 existingMemberNonDosen,
+                existingPenelitianPkm,
                 request.NomorIdentitas,
                 request.Nama,
                 request.Afiliasi

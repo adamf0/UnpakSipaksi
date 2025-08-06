@@ -645,12 +645,18 @@
           "UnpakSipaksi.Common.Domain": "1.0.0"
         },
         "runtime": {
-          "UnpakSipaksi.Common.Application.dll": {}
+          "UnpakSipaksi.Common.Application.dll": {
+            "assemblyVersion": "1.0.0.0",
+            "fileVersion": "1.0.0.0"
+          }
         }
       },
       "UnpakSipaksi.Common.Domain/1.0.0": {
         "runtime": {
-          "UnpakSipaksi.Common.Domain.dll": {}
+          "UnpakSipaksi.Common.Domain.dll": {
+            "assemblyVersion": "1.0.0.0",
+            "fileVersion": "1.0.0.0"
+          }
         }
       },
       "UnpakSipaksi.Common.Infrastructure/1.0.0": {
@@ -660,7 +666,10 @@
           "UnpakSipaksi.Common.Application": "1.0.0"
         },
         "runtime": {
-          "UnpakSipaksi.Common.Infrastructure.dll": {}
+          "UnpakSipaksi.Common.Infrastructure.dll": {
+            "assemblyVersion": "1.0.0.0",
+            "fileVersion": "1.0.0.0"
+          }
         }
       },
       "UnpakSipaksi.Common.Presentation/1.0.0": {
@@ -669,7 +678,10 @@
           "UnpakSipaksi.Common.Domain": "1.0.0"
         },
         "runtime": {
-          "UnpakSipaksi.Common.Presentation.dll": {}
+          "UnpakSipaksi.Common.Presentation.dll": {
+            "assemblyVersion": "1.0.0.0",
+            "fileVersion": "1.0.0.0"
+          }
         }
       },
       "UnpakSipaksi.Modules.FokusPenelitian.Application/1.0.0": {
@@ -681,7 +693,10 @@
           "UnpakSipaksi.Modules.FokusPenelitian.Domain": "1.0.0"
         },
         "runtime": {
-          "UnpakSipaksi.Modules.FokusPenelitian.Application.dll": {}
+          "UnpakSipaksi.Modules.FokusPenelitian.Application.dll": {
+            "assemblyVersion": "1.0.0.0",
+            "fileVersion": "1.0.0.0"
+          }
         }
       },
       "UnpakSipaksi.Modules.FokusPenelitian.Domain/1.0.0": {
@@ -689,7 +704,10 @@
           "UnpakSipaksi.Common.Domain": "1.0.0"
         },
         "runtime": {
-          "UnpakSipaksi.Modules.FokusPenelitian.Domain.dll": {}
+          "UnpakSipaksi.Modules.FokusPenelitian.Domain.dll": {
+            "assemblyVersion": "1.0.0.0",
+            "fileVersion": "1.0.0.0"
+          }
         }
       },
       "UnpakSipaksi.Modules.FokusPenelitian.Presentation/1.0.0": {
@@ -699,17 +717,26 @@
           "UnpakSipaksi.Modules.FokusPenelitian.Application": "1.0.0"
         },
         "runtime": {
-          "UnpakSipaksi.Modules.FokusPenelitian.Presentation.dll": {}
+          "UnpakSipaksi.Modules.FokusPenelitian.Presentation.dll": {
+            "assemblyVersion": "1.0.0.0",
+            "fileVersion": "1.0.0.0"
+          }
         }
       },
       "UnpakSipaksi.Modules.FokusPenelitian.PublicApi/1.0.0": {
         "runtime": {
-          "UnpakSipaksi.Modules.FokusPenelitian.PublicApi.dll": {}
+          "UnpakSipaksi.Modules.FokusPenelitian.PublicApi.dll": {
+            "assemblyVersion": "1.0.0.0",
+            "fileVersion": "1.0.0.0"
+          }
         }
       },
       "UnpakSipaksi.Modules.TemaPenelitian.PublicApi/1.0.0": {
         "runtime": {
-          "UnpakSipaksi.Modules.TemaPenelitian.PublicApi.dll": {}
+          "UnpakSipaksi.Modules.TemaPenelitian.PublicApi.dll": {
+            "assemblyVersion": "1.0.0.0",
+            "fileVersion": "1.0.0.0"
+          }
         }
       }
     }

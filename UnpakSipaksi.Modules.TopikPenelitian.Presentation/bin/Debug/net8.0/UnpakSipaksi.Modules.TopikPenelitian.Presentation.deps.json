@@ -207,12 +207,18 @@
           "UnpakSipaksi.Common.Domain": "1.0.0"
         },
         "runtime": {
-          "UnpakSipaksi.Common.Application.dll": {}
+          "UnpakSipaksi.Common.Application.dll": {
+            "assemblyVersion": "1.0.0.0",
+            "fileVersion": "1.0.0.0"
+          }
         }
       },
       "UnpakSipaksi.Common.Domain/1.0.0": {
         "runtime": {
-          "UnpakSipaksi.Common.Domain.dll": {}
+          "UnpakSipaksi.Common.Domain.dll": {
+            "assemblyVersion": "1.0.0.0",
+            "fileVersion": "1.0.0.0"
+          }
         }
       },
       "UnpakSipaksi.Common.Presentation/1.0.0": {
@@ -221,12 +227,18 @@
           "UnpakSipaksi.Common.Domain": "1.0.0"
         },
         "runtime": {
-          "UnpakSipaksi.Common.Presentation.dll": {}
+          "UnpakSipaksi.Common.Presentation.dll": {
+            "assemblyVersion": "1.0.0.0",
+            "fileVersion": "1.0.0.0"
+          }
         }
       },
       "UnpakSipaksi.Modules.TemaPenelitian.PublicApi/1.0.0": {
         "runtime": {
-          "UnpakSipaksi.Modules.TemaPenelitian.PublicApi.dll": {}
+          "UnpakSipaksi.Modules.TemaPenelitian.PublicApi.dll": {
+            "assemblyVersion": "1.0.0.0",
+            "fileVersion": "1.0.0.0"
+          }
         }
       },
       "UnpakSipaksi.Modules.TopikPenelitian.Application/1.0.0": {
@@ -239,7 +251,10 @@
           "UnpakSipaksi.Modules.TopikPenelitian.Domain": "1.0.0"
         },
         "runtime": {
-          "UnpakSipaksi.Modules.TopikPenelitian.Application.dll": {}
+          "UnpakSipaksi.Modules.TopikPenelitian.Application.dll": {
+            "assemblyVersion": "1.0.0.0",
+            "fileVersion": "1.0.0.0"
+          }
         }
       },
       "UnpakSipaksi.Modules.TopikPenelitian.Domain/1.0.0": {
@@ -247,7 +262,10 @@
           "UnpakSipaksi.Common.Domain": "1.0.0"
         },
         "runtime": {
-          "UnpakSipaksi.Modules.TopikPenelitian.Domain.dll": {}
+          "UnpakSipaksi.Modules.TopikPenelitian.Domain.dll": {
+            "assemblyVersion": "1.0.0.0",
+            "fileVersion": "1.0.0.0"
+          }
         }
       }
     }

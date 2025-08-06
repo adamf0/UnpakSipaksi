@@ -2,11 +2,13 @@
 using UnpakSipaksi.Common.Domain;
 using UnpakSipaksi.Modules.PenelitianPkm.Domain.MemberMahasiswa;
 using UnpakSipaksi.Modules.PenelitianPkm.Application.Abstractions.Data;
+using UnpakSipaksi.Modules.PenelitianPkm.Domain.PenelitianPkm;
 
 namespace UnpakSipaksi.Modules.PenelitianPkm.Application.UpdateMbkm
 {
     internal sealed class UpdateMemberMbkmCommandHandler(
         IMemberMahasiswaRepository memberRepository,
+        IPenelitianPkmRepository hibahRepository,
         IUnitOfWorkMemberMahasiswa unitOfWork)
         : ICommandHandler<UpdateMbkmCommand>
     {
@@ -18,9 +20,11 @@ namespace UnpakSipaksi.Modules.PenelitianPkm.Application.UpdateMbkm
                 request.NPM,
                 cancellationToken
             );
+            Domain.PenelitianPkm.PenelitianPkm? existingPenelitianPkm = await hibahRepository.GetAsync(Guid.Parse(request.UuidPenelitianPkm), cancellationToken);
 
             Result<MemberMahasiswa> result = MemberMahasiswa.UpdateMbkm(
                 existingMemberMahasiswa,
+                existingPenelitianPkm,
                 request.BuktiMbkm
             );
 

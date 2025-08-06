@@ -8,11 +8,13 @@ namespace UnpakSipaksi.Modules.PenelitianPkm.Application.UpdateMemberMahasiswa
 {
     internal sealed class UpdateMemberMahasiswaCommandHandler(
         IMemberMahasiswaRepository memberRepository,
+        IPenelitianPkmRepository hibahRepository,
         IUnitOfWorkMemberMahasiswa unitOfWork)
         : ICommandHandler<UpdateMemberMahasiswaCommand>
     {
         public async Task<Result> Handle(UpdateMemberMahasiswaCommand request, CancellationToken cancellationToken)
         {
+            //harus pindah ke domain
             MemberMahasiswa? existingMemberMahasiswa = await memberRepository.GetAsync(Guid.Parse(request.Uuid), cancellationToken);
 
             if (existingMemberMahasiswa is null)
@@ -20,19 +22,16 @@ namespace UnpakSipaksi.Modules.PenelitianPkm.Application.UpdateMemberMahasiswa
                 return Result.Failure(PenelitianPkmErrors.NotFound(Guid.Parse(request.Uuid)));
             }
 
-            //[PR] check valid npm
-
             int checkData = await memberRepository.CheckUniqueDataAsync(existingMemberMahasiswa.Id ?? 0, request.NPM, cancellationToken);
-
-            if (checkData > 0)
-            {
-                return Result.Failure<Guid>(MemberMahasiswaErrors.NotUnique(request.NPM));
-            }
+            Domain.PenelitianPkm.PenelitianPkm? existingPenelitianPkm = await hibahRepository.GetAsync(Guid.Parse(request.UuidPenelitianPkm), cancellationToken);
 
             Result<MemberMahasiswa> result = MemberMahasiswa.Update(
+                checkData,
                 existingMemberMahasiswa!,
+                existingPenelitianPkm,
                 request.NPM
             );
+            //harus pindah ke domain
 
             if (result.IsFailure)
                 return Result.Failure<Guid>(result.Error);

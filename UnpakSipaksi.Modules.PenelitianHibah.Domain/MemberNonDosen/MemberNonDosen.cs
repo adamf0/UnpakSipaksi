@@ -32,6 +32,9 @@ namespace UnpakSipaksi.Modules.PenelitianHibah.Domain.MemberNonDosen
           string? Afiliasi
         )
         {
+            if (PenelitianHibahId <= 0) {
+                return Result.Failure<MemberNonDosen>(MemberNonDosenErrors.NotFoundHibah());
+            }
             var asset = new MemberNonDosen
             {
                 Uuid = Guid.NewGuid(),
@@ -48,6 +51,7 @@ namespace UnpakSipaksi.Modules.PenelitianHibah.Domain.MemberNonDosen
 
         public static Result<MemberNonDosen> Update(
           MemberNonDosen? prev,
+          Domain.PenelitianHibah.PenelitianHibah? existingPenelitianHibah,
           string? NomorIdentitas,
           string? Nama,
           string? Afiliasi
@@ -56,6 +60,14 @@ namespace UnpakSipaksi.Modules.PenelitianHibah.Domain.MemberNonDosen
             if (prev is null)
             {
                 return Result.Failure<MemberNonDosen>(PenelitianHibahErrors.EmptyData());
+            }
+            if (existingPenelitianHibah?.Id <= 0)
+            {
+                return Result.Failure<MemberNonDosen>(MemberNonDosenErrors.NotFoundHibah());
+            }
+            if (prev?.PenelitianHibahId != existingPenelitianHibah?.Id)
+            {
+                return Result.Failure<MemberNonDosen>(MemberNonDosenErrors.InvalidData());
             }
 
             prev.NomorIdentitas = NomorIdentitas;

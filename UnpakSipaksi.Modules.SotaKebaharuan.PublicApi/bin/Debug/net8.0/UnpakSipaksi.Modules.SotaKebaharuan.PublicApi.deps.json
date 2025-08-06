@@ -205,12 +205,18 @@
           "UnpakSipaksi.Common.Domain": "1.0.0"
         },
         "runtime": {
-          "UnpakSipaksi.Common.Application.dll": {}
+          "UnpakSipaksi.Common.Application.dll": {
+            "assemblyVersion": "1.0.0.0",
+            "fileVersion": "1.0.0.0"
+          }
         }
       },
       "UnpakSipaksi.Common.Domain/1.0.0": {
         "runtime": {
-          "UnpakSipaksi.Common.Domain.dll": {}
+          "UnpakSipaksi.Common.Domain.dll": {
+            "assemblyVersion": "1.0.0.0",
+            "fileVersion": "1.0.0.0"
+          }
         }
       },
       "UnpakSipaksi.Common.Presentation/1.0.0": {
@@ -219,7 +225,10 @@
           "UnpakSipaksi.Common.Domain": "1.0.0"
         },
         "runtime": {
-          "UnpakSipaksi.Common.Presentation.dll": {}
+          "UnpakSipaksi.Common.Presentation.dll": {
+            "assemblyVersion": "1.0.0.0",
+            "fileVersion": "1.0.0.0"
+          }
         }
       },
       "UnpakSipaksi.Modules.SotaKebaharuan.Application/1.0.0": {
@@ -231,7 +240,10 @@
           "UnpakSipaksi.Modules.SotaKebaharuan.Domain": "1.0.0"
         },
         "runtime": {
-          "UnpakSipaksi.Modules.SotaKebaharuan.Application.dll": {}
+          "UnpakSipaksi.Modules.SotaKebaharuan.Application.dll": {
+            "assemblyVersion": "1.0.0.0",
+            "fileVersion": "1.0.0.0"
+          }
         }
       },
       "UnpakSipaksi.Modules.SotaKebaharuan.Domain/1.0.0": {
@@ -239,7 +251,10 @@
           "UnpakSipaksi.Common.Domain": "1.0.0"
         },
         "runtime": {
-          "UnpakSipaksi.Modules.SotaKebaharuan.Domain.dll": {}
+          "UnpakSipaksi.Modules.SotaKebaharuan.Domain.dll": {
+            "assemblyVersion": "1.0.0.0",
+            "fileVersion": "1.0.0.0"
+          }
         }
       },
       "UnpakSipaksi.Modules.SotaKebaharuan.Presentation/1.0.0": {
@@ -249,7 +264,10 @@
           "UnpakSipaksi.Modules.SotaKebaharuan.Application": "1.0.0"
         },
         "runtime": {
-          "UnpakSipaksi.Modules.SotaKebaharuan.Presentation.dll": {}
+          "UnpakSipaksi.Modules.SotaKebaharuan.Presentation.dll": {
+            "assemblyVersion": "1.0.0.0",
+            "fileVersion": "1.0.0.0"
+          }
         }
       }
     }

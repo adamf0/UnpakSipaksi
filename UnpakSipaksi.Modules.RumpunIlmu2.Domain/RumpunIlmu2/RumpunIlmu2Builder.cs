@@ -43,11 +43,11 @@ namespace UnpakSipaksi.Modules.RumpunIlmu2.Domain.RumpunIlmu2
             {
                 if (HasError) return this;
 
-                /*if (string.IsNullOrWhiteSpace(nama))
+                if (IdRumpunIlmu1 <= 0)
                 {
-                    _result = Result.Failure<RumpunIlmu2>(RumpunIlmu2Errors.NamaNotFound);
+                    _result = Result.Failure<RumpunIlmu2>(RumpunIlmu2Errors.UnknownRumpunIlmu1());
                     return this;
-                }*/
+                }
 
                 _fokusPenelitian.IdRumpunIlmu1 = IdRumpunIlmu1;
                 return this;

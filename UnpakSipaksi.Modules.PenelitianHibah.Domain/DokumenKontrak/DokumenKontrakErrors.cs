@@ -18,6 +18,6 @@ namespace UnpakSipaksi.Modules.PenelitianHibah.Domain.DokumenKontrak
         public static Error EmptyResource() =>
             Error.NotFound("DokumenKontrak.EmptyResource", "Resource is not found");
         public static Error InvalidData() =>
-            Error.NotFound("DokumenKontrak.InvalidData", $"Hibah penelitian is not match existing data");
+            Error.NotFound("DokumenKontrak.InvalidData", "Hibah penelitian is not match existing data");
     }
 }

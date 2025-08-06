@@ -14,7 +14,6 @@ namespace UnpakSipaksi.Modules.PenelitianPkm.Application.CreateMemberMahasiswa
     {
         public async Task<Result<Guid>> Handle(CreateMemberMahasiswaCommand request, CancellationToken cancellationToken)
         {
-            //harus pindah ke domain
             PenelitianPkmResponse? existData = await penelitianHibahApi.GetAsync(Guid.Parse(request.UuidPenelitianPkm));
             if (existData == null)
             {
@@ -23,15 +22,8 @@ namespace UnpakSipaksi.Modules.PenelitianPkm.Application.CreateMemberMahasiswa
 
             int checkData = await memberRepository.CheckUniqueDataAsync(int.Parse(existData!.Id), request.NPM, cancellationToken);
 
-            if (checkData > 0)
-            {
-                return Result.Failure<Guid>(MemberMahasiswaErrors.NotUnique(request.NPM));
-            }
-            //harus pindah ke domain
-
-            //[PR] check valid npm
-
             Result<Domain.MemberMahasiswa.MemberMahasiswa> result = Domain.MemberMahasiswa.MemberMahasiswa.Create(
+                checkData,
                 int.Parse(existData!.Id),
                 request.NPM
             );

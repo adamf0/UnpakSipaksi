@@ -39,11 +39,11 @@ namespace UnpakSipaksi.Modules.RumusanPrioritasMitra.Domain.RumusanPrioritasMitr
             {
                 if (HasError) return this;
 
-                /*if (string.IsNullOrWhiteSpace(nama))
+                if (nilai < 0)
                 {
-                    _result = Result.Failure<RumusanPrioritasMitra>(RumusanPrioritasMitraErrors.NamaNotFound);
+                    _result = Result.Failure<RumusanPrioritasMitra>(RumusanPrioritasMitraErrors.InvalidValueNilai());
                     return this;
-                }*/
+                }
 
                 _akurasiPenelitian.Nilai = nilai;
                 return this;

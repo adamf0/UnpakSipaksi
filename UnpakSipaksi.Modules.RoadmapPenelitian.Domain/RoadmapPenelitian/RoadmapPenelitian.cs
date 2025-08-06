@@ -29,6 +29,9 @@ namespace UnpakSipaksi.Modules.RoadmapPenelitian.Domain.RoadmapPenelitian
         int Skor
         )
         {
+            if (Skor < 0) {
+                return Result.Failure<RoadmapPenelitian>(RoadmapPenelitianErrors.InvalidValueSkor());
+            }
             var asset = new RoadmapPenelitian
             {
                 Uuid = Guid.NewGuid(),

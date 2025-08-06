@@ -8,6 +8,7 @@ namespace UnpakSipaksi.Modules.PenelitianHibah.Application.ApprovalMemberDosen
 {
     internal sealed class ApprovalMemberDosenCommandHandler(
         IMemberDosenRepository memberRepository,
+        IPenelitianHibahRepository hibahRepository,
         IUnitOfWorkMember unitOfWork)
         : ICommandHandler<ApprovalMemberDosenCommand>
     {
@@ -24,15 +25,17 @@ namespace UnpakSipaksi.Modules.PenelitianHibah.Application.ApprovalMemberDosen
                 return Result.Failure(PenelitianHibahErrors.InvalidStatusMember());
             }
 
+            Domain.PenelitianHibah.PenelitianHibah? existingPenelitianHibah = await hibahRepository.GetAsync(Guid.Parse(request.UuidPenelitianHibah), cancellationToken);
+
             //[PR] check valid nidn
             //[PR] check nidn input with token
 
             Result<MemberDosen> result;
             if (request.Status.ToLower() == "approve") {
-                result = MemberDosen.Approve(existingMemberDosen);
+                result = MemberDosen.Approve(existingMemberDosen, existingPenelitianHibah);
             }
             else {
-                result = MemberDosen.Reject(existingMemberDosen);
+                result = MemberDosen.Reject(existingMemberDosen, existingPenelitianHibah);
             }
 
             if (result.IsFailure)

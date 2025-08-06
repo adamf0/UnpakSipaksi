@@ -21,5 +21,9 @@ namespace UnpakSipaksi.Modules.PenelitianPkm.Domain.MemberMahasiswa
             Error.NotFound("MemberMahasiswa.InvalidUrlBuktiMbkm", "Bukti mbkm is invalid url");
         public static Error InvalidHostBuktiMbkm() =>
             Error.NotFound("MemberMahasiswa.InvalidHostBuktiMbkm", "Bukti mbkm is invalid host url");
+        public static Error InvalidNpm() =>
+            Error.NotFound("MemberMahasiswa.InvalidNpm", "Npm is invalid format");
+        public static Error InvalidData() =>
+            Error.NotFound("MemberMahasiswa.InvalidData", "Hibah penelitian is not match existing data");
     }
 }

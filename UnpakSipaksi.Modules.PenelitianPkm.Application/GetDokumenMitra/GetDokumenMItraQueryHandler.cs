@@ -3,7 +3,6 @@ using System.Data.Common;
 using UnpakSipaksi.Common.Application.Data;
 using UnpakSipaksi.Common.Application.Messaging;
 using UnpakSipaksi.Common.Domain;
-using UnpakSipaksi.Modules.PenelitianHibah.Domain.DokumenMitra;
 using UnpakSipaksi.Modules.PenelitianPkm.Domain.DokumenMitra;
 
 namespace UnpakSipaksi.Modules.PenelitianPkm.Application.GetDokumenMitra

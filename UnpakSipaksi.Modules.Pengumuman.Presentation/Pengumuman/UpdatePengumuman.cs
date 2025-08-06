@@ -17,7 +17,6 @@ namespace UnpakSipaksi.Modules.Pengumuman.Presentation.Pengumuman
     {
         public static void MapEndpoint(IEndpointRouteBuilder app)
         {
-            //[PR] upload file
             app.MapPut("Pengumuman", [IgnoreAntiforgeryToken(Order = 1001)] async ([FromForm] UpdatePengumumanRequest request, ISender sender, IFileProvider fileProvider, HttpContext context, TokenValidator tokenValidator) =>
             {
                 string? dokumenPath = null;

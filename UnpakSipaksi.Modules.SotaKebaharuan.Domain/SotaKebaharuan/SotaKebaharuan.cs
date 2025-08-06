@@ -29,6 +29,10 @@ namespace UnpakSipaksi.Modules.SotaKebaharuan.Domain.SotaKebaharuan
         int Skor
         )
         {
+            if (Skor < 0)
+            {
+                return Result.Failure<SotaKebaharuan>(SotaKebaharuanErrors.InvalidValueSkor());
+            }
             var asset = new SotaKebaharuan
             {
                 Uuid = Guid.NewGuid(),

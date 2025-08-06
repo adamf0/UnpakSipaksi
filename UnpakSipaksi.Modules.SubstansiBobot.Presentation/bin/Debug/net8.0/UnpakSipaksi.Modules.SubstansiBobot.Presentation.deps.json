@@ -207,12 +207,18 @@
           "UnpakSipaksi.Common.Domain": "1.0.0"
         },
         "runtime": {
-          "UnpakSipaksi.Common.Application.dll": {}
+          "UnpakSipaksi.Common.Application.dll": {
+            "assemblyVersion": "1.0.0.0",
+            "fileVersion": "1.0.0.0"
+          }
         }
       },
       "UnpakSipaksi.Common.Domain/1.0.0": {
         "runtime": {
-          "UnpakSipaksi.Common.Domain.dll": {}
+          "UnpakSipaksi.Common.Domain.dll": {
+            "assemblyVersion": "1.0.0.0",
+            "fileVersion": "1.0.0.0"
+          }
         }
       },
       "UnpakSipaksi.Common.Presentation/1.0.0": {
@@ -221,157 +227,250 @@
           "UnpakSipaksi.Common.Domain": "1.0.0"
         },
         "runtime": {
-          "UnpakSipaksi.Common.Presentation.dll": {}
+          "UnpakSipaksi.Common.Presentation.dll": {
+            "assemblyVersion": "1.0.0.0",
+            "fileVersion": "1.0.0.0"
+          }
         }
       },
       "UnpakSipaksi.Modules.AkurasiPenelitian.PublicApi/1.0.0": {
         "runtime": {
-          "UnpakSipaksi.Modules.AkurasiPenelitian.PublicApi.dll": {}
+          "UnpakSipaksi.Modules.AkurasiPenelitian.PublicApi.dll": {
+            "assemblyVersion": "1.0.0.0",
+            "fileVersion": "1.0.0.0"
+          }
         }
       },
       "UnpakSipaksi.Modules.ArtikelMediaMassa.PublicApi/1.0.0": {
         "runtime": {
-          "UnpakSipaksi.Modules.ArtikelMediaMassa.PublicApi.dll": {}
+          "UnpakSipaksi.Modules.ArtikelMediaMassa.PublicApi.dll": {
+            "assemblyVersion": "1.0.0.0",
+            "fileVersion": "1.0.0.0"
+          }
         }
       },
       "UnpakSipaksi.Modules.InovasiPemecahanMasalah.PublicApi/1.0.0": {
         "runtime": {
-          "UnpakSipaksi.Modules.InovasiPemecahanMasalah.PublicApi.dll": {}
+          "UnpakSipaksi.Modules.InovasiPemecahanMasalah.PublicApi.dll": {
+            "assemblyVersion": "1.0.0.0",
+            "fileVersion": "1.0.0.0"
+          }
         }
       },
       "UnpakSipaksi.Modules.JumlahKolaboratorPublikasBereputasi.PublicApi/1.0.0": {
         "runtime": {
-          "UnpakSipaksi.Modules.JumlahKolaboratorPublikasBereputasi.PublicApi.dll": {}
+          "UnpakSipaksi.Modules.JumlahKolaboratorPublikasBereputasi.PublicApi.dll": {
+            "assemblyVersion": "1.0.0.0",
+            "fileVersion": "1.0.0.0"
+          }
         }
       },
       "UnpakSipaksi.Modules.KebaruanReferensi.PublicApi/1.0.0": {
         "runtime": {
-          "UnpakSipaksi.Modules.KebaruanReferensi.PublicApi.dll": {}
+          "UnpakSipaksi.Modules.KebaruanReferensi.PublicApi.dll": {
+            "assemblyVersion": "1.0.0.0",
+            "fileVersion": "1.0.0.0"
+          }
         }
       },
       "UnpakSipaksi.Modules.KejelasanPembagianTugasTim.PublicApi/1.0.0": {
         "runtime": {
-          "UnpakSipaksi.Modules.KejelasanPembagianTugasTim.PublicApi.dll": {}
+          "UnpakSipaksi.Modules.KejelasanPembagianTugasTim.PublicApi.dll": {
+            "assemblyVersion": "1.0.0.0",
+            "fileVersion": "1.0.0.0"
+          }
         }
       },
       "UnpakSipaksi.Modules.KesesuaianJadwal.PublicApi/1.0.0": {
         "runtime": {
-          "UnpakSipaksi.Modules.KesesuaianJadwal.PublicApi.dll": {}
+          "UnpakSipaksi.Modules.KesesuaianJadwal.PublicApi.dll": {
+            "assemblyVersion": "1.0.0.0",
+            "fileVersion": "1.0.0.0"
+          }
         }
       },
       "UnpakSipaksi.Modules.KesesuaianPenugasan.PublicApi/1.0.0": {
         "runtime": {
-          "UnpakSipaksi.Modules.KesesuaianPenugasan.PublicApi.dll": {}
+          "UnpakSipaksi.Modules.KesesuaianPenugasan.PublicApi.dll": {
+            "assemblyVersion": "1.0.0.0",
+            "fileVersion": "1.0.0.0"
+          }
         }
       },
       "UnpakSipaksi.Modules.KesesuaianSolusiMasalahMitra.PublicApi/1.0.0": {
         "runtime": {
-          "UnpakSipaksi.Modules.KesesuaianSolusiMasalahMitra.PublicApi.dll": {}
+          "UnpakSipaksi.Modules.KesesuaianSolusiMasalahMitra.PublicApi.dll": {
+            "assemblyVersion": "1.0.0.0",
+            "fileVersion": "1.0.0.0"
+          }
         }
       },
       "UnpakSipaksi.Modules.KesesuaianTkt.PublicApi/1.0.0": {
         "runtime": {
-          "UnpakSipaksi.Modules.KesesuaianTkt.PublicApi.dll": {}
+          "UnpakSipaksi.Modules.KesesuaianTkt.PublicApi.dll": {
+            "assemblyVersion": "1.0.0.0",
+            "fileVersion": "1.0.0.0"
+          }
         }
       },
       "UnpakSipaksi.Modules.KesesuaianWaktuRabLuaranFasilitas.PublicApi/1.0.0": {
         "runtime": {
-          "UnpakSipaksi.Modules.KesesuaianWaktuRabLuaranFasilitas.PublicApi.dll": {}
+          "UnpakSipaksi.Modules.KesesuaianWaktuRabLuaranFasilitas.PublicApi.dll": {
+            "assemblyVersion": "1.0.0.0",
+            "fileVersion": "1.0.0.0"
+          }
         }
       },
       "UnpakSipaksi.Modules.KetajamanAnalisis.PublicApi/1.0.0": {
         "runtime": {
-          "UnpakSipaksi.Modules.KetajamanAnalisis.PublicApi.dll": {}
+          "UnpakSipaksi.Modules.KetajamanAnalisis.PublicApi.dll": {
+            "assemblyVersion": "1.0.0.0",
+            "fileVersion": "1.0.0.0"
+          }
         }
       },
       "UnpakSipaksi.Modules.KetajamanPerumusanMasalah.PublicApi/1.0.0": {
         "runtime": {
-          "UnpakSipaksi.Modules.KetajamanPerumusanMasalah.PublicApi.dll": {}
+          "UnpakSipaksi.Modules.KetajamanPerumusanMasalah.PublicApi.dll": {
+            "assemblyVersion": "1.0.0.0",
+            "fileVersion": "1.0.0.0"
+          }
         }
       },
       "UnpakSipaksi.Modules.KewajaranTahapanTarget.PublicApi/1.0.0": {
         "runtime": {
-          "UnpakSipaksi.Modules.KewajaranTahapanTarget.PublicApi.dll": {}
+          "UnpakSipaksi.Modules.KewajaranTahapanTarget.PublicApi.dll": {
+            "assemblyVersion": "1.0.0.0",
+            "fileVersion": "1.0.0.0"
+          }
         }
       },
       "UnpakSipaksi.Modules.KredibilitasMitraDukungan.PublicApi/1.0.0": {
         "runtime": {
-          "UnpakSipaksi.Modules.KredibilitasMitraDukungan.PublicApi.dll": {}
+          "UnpakSipaksi.Modules.KredibilitasMitraDukungan.PublicApi.dll": {
+            "assemblyVersion": "1.0.0.0",
+            "fileVersion": "1.0.0.0"
+          }
         }
       },
       "UnpakSipaksi.Modules.KualitasIpteks.PublicApi/1.0.0": {
         "runtime": {
-          "UnpakSipaksi.Modules.KualitasIpteks.PublicApi.dll": {}
+          "UnpakSipaksi.Modules.KualitasIpteks.PublicApi.dll": {
+            "assemblyVersion": "1.0.0.0",
+            "fileVersion": "1.0.0.0"
+          }
         }
       },
       "UnpakSipaksi.Modules.KualitasKuantitasPublikasiJurnalIlmiah.PubliApi/1.0.0": {
         "runtime": {
-          "UnpakSipaksi.Modules.KualitasKuantitasPublikasiJurnalIlmiah.PubliApi.dll": {}
+          "UnpakSipaksi.Modules.KualitasKuantitasPublikasiJurnalIlmiah.PubliApi.dll": {
+            "assemblyVersion": "1.0.0.0",
+            "fileVersion": "1.0.0.0"
+          }
         }
       },
       "UnpakSipaksi.Modules.KualitasKuantitasPublikasiProsiding.PublicApi/1.0.0": {
         "runtime": {
-          "UnpakSipaksi.Modules.KualitasKuantitasPublikasiProsiding.PublicApi.dll": {}
+          "UnpakSipaksi.Modules.KualitasKuantitasPublikasiProsiding.PublicApi.dll": {
+            "assemblyVersion": "1.0.0.0",
+            "fileVersion": "1.0.0.0"
+          }
         }
       },
       "UnpakSipaksi.Modules.KuantitasStatusKi.PublicApi/1.0.0": {
         "runtime": {
-          "UnpakSipaksi.Modules.KuantitasStatusKi.PublicApi.dll": {}
+          "UnpakSipaksi.Modules.KuantitasStatusKi.PublicApi.dll": {
+            "assemblyVersion": "1.0.0.0",
+            "fileVersion": "1.0.0.0"
+          }
         }
       },
       "UnpakSipaksi.Modules.LuaranArtikel.PublicApi/1.0.0": {
         "runtime": {
-          "UnpakSipaksi.Modules.LuaranArtikel.PublicApi.dll": {}
+          "UnpakSipaksi.Modules.LuaranArtikel.PublicApi.dll": {
+            "assemblyVersion": "1.0.0.0",
+            "fileVersion": "1.0.0.0"
+          }
         }
       },
       "UnpakSipaksi.Modules.MetodeRencanaKegiatan.PublicApi/1.0.0": {
         "runtime": {
-          "UnpakSipaksi.Modules.MetodeRencanaKegiatan.PublicApi.dll": {}
+          "UnpakSipaksi.Modules.MetodeRencanaKegiatan.PublicApi.dll": {
+            "assemblyVersion": "1.0.0.0",
+            "fileVersion": "1.0.0.0"
+          }
         }
       },
       "UnpakSipaksi.Modules.ModelFeasibilityStudys.PublicApi/1.0.0": {
         "runtime": {
-          "UnpakSipaksi.Modules.ModelFeasibilityStudys.PublicApi.dll": {}
+          "UnpakSipaksi.Modules.ModelFeasibilityStudys.PublicApi.dll": {
+            "assemblyVersion": "1.0.0.0",
+            "fileVersion": "1.0.0.0"
+          }
         }
       },
       "UnpakSipaksi.Modules.PeningkatanKeberdayaanMitra.PublicApi/1.0.0": {
         "runtime": {
-          "UnpakSipaksi.Modules.PeningkatanKeberdayaanMitra.PublicApi.dll": {}
+          "UnpakSipaksi.Modules.PeningkatanKeberdayaanMitra.PublicApi.dll": {
+            "assemblyVersion": "1.0.0.0",
+            "fileVersion": "1.0.0.0"
+          }
         }
       },
       "UnpakSipaksi.Modules.PotensiKetercapaianLuaranDijanjikan.PublicApi/1.0.0": {
         "runtime": {
-          "UnpakSipaksi.Modules.PotensiKetercapaianLuaranDijanjikan.PublicApi.dll": {}
+          "UnpakSipaksi.Modules.PotensiKetercapaianLuaranDijanjikan.PublicApi.dll": {
+            "assemblyVersion": "1.0.0.0",
+            "fileVersion": "1.0.0.0"
+          }
         }
       },
       "UnpakSipaksi.Modules.PublikasiDisitasiProposal.PublicApi/1.0.0": {
         "runtime": {
-          "UnpakSipaksi.Modules.PublikasiDisitasiProposal.PublicApi.dll": {}
+          "UnpakSipaksi.Modules.PublikasiDisitasiProposal.PublicApi.dll": {
+            "assemblyVersion": "1.0.0.0",
+            "fileVersion": "1.0.0.0"
+          }
         }
       },
       "UnpakSipaksi.Modules.RelevansiKepakaranTemaProposal.PublicApi/1.0.0": {
         "runtime": {
-          "UnpakSipaksi.Modules.RelevansiKepakaranTemaProposal.PublicApi.dll": {}
+          "UnpakSipaksi.Modules.RelevansiKepakaranTemaProposal.PublicApi.dll": {
+            "assemblyVersion": "1.0.0.0",
+            "fileVersion": "1.0.0.0"
+          }
         }
       },
       "UnpakSipaksi.Modules.RelevansiKualitasReferensi.PublicApi/1.0.0": {
         "runtime": {
-          "UnpakSipaksi.Modules.RelevansiKualitasReferensi.PublicApi.dll": {}
+          "UnpakSipaksi.Modules.RelevansiKualitasReferensi.PublicApi.dll": {
+            "assemblyVersion": "1.0.0.0",
+            "fileVersion": "1.0.0.0"
+          }
         }
       },
       "UnpakSipaksi.Modules.RelevansiProdukKepentinganNasional.PublicApi/1.0.0": {
         "runtime": {
-          "UnpakSipaksi.Modules.RelevansiProdukKepentinganNasional.PublicApi.dll": {}
+          "UnpakSipaksi.Modules.RelevansiProdukKepentinganNasional.PublicApi.dll": {
+            "assemblyVersion": "1.0.0.0",
+            "fileVersion": "1.0.0.0"
+          }
         }
       },
       "UnpakSipaksi.Modules.RoadmapPenelitian.PublicApi/1.0.0": {
         "runtime": {
-          "UnpakSipaksi.Modules.RoadmapPenelitian.PublicApi.dll": {}
+          "UnpakSipaksi.Modules.RoadmapPenelitian.PublicApi.dll": {
+            "assemblyVersion": "1.0.0.0",
+            "fileVersion": "1.0.0.0"
+          }
         }
       },
       "UnpakSipaksi.Modules.RumusanPrioritasMitra.PublicApi/1.0.0": {
         "runtime": {
-          "UnpakSipaksi.Modules.RumusanPrioritasMitra.PublicApi.dll": {}
+          "UnpakSipaksi.Modules.RumusanPrioritasMitra.PublicApi.dll": {
+            "assemblyVersion": "1.0.0.0",
+            "fileVersion": "1.0.0.0"
+          }
         }
       },
       "UnpakSipaksi.Modules.SotaKebaharuan.Application/1.0.0": {
@@ -383,7 +482,10 @@
           "UnpakSipaksi.Modules.SotaKebaharuan.Domain": "1.0.0"
         },
         "runtime": {
-          "UnpakSipaksi.Modules.SotaKebaharuan.Application.dll": {}
+          "UnpakSipaksi.Modules.SotaKebaharuan.Application.dll": {
+            "assemblyVersion": "1.0.0.0",
+            "fileVersion": "1.0.0.0"
+          }
         }
       },
       "UnpakSipaksi.Modules.SotaKebaharuan.Domain/1.0.0": {
@@ -391,7 +493,10 @@
           "UnpakSipaksi.Common.Domain": "1.0.0"
         },
         "runtime": {
-          "UnpakSipaksi.Modules.SotaKebaharuan.Domain.dll": {}
+          "UnpakSipaksi.Modules.SotaKebaharuan.Domain.dll": {
+            "assemblyVersion": "1.0.0.0",
+            "fileVersion": "1.0.0.0"
+          }
         }
       },
       "UnpakSipaksi.Modules.SotaKebaharuan.Presentation/1.0.0": {
@@ -401,7 +506,10 @@
           "UnpakSipaksi.Modules.SotaKebaharuan.Application": "1.0.0"
         },
         "runtime": {
-          "UnpakSipaksi.Modules.SotaKebaharuan.Presentation.dll": {}
+          "UnpakSipaksi.Modules.SotaKebaharuan.Presentation.dll": {
+            "assemblyVersion": "1.0.0.0",
+            "fileVersion": "1.0.0.0"
+          }
         }
       },
       "UnpakSipaksi.Modules.SotaKebaharuan.PublicApi/1.0.0": {
@@ -409,7 +517,10 @@
           "UnpakSipaksi.Modules.SotaKebaharuan.Presentation": "1.0.0"
         },
         "runtime": {
-          "UnpakSipaksi.Modules.SotaKebaharuan.PublicApi.dll": {}
+          "UnpakSipaksi.Modules.SotaKebaharuan.PublicApi.dll": {
+            "assemblyVersion": "1.0.0.0",
+            "fileVersion": "1.0.0.0"
+          }
         }
       },
       "UnpakSipaksi.Modules.SubstansiBobot.Application/1.0.0": {
@@ -452,12 +563,18 @@
           "UnpakSipaksi.Modules.VideoKegiatan.PublicApi": "1.0.0"
         },
         "runtime": {
-          "UnpakSipaksi.Modules.SubstansiBobot.Application.dll": {}
+          "UnpakSipaksi.Modules.SubstansiBobot.Application.dll": {
+            "assemblyVersion": "1.0.0.0",
+            "fileVersion": "1.0.0.0"
+          }
         }
       },
       "UnpakSipaksi.Modules.VideoKegiatan.PublicApi/1.0.0": {
         "runtime": {
-          "UnpakSipaksi.Modules.VideoKegiatan.PublicApi.dll": {}
+          "UnpakSipaksi.Modules.VideoKegiatan.PublicApi.dll": {
+            "assemblyVersion": "1.0.0.0",
+            "fileVersion": "1.0.0.0"
+          }
         }
       }
     }

@@ -17,9 +17,15 @@ namespace UnpakSipaksi.Modules.PenelitianHibah.Domain.MemberMahasiswa
             Error.NotFound("MemberMahasiswa.NotFound", $"Member hibah mahasiswa with identifier {Id} not found");
         public static Error NotFoundHibah(Guid Id) =>
             Error.NotFound("MemberMahasiswa.NotFoundHibah", $"Penelitian hibah with identifier {Id} not found");
+        public static Error NotFoundHibah() =>
+            Error.NotFound("MemberMahasiswa.NotFoundHibah", "Penelitian hibah not found");
         public static Error InvalidUrlBuktiMbkm() =>
             Error.NotFound("MemberMahasiswa.InvalidUrlBuktiMbkm", "Bukti mbkm is invalid url");
         public static Error InvalidHostBuktiMbkm() =>
             Error.NotFound("MemberMahasiswa.InvalidHostBuktiMbkm", "Bukti mbkm is invalid host url");
+        public static Error InvalidNpm() =>
+            Error.NotFound("MemberMahasiswa.InvalidNpm", "Npm is invalid format");
+        public static Error InvalidData() =>
+            Error.NotFound("MemberMahasiswa.InvalidData", "Hibah penelitian is not match existing data");
     }
 }

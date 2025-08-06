@@ -28,6 +28,42 @@ namespace UnpakSipaksi.Modules.PenelitianPkm.Domain.PenelitianPkm
                 }
             }
             throw new ArgumentException($"Invalid value for {typeof(T).Name}: {stringValue}");
+        } //"Co Author".ToEnumFromString<JenisPublikasi>();
+        public static T? ToEnumFromStringWithoutThrow<T>(this string stringValue) where T : struct, Enum
+        {
+            foreach (T enumValue in Enum.GetValues(typeof(T)))
+            {
+                if (enumValue.ToEnumString().Equals(stringValue, StringComparison.OrdinalIgnoreCase))
+                {
+                    return enumValue;
+                }
+            }
+            return null;
+        }
+
+        public static T ToEnumFromInt<T>(this int intValue) where T : struct, Enum
+        {
+            if (Enum.IsDefined(typeof(T), intValue))
+            {
+                return (T)(object)intValue;
+            }
+            throw new ArgumentException($"Invalid value for {typeof(T).Name}: {intValue}");
+        }
+
+        public static string[] GetAllEnumStrings<T>() where T : Enum
+        {
+            return Enum.GetValues(typeof(T))
+                .Cast<Enum>()
+                .Select(e => e.ToEnumString())
+                .ToArray();
+        } //var allStrings = EnumExtensions.GetAllEnumStrings<JenisPublikasi>();
+
+        public static int[] GetAllEnumValues<T>() where T : Enum
+        {
+            return Enum.GetValues(typeof(T))
+                .Cast<Enum>()
+                .Select(e => Convert.ToInt32(e)) // Mengonversi enum ke int
+                .ToArray();
         }
     }
 }

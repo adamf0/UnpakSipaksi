@@ -8,6 +8,7 @@ namespace UnpakSipaksi.Modules.PenelitianPkm.Application.UpdateMemberDosen
 {
     internal sealed class UpdateMemberDosenCommandHandler(
         IMemberDosenRepository memberRepository,
+        IPenelitianPkmRepository hibahRepository,
         IUnitOfWorkMember unitOfWork)
         : ICommandHandler<UpdateMemberDosenCommand>
     {
@@ -23,14 +24,12 @@ namespace UnpakSipaksi.Modules.PenelitianPkm.Application.UpdateMemberDosen
             //[PR] check valid nidn
 
             int checkData = await memberRepository.CheckUniqueDataAsync(existingMemberDosen.Id ?? 0, request.NIDN, cancellationToken);
-
-            if (checkData > 0)
-            {
-                return Result.Failure<Guid>(MemberDosenErrors.NotUnique(request.NIDN));
-            }
+            Domain.PenelitianPkm.PenelitianPkm? existingPenelitianPkm = await hibahRepository.GetAsync(Guid.Parse(request.UuidPenelitianPkm), cancellationToken);
 
             Result<MemberDosen> result = MemberDosen.Update(
+                checkData,
                 existingMemberDosen!,
+                existingPenelitianPkm,
                 request.NIDN
             );
 

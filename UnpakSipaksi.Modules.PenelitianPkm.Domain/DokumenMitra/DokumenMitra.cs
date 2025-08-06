@@ -1,6 +1,5 @@
 ﻿using System.ComponentModel.DataAnnotations.Schema;
 using UnpakSipaksi.Common.Domain;
-using UnpakSipaksi.Modules.PenelitianHibah.Domain.DokumenMitra;
 
 namespace UnpakSipaksi.Modules.PenelitianPkm.Domain.DokumenMitra
 {
@@ -53,6 +52,18 @@ namespace UnpakSipaksi.Modules.PenelitianPkm.Domain.DokumenMitra
             if (KelompokMitraId <= 0) {
                 return Result.Failure<DokumenMitra>((DokumenMitraErrors.InvalidKelompokMitra()));
             }
+            if (string.IsNullOrWhiteSpace(Mitra))
+                return Result.Failure<DokumenMitra>(DokumenMitraErrors.InvalidMitra());
+
+            if (string.IsNullOrWhiteSpace(Provinsi))
+                return Result.Failure<DokumenMitra>(DokumenMitraErrors.InvalidProvinsi());
+
+            if (string.IsNullOrWhiteSpace(Kota))
+                return Result.Failure<DokumenMitra>(DokumenMitraErrors.InvalidKota());
+
+            if (string.IsNullOrWhiteSpace(PemimpinMitra))
+                return Result.Failure<DokumenMitra>(DokumenMitraErrors.InvalidPemimpinMitra());
+
             //[PR] penambahan validasi provinsi & kota sesuai db
 
             var asset = new DokumenMitra
@@ -99,6 +110,18 @@ namespace UnpakSipaksi.Modules.PenelitianPkm.Domain.DokumenMitra
             {
                 return Result.Failure<DokumenMitra>((DokumenMitraErrors.EmptyResource()));
             }
+            if (string.IsNullOrWhiteSpace(Mitra))
+                return Result.Failure<DokumenMitra>(DokumenMitraErrors.InvalidMitra());
+
+            if (string.IsNullOrWhiteSpace(Provinsi))
+                return Result.Failure<DokumenMitra>(DokumenMitraErrors.InvalidProvinsi());
+
+            if (string.IsNullOrWhiteSpace(Kota))
+                return Result.Failure<DokumenMitra>(DokumenMitraErrors.InvalidKota());
+
+            if (string.IsNullOrWhiteSpace(PemimpinMitra))
+                return Result.Failure<DokumenMitra>(DokumenMitraErrors.InvalidPemimpinMitra());
+
             if (KelompokMitraId <= 0)
             {
                 return Result.Failure<DokumenMitra>((DokumenMitraErrors.InvalidKelompokMitra()));

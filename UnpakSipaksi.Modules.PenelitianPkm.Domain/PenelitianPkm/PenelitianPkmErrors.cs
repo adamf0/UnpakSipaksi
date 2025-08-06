@@ -25,7 +25,8 @@ namespace UnpakSipaksi.Modules.PenelitianPkm.Domain.PenelitianPkm
             Error.NotFound("PenelitianPkm.InvalidProgramPengabdian", "Don't recognize program pengabdian value");
         public static Error InvalidRirn() =>
             Error.NotFound("PenelitianPkm.InvalidRirn", "Don't recognize rirn value");
-
+        public static Error InvalidStatus() =>
+            Error.NotFound("PenelitianPkm.InvalidStatus", "Status is invalid format");
         public static Error InvalidTahunPengajuan() =>
             Error.NotFound("PenelitianPkm.InvalidTahunPengajuan", "Tahun pengajuan is invalid format date");
         public static Error NotFound(Guid Id) =>

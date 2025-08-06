@@ -644,12 +644,18 @@
           "UnpakSipaksi.Common.Domain": "1.0.0"
         },
         "runtime": {
-          "UnpakSipaksi.Common.Application.dll": {}
+          "UnpakSipaksi.Common.Application.dll": {
+            "assemblyVersion": "1.0.0.0",
+            "fileVersion": "1.0.0.0"
+          }
         }
       },
       "UnpakSipaksi.Common.Domain/1.0.0": {
         "runtime": {
-          "UnpakSipaksi.Common.Domain.dll": {}
+          "UnpakSipaksi.Common.Domain.dll": {
+            "assemblyVersion": "1.0.0.0",
+            "fileVersion": "1.0.0.0"
+          }
         }
       },
       "UnpakSipaksi.Common.Infrastructure/1.0.0": {
@@ -659,7 +665,10 @@
           "UnpakSipaksi.Common.Application": "1.0.0"
         },
         "runtime": {
-          "UnpakSipaksi.Common.Infrastructure.dll": {}
+          "UnpakSipaksi.Common.Infrastructure.dll": {
+            "assemblyVersion": "1.0.0.0",
+            "fileVersion": "1.0.0.0"
+          }
         }
       },
       "UnpakSipaksi.Common.Presentation/1.0.0": {
@@ -668,7 +677,10 @@
           "UnpakSipaksi.Common.Domain": "1.0.0"
         },
         "runtime": {
-          "UnpakSipaksi.Common.Presentation.dll": {}
+          "UnpakSipaksi.Common.Presentation.dll": {
+            "assemblyVersion": "1.0.0.0",
+            "fileVersion": "1.0.0.0"
+          }
         }
       },
       "UnpakSipaksi.Modules.JumlahKolaboratorPublikasBereputasi.Application/1.0.0": {
@@ -680,7 +692,10 @@
           "UnpakSipaksi.Modules.JumlahKolaboratorPublikasBereputasi.Domain": "1.0.0"
         },
         "runtime": {
-          "UnpakSipaksi.Modules.JumlahKolaboratorPublikasBereputasi.Application.dll": {}
+          "UnpakSipaksi.Modules.JumlahKolaboratorPublikasBereputasi.Application.dll": {
+            "assemblyVersion": "1.0.0.0",
+            "fileVersion": "1.0.0.0"
+          }
         }
       },
       "UnpakSipaksi.Modules.JumlahKolaboratorPublikasBereputasi.Domain/1.0.0": {
@@ -688,7 +703,10 @@
           "UnpakSipaksi.Common.Domain": "1.0.0"
         },
         "runtime": {
-          "UnpakSipaksi.Modules.JumlahKolaboratorPublikasBereputasi.Domain.dll": {}
+          "UnpakSipaksi.Modules.JumlahKolaboratorPublikasBereputasi.Domain.dll": {
+            "assemblyVersion": "1.0.0.0",
+            "fileVersion": "1.0.0.0"
+          }
         }
       },
       "UnpakSipaksi.Modules.JumlahKolaboratorPublikasBereputasi.Presentation/1.0.0": {
@@ -698,12 +716,18 @@
           "UnpakSipaksi.Modules.JumlahKolaboratorPublikasBereputasi.Application": "1.0.0"
         },
         "runtime": {
-          "UnpakSipaksi.Modules.JumlahKolaboratorPublikasBereputasi.Presentation.dll": {}
+          "UnpakSipaksi.Modules.JumlahKolaboratorPublikasBereputasi.Presentation.dll": {
+            "assemblyVersion": "1.0.0.0",
+            "fileVersion": "1.0.0.0"
+          }
         }
       },
       "UnpakSipaksi.Modules.JumlahKolaboratorPublikasBereputasi.PublicApi/1.0.0": {
         "runtime": {
-          "UnpakSipaksi.Modules.JumlahKolaboratorPublikasBereputasi.PublicApi.dll": {}
+          "UnpakSipaksi.Modules.JumlahKolaboratorPublikasBereputasi.PublicApi.dll": {
+            "assemblyVersion": "1.0.0.0",
+            "fileVersion": "1.0.0.0"
+          }
         }
       }
     }

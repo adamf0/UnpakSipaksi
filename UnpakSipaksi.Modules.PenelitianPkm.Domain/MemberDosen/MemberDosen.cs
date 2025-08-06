@@ -31,10 +31,20 @@ namespace UnpakSipaksi.Modules.PenelitianPkm.Domain.MemberDosen
 
 
         public static Result<MemberDosen> Create(
+          int checkData,
           int PenelitianPkmId,
           string NIDN
         )
         {
+            if (PenelitianPkmId <= 0)
+            {
+                return Result.Failure<MemberDosen>(MemberDosenErrors.NotFoundHibah());
+            }
+            if (checkData > 0)
+            {
+                return Result.Failure<MemberDosen>(MemberDosenErrors.NotUnique(NIDN));
+            }
+
             var asset = new MemberDosen
             {
                 Uuid = Guid.NewGuid(),
@@ -49,20 +59,38 @@ namespace UnpakSipaksi.Modules.PenelitianPkm.Domain.MemberDosen
         }
 
         public static Result<MemberDosen> Update(
+          int checkData,
           MemberDosen prev,
+          Domain.PenelitianPkm.PenelitianPkm? existingPenelitianHibah,
           string Nidn
         )
         {
+            if (checkData > 0)
+            {
+                return Result.Failure<MemberDosen>(MemberDosenErrors.NotUnique(Nidn));
+            }
+            if (prev?.PenelitianPkmId != existingPenelitianHibah?.Id)
+            {
+                return Result.Failure<MemberDosen>(MemberDosenErrors.InvalidData());
+
+            }
             prev.NIDN = Nidn;
 
             return prev;
         }
 
-        public static Result<MemberDosen> Approve(MemberDosen? prev)
+        public static Result<MemberDosen> Approve(
+            MemberDosen? prev,
+            Domain.PenelitianPkm.PenelitianPkm? existingPenelitianHibah
+        )
         {
             if (prev is null)
             {
                 return Result.Failure<MemberDosen>(PenelitianPkmErrors.EmptyData());
+            }
+            if (prev?.PenelitianPkmId != existingPenelitianHibah?.Id)
+            {
+                return Result.Failure<MemberDosen>(MemberDosenErrors.InvalidData());
             }
 
             prev.Status = 1;
@@ -70,14 +98,21 @@ namespace UnpakSipaksi.Modules.PenelitianPkm.Domain.MemberDosen
             return prev;
         }
 
-        public static Result<MemberDosen> Reject(MemberDosen? prev)
+        public static Result<MemberDosen> Reject(
+            MemberDosen? prev,
+            Domain.PenelitianPkm.PenelitianPkm? existingPenelitianHibah
+        )
         {
             if (prev is null)
             {
                 return Result.Failure<MemberDosen>(PenelitianPkmErrors.EmptyData());
             }
+            if (prev?.PenelitianPkmId != existingPenelitianHibah?.Id)
+            {
+                return Result.Failure<MemberDosen>(MemberDosenErrors.InvalidData());
+            }
 
-            prev.Status = 0;
+            prev.Status = -1;
 
             return prev;
         }

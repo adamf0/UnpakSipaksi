@@ -24,10 +24,23 @@ namespace UnpakSipaksi.Modules.PenelitianHibah.Domain.MemberMahasiswa
 
 
         public static Result<MemberMahasiswa> Create(
+          int checkData,
           int PenelitianHibahId,
           string NPM
         )
         {
+            if (PenelitianHibahId <= 0) {
+                return Result.Failure<MemberMahasiswa>(MemberMahasiswaErrors.NotFoundHibah());
+            }
+            if (checkData > 0)
+            {
+                return Result.Failure<MemberMahasiswa>(MemberMahasiswaErrors.NotUnique(NPM));
+            }
+            if (!DomainValidator.IsValidNPM(NPM))
+            {
+                return Result.Failure<MemberMahasiswa>(MemberMahasiswaErrors.InvalidNpm());
+            }
+
             var asset = new MemberMahasiswa
             {
                 Uuid = Guid.NewGuid(),
@@ -41,10 +54,25 @@ namespace UnpakSipaksi.Modules.PenelitianHibah.Domain.MemberMahasiswa
         }
 
         public static Result<MemberMahasiswa> Update(
+          int checkData,
           MemberMahasiswa prev,
+          Domain.PenelitianHibah.PenelitianHibah? existingPenelitianHibah,
           string NPM
         )
         {
+            if (checkData > 0)
+            {
+                return Result.Failure<MemberMahasiswa>(MemberMahasiswaErrors.NotUnique(NPM));
+            }
+            if (!DomainValidator.IsValidNPM(NPM))
+            {
+                return Result.Failure<MemberMahasiswa>(MemberMahasiswaErrors.InvalidNpm());
+            }
+            if (prev?.PenelitianHibahId != existingPenelitianHibah?.Id)
+            {
+                return Result.Failure<MemberMahasiswa>(MemberMahasiswaErrors.InvalidData());
+            }
+
             prev.NPM = NPM;
 
             return prev;
@@ -52,6 +80,7 @@ namespace UnpakSipaksi.Modules.PenelitianHibah.Domain.MemberMahasiswa
 
         public static Result<MemberMahasiswa> UpdateMbkm(
           MemberMahasiswa? prev,
+          Domain.PenelitianHibah.PenelitianHibah? existingPenelitianHibah,
           string BuktiMbkm
         )
         {
@@ -59,14 +88,17 @@ namespace UnpakSipaksi.Modules.PenelitianHibah.Domain.MemberMahasiswa
             {
                 return Result.Failure<MemberMahasiswa>(PenelitianHibahErrors.EmptyData());
             }
-
+            if (prev?.PenelitianHibahId != existingPenelitianHibah?.Id)
+            {
+                return Result.Failure<MemberMahasiswa>(MemberMahasiswaErrors.InvalidData());
+            }
             if (!Uri.TryCreate(BuktiMbkm, UriKind.Absolute, out var uriResult) || uriResult.Scheme != Uri.UriSchemeHttps)
             {
                 return Result.Failure<MemberMahasiswa>(MemberMahasiswaErrors.InvalidUrlBuktiMbkm());
             }
 
             var allowedHost = "drive.google.com";
-            if (!string.Equals(uriResult.Host, allowedHost, StringComparison.OrdinalIgnoreCase))
+            if (!string.IsNullOrEmpty(BuktiMbkm) && !DomainValidator.IsValidGoogleDriveUrl(BuktiMbkm, allowedHost))
             {
                 return Result.Failure<MemberMahasiswa>(MemberMahasiswaErrors.InvalidHostBuktiMbkm());
             }

@@ -78,13 +78,18 @@ namespace UnpakSipaksi.Modules.PenelitianPkm.Domain.PenelitianPkm
             }
 
             var validTanggal = DateTime.TryParseExact(TahunPengajuan, "yyyy-MM-dd", CultureInfo.InvariantCulture, DateTimeStyles.None, out var parsedTanggal);
+            if (!validTanggal)
+            {
+                return Result.Failure<PenelitianPkm>(PenelitianPkmErrors.InvalidTahunPengajuan());
+            }
 
             var asset = new PenelitianPkm
             {
                 Uuid = Guid.NewGuid(),
                 NIDN = NIDN,
                 Judul = Judul,
-                TahunPengajuan = parsedTanggal
+                TahunPengajuan = parsedTanggal,
+                Status = "Draf"
             };
 
             asset.Raise(new PenelitianPkmCreatedDomainEvent(asset.Uuid));
@@ -99,6 +104,10 @@ namespace UnpakSipaksi.Modules.PenelitianPkm.Domain.PenelitianPkm
         )
         {
             var validTanggal = DateTime.TryParseExact(TahunPengajuan, "yyyy-MM-dd", CultureInfo.InvariantCulture, DateTimeStyles.None, out var parsedTanggal);
+            if (!validTanggal)
+            {
+                return Result.Failure<PenelitianPkm>(PenelitianPkmErrors.InvalidTahunPengajuan());
+            }
 
             prev.Judul = Judul;
             prev.TahunPengajuan = parsedTanggal;
@@ -159,6 +168,24 @@ namespace UnpakSipaksi.Modules.PenelitianPkm.Domain.PenelitianPkm
             prev.RumpunIlmu1Id = RumpunIlmu1Id;
             prev.RumpunIlmu2Id = RumpunIlmu2Id;
             prev.RumpunIlmu3Id = RumpunIlmu3Id;
+
+            return prev;
+        }
+
+        public static Result<PenelitianPkm> UpdateStatus(
+          PenelitianPkm? prev,
+          string Status
+        )
+        {
+            if (prev is null)
+            {
+                return Result.Failure<PenelitianPkm>(PenelitianPkmErrors.EmptyData());
+            }
+            if (!EnumExtensions.GetAllEnumStrings<StatusPengajuan>().Contains(Status, StringComparer.OrdinalIgnoreCase))
+            {
+                return Result.Failure<PenelitianPkm>(PenelitianPkmErrors.InvalidStatus());
+            }
+            prev.Status = Status;
 
             return prev;
         }

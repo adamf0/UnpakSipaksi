@@ -21,7 +21,7 @@ namespace UnpakSipaksi.Modules.PenelitianHibah.Domain.DokumenPendukung
             Error.NotFound("DokumenPendukung.EmptyResource", "Resource is not found");
         public static Error DuplicateResource() =>
             Error.NotFound("DokumenPendukung.DuplicateResource", "Resource is duplicate source");
-        public static Error IvalidLink() =>
-            Error.NotFound("DokumenPendukung.IvalidLink", "Invalid link");
+        public static Error InvalidLink() =>
+            Error.NotFound("DokumenPendukung.InvalidLink", "Invalid link");
     }
 }

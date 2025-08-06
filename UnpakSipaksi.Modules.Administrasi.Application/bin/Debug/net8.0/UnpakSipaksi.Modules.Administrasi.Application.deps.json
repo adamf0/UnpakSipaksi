@@ -143,12 +143,18 @@
           "UnpakSipaksi.Common.Domain": "1.0.0"
         },
         "runtime": {
-          "UnpakSipaksi.Common.Application.dll": {}
+          "UnpakSipaksi.Common.Application.dll": {
+            "assemblyVersion": "1.0.0.0",
+            "fileVersion": "1.0.0.0"
+          }
         }
       },
       "UnpakSipaksi.Common.Domain/1.0.0": {
         "runtime": {
-          "UnpakSipaksi.Common.Domain.dll": {}
+          "UnpakSipaksi.Common.Domain.dll": {
+            "assemblyVersion": "1.0.0.0",
+            "fileVersion": "1.0.0.0"
+          }
         }
       },
       "UnpakSipaksi.Modules.Administrasi.Domain/1.0.0": {
@@ -156,17 +162,26 @@
           "UnpakSipaksi.Common.Domain": "1.0.0"
         },
         "runtime": {
-          "UnpakSipaksi.Modules.Administrasi.Domain.dll": {}
+          "UnpakSipaksi.Modules.Administrasi.Domain.dll": {
+            "assemblyVersion": "1.0.0.0",
+            "fileVersion": "1.0.0.0"
+          }
         }
       },
       "UnpakSipaksi.Modules.PenelitianHibah.PublicApi/1.0.0": {
         "runtime": {
-          "UnpakSipaksi.Modules.PenelitianHibah.PublicApi.dll": {}
+          "UnpakSipaksi.Modules.PenelitianHibah.PublicApi.dll": {
+            "assemblyVersion": "1.0.0.0",
+            "fileVersion": "1.0.0.0"
+          }
         }
       },
       "UnpakSipaksi.Modules.PenelitianPkm.PublicApi/1.0.0": {
         "runtime": {
-          "UnpakSipaksi.Modules.PenelitianPkm.PublicApi.dll": {}
+          "UnpakSipaksi.Modules.PenelitianPkm.PublicApi.dll": {
+            "assemblyVersion": "1.0.0.0",
+            "fileVersion": "1.0.0.0"
+          }
         }
       }
     }

@@ -1,6 +1,5 @@
 ﻿using System.ComponentModel.DataAnnotations.Schema;
 using UnpakSipaksi.Common.Domain;
-using UnpakSipaksi.Modules.PenelitianHibah.Domain.DokumenLainnya;
 
 namespace UnpakSipaksi.Modules.PenelitianPkm.Domain.DokumenLainnya
 {
@@ -65,6 +64,10 @@ namespace UnpakSipaksi.Modules.PenelitianPkm.Domain.DokumenLainnya
             if (existingPenelitianPkm == null)
             {
                 return Result.Failure<DokumenLainnya>((DokumenLainnyaErrors.NotFoundPkm(UuidPenelitianPkm)));
+            }
+            if (prev?.PenelitianPkmId != existingPenelitianPkm?.Id)
+            {
+                return Result.Failure<DokumenLainnya>(DokumenLainnyaErrors.InvalidData());
             }
             if (string.IsNullOrEmpty(File))
             {

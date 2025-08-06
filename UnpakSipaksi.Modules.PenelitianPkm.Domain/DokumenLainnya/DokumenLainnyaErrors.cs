@@ -5,7 +5,7 @@ using System.Text;
 using System.Threading.Tasks;
 using UnpakSipaksi.Common.Domain;
 
-namespace UnpakSipaksi.Modules.PenelitianHibah.Domain.DokumenLainnya
+namespace UnpakSipaksi.Modules.PenelitianPkm.Domain.DokumenLainnya
 {
     public static class DokumenLainnyaErrors
     {
@@ -21,7 +21,7 @@ namespace UnpakSipaksi.Modules.PenelitianHibah.Domain.DokumenLainnya
             Error.NotFound("DokumenLainnya.EmptyResource", "Resource is not found");
         public static Error DuplicateResource() =>
             Error.NotFound("DokumenLainnya.DuplicateResource", "Resource is duplicate source");
-        public static Error IvalidLink() =>
-            Error.NotFound("DokumenLainnya.IvalidLink", "Invalid link");
+        public static Error InvalidLink() =>
+            Error.NotFound("DokumenLainnya.InvalidLink", "Invalid link");
     }
 }

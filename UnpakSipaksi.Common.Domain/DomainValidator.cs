@@ -21,5 +21,9 @@ namespace UnpakSipaksi.Common.Domain
 
             return true;
         }
+        public static bool IsValidNPM(string npm)
+        {
+            return npm.Length == 9 && npm.All(char.IsDigit);
+        }
     }
 }

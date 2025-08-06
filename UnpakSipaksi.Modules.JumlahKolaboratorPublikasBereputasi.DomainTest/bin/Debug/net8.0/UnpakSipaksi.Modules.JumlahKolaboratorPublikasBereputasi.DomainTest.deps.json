@@ -1077,7 +1077,10 @@
       "xunit.runner.visualstudio/2.5.3": {},
       "UnpakSipaksi.Common.Domain/1.0.0": {
         "runtime": {
-          "UnpakSipaksi.Common.Domain.dll": {}
+          "UnpakSipaksi.Common.Domain.dll": {
+            "assemblyVersion": "1.0.0.0",
+            "fileVersion": "1.0.0.0"
+          }
         }
       },
       "UnpakSipaksi.Modules.JumlahKolaboratorPublikasBereputasi.Domain/1.0.0": {
@@ -1085,7 +1088,10 @@
           "UnpakSipaksi.Common.Domain": "1.0.0"
         },
         "runtime": {
-          "UnpakSipaksi.Modules.JumlahKolaboratorPublikasBereputasi.Domain.dll": {}
+          "UnpakSipaksi.Modules.JumlahKolaboratorPublikasBereputasi.Domain.dll": {
+            "assemblyVersion": "1.0.0.0",
+            "fileVersion": "1.0.0.0"
+          }
         }
       }
     }

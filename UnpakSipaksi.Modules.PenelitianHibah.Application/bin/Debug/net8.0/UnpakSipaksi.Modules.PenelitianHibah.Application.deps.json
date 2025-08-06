@@ -157,42 +157,66 @@
           "UnpakSipaksi.Common.Domain": "1.0.0"
         },
         "runtime": {
-          "UnpakSipaksi.Common.Application.dll": {}
+          "UnpakSipaksi.Common.Application.dll": {
+            "assemblyVersion": "1.0.0.0",
+            "fileVersion": "1.0.0.0"
+          }
         }
       },
       "UnpakSipaksi.Common.Domain/1.0.0": {
         "runtime": {
-          "UnpakSipaksi.Common.Domain.dll": {}
+          "UnpakSipaksi.Common.Domain.dll": {
+            "assemblyVersion": "1.0.0.0",
+            "fileVersion": "1.0.0.0"
+          }
         }
       },
       "UnpakSipaksi.Modules.FokusPenelitian.PublicApi/1.0.0": {
         "runtime": {
-          "UnpakSipaksi.Modules.FokusPenelitian.PublicApi.dll": {}
+          "UnpakSipaksi.Modules.FokusPenelitian.PublicApi.dll": {
+            "assemblyVersion": "1.0.0.0",
+            "fileVersion": "1.0.0.0"
+          }
         }
       },
       "UnpakSipaksi.Modules.Kategori.PublicApi/1.0.0": {
         "runtime": {
-          "UnpakSipaksi.Modules.Kategori.PublicApi.dll": {}
+          "UnpakSipaksi.Modules.Kategori.PublicApi.dll": {
+            "assemblyVersion": "1.0.0.0",
+            "fileVersion": "1.0.0.0"
+          }
         }
       },
       "UnpakSipaksi.Modules.KategoriLuaran.PublicApi/1.0.0": {
         "runtime": {
-          "UnpakSipaksi.Modules.KategoriLuaran.PublicApi.dll": {}
+          "UnpakSipaksi.Modules.KategoriLuaran.PublicApi.dll": {
+            "assemblyVersion": "1.0.0.0",
+            "fileVersion": "1.0.0.0"
+          }
         }
       },
       "UnpakSipaksi.Modules.KategoriSkema.PublicApi/1.0.0": {
         "runtime": {
-          "UnpakSipaksi.Modules.KategoriSkema.PublicApi.dll": {}
+          "UnpakSipaksi.Modules.KategoriSkema.PublicApi.dll": {
+            "assemblyVersion": "1.0.0.0",
+            "fileVersion": "1.0.0.0"
+          }
         }
       },
       "UnpakSipaksi.Modules.KategoriTkt.PublicApi/1.0.0": {
         "runtime": {
-          "UnpakSipaksi.Modules.KategoriTkt.PublicApi.dll": {}
+          "UnpakSipaksi.Modules.KategoriTkt.PublicApi.dll": {
+            "assemblyVersion": "1.0.0.0",
+            "fileVersion": "1.0.0.0"
+          }
         }
       },
       "UnpakSipaksi.Modules.KelompokRab.PublicApi/1.0.0": {
         "runtime": {
-          "UnpakSipaksi.Modules.KelompokRab.PublicApi.dll": {}
+          "UnpakSipaksi.Modules.KelompokRab.PublicApi.dll": {
+            "assemblyVersion": "1.0.0.0",
+            "fileVersion": "1.0.0.0"
+          }
         }
       },
       "UnpakSipaksi.Modules.Komponen.Application/1.0.0": {
@@ -204,7 +228,10 @@
           "UnpakSipaksi.Modules.Komponen.Domain": "1.0.0"
         },
         "runtime": {
-          "UnpakSipaksi.Modules.Komponen.Application.dll": {}
+          "UnpakSipaksi.Modules.Komponen.Application.dll": {
+            "assemblyVersion": "1.0.0.0",
+            "fileVersion": "1.0.0.0"
+          }
         }
       },
       "UnpakSipaksi.Modules.Komponen.Domain/1.0.0": {
@@ -212,12 +239,18 @@
           "UnpakSipaksi.Common.Domain": "1.0.0"
         },
         "runtime": {
-          "UnpakSipaksi.Modules.Komponen.Domain.dll": {}
+          "UnpakSipaksi.Modules.Komponen.Domain.dll": {
+            "assemblyVersion": "1.0.0.0",
+            "fileVersion": "1.0.0.0"
+          }
         }
       },
       "UnpakSipaksi.Modules.Komponen.PublicApi/1.0.0": {
         "runtime": {
-          "UnpakSipaksi.Modules.Komponen.PublicApi.dll": {}
+          "UnpakSipaksi.Modules.Komponen.PublicApi.dll": {
+            "assemblyVersion": "1.0.0.0",
+            "fileVersion": "1.0.0.0"
+          }
         }
       },
       "UnpakSipaksi.Modules.PenelitianHibah.Domain/1.0.0": {
@@ -225,47 +258,74 @@
           "UnpakSipaksi.Common.Domain": "1.0.0"
         },
         "runtime": {
-          "UnpakSipaksi.Modules.PenelitianHibah.Domain.dll": {}
+          "UnpakSipaksi.Modules.PenelitianHibah.Domain.dll": {
+            "assemblyVersion": "1.0.0.0",
+            "fileVersion": "1.0.0.0"
+          }
         }
       },
       "UnpakSipaksi.Modules.PenelitianHibah.PublicApi/1.0.0": {
         "runtime": {
-          "UnpakSipaksi.Modules.PenelitianHibah.PublicApi.dll": {}
+          "UnpakSipaksi.Modules.PenelitianHibah.PublicApi.dll": {
+            "assemblyVersion": "1.0.0.0",
+            "fileVersion": "1.0.0.0"
+          }
         }
       },
       "UnpakSipaksi.Modules.PrioritasRiset.PublicApi/1.0.0": {
         "runtime": {
-          "UnpakSipaksi.Modules.PrioritasRiset.PublicApi.dll": {}
+          "UnpakSipaksi.Modules.PrioritasRiset.PublicApi.dll": {
+            "assemblyVersion": "1.0.0.0",
+            "fileVersion": "1.0.0.0"
+          }
         }
       },
       "UnpakSipaksi.Modules.RumpunIlmu1.PublicApi/1.0.0": {
         "runtime": {
-          "UnpakSipaksi.Modules.RumpunIlmu1.PublicApi.dll": {}
+          "UnpakSipaksi.Modules.RumpunIlmu1.PublicApi.dll": {
+            "assemblyVersion": "1.0.0.0",
+            "fileVersion": "1.0.0.0"
+          }
         }
       },
       "UnpakSipaksi.Modules.RumpunIlmu2.PublicApi/1.0.0": {
         "runtime": {
-          "UnpakSipaksi.Modules.RumpunIlmu2.PublicApi.dll": {}
+          "UnpakSipaksi.Modules.RumpunIlmu2.PublicApi.dll": {
+            "assemblyVersion": "1.0.0.0",
+            "fileVersion": "1.0.0.0"
+          }
         }
       },
       "UnpakSipaksi.Modules.RumpunIlmu3.PublicApi/1.0.0": {
         "runtime": {
-          "UnpakSipaksi.Modules.RumpunIlmu3.PublicApi.dll": {}
+          "UnpakSipaksi.Modules.RumpunIlmu3.PublicApi.dll": {
+            "assemblyVersion": "1.0.0.0",
+            "fileVersion": "1.0.0.0"
+          }
         }
       },
       "UnpakSipaksi.Modules.Satuan.PublicApi/1.0.0": {
         "runtime": {
-          "UnpakSipaksi.Modules.Satuan.PublicApi.dll": {}
+          "UnpakSipaksi.Modules.Satuan.PublicApi.dll": {
+            "assemblyVersion": "1.0.0.0",
+            "fileVersion": "1.0.0.0"
+          }
         }
       },
       "UnpakSipaksi.Modules.TemaPenelitian.PublicApi/1.0.0": {
         "runtime": {
-          "UnpakSipaksi.Modules.TemaPenelitian.PublicApi.dll": {}
+          "UnpakSipaksi.Modules.TemaPenelitian.PublicApi.dll": {
+            "assemblyVersion": "1.0.0.0",
+            "fileVersion": "1.0.0.0"
+          }
         }
       },
       "UnpakSipaksi.Modules.TopikPenelitian.PublicApi/1.0.0": {
         "runtime": {
-          "UnpakSipaksi.Modules.TopikPenelitian.PublicApi.dll": {}
+          "UnpakSipaksi.Modules.TopikPenelitian.PublicApi.dll": {
+            "assemblyVersion": "1.0.0.0",
+            "fileVersion": "1.0.0.0"
+          }
         }
       }
     }

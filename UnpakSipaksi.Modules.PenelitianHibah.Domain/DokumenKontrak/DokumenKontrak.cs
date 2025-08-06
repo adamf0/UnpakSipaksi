@@ -68,6 +68,7 @@ namespace UnpakSipaksi.Modules.PenelitianHibah.Domain.DokumenKontrak
             {
                 return Result.Failure<DokumenKontrak>((DokumenKontrakErrors.EmptyResource()));
             }
+            //[PR] hanya pdf saja
 
             prev.File = File;
 

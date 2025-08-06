@@ -29,6 +29,9 @@ namespace UnpakSipaksi.Modules.RumpunIlmu2.Domain.RumpunIlmu2
         int IdRumpunIlmu1
         )
         {
+            if (IdRumpunIlmu1 <= 0) {
+                return Result.Failure<RumpunIlmu2>(RumpunIlmu2Errors.UnknownRumpunIlmu1());
+            }
             var asset = new RumpunIlmu2
             {
                 Uuid = Guid.NewGuid(),

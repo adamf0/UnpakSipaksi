@@ -14,10 +14,10 @@ namespace UnpakSipaksi.Modules.PenelitianHibah.Domain.RAB
         public static Error NotFound(Guid Id) =>
             Error.NotFound("RAB.NotFound", $"RAB with identifier {Id} not found");
         public static Error InvalidTotal() =>
-            Error.NotFound("RAB.InvalidTotal", $"Total value does not match calculation");
+            Error.NotFound("RAB.InvalidTotal", "Total value does not match calculation");
         public static Error NotFoundHibah(Guid Id) =>
             Error.NotFound("RAB.NotFoundHibah", $"Penelitian hibah with identifier {Id} not found");
         public static Error InvalidData() =>
-            Error.NotFound("RAB.InvalidData", $"Hibah penelitian is not match existing data");
+            Error.NotFound("RAB.InvalidData", "Hibah penelitian is not match existing data");
     }
 }

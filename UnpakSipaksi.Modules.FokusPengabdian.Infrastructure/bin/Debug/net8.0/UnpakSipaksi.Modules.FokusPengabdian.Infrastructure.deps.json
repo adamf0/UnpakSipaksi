@@ -644,12 +644,18 @@
           "UnpakSipaksi.Common.Domain": "1.0.0"
         },
         "runtime": {
-          "UnpakSipaksi.Common.Application.dll": {}
+          "UnpakSipaksi.Common.Application.dll": {
+            "assemblyVersion": "1.0.0.0",
+            "fileVersion": "1.0.0.0"
+          }
         }
       },
       "UnpakSipaksi.Common.Domain/1.0.0": {
         "runtime": {
-          "UnpakSipaksi.Common.Domain.dll": {}
+          "UnpakSipaksi.Common.Domain.dll": {
+            "assemblyVersion": "1.0.0.0",
+            "fileVersion": "1.0.0.0"
+          }
         }
       },
       "UnpakSipaksi.Common.Infrastructure/1.0.0": {
@@ -659,7 +665,10 @@
           "UnpakSipaksi.Common.Application": "1.0.0"
         },
         "runtime": {
-          "UnpakSipaksi.Common.Infrastructure.dll": {}
+          "UnpakSipaksi.Common.Infrastructure.dll": {
+            "assemblyVersion": "1.0.0.0",
+            "fileVersion": "1.0.0.0"
+          }
         }
       },
       "UnpakSipaksi.Common.Presentation/1.0.0": {
@@ -668,7 +677,10 @@
           "UnpakSipaksi.Common.Domain": "1.0.0"
         },
         "runtime": {
-          "UnpakSipaksi.Common.Presentation.dll": {}
+          "UnpakSipaksi.Common.Presentation.dll": {
+            "assemblyVersion": "1.0.0.0",
+            "fileVersion": "1.0.0.0"
+          }
         }
       },
       "UnpakSipaksi.Modules.FokusPengabdian.Application/1.0.0": {
@@ -680,7 +692,10 @@
           "UnpakSipaksi.Modules.FokusPengabdian.Domain": "1.0.0"
         },
         "runtime": {
-          "UnpakSipaksi.Modules.FokusPengabdian.Application.dll": {}
+          "UnpakSipaksi.Modules.FokusPengabdian.Application.dll": {
+            "assemblyVersion": "1.0.0.0",
+            "fileVersion": "1.0.0.0"
+          }
         }
       },
       "UnpakSipaksi.Modules.FokusPengabdian.Domain/1.0.0": {
@@ -688,7 +703,10 @@
           "UnpakSipaksi.Common.Domain": "1.0.0"
         },
         "runtime": {
-          "UnpakSipaksi.Modules.FokusPengabdian.Domain.dll": {}
+          "UnpakSipaksi.Modules.FokusPengabdian.Domain.dll": {
+            "assemblyVersion": "1.0.0.0",
+            "fileVersion": "1.0.0.0"
+          }
         }
       },
       "UnpakSipaksi.Modules.FokusPengabdian.Presentation/1.0.0": {
@@ -698,12 +716,18 @@
           "UnpakSipaksi.Modules.FokusPengabdian.Application": "1.0.0"
         },
         "runtime": {
-          "UnpakSipaksi.Modules.FokusPengabdian.Presentation.dll": {}
+          "UnpakSipaksi.Modules.FokusPengabdian.Presentation.dll": {
+            "assemblyVersion": "1.0.0.0",
+            "fileVersion": "1.0.0.0"
+          }
         }
       },
       "UnpakSipaksi.Modules.FokusPengabdian.PublicApi/1.0.0": {
         "runtime": {
-          "UnpakSipaksi.Modules.FokusPengabdian.PublicApi.dll": {}
+          "UnpakSipaksi.Modules.FokusPengabdian.PublicApi.dll": {
+            "assemblyVersion": "1.0.0.0",
+            "fileVersion": "1.0.0.0"
+          }
         }
       }
     }
