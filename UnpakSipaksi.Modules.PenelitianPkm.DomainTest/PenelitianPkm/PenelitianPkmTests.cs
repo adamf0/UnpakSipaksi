@@ -6,10 +6,8 @@ namespace UnpakSipaksi.Modules.PenelitianPkm.DomainTest.PenelitianPkm
 {
     public class PenelitianPkmTests
     {
-        [Fact]
-        public async Task Create_ShouldReturnSuccess_WhenValid()
+        private IPenelitianPkmRepository repoPenelitianPkm(bool unique = true)
         {
-            // Arrange
             var mockRepo = new Mock<IPenelitianPkmRepository>();
             mockRepo.Setup(x =>
                 x.HasUniqueDataAsync(
@@ -18,10 +16,18 @@ namespace UnpakSipaksi.Modules.PenelitianPkm.DomainTest.PenelitianPkm
                     It.Is<string>(j => j == "judul"),
                     It.IsAny<CancellationToken>()
                 )
-            ).ReturnsAsync(true);
+            ).ReturnsAsync(unique);
 
+            return mockRepo.Object;
+        }
+
+        [Fact]
+        public async Task Create_ShouldReturnSuccess_WhenValid()
+        {
+            // Arrange
+            
             // Act
-            var result = await Domain.PenelitianPkm.PenelitianPkm.Create(mockRepo.Object, "123", "2024-01-01", "judul");
+            var result = await Domain.PenelitianPkm.PenelitianPkm.Create(repoPenelitianPkm(), "123", "2024-01-01", "judul");
 
             // Assert
             result.IsSuccess.Should().BeTrue();
@@ -33,17 +39,7 @@ namespace UnpakSipaksi.Modules.PenelitianPkm.DomainTest.PenelitianPkm
         [Fact]
         public async Task Create_ShouldFail_WhenDuplicate()
         {
-            var mockRepo = new Mock<IPenelitianPkmRepository>();
-            mockRepo.Setup(x =>
-                x.HasUniqueDataAsync(
-                    It.IsAny<Guid?>(),
-                    It.Is<string>(s => s == "123"),
-                    It.Is<string>(j => j == "judul"),
-                    It.IsAny<CancellationToken>()
-                )
-            ).ReturnsAsync(false);
-
-            var result = await Domain.PenelitianPkm.PenelitianPkm.Create(mockRepo.Object, "123", "2024-01-01", "judul");
+            var result = await Domain.PenelitianPkm.PenelitianPkm.Create(repoPenelitianPkm(false), "123", "2024-01-01", "judul");
 
             result.IsFailure.Should().BeTrue();
             result.Error.Code.Should().Be("PenelitianPkm.NotUnique");
@@ -54,17 +50,7 @@ namespace UnpakSipaksi.Modules.PenelitianPkm.DomainTest.PenelitianPkm
         [InlineData("invalid-date")]
         public async Task Create_ShouldFail_WhenInvalidDate(string tahun)
         {
-            var mockRepo = new Mock<IPenelitianPkmRepository>();
-            mockRepo.Setup(x =>
-                x.HasUniqueDataAsync(
-                    It.IsAny<Guid?>(),
-                    It.Is<string>(s => s == "123"),
-                    It.Is<string>(j => j == "judul"),
-                    It.IsAny<CancellationToken>()
-                )
-            ).ReturnsAsync(true);
-
-            var result = await Domain.PenelitianPkm.PenelitianPkm.Create(mockRepo.Object, "123", tahun, "judul");
+            var result = await Domain.PenelitianPkm.PenelitianPkm.Create(repoPenelitianPkm(), "123", tahun, "judul");
 
             result.IsFailure.Should().BeTrue();
             result.Error.Code.Should().Be("PenelitianPkm.InvalidTahunPengajuan");
@@ -74,7 +60,7 @@ namespace UnpakSipaksi.Modules.PenelitianPkm.DomainTest.PenelitianPkm
         public async void Update_ShouldReturnSuccess_WhenValid()
         {
             var prev = await CreateDummy();
-            var result = Domain.PenelitianPkm.PenelitianPkm.Update(prev, "2023-01-01", "Updated Judul");
+            var result = await Domain.PenelitianPkm.PenelitianPkm.Update(prev, repoPenelitianPkm(), "2023-01-01", "Updated Judul");
             result.IsSuccess.Should().BeTrue();
             result.Value.Judul.Should().Be("Updated Judul");
         }
@@ -83,7 +69,7 @@ namespace UnpakSipaksi.Modules.PenelitianPkm.DomainTest.PenelitianPkm
         public async void Update_ShouldFail_WhenInvalidDate()
         {
             var prev = await CreateDummy();
-            var result = Domain.PenelitianPkm.PenelitianPkm.Update(prev, "invalid-date", "Updated Judul");
+            var result = await Domain.PenelitianPkm.PenelitianPkm.Update(prev, repoPenelitianPkm(), "invalid-date", "Updated Judul");
             result.IsFailure.Should().BeTrue();
             result.Error.Code.Should().Be("PenelitianPkm.InvalidTahunPengajuan");
         }
@@ -136,17 +122,8 @@ namespace UnpakSipaksi.Modules.PenelitianPkm.DomainTest.PenelitianPkm
 
         private async Task<Domain.PenelitianPkm.PenelitianPkm> CreateDummy()
         {
-            var mockRepo = new Mock<IPenelitianPkmRepository>();
-            mockRepo.Setup(x => x.HasUniqueDataAsync(
-                    It.IsAny<Guid?>(),
-                    It.IsAny<string>(),
-                    It.IsAny<string>(),
-                    It.IsAny<CancellationToken>()
-                ))
-                .ReturnsAsync(true);
-
             var result = await Domain.PenelitianPkm.PenelitianPkm.Create(
-                mockRepo.Object,
+                repoPenelitianPkm(),
                 "123",
                 "2022-01-01",
                 "judul"

@@ -25,11 +25,11 @@ namespace UnpakSipaksi.Modules.PenugasanReviewer.Domain.PenugasanReviewer
             {
                 if (HasError) return this;
 
-                /*if (string.IsNullOrWhiteSpace(nama))
+                if (!DomainValidator.IsValidNidn(Nidn))
                 {
-                    _result = Result.Failure<PenugasanReviewer>(PenugasanReviewerErrors.NamaNotFound);
+                    _result = Result.Failure<PenugasanReviewer>(PenugasanReviewerErrors.InvalidNidn());
                     return this;
-                }*/
+                }
 
                 _akurasiPenelitian.Nidn = Nidn;
                 return this;

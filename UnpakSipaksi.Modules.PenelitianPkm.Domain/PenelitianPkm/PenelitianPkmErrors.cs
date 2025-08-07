@@ -33,5 +33,7 @@ namespace UnpakSipaksi.Modules.PenelitianPkm.Domain.PenelitianPkm
             Error.NotFound("PenelitianPkm.NotFound", $"Penelitian hibah with identifier {Id} not found");
         public static Error InvalidData() =>
            Error.NotFound("PenelitianPkm.InvalidData", $"Hibah penelitian is not match existing data");
+        public static Error InvalidNidn() =>
+            Error.NotFound("PenelitianPkm.InvalidNidn", "Nidn is invalid format");
     }
 }

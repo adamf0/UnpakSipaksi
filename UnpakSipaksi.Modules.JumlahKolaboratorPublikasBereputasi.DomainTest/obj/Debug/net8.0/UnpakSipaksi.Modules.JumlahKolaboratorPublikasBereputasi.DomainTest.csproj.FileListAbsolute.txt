@@ -1,10 +1,4 @@
 C:\dev_net\UnpakSipaksi\UnpakSipaksi.Modules.JumlahKolaboratorPublikasBereputasi.DomainTest\bin\Debug\net8.0\CoverletSourceRootsMapping_UnpakSipaksi.Modules.JumlahKolaboratorPublikasBereputasi.DomainTest
-C:\dev_net\UnpakSipaksi\UnpakSipaksi.Modules.JumlahKolaboratorPublikasBereputasi.DomainTest\obj\Debug\net8.0\UnpakSipaksi.Modules.JumlahKolaboratorPublikasBereputasi.DomainTest.csproj.AssemblyReference.cache
-C:\dev_net\UnpakSipaksi\UnpakSipaksi.Modules.JumlahKolaboratorPublikasBereputasi.DomainTest\obj\Debug\net8.0\UnpakSipaksi.Modules.JumlahKolaboratorPublikasBereputasi.DomainTest.GeneratedMSBuildEditorConfig.editorconfig
-C:\dev_net\UnpakSipaksi\UnpakSipaksi.Modules.JumlahKolaboratorPublikasBereputasi.DomainTest\obj\Debug\net8.0\UnpakSipaksi.Modules.JumlahKolaboratorPublikasBereputasi.DomainTest.AssemblyInfoInputs.cache
-C:\dev_net\UnpakSipaksi\UnpakSipaksi.Modules.JumlahKolaboratorPublikasBereputasi.DomainTest\obj\Debug\net8.0\UnpakSipaksi.Modules.JumlahKolaboratorPublikasBereputasi.DomainTest.AssemblyInfo.cs
-C:\dev_net\UnpakSipaksi\UnpakSipaksi.Modules.JumlahKolaboratorPublikasBereputasi.DomainTest\obj\Debug\net8.0\UnpakSipaksi.Modules.JumlahKolaboratorPublikasBereputasi.DomainTest.csproj.CoreCompileInputs.cache
-C:\dev_net\UnpakSipaksi\UnpakSipaksi.Modules.JumlahKolaboratorPublikasBereputasi.DomainTest\obj\Debug\net8.0\UnpakSipaksi.Modules.JumlahKolaboratorPublikasBereputasi.DomainTest.sourcelink.json
 C:\dev_net\UnpakSipaksi\UnpakSipaksi.Modules.JumlahKolaboratorPublikasBereputasi.DomainTest\bin\Debug\net8.0\testhost.dll
 C:\dev_net\UnpakSipaksi\UnpakSipaksi.Modules.JumlahKolaboratorPublikasBereputasi.DomainTest\bin\Debug\net8.0\testhost.exe
 C:\dev_net\UnpakSipaksi\UnpakSipaksi.Modules.JumlahKolaboratorPublikasBereputasi.DomainTest\bin\Debug\net8.0\xunit.runner.visualstudio.dotnetcore.testadapter.dll
@@ -103,6 +97,12 @@ C:\dev_net\UnpakSipaksi\UnpakSipaksi.Modules.JumlahKolaboratorPublikasBereputasi
 C:\dev_net\UnpakSipaksi\UnpakSipaksi.Modules.JumlahKolaboratorPublikasBereputasi.DomainTest\bin\Debug\net8.0\UnpakSipaksi.Modules.JumlahKolaboratorPublikasBereputasi.Domain.dll
 C:\dev_net\UnpakSipaksi\UnpakSipaksi.Modules.JumlahKolaboratorPublikasBereputasi.DomainTest\bin\Debug\net8.0\UnpakSipaksi.Modules.JumlahKolaboratorPublikasBereputasi.Domain.pdb
 C:\dev_net\UnpakSipaksi\UnpakSipaksi.Modules.JumlahKolaboratorPublikasBereputasi.DomainTest\bin\Debug\net8.0\UnpakSipaksi.Common.Domain.pdb
+C:\dev_net\UnpakSipaksi\UnpakSipaksi.Modules.JumlahKolaboratorPublikasBereputasi.DomainTest\obj\Debug\net8.0\UnpakSipaksi.Modules.JumlahKolaboratorPublikasBereputasi.DomainTest.csproj.AssemblyReference.cache
+C:\dev_net\UnpakSipaksi\UnpakSipaksi.Modules.JumlahKolaboratorPublikasBereputasi.DomainTest\obj\Debug\net8.0\UnpakSipaksi.Modules.JumlahKolaboratorPublikasBereputasi.DomainTest.GeneratedMSBuildEditorConfig.editorconfig
+C:\dev_net\UnpakSipaksi\UnpakSipaksi.Modules.JumlahKolaboratorPublikasBereputasi.DomainTest\obj\Debug\net8.0\UnpakSipaksi.Modules.JumlahKolaboratorPublikasBereputasi.DomainTest.AssemblyInfoInputs.cache
+C:\dev_net\UnpakSipaksi\UnpakSipaksi.Modules.JumlahKolaboratorPublikasBereputasi.DomainTest\obj\Debug\net8.0\UnpakSipaksi.Modules.JumlahKolaboratorPublikasBereputasi.DomainTest.AssemblyInfo.cs
+C:\dev_net\UnpakSipaksi\UnpakSipaksi.Modules.JumlahKolaboratorPublikasBereputasi.DomainTest\obj\Debug\net8.0\UnpakSipaksi.Modules.JumlahKolaboratorPublikasBereputasi.DomainTest.csproj.CoreCompileInputs.cache
+C:\dev_net\UnpakSipaksi\UnpakSipaksi.Modules.JumlahKolaboratorPublikasBereputasi.DomainTest\obj\Debug\net8.0\UnpakSipaksi.Modules.JumlahKolaboratorPublikasBereputasi.DomainTest.sourcelink.json
 C:\dev_net\UnpakSipaksi\UnpakSipaksi.Modules.JumlahKolaboratorPublikasBereputasi.DomainTest\obj\Debug\net8.0\UnpakSip.FD829B36.Up2Date
 C:\dev_net\UnpakSipaksi\UnpakSipaksi.Modules.JumlahKolaboratorPublikasBereputasi.DomainTest\obj\Debug\net8.0\UnpakSipaksi.Modules.JumlahKolaboratorPublikasBereputasi.DomainTest.dll
 C:\dev_net\UnpakSipaksi\UnpakSipaksi.Modules.JumlahKolaboratorPublikasBereputasi.DomainTest\obj\Debug\net8.0\refint\UnpakSipaksi.Modules.JumlahKolaboratorPublikasBereputasi.DomainTest.dll

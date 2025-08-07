@@ -112,6 +112,8 @@
 		<ProjectReference Include="..\UnpakSipaksi.Modules.KualitasKuantitasPublikasiProsiding.Infrastructure\UnpakSipaksi.Modules.KualitasKuantitasPublikasiProsiding.Infrastructure.csproj" />
 		<ProjectReference Include="..\UnpakSipaksi.Modules.KuantitasStatusKi.Application\UnpakSipaksi.Modules.KuantitasStatusKi.Application.csproj" />
 		<ProjectReference Include="..\UnpakSipaksi.Modules.KuantitasStatusKi.Infrastructure\UnpakSipaksi.Modules.KuantitasStatusKi.Infrastructure.csproj" />
+		<ProjectReference Include="..\UnpakSipaksi.Modules.Logbook.Application\UnpakSipaksi.Modules.Logbook.Application.csproj" />
+		<ProjectReference Include="..\UnpakSipaksi.Modules.Logbook.Infrastructure\UnpakSipaksi.Modules.Logbook.Infrastructure.csproj" />
 		<ProjectReference Include="..\UnpakSipaksi.Modules.LuaranArtikel.Application\UnpakSipaksi.Modules.LuaranArtikel.Application.csproj" />
 		<ProjectReference Include="..\UnpakSipaksi.Modules.LuaranArtikel.Infrastructure\UnpakSipaksi.Modules.LuaranArtikel.Infrastructure.csproj" />
 		<ProjectReference Include="..\UnpakSipaksi.Modules.Metode.Application\UnpakSipaksi.Modules.Metode.Application.csproj" />

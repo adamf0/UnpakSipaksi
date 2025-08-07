@@ -9,6 +9,7 @@ namespace UnpakSipaksi.Modules.Roadmap.Domaintest
         [Theory]
         [InlineData("Roadmap.EmptyData", "data is not found", ErrorType.NotFound)]
         [InlineData("Roadmap.InvalidLink", "Invalid link format", ErrorType.NotFound)]
+        [InlineData("Roadmap.InvalidNidn", "Nidn is invalid format", ErrorType.NotFound)]
         public void StaticError_ShouldReturnCorrectValues(string expectedCode, string expectedDescription, ErrorType expectedType)
         {
             // Act
@@ -16,6 +17,7 @@ namespace UnpakSipaksi.Modules.Roadmap.Domaintest
             {
                 "Roadmap.EmptyData" => RoadmapErrors.EmptyData(),
                 "Roadmap.InvalidLink" => RoadmapErrors.InvalidLink(),
+                "Roadmap.InvalidNidn" => RoadmapErrors.InvalidNidn(),
                 _ => throw new ArgumentException("Unknown error code", nameof(expectedCode))
             };
 

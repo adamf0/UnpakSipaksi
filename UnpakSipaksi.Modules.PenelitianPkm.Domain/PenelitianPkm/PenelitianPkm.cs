@@ -76,6 +76,10 @@ namespace UnpakSipaksi.Modules.PenelitianPkm.Domain.PenelitianPkm
             {
                 return Result.Failure<PenelitianPkm>(PenelitianPkmErrors.NotUnique(NIDN, Judul));
             }
+            if (!DomainValidator.IsValidNidn(NIDN))
+            {
+                return Result.Failure<PenelitianPkm>(PenelitianPkmErrors.InvalidNidn());
+            }
 
             var validTanggal = DateTime.TryParseExact(TahunPengajuan, "yyyy-MM-dd", CultureInfo.InvariantCulture, DateTimeStyles.None, out var parsedTanggal);
             if (!validTanggal)
@@ -97,12 +101,28 @@ namespace UnpakSipaksi.Modules.PenelitianPkm.Domain.PenelitianPkm
             return asset;
         }
 
-        public static Result<PenelitianPkm> Update(
+        public async static Task<Result<PenelitianPkm>> Update(
           PenelitianPkm prev,
+          IPenelitianPkmRepository penelitianHibahRepository,
           string TahunPengajuan,
           string Judul
         )
         {
+            if (prev is null)
+            {
+                return Result.Failure<PenelitianPkm>(PenelitianPkmErrors.NotFound(prev?.Uuid ?? Guid.Empty));
+            }
+
+            bool isUnique = await penelitianHibahRepository.HasUniqueDataAsync(
+                prev!.Uuid,
+                prev!.NIDN,
+                prev!.Judul
+            );
+            if (!isUnique)
+            {
+                return Result.Failure<PenelitianPkm>(PenelitianPkmErrors.NotUnique(prev!.NIDN, prev!.Judul));
+            }
+
             var validTanggal = DateTime.TryParseExact(TahunPengajuan, "yyyy-MM-dd", CultureInfo.InvariantCulture, DateTimeStyles.None, out var parsedTanggal);
             if (!validTanggal)
             {

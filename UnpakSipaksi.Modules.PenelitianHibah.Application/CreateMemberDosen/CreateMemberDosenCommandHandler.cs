@@ -21,7 +21,6 @@ namespace UnpakSipaksi.Modules.PenelitianHibah.Application.CreateMemberDosen
             }
 
             int checkData = await memberRepository.CheckUniqueDataAsync(int.Parse(existData!.Id), request.NIDN, cancellationToken);
-            //[PR] check valid nidn
             Result<Domain.MemberDosen.MemberDosen> result = Domain.MemberDosen.MemberDosen.Create(
                 checkData,
                 int.Parse(existData!.Id),

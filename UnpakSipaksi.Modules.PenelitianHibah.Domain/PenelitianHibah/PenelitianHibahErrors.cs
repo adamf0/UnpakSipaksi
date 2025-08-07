@@ -38,5 +38,7 @@ namespace UnpakSipaksi.Modules.PenelitianHibah.Domain.PenelitianHibah
             Error.NotFound("PenelitianHibah.NotFound", $"Penelitian hibah with identifier {Id} not found");
         public  static Error InvalidData() =>
            Error.NotFound("PenelitianHibah.InvalidData", "Hibah penelitian is not match existing data");
+        public static Error InvalidNidn() =>
+            Error.NotFound("PenelitianHibah.InvalidNidn", "Nidn is invalid format");
     }
 }

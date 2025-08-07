@@ -1,4 +1,5 @@
 using FluentAssertions;
+using FluentAssertions.Specialized;
 using Moq;
 using UnpakSipaksi.Modules.PenelitianHibah.Domain.PenelitianHibah;
 
@@ -6,10 +7,7 @@ namespace UnpakSipaksi.Modules.PenelitianHibah.DomainTest.PenelitianHibah
 {
     public class PenelitianHibahTests
     {
-        [Fact]
-        public async Task Create_ShouldReturnSuccess_WhenValid()
-        {
-            // Arrange
+        private IPenelitianHibahRepository repoPenelitianHibah(bool unique = true) {
             var mockRepo = new Mock<IPenelitianHibahRepository>();
             mockRepo.Setup(x =>
                 x.HasUniqueDataAsync(
@@ -18,10 +16,17 @@ namespace UnpakSipaksi.Modules.PenelitianHibah.DomainTest.PenelitianHibah
                     It.Is<string>(j => j == "judul"),
                     It.IsAny<CancellationToken>()
                 )
-            ).ReturnsAsync(true);
+            ).ReturnsAsync(unique);
 
+            return mockRepo.Object;
+        }
+
+        [Fact]
+        public async Task Create_ShouldReturnSuccess_WhenValid()
+        {
+            // Arrange
             // Act
-            var result = await Domain.PenelitianHibah.PenelitianHibah.Create(mockRepo.Object, "123", "2024-01-01", "judul");
+            var result = await Domain.PenelitianHibah.PenelitianHibah.Create(repoPenelitianHibah(), "123", "2024-01-01", "judul");
 
             // Assert
             result.IsSuccess.Should().BeTrue();
@@ -33,17 +38,7 @@ namespace UnpakSipaksi.Modules.PenelitianHibah.DomainTest.PenelitianHibah
         [Fact]
         public async Task Create_ShouldFail_WhenDuplicate()
         {
-            var mockRepo = new Mock<IPenelitianHibahRepository>();
-            mockRepo.Setup(x =>
-                x.HasUniqueDataAsync(
-                    It.IsAny<Guid?>(),
-                    It.Is<string>(s => s == "123"),
-                    It.Is<string>(j => j == "judul"),
-                    It.IsAny<CancellationToken>()
-                )
-            ).ReturnsAsync(false);
-
-            var result = await Domain.PenelitianHibah.PenelitianHibah.Create(mockRepo.Object, "123", "2024-01-01", "judul");
+            var result = await Domain.PenelitianHibah.PenelitianHibah.Create(repoPenelitianHibah(false), "123", "2024-01-01", "judul");
 
             result.IsFailure.Should().BeTrue();
             result.Error.Code.Should().Be("PenelitianHibah.NotUnique");
@@ -54,17 +49,7 @@ namespace UnpakSipaksi.Modules.PenelitianHibah.DomainTest.PenelitianHibah
         [InlineData("invalid-date")]
         public async Task Create_ShouldFail_WhenInvalidDate(string tahun)
         {
-            var mockRepo = new Mock<IPenelitianHibahRepository>();
-            mockRepo.Setup(x =>
-                x.HasUniqueDataAsync(
-                    It.IsAny<Guid?>(),
-                    It.Is<string>(s => s == "123"),
-                    It.Is<string>(j => j == "judul"),
-                    It.IsAny<CancellationToken>()
-                )
-            ).ReturnsAsync(true);
-
-            var result = await Domain.PenelitianHibah.PenelitianHibah.Create(mockRepo.Object, "123", tahun, "judul");
+            var result = await Domain.PenelitianHibah.PenelitianHibah.Create(repoPenelitianHibah(), "123", tahun, "judul");
 
             result.IsFailure.Should().BeTrue();
             result.Error.Code.Should().Be("PenelitianHibah.InvalidFormatTahunPengajuan");
@@ -74,7 +59,7 @@ namespace UnpakSipaksi.Modules.PenelitianHibah.DomainTest.PenelitianHibah
         public async void Update_ShouldReturnSuccess_WhenValid()
         {
             var prev = await CreateDummy();
-            var result = Domain.PenelitianHibah.PenelitianHibah.Update(prev, "2023-01-01", "Updated Judul");
+            var result = await Domain.PenelitianHibah.PenelitianHibah.Update(prev, repoPenelitianHibah(), "2023-01-01", "Updated Judul");
             result.IsSuccess.Should().BeTrue();
             result.Value.Judul.Should().Be("Updated Judul");
         }
@@ -83,7 +68,7 @@ namespace UnpakSipaksi.Modules.PenelitianHibah.DomainTest.PenelitianHibah
         public async void Update_ShouldFail_WhenInvalidDate()
         {
             var prev = await CreateDummy();
-            var result = Domain.PenelitianHibah.PenelitianHibah.Update(prev, "invalid-date", "Updated Judul");
+            var result = await Domain.PenelitianHibah.PenelitianHibah.Update(prev, repoPenelitianHibah(), "invalid-date", "Updated Judul");
             result.IsFailure.Should().BeTrue();
             result.Error.Code.Should().Be("PenelitianHibah.InvalidFormatTahunPengajuan");
         }
@@ -144,17 +129,8 @@ namespace UnpakSipaksi.Modules.PenelitianHibah.DomainTest.PenelitianHibah
 
         private async Task<Domain.PenelitianHibah.PenelitianHibah> CreateDummy()
         {
-            var mockRepo = new Mock<IPenelitianHibahRepository>();
-            mockRepo.Setup(x => x.HasUniqueDataAsync(
-                    It.IsAny<Guid?>(),
-                    It.IsAny<string>(),
-                    It.IsAny<string>(),
-                    It.IsAny<CancellationToken>()
-                ))
-                .ReturnsAsync(true);
-
             var result = await Domain.PenelitianHibah.PenelitianHibah.Create(
-                mockRepo.Object,
+                repoPenelitianHibah(),
                 "123",
                 "2022-01-01",
                 "judul"

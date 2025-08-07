@@ -14,7 +14,6 @@ namespace UnpakSipaksi.Modules.PenelitianPkm.Application.UpdateMemberMahasiswa
     {
         public async Task<Result> Handle(UpdateMemberMahasiswaCommand request, CancellationToken cancellationToken)
         {
-            //harus pindah ke domain
             MemberMahasiswa? existingMemberMahasiswa = await memberRepository.GetAsync(Guid.Parse(request.Uuid), cancellationToken);
 
             if (existingMemberMahasiswa is null)
@@ -31,7 +30,6 @@ namespace UnpakSipaksi.Modules.PenelitianPkm.Application.UpdateMemberMahasiswa
                 existingPenelitianPkm,
                 request.NPM
             );
-            //harus pindah ke domain
 
             if (result.IsFailure)
                 return Result.Failure<Guid>(result.Error);

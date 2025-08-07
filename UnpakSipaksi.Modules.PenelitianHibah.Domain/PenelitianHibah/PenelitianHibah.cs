@@ -90,6 +90,10 @@ namespace UnpakSipaksi.Modules.PenelitianHibah.Domain.PenelitianHibah
             {
                 return Result.Failure<PenelitianHibah>(PenelitianHibahErrors.NotUnique(NIDN, Judul));
             }
+            if (!DomainValidator.IsValidNidn(NIDN))
+            {
+                return Result.Failure<PenelitianHibah>(PenelitianHibahErrors.InvalidNidn());
+            }
 
             DateTime parsedTanggal;
             try
@@ -119,12 +123,28 @@ namespace UnpakSipaksi.Modules.PenelitianHibah.Domain.PenelitianHibah
             return asset;
         }
 
-        public static Result<PenelitianHibah> Update(
+        public async static Task<Result<PenelitianHibah>> Update(
           PenelitianHibah prev,
+          IPenelitianHibahRepository penelitianHibahRepository,
           string TahunPengajuan,
           string Judul
         )
         {
+            if (prev is null)
+            {
+                return Result.Failure<PenelitianHibah>(PenelitianHibahErrors.NotFound(prev?.Uuid ?? Guid.Empty));
+            }
+
+            bool isUnique = await penelitianHibahRepository.HasUniqueDataAsync(
+                prev!.Uuid,
+                prev!.NIDN,
+                prev!.Judul
+            );
+            if (!isUnique)
+            {
+                return Result.Failure<PenelitianHibah>(PenelitianHibahErrors.NotUnique(prev!.NIDN, prev!.Judul));
+            }
+
             DateTime parsedTanggal;
             try
             {

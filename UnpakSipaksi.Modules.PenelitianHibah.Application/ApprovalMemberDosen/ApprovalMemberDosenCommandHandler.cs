@@ -27,7 +27,6 @@ namespace UnpakSipaksi.Modules.PenelitianHibah.Application.ApprovalMemberDosen
 
             Domain.PenelitianHibah.PenelitianHibah? existingPenelitianHibah = await hibahRepository.GetAsync(Guid.Parse(request.UuidPenelitianHibah), cancellationToken);
 
-            //[PR] check valid nidn
             //[PR] check nidn input with token
 
             Result<MemberDosen> result;

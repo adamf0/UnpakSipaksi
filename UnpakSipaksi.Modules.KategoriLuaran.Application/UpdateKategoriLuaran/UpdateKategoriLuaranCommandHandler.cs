@@ -32,7 +32,6 @@ namespace UnpakSipaksi.Modules.KategoriLuaran.Application.UpdateKategoriLuaran
                 return Result.Failure<Guid>(KategoriLuaranErrors.KategoriNotFound());
             }
 
-            //[PR] belum penambahan validasi di bisnis model
             Result<Domain.KategoriLuaran.KategoriLuaran> asset = Domain.KategoriLuaran.KategoriLuaran.Update(existingKategoriLuaran!)
                          .ChangeKategoriId(int.Parse(kategori.Id ?? "0"))
                          .ChangeNama(request.Nama)

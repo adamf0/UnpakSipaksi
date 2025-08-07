@@ -1,0 +1,16 @@
+C:\dev_net\UnpakSipaksi\UnpakSipaksi.Modules.LaporanKemajuan.Domain\bin\Debug\net8.0\UnpakSipaksi.Modules.LaporanKemajuan.Domain.deps.json
+C:\dev_net\UnpakSipaksi\UnpakSipaksi.Modules.LaporanKemajuan.Domain\bin\Debug\net8.0\UnpakSipaksi.Modules.LaporanKemajuan.Domain.dll
+C:\dev_net\UnpakSipaksi\UnpakSipaksi.Modules.LaporanKemajuan.Domain\bin\Debug\net8.0\UnpakSipaksi.Modules.LaporanKemajuan.Domain.pdb
+C:\dev_net\UnpakSipaksi\UnpakSipaksi.Modules.LaporanKemajuan.Domain\bin\Debug\net8.0\UnpakSipaksi.Common.Domain.dll
+C:\dev_net\UnpakSipaksi\UnpakSipaksi.Modules.LaporanKemajuan.Domain\bin\Debug\net8.0\UnpakSipaksi.Common.Domain.pdb
+C:\dev_net\UnpakSipaksi\UnpakSipaksi.Modules.LaporanKemajuan.Domain\obj\Debug\net8.0\UnpakSipaksi.Modules.LaporanKemajuan.Domain.csproj.AssemblyReference.cache
+C:\dev_net\UnpakSipaksi\UnpakSipaksi.Modules.LaporanKemajuan.Domain\obj\Debug\net8.0\UnpakSipaksi.Modules.LaporanKemajuan.Domain.GeneratedMSBuildEditorConfig.editorconfig
+C:\dev_net\UnpakSipaksi\UnpakSipaksi.Modules.LaporanKemajuan.Domain\obj\Debug\net8.0\UnpakSipaksi.Modules.LaporanKemajuan.Domain.AssemblyInfoInputs.cache
+C:\dev_net\UnpakSipaksi\UnpakSipaksi.Modules.LaporanKemajuan.Domain\obj\Debug\net8.0\UnpakSipaksi.Modules.LaporanKemajuan.Domain.AssemblyInfo.cs
+C:\dev_net\UnpakSipaksi\UnpakSipaksi.Modules.LaporanKemajuan.Domain\obj\Debug\net8.0\UnpakSipaksi.Modules.LaporanKemajuan.Domain.csproj.CoreCompileInputs.cache
+C:\dev_net\UnpakSipaksi\UnpakSipaksi.Modules.LaporanKemajuan.Domain\obj\Debug\net8.0\UnpakSipaksi.Modules.LaporanKemajuan.Domain.sourcelink.json
+C:\dev_net\UnpakSipaksi\UnpakSipaksi.Modules.LaporanKemajuan.Domain\obj\Debug\net8.0\UnpakSip.209541EA.Up2Date
+C:\dev_net\UnpakSipaksi\UnpakSipaksi.Modules.LaporanKemajuan.Domain\obj\Debug\net8.0\UnpakSipaksi.Modules.LaporanKemajuan.Domain.dll
+C:\dev_net\UnpakSipaksi\UnpakSipaksi.Modules.LaporanKemajuan.Domain\obj\Debug\net8.0\refint\UnpakSipaksi.Modules.LaporanKemajuan.Domain.dll
+C:\dev_net\UnpakSipaksi\UnpakSipaksi.Modules.LaporanKemajuan.Domain\obj\Debug\net8.0\UnpakSipaksi.Modules.LaporanKemajuan.Domain.pdb
+C:\dev_net\UnpakSipaksi\UnpakSipaksi.Modules.LaporanKemajuan.Domain\obj\Debug\net8.0\ref\UnpakSipaksi.Modules.LaporanKemajuan.Domain.dll

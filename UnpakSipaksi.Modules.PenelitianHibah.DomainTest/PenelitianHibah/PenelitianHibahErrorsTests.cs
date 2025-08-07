@@ -16,6 +16,7 @@ namespace UnpakSipaksi.Modules.PenelitianHibah.DomainTest.PenelitianHibah
         [InlineData("PenelitianHibah.InvalidTahunPengajuan", "Tahun pengajuan is invalid format date", ErrorType.NotFound)]
         [InlineData("PenelitianHibah.InvalidStatus", "Status is invalid format", ErrorType.NotFound)]
         [InlineData("PenelitianHibah.InvalidData", "Hibah penelitian is not match existing data", ErrorType.NotFound)]
+        [InlineData("PenelitianHibah.InvalidNidn", "Nidn is invalid format", ErrorType.NotFound)]
         public void StaticErrors_ShouldReturnCorrectValues(string expectedCode, string expectedDescription, ErrorType expectedType)
         {
             // Act
@@ -30,6 +31,7 @@ namespace UnpakSipaksi.Modules.PenelitianHibah.DomainTest.PenelitianHibah
                 "PenelitianHibah.InvalidTahunPengajuan" => PenelitianHibahErrors.InvalidTahunPengajuan(),
                 "PenelitianHibah.InvalidStatus" => PenelitianHibahErrors.InvalidStatus(),
                 "PenelitianHibah.InvalidData" => PenelitianHibahErrors.InvalidData(),
+                "PenelitianHibah.InvalidNidn" => PenelitianHibahErrors.InvalidNidn(),
                 _ => throw new ArgumentException("Unknown error code", nameof(expectedCode))
             };
 

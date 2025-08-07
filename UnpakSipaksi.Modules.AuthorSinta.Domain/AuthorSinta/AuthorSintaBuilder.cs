@@ -30,11 +30,11 @@ namespace UnpakSipaksi.Modules.AuthorSinta.Domain.AuthorSinta
             {
                 if (HasError) return this;
 
-                /*if (string.IsNullOrWhiteSpace(nama))
+                if (!DomainValidator.IsValidNidn(Nidn))
                 {
-                    _result = Result.Failure<AuthorSinta>(AuthorSintaErrors.NamaNotFound);
+                    _result = Result.Failure<AuthorSinta>(AuthorSintaErrors.InvalidNidn());
                     return this;
-                }*/
+                }
 
                 _akurasiPenelitian.Nidn = Nidn;
                 return this;

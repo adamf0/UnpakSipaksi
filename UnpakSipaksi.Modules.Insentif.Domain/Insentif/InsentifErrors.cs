@@ -21,6 +21,8 @@ namespace UnpakSipaksi.Modules.Insentif.Domain.Insentif
             Error.NotFound("Insentif.EmptyJudulArtikel", "Judul artikel is empty");
         public static Error NotUniqueJudulArtikel() =>
             Error.NotFound("Insentif.NotUniqueJudulArtikel", "Judul artikel is not unique");
+        public static Error InvalidNidn() =>
+            Error.NotFound("Insentif.InvalidNidn", "Nidn is invalid format");
         public static Error InvalidJumlahPenulis() =>
             Error.NotFound("Insentif.InvalidJumlahPenulis", "Jumlah penulis must not be less than 1");
         public static Error EmptyNamaJurnalPenerbit() =>

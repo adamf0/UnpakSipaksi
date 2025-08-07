@@ -1,7 +1,6 @@
 using FluentAssertions;
 using UnpakSipaksi.Modules.Roadmap.Domain.Roadmap;
 
-//[PR] belum tambah validasi max nidn
 namespace UnpakSipaksi.Modules.Roadmap.Domaintest
 {
     public class RoadmapTests

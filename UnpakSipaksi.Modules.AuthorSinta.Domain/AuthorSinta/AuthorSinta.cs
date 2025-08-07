@@ -42,6 +42,9 @@ namespace UnpakSipaksi.Modules.AuthorSinta.Domain.AuthorSinta
             {
                 return Result.Failure<AuthorSinta>(AuthorSintaErrors.InvalidSkor());
             }
+            if (!DomainValidator.IsValidNidn(Nidn)) {
+                return Result.Failure<AuthorSinta>(AuthorSintaErrors.InvalidNidn());
+            }
 
             var asset = new AuthorSinta
             {

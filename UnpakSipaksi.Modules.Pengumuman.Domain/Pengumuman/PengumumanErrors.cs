@@ -16,5 +16,8 @@ namespace UnpakSipaksi.Modules.Pengumuman.Domain.Pengumuman
         public static Error InvalidDateRangeExpired() =>
             Error.NotFound("Pengumuman.InvalidDateRangeExpired", "Nilai TanggalAkhir tidak boleh dibawah TanggalAwal");
 
+        public static Error InvalidNidn() =>
+            Error.NotFound("Pengumuman.InvalidNidn", "Nidn is invalid format");
+
     }
 }

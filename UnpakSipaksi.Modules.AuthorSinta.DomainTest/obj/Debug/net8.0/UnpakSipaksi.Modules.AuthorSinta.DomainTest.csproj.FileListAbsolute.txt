@@ -1,10 +1,4 @@
 C:\dev_net\UnpakSipaksi\UnpakSipaksi.Modules.AuthorSinta.DomainTest\bin\Debug\net8.0\CoverletSourceRootsMapping_UnpakSipaksi.Modules.AuthorSinta.DomainTest
-C:\dev_net\UnpakSipaksi\UnpakSipaksi.Modules.AuthorSinta.DomainTest\obj\Debug\net8.0\UnpakSipaksi.Modules.AuthorSinta.DomainTest.csproj.AssemblyReference.cache
-C:\dev_net\UnpakSipaksi\UnpakSipaksi.Modules.AuthorSinta.DomainTest\obj\Debug\net8.0\UnpakSipaksi.Modules.AuthorSinta.DomainTest.GeneratedMSBuildEditorConfig.editorconfig
-C:\dev_net\UnpakSipaksi\UnpakSipaksi.Modules.AuthorSinta.DomainTest\obj\Debug\net8.0\UnpakSipaksi.Modules.AuthorSinta.DomainTest.AssemblyInfoInputs.cache
-C:\dev_net\UnpakSipaksi\UnpakSipaksi.Modules.AuthorSinta.DomainTest\obj\Debug\net8.0\UnpakSipaksi.Modules.AuthorSinta.DomainTest.AssemblyInfo.cs
-C:\dev_net\UnpakSipaksi\UnpakSipaksi.Modules.AuthorSinta.DomainTest\obj\Debug\net8.0\UnpakSipaksi.Modules.AuthorSinta.DomainTest.csproj.CoreCompileInputs.cache
-C:\dev_net\UnpakSipaksi\UnpakSipaksi.Modules.AuthorSinta.DomainTest\obj\Debug\net8.0\UnpakSipaksi.Modules.AuthorSinta.DomainTest.sourcelink.json
 C:\dev_net\UnpakSipaksi\UnpakSipaksi.Modules.AuthorSinta.DomainTest\bin\Debug\net8.0\testhost.dll
 C:\dev_net\UnpakSipaksi\UnpakSipaksi.Modules.AuthorSinta.DomainTest\bin\Debug\net8.0\testhost.exe
 C:\dev_net\UnpakSipaksi\UnpakSipaksi.Modules.AuthorSinta.DomainTest\bin\Debug\net8.0\xunit.runner.visualstudio.dotnetcore.testadapter.dll
@@ -103,6 +97,12 @@ C:\dev_net\UnpakSipaksi\UnpakSipaksi.Modules.AuthorSinta.DomainTest\bin\Debug\ne
 C:\dev_net\UnpakSipaksi\UnpakSipaksi.Modules.AuthorSinta.DomainTest\bin\Debug\net8.0\UnpakSipaksi.Modules.AuthorSinta.Domain.dll
 C:\dev_net\UnpakSipaksi\UnpakSipaksi.Modules.AuthorSinta.DomainTest\bin\Debug\net8.0\UnpakSipaksi.Modules.AuthorSinta.Domain.pdb
 C:\dev_net\UnpakSipaksi\UnpakSipaksi.Modules.AuthorSinta.DomainTest\bin\Debug\net8.0\UnpakSipaksi.Common.Domain.pdb
+C:\dev_net\UnpakSipaksi\UnpakSipaksi.Modules.AuthorSinta.DomainTest\obj\Debug\net8.0\UnpakSipaksi.Modules.AuthorSinta.DomainTest.csproj.AssemblyReference.cache
+C:\dev_net\UnpakSipaksi\UnpakSipaksi.Modules.AuthorSinta.DomainTest\obj\Debug\net8.0\UnpakSipaksi.Modules.AuthorSinta.DomainTest.GeneratedMSBuildEditorConfig.editorconfig
+C:\dev_net\UnpakSipaksi\UnpakSipaksi.Modules.AuthorSinta.DomainTest\obj\Debug\net8.0\UnpakSipaksi.Modules.AuthorSinta.DomainTest.AssemblyInfoInputs.cache
+C:\dev_net\UnpakSipaksi\UnpakSipaksi.Modules.AuthorSinta.DomainTest\obj\Debug\net8.0\UnpakSipaksi.Modules.AuthorSinta.DomainTest.AssemblyInfo.cs
+C:\dev_net\UnpakSipaksi\UnpakSipaksi.Modules.AuthorSinta.DomainTest\obj\Debug\net8.0\UnpakSipaksi.Modules.AuthorSinta.DomainTest.csproj.CoreCompileInputs.cache
+C:\dev_net\UnpakSipaksi\UnpakSipaksi.Modules.AuthorSinta.DomainTest\obj\Debug\net8.0\UnpakSipaksi.Modules.AuthorSinta.DomainTest.sourcelink.json
 C:\dev_net\UnpakSipaksi\UnpakSipaksi.Modules.AuthorSinta.DomainTest\obj\Debug\net8.0\UnpakSip.75CEA505.Up2Date
 C:\dev_net\UnpakSipaksi\UnpakSipaksi.Modules.AuthorSinta.DomainTest\obj\Debug\net8.0\UnpakSipaksi.Modules.AuthorSinta.DomainTest.dll
 C:\dev_net\UnpakSipaksi\UnpakSipaksi.Modules.AuthorSinta.DomainTest\obj\Debug\net8.0\refint\UnpakSipaksi.Modules.AuthorSinta.DomainTest.dll

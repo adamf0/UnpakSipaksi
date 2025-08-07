@@ -92,6 +92,8 @@
           "UnpakSipaksi.Modules.KualitasKuantitasPublikasiProsiding.Infrastructure": "1.0.0",
           "UnpakSipaksi.Modules.KuantitasStatusKi.Application": "1.0.0",
           "UnpakSipaksi.Modules.KuantitasStatusKi.Infrastructure": "1.0.0",
+          "UnpakSipaksi.Modules.Logbook.Application": "1.0.0",
+          "UnpakSipaksi.Modules.Logbook.Infrastructure": "1.0.0",
           "UnpakSipaksi.Modules.LuaranArtikel.Application": "1.0.0",
           "UnpakSipaksi.Modules.LuaranArtikel.Infrastructure": "1.0.0",
           "UnpakSipaksi.Modules.Metode.Application": "1.0.0",
@@ -3729,6 +3731,64 @@
       "UnpakSipaksi.Modules.KuantitasStatusKi.PublicApi/1.0.0": {
         "runtime": {
           "UnpakSipaksi.Modules.KuantitasStatusKi.PublicApi.dll": {
+            "assemblyVersion": "1.0.0.0",
+            "fileVersion": "1.0.0.0"
+          }
+        }
+      },
+      "UnpakSipaksi.Modules.Logbook.Application/1.0.0": {
+        "dependencies": {
+          "Dapper": "2.1.35",
+          "MediatR": "12.4.1",
+          "UnpakSipaksi.Common.Application": "1.0.0",
+          "UnpakSipaksi.Common.Domain": "1.0.0",
+          "UnpakSipaksi.Modules.Logbook.Domain": "1.0.0",
+          "UnpakSipaksi.Modules.PenelitianHibah.PublicApi": "1.0.0",
+          "UnpakSipaksi.Modules.PenelitianPkm.PublicApi": "1.0.0"
+        },
+        "runtime": {
+          "UnpakSipaksi.Modules.Logbook.Application.dll": {
+            "assemblyVersion": "1.0.0.0",
+            "fileVersion": "1.0.0.0"
+          }
+        }
+      },
+      "UnpakSipaksi.Modules.Logbook.Domain/1.0.0": {
+        "dependencies": {
+          "UnpakSipaksi.Common.Domain": "1.0.0"
+        },
+        "runtime": {
+          "UnpakSipaksi.Modules.Logbook.Domain.dll": {
+            "assemblyVersion": "1.0.0.0",
+            "fileVersion": "1.0.0.0"
+          }
+        }
+      },
+      "UnpakSipaksi.Modules.Logbook.Infrastructure/1.0.0": {
+        "dependencies": {
+          "Microsoft.EntityFrameworkCore": "8.0.0",
+          "MySql.EntityFrameworkCore": "8.0.0",
+          "UnpakSipaksi.Common.Application": "1.0.0",
+          "UnpakSipaksi.Common.Infrastructure": "1.0.0",
+          "UnpakSipaksi.Modules.Logbook.Application": "1.0.0",
+          "UnpakSipaksi.Modules.Logbook.Domain": "1.0.0",
+          "UnpakSipaksi.Modules.Logbook.Presentation": "1.0.0"
+        },
+        "runtime": {
+          "UnpakSipaksi.Modules.Logbook.Infrastructure.dll": {
+            "assemblyVersion": "1.0.0.0",
+            "fileVersion": "1.0.0.0"
+          }
+        }
+      },
+      "UnpakSipaksi.Modules.Logbook.Presentation/1.0.0": {
+        "dependencies": {
+          "UnpakSipaksi.Common.Domain": "1.0.0",
+          "UnpakSipaksi.Common.Presentation": "1.0.0",
+          "UnpakSipaksi.Modules.Logbook.Application": "1.0.0"
+        },
+        "runtime": {
+          "UnpakSipaksi.Modules.Logbook.Presentation.dll": {
             "assemblyVersion": "1.0.0.0",
             "fileVersion": "1.0.0.0"
           }
@@ -7478,6 +7538,26 @@
       "sha512": ""
     },
     "UnpakSipaksi.Modules.KuantitasStatusKi.PublicApi/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    },
+    "UnpakSipaksi.Modules.Logbook.Application/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    },
+    "UnpakSipaksi.Modules.Logbook.Domain/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    },
+    "UnpakSipaksi.Modules.Logbook.Infrastructure/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    },
+    "UnpakSipaksi.Modules.Logbook.Presentation/1.0.0": {
       "type": "project",
       "serviceable": false,
       "sha512": ""

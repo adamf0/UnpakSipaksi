@@ -21,8 +21,6 @@ namespace UnpakSipaksi.Modules.PenelitianPkm.Application.UpdateMemberDosen
                 return Result.Failure(PenelitianPkmErrors.NotFound(Guid.Parse(request.Uuid)));
             }
 
-            //[PR] check valid nidn
-
             int checkData = await memberRepository.CheckUniqueDataAsync(existingMemberDosen.Id ?? 0, request.NIDN, cancellationToken);
             Domain.PenelitianPkm.PenelitianPkm? existingPenelitianPkm = await hibahRepository.GetAsync(Guid.Parse(request.UuidPenelitianPkm), cancellationToken);
 

@@ -25,6 +25,12 @@ namespace UnpakSipaksi.Modules.Roadmap.Domain.Roadmap
             {
                 if (HasError) return this;
 
+                if (!DomainValidator.IsValidNidn(Nidn))
+                {
+                    _result = Result.Failure<Roadmap>(RoadmapErrors.InvalidNidn());
+                    return this;
+                }
+
                 _akurasiPenelitian.Nidn = Nidn;
                 return this;
             }

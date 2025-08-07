@@ -9,6 +9,7 @@ namespace UnpakSipaksi.Modules.PenugasanReviewer.DomainTest
         [Theory]
         [InlineData("PenugasanReviewer.EmptyData", "data is not found", ErrorType.NotFound)]
         [InlineData("PenugasanReviewer.InvalidValueStatus", "Invalid value 'status'", ErrorType.NotFound)]
+        [InlineData("PenugasanReviewer.InvalidNidn", "Nidn is invalid format", ErrorType.NotFound)]
         public void StaticError_ShouldReturnCorrectValues(string expectedCode, string expectedDescription, ErrorType expectedType)
         {
             // Act
@@ -16,6 +17,7 @@ namespace UnpakSipaksi.Modules.PenugasanReviewer.DomainTest
             {
                 "PenugasanReviewer.EmptyData" => PenugasanReviewerErrors.EmptyData(),
                 "PenugasanReviewer.InvalidValueStatus" => PenugasanReviewerErrors.InvalidValueStatus(),
+                "PenugasanReviewer.InvalidNidn" => PenugasanReviewerErrors.InvalidNidn(),
                 _ => throw new ArgumentException("Unknown error code", nameof(expectedCode))
             };
 

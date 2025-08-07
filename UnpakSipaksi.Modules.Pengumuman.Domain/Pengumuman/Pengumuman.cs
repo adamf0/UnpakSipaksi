@@ -37,6 +37,10 @@ namespace UnpakSipaksi.Modules.Pengumuman.Domain.Pengumuman
             if (expiredInfo.validationResult.IsFailure) {
                 return expiredInfo.validationResult;
             }
+            if (!string.IsNullOrEmpty(AnnouncementInfo?.Nidn) && !DomainValidator.IsValidNidn(AnnouncementInfo?.Nidn))
+            {
+                return Result.Failure<Pengumuman>(PengumumanErrors.InvalidNidn());
+            }
 
             var pengumuman = new Pengumuman
             {

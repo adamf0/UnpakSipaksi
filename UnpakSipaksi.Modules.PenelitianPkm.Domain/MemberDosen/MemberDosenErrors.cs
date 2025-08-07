@@ -21,5 +21,7 @@ namespace UnpakSipaksi.Modules.PenelitianPkm.Domain.MemberDosen
             Error.NotFound("MemberDosen.NotFoundHibah", "Penelitian hibah not found");
         public static Error InvalidData() =>
             Error.NotFound("MemberDosen.InvalidData", "Hibah penelitian is not match existing data");
+        public static Error InvalidNidn() =>
+            Error.NotFound("MemberDosen.InvalidNidn", "Nidn is invalid format");
     }
 }

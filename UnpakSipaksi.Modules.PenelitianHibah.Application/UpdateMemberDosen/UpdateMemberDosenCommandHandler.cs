@@ -24,7 +24,6 @@ namespace UnpakSipaksi.Modules.PenelitianHibah.Application.UpdateMemberDosen
             int checkData = await memberRepository.CheckUniqueDataAsync(existingMemberDosen.Id??0, request.NIDN, cancellationToken);
             Domain.PenelitianHibah.PenelitianHibah? existingPenelitianHibah = await hibahRepository.GetAsync(Guid.Parse(request.UuidPenelitianHibah), cancellationToken);
 
-            //[PR] check valid nidn
             Result<MemberDosen> result = MemberDosen.Update(
                 checkData,
                 existingMemberDosen!,

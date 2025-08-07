@@ -17,29 +17,11 @@ namespace UnpakSipaksi.Modules.PenelitianHibah.Application.UpdatePenelitianHibah
     {
         public async Task<Result> Handle(UpdatePenelitianHibahCommand request, CancellationToken cancellationToken)
         {
-            //[PR] check valid nidn
-
-            //harus pindah ke domain
             Domain.PenelitianHibah.PenelitianHibah? existingPenelitianHibah = await penelitianHibahRepository.GetAsync(Guid.Parse(request.Uuid), cancellationToken);
 
-            if (existingPenelitianHibah is null)
-            {
-                return Result.Failure(PenelitianHibahErrors.NotFound(Guid.Parse(request.Uuid)));
-            }
-
-            bool isUnique = await penelitianHibahRepository.HasUniqueDataAsync(
-                Guid.Parse(request.Uuid),
-                request.NIDN,
-                request.Judul
-            );
-            if (!isUnique)
-            {
-                return Result.Failure<Guid>(PenelitianHibahErrors.NotUnique(request.NIDN, request.Judul));
-            }
-            //harus pindah ke domain
-
-            Result<Domain.PenelitianHibah.PenelitianHibah> asset = Domain.PenelitianHibah.PenelitianHibah.Update(
+            Result<Domain.PenelitianHibah.PenelitianHibah> asset = await Domain.PenelitianHibah.PenelitianHibah.Update(
                 existingPenelitianHibah!,
+                penelitianHibahRepository,
                 request.TahunPengajuan,
                 request.Judul
             );

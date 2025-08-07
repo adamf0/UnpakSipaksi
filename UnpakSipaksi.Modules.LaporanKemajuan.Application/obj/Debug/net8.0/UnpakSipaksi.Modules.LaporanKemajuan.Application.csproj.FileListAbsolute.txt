@@ -1,0 +1,12 @@
+C:\dev_net\UnpakSipaksi\UnpakSipaksi.Modules.LaporanKemajuan.Application\bin\Debug\net8.0\UnpakSipaksi.Modules.LaporanKemajuan.Application.deps.json
+C:\dev_net\UnpakSipaksi\UnpakSipaksi.Modules.LaporanKemajuan.Application\bin\Debug\net8.0\UnpakSipaksi.Modules.LaporanKemajuan.Application.dll
+C:\dev_net\UnpakSipaksi\UnpakSipaksi.Modules.LaporanKemajuan.Application\bin\Debug\net8.0\UnpakSipaksi.Modules.LaporanKemajuan.Application.pdb
+C:\dev_net\UnpakSipaksi\UnpakSipaksi.Modules.LaporanKemajuan.Application\obj\Debug\net8.0\UnpakSipaksi.Modules.LaporanKemajuan.Application.GeneratedMSBuildEditorConfig.editorconfig
+C:\dev_net\UnpakSipaksi\UnpakSipaksi.Modules.LaporanKemajuan.Application\obj\Debug\net8.0\UnpakSipaksi.Modules.LaporanKemajuan.Application.AssemblyInfoInputs.cache
+C:\dev_net\UnpakSipaksi\UnpakSipaksi.Modules.LaporanKemajuan.Application\obj\Debug\net8.0\UnpakSipaksi.Modules.LaporanKemajuan.Application.AssemblyInfo.cs
+C:\dev_net\UnpakSipaksi\UnpakSipaksi.Modules.LaporanKemajuan.Application\obj\Debug\net8.0\UnpakSipaksi.Modules.LaporanKemajuan.Application.csproj.CoreCompileInputs.cache
+C:\dev_net\UnpakSipaksi\UnpakSipaksi.Modules.LaporanKemajuan.Application\obj\Debug\net8.0\UnpakSipaksi.Modules.LaporanKemajuan.Application.sourcelink.json
+C:\dev_net\UnpakSipaksi\UnpakSipaksi.Modules.LaporanKemajuan.Application\obj\Debug\net8.0\UnpakSipaksi.Modules.LaporanKemajuan.Application.dll
+C:\dev_net\UnpakSipaksi\UnpakSipaksi.Modules.LaporanKemajuan.Application\obj\Debug\net8.0\refint\UnpakSipaksi.Modules.LaporanKemajuan.Application.dll
+C:\dev_net\UnpakSipaksi\UnpakSipaksi.Modules.LaporanKemajuan.Application\obj\Debug\net8.0\UnpakSipaksi.Modules.LaporanKemajuan.Application.pdb
+C:\dev_net\UnpakSipaksi\UnpakSipaksi.Modules.LaporanKemajuan.Application\obj\Debug\net8.0\ref\UnpakSipaksi.Modules.LaporanKemajuan.Application.dll

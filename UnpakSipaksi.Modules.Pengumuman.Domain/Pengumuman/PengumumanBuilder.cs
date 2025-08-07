@@ -32,6 +32,12 @@ namespace UnpakSipaksi.Modules.Pengumuman.Domain.Pengumuman
             {
                 if (HasError) return this;
 
+                if (!string.IsNullOrEmpty(AnnouncementInfo?.Nidn) && DomainValidator.IsValidNidn(AnnouncementInfo?.Nidn))
+                {
+                    _result =  Result.Failure<Pengumuman>(PengumumanErrors.InvalidNidn());
+                    return this;
+                }
+
                 _akurasiPenelitian.Type = AnnouncementInfo.Type.ToString();
                 _akurasiPenelitian.Target = AnnouncementInfo.Target.ToString();
                 _akurasiPenelitian.Nidn = AnnouncementInfo?.Nidn;

@@ -1,0 +1,19 @@
+﻿using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+using UnpakSipaksi.Common.Application.Messaging;
+
+namespace UnpakSipaksi.Modules.Logbook.Application.UpdateLogbook
+{
+    public sealed record UpdateLogbookCommand(
+        string Uuid,
+        string? UuidPenelitianHibah,
+        string? UuidPenelitianPkm,
+        string TanggalKegiatan,
+        string Lampiran,
+        string Deskripsi,
+        double Persentase
+    ) : ICommand;
+}

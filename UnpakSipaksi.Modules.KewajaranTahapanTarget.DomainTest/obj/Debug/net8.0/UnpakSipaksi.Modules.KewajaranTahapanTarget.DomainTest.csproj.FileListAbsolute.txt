@@ -1,10 +1,4 @@
 C:\dev_net\UnpakSipaksi\UnpakSipaksi.Modules.KewajaranTahapanTarget.DomainTest\bin\Debug\net8.0\CoverletSourceRootsMapping_UnpakSipaksi.Modules.KewajaranTahapanTarget.DomainTest
-C:\dev_net\UnpakSipaksi\UnpakSipaksi.Modules.KewajaranTahapanTarget.DomainTest\obj\Debug\net8.0\UnpakSipaksi.Modules.KewajaranTahapanTarget.DomainTest.csproj.AssemblyReference.cache
-C:\dev_net\UnpakSipaksi\UnpakSipaksi.Modules.KewajaranTahapanTarget.DomainTest\obj\Debug\net8.0\UnpakSipaksi.Modules.KewajaranTahapanTarget.DomainTest.GeneratedMSBuildEditorConfig.editorconfig
-C:\dev_net\UnpakSipaksi\UnpakSipaksi.Modules.KewajaranTahapanTarget.DomainTest\obj\Debug\net8.0\UnpakSipaksi.Modules.KewajaranTahapanTarget.DomainTest.AssemblyInfoInputs.cache
-C:\dev_net\UnpakSipaksi\UnpakSipaksi.Modules.KewajaranTahapanTarget.DomainTest\obj\Debug\net8.0\UnpakSipaksi.Modules.KewajaranTahapanTarget.DomainTest.AssemblyInfo.cs
-C:\dev_net\UnpakSipaksi\UnpakSipaksi.Modules.KewajaranTahapanTarget.DomainTest\obj\Debug\net8.0\UnpakSipaksi.Modules.KewajaranTahapanTarget.DomainTest.csproj.CoreCompileInputs.cache
-C:\dev_net\UnpakSipaksi\UnpakSipaksi.Modules.KewajaranTahapanTarget.DomainTest\obj\Debug\net8.0\UnpakSipaksi.Modules.KewajaranTahapanTarget.DomainTest.sourcelink.json
 C:\dev_net\UnpakSipaksi\UnpakSipaksi.Modules.KewajaranTahapanTarget.DomainTest\bin\Debug\net8.0\testhost.dll
 C:\dev_net\UnpakSipaksi\UnpakSipaksi.Modules.KewajaranTahapanTarget.DomainTest\bin\Debug\net8.0\testhost.exe
 C:\dev_net\UnpakSipaksi\UnpakSipaksi.Modules.KewajaranTahapanTarget.DomainTest\bin\Debug\net8.0\xunit.runner.visualstudio.dotnetcore.testadapter.dll
@@ -103,6 +97,12 @@ C:\dev_net\UnpakSipaksi\UnpakSipaksi.Modules.KewajaranTahapanTarget.DomainTest\b
 C:\dev_net\UnpakSipaksi\UnpakSipaksi.Modules.KewajaranTahapanTarget.DomainTest\bin\Debug\net8.0\UnpakSipaksi.Modules.KewajaranTahapanTarget.Domain.dll
 C:\dev_net\UnpakSipaksi\UnpakSipaksi.Modules.KewajaranTahapanTarget.DomainTest\bin\Debug\net8.0\UnpakSipaksi.Modules.KewajaranTahapanTarget.Domain.pdb
 C:\dev_net\UnpakSipaksi\UnpakSipaksi.Modules.KewajaranTahapanTarget.DomainTest\bin\Debug\net8.0\UnpakSipaksi.Common.Domain.pdb
+C:\dev_net\UnpakSipaksi\UnpakSipaksi.Modules.KewajaranTahapanTarget.DomainTest\obj\Debug\net8.0\UnpakSipaksi.Modules.KewajaranTahapanTarget.DomainTest.csproj.AssemblyReference.cache
+C:\dev_net\UnpakSipaksi\UnpakSipaksi.Modules.KewajaranTahapanTarget.DomainTest\obj\Debug\net8.0\UnpakSipaksi.Modules.KewajaranTahapanTarget.DomainTest.GeneratedMSBuildEditorConfig.editorconfig
+C:\dev_net\UnpakSipaksi\UnpakSipaksi.Modules.KewajaranTahapanTarget.DomainTest\obj\Debug\net8.0\UnpakSipaksi.Modules.KewajaranTahapanTarget.DomainTest.AssemblyInfoInputs.cache
+C:\dev_net\UnpakSipaksi\UnpakSipaksi.Modules.KewajaranTahapanTarget.DomainTest\obj\Debug\net8.0\UnpakSipaksi.Modules.KewajaranTahapanTarget.DomainTest.AssemblyInfo.cs
+C:\dev_net\UnpakSipaksi\UnpakSipaksi.Modules.KewajaranTahapanTarget.DomainTest\obj\Debug\net8.0\UnpakSipaksi.Modules.KewajaranTahapanTarget.DomainTest.csproj.CoreCompileInputs.cache
+C:\dev_net\UnpakSipaksi\UnpakSipaksi.Modules.KewajaranTahapanTarget.DomainTest\obj\Debug\net8.0\UnpakSipaksi.Modules.KewajaranTahapanTarget.DomainTest.sourcelink.json
 C:\dev_net\UnpakSipaksi\UnpakSipaksi.Modules.KewajaranTahapanTarget.DomainTest\obj\Debug\net8.0\UnpakSip.1F7947D1.Up2Date
 C:\dev_net\UnpakSipaksi\UnpakSipaksi.Modules.KewajaranTahapanTarget.DomainTest\obj\Debug\net8.0\UnpakSipaksi.Modules.KewajaranTahapanTarget.DomainTest.dll
 C:\dev_net\UnpakSipaksi\UnpakSipaksi.Modules.KewajaranTahapanTarget.DomainTest\obj\Debug\net8.0\refint\UnpakSipaksi.Modules.KewajaranTahapanTarget.DomainTest.dll

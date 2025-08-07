@@ -42,6 +42,10 @@ namespace UnpakSipaksi.Modules.PenelitianHibah.Domain.MemberDosen
             {
                 return Result.Failure<MemberDosen>(MemberDosenErrors.NotUnique(NIDN));
             }
+            if (!DomainValidator.IsValidNidn(NIDN))
+            {
+                return Result.Failure<MemberDosen>(MemberDosenErrors.InvalidNidn());
+            }
 
             var asset = new MemberDosen
             {
@@ -71,6 +75,11 @@ namespace UnpakSipaksi.Modules.PenelitianHibah.Domain.MemberDosen
             {
                 return Result.Failure<MemberDosen>(MemberDosenErrors.InvalidData());
             }
+            if (!DomainValidator.IsValidNidn(Nidn))
+            {
+                return Result.Failure<MemberDosen>(MemberDosenErrors.InvalidNidn());
+            }
+
             prev.NIDN = Nidn;
 
             return prev;

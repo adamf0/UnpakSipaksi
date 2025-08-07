@@ -11,6 +11,7 @@ namespace UnpakSipaksi.Modules.AuthorSinta.DomainTest
         [InlineData("AuthorSinta.EmptyData", "data is not found", ErrorType.NotFound)]
         [InlineData("AuthorSinta.InvalidAuthorId", "Author identity is invalid format", ErrorType.NotFound)]
         [InlineData("AuthorSinta.InvalidSkor", "Skor is invalid format", ErrorType.NotFound)]
+        [InlineData("AuthorSinta.InvalidNidn", "Nidn is invalid format", ErrorType.NotFound)]
         public void StaticError_ShouldReturnCorrectValues(string expectedCode, string expectedDescription, ErrorType expectedType)
         {
             // Act
@@ -19,6 +20,7 @@ namespace UnpakSipaksi.Modules.AuthorSinta.DomainTest
                 "AuthorSinta.EmptyData" => AuthorSintaErrors.EmptyData(),
                 "AuthorSinta.InvalidAuthorId" => AuthorSintaErrors.InvalidAuthorId(),
                 "AuthorSinta.InvalidSkor" => AuthorSintaErrors.InvalidSkor(),
+                "AuthorSinta.InvalidNidn" => AuthorSintaErrors.InvalidNidn(),
                 _ => throw new ArgumentException("Unknown error code", nameof(expectedCode))
             };
 

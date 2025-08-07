@@ -7,5 +7,5 @@ using UnpakSipaksi.Common.Application.Messaging;
 
 namespace UnpakSipaksi.Modules.AkurasiPenelitian.Application.GetAkurasiPenelitian
 {
-    public sealed record GetAkurasiPenelitianQuery(Guid AkurasiPenelitianUuid) : IQuery<AkurasiPenelitianResponse>;
+    public sealed record GetAkurasiPenelitianQuery(string AkurasiPenelitianUuid) : IQuery<AkurasiPenelitianResponse>;
 }

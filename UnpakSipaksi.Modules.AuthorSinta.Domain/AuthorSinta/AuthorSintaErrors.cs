@@ -15,7 +15,8 @@ namespace UnpakSipaksi.Modules.AuthorSinta.Domain.AuthorSinta
             Error.NotFound("AuthorSinta.InvalidAuthorId", "Author identity is invalid format");
         public static Error InvalidSkor() =>
             Error.NotFound("AuthorSinta.InvalidSkor", "Skor is invalid format");
-
+        public static Error InvalidNidn() =>
+            Error.NotFound("AuthorSinta.InvalidNidn", "Nidn is invalid format");
         public static Error NotFound(Guid Id) =>
             Error.NotFound("AuthorSinta.NotFound", $"Author sinta with identifier {Id} not found");
 

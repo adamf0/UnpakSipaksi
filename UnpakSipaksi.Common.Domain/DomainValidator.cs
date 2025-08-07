@@ -25,5 +25,9 @@ namespace UnpakSipaksi.Common.Domain
         {
             return npm.Length == 9 && npm.All(char.IsDigit);
         }
+        public static bool IsValidNidn(string nidn)
+        {
+            return (nidn.Length==10 || nidn.Length == 11) && nidn.All(char.IsDigit);
+        }
     }
 }

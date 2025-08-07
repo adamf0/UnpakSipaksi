@@ -30,7 +30,7 @@ namespace UnpakSipaksi.Modules.AkurasiPenelitian.Application.GetAkurasiPenelitia
             var result = await connection.QuerySingleOrDefaultAsync<AkurasiPenelitianResponse?>(sql, new { Uuid = request.AkurasiPenelitianUuid });
             if (result == null)
             {
-                return Result.Failure<AkurasiPenelitianResponse>(AkurasiPenelitianErrors.NotFound(request.AkurasiPenelitianUuid));
+                return Result.Failure<AkurasiPenelitianResponse>(AkurasiPenelitianErrors.NotFound(Guid.Parse(request.AkurasiPenelitianUuid)));
             }
 
             return result;

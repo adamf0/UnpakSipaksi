@@ -8,12 +8,14 @@ namespace UnpakSipaksi.Modules.PenelitianPkm.DomainTest.MemberDosen
     {
         [Theory]
         [InlineData("MemberDosen.EmptyData", "data is not found", ErrorType.NotFound)]
+        [InlineData("MemberDosen.InvalidNidn", "Nidn is invalid format", ErrorType.NotFound)]
         public void StaticErrors_ShouldReturnCorrectValues(string expectedCode, string expectedDescription, ErrorType expectedType)
         {
             // Act
             Error error = expectedCode switch
             {
                 "MemberDosen.EmptyData" => MemberDosenErrors.EmptyData(),
+                "MemberDosen.InvalidNidn" => MemberDosenErrors.InvalidNidn(),
                 _ => throw new ArgumentException("Unknown error code", nameof(expectedCode))
             };
 

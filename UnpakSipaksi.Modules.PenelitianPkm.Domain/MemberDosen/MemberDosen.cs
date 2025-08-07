@@ -44,6 +44,10 @@ namespace UnpakSipaksi.Modules.PenelitianPkm.Domain.MemberDosen
             {
                 return Result.Failure<MemberDosen>(MemberDosenErrors.NotUnique(NIDN));
             }
+            if (!DomainValidator.IsValidNidn(NIDN))
+            {
+                return Result.Failure<MemberDosen>(MemberDosenErrors.InvalidNidn());
+            }
 
             var asset = new MemberDosen
             {

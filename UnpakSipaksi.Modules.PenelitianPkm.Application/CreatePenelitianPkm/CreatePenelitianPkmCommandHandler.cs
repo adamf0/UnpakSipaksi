@@ -12,8 +12,6 @@ namespace UnpakSipaksi.Modules.PenelitianPkm.Application.CreatePenelitianPkm
     {
         public async Task<Result<Guid>> Handle(CreatePenelitianPkmCommand request, CancellationToken cancellationToken)
         {
-            //[PR] check valid nidn
-
             Result<Domain.PenelitianPkm.PenelitianPkm> createResult = await Domain.PenelitianPkm.PenelitianPkm.Create(
                 penelitianHibahRepository,
                 request.NIDN,

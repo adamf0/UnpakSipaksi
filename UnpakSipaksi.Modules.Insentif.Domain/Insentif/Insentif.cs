@@ -108,6 +108,10 @@ namespace UnpakSipaksi.Modules.Insentif.Domain.Insentif
             {
                 return Result.Failure<Insentif>(InsentifErrors.EmptyNidn());
             }
+            else if (!DomainValidator.IsValidNidn(Nidn))
+            {
+                return Result.Failure<Insentif>(InsentifErrors.InvalidNidn());
+            }
             else if (string.IsNullOrWhiteSpace(JudulArtikel))
             {
                 return Result.Failure<Insentif>(InsentifErrors.EmptyJudulArtikel());
@@ -198,6 +202,10 @@ namespace UnpakSipaksi.Modules.Insentif.Domain.Insentif
             {
                 return Result.Failure<Insentif>(InsentifErrors.EmptyNidn());
             }
+            else if (!DomainValidator.IsValidNidn(Nidn))
+            {
+                return Result.Failure<Insentif>(InsentifErrors.InvalidNidn());
+            }
             else if (string.IsNullOrWhiteSpace(JudulArtikel))
             {
                 return Result.Failure<Insentif>(InsentifErrors.EmptyJudulArtikel());
@@ -287,6 +295,10 @@ namespace UnpakSipaksi.Modules.Insentif.Domain.Insentif
             if (string.IsNullOrWhiteSpace(Nidn))
             {
                 return Result.Failure<Insentif>(InsentifErrors.EmptyNidn());
+            }
+            else if (!DomainValidator.IsValidNidn(Nidn))
+            {
+                return Result.Failure<Insentif>(InsentifErrors.InvalidNidn());
             }
             else if (string.IsNullOrWhiteSpace(JudulArtikel))
             {
@@ -382,6 +394,10 @@ namespace UnpakSipaksi.Modules.Insentif.Domain.Insentif
             if (string.IsNullOrWhiteSpace(Nidn))
             {
                 return Result.Failure<Insentif>(InsentifErrors.EmptyNidn());
+            }
+            else if (!DomainValidator.IsValidNidn(Nidn))
+            {
+                return Result.Failure<Insentif>(InsentifErrors.InvalidNidn());
             }
             else if (string.IsNullOrWhiteSpace(JudulArtikel))
             {
