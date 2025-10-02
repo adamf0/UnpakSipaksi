@@ -16,13 +16,13 @@ namespace UnpakSipaksi.Modules.PenelitianHibah.DomainTest.RAB
             mockRepo.Setup(x =>
                 x.HasUniqueDataAsync(
                     It.IsAny<Guid?>(),
-                    It.Is<string>(s => s == "123"),
+                    It.Is<string>(s => s == "1234567890"),
                     It.Is<string>(j => j == "judul"),
                     It.IsAny<CancellationToken>()
                 )
             ).ReturnsAsync(true);
 
-            var hibah = await Domain.PenelitianHibah.PenelitianHibah.Create(mockRepo.Object, "123", "2024-01-01", "judul");
+            var hibah = await Domain.PenelitianHibah.PenelitianHibah.Create(mockRepo.Object, "1234567890", "2024-01-01", "judul");
 
             // Act
             var result = Domain.RAB.RAB.Create(
@@ -68,13 +68,13 @@ namespace UnpakSipaksi.Modules.PenelitianHibah.DomainTest.RAB
             mockRepo.Setup(x =>
                 x.HasUniqueDataAsync(
                     It.IsAny<Guid?>(),
-                    It.Is<string>(s => s == "123"),
+                    It.Is<string>(s => s == "1234567890"),
                     It.Is<string>(j => j == "judul"),
                     It.IsAny<CancellationToken>()
                 )
             ).ReturnsAsync(true);
 
-            var hibah = await Domain.PenelitianHibah.PenelitianHibah.Create(mockRepo.Object, "123", "2024-01-01", "judul");
+            var hibah = await Domain.PenelitianHibah.PenelitianHibah.Create(mockRepo.Object, "1234567890", "2024-01-01", "judul");
 
             // Act
             var result = Domain.RAB.RAB.Create(
@@ -101,13 +101,13 @@ namespace UnpakSipaksi.Modules.PenelitianHibah.DomainTest.RAB
             mockRepo.Setup(x =>
                 x.HasUniqueDataAsync(
                     It.IsAny<Guid?>(),
-                    It.Is<string>(s => s == "123"),
+                    It.Is<string>(s => s == "1234567890"),
                     It.Is<string>(j => j == "judul"),
                     It.IsAny<CancellationToken>()
                 )
             ).ReturnsAsync(true);
 
-            var hibah = await Domain.PenelitianHibah.PenelitianHibah.Create(mockRepo.Object, "123", "2024-01-01", "judul");
+            var hibah = await Domain.PenelitianHibah.PenelitianHibah.Create(mockRepo.Object, "1234567890", "2024-01-01", "judul");
             var existing = Domain.RAB.RAB.Create(Guid.NewGuid(), hibah.Value, 1, 1, 2, 3, 1000, 2000).Value;
 
             // Act
@@ -137,13 +137,13 @@ namespace UnpakSipaksi.Modules.PenelitianHibah.DomainTest.RAB
             mockRepo.Setup(x =>
                 x.HasUniqueDataAsync(
                     It.IsAny<Guid?>(),
-                    It.Is<string>(s => s == "123"),
+                    It.Is<string>(s => s == "1234567890"),
                     It.Is<string>(j => j == "judul"),
                     It.IsAny<CancellationToken>()
                 )
             ).ReturnsAsync(true);
 
-            var hibah = await Domain.PenelitianHibah.PenelitianHibah.Create(mockRepo.Object, "123", "2024-01-01", "judul");
+            var hibah = await Domain.PenelitianHibah.PenelitianHibah.Create(mockRepo.Object, "1234567890", "2024-01-01", "judul");
 
             // Act
             Guid id = Guid.NewGuid();
@@ -173,13 +173,13 @@ namespace UnpakSipaksi.Modules.PenelitianHibah.DomainTest.RAB
             mockRepo.Setup(x =>
                 x.HasUniqueDataAsync(
                     It.IsAny<Guid?>(),
-                    It.Is<string>(s => s == "123"),
+                    It.Is<string>(s => s == "1234567890"),
                     It.Is<string>(j => j == "judul"),
                     It.IsAny<CancellationToken>()
                 )
             ).ReturnsAsync(true);
 
-            var hibah = await Domain.PenelitianHibah.PenelitianHibah.Create(mockRepo.Object, "123", "2024-01-01", "judul");
+            var hibah = await Domain.PenelitianHibah.PenelitianHibah.Create(mockRepo.Object, "1234567890", "2024-01-01", "judul");
             var existing = Domain.RAB.RAB.Create(Guid.NewGuid(), hibah.Value, 1, 1, 2, 3, 1000, 2000).Value;
 
             // Act
@@ -209,7 +209,7 @@ namespace UnpakSipaksi.Modules.PenelitianHibah.DomainTest.RAB
             mockRepo1.Setup(x =>
                 x.HasUniqueDataAsync(
                     It.IsAny<Guid?>(),
-                    It.Is<string>(s => s == "123"),
+                    It.Is<string>(s => s == "1234567890"),
                     It.Is<string>(j => j == "judul1"),
                     It.IsAny<CancellationToken>()
                 )
@@ -219,14 +219,14 @@ namespace UnpakSipaksi.Modules.PenelitianHibah.DomainTest.RAB
             mockRepo2.Setup(x =>
                 x.HasUniqueDataAsync(
                     It.IsAny<Guid?>(),
-                    It.Is<string>(s => s == "123"),
+                    It.Is<string>(s => s == "1234567890"),
                     It.Is<string>(j => j == "judul2"),
                     It.IsAny<CancellationToken>()
                 )
             ).ReturnsAsync(true);
 
-            var hibah1 = await Domain.PenelitianHibah.PenelitianHibah.Create(mockRepo1.Object, "123", "2024-01-01", "judul1");
-            var hibah2 = await Domain.PenelitianHibah.PenelitianHibah.Create(mockRepo2.Object, "123", "2024-01-01", "judul2");
+            var hibah1 = await Domain.PenelitianHibah.PenelitianHibah.Create(mockRepo1.Object, "1234567890", "2024-01-01", "judul1");
+            var hibah2 = await Domain.PenelitianHibah.PenelitianHibah.Create(mockRepo2.Object, "1234567890", "2024-01-01", "judul2");
 
             hibah1.IsSuccess.Should().BeTrue();
             hibah1.Value.GetType()?.GetProperty("Id")?.SetValue(hibah1.Value, 1);

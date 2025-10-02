@@ -7,7 +7,7 @@ namespace UnpakSipaksi.Modules.KesesuaianTkt.Infrastructure.Database
 {
     public sealed class KesesuaianTktDbContext(DbContextOptions<KesesuaianTktDbContext> options) : DbContext(options), IUnitOfWork
     {
-        internal DbSet<Domain.KesesuaianTkt.KesesuaianTkt> KesesuaianTkt { get; set; }
+        public DbSet<Domain.KesesuaianTkt.KesesuaianTkt> KesesuaianTkt { get; set; }
 
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {

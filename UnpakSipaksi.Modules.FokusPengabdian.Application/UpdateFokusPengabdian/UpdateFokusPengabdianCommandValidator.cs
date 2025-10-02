@@ -10,10 +10,14 @@ using UnpakSipaksi.Modules.FokusPengabdian.Application.CreateFokusPengabdian;
 
 namespace UnpakSipaksi.Modules.FokusPengabdian.Application.UpdateFokusPengabdian
 {
-    public sealed class UpdateFokusPengabdianCommandValidator : AbstractValidator<CreateFokusPengabdianCommand>
+    public sealed class UpdateFokusPengabdianCommandValidator : AbstractValidator<UpdateFokusPengabdianCommand>
     {
         public UpdateFokusPengabdianCommandValidator()
         {
+            RuleFor(c => c.Uuid)
+                .NotEmpty().WithMessage("'Uuid' tidak boleh kosong.")
+                .Must(Helper.BeValidGuidV4).WithMessage("'Uuid' harus dalam format UUID v4 yang valid.");
+
             RuleFor(c => c.Nama)
                 .NotEmpty().WithMessage("'Nama' tidak boleh kosong.");
         }

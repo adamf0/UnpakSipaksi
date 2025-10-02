@@ -7,7 +7,7 @@ namespace UnpakSipaksi.Modules.FokusPengabdian.Infrastructure.Database
 {
     public sealed class FokusPengabdianDbContext(DbContextOptions<FokusPengabdianDbContext> options) : DbContext(options), IUnitOfWork
     {
-        internal DbSet<Domain.FokusPengabdian.FokusPengabdian> FokusPengabdian { get; set; }
+        public DbSet<Domain.FokusPengabdian.FokusPengabdian> FokusPengabdian { get; set; }
 
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {
@@ -33,7 +33,7 @@ namespace UnpakSipaksi.Modules.FokusPengabdian.Infrastructure.Database
                 //.HasConversion(guidConverter);
 
                 entity.Property(e => e.Nama)
-                      .HasColumnName("name");
+                      .HasColumnName("nama");
             });
         }
     }

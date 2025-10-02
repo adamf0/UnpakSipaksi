@@ -7,7 +7,7 @@ namespace UnpakSipaksi.Modules.KategoriProgramPengabdian.Infrastructure.Database
 {
     public sealed class KategoriProgramPengabdianDbContext(DbContextOptions<KategoriProgramPengabdianDbContext> options) : DbContext(options), IUnitOfWork
     {
-        internal DbSet<Domain.KategoriProgramPengabdian.KategoriProgramPengabdian> KategoriProgramPengabdian { get; set; }
+        public DbSet<Domain.KategoriProgramPengabdian.KategoriProgramPengabdian> KategoriProgramPengabdian { get; set; }
 
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {
@@ -36,7 +36,9 @@ namespace UnpakSipaksi.Modules.KategoriProgramPengabdian.Infrastructure.Database
                       .HasColumnName("nama");
 
                 entity.Property(e => e.Rule)
-                      .HasColumnName("rule");
+                      .HasColumnName("rule")
+                      .HasColumnType("VARCHAR(5000)")
+                      .HasDefaultValue("[]");
 
             });
         }

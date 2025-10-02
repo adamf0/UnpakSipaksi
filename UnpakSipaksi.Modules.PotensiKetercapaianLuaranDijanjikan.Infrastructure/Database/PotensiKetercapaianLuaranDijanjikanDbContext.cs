@@ -7,7 +7,7 @@ namespace UnpakSipaksi.Modules.PotensiKetercapaianLuaranDijanjikan.Infrastructur
 {
     public sealed class PotensiKetercapaianLuaranDijanjikanDbContext(DbContextOptions<PotensiKetercapaianLuaranDijanjikanDbContext> options) : DbContext(options), IUnitOfWork
     {
-        internal DbSet<Domain.PotensiKetercapaianLuaranDijanjikan.PotensiKetercapaianLuaranDijanjikan> PotensiKetercapaianLuaranDijanjikan { get; set; }
+        public DbSet<Domain.PotensiKetercapaianLuaranDijanjikan.PotensiKetercapaianLuaranDijanjikan> PotensiKetercapaianLuaranDijanjikan { get; set; }
 
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {

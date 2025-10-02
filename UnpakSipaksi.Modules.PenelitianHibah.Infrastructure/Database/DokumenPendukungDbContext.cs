@@ -7,7 +7,7 @@ namespace UnpakSipaksi.Modules.PenelitianHibah.Infrastructure.Database
 {
     public sealed class DokumenPendukungDbContext(DbContextOptions<DokumenPendukungDbContext> options) : DbContext(options), IUnitOfWorkDokumenPendukung
     {
-        internal DbSet<Domain.DokumenPendukung.DokumenPendukung> DokumenPendukung { get; set; }
+        public DbSet<Domain.DokumenPendukung.DokumenPendukung> DokumenPendukung { get; set; }
 
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {

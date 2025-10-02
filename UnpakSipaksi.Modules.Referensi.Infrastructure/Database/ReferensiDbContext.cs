@@ -7,7 +7,7 @@ namespace UnpakSipaksi.Modules.Referensi.Infrastructure.Database
 {
     public sealed class ReferensiDbContext(DbContextOptions<ReferensiDbContext> options) : DbContext(options), IUnitOfWork
     {
-        internal DbSet<Domain.Referensi.Referensi> Referensi { get; set; }
+        public DbSet<Domain.Referensi.Referensi> Referensi { get; set; }
 
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {

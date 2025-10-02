@@ -7,7 +7,7 @@ namespace UnpakSipaksi.Modules.PenugasanReviewer.Infrastructure.Database
 {
     public sealed class PenugasanReviewerDbContext(DbContextOptions<PenugasanReviewerDbContext> options) : DbContext(options), IUnitOfWork
     {
-        internal DbSet<Domain.PenugasanReviewer.PenugasanReviewer> PenugasanReviewer { get; set; }
+        public DbSet<Domain.PenugasanReviewer.PenugasanReviewer> PenugasanReviewer { get; set; }
 
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {

@@ -8,9 +8,9 @@ namespace UnpakSipaksi.Modules.PenelitianHibah.Application.UpdateLamaKegiatan
     internal sealed class UpdateLamaKegiatanCommandHandler(
         IPenelitianHibahRepository penelitianHibahRepository,
         IUnitOfWorkHibah unitOfWork)
-        : ICommandHandler<UpdateMemberDosenCommand>
+        : ICommandHandler<UpdateLamaKegiatanCommand>
     {
-        public async Task<Result> Handle(UpdateMemberDosenCommand request, CancellationToken cancellationToken)
+        public async Task<Result> Handle(UpdateLamaKegiatanCommand request, CancellationToken cancellationToken)
         {
             Domain.PenelitianHibah.PenelitianHibah? existingPenelitianHibah = await penelitianHibahRepository.GetAsync(Guid.Parse(request.Uuid), cancellationToken);
 

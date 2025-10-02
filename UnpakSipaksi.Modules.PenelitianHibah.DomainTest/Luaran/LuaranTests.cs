@@ -140,7 +140,7 @@ namespace UnpakSipaksi.Modules.PenelitianHibah.DomainTest.Luaran
                     It.IsAny<CancellationToken>())
             ).ReturnsAsync(true);
 
-            var hibahResult = await Domain.PenelitianHibah.PenelitianHibah.Create(mockRepo.Object, "123", "2024-01-01", "judul");
+            var hibahResult = await Domain.PenelitianHibah.PenelitianHibah.Create(mockRepo.Object, "1234567890", "2024-01-01", "judul");
 
             hibahResult.IsSuccess.Should().BeTrue();
             hibahResult.Value.GetType()?.GetProperty("Id")?.SetValue(hibahResult.Value, id);

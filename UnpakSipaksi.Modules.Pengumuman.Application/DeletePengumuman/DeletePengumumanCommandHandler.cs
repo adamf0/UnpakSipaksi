@@ -12,11 +12,11 @@ namespace UnpakSipaksi.Modules.Pengumuman.Application.DeletePengumuman
     {
         public async Task<Result> Handle(DeletePengumumanCommand request, CancellationToken cancellationToken)
         {
-            Domain.Pengumuman.Pengumuman? existingPengumuman = await PengumumanRepository.GetAsync(request.uuid, cancellationToken);
+            Domain.Pengumuman.Pengumuman? existingPengumuman = await PengumumanRepository.GetAsync(Guid.Parse(request.uuid), cancellationToken);
 
             if (existingPengumuman is null)
             {
-                return Result.Failure(PengumumanErrors.NotFound(request.uuid));
+                return Result.Failure(PengumumanErrors.NotFound(Guid.Parse(request.uuid)));
             }
 
             await PengumumanRepository.DeleteAsync(existingPengumuman!);

@@ -1,7 +1,6 @@
 ﻿using Microsoft.EntityFrameworkCore;
 using Minio.DataModel;
 using System;
-using FuzzySharp;
 using UnpakSipaksi.Modules.PenelitianPkm.Infrastructure.Database;
 using UnpakSipaksi.Modules.PenelitianPkm.Domain.PenelitianPkm;
 

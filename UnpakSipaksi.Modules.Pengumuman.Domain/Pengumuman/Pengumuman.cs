@@ -9,21 +9,42 @@ namespace UnpakSipaksi.Modules.Pengumuman.Domain.Pengumuman
         {
         }
 
-        public int? Id { get; private set; } = null;
+        public int Id { get; private set; }   // AUTO_INCREMENT, jadi gak nullable
 
         [Column(TypeName = "VARCHAR(36)")]
-        public Guid Uuid{ get; private set; }
+        public Guid Uuid { get; private set; }
 
+        [Column(TypeName = "TEXT")]
         public string Pesan { get; private set; } = null!;
+
+        [Column(TypeName = "VARCHAR(500)")]
         public string? File { get; private set; }
+
+        [Column(TypeName = "VARCHAR(1000)")]
         public string? Url { get; private set; }
-        public string Type { get; private set; } = null!;
-        public string? Target { get; private set; }
+
+        // ENUM sudah diganti jadi VARCHAR(20) + default di OnModelCreating
+        [Column(TypeName = "VARCHAR(20)")]
+        public string Type { get; private set; } = "pengumuman";
+
+        [Column(TypeName = "VARCHAR(20)")]
+        public string Target { get; private set; } = "all";
+
+        [Column(TypeName = "VARCHAR(50)")]
         public string? Nidn { get; private set; }
+
+        [Column(TypeName = "CHAR(9)")]
         public string? KodeFaKultas { get; private set; }
-        public string? TypeExpired { get; private set; }
-        public string? TanggalAwal { get; private set; }
-        public string? TanggalAkhir { get; private set; }
+
+        [Column(TypeName = "VARCHAR(20)")]
+        public string TypeExpired { get; private set; } = "no expire";
+
+        [Column(TypeName = "DATETIME")]
+        public DateTime? TanggalAwal { get; private set; }
+
+        [Column(TypeName = "DATETIME")]
+        public DateTime? TanggalAkhir { get; private set; }
+
 
         public static PengumumanBuilder Update(Pengumuman prev) => new PengumumanBuilder(prev);
 
@@ -37,7 +58,7 @@ namespace UnpakSipaksi.Modules.Pengumuman.Domain.Pengumuman
             if (expiredInfo.validationResult.IsFailure) {
                 return expiredInfo.validationResult;
             }
-            if (!string.IsNullOrEmpty(AnnouncementInfo?.Nidn) && !DomainValidator.IsValidNidn(AnnouncementInfo?.Nidn))
+            if (!string.IsNullOrEmpty(AnnouncementInfo?.Nidn) && !DomainValidator.IsValidNidn(AnnouncementInfo.Nidn))
             {
                 return Result.Failure<Pengumuman>(PengumumanErrors.InvalidNidn());
             }
@@ -53,8 +74,8 @@ namespace UnpakSipaksi.Modules.Pengumuman.Domain.Pengumuman
                 File = Attachment?.Path,
                 Url = Attachment?.Link,
                 TypeExpired = expiredInfo.Type.ToString(),
-                TanggalAwal = expiredInfo.TanggalAwal?.ToString(),
-                TanggalAkhir = expiredInfo.TanggalAkhir?.ToString()
+                TanggalAwal = expiredInfo.TanggalAwal?.ToDateTime(TimeOnly.MinValue),
+                TanggalAkhir = expiredInfo.TanggalAkhir?.ToDateTime(TimeOnly.MinValue)
             };
 
             pengumuman.Raise(new PengumumanCreatedDomainEvent(pengumuman.Uuid));

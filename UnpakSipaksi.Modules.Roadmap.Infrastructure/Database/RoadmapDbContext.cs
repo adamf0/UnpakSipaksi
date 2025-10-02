@@ -7,7 +7,7 @@ namespace UnpakSipaksi.Modules.Roadmap.Infrastructure.Database
 {
     public sealed class RoadmapDbContext(DbContextOptions<RoadmapDbContext> options) : DbContext(options), IUnitOfWork
     {
-        internal DbSet<Domain.Roadmap.Roadmap> Roadmap { get; set; }
+        public DbSet<Domain.Roadmap.Roadmap> Roadmap { get; set; }
 
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {

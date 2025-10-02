@@ -2,6 +2,6 @@
 {
     internal static class Schemas
     {
-        internal const string Komponen = "Komponen";
+        internal const string Komponen = "komponen";
     }
 }

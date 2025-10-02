@@ -1,0 +1,16 @@
+C:\dev_net\UnpakSipaksi\UnpakSipaksi.Modules.KesesuaianPenugasan.Domain\bin\Debug\net9.0\UnpakSipaksi.Modules.KesesuaianPenugasan.Domain.deps.json
+C:\dev_net\UnpakSipaksi\UnpakSipaksi.Modules.KesesuaianPenugasan.Domain\bin\Debug\net9.0\UnpakSipaksi.Modules.KesesuaianPenugasan.Domain.dll
+C:\dev_net\UnpakSipaksi\UnpakSipaksi.Modules.KesesuaianPenugasan.Domain\bin\Debug\net9.0\UnpakSipaksi.Modules.KesesuaianPenugasan.Domain.pdb
+C:\dev_net\UnpakSipaksi\UnpakSipaksi.Modules.KesesuaianPenugasan.Domain\bin\Debug\net9.0\UnpakSipaksi.Common.Domain.dll
+C:\dev_net\UnpakSipaksi\UnpakSipaksi.Modules.KesesuaianPenugasan.Domain\bin\Debug\net9.0\UnpakSipaksi.Common.Domain.pdb
+C:\dev_net\UnpakSipaksi\UnpakSipaksi.Modules.KesesuaianPenugasan.Domain\obj\Debug\net9.0\UnpakSipaksi.Modules.KesesuaianPenugasan.Domain.csproj.AssemblyReference.cache
+C:\dev_net\UnpakSipaksi\UnpakSipaksi.Modules.KesesuaianPenugasan.Domain\obj\Debug\net9.0\UnpakSipaksi.Modules.KesesuaianPenugasan.Domain.GeneratedMSBuildEditorConfig.editorconfig
+C:\dev_net\UnpakSipaksi\UnpakSipaksi.Modules.KesesuaianPenugasan.Domain\obj\Debug\net9.0\UnpakSipaksi.Modules.KesesuaianPenugasan.Domain.AssemblyInfoInputs.cache
+C:\dev_net\UnpakSipaksi\UnpakSipaksi.Modules.KesesuaianPenugasan.Domain\obj\Debug\net9.0\UnpakSipaksi.Modules.KesesuaianPenugasan.Domain.AssemblyInfo.cs
+C:\dev_net\UnpakSipaksi\UnpakSipaksi.Modules.KesesuaianPenugasan.Domain\obj\Debug\net9.0\UnpakSipaksi.Modules.KesesuaianPenugasan.Domain.csproj.CoreCompileInputs.cache
+C:\dev_net\UnpakSipaksi\UnpakSipaksi.Modules.KesesuaianPenugasan.Domain\obj\Debug\net9.0\UnpakSipaksi.Modules.KesesuaianPenugasan.Domain.sourcelink.json
+C:\dev_net\UnpakSipaksi\UnpakSipaksi.Modules.KesesuaianPenugasan.Domain\obj\Debug\net9.0\UnpakSip.2D5D19DC.Up2Date
+C:\dev_net\UnpakSipaksi\UnpakSipaksi.Modules.KesesuaianPenugasan.Domain\obj\Debug\net9.0\UnpakSipaksi.Modules.KesesuaianPenugasan.Domain.dll
+C:\dev_net\UnpakSipaksi\UnpakSipaksi.Modules.KesesuaianPenugasan.Domain\obj\Debug\net9.0\refint\UnpakSipaksi.Modules.KesesuaianPenugasan.Domain.dll
+C:\dev_net\UnpakSipaksi\UnpakSipaksi.Modules.KesesuaianPenugasan.Domain\obj\Debug\net9.0\UnpakSipaksi.Modules.KesesuaianPenugasan.Domain.pdb
+C:\dev_net\UnpakSipaksi\UnpakSipaksi.Modules.KesesuaianPenugasan.Domain\obj\Debug\net9.0\ref\UnpakSipaksi.Modules.KesesuaianPenugasan.Domain.dll

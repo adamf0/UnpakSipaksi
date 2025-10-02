@@ -7,7 +7,7 @@ namespace UnpakSipaksi.Modules.KesesuaianJadwal.Infrastructure.Database
 {
     public sealed class KesesuaianJadwalDbContext(DbContextOptions<KesesuaianJadwalDbContext> options) : DbContext(options), IUnitOfWork
     {
-        internal DbSet<Domain.KesesuaianJadwal.KesesuaianJadwal> KesesuaianJadwal { get; set; }
+        public DbSet<Domain.KesesuaianJadwal.KesesuaianJadwal> KesesuaianJadwal { get; set; }
 
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {

@@ -19,7 +19,7 @@ namespace UnpakSipaksi.Modules.AkurasiPenelitian.Domain.AkurasiPenelitian
         [Column(TypeName = "VARCHAR(36)")]
         public Guid Uuid{ get; private set; }
 
-        [Column("name")]
+        [Column("name", TypeName = "VARCHAR(36)")]
         public string Nama { get; private set; } = null!;
         public int BobotPDP { get; private set; } = 0;
         public int BobotTerapan { get; private set; } = 0;

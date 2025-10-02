@@ -17,7 +17,7 @@ namespace UnpakSipaksi.Modules.JenisPublikasi.Application.CreateJenisPublikasi
                 .NotEmpty().WithMessage("'Nama' tidak boleh kosong.");
 
             RuleFor(c => c.Sbu)
-                .NotEmpty().WithMessage("'Sbu' tidak boleh kosong.");
+               .GreaterThanOrEqualTo(0).WithMessage("'Sbu' tidak boleh negative.");
         }
     }
 }

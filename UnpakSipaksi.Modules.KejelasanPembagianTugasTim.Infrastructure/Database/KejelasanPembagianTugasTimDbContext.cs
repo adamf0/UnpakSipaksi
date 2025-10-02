@@ -7,7 +7,7 @@ namespace UnpakSipaksi.Modules.KejelasanPembagianTugasTim.Infrastructure.Databas
 {
     public sealed class KejelasanPembagianTugasTimDbContext(DbContextOptions<KejelasanPembagianTugasTimDbContext> options) : DbContext(options), IUnitOfWork
     {
-        internal DbSet<Domain.KejelasanPembagianTugasTim.KejelasanPembagianTugasTim> KejelasanPembagianTugasTim { get; set; }
+        public DbSet<Domain.KejelasanPembagianTugasTim.KejelasanPembagianTugasTim> KejelasanPembagianTugasTim { get; set; }
 
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {

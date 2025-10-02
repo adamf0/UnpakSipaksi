@@ -14,6 +14,8 @@ namespace UnpakSipaksi.Modules.KategoriLuaran.Application.CreateKategoriLuaran
         {
             RuleFor(c => c.Nama)
                 .NotEmpty().WithMessage("'Nama' tidak boleh kosong.");
+            RuleFor(c => c.Status)
+                .NotEmpty().WithMessage("'Status' tidak boleh kosong.");
         }
     }
 }

@@ -2,7 +2,7 @@
 
 namespace UnpakSipaksi.Modules.LaporanKemajuan.Domain.Dokumen
 {
-    public sealed class KetajamanAnalisisCreatedDomainEvent(Guid eventId) : DomainEvent
+    public sealed class DokumenCreatedDomainEvent(Guid eventId) : DomainEvent
     {
         public Guid EventId { get; init; } = eventId;
     }

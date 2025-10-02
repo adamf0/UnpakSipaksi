@@ -12,7 +12,7 @@ namespace UnpakSipaksi.Modules.AuthorSinta.DomainTest
         public void Create_ShouldReturnAuthorSintaWithCorrectProperties()
         {
             // Arrange
-            string nidn = "ABC";
+            string nidn = "1234567890";
             string authorId = "1234567";
             int score = 100;
 
@@ -58,7 +58,7 @@ namespace UnpakSipaksi.Modules.AuthorSinta.DomainTest
         public void Create_ShouldRaiseAuthorSintaCreatedDomainEvent()
         {
             // Arrange
-            string nidn = "ABC";
+            string nidn = "1234567890";
             string authorId = "1234567";
             int score = 100;
 
@@ -77,7 +77,7 @@ namespace UnpakSipaksi.Modules.AuthorSinta.DomainTest
         public void Update_ShouldReturnUpdatedAuthorSinta()
         {
             // Arrange
-            string nidn = "ABC";
+            string nidn = "1234567890";
             string authorId = "1234567";
             int score = 100;
 
@@ -85,7 +85,7 @@ namespace UnpakSipaksi.Modules.AuthorSinta.DomainTest
             var authorSinta = createResult.Value;
 
             // Act
-            string nidnChange = "AAA";
+            string nidnChange = "1123456789";
             string authorIdChange = "2345678";
             int scoreChange = 11;
 

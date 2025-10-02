@@ -21,7 +21,7 @@ namespace UnpakSipaksi.Modules.PenelitianHibah.DomainTest.Substansi
 
             var hibahResult = await Domain.PenelitianHibah.PenelitianHibah.Create(
                 mockRepo.Object,
-                "123",
+                "1234567890",
                 "2024-01-01",
                 "judul"
             );

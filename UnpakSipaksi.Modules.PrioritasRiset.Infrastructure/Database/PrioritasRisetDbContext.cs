@@ -7,7 +7,7 @@ namespace UnpakSipaksi.Modules.PrioritasRiset.Infrastructure.Database
 {
     public sealed class PrioritasRisetDbContext(DbContextOptions<PrioritasRisetDbContext> options) : DbContext(options), IUnitOfWork
     {
-        internal DbSet<Domain.PrioritasRiset.PrioritasRiset> PrioritasRiset { get; set; }
+        public DbSet<Domain.PrioritasRiset.PrioritasRiset> PrioritasRiset { get; set; }
 
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {

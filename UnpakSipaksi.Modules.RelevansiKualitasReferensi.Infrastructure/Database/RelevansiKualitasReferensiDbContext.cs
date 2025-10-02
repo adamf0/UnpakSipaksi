@@ -7,7 +7,7 @@ namespace UnpakSipaksi.Modules.RelevansiKualitasReferensi.Infrastructure.Databas
 {
     public sealed class RelevansiKualitasReferensiDbContext(DbContextOptions<RelevansiKualitasReferensiDbContext> options) : DbContext(options), IUnitOfWork
     {
-        internal DbSet<Domain.RelevansiKualitasReferensi.RelevansiKualitasReferensi> RelevansiKualitasReferensi { get; set; }
+        public DbSet<Domain.RelevansiKualitasReferensi.RelevansiKualitasReferensi> RelevansiKualitasReferensi { get; set; }
 
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {

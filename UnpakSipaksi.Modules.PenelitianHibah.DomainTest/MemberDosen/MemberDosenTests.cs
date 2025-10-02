@@ -25,7 +25,7 @@ namespace UnpakSipaksi.Modules.PenelitianHibah.DomainTest.MemberDosen
         private async Task<Domain.PenelitianHibah.PenelitianHibah> CreateValidHibah(int id = 1)
         {
             var repo = CreateMockRepo();
-            var result = await Domain.PenelitianHibah.PenelitianHibah.Create(repo.Object, "123", "2024-01-01", "judul");
+            var result = await Domain.PenelitianHibah.PenelitianHibah.Create(repo.Object, "1234567890", "2024-01-01", "judul");
             result.IsSuccess.Should().BeTrue();
 
             var hibah = result.Value;
@@ -37,12 +37,12 @@ namespace UnpakSipaksi.Modules.PenelitianHibah.DomainTest.MemberDosen
         public void Create_ShouldReturnSuccess_WhenValid()
         {
             // Act
-            var result = Domain.MemberDosen.MemberDosen.Create(0, 1, "123");
+            var result = Domain.MemberDosen.MemberDosen.Create(0, 1, "1234567890");
 
             // Assert
             result.IsSuccess.Should().BeTrue();
             result.Value.PenelitianHibahId.Should().Be(1);
-            result.Value.NIDN.Should().Be("123");
+            result.Value.NIDN.Should().Be("1234567890");
             result.Value.Status.Should().Be(0); // Default status
         }
 
@@ -50,22 +50,22 @@ namespace UnpakSipaksi.Modules.PenelitianHibah.DomainTest.MemberDosen
         public async void Update_ShouldReturnSuccess_WhenValid()
         {
             // Arrange
-            var original = Domain.MemberDosen.MemberDosen.Create(0, 1, "123").Value;
+            var original = Domain.MemberDosen.MemberDosen.Create(0, 1, "1234567890").Value;
             var hibah = await CreateValidHibah();
 
             // Act
-            var result = Domain.MemberDosen.MemberDosen.Update(0, original, hibah, "456");
+            var result = Domain.MemberDosen.MemberDosen.Update(0, original, hibah, "1123456789");
 
             // Assert
             result.IsSuccess.Should().BeTrue();
-            result.Value.NIDN.Should().Be("456");
+            result.Value.NIDN.Should().Be("1123456789");
         }
 
         [Fact]
         public async void Approve_ShouldUpdateStatusToApproved()
         {
             // Arrange
-            var member = Domain.MemberDosen.MemberDosen.Create(0, 1, "123").Value;
+            var member = Domain.MemberDosen.MemberDosen.Create(0, 1, "1234567890").Value;
             var hibah = await CreateValidHibah();
 
             // Act
@@ -92,7 +92,7 @@ namespace UnpakSipaksi.Modules.PenelitianHibah.DomainTest.MemberDosen
         public async void Reject_ShouldUpdateStatusToRejected()
         {
             // Arrange
-            var member = Domain.MemberDosen.MemberDosen.Create(0, 1, "123").Value;
+            var member = Domain.MemberDosen.MemberDosen.Create(0, 1, "1234567890").Value;
             var hibah = await CreateValidHibah();
 
             // Act

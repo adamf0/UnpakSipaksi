@@ -7,7 +7,7 @@ namespace UnpakSipaksi.Modules.KesesuaianSolusiMasalahMitra.Infrastructure.Datab
 {
     public sealed class KesesuaianSolusiMasalahMitraDbContext(DbContextOptions<KesesuaianSolusiMasalahMitraDbContext> options) : DbContext(options), IUnitOfWork
     {
-        internal DbSet<Domain.KesesuaianSolusiMasalahMitra.KesesuaianSolusiMasalahMitra> KesesuaianSolusiMasalahMitra { get; set; }
+        public DbSet<Domain.KesesuaianSolusiMasalahMitra.KesesuaianSolusiMasalahMitra> KesesuaianSolusiMasalahMitra { get; set; }
 
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {

@@ -7,7 +7,7 @@ namespace UnpakSipaksi.Modules.KebaruanReferensi.Infrastructure.Database
 {
     public sealed class KebaruanReferensiDbContext(DbContextOptions<KebaruanReferensiDbContext> options) : DbContext(options), IUnitOfWork
     {
-        internal DbSet<Domain.KebaruanReferensi.KebaruanReferensi> KebaruanReferensi { get; set; }
+        public DbSet<Domain.KebaruanReferensi.KebaruanReferensi> KebaruanReferensi { get; set; }
 
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {
@@ -37,6 +37,18 @@ namespace UnpakSipaksi.Modules.KebaruanReferensi.Infrastructure.Database
 
                 entity.Property(e => e.Skor)
                       .HasColumnName("skor");
+
+                //entity.Property(e => e.BobotPDP)
+                //      .HasColumnName("bobot_pdp");
+
+                //entity.Property(e => e.BobotTerapan)
+                //      .HasColumnName("bobot_terapan");
+
+                //entity.Property(e => e.BobotKerjasama)
+                //      .HasColumnName("bobot_kerjasama");
+
+                //entity.Property(e => e.BobotPenelitianDasar)
+                //      .HasColumnName("bobot_penelitian_dasar");
 
             });
         }

@@ -10,6 +10,7 @@ namespace UnpakSipaksi.Modules.LaporanKemajuan.Domain.Dokumen
             Error.NotFound("LaporanKemajuanDokumen.InvalidType", "Invalid value 'type'");
         public static Error NotFound(Guid Id) =>
             Error.NotFound("LaporanKemajuanDokumen.NotFound", $"Dokumen laporan akhir with the identifier {Id} was not found");
-
+        public static Error InvalidData() =>
+           Error.NotFound("LaporanKemajuanDokumen.InvalidData", "Hibah penelitian is not match existing data");
     }
 }

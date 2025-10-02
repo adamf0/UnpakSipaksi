@@ -9,7 +9,7 @@ namespace UnpakSipaksi.Modules.PenugasanReviewer.DomainTest
         public void Create_WhenValidPropertiesProvided_ShouldReturnKategoriWithCorrectProperties()
         {
             // Arrange
-            string nidn = "065117251";
+            string nidn = "1234567890";
             int status = 1;
 
             // Act
@@ -29,7 +29,7 @@ namespace UnpakSipaksi.Modules.PenugasanReviewer.DomainTest
         public void Create_WhenValidPropertiesProvided_ShouldRaiseKategoriCreatedDomainEvent()
         {
             // Arrange
-            string nidn = "065117251";
+            string nidn = "1234567890";
             int status = 1;
 
             // Act

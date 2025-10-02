@@ -7,7 +7,7 @@ namespace UnpakSipaksi.Modules.PenelitianHibah.Infrastructure.Database
 {
     public sealed class SubstansiDbContext(DbContextOptions<SubstansiDbContext> options) : DbContext(options), IUnitOfWorkSubstansi
     {
-        internal DbSet<Domain.Substansi.Substansi> Substansi { get; set; }
+        public DbSet<Domain.Substansi.Substansi> Substansi { get; set; }
 
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {

@@ -7,7 +7,7 @@ namespace UnpakSipaksi.Modules.KelompokRab.Infrastructure.Database
 {
     public sealed class KelompokRabDbContext(DbContextOptions<KelompokRabDbContext> options) : DbContext(options), IUnitOfWork
     {
-        internal DbSet<Domain.KelompokRab.KelompokRab> KelompokRab { get; set; }
+        public DbSet<Domain.KelompokRab.KelompokRab> KelompokRab { get; set; }
 
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {

@@ -11,7 +11,7 @@ namespace UnpakSipaksi.Modules.Roadmap.Domaintest
         public void Build_WhenFieldsChanged_ShouldReturnUpdatedRoadmap()
         {
             // Arrange
-            string nidn = "065117251";
+            string nidn = "1234567890";
             string link = "https://drive.google.com/file/d/abc123/view";
 
             var createResult = Domain.Roadmap.Roadmap.Create(
@@ -21,7 +21,7 @@ namespace UnpakSipaksi.Modules.Roadmap.Domaintest
             var Roadmap = createResult.Value;
 
             // Act
-            string newNidn = "065117252";
+            string newNidn = "1123456789";
             string newLink = "https://drive.google.com/file/d/abc124/view";
 
             RoadmapBuilder builder = Domain.Roadmap.Roadmap.Update(Roadmap);
@@ -40,7 +40,7 @@ namespace UnpakSipaksi.Modules.Roadmap.Domaintest
         public void Build_WhenInvalidLinkChanged_ShouldReturnInvalidRoadmap()
         {
             // Arrange
-            string nidn = "065117251";
+            string nidn = "1234567890";
             string link = "https://drive.google.com/file/d/abc123/view";
 
             var createResult = Domain.Roadmap.Roadmap.Create(
@@ -50,7 +50,7 @@ namespace UnpakSipaksi.Modules.Roadmap.Domaintest
             var Roadmap = createResult.Value;
 
             // Act
-            string newNidn = "065117252";
+            string newNidn = "1123456789";
             string newLink = "https://targte.com/yyyy";
 
             RoadmapBuilder builder = Domain.Roadmap.Roadmap.Update(Roadmap);

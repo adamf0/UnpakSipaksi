@@ -15,8 +15,7 @@ namespace UnpakSipaksi.Modules.KejelasanPembagianTugasTim.Application.UpdateKeje
                 .NotEmpty().WithMessage("'Nama' tidak boleh kosong.");
 
             RuleFor(c => c.Skor)
-                .NotEmpty().WithMessage("'Skor' tidak boleh kosong.")
-                .LessThan(0).WithMessage("'Skor' tidak boleh kurang dari 0");
+               .GreaterThanOrEqualTo(0).WithMessage("'Skor' tidak boleh negative.");
         }
     }
 }

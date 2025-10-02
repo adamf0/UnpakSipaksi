@@ -15,8 +15,13 @@ namespace UnpakSipaksi.Common.Application
             @"^[0-9a-f]{8}-[0-9a-f]{4}-4[0-9a-f]{3}-[89ab][0-9a-f]{3}-[0-9a-f]{12}$",
             RegexOptions.Compiled | RegexOptions.IgnoreCase);
 
-        public static bool BeValidGuidV4(string guid)
+        public static bool BeValidGuidV4(string? guid)
         {
+            if (guid is null)
+            {
+                return false;
+            }
+
             return GuidV4Regex.IsMatch(guid);
         }
 
@@ -55,5 +60,14 @@ namespace UnpakSipaksi.Common.Application
 
         public static bool BeValidDate(string tanggal) =>
             DateTime.TryParseExact(tanggal, "yyyy-MM-dd", CultureInfo.InvariantCulture, DateTimeStyles.None, out _);
+
+        public static bool BeValidNPM(string npm)
+        {
+            return npm.Length == 9 && npm.All(char.IsDigit);
+        }
+        public static bool BeValidNidn(string nidn)
+        {
+            return (nidn.Length == 10 || nidn.Length == 11) && nidn.All(char.IsDigit);
+        }
     }
 }

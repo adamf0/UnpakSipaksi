@@ -4,6 +4,6 @@ namespace UnpakSipaksi.Modules.PenelitianHibah.Application.CreateDokumenKontrak
 {
     public sealed record CreateDokumenKontrakCommand(
           string UuidPenelitianHibah,
-          string? File
+          string File
     ) : ICommand<Guid>;
 }

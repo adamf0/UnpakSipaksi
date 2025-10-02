@@ -7,7 +7,7 @@ namespace UnpakSipaksi.Modules.ModelFeasibilityStudys.Infrastructure.Database
 {
     public sealed class ModelFeasibilityStudysDbContext(DbContextOptions<ModelFeasibilityStudysDbContext> options) : DbContext(options), IUnitOfWork
     {
-        internal DbSet<Domain.ModelFeasibilityStudys.ModelFeasibilityStudys> ModelFeasibilityStudys { get; set; }
+        public DbSet<Domain.ModelFeasibilityStudys.ModelFeasibilityStudys> ModelFeasibilityStudys { get; set; }
 
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {

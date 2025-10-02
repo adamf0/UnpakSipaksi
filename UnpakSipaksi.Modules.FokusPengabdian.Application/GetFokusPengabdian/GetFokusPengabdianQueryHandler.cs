@@ -19,7 +19,7 @@ namespace UnpakSipaksi.Modules.FokusPengabdian.Application.GetFokusPengabdian
                 $"""
                  SELECT 
                      CAST(NULLIF(uuid, '') AS VARCHAR(36)) AS Uuid,
-                     name as Nama 
+                     nama as Nama 
                  FROM fokus_pengabdian 
                  WHERE uuid = @Uuid
                  """;

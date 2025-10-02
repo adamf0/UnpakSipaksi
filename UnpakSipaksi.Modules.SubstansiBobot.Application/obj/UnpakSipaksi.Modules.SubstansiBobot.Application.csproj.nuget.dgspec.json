@@ -13,6 +13,7 @@
         "packagesPath": "C:\\Users\\putik\\.nuget\\packages\\",
         "outputPath": "C:\\dev_net\\UnpakSipaksi\\UnpakSipaksi.Common.Application\\obj\\",
         "projectStyle": "PackageReference",
+        "centralPackageVersionsManagementEnabled": true,
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
         ],
@@ -22,7 +23,7 @@
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
-          "net8.0"
+          "net9.0"
         ],
         "sources": {
           "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
@@ -30,8 +31,8 @@
           "https://api.nuget.org/v3/index.json": {}
         },
         "frameworks": {
-          "net8.0": {
-            "targetAlias": "net8.0",
+          "net9.0": {
+            "targetAlias": "net9.0",
             "projectReferences": {
               "C:\\dev_net\\UnpakSipaksi\\UnpakSipaksi.Common.Domain\\UnpakSipaksi.Common.Domain.csproj": {
                 "projectPath": "C:\\dev_net\\UnpakSipaksi\\UnpakSipaksi.Common.Domain\\UnpakSipaksi.Common.Domain.csproj"
@@ -52,175 +53,66 @@
         "SdkAnalysisLevel": "9.0.300"
       },
       "frameworks": {
-        "net8.0": {
-          "targetAlias": "net8.0",
+        "net9.0": {
+          "targetAlias": "net9.0",
           "dependencies": {
             "Dapper": {
               "target": "Package",
-              "version": "[2.1.35, )"
+              "version": "[2.1.66, )",
+              "versionCentrallyManaged": true
             },
             "FluentValidation.DependencyInjectionExtensions": {
               "target": "Package",
-              "version": "[11.11.0, )"
+              "version": "[12.0.0, )",
+              "versionCentrallyManaged": true
             },
             "MediatR": {
               "target": "Package",
-              "version": "[12.4.1, )"
-            },
-            "Microsoft.AspNetCore.Http.Features": {
-              "target": "Package",
-              "version": "[5.0.17, )"
+              "version": "[13.0.0, )",
+              "versionCentrallyManaged": true
             },
             "Microsoft.Extensions.Logging.Abstractions": {
               "target": "Package",
-              "version": "[9.0.0, )"
+              "version": "[9.0.9, )",
+              "versionCentrallyManaged": true
             },
             "Serilog": {
               "target": "Package",
-              "version": "[4.2.0-dev-02328, )"
+              "version": "[4.3.0, )",
+              "versionCentrallyManaged": true
             }
           },
-          "imports": [
-            "net461",
-            "net462",
-            "net47",
-            "net471",
-            "net472",
-            "net48",
-            "net481"
-          ],
-          "assetTargetFallback": true,
-          "warn": true,
-          "frameworkReferences": {
-            "Microsoft.NETCore.App": {
-              "privateAssets": "all"
-            }
-          },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\9.0.302/PortableRuntimeIdentifierGraph.json"
-        }
-      }
-    },
-    "C:\\dev_net\\UnpakSipaksi\\UnpakSipaksi.Common.Domain\\UnpakSipaksi.Common.Domain.csproj": {
-      "version": "1.0.0",
-      "restore": {
-        "projectUniqueName": "C:\\dev_net\\UnpakSipaksi\\UnpakSipaksi.Common.Domain\\UnpakSipaksi.Common.Domain.csproj",
-        "projectName": "UnpakSipaksi.Common.Domain",
-        "projectPath": "C:\\dev_net\\UnpakSipaksi\\UnpakSipaksi.Common.Domain\\UnpakSipaksi.Common.Domain.csproj",
-        "packagesPath": "C:\\Users\\putik\\.nuget\\packages\\",
-        "outputPath": "C:\\dev_net\\UnpakSipaksi\\UnpakSipaksi.Common.Domain\\obj\\",
-        "projectStyle": "PackageReference",
-        "fallbackFolders": [
-          "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
-        ],
-        "configFilePaths": [
-          "C:\\Users\\putik\\AppData\\Roaming\\NuGet\\NuGet.Config",
-          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
-          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
-        ],
-        "originalTargetFrameworks": [
-          "net8.0"
-        ],
-        "sources": {
-          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
-          "C:\\Program Files\\dotnet\\library-packs": {},
-          "https://api.nuget.org/v3/index.json": {}
-        },
-        "frameworks": {
-          "net8.0": {
-            "targetAlias": "net8.0",
-            "projectReferences": {}
-          }
-        },
-        "warningProperties": {
-          "warnAsError": [
-            "NU1605"
-          ]
-        },
-        "restoreAuditProperties": {
-          "enableAudit": "true",
-          "auditLevel": "low",
-          "auditMode": "direct"
-        },
-        "SdkAnalysisLevel": "9.0.300"
-      },
-      "frameworks": {
-        "net8.0": {
-          "targetAlias": "net8.0",
-          "imports": [
-            "net461",
-            "net462",
-            "net47",
-            "net471",
-            "net472",
-            "net48",
-            "net481"
-          ],
-          "assetTargetFallback": true,
-          "warn": true,
-          "frameworkReferences": {
-            "Microsoft.NETCore.App": {
-              "privateAssets": "all"
-            }
-          },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\9.0.302/PortableRuntimeIdentifierGraph.json"
-        }
-      }
-    },
-    "C:\\dev_net\\UnpakSipaksi\\UnpakSipaksi.Common.Presentation\\UnpakSipaksi.Common.Presentation.csproj": {
-      "version": "1.0.0",
-      "restore": {
-        "projectUniqueName": "C:\\dev_net\\UnpakSipaksi\\UnpakSipaksi.Common.Presentation\\UnpakSipaksi.Common.Presentation.csproj",
-        "projectName": "UnpakSipaksi.Common.Presentation",
-        "projectPath": "C:\\dev_net\\UnpakSipaksi\\UnpakSipaksi.Common.Presentation\\UnpakSipaksi.Common.Presentation.csproj",
-        "packagesPath": "C:\\Users\\putik\\.nuget\\packages\\",
-        "outputPath": "C:\\dev_net\\UnpakSipaksi\\UnpakSipaksi.Common.Presentation\\obj\\",
-        "projectStyle": "PackageReference",
-        "fallbackFolders": [
-          "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
-        ],
-        "configFilePaths": [
-          "C:\\Users\\putik\\AppData\\Roaming\\NuGet\\NuGet.Config",
-          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
-          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
-        ],
-        "originalTargetFrameworks": [
-          "net8.0"
-        ],
-        "sources": {
-          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
-          "C:\\Program Files\\dotnet\\library-packs": {},
-          "https://api.nuget.org/v3/index.json": {}
-        },
-        "frameworks": {
-          "net8.0": {
-            "targetAlias": "net8.0",
-            "projectReferences": {
-              "C:\\dev_net\\UnpakSipaksi\\UnpakSipaksi.Common.Domain\\UnpakSipaksi.Common.Domain.csproj": {
-                "projectPath": "C:\\dev_net\\UnpakSipaksi\\UnpakSipaksi.Common.Domain\\UnpakSipaksi.Common.Domain.csproj"
-              }
-            }
-          }
-        },
-        "warningProperties": {
-          "warnAsError": [
-            "NU1605"
-          ]
-        },
-        "restoreAuditProperties": {
-          "enableAudit": "true",
-          "auditLevel": "low",
-          "auditMode": "direct"
-        },
-        "SdkAnalysisLevel": "9.0.300"
-      },
-      "frameworks": {
-        "net8.0": {
-          "targetAlias": "net8.0",
-          "dependencies": {
-            "Microsoft.AspNetCore.Authentication.JwtBearer": {
-              "target": "Package",
-              "version": "[8.0.13, )"
-            }
+          "centralPackageVersions": {
+            "coverlet.collector": "6.0.0",
+            "Dapper": "2.1.66",
+            "DotNet.Testcontainers": "1.6.0",
+            "FluentAssertions": "8.3.0",
+            "FluentValidation.DependencyInjectionExtensions": "12.0.0",
+            "MediatR": "13.0.0",
+            "Microsoft.AspNetCore.Authentication.JwtBearer": "9.0.9",
+            "Microsoft.AspNetCore.Mvc.Testing": "9.0.9",
+            "Microsoft.EntityFrameworkCore": "9.0.9",
+            "Microsoft.EntityFrameworkCore.Design": "9.0.9",
+            "Microsoft.EntityFrameworkCore.Tools": "9.0.9",
+            "Microsoft.Extensions.Logging.Abstractions": "9.0.9",
+            "Microsoft.NET.Test.Sdk": "17.8.0",
+            "Microsoft.VisualStudio.Azure.Containers.Tools.Targets": "1.22.1",
+            "Minio.AspNetCore": "6.0.1",
+            "Moq": "4.20.72",
+            "MySql.EntityFrameworkCore": "9.0.6",
+            "MySqlConnector": "2.4.0",
+            "Newtonsoft.Json": "13.0.4",
+            "Serilog": "4.3.0",
+            "Serilog.AspNetCore": "9.0.0",
+            "Serilog.Sinks.Seq": "9.0.0",
+            "Swashbuckle.AspNetCore": "9.0.4",
+            "System.Text.Json": "9.0.9",
+            "Testcontainers": "4.7.0",
+            "Testcontainers.MariaDb": "4.7.0",
+            "Testcontainers.MySql": "4.7.0",
+            "xunit": "2.5.3",
+            "xunit.extensibility.core": "2.5.3",
+            "xunit.runner.visualstudio": "2.5.3"
           },
           "imports": [
             "net461",
@@ -241,7 +133,219 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\9.0.302/PortableRuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\9.0.305/PortableRuntimeIdentifierGraph.json"
+        }
+      }
+    },
+    "C:\\dev_net\\UnpakSipaksi\\UnpakSipaksi.Common.Domain\\UnpakSipaksi.Common.Domain.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "C:\\dev_net\\UnpakSipaksi\\UnpakSipaksi.Common.Domain\\UnpakSipaksi.Common.Domain.csproj",
+        "projectName": "UnpakSipaksi.Common.Domain",
+        "projectPath": "C:\\dev_net\\UnpakSipaksi\\UnpakSipaksi.Common.Domain\\UnpakSipaksi.Common.Domain.csproj",
+        "packagesPath": "C:\\Users\\putik\\.nuget\\packages\\",
+        "outputPath": "C:\\dev_net\\UnpakSipaksi\\UnpakSipaksi.Common.Domain\\obj\\",
+        "projectStyle": "PackageReference",
+        "centralPackageVersionsManagementEnabled": true,
+        "fallbackFolders": [
+          "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
+        ],
+        "configFilePaths": [
+          "C:\\Users\\putik\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+        ],
+        "originalTargetFrameworks": [
+          "net9.0"
+        ],
+        "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "C:\\Program Files\\dotnet\\library-packs": {},
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "net9.0": {
+            "targetAlias": "net9.0",
+            "projectReferences": {}
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        },
+        "restoreAuditProperties": {
+          "enableAudit": "true",
+          "auditLevel": "low",
+          "auditMode": "direct"
+        },
+        "SdkAnalysisLevel": "9.0.300"
+      },
+      "frameworks": {
+        "net9.0": {
+          "targetAlias": "net9.0",
+          "centralPackageVersions": {
+            "coverlet.collector": "6.0.0",
+            "Dapper": "2.1.66",
+            "DotNet.Testcontainers": "1.6.0",
+            "FluentAssertions": "8.3.0",
+            "FluentValidation.DependencyInjectionExtensions": "12.0.0",
+            "MediatR": "13.0.0",
+            "Microsoft.AspNetCore.Authentication.JwtBearer": "9.0.9",
+            "Microsoft.AspNetCore.Mvc.Testing": "9.0.9",
+            "Microsoft.EntityFrameworkCore": "9.0.9",
+            "Microsoft.EntityFrameworkCore.Design": "9.0.9",
+            "Microsoft.EntityFrameworkCore.Tools": "9.0.9",
+            "Microsoft.Extensions.Logging.Abstractions": "9.0.9",
+            "Microsoft.NET.Test.Sdk": "17.8.0",
+            "Microsoft.VisualStudio.Azure.Containers.Tools.Targets": "1.22.1",
+            "Minio.AspNetCore": "6.0.1",
+            "Moq": "4.20.72",
+            "MySql.EntityFrameworkCore": "9.0.6",
+            "MySqlConnector": "2.4.0",
+            "Newtonsoft.Json": "13.0.4",
+            "Serilog": "4.3.0",
+            "Serilog.AspNetCore": "9.0.0",
+            "Serilog.Sinks.Seq": "9.0.0",
+            "Swashbuckle.AspNetCore": "9.0.4",
+            "System.Text.Json": "9.0.9",
+            "Testcontainers": "4.7.0",
+            "Testcontainers.MariaDb": "4.7.0",
+            "Testcontainers.MySql": "4.7.0",
+            "xunit": "2.5.3",
+            "xunit.extensibility.core": "2.5.3",
+            "xunit.runner.visualstudio": "2.5.3"
+          },
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48",
+            "net481"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\9.0.305/PortableRuntimeIdentifierGraph.json"
+        }
+      }
+    },
+    "C:\\dev_net\\UnpakSipaksi\\UnpakSipaksi.Common.Presentation\\UnpakSipaksi.Common.Presentation.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "C:\\dev_net\\UnpakSipaksi\\UnpakSipaksi.Common.Presentation\\UnpakSipaksi.Common.Presentation.csproj",
+        "projectName": "UnpakSipaksi.Common.Presentation",
+        "projectPath": "C:\\dev_net\\UnpakSipaksi\\UnpakSipaksi.Common.Presentation\\UnpakSipaksi.Common.Presentation.csproj",
+        "packagesPath": "C:\\Users\\putik\\.nuget\\packages\\",
+        "outputPath": "C:\\dev_net\\UnpakSipaksi\\UnpakSipaksi.Common.Presentation\\obj\\",
+        "projectStyle": "PackageReference",
+        "centralPackageVersionsManagementEnabled": true,
+        "fallbackFolders": [
+          "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
+        ],
+        "configFilePaths": [
+          "C:\\Users\\putik\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+        ],
+        "originalTargetFrameworks": [
+          "net9.0"
+        ],
+        "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "C:\\Program Files\\dotnet\\library-packs": {},
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "net9.0": {
+            "targetAlias": "net9.0",
+            "projectReferences": {
+              "C:\\dev_net\\UnpakSipaksi\\UnpakSipaksi.Common.Domain\\UnpakSipaksi.Common.Domain.csproj": {
+                "projectPath": "C:\\dev_net\\UnpakSipaksi\\UnpakSipaksi.Common.Domain\\UnpakSipaksi.Common.Domain.csproj"
+              }
+            }
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        },
+        "restoreAuditProperties": {
+          "enableAudit": "true",
+          "auditLevel": "low",
+          "auditMode": "direct"
+        },
+        "SdkAnalysisLevel": "9.0.300"
+      },
+      "frameworks": {
+        "net9.0": {
+          "targetAlias": "net9.0",
+          "dependencies": {
+            "Microsoft.AspNetCore.Authentication.JwtBearer": {
+              "target": "Package",
+              "version": "[9.0.9, )",
+              "versionCentrallyManaged": true
+            }
+          },
+          "centralPackageVersions": {
+            "coverlet.collector": "6.0.0",
+            "Dapper": "2.1.66",
+            "DotNet.Testcontainers": "1.6.0",
+            "FluentAssertions": "8.3.0",
+            "FluentValidation.DependencyInjectionExtensions": "12.0.0",
+            "MediatR": "13.0.0",
+            "Microsoft.AspNetCore.Authentication.JwtBearer": "9.0.9",
+            "Microsoft.AspNetCore.Mvc.Testing": "9.0.9",
+            "Microsoft.EntityFrameworkCore": "9.0.9",
+            "Microsoft.EntityFrameworkCore.Design": "9.0.9",
+            "Microsoft.EntityFrameworkCore.Tools": "9.0.9",
+            "Microsoft.Extensions.Logging.Abstractions": "9.0.9",
+            "Microsoft.NET.Test.Sdk": "17.8.0",
+            "Microsoft.VisualStudio.Azure.Containers.Tools.Targets": "1.22.1",
+            "Minio.AspNetCore": "6.0.1",
+            "Moq": "4.20.72",
+            "MySql.EntityFrameworkCore": "9.0.6",
+            "MySqlConnector": "2.4.0",
+            "Newtonsoft.Json": "13.0.4",
+            "Serilog": "4.3.0",
+            "Serilog.AspNetCore": "9.0.0",
+            "Serilog.Sinks.Seq": "9.0.0",
+            "Swashbuckle.AspNetCore": "9.0.4",
+            "System.Text.Json": "9.0.9",
+            "Testcontainers": "4.7.0",
+            "Testcontainers.MariaDb": "4.7.0",
+            "Testcontainers.MySql": "4.7.0",
+            "xunit": "2.5.3",
+            "xunit.extensibility.core": "2.5.3",
+            "xunit.runner.visualstudio": "2.5.3"
+          },
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48",
+            "net481"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
+            "Microsoft.AspNetCore.App": {
+              "privateAssets": "none"
+            },
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\9.0.305/PortableRuntimeIdentifierGraph.json"
         }
       }
     },
@@ -254,6 +358,7 @@
         "packagesPath": "C:\\Users\\putik\\.nuget\\packages\\",
         "outputPath": "C:\\dev_net\\UnpakSipaksi\\UnpakSipaksi.Modules.AkurasiPenelitian.PublicApi\\obj\\",
         "projectStyle": "PackageReference",
+        "centralPackageVersionsManagementEnabled": true,
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
         ],
@@ -263,7 +368,7 @@
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
-          "net8.0"
+          "net9.0"
         ],
         "sources": {
           "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
@@ -271,8 +376,8 @@
           "https://api.nuget.org/v3/index.json": {}
         },
         "frameworks": {
-          "net8.0": {
-            "targetAlias": "net8.0",
+          "net9.0": {
+            "targetAlias": "net9.0",
             "projectReferences": {}
           }
         },
@@ -289,8 +394,40 @@
         "SdkAnalysisLevel": "9.0.300"
       },
       "frameworks": {
-        "net8.0": {
-          "targetAlias": "net8.0",
+        "net9.0": {
+          "targetAlias": "net9.0",
+          "centralPackageVersions": {
+            "coverlet.collector": "6.0.0",
+            "Dapper": "2.1.66",
+            "DotNet.Testcontainers": "1.6.0",
+            "FluentAssertions": "8.3.0",
+            "FluentValidation.DependencyInjectionExtensions": "12.0.0",
+            "MediatR": "13.0.0",
+            "Microsoft.AspNetCore.Authentication.JwtBearer": "9.0.9",
+            "Microsoft.AspNetCore.Mvc.Testing": "9.0.9",
+            "Microsoft.EntityFrameworkCore": "9.0.9",
+            "Microsoft.EntityFrameworkCore.Design": "9.0.9",
+            "Microsoft.EntityFrameworkCore.Tools": "9.0.9",
+            "Microsoft.Extensions.Logging.Abstractions": "9.0.9",
+            "Microsoft.NET.Test.Sdk": "17.8.0",
+            "Microsoft.VisualStudio.Azure.Containers.Tools.Targets": "1.22.1",
+            "Minio.AspNetCore": "6.0.1",
+            "Moq": "4.20.72",
+            "MySql.EntityFrameworkCore": "9.0.6",
+            "MySqlConnector": "2.4.0",
+            "Newtonsoft.Json": "13.0.4",
+            "Serilog": "4.3.0",
+            "Serilog.AspNetCore": "9.0.0",
+            "Serilog.Sinks.Seq": "9.0.0",
+            "Swashbuckle.AspNetCore": "9.0.4",
+            "System.Text.Json": "9.0.9",
+            "Testcontainers": "4.7.0",
+            "Testcontainers.MariaDb": "4.7.0",
+            "Testcontainers.MySql": "4.7.0",
+            "xunit": "2.5.3",
+            "xunit.extensibility.core": "2.5.3",
+            "xunit.runner.visualstudio": "2.5.3"
+          },
           "imports": [
             "net461",
             "net462",
@@ -307,7 +444,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\9.0.302/PortableRuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\9.0.305/PortableRuntimeIdentifierGraph.json"
         }
       }
     },
@@ -320,6 +457,7 @@
         "packagesPath": "C:\\Users\\putik\\.nuget\\packages\\",
         "outputPath": "C:\\dev_net\\UnpakSipaksi\\UnpakSipaksi.Modules.ArtikelMediaMassa.PublicApi\\obj\\",
         "projectStyle": "PackageReference",
+        "centralPackageVersionsManagementEnabled": true,
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
         ],
@@ -329,7 +467,7 @@
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
-          "net8.0"
+          "net9.0"
         ],
         "sources": {
           "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
@@ -337,8 +475,8 @@
           "https://api.nuget.org/v3/index.json": {}
         },
         "frameworks": {
-          "net8.0": {
-            "targetAlias": "net8.0",
+          "net9.0": {
+            "targetAlias": "net9.0",
             "projectReferences": {}
           }
         },
@@ -355,8 +493,40 @@
         "SdkAnalysisLevel": "9.0.300"
       },
       "frameworks": {
-        "net8.0": {
-          "targetAlias": "net8.0",
+        "net9.0": {
+          "targetAlias": "net9.0",
+          "centralPackageVersions": {
+            "coverlet.collector": "6.0.0",
+            "Dapper": "2.1.66",
+            "DotNet.Testcontainers": "1.6.0",
+            "FluentAssertions": "8.3.0",
+            "FluentValidation.DependencyInjectionExtensions": "12.0.0",
+            "MediatR": "13.0.0",
+            "Microsoft.AspNetCore.Authentication.JwtBearer": "9.0.9",
+            "Microsoft.AspNetCore.Mvc.Testing": "9.0.9",
+            "Microsoft.EntityFrameworkCore": "9.0.9",
+            "Microsoft.EntityFrameworkCore.Design": "9.0.9",
+            "Microsoft.EntityFrameworkCore.Tools": "9.0.9",
+            "Microsoft.Extensions.Logging.Abstractions": "9.0.9",
+            "Microsoft.NET.Test.Sdk": "17.8.0",
+            "Microsoft.VisualStudio.Azure.Containers.Tools.Targets": "1.22.1",
+            "Minio.AspNetCore": "6.0.1",
+            "Moq": "4.20.72",
+            "MySql.EntityFrameworkCore": "9.0.6",
+            "MySqlConnector": "2.4.0",
+            "Newtonsoft.Json": "13.0.4",
+            "Serilog": "4.3.0",
+            "Serilog.AspNetCore": "9.0.0",
+            "Serilog.Sinks.Seq": "9.0.0",
+            "Swashbuckle.AspNetCore": "9.0.4",
+            "System.Text.Json": "9.0.9",
+            "Testcontainers": "4.7.0",
+            "Testcontainers.MariaDb": "4.7.0",
+            "Testcontainers.MySql": "4.7.0",
+            "xunit": "2.5.3",
+            "xunit.extensibility.core": "2.5.3",
+            "xunit.runner.visualstudio": "2.5.3"
+          },
           "imports": [
             "net461",
             "net462",
@@ -373,7 +543,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\9.0.302/PortableRuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\9.0.305/PortableRuntimeIdentifierGraph.json"
         }
       }
     },
@@ -386,6 +556,7 @@
         "packagesPath": "C:\\Users\\putik\\.nuget\\packages\\",
         "outputPath": "C:\\dev_net\\UnpakSipaksi\\UnpakSipaksi.Modules.InovasiPemecahanMasalah.PublicApi\\obj\\",
         "projectStyle": "PackageReference",
+        "centralPackageVersionsManagementEnabled": true,
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
         ],
@@ -395,7 +566,7 @@
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
-          "net8.0"
+          "net9.0"
         ],
         "sources": {
           "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
@@ -403,8 +574,8 @@
           "https://api.nuget.org/v3/index.json": {}
         },
         "frameworks": {
-          "net8.0": {
-            "targetAlias": "net8.0",
+          "net9.0": {
+            "targetAlias": "net9.0",
             "projectReferences": {}
           }
         },
@@ -421,8 +592,40 @@
         "SdkAnalysisLevel": "9.0.300"
       },
       "frameworks": {
-        "net8.0": {
-          "targetAlias": "net8.0",
+        "net9.0": {
+          "targetAlias": "net9.0",
+          "centralPackageVersions": {
+            "coverlet.collector": "6.0.0",
+            "Dapper": "2.1.66",
+            "DotNet.Testcontainers": "1.6.0",
+            "FluentAssertions": "8.3.0",
+            "FluentValidation.DependencyInjectionExtensions": "12.0.0",
+            "MediatR": "13.0.0",
+            "Microsoft.AspNetCore.Authentication.JwtBearer": "9.0.9",
+            "Microsoft.AspNetCore.Mvc.Testing": "9.0.9",
+            "Microsoft.EntityFrameworkCore": "9.0.9",
+            "Microsoft.EntityFrameworkCore.Design": "9.0.9",
+            "Microsoft.EntityFrameworkCore.Tools": "9.0.9",
+            "Microsoft.Extensions.Logging.Abstractions": "9.0.9",
+            "Microsoft.NET.Test.Sdk": "17.8.0",
+            "Microsoft.VisualStudio.Azure.Containers.Tools.Targets": "1.22.1",
+            "Minio.AspNetCore": "6.0.1",
+            "Moq": "4.20.72",
+            "MySql.EntityFrameworkCore": "9.0.6",
+            "MySqlConnector": "2.4.0",
+            "Newtonsoft.Json": "13.0.4",
+            "Serilog": "4.3.0",
+            "Serilog.AspNetCore": "9.0.0",
+            "Serilog.Sinks.Seq": "9.0.0",
+            "Swashbuckle.AspNetCore": "9.0.4",
+            "System.Text.Json": "9.0.9",
+            "Testcontainers": "4.7.0",
+            "Testcontainers.MariaDb": "4.7.0",
+            "Testcontainers.MySql": "4.7.0",
+            "xunit": "2.5.3",
+            "xunit.extensibility.core": "2.5.3",
+            "xunit.runner.visualstudio": "2.5.3"
+          },
           "imports": [
             "net461",
             "net462",
@@ -439,7 +642,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\9.0.302/PortableRuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\9.0.305/PortableRuntimeIdentifierGraph.json"
         }
       }
     },
@@ -452,6 +655,7 @@
         "packagesPath": "C:\\Users\\putik\\.nuget\\packages\\",
         "outputPath": "C:\\dev_net\\UnpakSipaksi\\UnpakSipaksi.Modules.JumlahKolaboratorPublikasBereputasi.PublicApi\\obj\\",
         "projectStyle": "PackageReference",
+        "centralPackageVersionsManagementEnabled": true,
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
         ],
@@ -461,7 +665,7 @@
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
-          "net8.0"
+          "net9.0"
         ],
         "sources": {
           "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
@@ -469,8 +673,8 @@
           "https://api.nuget.org/v3/index.json": {}
         },
         "frameworks": {
-          "net8.0": {
-            "targetAlias": "net8.0",
+          "net9.0": {
+            "targetAlias": "net9.0",
             "projectReferences": {}
           }
         },
@@ -487,8 +691,40 @@
         "SdkAnalysisLevel": "9.0.300"
       },
       "frameworks": {
-        "net8.0": {
-          "targetAlias": "net8.0",
+        "net9.0": {
+          "targetAlias": "net9.0",
+          "centralPackageVersions": {
+            "coverlet.collector": "6.0.0",
+            "Dapper": "2.1.66",
+            "DotNet.Testcontainers": "1.6.0",
+            "FluentAssertions": "8.3.0",
+            "FluentValidation.DependencyInjectionExtensions": "12.0.0",
+            "MediatR": "13.0.0",
+            "Microsoft.AspNetCore.Authentication.JwtBearer": "9.0.9",
+            "Microsoft.AspNetCore.Mvc.Testing": "9.0.9",
+            "Microsoft.EntityFrameworkCore": "9.0.9",
+            "Microsoft.EntityFrameworkCore.Design": "9.0.9",
+            "Microsoft.EntityFrameworkCore.Tools": "9.0.9",
+            "Microsoft.Extensions.Logging.Abstractions": "9.0.9",
+            "Microsoft.NET.Test.Sdk": "17.8.0",
+            "Microsoft.VisualStudio.Azure.Containers.Tools.Targets": "1.22.1",
+            "Minio.AspNetCore": "6.0.1",
+            "Moq": "4.20.72",
+            "MySql.EntityFrameworkCore": "9.0.6",
+            "MySqlConnector": "2.4.0",
+            "Newtonsoft.Json": "13.0.4",
+            "Serilog": "4.3.0",
+            "Serilog.AspNetCore": "9.0.0",
+            "Serilog.Sinks.Seq": "9.0.0",
+            "Swashbuckle.AspNetCore": "9.0.4",
+            "System.Text.Json": "9.0.9",
+            "Testcontainers": "4.7.0",
+            "Testcontainers.MariaDb": "4.7.0",
+            "Testcontainers.MySql": "4.7.0",
+            "xunit": "2.5.3",
+            "xunit.extensibility.core": "2.5.3",
+            "xunit.runner.visualstudio": "2.5.3"
+          },
           "imports": [
             "net461",
             "net462",
@@ -505,7 +741,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\9.0.302/PortableRuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\9.0.305/PortableRuntimeIdentifierGraph.json"
         }
       }
     },
@@ -518,6 +754,7 @@
         "packagesPath": "C:\\Users\\putik\\.nuget\\packages\\",
         "outputPath": "C:\\dev_net\\UnpakSipaksi\\UnpakSipaksi.Modules.KebaruanReferensi.PublicApi\\obj\\",
         "projectStyle": "PackageReference",
+        "centralPackageVersionsManagementEnabled": true,
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
         ],
@@ -527,7 +764,7 @@
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
-          "net8.0"
+          "net9.0"
         ],
         "sources": {
           "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
@@ -535,8 +772,8 @@
           "https://api.nuget.org/v3/index.json": {}
         },
         "frameworks": {
-          "net8.0": {
-            "targetAlias": "net8.0",
+          "net9.0": {
+            "targetAlias": "net9.0",
             "projectReferences": {}
           }
         },
@@ -553,8 +790,40 @@
         "SdkAnalysisLevel": "9.0.300"
       },
       "frameworks": {
-        "net8.0": {
-          "targetAlias": "net8.0",
+        "net9.0": {
+          "targetAlias": "net9.0",
+          "centralPackageVersions": {
+            "coverlet.collector": "6.0.0",
+            "Dapper": "2.1.66",
+            "DotNet.Testcontainers": "1.6.0",
+            "FluentAssertions": "8.3.0",
+            "FluentValidation.DependencyInjectionExtensions": "12.0.0",
+            "MediatR": "13.0.0",
+            "Microsoft.AspNetCore.Authentication.JwtBearer": "9.0.9",
+            "Microsoft.AspNetCore.Mvc.Testing": "9.0.9",
+            "Microsoft.EntityFrameworkCore": "9.0.9",
+            "Microsoft.EntityFrameworkCore.Design": "9.0.9",
+            "Microsoft.EntityFrameworkCore.Tools": "9.0.9",
+            "Microsoft.Extensions.Logging.Abstractions": "9.0.9",
+            "Microsoft.NET.Test.Sdk": "17.8.0",
+            "Microsoft.VisualStudio.Azure.Containers.Tools.Targets": "1.22.1",
+            "Minio.AspNetCore": "6.0.1",
+            "Moq": "4.20.72",
+            "MySql.EntityFrameworkCore": "9.0.6",
+            "MySqlConnector": "2.4.0",
+            "Newtonsoft.Json": "13.0.4",
+            "Serilog": "4.3.0",
+            "Serilog.AspNetCore": "9.0.0",
+            "Serilog.Sinks.Seq": "9.0.0",
+            "Swashbuckle.AspNetCore": "9.0.4",
+            "System.Text.Json": "9.0.9",
+            "Testcontainers": "4.7.0",
+            "Testcontainers.MariaDb": "4.7.0",
+            "Testcontainers.MySql": "4.7.0",
+            "xunit": "2.5.3",
+            "xunit.extensibility.core": "2.5.3",
+            "xunit.runner.visualstudio": "2.5.3"
+          },
           "imports": [
             "net461",
             "net462",
@@ -571,7 +840,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\9.0.302/PortableRuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\9.0.305/PortableRuntimeIdentifierGraph.json"
         }
       }
     },
@@ -584,6 +853,7 @@
         "packagesPath": "C:\\Users\\putik\\.nuget\\packages\\",
         "outputPath": "C:\\dev_net\\UnpakSipaksi\\UnpakSipaksi.Modules.KejelasanPembagianTugasTim.PublicApi\\obj\\",
         "projectStyle": "PackageReference",
+        "centralPackageVersionsManagementEnabled": true,
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
         ],
@@ -593,7 +863,7 @@
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
-          "net8.0"
+          "net9.0"
         ],
         "sources": {
           "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
@@ -601,8 +871,8 @@
           "https://api.nuget.org/v3/index.json": {}
         },
         "frameworks": {
-          "net8.0": {
-            "targetAlias": "net8.0",
+          "net9.0": {
+            "targetAlias": "net9.0",
             "projectReferences": {}
           }
         },
@@ -619,8 +889,40 @@
         "SdkAnalysisLevel": "9.0.300"
       },
       "frameworks": {
-        "net8.0": {
-          "targetAlias": "net8.0",
+        "net9.0": {
+          "targetAlias": "net9.0",
+          "centralPackageVersions": {
+            "coverlet.collector": "6.0.0",
+            "Dapper": "2.1.66",
+            "DotNet.Testcontainers": "1.6.0",
+            "FluentAssertions": "8.3.0",
+            "FluentValidation.DependencyInjectionExtensions": "12.0.0",
+            "MediatR": "13.0.0",
+            "Microsoft.AspNetCore.Authentication.JwtBearer": "9.0.9",
+            "Microsoft.AspNetCore.Mvc.Testing": "9.0.9",
+            "Microsoft.EntityFrameworkCore": "9.0.9",
+            "Microsoft.EntityFrameworkCore.Design": "9.0.9",
+            "Microsoft.EntityFrameworkCore.Tools": "9.0.9",
+            "Microsoft.Extensions.Logging.Abstractions": "9.0.9",
+            "Microsoft.NET.Test.Sdk": "17.8.0",
+            "Microsoft.VisualStudio.Azure.Containers.Tools.Targets": "1.22.1",
+            "Minio.AspNetCore": "6.0.1",
+            "Moq": "4.20.72",
+            "MySql.EntityFrameworkCore": "9.0.6",
+            "MySqlConnector": "2.4.0",
+            "Newtonsoft.Json": "13.0.4",
+            "Serilog": "4.3.0",
+            "Serilog.AspNetCore": "9.0.0",
+            "Serilog.Sinks.Seq": "9.0.0",
+            "Swashbuckle.AspNetCore": "9.0.4",
+            "System.Text.Json": "9.0.9",
+            "Testcontainers": "4.7.0",
+            "Testcontainers.MariaDb": "4.7.0",
+            "Testcontainers.MySql": "4.7.0",
+            "xunit": "2.5.3",
+            "xunit.extensibility.core": "2.5.3",
+            "xunit.runner.visualstudio": "2.5.3"
+          },
           "imports": [
             "net461",
             "net462",
@@ -637,7 +939,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\9.0.302/PortableRuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\9.0.305/PortableRuntimeIdentifierGraph.json"
         }
       }
     },
@@ -650,6 +952,7 @@
         "packagesPath": "C:\\Users\\putik\\.nuget\\packages\\",
         "outputPath": "C:\\dev_net\\UnpakSipaksi\\UnpakSipaksi.Modules.KesesuaianJadwal.PublicApi\\obj\\",
         "projectStyle": "PackageReference",
+        "centralPackageVersionsManagementEnabled": true,
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
         ],
@@ -659,7 +962,7 @@
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
-          "net8.0"
+          "net9.0"
         ],
         "sources": {
           "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
@@ -667,8 +970,8 @@
           "https://api.nuget.org/v3/index.json": {}
         },
         "frameworks": {
-          "net8.0": {
-            "targetAlias": "net8.0",
+          "net9.0": {
+            "targetAlias": "net9.0",
             "projectReferences": {}
           }
         },
@@ -685,8 +988,40 @@
         "SdkAnalysisLevel": "9.0.300"
       },
       "frameworks": {
-        "net8.0": {
-          "targetAlias": "net8.0",
+        "net9.0": {
+          "targetAlias": "net9.0",
+          "centralPackageVersions": {
+            "coverlet.collector": "6.0.0",
+            "Dapper": "2.1.66",
+            "DotNet.Testcontainers": "1.6.0",
+            "FluentAssertions": "8.3.0",
+            "FluentValidation.DependencyInjectionExtensions": "12.0.0",
+            "MediatR": "13.0.0",
+            "Microsoft.AspNetCore.Authentication.JwtBearer": "9.0.9",
+            "Microsoft.AspNetCore.Mvc.Testing": "9.0.9",
+            "Microsoft.EntityFrameworkCore": "9.0.9",
+            "Microsoft.EntityFrameworkCore.Design": "9.0.9",
+            "Microsoft.EntityFrameworkCore.Tools": "9.0.9",
+            "Microsoft.Extensions.Logging.Abstractions": "9.0.9",
+            "Microsoft.NET.Test.Sdk": "17.8.0",
+            "Microsoft.VisualStudio.Azure.Containers.Tools.Targets": "1.22.1",
+            "Minio.AspNetCore": "6.0.1",
+            "Moq": "4.20.72",
+            "MySql.EntityFrameworkCore": "9.0.6",
+            "MySqlConnector": "2.4.0",
+            "Newtonsoft.Json": "13.0.4",
+            "Serilog": "4.3.0",
+            "Serilog.AspNetCore": "9.0.0",
+            "Serilog.Sinks.Seq": "9.0.0",
+            "Swashbuckle.AspNetCore": "9.0.4",
+            "System.Text.Json": "9.0.9",
+            "Testcontainers": "4.7.0",
+            "Testcontainers.MariaDb": "4.7.0",
+            "Testcontainers.MySql": "4.7.0",
+            "xunit": "2.5.3",
+            "xunit.extensibility.core": "2.5.3",
+            "xunit.runner.visualstudio": "2.5.3"
+          },
           "imports": [
             "net461",
             "net462",
@@ -703,7 +1038,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\9.0.302/PortableRuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\9.0.305/PortableRuntimeIdentifierGraph.json"
         }
       }
     },
@@ -716,6 +1051,7 @@
         "packagesPath": "C:\\Users\\putik\\.nuget\\packages\\",
         "outputPath": "C:\\dev_net\\UnpakSipaksi\\UnpakSipaksi.Modules.KesesuaianPenugasan.PublicApi\\obj\\",
         "projectStyle": "PackageReference",
+        "centralPackageVersionsManagementEnabled": true,
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
         ],
@@ -725,7 +1061,7 @@
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
-          "net8.0"
+          "net9.0"
         ],
         "sources": {
           "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
@@ -733,8 +1069,8 @@
           "https://api.nuget.org/v3/index.json": {}
         },
         "frameworks": {
-          "net8.0": {
-            "targetAlias": "net8.0",
+          "net9.0": {
+            "targetAlias": "net9.0",
             "projectReferences": {}
           }
         },
@@ -751,8 +1087,40 @@
         "SdkAnalysisLevel": "9.0.300"
       },
       "frameworks": {
-        "net8.0": {
-          "targetAlias": "net8.0",
+        "net9.0": {
+          "targetAlias": "net9.0",
+          "centralPackageVersions": {
+            "coverlet.collector": "6.0.0",
+            "Dapper": "2.1.66",
+            "DotNet.Testcontainers": "1.6.0",
+            "FluentAssertions": "8.3.0",
+            "FluentValidation.DependencyInjectionExtensions": "12.0.0",
+            "MediatR": "13.0.0",
+            "Microsoft.AspNetCore.Authentication.JwtBearer": "9.0.9",
+            "Microsoft.AspNetCore.Mvc.Testing": "9.0.9",
+            "Microsoft.EntityFrameworkCore": "9.0.9",
+            "Microsoft.EntityFrameworkCore.Design": "9.0.9",
+            "Microsoft.EntityFrameworkCore.Tools": "9.0.9",
+            "Microsoft.Extensions.Logging.Abstractions": "9.0.9",
+            "Microsoft.NET.Test.Sdk": "17.8.0",
+            "Microsoft.VisualStudio.Azure.Containers.Tools.Targets": "1.22.1",
+            "Minio.AspNetCore": "6.0.1",
+            "Moq": "4.20.72",
+            "MySql.EntityFrameworkCore": "9.0.6",
+            "MySqlConnector": "2.4.0",
+            "Newtonsoft.Json": "13.0.4",
+            "Serilog": "4.3.0",
+            "Serilog.AspNetCore": "9.0.0",
+            "Serilog.Sinks.Seq": "9.0.0",
+            "Swashbuckle.AspNetCore": "9.0.4",
+            "System.Text.Json": "9.0.9",
+            "Testcontainers": "4.7.0",
+            "Testcontainers.MariaDb": "4.7.0",
+            "Testcontainers.MySql": "4.7.0",
+            "xunit": "2.5.3",
+            "xunit.extensibility.core": "2.5.3",
+            "xunit.runner.visualstudio": "2.5.3"
+          },
           "imports": [
             "net461",
             "net462",
@@ -769,7 +1137,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\9.0.302/PortableRuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\9.0.305/PortableRuntimeIdentifierGraph.json"
         }
       }
     },
@@ -782,6 +1150,7 @@
         "packagesPath": "C:\\Users\\putik\\.nuget\\packages\\",
         "outputPath": "C:\\dev_net\\UnpakSipaksi\\UnpakSipaksi.Modules.KesesuaianSolusiMasalahMitra.PublicApi\\obj\\",
         "projectStyle": "PackageReference",
+        "centralPackageVersionsManagementEnabled": true,
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
         ],
@@ -791,7 +1160,7 @@
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
-          "net8.0"
+          "net9.0"
         ],
         "sources": {
           "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
@@ -799,8 +1168,8 @@
           "https://api.nuget.org/v3/index.json": {}
         },
         "frameworks": {
-          "net8.0": {
-            "targetAlias": "net8.0",
+          "net9.0": {
+            "targetAlias": "net9.0",
             "projectReferences": {}
           }
         },
@@ -817,8 +1186,40 @@
         "SdkAnalysisLevel": "9.0.300"
       },
       "frameworks": {
-        "net8.0": {
-          "targetAlias": "net8.0",
+        "net9.0": {
+          "targetAlias": "net9.0",
+          "centralPackageVersions": {
+            "coverlet.collector": "6.0.0",
+            "Dapper": "2.1.66",
+            "DotNet.Testcontainers": "1.6.0",
+            "FluentAssertions": "8.3.0",
+            "FluentValidation.DependencyInjectionExtensions": "12.0.0",
+            "MediatR": "13.0.0",
+            "Microsoft.AspNetCore.Authentication.JwtBearer": "9.0.9",
+            "Microsoft.AspNetCore.Mvc.Testing": "9.0.9",
+            "Microsoft.EntityFrameworkCore": "9.0.9",
+            "Microsoft.EntityFrameworkCore.Design": "9.0.9",
+            "Microsoft.EntityFrameworkCore.Tools": "9.0.9",
+            "Microsoft.Extensions.Logging.Abstractions": "9.0.9",
+            "Microsoft.NET.Test.Sdk": "17.8.0",
+            "Microsoft.VisualStudio.Azure.Containers.Tools.Targets": "1.22.1",
+            "Minio.AspNetCore": "6.0.1",
+            "Moq": "4.20.72",
+            "MySql.EntityFrameworkCore": "9.0.6",
+            "MySqlConnector": "2.4.0",
+            "Newtonsoft.Json": "13.0.4",
+            "Serilog": "4.3.0",
+            "Serilog.AspNetCore": "9.0.0",
+            "Serilog.Sinks.Seq": "9.0.0",
+            "Swashbuckle.AspNetCore": "9.0.4",
+            "System.Text.Json": "9.0.9",
+            "Testcontainers": "4.7.0",
+            "Testcontainers.MariaDb": "4.7.0",
+            "Testcontainers.MySql": "4.7.0",
+            "xunit": "2.5.3",
+            "xunit.extensibility.core": "2.5.3",
+            "xunit.runner.visualstudio": "2.5.3"
+          },
           "imports": [
             "net461",
             "net462",
@@ -835,7 +1236,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\9.0.302/PortableRuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\9.0.305/PortableRuntimeIdentifierGraph.json"
         }
       }
     },
@@ -848,6 +1249,7 @@
         "packagesPath": "C:\\Users\\putik\\.nuget\\packages\\",
         "outputPath": "C:\\dev_net\\UnpakSipaksi\\UnpakSipaksi.Modules.KesesuaianTkt.PublicApi\\obj\\",
         "projectStyle": "PackageReference",
+        "centralPackageVersionsManagementEnabled": true,
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
         ],
@@ -857,7 +1259,7 @@
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
-          "net8.0"
+          "net9.0"
         ],
         "sources": {
           "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
@@ -865,8 +1267,8 @@
           "https://api.nuget.org/v3/index.json": {}
         },
         "frameworks": {
-          "net8.0": {
-            "targetAlias": "net8.0",
+          "net9.0": {
+            "targetAlias": "net9.0",
             "projectReferences": {}
           }
         },
@@ -883,8 +1285,40 @@
         "SdkAnalysisLevel": "9.0.300"
       },
       "frameworks": {
-        "net8.0": {
-          "targetAlias": "net8.0",
+        "net9.0": {
+          "targetAlias": "net9.0",
+          "centralPackageVersions": {
+            "coverlet.collector": "6.0.0",
+            "Dapper": "2.1.66",
+            "DotNet.Testcontainers": "1.6.0",
+            "FluentAssertions": "8.3.0",
+            "FluentValidation.DependencyInjectionExtensions": "12.0.0",
+            "MediatR": "13.0.0",
+            "Microsoft.AspNetCore.Authentication.JwtBearer": "9.0.9",
+            "Microsoft.AspNetCore.Mvc.Testing": "9.0.9",
+            "Microsoft.EntityFrameworkCore": "9.0.9",
+            "Microsoft.EntityFrameworkCore.Design": "9.0.9",
+            "Microsoft.EntityFrameworkCore.Tools": "9.0.9",
+            "Microsoft.Extensions.Logging.Abstractions": "9.0.9",
+            "Microsoft.NET.Test.Sdk": "17.8.0",
+            "Microsoft.VisualStudio.Azure.Containers.Tools.Targets": "1.22.1",
+            "Minio.AspNetCore": "6.0.1",
+            "Moq": "4.20.72",
+            "MySql.EntityFrameworkCore": "9.0.6",
+            "MySqlConnector": "2.4.0",
+            "Newtonsoft.Json": "13.0.4",
+            "Serilog": "4.3.0",
+            "Serilog.AspNetCore": "9.0.0",
+            "Serilog.Sinks.Seq": "9.0.0",
+            "Swashbuckle.AspNetCore": "9.0.4",
+            "System.Text.Json": "9.0.9",
+            "Testcontainers": "4.7.0",
+            "Testcontainers.MariaDb": "4.7.0",
+            "Testcontainers.MySql": "4.7.0",
+            "xunit": "2.5.3",
+            "xunit.extensibility.core": "2.5.3",
+            "xunit.runner.visualstudio": "2.5.3"
+          },
           "imports": [
             "net461",
             "net462",
@@ -901,7 +1335,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\9.0.302/PortableRuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\9.0.305/PortableRuntimeIdentifierGraph.json"
         }
       }
     },
@@ -914,6 +1348,7 @@
         "packagesPath": "C:\\Users\\putik\\.nuget\\packages\\",
         "outputPath": "C:\\dev_net\\UnpakSipaksi\\UnpakSipaksi.Modules.KesesuaianWaktuRabLuaranFasilitas.PublicApi\\obj\\",
         "projectStyle": "PackageReference",
+        "centralPackageVersionsManagementEnabled": true,
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
         ],
@@ -923,7 +1358,7 @@
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
-          "net8.0"
+          "net9.0"
         ],
         "sources": {
           "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
@@ -931,8 +1366,8 @@
           "https://api.nuget.org/v3/index.json": {}
         },
         "frameworks": {
-          "net8.0": {
-            "targetAlias": "net8.0",
+          "net9.0": {
+            "targetAlias": "net9.0",
             "projectReferences": {}
           }
         },
@@ -949,8 +1384,40 @@
         "SdkAnalysisLevel": "9.0.300"
       },
       "frameworks": {
-        "net8.0": {
-          "targetAlias": "net8.0",
+        "net9.0": {
+          "targetAlias": "net9.0",
+          "centralPackageVersions": {
+            "coverlet.collector": "6.0.0",
+            "Dapper": "2.1.66",
+            "DotNet.Testcontainers": "1.6.0",
+            "FluentAssertions": "8.3.0",
+            "FluentValidation.DependencyInjectionExtensions": "12.0.0",
+            "MediatR": "13.0.0",
+            "Microsoft.AspNetCore.Authentication.JwtBearer": "9.0.9",
+            "Microsoft.AspNetCore.Mvc.Testing": "9.0.9",
+            "Microsoft.EntityFrameworkCore": "9.0.9",
+            "Microsoft.EntityFrameworkCore.Design": "9.0.9",
+            "Microsoft.EntityFrameworkCore.Tools": "9.0.9",
+            "Microsoft.Extensions.Logging.Abstractions": "9.0.9",
+            "Microsoft.NET.Test.Sdk": "17.8.0",
+            "Microsoft.VisualStudio.Azure.Containers.Tools.Targets": "1.22.1",
+            "Minio.AspNetCore": "6.0.1",
+            "Moq": "4.20.72",
+            "MySql.EntityFrameworkCore": "9.0.6",
+            "MySqlConnector": "2.4.0",
+            "Newtonsoft.Json": "13.0.4",
+            "Serilog": "4.3.0",
+            "Serilog.AspNetCore": "9.0.0",
+            "Serilog.Sinks.Seq": "9.0.0",
+            "Swashbuckle.AspNetCore": "9.0.4",
+            "System.Text.Json": "9.0.9",
+            "Testcontainers": "4.7.0",
+            "Testcontainers.MariaDb": "4.7.0",
+            "Testcontainers.MySql": "4.7.0",
+            "xunit": "2.5.3",
+            "xunit.extensibility.core": "2.5.3",
+            "xunit.runner.visualstudio": "2.5.3"
+          },
           "imports": [
             "net461",
             "net462",
@@ -967,7 +1434,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\9.0.302/PortableRuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\9.0.305/PortableRuntimeIdentifierGraph.json"
         }
       }
     },
@@ -980,6 +1447,7 @@
         "packagesPath": "C:\\Users\\putik\\.nuget\\packages\\",
         "outputPath": "C:\\dev_net\\UnpakSipaksi\\UnpakSipaksi.Modules.KetajamanAnalisis.PublicApi\\obj\\",
         "projectStyle": "PackageReference",
+        "centralPackageVersionsManagementEnabled": true,
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
         ],
@@ -989,7 +1457,7 @@
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
-          "net8.0"
+          "net9.0"
         ],
         "sources": {
           "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
@@ -997,8 +1465,8 @@
           "https://api.nuget.org/v3/index.json": {}
         },
         "frameworks": {
-          "net8.0": {
-            "targetAlias": "net8.0",
+          "net9.0": {
+            "targetAlias": "net9.0",
             "projectReferences": {}
           }
         },
@@ -1015,8 +1483,40 @@
         "SdkAnalysisLevel": "9.0.300"
       },
       "frameworks": {
-        "net8.0": {
-          "targetAlias": "net8.0",
+        "net9.0": {
+          "targetAlias": "net9.0",
+          "centralPackageVersions": {
+            "coverlet.collector": "6.0.0",
+            "Dapper": "2.1.66",
+            "DotNet.Testcontainers": "1.6.0",
+            "FluentAssertions": "8.3.0",
+            "FluentValidation.DependencyInjectionExtensions": "12.0.0",
+            "MediatR": "13.0.0",
+            "Microsoft.AspNetCore.Authentication.JwtBearer": "9.0.9",
+            "Microsoft.AspNetCore.Mvc.Testing": "9.0.9",
+            "Microsoft.EntityFrameworkCore": "9.0.9",
+            "Microsoft.EntityFrameworkCore.Design": "9.0.9",
+            "Microsoft.EntityFrameworkCore.Tools": "9.0.9",
+            "Microsoft.Extensions.Logging.Abstractions": "9.0.9",
+            "Microsoft.NET.Test.Sdk": "17.8.0",
+            "Microsoft.VisualStudio.Azure.Containers.Tools.Targets": "1.22.1",
+            "Minio.AspNetCore": "6.0.1",
+            "Moq": "4.20.72",
+            "MySql.EntityFrameworkCore": "9.0.6",
+            "MySqlConnector": "2.4.0",
+            "Newtonsoft.Json": "13.0.4",
+            "Serilog": "4.3.0",
+            "Serilog.AspNetCore": "9.0.0",
+            "Serilog.Sinks.Seq": "9.0.0",
+            "Swashbuckle.AspNetCore": "9.0.4",
+            "System.Text.Json": "9.0.9",
+            "Testcontainers": "4.7.0",
+            "Testcontainers.MariaDb": "4.7.0",
+            "Testcontainers.MySql": "4.7.0",
+            "xunit": "2.5.3",
+            "xunit.extensibility.core": "2.5.3",
+            "xunit.runner.visualstudio": "2.5.3"
+          },
           "imports": [
             "net461",
             "net462",
@@ -1033,7 +1533,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\9.0.302/PortableRuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\9.0.305/PortableRuntimeIdentifierGraph.json"
         }
       }
     },
@@ -1046,6 +1546,7 @@
         "packagesPath": "C:\\Users\\putik\\.nuget\\packages\\",
         "outputPath": "C:\\dev_net\\UnpakSipaksi\\UnpakSipaksi.Modules.KetajamanPerumusanMasalah.PublicApi\\obj\\",
         "projectStyle": "PackageReference",
+        "centralPackageVersionsManagementEnabled": true,
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
         ],
@@ -1055,7 +1556,7 @@
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
-          "net8.0"
+          "net9.0"
         ],
         "sources": {
           "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
@@ -1063,8 +1564,8 @@
           "https://api.nuget.org/v3/index.json": {}
         },
         "frameworks": {
-          "net8.0": {
-            "targetAlias": "net8.0",
+          "net9.0": {
+            "targetAlias": "net9.0",
             "projectReferences": {}
           }
         },
@@ -1081,8 +1582,40 @@
         "SdkAnalysisLevel": "9.0.300"
       },
       "frameworks": {
-        "net8.0": {
-          "targetAlias": "net8.0",
+        "net9.0": {
+          "targetAlias": "net9.0",
+          "centralPackageVersions": {
+            "coverlet.collector": "6.0.0",
+            "Dapper": "2.1.66",
+            "DotNet.Testcontainers": "1.6.0",
+            "FluentAssertions": "8.3.0",
+            "FluentValidation.DependencyInjectionExtensions": "12.0.0",
+            "MediatR": "13.0.0",
+            "Microsoft.AspNetCore.Authentication.JwtBearer": "9.0.9",
+            "Microsoft.AspNetCore.Mvc.Testing": "9.0.9",
+            "Microsoft.EntityFrameworkCore": "9.0.9",
+            "Microsoft.EntityFrameworkCore.Design": "9.0.9",
+            "Microsoft.EntityFrameworkCore.Tools": "9.0.9",
+            "Microsoft.Extensions.Logging.Abstractions": "9.0.9",
+            "Microsoft.NET.Test.Sdk": "17.8.0",
+            "Microsoft.VisualStudio.Azure.Containers.Tools.Targets": "1.22.1",
+            "Minio.AspNetCore": "6.0.1",
+            "Moq": "4.20.72",
+            "MySql.EntityFrameworkCore": "9.0.6",
+            "MySqlConnector": "2.4.0",
+            "Newtonsoft.Json": "13.0.4",
+            "Serilog": "4.3.0",
+            "Serilog.AspNetCore": "9.0.0",
+            "Serilog.Sinks.Seq": "9.0.0",
+            "Swashbuckle.AspNetCore": "9.0.4",
+            "System.Text.Json": "9.0.9",
+            "Testcontainers": "4.7.0",
+            "Testcontainers.MariaDb": "4.7.0",
+            "Testcontainers.MySql": "4.7.0",
+            "xunit": "2.5.3",
+            "xunit.extensibility.core": "2.5.3",
+            "xunit.runner.visualstudio": "2.5.3"
+          },
           "imports": [
             "net461",
             "net462",
@@ -1099,7 +1632,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\9.0.302/PortableRuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\9.0.305/PortableRuntimeIdentifierGraph.json"
         }
       }
     },
@@ -1112,6 +1645,7 @@
         "packagesPath": "C:\\Users\\putik\\.nuget\\packages\\",
         "outputPath": "C:\\dev_net\\UnpakSipaksi\\UnpakSipaksi.Modules.KewajaranTahapanTarget.PublicApi\\obj\\",
         "projectStyle": "PackageReference",
+        "centralPackageVersionsManagementEnabled": true,
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
         ],
@@ -1121,7 +1655,7 @@
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
-          "net8.0"
+          "net9.0"
         ],
         "sources": {
           "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
@@ -1129,8 +1663,8 @@
           "https://api.nuget.org/v3/index.json": {}
         },
         "frameworks": {
-          "net8.0": {
-            "targetAlias": "net8.0",
+          "net9.0": {
+            "targetAlias": "net9.0",
             "projectReferences": {}
           }
         },
@@ -1147,8 +1681,40 @@
         "SdkAnalysisLevel": "9.0.300"
       },
       "frameworks": {
-        "net8.0": {
-          "targetAlias": "net8.0",
+        "net9.0": {
+          "targetAlias": "net9.0",
+          "centralPackageVersions": {
+            "coverlet.collector": "6.0.0",
+            "Dapper": "2.1.66",
+            "DotNet.Testcontainers": "1.6.0",
+            "FluentAssertions": "8.3.0",
+            "FluentValidation.DependencyInjectionExtensions": "12.0.0",
+            "MediatR": "13.0.0",
+            "Microsoft.AspNetCore.Authentication.JwtBearer": "9.0.9",
+            "Microsoft.AspNetCore.Mvc.Testing": "9.0.9",
+            "Microsoft.EntityFrameworkCore": "9.0.9",
+            "Microsoft.EntityFrameworkCore.Design": "9.0.9",
+            "Microsoft.EntityFrameworkCore.Tools": "9.0.9",
+            "Microsoft.Extensions.Logging.Abstractions": "9.0.9",
+            "Microsoft.NET.Test.Sdk": "17.8.0",
+            "Microsoft.VisualStudio.Azure.Containers.Tools.Targets": "1.22.1",
+            "Minio.AspNetCore": "6.0.1",
+            "Moq": "4.20.72",
+            "MySql.EntityFrameworkCore": "9.0.6",
+            "MySqlConnector": "2.4.0",
+            "Newtonsoft.Json": "13.0.4",
+            "Serilog": "4.3.0",
+            "Serilog.AspNetCore": "9.0.0",
+            "Serilog.Sinks.Seq": "9.0.0",
+            "Swashbuckle.AspNetCore": "9.0.4",
+            "System.Text.Json": "9.0.9",
+            "Testcontainers": "4.7.0",
+            "Testcontainers.MariaDb": "4.7.0",
+            "Testcontainers.MySql": "4.7.0",
+            "xunit": "2.5.3",
+            "xunit.extensibility.core": "2.5.3",
+            "xunit.runner.visualstudio": "2.5.3"
+          },
           "imports": [
             "net461",
             "net462",
@@ -1165,7 +1731,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\9.0.302/PortableRuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\9.0.305/PortableRuntimeIdentifierGraph.json"
         }
       }
     },
@@ -1178,6 +1744,7 @@
         "packagesPath": "C:\\Users\\putik\\.nuget\\packages\\",
         "outputPath": "C:\\dev_net\\UnpakSipaksi\\UnpakSipaksi.Modules.KredibilitasMitraDukungan.PublicApi\\obj\\",
         "projectStyle": "PackageReference",
+        "centralPackageVersionsManagementEnabled": true,
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
         ],
@@ -1187,7 +1754,7 @@
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
-          "net8.0"
+          "net9.0"
         ],
         "sources": {
           "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
@@ -1195,8 +1762,8 @@
           "https://api.nuget.org/v3/index.json": {}
         },
         "frameworks": {
-          "net8.0": {
-            "targetAlias": "net8.0",
+          "net9.0": {
+            "targetAlias": "net9.0",
             "projectReferences": {}
           }
         },
@@ -1213,8 +1780,40 @@
         "SdkAnalysisLevel": "9.0.300"
       },
       "frameworks": {
-        "net8.0": {
-          "targetAlias": "net8.0",
+        "net9.0": {
+          "targetAlias": "net9.0",
+          "centralPackageVersions": {
+            "coverlet.collector": "6.0.0",
+            "Dapper": "2.1.66",
+            "DotNet.Testcontainers": "1.6.0",
+            "FluentAssertions": "8.3.0",
+            "FluentValidation.DependencyInjectionExtensions": "12.0.0",
+            "MediatR": "13.0.0",
+            "Microsoft.AspNetCore.Authentication.JwtBearer": "9.0.9",
+            "Microsoft.AspNetCore.Mvc.Testing": "9.0.9",
+            "Microsoft.EntityFrameworkCore": "9.0.9",
+            "Microsoft.EntityFrameworkCore.Design": "9.0.9",
+            "Microsoft.EntityFrameworkCore.Tools": "9.0.9",
+            "Microsoft.Extensions.Logging.Abstractions": "9.0.9",
+            "Microsoft.NET.Test.Sdk": "17.8.0",
+            "Microsoft.VisualStudio.Azure.Containers.Tools.Targets": "1.22.1",
+            "Minio.AspNetCore": "6.0.1",
+            "Moq": "4.20.72",
+            "MySql.EntityFrameworkCore": "9.0.6",
+            "MySqlConnector": "2.4.0",
+            "Newtonsoft.Json": "13.0.4",
+            "Serilog": "4.3.0",
+            "Serilog.AspNetCore": "9.0.0",
+            "Serilog.Sinks.Seq": "9.0.0",
+            "Swashbuckle.AspNetCore": "9.0.4",
+            "System.Text.Json": "9.0.9",
+            "Testcontainers": "4.7.0",
+            "Testcontainers.MariaDb": "4.7.0",
+            "Testcontainers.MySql": "4.7.0",
+            "xunit": "2.5.3",
+            "xunit.extensibility.core": "2.5.3",
+            "xunit.runner.visualstudio": "2.5.3"
+          },
           "imports": [
             "net461",
             "net462",
@@ -1231,7 +1830,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\9.0.302/PortableRuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\9.0.305/PortableRuntimeIdentifierGraph.json"
         }
       }
     },
@@ -1244,6 +1843,7 @@
         "packagesPath": "C:\\Users\\putik\\.nuget\\packages\\",
         "outputPath": "C:\\dev_net\\UnpakSipaksi\\UnpakSipaksi.Modules.KualitasIpteks.PublicApi\\obj\\",
         "projectStyle": "PackageReference",
+        "centralPackageVersionsManagementEnabled": true,
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
         ],
@@ -1253,7 +1853,7 @@
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
-          "net8.0"
+          "net9.0"
         ],
         "sources": {
           "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
@@ -1261,8 +1861,8 @@
           "https://api.nuget.org/v3/index.json": {}
         },
         "frameworks": {
-          "net8.0": {
-            "targetAlias": "net8.0",
+          "net9.0": {
+            "targetAlias": "net9.0",
             "projectReferences": {}
           }
         },
@@ -1279,8 +1879,40 @@
         "SdkAnalysisLevel": "9.0.300"
       },
       "frameworks": {
-        "net8.0": {
-          "targetAlias": "net8.0",
+        "net9.0": {
+          "targetAlias": "net9.0",
+          "centralPackageVersions": {
+            "coverlet.collector": "6.0.0",
+            "Dapper": "2.1.66",
+            "DotNet.Testcontainers": "1.6.0",
+            "FluentAssertions": "8.3.0",
+            "FluentValidation.DependencyInjectionExtensions": "12.0.0",
+            "MediatR": "13.0.0",
+            "Microsoft.AspNetCore.Authentication.JwtBearer": "9.0.9",
+            "Microsoft.AspNetCore.Mvc.Testing": "9.0.9",
+            "Microsoft.EntityFrameworkCore": "9.0.9",
+            "Microsoft.EntityFrameworkCore.Design": "9.0.9",
+            "Microsoft.EntityFrameworkCore.Tools": "9.0.9",
+            "Microsoft.Extensions.Logging.Abstractions": "9.0.9",
+            "Microsoft.NET.Test.Sdk": "17.8.0",
+            "Microsoft.VisualStudio.Azure.Containers.Tools.Targets": "1.22.1",
+            "Minio.AspNetCore": "6.0.1",
+            "Moq": "4.20.72",
+            "MySql.EntityFrameworkCore": "9.0.6",
+            "MySqlConnector": "2.4.0",
+            "Newtonsoft.Json": "13.0.4",
+            "Serilog": "4.3.0",
+            "Serilog.AspNetCore": "9.0.0",
+            "Serilog.Sinks.Seq": "9.0.0",
+            "Swashbuckle.AspNetCore": "9.0.4",
+            "System.Text.Json": "9.0.9",
+            "Testcontainers": "4.7.0",
+            "Testcontainers.MariaDb": "4.7.0",
+            "Testcontainers.MySql": "4.7.0",
+            "xunit": "2.5.3",
+            "xunit.extensibility.core": "2.5.3",
+            "xunit.runner.visualstudio": "2.5.3"
+          },
           "imports": [
             "net461",
             "net462",
@@ -1297,7 +1929,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\9.0.302/PortableRuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\9.0.305/PortableRuntimeIdentifierGraph.json"
         }
       }
     },
@@ -1310,6 +1942,7 @@
         "packagesPath": "C:\\Users\\putik\\.nuget\\packages\\",
         "outputPath": "C:\\dev_net\\UnpakSipaksi\\UnpakSipaksi.Modules.KualitasKuantitasPublikasiJurnalIlmiah.PubliApi\\obj\\",
         "projectStyle": "PackageReference",
+        "centralPackageVersionsManagementEnabled": true,
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
         ],
@@ -1319,7 +1952,7 @@
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
-          "net8.0"
+          "net9.0"
         ],
         "sources": {
           "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
@@ -1327,8 +1960,8 @@
           "https://api.nuget.org/v3/index.json": {}
         },
         "frameworks": {
-          "net8.0": {
-            "targetAlias": "net8.0",
+          "net9.0": {
+            "targetAlias": "net9.0",
             "projectReferences": {}
           }
         },
@@ -1345,8 +1978,40 @@
         "SdkAnalysisLevel": "9.0.300"
       },
       "frameworks": {
-        "net8.0": {
-          "targetAlias": "net8.0",
+        "net9.0": {
+          "targetAlias": "net9.0",
+          "centralPackageVersions": {
+            "coverlet.collector": "6.0.0",
+            "Dapper": "2.1.66",
+            "DotNet.Testcontainers": "1.6.0",
+            "FluentAssertions": "8.3.0",
+            "FluentValidation.DependencyInjectionExtensions": "12.0.0",
+            "MediatR": "13.0.0",
+            "Microsoft.AspNetCore.Authentication.JwtBearer": "9.0.9",
+            "Microsoft.AspNetCore.Mvc.Testing": "9.0.9",
+            "Microsoft.EntityFrameworkCore": "9.0.9",
+            "Microsoft.EntityFrameworkCore.Design": "9.0.9",
+            "Microsoft.EntityFrameworkCore.Tools": "9.0.9",
+            "Microsoft.Extensions.Logging.Abstractions": "9.0.9",
+            "Microsoft.NET.Test.Sdk": "17.8.0",
+            "Microsoft.VisualStudio.Azure.Containers.Tools.Targets": "1.22.1",
+            "Minio.AspNetCore": "6.0.1",
+            "Moq": "4.20.72",
+            "MySql.EntityFrameworkCore": "9.0.6",
+            "MySqlConnector": "2.4.0",
+            "Newtonsoft.Json": "13.0.4",
+            "Serilog": "4.3.0",
+            "Serilog.AspNetCore": "9.0.0",
+            "Serilog.Sinks.Seq": "9.0.0",
+            "Swashbuckle.AspNetCore": "9.0.4",
+            "System.Text.Json": "9.0.9",
+            "Testcontainers": "4.7.0",
+            "Testcontainers.MariaDb": "4.7.0",
+            "Testcontainers.MySql": "4.7.0",
+            "xunit": "2.5.3",
+            "xunit.extensibility.core": "2.5.3",
+            "xunit.runner.visualstudio": "2.5.3"
+          },
           "imports": [
             "net461",
             "net462",
@@ -1363,7 +2028,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\9.0.302/PortableRuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\9.0.305/PortableRuntimeIdentifierGraph.json"
         }
       }
     },
@@ -1376,6 +2041,7 @@
         "packagesPath": "C:\\Users\\putik\\.nuget\\packages\\",
         "outputPath": "C:\\dev_net\\UnpakSipaksi\\UnpakSipaksi.Modules.KualitasKuantitasPublikasiProsiding.PublicApi\\obj\\",
         "projectStyle": "PackageReference",
+        "centralPackageVersionsManagementEnabled": true,
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
         ],
@@ -1385,7 +2051,7 @@
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
-          "net8.0"
+          "net9.0"
         ],
         "sources": {
           "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
@@ -1393,8 +2059,8 @@
           "https://api.nuget.org/v3/index.json": {}
         },
         "frameworks": {
-          "net8.0": {
-            "targetAlias": "net8.0",
+          "net9.0": {
+            "targetAlias": "net9.0",
             "projectReferences": {}
           }
         },
@@ -1411,8 +2077,40 @@
         "SdkAnalysisLevel": "9.0.300"
       },
       "frameworks": {
-        "net8.0": {
-          "targetAlias": "net8.0",
+        "net9.0": {
+          "targetAlias": "net9.0",
+          "centralPackageVersions": {
+            "coverlet.collector": "6.0.0",
+            "Dapper": "2.1.66",
+            "DotNet.Testcontainers": "1.6.0",
+            "FluentAssertions": "8.3.0",
+            "FluentValidation.DependencyInjectionExtensions": "12.0.0",
+            "MediatR": "13.0.0",
+            "Microsoft.AspNetCore.Authentication.JwtBearer": "9.0.9",
+            "Microsoft.AspNetCore.Mvc.Testing": "9.0.9",
+            "Microsoft.EntityFrameworkCore": "9.0.9",
+            "Microsoft.EntityFrameworkCore.Design": "9.0.9",
+            "Microsoft.EntityFrameworkCore.Tools": "9.0.9",
+            "Microsoft.Extensions.Logging.Abstractions": "9.0.9",
+            "Microsoft.NET.Test.Sdk": "17.8.0",
+            "Microsoft.VisualStudio.Azure.Containers.Tools.Targets": "1.22.1",
+            "Minio.AspNetCore": "6.0.1",
+            "Moq": "4.20.72",
+            "MySql.EntityFrameworkCore": "9.0.6",
+            "MySqlConnector": "2.4.0",
+            "Newtonsoft.Json": "13.0.4",
+            "Serilog": "4.3.0",
+            "Serilog.AspNetCore": "9.0.0",
+            "Serilog.Sinks.Seq": "9.0.0",
+            "Swashbuckle.AspNetCore": "9.0.4",
+            "System.Text.Json": "9.0.9",
+            "Testcontainers": "4.7.0",
+            "Testcontainers.MariaDb": "4.7.0",
+            "Testcontainers.MySql": "4.7.0",
+            "xunit": "2.5.3",
+            "xunit.extensibility.core": "2.5.3",
+            "xunit.runner.visualstudio": "2.5.3"
+          },
           "imports": [
             "net461",
             "net462",
@@ -1429,7 +2127,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\9.0.302/PortableRuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\9.0.305/PortableRuntimeIdentifierGraph.json"
         }
       }
     },
@@ -1442,6 +2140,7 @@
         "packagesPath": "C:\\Users\\putik\\.nuget\\packages\\",
         "outputPath": "C:\\dev_net\\UnpakSipaksi\\UnpakSipaksi.Modules.KuantitasStatusKi.PublicApi\\obj\\",
         "projectStyle": "PackageReference",
+        "centralPackageVersionsManagementEnabled": true,
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
         ],
@@ -1451,7 +2150,7 @@
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
-          "net8.0"
+          "net9.0"
         ],
         "sources": {
           "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
@@ -1459,8 +2158,8 @@
           "https://api.nuget.org/v3/index.json": {}
         },
         "frameworks": {
-          "net8.0": {
-            "targetAlias": "net8.0",
+          "net9.0": {
+            "targetAlias": "net9.0",
             "projectReferences": {}
           }
         },
@@ -1477,8 +2176,40 @@
         "SdkAnalysisLevel": "9.0.300"
       },
       "frameworks": {
-        "net8.0": {
-          "targetAlias": "net8.0",
+        "net9.0": {
+          "targetAlias": "net9.0",
+          "centralPackageVersions": {
+            "coverlet.collector": "6.0.0",
+            "Dapper": "2.1.66",
+            "DotNet.Testcontainers": "1.6.0",
+            "FluentAssertions": "8.3.0",
+            "FluentValidation.DependencyInjectionExtensions": "12.0.0",
+            "MediatR": "13.0.0",
+            "Microsoft.AspNetCore.Authentication.JwtBearer": "9.0.9",
+            "Microsoft.AspNetCore.Mvc.Testing": "9.0.9",
+            "Microsoft.EntityFrameworkCore": "9.0.9",
+            "Microsoft.EntityFrameworkCore.Design": "9.0.9",
+            "Microsoft.EntityFrameworkCore.Tools": "9.0.9",
+            "Microsoft.Extensions.Logging.Abstractions": "9.0.9",
+            "Microsoft.NET.Test.Sdk": "17.8.0",
+            "Microsoft.VisualStudio.Azure.Containers.Tools.Targets": "1.22.1",
+            "Minio.AspNetCore": "6.0.1",
+            "Moq": "4.20.72",
+            "MySql.EntityFrameworkCore": "9.0.6",
+            "MySqlConnector": "2.4.0",
+            "Newtonsoft.Json": "13.0.4",
+            "Serilog": "4.3.0",
+            "Serilog.AspNetCore": "9.0.0",
+            "Serilog.Sinks.Seq": "9.0.0",
+            "Swashbuckle.AspNetCore": "9.0.4",
+            "System.Text.Json": "9.0.9",
+            "Testcontainers": "4.7.0",
+            "Testcontainers.MariaDb": "4.7.0",
+            "Testcontainers.MySql": "4.7.0",
+            "xunit": "2.5.3",
+            "xunit.extensibility.core": "2.5.3",
+            "xunit.runner.visualstudio": "2.5.3"
+          },
           "imports": [
             "net461",
             "net462",
@@ -1495,7 +2226,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\9.0.302/PortableRuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\9.0.305/PortableRuntimeIdentifierGraph.json"
         }
       }
     },
@@ -1508,6 +2239,7 @@
         "packagesPath": "C:\\Users\\putik\\.nuget\\packages\\",
         "outputPath": "C:\\dev_net\\UnpakSipaksi\\UnpakSipaksi.Modules.LuaranArtikel.PublicApi\\obj\\",
         "projectStyle": "PackageReference",
+        "centralPackageVersionsManagementEnabled": true,
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
         ],
@@ -1517,7 +2249,7 @@
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
-          "net8.0"
+          "net9.0"
         ],
         "sources": {
           "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
@@ -1525,8 +2257,8 @@
           "https://api.nuget.org/v3/index.json": {}
         },
         "frameworks": {
-          "net8.0": {
-            "targetAlias": "net8.0",
+          "net9.0": {
+            "targetAlias": "net9.0",
             "projectReferences": {}
           }
         },
@@ -1543,8 +2275,40 @@
         "SdkAnalysisLevel": "9.0.300"
       },
       "frameworks": {
-        "net8.0": {
-          "targetAlias": "net8.0",
+        "net9.0": {
+          "targetAlias": "net9.0",
+          "centralPackageVersions": {
+            "coverlet.collector": "6.0.0",
+            "Dapper": "2.1.66",
+            "DotNet.Testcontainers": "1.6.0",
+            "FluentAssertions": "8.3.0",
+            "FluentValidation.DependencyInjectionExtensions": "12.0.0",
+            "MediatR": "13.0.0",
+            "Microsoft.AspNetCore.Authentication.JwtBearer": "9.0.9",
+            "Microsoft.AspNetCore.Mvc.Testing": "9.0.9",
+            "Microsoft.EntityFrameworkCore": "9.0.9",
+            "Microsoft.EntityFrameworkCore.Design": "9.0.9",
+            "Microsoft.EntityFrameworkCore.Tools": "9.0.9",
+            "Microsoft.Extensions.Logging.Abstractions": "9.0.9",
+            "Microsoft.NET.Test.Sdk": "17.8.0",
+            "Microsoft.VisualStudio.Azure.Containers.Tools.Targets": "1.22.1",
+            "Minio.AspNetCore": "6.0.1",
+            "Moq": "4.20.72",
+            "MySql.EntityFrameworkCore": "9.0.6",
+            "MySqlConnector": "2.4.0",
+            "Newtonsoft.Json": "13.0.4",
+            "Serilog": "4.3.0",
+            "Serilog.AspNetCore": "9.0.0",
+            "Serilog.Sinks.Seq": "9.0.0",
+            "Swashbuckle.AspNetCore": "9.0.4",
+            "System.Text.Json": "9.0.9",
+            "Testcontainers": "4.7.0",
+            "Testcontainers.MariaDb": "4.7.0",
+            "Testcontainers.MySql": "4.7.0",
+            "xunit": "2.5.3",
+            "xunit.extensibility.core": "2.5.3",
+            "xunit.runner.visualstudio": "2.5.3"
+          },
           "imports": [
             "net461",
             "net462",
@@ -1561,7 +2325,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\9.0.302/PortableRuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\9.0.305/PortableRuntimeIdentifierGraph.json"
         }
       }
     },
@@ -1574,6 +2338,7 @@
         "packagesPath": "C:\\Users\\putik\\.nuget\\packages\\",
         "outputPath": "C:\\dev_net\\UnpakSipaksi\\UnpakSipaksi.Modules.MetodeRencanaKegiatan.PublicApi\\obj\\",
         "projectStyle": "PackageReference",
+        "centralPackageVersionsManagementEnabled": true,
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
         ],
@@ -1583,7 +2348,7 @@
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
-          "net8.0"
+          "net9.0"
         ],
         "sources": {
           "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
@@ -1591,8 +2356,8 @@
           "https://api.nuget.org/v3/index.json": {}
         },
         "frameworks": {
-          "net8.0": {
-            "targetAlias": "net8.0",
+          "net9.0": {
+            "targetAlias": "net9.0",
             "projectReferences": {}
           }
         },
@@ -1609,8 +2374,40 @@
         "SdkAnalysisLevel": "9.0.300"
       },
       "frameworks": {
-        "net8.0": {
-          "targetAlias": "net8.0",
+        "net9.0": {
+          "targetAlias": "net9.0",
+          "centralPackageVersions": {
+            "coverlet.collector": "6.0.0",
+            "Dapper": "2.1.66",
+            "DotNet.Testcontainers": "1.6.0",
+            "FluentAssertions": "8.3.0",
+            "FluentValidation.DependencyInjectionExtensions": "12.0.0",
+            "MediatR": "13.0.0",
+            "Microsoft.AspNetCore.Authentication.JwtBearer": "9.0.9",
+            "Microsoft.AspNetCore.Mvc.Testing": "9.0.9",
+            "Microsoft.EntityFrameworkCore": "9.0.9",
+            "Microsoft.EntityFrameworkCore.Design": "9.0.9",
+            "Microsoft.EntityFrameworkCore.Tools": "9.0.9",
+            "Microsoft.Extensions.Logging.Abstractions": "9.0.9",
+            "Microsoft.NET.Test.Sdk": "17.8.0",
+            "Microsoft.VisualStudio.Azure.Containers.Tools.Targets": "1.22.1",
+            "Minio.AspNetCore": "6.0.1",
+            "Moq": "4.20.72",
+            "MySql.EntityFrameworkCore": "9.0.6",
+            "MySqlConnector": "2.4.0",
+            "Newtonsoft.Json": "13.0.4",
+            "Serilog": "4.3.0",
+            "Serilog.AspNetCore": "9.0.0",
+            "Serilog.Sinks.Seq": "9.0.0",
+            "Swashbuckle.AspNetCore": "9.0.4",
+            "System.Text.Json": "9.0.9",
+            "Testcontainers": "4.7.0",
+            "Testcontainers.MariaDb": "4.7.0",
+            "Testcontainers.MySql": "4.7.0",
+            "xunit": "2.5.3",
+            "xunit.extensibility.core": "2.5.3",
+            "xunit.runner.visualstudio": "2.5.3"
+          },
           "imports": [
             "net461",
             "net462",
@@ -1627,7 +2424,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\9.0.302/PortableRuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\9.0.305/PortableRuntimeIdentifierGraph.json"
         }
       }
     },
@@ -1640,6 +2437,7 @@
         "packagesPath": "C:\\Users\\putik\\.nuget\\packages\\",
         "outputPath": "C:\\dev_net\\UnpakSipaksi\\UnpakSipaksi.Modules.ModelFeasibilityStudys.PublicApi\\obj\\",
         "projectStyle": "PackageReference",
+        "centralPackageVersionsManagementEnabled": true,
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
         ],
@@ -1649,7 +2447,7 @@
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
-          "net8.0"
+          "net9.0"
         ],
         "sources": {
           "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
@@ -1657,8 +2455,8 @@
           "https://api.nuget.org/v3/index.json": {}
         },
         "frameworks": {
-          "net8.0": {
-            "targetAlias": "net8.0",
+          "net9.0": {
+            "targetAlias": "net9.0",
             "projectReferences": {}
           }
         },
@@ -1675,8 +2473,40 @@
         "SdkAnalysisLevel": "9.0.300"
       },
       "frameworks": {
-        "net8.0": {
-          "targetAlias": "net8.0",
+        "net9.0": {
+          "targetAlias": "net9.0",
+          "centralPackageVersions": {
+            "coverlet.collector": "6.0.0",
+            "Dapper": "2.1.66",
+            "DotNet.Testcontainers": "1.6.0",
+            "FluentAssertions": "8.3.0",
+            "FluentValidation.DependencyInjectionExtensions": "12.0.0",
+            "MediatR": "13.0.0",
+            "Microsoft.AspNetCore.Authentication.JwtBearer": "9.0.9",
+            "Microsoft.AspNetCore.Mvc.Testing": "9.0.9",
+            "Microsoft.EntityFrameworkCore": "9.0.9",
+            "Microsoft.EntityFrameworkCore.Design": "9.0.9",
+            "Microsoft.EntityFrameworkCore.Tools": "9.0.9",
+            "Microsoft.Extensions.Logging.Abstractions": "9.0.9",
+            "Microsoft.NET.Test.Sdk": "17.8.0",
+            "Microsoft.VisualStudio.Azure.Containers.Tools.Targets": "1.22.1",
+            "Minio.AspNetCore": "6.0.1",
+            "Moq": "4.20.72",
+            "MySql.EntityFrameworkCore": "9.0.6",
+            "MySqlConnector": "2.4.0",
+            "Newtonsoft.Json": "13.0.4",
+            "Serilog": "4.3.0",
+            "Serilog.AspNetCore": "9.0.0",
+            "Serilog.Sinks.Seq": "9.0.0",
+            "Swashbuckle.AspNetCore": "9.0.4",
+            "System.Text.Json": "9.0.9",
+            "Testcontainers": "4.7.0",
+            "Testcontainers.MariaDb": "4.7.0",
+            "Testcontainers.MySql": "4.7.0",
+            "xunit": "2.5.3",
+            "xunit.extensibility.core": "2.5.3",
+            "xunit.runner.visualstudio": "2.5.3"
+          },
           "imports": [
             "net461",
             "net462",
@@ -1693,7 +2523,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\9.0.302/PortableRuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\9.0.305/PortableRuntimeIdentifierGraph.json"
         }
       }
     },
@@ -1706,6 +2536,7 @@
         "packagesPath": "C:\\Users\\putik\\.nuget\\packages\\",
         "outputPath": "C:\\dev_net\\UnpakSipaksi\\UnpakSipaksi.Modules.PeningkatanKeberdayaanMitra.PublicApi\\obj\\",
         "projectStyle": "PackageReference",
+        "centralPackageVersionsManagementEnabled": true,
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
         ],
@@ -1715,7 +2546,7 @@
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
-          "net8.0"
+          "net9.0"
         ],
         "sources": {
           "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
@@ -1723,8 +2554,8 @@
           "https://api.nuget.org/v3/index.json": {}
         },
         "frameworks": {
-          "net8.0": {
-            "targetAlias": "net8.0",
+          "net9.0": {
+            "targetAlias": "net9.0",
             "projectReferences": {}
           }
         },
@@ -1741,8 +2572,40 @@
         "SdkAnalysisLevel": "9.0.300"
       },
       "frameworks": {
-        "net8.0": {
-          "targetAlias": "net8.0",
+        "net9.0": {
+          "targetAlias": "net9.0",
+          "centralPackageVersions": {
+            "coverlet.collector": "6.0.0",
+            "Dapper": "2.1.66",
+            "DotNet.Testcontainers": "1.6.0",
+            "FluentAssertions": "8.3.0",
+            "FluentValidation.DependencyInjectionExtensions": "12.0.0",
+            "MediatR": "13.0.0",
+            "Microsoft.AspNetCore.Authentication.JwtBearer": "9.0.9",
+            "Microsoft.AspNetCore.Mvc.Testing": "9.0.9",
+            "Microsoft.EntityFrameworkCore": "9.0.9",
+            "Microsoft.EntityFrameworkCore.Design": "9.0.9",
+            "Microsoft.EntityFrameworkCore.Tools": "9.0.9",
+            "Microsoft.Extensions.Logging.Abstractions": "9.0.9",
+            "Microsoft.NET.Test.Sdk": "17.8.0",
+            "Microsoft.VisualStudio.Azure.Containers.Tools.Targets": "1.22.1",
+            "Minio.AspNetCore": "6.0.1",
+            "Moq": "4.20.72",
+            "MySql.EntityFrameworkCore": "9.0.6",
+            "MySqlConnector": "2.4.0",
+            "Newtonsoft.Json": "13.0.4",
+            "Serilog": "4.3.0",
+            "Serilog.AspNetCore": "9.0.0",
+            "Serilog.Sinks.Seq": "9.0.0",
+            "Swashbuckle.AspNetCore": "9.0.4",
+            "System.Text.Json": "9.0.9",
+            "Testcontainers": "4.7.0",
+            "Testcontainers.MariaDb": "4.7.0",
+            "Testcontainers.MySql": "4.7.0",
+            "xunit": "2.5.3",
+            "xunit.extensibility.core": "2.5.3",
+            "xunit.runner.visualstudio": "2.5.3"
+          },
           "imports": [
             "net461",
             "net462",
@@ -1759,7 +2622,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\9.0.302/PortableRuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\9.0.305/PortableRuntimeIdentifierGraph.json"
         }
       }
     },
@@ -1772,6 +2635,7 @@
         "packagesPath": "C:\\Users\\putik\\.nuget\\packages\\",
         "outputPath": "C:\\dev_net\\UnpakSipaksi\\UnpakSipaksi.Modules.PotensiKetercapaianLuaranDijanjikan.PublicApi\\obj\\",
         "projectStyle": "PackageReference",
+        "centralPackageVersionsManagementEnabled": true,
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
         ],
@@ -1781,7 +2645,7 @@
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
-          "net8.0"
+          "net9.0"
         ],
         "sources": {
           "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
@@ -1789,8 +2653,8 @@
           "https://api.nuget.org/v3/index.json": {}
         },
         "frameworks": {
-          "net8.0": {
-            "targetAlias": "net8.0",
+          "net9.0": {
+            "targetAlias": "net9.0",
             "projectReferences": {}
           }
         },
@@ -1807,8 +2671,40 @@
         "SdkAnalysisLevel": "9.0.300"
       },
       "frameworks": {
-        "net8.0": {
-          "targetAlias": "net8.0",
+        "net9.0": {
+          "targetAlias": "net9.0",
+          "centralPackageVersions": {
+            "coverlet.collector": "6.0.0",
+            "Dapper": "2.1.66",
+            "DotNet.Testcontainers": "1.6.0",
+            "FluentAssertions": "8.3.0",
+            "FluentValidation.DependencyInjectionExtensions": "12.0.0",
+            "MediatR": "13.0.0",
+            "Microsoft.AspNetCore.Authentication.JwtBearer": "9.0.9",
+            "Microsoft.AspNetCore.Mvc.Testing": "9.0.9",
+            "Microsoft.EntityFrameworkCore": "9.0.9",
+            "Microsoft.EntityFrameworkCore.Design": "9.0.9",
+            "Microsoft.EntityFrameworkCore.Tools": "9.0.9",
+            "Microsoft.Extensions.Logging.Abstractions": "9.0.9",
+            "Microsoft.NET.Test.Sdk": "17.8.0",
+            "Microsoft.VisualStudio.Azure.Containers.Tools.Targets": "1.22.1",
+            "Minio.AspNetCore": "6.0.1",
+            "Moq": "4.20.72",
+            "MySql.EntityFrameworkCore": "9.0.6",
+            "MySqlConnector": "2.4.0",
+            "Newtonsoft.Json": "13.0.4",
+            "Serilog": "4.3.0",
+            "Serilog.AspNetCore": "9.0.0",
+            "Serilog.Sinks.Seq": "9.0.0",
+            "Swashbuckle.AspNetCore": "9.0.4",
+            "System.Text.Json": "9.0.9",
+            "Testcontainers": "4.7.0",
+            "Testcontainers.MariaDb": "4.7.0",
+            "Testcontainers.MySql": "4.7.0",
+            "xunit": "2.5.3",
+            "xunit.extensibility.core": "2.5.3",
+            "xunit.runner.visualstudio": "2.5.3"
+          },
           "imports": [
             "net461",
             "net462",
@@ -1825,7 +2721,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\9.0.302/PortableRuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\9.0.305/PortableRuntimeIdentifierGraph.json"
         }
       }
     },
@@ -1838,6 +2734,7 @@
         "packagesPath": "C:\\Users\\putik\\.nuget\\packages\\",
         "outputPath": "C:\\dev_net\\UnpakSipaksi\\UnpakSipaksi.Modules.PublikasiDisitasiProposal.PublicApi\\obj\\",
         "projectStyle": "PackageReference",
+        "centralPackageVersionsManagementEnabled": true,
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
         ],
@@ -1847,7 +2744,7 @@
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
-          "net8.0"
+          "net9.0"
         ],
         "sources": {
           "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
@@ -1855,8 +2752,8 @@
           "https://api.nuget.org/v3/index.json": {}
         },
         "frameworks": {
-          "net8.0": {
-            "targetAlias": "net8.0",
+          "net9.0": {
+            "targetAlias": "net9.0",
             "projectReferences": {}
           }
         },
@@ -1873,8 +2770,40 @@
         "SdkAnalysisLevel": "9.0.300"
       },
       "frameworks": {
-        "net8.0": {
-          "targetAlias": "net8.0",
+        "net9.0": {
+          "targetAlias": "net9.0",
+          "centralPackageVersions": {
+            "coverlet.collector": "6.0.0",
+            "Dapper": "2.1.66",
+            "DotNet.Testcontainers": "1.6.0",
+            "FluentAssertions": "8.3.0",
+            "FluentValidation.DependencyInjectionExtensions": "12.0.0",
+            "MediatR": "13.0.0",
+            "Microsoft.AspNetCore.Authentication.JwtBearer": "9.0.9",
+            "Microsoft.AspNetCore.Mvc.Testing": "9.0.9",
+            "Microsoft.EntityFrameworkCore": "9.0.9",
+            "Microsoft.EntityFrameworkCore.Design": "9.0.9",
+            "Microsoft.EntityFrameworkCore.Tools": "9.0.9",
+            "Microsoft.Extensions.Logging.Abstractions": "9.0.9",
+            "Microsoft.NET.Test.Sdk": "17.8.0",
+            "Microsoft.VisualStudio.Azure.Containers.Tools.Targets": "1.22.1",
+            "Minio.AspNetCore": "6.0.1",
+            "Moq": "4.20.72",
+            "MySql.EntityFrameworkCore": "9.0.6",
+            "MySqlConnector": "2.4.0",
+            "Newtonsoft.Json": "13.0.4",
+            "Serilog": "4.3.0",
+            "Serilog.AspNetCore": "9.0.0",
+            "Serilog.Sinks.Seq": "9.0.0",
+            "Swashbuckle.AspNetCore": "9.0.4",
+            "System.Text.Json": "9.0.9",
+            "Testcontainers": "4.7.0",
+            "Testcontainers.MariaDb": "4.7.0",
+            "Testcontainers.MySql": "4.7.0",
+            "xunit": "2.5.3",
+            "xunit.extensibility.core": "2.5.3",
+            "xunit.runner.visualstudio": "2.5.3"
+          },
           "imports": [
             "net461",
             "net462",
@@ -1891,7 +2820,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\9.0.302/PortableRuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\9.0.305/PortableRuntimeIdentifierGraph.json"
         }
       }
     },
@@ -1904,6 +2833,7 @@
         "packagesPath": "C:\\Users\\putik\\.nuget\\packages\\",
         "outputPath": "C:\\dev_net\\UnpakSipaksi\\UnpakSipaksi.Modules.RelevansiKepakaranTemaProposal.PublicApi\\obj\\",
         "projectStyle": "PackageReference",
+        "centralPackageVersionsManagementEnabled": true,
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
         ],
@@ -1913,7 +2843,7 @@
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
-          "net8.0"
+          "net9.0"
         ],
         "sources": {
           "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
@@ -1921,8 +2851,8 @@
           "https://api.nuget.org/v3/index.json": {}
         },
         "frameworks": {
-          "net8.0": {
-            "targetAlias": "net8.0",
+          "net9.0": {
+            "targetAlias": "net9.0",
             "projectReferences": {}
           }
         },
@@ -1939,8 +2869,40 @@
         "SdkAnalysisLevel": "9.0.300"
       },
       "frameworks": {
-        "net8.0": {
-          "targetAlias": "net8.0",
+        "net9.0": {
+          "targetAlias": "net9.0",
+          "centralPackageVersions": {
+            "coverlet.collector": "6.0.0",
+            "Dapper": "2.1.66",
+            "DotNet.Testcontainers": "1.6.0",
+            "FluentAssertions": "8.3.0",
+            "FluentValidation.DependencyInjectionExtensions": "12.0.0",
+            "MediatR": "13.0.0",
+            "Microsoft.AspNetCore.Authentication.JwtBearer": "9.0.9",
+            "Microsoft.AspNetCore.Mvc.Testing": "9.0.9",
+            "Microsoft.EntityFrameworkCore": "9.0.9",
+            "Microsoft.EntityFrameworkCore.Design": "9.0.9",
+            "Microsoft.EntityFrameworkCore.Tools": "9.0.9",
+            "Microsoft.Extensions.Logging.Abstractions": "9.0.9",
+            "Microsoft.NET.Test.Sdk": "17.8.0",
+            "Microsoft.VisualStudio.Azure.Containers.Tools.Targets": "1.22.1",
+            "Minio.AspNetCore": "6.0.1",
+            "Moq": "4.20.72",
+            "MySql.EntityFrameworkCore": "9.0.6",
+            "MySqlConnector": "2.4.0",
+            "Newtonsoft.Json": "13.0.4",
+            "Serilog": "4.3.0",
+            "Serilog.AspNetCore": "9.0.0",
+            "Serilog.Sinks.Seq": "9.0.0",
+            "Swashbuckle.AspNetCore": "9.0.4",
+            "System.Text.Json": "9.0.9",
+            "Testcontainers": "4.7.0",
+            "Testcontainers.MariaDb": "4.7.0",
+            "Testcontainers.MySql": "4.7.0",
+            "xunit": "2.5.3",
+            "xunit.extensibility.core": "2.5.3",
+            "xunit.runner.visualstudio": "2.5.3"
+          },
           "imports": [
             "net461",
             "net462",
@@ -1957,7 +2919,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\9.0.302/PortableRuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\9.0.305/PortableRuntimeIdentifierGraph.json"
         }
       }
     },
@@ -1970,6 +2932,7 @@
         "packagesPath": "C:\\Users\\putik\\.nuget\\packages\\",
         "outputPath": "C:\\dev_net\\UnpakSipaksi\\UnpakSipaksi.Modules.RelevansiKualitasReferensi.PublicApi\\obj\\",
         "projectStyle": "PackageReference",
+        "centralPackageVersionsManagementEnabled": true,
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
         ],
@@ -1979,7 +2942,7 @@
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
-          "net8.0"
+          "net9.0"
         ],
         "sources": {
           "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
@@ -1987,8 +2950,8 @@
           "https://api.nuget.org/v3/index.json": {}
         },
         "frameworks": {
-          "net8.0": {
-            "targetAlias": "net8.0",
+          "net9.0": {
+            "targetAlias": "net9.0",
             "projectReferences": {}
           }
         },
@@ -2005,8 +2968,40 @@
         "SdkAnalysisLevel": "9.0.300"
       },
       "frameworks": {
-        "net8.0": {
-          "targetAlias": "net8.0",
+        "net9.0": {
+          "targetAlias": "net9.0",
+          "centralPackageVersions": {
+            "coverlet.collector": "6.0.0",
+            "Dapper": "2.1.66",
+            "DotNet.Testcontainers": "1.6.0",
+            "FluentAssertions": "8.3.0",
+            "FluentValidation.DependencyInjectionExtensions": "12.0.0",
+            "MediatR": "13.0.0",
+            "Microsoft.AspNetCore.Authentication.JwtBearer": "9.0.9",
+            "Microsoft.AspNetCore.Mvc.Testing": "9.0.9",
+            "Microsoft.EntityFrameworkCore": "9.0.9",
+            "Microsoft.EntityFrameworkCore.Design": "9.0.9",
+            "Microsoft.EntityFrameworkCore.Tools": "9.0.9",
+            "Microsoft.Extensions.Logging.Abstractions": "9.0.9",
+            "Microsoft.NET.Test.Sdk": "17.8.0",
+            "Microsoft.VisualStudio.Azure.Containers.Tools.Targets": "1.22.1",
+            "Minio.AspNetCore": "6.0.1",
+            "Moq": "4.20.72",
+            "MySql.EntityFrameworkCore": "9.0.6",
+            "MySqlConnector": "2.4.0",
+            "Newtonsoft.Json": "13.0.4",
+            "Serilog": "4.3.0",
+            "Serilog.AspNetCore": "9.0.0",
+            "Serilog.Sinks.Seq": "9.0.0",
+            "Swashbuckle.AspNetCore": "9.0.4",
+            "System.Text.Json": "9.0.9",
+            "Testcontainers": "4.7.0",
+            "Testcontainers.MariaDb": "4.7.0",
+            "Testcontainers.MySql": "4.7.0",
+            "xunit": "2.5.3",
+            "xunit.extensibility.core": "2.5.3",
+            "xunit.runner.visualstudio": "2.5.3"
+          },
           "imports": [
             "net461",
             "net462",
@@ -2023,7 +3018,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\9.0.302/PortableRuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\9.0.305/PortableRuntimeIdentifierGraph.json"
         }
       }
     },
@@ -2036,6 +3031,7 @@
         "packagesPath": "C:\\Users\\putik\\.nuget\\packages\\",
         "outputPath": "C:\\dev_net\\UnpakSipaksi\\UnpakSipaksi.Modules.RelevansiProdukKepentinganNasional.PublicApi\\obj\\",
         "projectStyle": "PackageReference",
+        "centralPackageVersionsManagementEnabled": true,
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
         ],
@@ -2045,7 +3041,7 @@
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
-          "net8.0"
+          "net9.0"
         ],
         "sources": {
           "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
@@ -2053,8 +3049,8 @@
           "https://api.nuget.org/v3/index.json": {}
         },
         "frameworks": {
-          "net8.0": {
-            "targetAlias": "net8.0",
+          "net9.0": {
+            "targetAlias": "net9.0",
             "projectReferences": {}
           }
         },
@@ -2071,8 +3067,40 @@
         "SdkAnalysisLevel": "9.0.300"
       },
       "frameworks": {
-        "net8.0": {
-          "targetAlias": "net8.0",
+        "net9.0": {
+          "targetAlias": "net9.0",
+          "centralPackageVersions": {
+            "coverlet.collector": "6.0.0",
+            "Dapper": "2.1.66",
+            "DotNet.Testcontainers": "1.6.0",
+            "FluentAssertions": "8.3.0",
+            "FluentValidation.DependencyInjectionExtensions": "12.0.0",
+            "MediatR": "13.0.0",
+            "Microsoft.AspNetCore.Authentication.JwtBearer": "9.0.9",
+            "Microsoft.AspNetCore.Mvc.Testing": "9.0.9",
+            "Microsoft.EntityFrameworkCore": "9.0.9",
+            "Microsoft.EntityFrameworkCore.Design": "9.0.9",
+            "Microsoft.EntityFrameworkCore.Tools": "9.0.9",
+            "Microsoft.Extensions.Logging.Abstractions": "9.0.9",
+            "Microsoft.NET.Test.Sdk": "17.8.0",
+            "Microsoft.VisualStudio.Azure.Containers.Tools.Targets": "1.22.1",
+            "Minio.AspNetCore": "6.0.1",
+            "Moq": "4.20.72",
+            "MySql.EntityFrameworkCore": "9.0.6",
+            "MySqlConnector": "2.4.0",
+            "Newtonsoft.Json": "13.0.4",
+            "Serilog": "4.3.0",
+            "Serilog.AspNetCore": "9.0.0",
+            "Serilog.Sinks.Seq": "9.0.0",
+            "Swashbuckle.AspNetCore": "9.0.4",
+            "System.Text.Json": "9.0.9",
+            "Testcontainers": "4.7.0",
+            "Testcontainers.MariaDb": "4.7.0",
+            "Testcontainers.MySql": "4.7.0",
+            "xunit": "2.5.3",
+            "xunit.extensibility.core": "2.5.3",
+            "xunit.runner.visualstudio": "2.5.3"
+          },
           "imports": [
             "net461",
             "net462",
@@ -2089,7 +3117,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\9.0.302/PortableRuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\9.0.305/PortableRuntimeIdentifierGraph.json"
         }
       }
     },
@@ -2102,6 +3130,7 @@
         "packagesPath": "C:\\Users\\putik\\.nuget\\packages\\",
         "outputPath": "C:\\dev_net\\UnpakSipaksi\\UnpakSipaksi.Modules.RoadmapPenelitian.PublicApi\\obj\\",
         "projectStyle": "PackageReference",
+        "centralPackageVersionsManagementEnabled": true,
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
         ],
@@ -2111,7 +3140,7 @@
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
-          "net8.0"
+          "net9.0"
         ],
         "sources": {
           "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
@@ -2119,8 +3148,8 @@
           "https://api.nuget.org/v3/index.json": {}
         },
         "frameworks": {
-          "net8.0": {
-            "targetAlias": "net8.0",
+          "net9.0": {
+            "targetAlias": "net9.0",
             "projectReferences": {}
           }
         },
@@ -2137,8 +3166,40 @@
         "SdkAnalysisLevel": "9.0.300"
       },
       "frameworks": {
-        "net8.0": {
-          "targetAlias": "net8.0",
+        "net9.0": {
+          "targetAlias": "net9.0",
+          "centralPackageVersions": {
+            "coverlet.collector": "6.0.0",
+            "Dapper": "2.1.66",
+            "DotNet.Testcontainers": "1.6.0",
+            "FluentAssertions": "8.3.0",
+            "FluentValidation.DependencyInjectionExtensions": "12.0.0",
+            "MediatR": "13.0.0",
+            "Microsoft.AspNetCore.Authentication.JwtBearer": "9.0.9",
+            "Microsoft.AspNetCore.Mvc.Testing": "9.0.9",
+            "Microsoft.EntityFrameworkCore": "9.0.9",
+            "Microsoft.EntityFrameworkCore.Design": "9.0.9",
+            "Microsoft.EntityFrameworkCore.Tools": "9.0.9",
+            "Microsoft.Extensions.Logging.Abstractions": "9.0.9",
+            "Microsoft.NET.Test.Sdk": "17.8.0",
+            "Microsoft.VisualStudio.Azure.Containers.Tools.Targets": "1.22.1",
+            "Minio.AspNetCore": "6.0.1",
+            "Moq": "4.20.72",
+            "MySql.EntityFrameworkCore": "9.0.6",
+            "MySqlConnector": "2.4.0",
+            "Newtonsoft.Json": "13.0.4",
+            "Serilog": "4.3.0",
+            "Serilog.AspNetCore": "9.0.0",
+            "Serilog.Sinks.Seq": "9.0.0",
+            "Swashbuckle.AspNetCore": "9.0.4",
+            "System.Text.Json": "9.0.9",
+            "Testcontainers": "4.7.0",
+            "Testcontainers.MariaDb": "4.7.0",
+            "Testcontainers.MySql": "4.7.0",
+            "xunit": "2.5.3",
+            "xunit.extensibility.core": "2.5.3",
+            "xunit.runner.visualstudio": "2.5.3"
+          },
           "imports": [
             "net461",
             "net462",
@@ -2155,7 +3216,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\9.0.302/PortableRuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\9.0.305/PortableRuntimeIdentifierGraph.json"
         }
       }
     },
@@ -2168,6 +3229,7 @@
         "packagesPath": "C:\\Users\\putik\\.nuget\\packages\\",
         "outputPath": "C:\\dev_net\\UnpakSipaksi\\UnpakSipaksi.Modules.RumusanPrioritasMitra.PublicApi\\obj\\",
         "projectStyle": "PackageReference",
+        "centralPackageVersionsManagementEnabled": true,
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
         ],
@@ -2177,7 +3239,7 @@
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
-          "net8.0"
+          "net9.0"
         ],
         "sources": {
           "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
@@ -2185,8 +3247,8 @@
           "https://api.nuget.org/v3/index.json": {}
         },
         "frameworks": {
-          "net8.0": {
-            "targetAlias": "net8.0",
+          "net9.0": {
+            "targetAlias": "net9.0",
             "projectReferences": {}
           }
         },
@@ -2203,8 +3265,40 @@
         "SdkAnalysisLevel": "9.0.300"
       },
       "frameworks": {
-        "net8.0": {
-          "targetAlias": "net8.0",
+        "net9.0": {
+          "targetAlias": "net9.0",
+          "centralPackageVersions": {
+            "coverlet.collector": "6.0.0",
+            "Dapper": "2.1.66",
+            "DotNet.Testcontainers": "1.6.0",
+            "FluentAssertions": "8.3.0",
+            "FluentValidation.DependencyInjectionExtensions": "12.0.0",
+            "MediatR": "13.0.0",
+            "Microsoft.AspNetCore.Authentication.JwtBearer": "9.0.9",
+            "Microsoft.AspNetCore.Mvc.Testing": "9.0.9",
+            "Microsoft.EntityFrameworkCore": "9.0.9",
+            "Microsoft.EntityFrameworkCore.Design": "9.0.9",
+            "Microsoft.EntityFrameworkCore.Tools": "9.0.9",
+            "Microsoft.Extensions.Logging.Abstractions": "9.0.9",
+            "Microsoft.NET.Test.Sdk": "17.8.0",
+            "Microsoft.VisualStudio.Azure.Containers.Tools.Targets": "1.22.1",
+            "Minio.AspNetCore": "6.0.1",
+            "Moq": "4.20.72",
+            "MySql.EntityFrameworkCore": "9.0.6",
+            "MySqlConnector": "2.4.0",
+            "Newtonsoft.Json": "13.0.4",
+            "Serilog": "4.3.0",
+            "Serilog.AspNetCore": "9.0.0",
+            "Serilog.Sinks.Seq": "9.0.0",
+            "Swashbuckle.AspNetCore": "9.0.4",
+            "System.Text.Json": "9.0.9",
+            "Testcontainers": "4.7.0",
+            "Testcontainers.MariaDb": "4.7.0",
+            "Testcontainers.MySql": "4.7.0",
+            "xunit": "2.5.3",
+            "xunit.extensibility.core": "2.5.3",
+            "xunit.runner.visualstudio": "2.5.3"
+          },
           "imports": [
             "net461",
             "net462",
@@ -2221,7 +3315,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\9.0.302/PortableRuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\9.0.305/PortableRuntimeIdentifierGraph.json"
         }
       }
     },
@@ -2234,6 +3328,7 @@
         "packagesPath": "C:\\Users\\putik\\.nuget\\packages\\",
         "outputPath": "C:\\dev_net\\UnpakSipaksi\\UnpakSipaksi.Modules.SotaKebaharuan.Application\\obj\\",
         "projectStyle": "PackageReference",
+        "centralPackageVersionsManagementEnabled": true,
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
         ],
@@ -2243,7 +3338,7 @@
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
-          "net8.0"
+          "net9.0"
         ],
         "sources": {
           "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
@@ -2251,8 +3346,8 @@
           "https://api.nuget.org/v3/index.json": {}
         },
         "frameworks": {
-          "net8.0": {
-            "targetAlias": "net8.0",
+          "net9.0": {
+            "targetAlias": "net9.0",
             "projectReferences": {
               "C:\\dev_net\\UnpakSipaksi\\UnpakSipaksi.Common.Application\\UnpakSipaksi.Common.Application.csproj": {
                 "projectPath": "C:\\dev_net\\UnpakSipaksi\\UnpakSipaksi.Common.Application\\UnpakSipaksi.Common.Application.csproj"
@@ -2279,17 +3374,66 @@
         "SdkAnalysisLevel": "9.0.300"
       },
       "frameworks": {
-        "net8.0": {
-          "targetAlias": "net8.0",
+        "net9.0": {
+          "targetAlias": "net9.0",
           "dependencies": {
             "Dapper": {
               "target": "Package",
-              "version": "[2.1.35, )"
+              "version": "[2.1.66, )",
+              "versionCentrallyManaged": true
             },
             "MediatR": {
               "target": "Package",
-              "version": "[12.4.1, )"
+              "version": "[13.0.0, )",
+              "versionCentrallyManaged": true
+            },
+            "Microsoft.AspNetCore.Authentication.JwtBearer": {
+              "target": "Package",
+              "version": "[9.0.9, )",
+              "versionCentrallyManaged": true
+            },
+            "Newtonsoft.Json": {
+              "target": "Package",
+              "version": "[13.0.4, )",
+              "versionCentrallyManaged": true
+            },
+            "System.Text.Json": {
+              "target": "Package",
+              "version": "[9.0.9, )",
+              "versionCentrallyManaged": true
             }
+          },
+          "centralPackageVersions": {
+            "coverlet.collector": "6.0.0",
+            "Dapper": "2.1.66",
+            "DotNet.Testcontainers": "1.6.0",
+            "FluentAssertions": "8.3.0",
+            "FluentValidation.DependencyInjectionExtensions": "12.0.0",
+            "MediatR": "13.0.0",
+            "Microsoft.AspNetCore.Authentication.JwtBearer": "9.0.9",
+            "Microsoft.AspNetCore.Mvc.Testing": "9.0.9",
+            "Microsoft.EntityFrameworkCore": "9.0.9",
+            "Microsoft.EntityFrameworkCore.Design": "9.0.9",
+            "Microsoft.EntityFrameworkCore.Tools": "9.0.9",
+            "Microsoft.Extensions.Logging.Abstractions": "9.0.9",
+            "Microsoft.NET.Test.Sdk": "17.8.0",
+            "Microsoft.VisualStudio.Azure.Containers.Tools.Targets": "1.22.1",
+            "Minio.AspNetCore": "6.0.1",
+            "Moq": "4.20.72",
+            "MySql.EntityFrameworkCore": "9.0.6",
+            "MySqlConnector": "2.4.0",
+            "Newtonsoft.Json": "13.0.4",
+            "Serilog": "4.3.0",
+            "Serilog.AspNetCore": "9.0.0",
+            "Serilog.Sinks.Seq": "9.0.0",
+            "Swashbuckle.AspNetCore": "9.0.4",
+            "System.Text.Json": "9.0.9",
+            "Testcontainers": "4.7.0",
+            "Testcontainers.MariaDb": "4.7.0",
+            "Testcontainers.MySql": "4.7.0",
+            "xunit": "2.5.3",
+            "xunit.extensibility.core": "2.5.3",
+            "xunit.runner.visualstudio": "2.5.3"
           },
           "imports": [
             "net461",
@@ -2307,7 +3451,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\9.0.302/PortableRuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\9.0.305/PortableRuntimeIdentifierGraph.json"
         }
       }
     },
@@ -2320,6 +3464,7 @@
         "packagesPath": "C:\\Users\\putik\\.nuget\\packages\\",
         "outputPath": "C:\\dev_net\\UnpakSipaksi\\UnpakSipaksi.Modules.SotaKebaharuan.Domain\\obj\\",
         "projectStyle": "PackageReference",
+        "centralPackageVersionsManagementEnabled": true,
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
         ],
@@ -2329,7 +3474,7 @@
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
-          "net8.0"
+          "net9.0"
         ],
         "sources": {
           "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
@@ -2337,8 +3482,8 @@
           "https://api.nuget.org/v3/index.json": {}
         },
         "frameworks": {
-          "net8.0": {
-            "targetAlias": "net8.0",
+          "net9.0": {
+            "targetAlias": "net9.0",
             "projectReferences": {
               "C:\\dev_net\\UnpakSipaksi\\UnpakSipaksi.Common.Domain\\UnpakSipaksi.Common.Domain.csproj": {
                 "projectPath": "C:\\dev_net\\UnpakSipaksi\\UnpakSipaksi.Common.Domain\\UnpakSipaksi.Common.Domain.csproj"
@@ -2359,8 +3504,40 @@
         "SdkAnalysisLevel": "9.0.300"
       },
       "frameworks": {
-        "net8.0": {
-          "targetAlias": "net8.0",
+        "net9.0": {
+          "targetAlias": "net9.0",
+          "centralPackageVersions": {
+            "coverlet.collector": "6.0.0",
+            "Dapper": "2.1.66",
+            "DotNet.Testcontainers": "1.6.0",
+            "FluentAssertions": "8.3.0",
+            "FluentValidation.DependencyInjectionExtensions": "12.0.0",
+            "MediatR": "13.0.0",
+            "Microsoft.AspNetCore.Authentication.JwtBearer": "9.0.9",
+            "Microsoft.AspNetCore.Mvc.Testing": "9.0.9",
+            "Microsoft.EntityFrameworkCore": "9.0.9",
+            "Microsoft.EntityFrameworkCore.Design": "9.0.9",
+            "Microsoft.EntityFrameworkCore.Tools": "9.0.9",
+            "Microsoft.Extensions.Logging.Abstractions": "9.0.9",
+            "Microsoft.NET.Test.Sdk": "17.8.0",
+            "Microsoft.VisualStudio.Azure.Containers.Tools.Targets": "1.22.1",
+            "Minio.AspNetCore": "6.0.1",
+            "Moq": "4.20.72",
+            "MySql.EntityFrameworkCore": "9.0.6",
+            "MySqlConnector": "2.4.0",
+            "Newtonsoft.Json": "13.0.4",
+            "Serilog": "4.3.0",
+            "Serilog.AspNetCore": "9.0.0",
+            "Serilog.Sinks.Seq": "9.0.0",
+            "Swashbuckle.AspNetCore": "9.0.4",
+            "System.Text.Json": "9.0.9",
+            "Testcontainers": "4.7.0",
+            "Testcontainers.MariaDb": "4.7.0",
+            "Testcontainers.MySql": "4.7.0",
+            "xunit": "2.5.3",
+            "xunit.extensibility.core": "2.5.3",
+            "xunit.runner.visualstudio": "2.5.3"
+          },
           "imports": [
             "net461",
             "net462",
@@ -2377,7 +3554,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\9.0.302/PortableRuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\9.0.305/PortableRuntimeIdentifierGraph.json"
         }
       }
     },
@@ -2390,6 +3567,7 @@
         "packagesPath": "C:\\Users\\putik\\.nuget\\packages\\",
         "outputPath": "C:\\dev_net\\UnpakSipaksi\\UnpakSipaksi.Modules.SotaKebaharuan.Presentation\\obj\\",
         "projectStyle": "PackageReference",
+        "centralPackageVersionsManagementEnabled": true,
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
         ],
@@ -2399,7 +3577,7 @@
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
-          "net8.0"
+          "net9.0"
         ],
         "sources": {
           "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
@@ -2407,8 +3585,8 @@
           "https://api.nuget.org/v3/index.json": {}
         },
         "frameworks": {
-          "net8.0": {
-            "targetAlias": "net8.0",
+          "net9.0": {
+            "targetAlias": "net9.0",
             "projectReferences": {
               "C:\\dev_net\\UnpakSipaksi\\UnpakSipaksi.Common.Domain\\UnpakSipaksi.Common.Domain.csproj": {
                 "projectPath": "C:\\dev_net\\UnpakSipaksi\\UnpakSipaksi.Common.Domain\\UnpakSipaksi.Common.Domain.csproj"
@@ -2435,8 +3613,40 @@
         "SdkAnalysisLevel": "9.0.300"
       },
       "frameworks": {
-        "net8.0": {
-          "targetAlias": "net8.0",
+        "net9.0": {
+          "targetAlias": "net9.0",
+          "centralPackageVersions": {
+            "coverlet.collector": "6.0.0",
+            "Dapper": "2.1.66",
+            "DotNet.Testcontainers": "1.6.0",
+            "FluentAssertions": "8.3.0",
+            "FluentValidation.DependencyInjectionExtensions": "12.0.0",
+            "MediatR": "13.0.0",
+            "Microsoft.AspNetCore.Authentication.JwtBearer": "9.0.9",
+            "Microsoft.AspNetCore.Mvc.Testing": "9.0.9",
+            "Microsoft.EntityFrameworkCore": "9.0.9",
+            "Microsoft.EntityFrameworkCore.Design": "9.0.9",
+            "Microsoft.EntityFrameworkCore.Tools": "9.0.9",
+            "Microsoft.Extensions.Logging.Abstractions": "9.0.9",
+            "Microsoft.NET.Test.Sdk": "17.8.0",
+            "Microsoft.VisualStudio.Azure.Containers.Tools.Targets": "1.22.1",
+            "Minio.AspNetCore": "6.0.1",
+            "Moq": "4.20.72",
+            "MySql.EntityFrameworkCore": "9.0.6",
+            "MySqlConnector": "2.4.0",
+            "Newtonsoft.Json": "13.0.4",
+            "Serilog": "4.3.0",
+            "Serilog.AspNetCore": "9.0.0",
+            "Serilog.Sinks.Seq": "9.0.0",
+            "Swashbuckle.AspNetCore": "9.0.4",
+            "System.Text.Json": "9.0.9",
+            "Testcontainers": "4.7.0",
+            "Testcontainers.MariaDb": "4.7.0",
+            "Testcontainers.MySql": "4.7.0",
+            "xunit": "2.5.3",
+            "xunit.extensibility.core": "2.5.3",
+            "xunit.runner.visualstudio": "2.5.3"
+          },
           "imports": [
             "net461",
             "net462",
@@ -2456,7 +3666,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\9.0.302/PortableRuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\9.0.305/PortableRuntimeIdentifierGraph.json"
         }
       }
     },
@@ -2469,6 +3679,7 @@
         "packagesPath": "C:\\Users\\putik\\.nuget\\packages\\",
         "outputPath": "C:\\dev_net\\UnpakSipaksi\\UnpakSipaksi.Modules.SotaKebaharuan.PublicApi\\obj\\",
         "projectStyle": "PackageReference",
+        "centralPackageVersionsManagementEnabled": true,
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
         ],
@@ -2478,7 +3689,7 @@
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
-          "net8.0"
+          "net9.0"
         ],
         "sources": {
           "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
@@ -2486,8 +3697,8 @@
           "https://api.nuget.org/v3/index.json": {}
         },
         "frameworks": {
-          "net8.0": {
-            "targetAlias": "net8.0",
+          "net9.0": {
+            "targetAlias": "net9.0",
             "projectReferences": {
               "C:\\dev_net\\UnpakSipaksi\\UnpakSipaksi.Modules.SotaKebaharuan.Presentation\\UnpakSipaksi.Modules.SotaKebaharuan.Presentation.csproj": {
                 "projectPath": "C:\\dev_net\\UnpakSipaksi\\UnpakSipaksi.Modules.SotaKebaharuan.Presentation\\UnpakSipaksi.Modules.SotaKebaharuan.Presentation.csproj"
@@ -2508,8 +3719,40 @@
         "SdkAnalysisLevel": "9.0.300"
       },
       "frameworks": {
-        "net8.0": {
-          "targetAlias": "net8.0",
+        "net9.0": {
+          "targetAlias": "net9.0",
+          "centralPackageVersions": {
+            "coverlet.collector": "6.0.0",
+            "Dapper": "2.1.66",
+            "DotNet.Testcontainers": "1.6.0",
+            "FluentAssertions": "8.3.0",
+            "FluentValidation.DependencyInjectionExtensions": "12.0.0",
+            "MediatR": "13.0.0",
+            "Microsoft.AspNetCore.Authentication.JwtBearer": "9.0.9",
+            "Microsoft.AspNetCore.Mvc.Testing": "9.0.9",
+            "Microsoft.EntityFrameworkCore": "9.0.9",
+            "Microsoft.EntityFrameworkCore.Design": "9.0.9",
+            "Microsoft.EntityFrameworkCore.Tools": "9.0.9",
+            "Microsoft.Extensions.Logging.Abstractions": "9.0.9",
+            "Microsoft.NET.Test.Sdk": "17.8.0",
+            "Microsoft.VisualStudio.Azure.Containers.Tools.Targets": "1.22.1",
+            "Minio.AspNetCore": "6.0.1",
+            "Moq": "4.20.72",
+            "MySql.EntityFrameworkCore": "9.0.6",
+            "MySqlConnector": "2.4.0",
+            "Newtonsoft.Json": "13.0.4",
+            "Serilog": "4.3.0",
+            "Serilog.AspNetCore": "9.0.0",
+            "Serilog.Sinks.Seq": "9.0.0",
+            "Swashbuckle.AspNetCore": "9.0.4",
+            "System.Text.Json": "9.0.9",
+            "Testcontainers": "4.7.0",
+            "Testcontainers.MariaDb": "4.7.0",
+            "Testcontainers.MySql": "4.7.0",
+            "xunit": "2.5.3",
+            "xunit.extensibility.core": "2.5.3",
+            "xunit.runner.visualstudio": "2.5.3"
+          },
           "imports": [
             "net461",
             "net462",
@@ -2526,7 +3769,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\9.0.302/PortableRuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\9.0.305/PortableRuntimeIdentifierGraph.json"
         }
       }
     },
@@ -2539,6 +3782,7 @@
         "packagesPath": "C:\\Users\\putik\\.nuget\\packages\\",
         "outputPath": "C:\\dev_net\\UnpakSipaksi\\UnpakSipaksi.Modules.SubstansiBobot.Application\\obj\\",
         "projectStyle": "PackageReference",
+        "centralPackageVersionsManagementEnabled": true,
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
         ],
@@ -2548,7 +3792,7 @@
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
-          "net8.0"
+          "net9.0"
         ],
         "sources": {
           "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
@@ -2556,8 +3800,8 @@
           "https://api.nuget.org/v3/index.json": {}
         },
         "frameworks": {
-          "net8.0": {
-            "targetAlias": "net8.0",
+          "net9.0": {
+            "targetAlias": "net9.0",
             "projectReferences": {
               "C:\\dev_net\\UnpakSipaksi\\UnpakSipaksi.Common.Application\\UnpakSipaksi.Common.Application.csproj": {
                 "projectPath": "C:\\dev_net\\UnpakSipaksi\\UnpakSipaksi.Common.Application\\UnpakSipaksi.Common.Application.csproj"
@@ -2677,17 +3921,66 @@
         "SdkAnalysisLevel": "9.0.300"
       },
       "frameworks": {
-        "net8.0": {
-          "targetAlias": "net8.0",
+        "net9.0": {
+          "targetAlias": "net9.0",
           "dependencies": {
             "Dapper": {
               "target": "Package",
-              "version": "[2.1.35, )"
+              "version": "[2.1.66, )",
+              "versionCentrallyManaged": true
             },
             "MediatR": {
               "target": "Package",
-              "version": "[12.4.1, )"
+              "version": "[13.0.0, )",
+              "versionCentrallyManaged": true
+            },
+            "Microsoft.AspNetCore.Authentication.JwtBearer": {
+              "target": "Package",
+              "version": "[9.0.9, )",
+              "versionCentrallyManaged": true
+            },
+            "Newtonsoft.Json": {
+              "target": "Package",
+              "version": "[13.0.4, )",
+              "versionCentrallyManaged": true
+            },
+            "System.Text.Json": {
+              "target": "Package",
+              "version": "[9.0.9, )",
+              "versionCentrallyManaged": true
             }
+          },
+          "centralPackageVersions": {
+            "coverlet.collector": "6.0.0",
+            "Dapper": "2.1.66",
+            "DotNet.Testcontainers": "1.6.0",
+            "FluentAssertions": "8.3.0",
+            "FluentValidation.DependencyInjectionExtensions": "12.0.0",
+            "MediatR": "13.0.0",
+            "Microsoft.AspNetCore.Authentication.JwtBearer": "9.0.9",
+            "Microsoft.AspNetCore.Mvc.Testing": "9.0.9",
+            "Microsoft.EntityFrameworkCore": "9.0.9",
+            "Microsoft.EntityFrameworkCore.Design": "9.0.9",
+            "Microsoft.EntityFrameworkCore.Tools": "9.0.9",
+            "Microsoft.Extensions.Logging.Abstractions": "9.0.9",
+            "Microsoft.NET.Test.Sdk": "17.8.0",
+            "Microsoft.VisualStudio.Azure.Containers.Tools.Targets": "1.22.1",
+            "Minio.AspNetCore": "6.0.1",
+            "Moq": "4.20.72",
+            "MySql.EntityFrameworkCore": "9.0.6",
+            "MySqlConnector": "2.4.0",
+            "Newtonsoft.Json": "13.0.4",
+            "Serilog": "4.3.0",
+            "Serilog.AspNetCore": "9.0.0",
+            "Serilog.Sinks.Seq": "9.0.0",
+            "Swashbuckle.AspNetCore": "9.0.4",
+            "System.Text.Json": "9.0.9",
+            "Testcontainers": "4.7.0",
+            "Testcontainers.MariaDb": "4.7.0",
+            "Testcontainers.MySql": "4.7.0",
+            "xunit": "2.5.3",
+            "xunit.extensibility.core": "2.5.3",
+            "xunit.runner.visualstudio": "2.5.3"
           },
           "imports": [
             "net461",
@@ -2705,7 +3998,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\9.0.302/PortableRuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\9.0.305/PortableRuntimeIdentifierGraph.json"
         }
       }
     },
@@ -2718,6 +4011,7 @@
         "packagesPath": "C:\\Users\\putik\\.nuget\\packages\\",
         "outputPath": "C:\\dev_net\\UnpakSipaksi\\UnpakSipaksi.Modules.VideoKegiatan.PublicApi\\obj\\",
         "projectStyle": "PackageReference",
+        "centralPackageVersionsManagementEnabled": true,
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
         ],
@@ -2727,7 +4021,7 @@
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
-          "net8.0"
+          "net9.0"
         ],
         "sources": {
           "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
@@ -2735,8 +4029,8 @@
           "https://api.nuget.org/v3/index.json": {}
         },
         "frameworks": {
-          "net8.0": {
-            "targetAlias": "net8.0",
+          "net9.0": {
+            "targetAlias": "net9.0",
             "projectReferences": {}
           }
         },
@@ -2753,8 +4047,40 @@
         "SdkAnalysisLevel": "9.0.300"
       },
       "frameworks": {
-        "net8.0": {
-          "targetAlias": "net8.0",
+        "net9.0": {
+          "targetAlias": "net9.0",
+          "centralPackageVersions": {
+            "coverlet.collector": "6.0.0",
+            "Dapper": "2.1.66",
+            "DotNet.Testcontainers": "1.6.0",
+            "FluentAssertions": "8.3.0",
+            "FluentValidation.DependencyInjectionExtensions": "12.0.0",
+            "MediatR": "13.0.0",
+            "Microsoft.AspNetCore.Authentication.JwtBearer": "9.0.9",
+            "Microsoft.AspNetCore.Mvc.Testing": "9.0.9",
+            "Microsoft.EntityFrameworkCore": "9.0.9",
+            "Microsoft.EntityFrameworkCore.Design": "9.0.9",
+            "Microsoft.EntityFrameworkCore.Tools": "9.0.9",
+            "Microsoft.Extensions.Logging.Abstractions": "9.0.9",
+            "Microsoft.NET.Test.Sdk": "17.8.0",
+            "Microsoft.VisualStudio.Azure.Containers.Tools.Targets": "1.22.1",
+            "Minio.AspNetCore": "6.0.1",
+            "Moq": "4.20.72",
+            "MySql.EntityFrameworkCore": "9.0.6",
+            "MySqlConnector": "2.4.0",
+            "Newtonsoft.Json": "13.0.4",
+            "Serilog": "4.3.0",
+            "Serilog.AspNetCore": "9.0.0",
+            "Serilog.Sinks.Seq": "9.0.0",
+            "Swashbuckle.AspNetCore": "9.0.4",
+            "System.Text.Json": "9.0.9",
+            "Testcontainers": "4.7.0",
+            "Testcontainers.MariaDb": "4.7.0",
+            "Testcontainers.MySql": "4.7.0",
+            "xunit": "2.5.3",
+            "xunit.extensibility.core": "2.5.3",
+            "xunit.runner.visualstudio": "2.5.3"
+          },
           "imports": [
             "net461",
             "net462",
@@ -2771,7 +4097,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\9.0.302/PortableRuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\9.0.305/PortableRuntimeIdentifierGraph.json"
         }
       }
     }

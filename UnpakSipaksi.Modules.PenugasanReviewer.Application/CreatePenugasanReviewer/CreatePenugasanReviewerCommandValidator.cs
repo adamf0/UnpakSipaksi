@@ -2,6 +2,7 @@
 
 namespace UnpakSipaksi.Modules.PenugasanReviewer.Application.CreatePenugasanReviewer
 {
+    //[PR] belum di test BeValidNidn
     public sealed class CreatePenugasanReviewerCommandValidator : AbstractValidator<CreatePenugasanReviewerCommand>
     {
         public CreatePenugasanReviewerCommandValidator()
@@ -10,7 +11,8 @@ namespace UnpakSipaksi.Modules.PenugasanReviewer.Application.CreatePenugasanRevi
                 .NotEmpty().WithMessage("'Nidn' tidak boleh kosong.");
 
             RuleFor(c => c.Status)
-                .NotEmpty().WithMessage("'Status' tidak boleh kosong.");
+                .InclusiveBetween(0, 1)
+                .WithMessage("'Status' format tidak diketahui.");
         }
     }
 }

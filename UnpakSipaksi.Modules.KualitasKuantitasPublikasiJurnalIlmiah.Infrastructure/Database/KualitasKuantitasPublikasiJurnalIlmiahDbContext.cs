@@ -7,7 +7,7 @@ namespace UnpakSipaksi.Modules.KualitasKuantitasPublikasiJurnalIlmiah.Infrastruc
 {
     public sealed class KualitasKuantitasPublikasiJurnalIlmiahDbContext(DbContextOptions<KualitasKuantitasPublikasiJurnalIlmiahDbContext> options) : DbContext(options), IUnitOfWork
     {
-        internal DbSet<Domain.KualitasKuantitasPublikasiJurnalIlmiah.KualitasKuantitasPublikasiJurnalIlmiah> KualitasKuantitasPublikasiJurnalIlmiah { get; set; }
+        public DbSet<Domain.KualitasKuantitasPublikasiJurnalIlmiah.KualitasKuantitasPublikasiJurnalIlmiah> KualitasKuantitasPublikasiJurnalIlmiah { get; set; }
 
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {

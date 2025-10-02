@@ -7,7 +7,7 @@ namespace UnpakSipaksi.Modules.Pengumuman.Domain.Pengumuman
         [EnumMember(Value = "no expire")]
         NoExpire,
 
-        [EnumMember(Value = null)]
+        [EnumMember(Value = "range")]
         Range
     }
 }

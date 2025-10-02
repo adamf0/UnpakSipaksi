@@ -7,7 +7,7 @@ namespace UnpakSipaksi.Modules.VideoKegiatan.Infrastructure.Database
 {
     public sealed class VideoKegiatanDbContext(DbContextOptions<VideoKegiatanDbContext> options) : DbContext(options), IUnitOfWork
     {
-        internal DbSet<Domain.VideoKegiatan.VideoKegiatan> VideoKegiatan { get; set; }
+        public DbSet<Domain.VideoKegiatan.VideoKegiatan> VideoKegiatan { get; set; }
 
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {

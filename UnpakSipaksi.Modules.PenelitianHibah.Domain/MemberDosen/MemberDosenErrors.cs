@@ -22,6 +22,6 @@ namespace UnpakSipaksi.Modules.PenelitianHibah.Domain.MemberDosen
         public static Error InvalidData() =>
             Error.NotFound("Luaran.InvalidData", "Hibah penelitian is not match existing data");
         public static Error InvalidNidn() =>
-            Error.NotFound("Luaran.InvalidNidn", "Nidn is invalid format");
+            Error.NotFound("MemberDosen.InvalidNidn", "Nidn is invalid format");
     }
 }

@@ -7,7 +7,7 @@ namespace UnpakSipaksi.Modules.KategoriSkema.Infrastructure.Database
 {
     public sealed class KategoriSkemaDbContext(DbContextOptions<KategoriSkemaDbContext> options) : DbContext(options), IUnitOfWork
     {
-        internal DbSet<Domain.KategoriSkema.KategoriSkema> KategoriSkema { get; set; }
+        public DbSet<Domain.KategoriSkema.KategoriSkema> KategoriSkema { get; set; }
 
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {
@@ -36,7 +36,9 @@ namespace UnpakSipaksi.Modules.KategoriSkema.Infrastructure.Database
                       .HasColumnName("nama");
 
                 entity.Property(e => e.Rule)
-                      .HasColumnName("rule");
+                      .HasColumnName("rule")
+                      .HasColumnType("VARCHAR(5000)")
+                      .HasDefaultValue("[]");
 
             });
         }

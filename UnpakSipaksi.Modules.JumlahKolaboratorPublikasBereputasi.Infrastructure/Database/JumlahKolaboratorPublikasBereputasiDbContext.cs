@@ -7,7 +7,7 @@ namespace UnpakSipaksi.Modules.JumlahKolaboratorPublikasBereputasi.Infrastructur
 {
     public sealed class JumlahKolaboratorPublikasBereputasiDbContext(DbContextOptions<JumlahKolaboratorPublikasBereputasiDbContext> options) : DbContext(options), IUnitOfWork
     {
-        internal DbSet<Domain.JumlahKolaboratorPublikasBereputasi.JumlahKolaboratorPublikasBereputasi> JumlahKolaboratorPublikasBereputasi { get; set; }
+        public DbSet<Domain.JumlahKolaboratorPublikasBereputasi.JumlahKolaboratorPublikasBereputasi> JumlahKolaboratorPublikasBereputasi { get; set; }
 
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {

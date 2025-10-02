@@ -7,7 +7,7 @@ namespace UnpakSipaksi.Modules.IndikatorCapaian.Infrastructure.Database
 {
     public sealed class IndikatorCapaianDbContext(DbContextOptions<IndikatorCapaianDbContext> options) : DbContext(options), IUnitOfWork
     {
-        internal DbSet<Domain.IndikatorCapaian> IndikatorCapaian { get; set; }
+        public DbSet<Domain.IndikatorCapaian> IndikatorCapaian { get; set; }
 
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {

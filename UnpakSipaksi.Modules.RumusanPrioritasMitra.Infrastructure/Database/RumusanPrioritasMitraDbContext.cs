@@ -7,7 +7,7 @@ namespace UnpakSipaksi.Modules.RumusanPrioritasMitra.Infrastructure.Database
 {
     public sealed class RumusanPrioritasMitraDbContext(DbContextOptions<RumusanPrioritasMitraDbContext> options) : DbContext(options), IUnitOfWork
     {
-        internal DbSet<Domain.RumusanPrioritasMitra.RumusanPrioritasMitra> RumusanPrioritasMitra { get; set; }
+        public DbSet<Domain.RumusanPrioritasMitra.RumusanPrioritasMitra> RumusanPrioritasMitra { get; set; }
 
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {

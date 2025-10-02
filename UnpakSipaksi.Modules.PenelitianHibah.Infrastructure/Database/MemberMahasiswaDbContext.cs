@@ -7,7 +7,7 @@ namespace UnpakSipaksi.Modules.PenelitianHibah.Infrastructure.Database
 {
     public sealed class MemberMahasiswaDbContext(DbContextOptions<MemberMahasiswaDbContext> options) : DbContext(options), IUnitOfWorkMemberMahasiswa
     {
-        internal DbSet<Domain.MemberMahasiswa.MemberMahasiswa> MemberMahasiswa { get; set; }
+        public DbSet<Domain.MemberMahasiswa.MemberMahasiswa> MemberMahasiswa { get; set; }
 
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {

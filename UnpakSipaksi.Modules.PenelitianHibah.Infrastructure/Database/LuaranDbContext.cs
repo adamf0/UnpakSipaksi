@@ -7,7 +7,7 @@ namespace UnpakSipaksi.Modules.PenelitianHibah.Infrastructure.Database
 {
     public sealed class LuaranDbContext(DbContextOptions<LuaranDbContext> options) : DbContext(options), IUnitOfWorkLuaran
     {
-        internal DbSet<Domain.Luaran.Luaran> Luaran { get; set; }
+        public DbSet<Domain.Luaran.Luaran> Luaran { get; set; }
 
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {

@@ -7,7 +7,7 @@ namespace UnpakSipaksi.Modules.Rirn.Infrastructure.Database
 {
     public sealed class RirnDbContext(DbContextOptions<RirnDbContext> options) : DbContext(options), IUnitOfWork
     {
-        internal DbSet<Domain.Rirn.Rirn> Rirn { get; set; }
+        public DbSet<Domain.Rirn.Rirn> Rirn { get; set; }
 
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {

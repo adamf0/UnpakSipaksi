@@ -10,7 +10,7 @@ namespace UnpakSipaksi.Modules.PenugasanReviewer.DomainTest
         public void Build_WhenFieldsChanged_ShouldReturnUpdatedPenugasanReviewer()
         {
             // Arrange
-            string Nidn = "065117251";
+            string Nidn = "1234567890";
             int Status = 1;
 
             var createResult = Domain.PenugasanReviewer.PenugasanReviewer.Create(
@@ -20,7 +20,7 @@ namespace UnpakSipaksi.Modules.PenugasanReviewer.DomainTest
             var PenugasanReviewer = createResult.Value;
 
             // Act
-            string newNidn = "065117252";
+            string newNidn = "1123456789";
             int newStatus = 0;
 
             PenugasanReviewerBuilder builder = Domain.PenugasanReviewer.PenugasanReviewer.Update(PenugasanReviewer);
@@ -39,7 +39,7 @@ namespace UnpakSipaksi.Modules.PenugasanReviewer.DomainTest
         public void Build_WithInvalidStatus_ShouldReturnExpectedValidationError()
         {
             // Arrange
-            string Nidn = "065117251";
+            string Nidn = "1234567890";
             int Status = 1;
 
             var createResult = Domain.PenugasanReviewer.PenugasanReviewer.Create(
@@ -49,7 +49,7 @@ namespace UnpakSipaksi.Modules.PenugasanReviewer.DomainTest
             var PenugasanReviewer = createResult.Value;
 
             // Act
-            string newNidn = "065117252";
+            string newNidn = "11234567890";
             int newStatus = -110;
 
             PenugasanReviewerBuilder builder = Domain.PenugasanReviewer.PenugasanReviewer.Update(PenugasanReviewer);

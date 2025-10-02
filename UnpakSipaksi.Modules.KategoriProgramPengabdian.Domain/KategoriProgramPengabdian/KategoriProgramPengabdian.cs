@@ -17,7 +17,7 @@ namespace UnpakSipaksi.Modules.KategoriProgramPengabdian.Domain.KategoriProgramP
 
         [Column("name")]
         public string Nama { get; private set; } = null!;
-        public string Rule { get; private set; }
+        public string Rule { get; private set; } = "[]";
 
         public static KategoriProgramPengabdianBuilder Update(KategoriProgramPengabdian prev) => new KategoriProgramPengabdianBuilder(prev);
 

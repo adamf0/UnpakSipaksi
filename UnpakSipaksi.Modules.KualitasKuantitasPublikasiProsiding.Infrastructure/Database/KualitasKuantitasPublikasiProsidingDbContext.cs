@@ -7,7 +7,7 @@ namespace UnpakSipaksi.Modules.KualitasKuantitasPublikasiProsiding.Infrastructur
 {
     public sealed class KualitasKuantitasPublikasiProsidingDbContext(DbContextOptions<KualitasKuantitasPublikasiProsidingDbContext> options) : DbContext(options), IUnitOfWork
     {
-        internal DbSet<Domain.KualitasKuantitasPublikasiProsiding.KualitasKuantitasPublikasiProsiding> KualitasKuantitasPublikasiProsiding { get; set; }
+        public DbSet<Domain.KualitasKuantitasPublikasiProsiding.KualitasKuantitasPublikasiProsiding> KualitasKuantitasPublikasiProsiding { get; set; }
 
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {

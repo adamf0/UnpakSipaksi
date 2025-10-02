@@ -12,7 +12,7 @@ namespace UnpakSipaksi.Modules.AuthorSinta.DomainTest
         public void Change_ShouldUpdateSuccessfully()
         {
             // Arrange
-            string nidn = "ABC";
+            string nidn = "1234567890";
             string authorId = "1234567";
             int score = 100;
 
@@ -20,7 +20,7 @@ namespace UnpakSipaksi.Modules.AuthorSinta.DomainTest
             var authorSinta = createResult.Value;
 
             // Act
-            string nidnChange = "AAA";
+            string nidnChange = "1234567890";
             string authorIdChange = "2345678";
             int scoreChange = 11;
 
@@ -39,14 +39,14 @@ namespace UnpakSipaksi.Modules.AuthorSinta.DomainTest
         }
 
         [Theory]
-        [InlineData("AuthorSinta.InvalidAuthorId", "Author identity is invalid format", ErrorType.NotFound, "111", null, 100)]
-        [InlineData("AuthorSinta.InvalidAuthorId", "Author identity is invalid format", ErrorType.NotFound, "111", "123", 100)]
-        [InlineData("AuthorSinta.InvalidAuthorId", "Author identity is invalid format", ErrorType.NotFound, "111", "12345678", 100)]
-        [InlineData("AuthorSinta.InvalidSkor", "Skor is invalid format", ErrorType.NotFound, "111", "1234567", -1)]
+        [InlineData("AuthorSinta.InvalidAuthorId", "Author identity is invalid format", ErrorType.NotFound, "1123456789", null, 100)]
+        [InlineData("AuthorSinta.InvalidAuthorId", "Author identity is invalid format", ErrorType.NotFound, "1123456789", "123", 100)]
+        [InlineData("AuthorSinta.InvalidAuthorId", "Author identity is invalid format", ErrorType.NotFound, "1123456789", "12345678", 100)]
+        [InlineData("AuthorSinta.InvalidSkor", "Skor is invalid format", ErrorType.NotFound, "1123456789", "1234567", -1)]
         public void Build_ShouldReturnFailure_WhenInvalidChangeOccurs(string expectedCode, string expectedDescription, ErrorType expectedType, string nidnChange, string? authorIdChange, int scoreChange)
         {
             // Arrange
-            string nidn = "ABC";
+            string nidn = "1234567890";
             string authorId = "1234567";
             int score = 100;
 

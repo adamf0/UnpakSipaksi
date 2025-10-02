@@ -17,7 +17,7 @@ namespace UnpakSipaksi.Modules.JumlahKolaboratorPublikasBereputasi.Application.C
                 .NotEmpty().WithMessage("'Nama' tidak boleh kosong.");
 
             RuleFor(c => c.Skor)
-                .NotEmpty().WithMessage("'Skor' tidak boleh kosong.");
+               .GreaterThanOrEqualTo(0).WithMessage("'Skor' tidak boleh negative.");
         }
     }
 }

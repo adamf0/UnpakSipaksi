@@ -12,7 +12,7 @@ namespace UnpakSipaksi.Modules.PenelitianPkm.DomainTest.PenelitianPkm
             mockRepo.Setup(x =>
                 x.HasUniqueDataAsync(
                     It.IsAny<Guid?>(),
-                    It.Is<string>(s => s == "123"),
+                    It.Is<string>(s => s == "1234567890"),
                     It.Is<string>(j => j == "judul"),
                     It.IsAny<CancellationToken>()
                 )
@@ -27,11 +27,11 @@ namespace UnpakSipaksi.Modules.PenelitianPkm.DomainTest.PenelitianPkm
             // Arrange
             
             // Act
-            var result = await Domain.PenelitianPkm.PenelitianPkm.Create(repoPenelitianPkm(), "123", "2024-01-01", "judul");
+            var result = await Domain.PenelitianPkm.PenelitianPkm.Create(repoPenelitianPkm(), "1234567890", "2024-01-01", "judul");
 
             // Assert
             result.IsSuccess.Should().BeTrue();
-            result.Value.NIDN.Should().Be("123");
+            result.Value.NIDN.Should().Be("1234567890");
             result.Value.Judul.Should().Be("judul");
             result.Value.Status.Should().Be("Draf");
         }
@@ -39,7 +39,7 @@ namespace UnpakSipaksi.Modules.PenelitianPkm.DomainTest.PenelitianPkm
         [Fact]
         public async Task Create_ShouldFail_WhenDuplicate()
         {
-            var result = await Domain.PenelitianPkm.PenelitianPkm.Create(repoPenelitianPkm(false), "123", "2024-01-01", "judul");
+            var result = await Domain.PenelitianPkm.PenelitianPkm.Create(repoPenelitianPkm(false), "1234567890", "2024-01-01", "judul");
 
             result.IsFailure.Should().BeTrue();
             result.Error.Code.Should().Be("PenelitianPkm.NotUnique");
@@ -50,7 +50,7 @@ namespace UnpakSipaksi.Modules.PenelitianPkm.DomainTest.PenelitianPkm
         [InlineData("invalid-date")]
         public async Task Create_ShouldFail_WhenInvalidDate(string tahun)
         {
-            var result = await Domain.PenelitianPkm.PenelitianPkm.Create(repoPenelitianPkm(), "123", tahun, "judul");
+            var result = await Domain.PenelitianPkm.PenelitianPkm.Create(repoPenelitianPkm(), "1234567890", tahun, "judul");
 
             result.IsFailure.Should().BeTrue();
             result.Error.Code.Should().Be("PenelitianPkm.InvalidTahunPengajuan");
@@ -124,7 +124,7 @@ namespace UnpakSipaksi.Modules.PenelitianPkm.DomainTest.PenelitianPkm
         {
             var result = await Domain.PenelitianPkm.PenelitianPkm.Create(
                 repoPenelitianPkm(),
-                "123",
+                "1234567890",
                 "2022-01-01",
                 "judul"
             );

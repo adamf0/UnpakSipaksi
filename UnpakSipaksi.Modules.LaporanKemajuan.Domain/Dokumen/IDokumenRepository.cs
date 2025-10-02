@@ -2,8 +2,8 @@
 {
     public interface IDokumenRepository
     {
-        void Insert(Dokumen KetajamanAnalisis);
+        void Insert(Dokumen Dokumen);
         Task<Dokumen> GetAsync(Guid Uuid, CancellationToken cancellationToken = default);
-        Task DeleteAsync(Dokumen KetajamanAnalisis);
+        Task DeleteAsync(Dokumen Dokumen);
     }
 }

@@ -1,0 +1,16 @@
+C:\dev_net\UnpakSipaksi\UnpakSipaksi.Modules.KesesuaianJadwal.Domain\obj\Debug\net9.0\UnpakSipaksi.Modules.KesesuaianJadwal.Domain.GeneratedMSBuildEditorConfig.editorconfig
+C:\dev_net\UnpakSipaksi\UnpakSipaksi.Modules.KesesuaianJadwal.Domain\obj\Debug\net9.0\UnpakSipaksi.Modules.KesesuaianJadwal.Domain.AssemblyInfoInputs.cache
+C:\dev_net\UnpakSipaksi\UnpakSipaksi.Modules.KesesuaianJadwal.Domain\obj\Debug\net9.0\UnpakSipaksi.Modules.KesesuaianJadwal.Domain.AssemblyInfo.cs
+C:\dev_net\UnpakSipaksi\UnpakSipaksi.Modules.KesesuaianJadwal.Domain\obj\Debug\net9.0\UnpakSipaksi.Modules.KesesuaianJadwal.Domain.csproj.CoreCompileInputs.cache
+C:\dev_net\UnpakSipaksi\UnpakSipaksi.Modules.KesesuaianJadwal.Domain\obj\Debug\net9.0\UnpakSipaksi.Modules.KesesuaianJadwal.Domain.sourcelink.json
+C:\dev_net\UnpakSipaksi\UnpakSipaksi.Modules.KesesuaianJadwal.Domain\bin\Debug\net9.0\UnpakSipaksi.Modules.KesesuaianJadwal.Domain.deps.json
+C:\dev_net\UnpakSipaksi\UnpakSipaksi.Modules.KesesuaianJadwal.Domain\bin\Debug\net9.0\UnpakSipaksi.Modules.KesesuaianJadwal.Domain.dll
+C:\dev_net\UnpakSipaksi\UnpakSipaksi.Modules.KesesuaianJadwal.Domain\bin\Debug\net9.0\UnpakSipaksi.Modules.KesesuaianJadwal.Domain.pdb
+C:\dev_net\UnpakSipaksi\UnpakSipaksi.Modules.KesesuaianJadwal.Domain\bin\Debug\net9.0\UnpakSipaksi.Common.Domain.dll
+C:\dev_net\UnpakSipaksi\UnpakSipaksi.Modules.KesesuaianJadwal.Domain\bin\Debug\net9.0\UnpakSipaksi.Common.Domain.pdb
+C:\dev_net\UnpakSipaksi\UnpakSipaksi.Modules.KesesuaianJadwal.Domain\obj\Debug\net9.0\UnpakSipaksi.Modules.KesesuaianJadwal.Domain.csproj.AssemblyReference.cache
+C:\dev_net\UnpakSipaksi\UnpakSipaksi.Modules.KesesuaianJadwal.Domain\obj\Debug\net9.0\UnpakSip.FF203A89.Up2Date
+C:\dev_net\UnpakSipaksi\UnpakSipaksi.Modules.KesesuaianJadwal.Domain\obj\Debug\net9.0\UnpakSipaksi.Modules.KesesuaianJadwal.Domain.dll
+C:\dev_net\UnpakSipaksi\UnpakSipaksi.Modules.KesesuaianJadwal.Domain\obj\Debug\net9.0\refint\UnpakSipaksi.Modules.KesesuaianJadwal.Domain.dll
+C:\dev_net\UnpakSipaksi\UnpakSipaksi.Modules.KesesuaianJadwal.Domain\obj\Debug\net9.0\UnpakSipaksi.Modules.KesesuaianJadwal.Domain.pdb
+C:\dev_net\UnpakSipaksi\UnpakSipaksi.Modules.KesesuaianJadwal.Domain\obj\Debug\net9.0\ref\UnpakSipaksi.Modules.KesesuaianJadwal.Domain.dll

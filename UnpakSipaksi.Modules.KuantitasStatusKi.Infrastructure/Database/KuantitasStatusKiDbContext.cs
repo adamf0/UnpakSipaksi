@@ -7,7 +7,7 @@ namespace UnpakSipaksi.Modules.KuantitasStatusKi.Infrastructure.Database
 {
     public sealed class KuantitasStatusKiDbContext(DbContextOptions<KuantitasStatusKiDbContext> options) : DbContext(options), IUnitOfWork
     {
-        internal DbSet<Domain.KuantitasStatusKi.KuantitasStatusKi> KuantitasStatusKi { get; set; }
+        public DbSet<Domain.KuantitasStatusKi.KuantitasStatusKi> KuantitasStatusKi { get; set; }
 
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {

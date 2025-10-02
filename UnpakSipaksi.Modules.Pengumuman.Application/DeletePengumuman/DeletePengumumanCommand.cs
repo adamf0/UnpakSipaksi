@@ -3,6 +3,6 @@
 namespace UnpakSipaksi.Modules.Pengumuman.Application.DeletePengumuman
 {
     public sealed record DeletePengumumanCommand(
-        Guid uuid
+        string uuid
     ) : ICommand;
 }

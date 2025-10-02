@@ -7,7 +7,7 @@ namespace UnpakSipaksi.Modules.AuthorSinta.Infrastructure.Database
 {
     public sealed class AuthorSintaDbContext(DbContextOptions<AuthorSintaDbContext> options) : DbContext(options), IUnitOfWork
     {
-        internal DbSet<Domain.AuthorSinta.AuthorSinta> AuthorSinta { get; set; }
+        public DbSet<Domain.AuthorSinta.AuthorSinta> AuthorSinta { get; set; }
 
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {

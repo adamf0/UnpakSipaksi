@@ -16,10 +16,10 @@ namespace UnpakSipaksi.Modules.KredibilitasMitraDukungan.Domain.KredibilitasMitr
 
         [Column("name")]
         public string Nama { get; private set; } = null!;
-        public int BobotPDP { get; private set; } = 0;
-        public int BobotTerapan { get; private set; } = 0;
-        public int BobotKerjasama { get; private set; } = 0;
-        public int BobotPenelitianDasar { get; private set; } = 0;
+        //public int BobotPDP { get; private set; } = 0;
+        //public int BobotTerapan { get; private set; } = 0;
+        //public int BobotKerjasama { get; private set; } = 0;
+        //public int BobotPenelitianDasar { get; private set; } = 0;
         public int Skor { get; private set; } = 0;
 
         public static KredibilitasMitraDukunganBuilder Update(KredibilitasMitraDukungan prev) => new KredibilitasMitraDukunganBuilder(prev);

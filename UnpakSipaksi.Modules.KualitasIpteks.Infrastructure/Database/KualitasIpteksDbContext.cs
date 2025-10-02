@@ -7,7 +7,7 @@ namespace UnpakSipaksi.Modules.KualitasIpteks.Infrastructure.Database
 {
     public sealed class KualitasIpteksDbContext(DbContextOptions<KualitasIpteksDbContext> options) : DbContext(options), IUnitOfWork
     {
-        internal DbSet<Domain.KualitasIpteks.KualitasIpteks> KualitasIpteks { get; set; }
+        public DbSet<Domain.KualitasIpteks.KualitasIpteks> KualitasIpteks { get; set; }
 
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {

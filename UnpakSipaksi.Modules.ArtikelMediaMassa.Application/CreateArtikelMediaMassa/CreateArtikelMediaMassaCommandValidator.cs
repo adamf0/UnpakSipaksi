@@ -16,7 +16,7 @@ namespace UnpakSipaksi.Modules.ArtikelMediaMassa.Application.CreateArtikelMediaM
                 .NotEmpty().WithMessage("'Nama' tidak boleh kosong.");
 
             RuleFor(c => c.Nilai)
-                .NotEmpty().WithMessage("'Nilai' tidak boleh kosong.");
+                .GreaterThanOrEqualTo(0).WithMessage("'Nilai' tidak boleh negative.");
         }
     }
 }

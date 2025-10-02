@@ -7,7 +7,7 @@ namespace UnpakSipaksi.Modules.MetodeRencanaKegiatan.Infrastructure.Database
 {
     public sealed class MetodeRencanaKegiatanDbContext(DbContextOptions<MetodeRencanaKegiatanDbContext> options) : DbContext(options), IUnitOfWork
     {
-        internal DbSet<Domain.MetodeRencanaKegiatan.MetodeRencanaKegiatan> MetodeRencanaKegiatan { get; set; }
+        public DbSet<Domain.MetodeRencanaKegiatan.MetodeRencanaKegiatan> MetodeRencanaKegiatan { get; set; }
 
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {

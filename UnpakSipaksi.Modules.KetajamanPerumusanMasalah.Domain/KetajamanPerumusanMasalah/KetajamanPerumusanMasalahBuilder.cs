@@ -35,61 +35,61 @@ namespace UnpakSipaksi.Modules.KetajamanPerumusanMasalah.Domain.KetajamanPerumus
                 return this;
             }
 
-            public KetajamanPerumusanMasalahBuilder ChangeBobotPDP(int bobotPDP)
-            {
-                if (HasError) return this;
+            //public KetajamanPerumusanMasalahBuilder ChangeBobotPDP(int bobotPDP)
+            //{
+            //    if (HasError) return this;
 
-                /*if (string.IsNullOrWhiteSpace(nama))
-                {
-                    _result = Result.Failure<KetajamanPerumusanMasalah>(KetajamanPerumusanMasalahErrors.NamaNotFound);
-                    return this;
-                }*/
+            //    /*if (string.IsNullOrWhiteSpace(nama))
+            //    {
+            //        _result = Result.Failure<KetajamanPerumusanMasalah>(KetajamanPerumusanMasalahErrors.NamaNotFound);
+            //        return this;
+            //    }*/
 
-                _akurasiPenelitian.BobotPDP = bobotPDP;
-                return this;
-            }
+            //    _akurasiPenelitian.BobotPDP = bobotPDP;
+            //    return this;
+            //}
 
-            public KetajamanPerumusanMasalahBuilder ChangeBobotTerapan(int bobotTerapan)
-            {
-                if (HasError) return this;
+            //public KetajamanPerumusanMasalahBuilder ChangeBobotTerapan(int bobotTerapan)
+            //{
+            //    if (HasError) return this;
 
-                /*if (string.IsNullOrWhiteSpace(nama))
-                {
-                    _result = Result.Failure<KetajamanPerumusanMasalah>(KetajamanPerumusanMasalahErrors.NamaNotFound);
-                    return this;
-                }*/
+            //    /*if (string.IsNullOrWhiteSpace(nama))
+            //    {
+            //        _result = Result.Failure<KetajamanPerumusanMasalah>(KetajamanPerumusanMasalahErrors.NamaNotFound);
+            //        return this;
+            //    }*/
 
-                _akurasiPenelitian.BobotTerapan = bobotTerapan;
-                return this;
-            }
+            //    _akurasiPenelitian.BobotTerapan = bobotTerapan;
+            //    return this;
+            //}
 
-            public KetajamanPerumusanMasalahBuilder ChangeBobotKerjasama(int bobotKerjasama)
-            {
-                if (HasError) return this;
+            //public KetajamanPerumusanMasalahBuilder ChangeBobotKerjasama(int bobotKerjasama)
+            //{
+            //    if (HasError) return this;
 
-                /*if (string.IsNullOrWhiteSpace(nama))
-                {
-                    _result = Result.Failure<KetajamanPerumusanMasalah>(KetajamanPerumusanMasalahErrors.NamaNotFound);
-                    return this;
-                }*/
+            //    /*if (string.IsNullOrWhiteSpace(nama))
+            //    {
+            //        _result = Result.Failure<KetajamanPerumusanMasalah>(KetajamanPerumusanMasalahErrors.NamaNotFound);
+            //        return this;
+            //    }*/
 
-                _akurasiPenelitian.BobotKerjasama = bobotKerjasama;
-                return this;
-            }
+            //    _akurasiPenelitian.BobotKerjasama = bobotKerjasama;
+            //    return this;
+            //}
 
-            public KetajamanPerumusanMasalahBuilder ChangeBobotPenelitianDasar(int bobotPenelitianDasar)
-            {
-                if (HasError) return this;
+            //public KetajamanPerumusanMasalahBuilder ChangeBobotPenelitianDasar(int bobotPenelitianDasar)
+            //{
+            //    if (HasError) return this;
 
-                /*if (string.IsNullOrWhiteSpace(nama))
-                {
-                    _result = Result.Failure<KetajamanPerumusanMasalah>(KetajamanPerumusanMasalahErrors.NamaNotFound);
-                    return this;
-                }*/
+            //    /*if (string.IsNullOrWhiteSpace(nama))
+            //    {
+            //        _result = Result.Failure<KetajamanPerumusanMasalah>(KetajamanPerumusanMasalahErrors.NamaNotFound);
+            //        return this;
+            //    }*/
 
-                _akurasiPenelitian.BobotPenelitianDasar = bobotPenelitianDasar;
-                return this;
-            }
+            //    _akurasiPenelitian.BobotPenelitianDasar = bobotPenelitianDasar;
+            //    return this;
+            //}
 
             public KetajamanPerumusanMasalahBuilder ChangeSkor(int skor)
             {

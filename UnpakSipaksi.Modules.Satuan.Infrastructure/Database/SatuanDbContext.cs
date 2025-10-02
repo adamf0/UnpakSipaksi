@@ -7,7 +7,7 @@ namespace UnpakSipaksi.Modules.Satuan.Infrastructure.Database
 {
     public sealed class SatuanDbContext(DbContextOptions<SatuanDbContext> options) : DbContext(options), IUnitOfWork
     {
-        internal DbSet<Domain.Satuan.Satuan> Satuan { get; set; }
+        public DbSet<Domain.Satuan.Satuan> Satuan { get; set; }
 
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {

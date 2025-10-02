@@ -22,7 +22,7 @@ namespace UnpakSipaksi.Modules.InovasiPemecahanMasalah.Application.UpdateInovasi
                 .NotEmpty().WithMessage("'Nama' tidak boleh kosong.");
 
             RuleFor(c => c.Skor)
-                .NotEmpty().WithMessage("'Skor' tidak boleh kosong.");
+                .GreaterThanOrEqualTo(0).WithMessage("'Skor' tidak boleh negative.");
         }
     }
 }

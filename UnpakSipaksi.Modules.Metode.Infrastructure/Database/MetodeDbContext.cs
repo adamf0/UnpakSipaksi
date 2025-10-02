@@ -7,7 +7,7 @@ namespace UnpakSipaksi.Modules.Metode.Infrastructure.Database
 {
     public sealed class MetodeDbContext(DbContextOptions<MetodeDbContext> options) : DbContext(options), IUnitOfWork
     {
-        internal DbSet<Domain.Metode.Metode> Metode { get; set; }
+        public DbSet<Domain.Metode.Metode> Metode { get; set; }
 
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {

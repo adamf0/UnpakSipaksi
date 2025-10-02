@@ -28,7 +28,7 @@ public class DokumenLainnyaTests
     private async Task<Domain.PenelitianPkm.PenelitianPkm> CreateValidHibah(int id = 1)
     {
         var repo = CreateMockRepo();
-        var result = await Domain.PenelitianPkm.PenelitianPkm.Create(repo.Object, "123", "2024-01-01", "judul");
+        var result = await Domain.PenelitianPkm.PenelitianPkm.Create(repo.Object, "1234567890", "2024-01-01", "judul");
         result.IsSuccess.Should().BeTrue();
 
         var hibah = result.Value;

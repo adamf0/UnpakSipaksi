@@ -7,7 +7,7 @@ namespace UnpakSipaksi.Modules.KesesuaianWaktuRabLuaranFasilitas.Infrastructure.
 {
     public sealed class KesesuaianWaktuRabLuaranFasilitasDbContext(DbContextOptions<KesesuaianWaktuRabLuaranFasilitasDbContext> options) : DbContext(options), IUnitOfWork
     {
-        internal DbSet<Domain.KesesuaianWaktuRabLuaranFasilitas.KesesuaianWaktuRabLuaranFasilitas> KesesuaianWaktuRabLuaranFasilitas { get; set; }
+        public DbSet<Domain.KesesuaianWaktuRabLuaranFasilitas.KesesuaianWaktuRabLuaranFasilitas> KesesuaianWaktuRabLuaranFasilitas { get; set; }
 
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {

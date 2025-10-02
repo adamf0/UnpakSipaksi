@@ -7,7 +7,7 @@ namespace UnpakSipaksi.Modules.InovasiPemecahanMasalah.Infrastructure.Database
 {
     public sealed class InovasiPemecahanMasalahDbContext(DbContextOptions<InovasiPemecahanMasalahDbContext> options) : DbContext(options), IUnitOfWork
     {
-        internal DbSet<Domain.InovasiPemecahanMasalah.InovasiPemecahanMasalah> InovasiPemecahanMasalah { get; set; }
+        public DbSet<Domain.InovasiPemecahanMasalah.InovasiPemecahanMasalah> InovasiPemecahanMasalah { get; set; }
 
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {

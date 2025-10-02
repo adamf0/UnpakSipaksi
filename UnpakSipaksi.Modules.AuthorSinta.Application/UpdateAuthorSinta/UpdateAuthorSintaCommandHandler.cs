@@ -27,6 +27,7 @@ namespace UnpakSipaksi.Modules.AuthorSinta.Application.UpdateAuthorSinta
             Result<Domain.AuthorSinta.AuthorSinta> asset = Domain.AuthorSinta.AuthorSinta.Update(existingAuthorSinta!)
                          .ChangeNIDN(request.Nidn) 
                          .ChangeAuthorId(request.AuthorId)
+                         .ChangeScore(request.Score)
                          .Build();
 
             if (asset.IsFailure)

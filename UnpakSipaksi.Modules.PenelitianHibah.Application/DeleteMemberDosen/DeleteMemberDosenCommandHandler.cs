@@ -22,7 +22,7 @@ namespace UnpakSipaksi.Modules.PenelitianHibah.Application.DeleteMemberDosen
 
             if (existingMemberDosen is null)
             {
-                return Result.Failure(PenelitianHibahErrors.NotFound(Guid.Parse(request.Uuid)));
+                return Result.Failure(MemberDosenErrors.NotFound(Guid.Parse(request.Uuid)));
             }
             if (existingMemberDosen.NIDN != request.NIDN)
             {

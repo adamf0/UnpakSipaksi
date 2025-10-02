@@ -7,7 +7,7 @@ namespace UnpakSipaksi.Modules.KategoriTkt.Infrastructure.Database
 {
     public sealed class KategoriTktDbContext(DbContextOptions<KategoriTktDbContext> options) : DbContext(options), IUnitOfWork
     {
-        internal DbSet<Domain.KategoriTkt.KategoriTkt> KategoriTkt { get; set; }
+        public DbSet<Domain.KategoriTkt.KategoriTkt> KategoriTkt { get; set; }
 
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {

@@ -7,7 +7,7 @@ namespace UnpakSipaksi.Modules.KetajamanAnalisis.Infrastructure.Database
 {
     public sealed class KetajamanAnalisisDbContext(DbContextOptions<KetajamanAnalisisDbContext> options) : DbContext(options), IUnitOfWork
     {
-        internal DbSet<Domain.KetajamanAnalisis.KetajamanAnalisis> KetajamanAnalisis { get; set; }
+        public DbSet<Domain.KetajamanAnalisis.KetajamanAnalisis> KetajamanAnalisis { get; set; }
 
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {

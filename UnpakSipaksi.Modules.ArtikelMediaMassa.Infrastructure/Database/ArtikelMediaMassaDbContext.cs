@@ -7,7 +7,7 @@ namespace UnpakSipaksi.Modules.ArtikelMediaMassa.Infrastructure.Database
 {
     public sealed class ArtikelMediaMassaDbContext(DbContextOptions<ArtikelMediaMassaDbContext> options) : DbContext(options), IUnitOfWork
     {
-        internal DbSet<Domain.ArtikelMediaMassa.ArtikelMediaMassa> ArtikelMediaMassa { get; set; }
+        public DbSet<Domain.ArtikelMediaMassa.ArtikelMediaMassa> ArtikelMediaMassa { get; set; }
 
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {

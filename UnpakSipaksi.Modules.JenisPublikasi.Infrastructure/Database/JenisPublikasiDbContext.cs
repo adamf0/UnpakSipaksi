@@ -7,7 +7,7 @@ namespace UnpakSipaksi.Modules.JenisPublikasi.Infrastructure.Database
 {
     public sealed class JenisPublikasiDbContext(DbContextOptions<JenisPublikasiDbContext> options) : DbContext(options), IUnitOfWork
     {
-        internal DbSet<Domain.JenisPublikasi.JenisPublikasi> JenisPublikasi { get; set; }
+        public DbSet<Domain.JenisPublikasi.JenisPublikasi> JenisPublikasi { get; set; }
 
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {

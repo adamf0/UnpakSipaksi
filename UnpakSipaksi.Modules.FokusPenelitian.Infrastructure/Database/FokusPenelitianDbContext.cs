@@ -7,7 +7,7 @@ namespace UnpakSipaksi.Modules.FokusPenelitian.Infrastructure.Database
 {
     public sealed class FokusPenelitianDbContext(DbContextOptions<FokusPenelitianDbContext> options) : DbContext(options), IUnitOfWork
     {
-        internal DbSet<Domain.FokusPenelitian.FokusPenelitian> FokusPenelitian { get; set; }
+        public DbSet<Domain.FokusPenelitian.FokusPenelitian> FokusPenelitian { get; set; }
 
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {

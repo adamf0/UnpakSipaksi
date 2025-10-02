@@ -23,7 +23,7 @@ namespace UnpakSipaksi.Modules.SubstansiBobot.Presentation.SubstansiBobot
                     Result<SubstansiBobotPKMResponse> result = await sender.Send(new GetSubstansiBobotPKMQuery());
                     return result.Match(Results.Ok, ApiResults.Problem);
                 }
-                else if (Type == "hibah" && !KategoriSkema.IsNullOrEmpty())
+                else if (Type == "hibah")
                 {
                     string[] validKategoriSkema =
                     [

@@ -26,7 +26,7 @@ namespace UnpakSipaksi.Modules.PenelitianPkm.DomainTest.MemberNonDosen
         private async Task<Domain.PenelitianPkm.PenelitianPkm> CreateValidHibah(int id = 1)
         {
             var repo = CreateMockRepo();
-            var result = await Domain.PenelitianPkm.PenelitianPkm.Create(repo.Object, "123", "2024-01-01", "judul");
+            var result = await Domain.PenelitianPkm.PenelitianPkm.Create(repo.Object, "1234567890", "2024-01-01", "judul");
             result.IsSuccess.Should().BeTrue();
 
             var hibah = result.Value;
@@ -66,14 +66,14 @@ namespace UnpakSipaksi.Modules.PenelitianPkm.DomainTest.MemberNonDosen
         {
             // Arrange
             var hibah = await CreateValidHibah();
-            var member = Domain.MemberNonDosen.MemberNonDosen.Create(1, "123", "Budi", "LIPI").Value;
+            var member = Domain.MemberNonDosen.MemberNonDosen.Create(1, "1234567890", "Budi", "LIPI").Value;
 
             // Act
-            var result = Domain.MemberNonDosen.MemberNonDosen.Update(member, hibah, "456", "Agus", "BRIN");
+            var result = Domain.MemberNonDosen.MemberNonDosen.Update(member, hibah, "1123456789", "Agus", "BRIN");
 
             // Assert
             result.IsSuccess.Should().BeTrue();
-            result.Value.NomorIdentitas.Should().Be("456");
+            result.Value.NomorIdentitas.Should().Be("1123456789");
             result.Value.Nama.Should().Be("Agus");
             result.Value.Afiliasi.Should().Be("BRIN");
         }
@@ -83,7 +83,7 @@ namespace UnpakSipaksi.Modules.PenelitianPkm.DomainTest.MemberNonDosen
         {
             // Act
             var hibah = await CreateValidHibah();
-            var result = Domain.MemberNonDosen.MemberNonDosen.Update(null, hibah, "456", "Agus", "BRIN");
+            var result = Domain.MemberNonDosen.MemberNonDosen.Update(null, hibah, "1123456789", "Agus", "BRIN");
 
             // Assert
             result.IsFailure.Should().BeTrue();

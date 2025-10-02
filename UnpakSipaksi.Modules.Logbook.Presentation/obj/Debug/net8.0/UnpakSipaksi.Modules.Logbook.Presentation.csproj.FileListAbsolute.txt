@@ -1,9 +1,3 @@
-C:\dev_net\UnpakSipaksi\UnpakSipaksi.Modules.Logbook.Presentation\obj\Debug\net8.0\UnpakSipaksi.Modules.Logbook.Presentation.csproj.AssemblyReference.cache
-C:\dev_net\UnpakSipaksi\UnpakSipaksi.Modules.Logbook.Presentation\obj\Debug\net8.0\UnpakSipaksi.Modules.Logbook.Presentation.GeneratedMSBuildEditorConfig.editorconfig
-C:\dev_net\UnpakSipaksi\UnpakSipaksi.Modules.Logbook.Presentation\obj\Debug\net8.0\UnpakSipaksi.Modules.Logbook.Presentation.AssemblyInfoInputs.cache
-C:\dev_net\UnpakSipaksi\UnpakSipaksi.Modules.Logbook.Presentation\obj\Debug\net8.0\UnpakSipaksi.Modules.Logbook.Presentation.AssemblyInfo.cs
-C:\dev_net\UnpakSipaksi\UnpakSipaksi.Modules.Logbook.Presentation\obj\Debug\net8.0\UnpakSipaksi.Modules.Logbook.Presentation.csproj.CoreCompileInputs.cache
-C:\dev_net\UnpakSipaksi\UnpakSipaksi.Modules.Logbook.Presentation\obj\Debug\net8.0\UnpakSipaksi.Modules.Logbook.Presentation.sourcelink.json
 C:\dev_net\UnpakSipaksi\UnpakSipaksi.Modules.Logbook.Presentation\bin\Debug\net8.0\UnpakSipaksi.Modules.Logbook.Presentation.deps.json
 C:\dev_net\UnpakSipaksi\UnpakSipaksi.Modules.Logbook.Presentation\bin\Debug\net8.0\UnpakSipaksi.Modules.Logbook.Presentation.dll
 C:\dev_net\UnpakSipaksi\UnpakSipaksi.Modules.Logbook.Presentation\bin\Debug\net8.0\UnpakSipaksi.Modules.Logbook.Presentation.pdb
@@ -21,6 +15,12 @@ C:\dev_net\UnpakSipaksi\UnpakSipaksi.Modules.Logbook.Presentation\bin\Debug\net8
 C:\dev_net\UnpakSipaksi\UnpakSipaksi.Modules.Logbook.Presentation\bin\Debug\net8.0\UnpakSipaksi.Modules.Logbook.Domain.pdb
 C:\dev_net\UnpakSipaksi\UnpakSipaksi.Modules.Logbook.Presentation\bin\Debug\net8.0\UnpakSipaksi.Modules.PenelitianHibah.PublicApi.pdb
 C:\dev_net\UnpakSipaksi\UnpakSipaksi.Modules.Logbook.Presentation\bin\Debug\net8.0\UnpakSipaksi.Modules.PenelitianPkm.PublicApi.pdb
+C:\dev_net\UnpakSipaksi\UnpakSipaksi.Modules.Logbook.Presentation\obj\Debug\net8.0\UnpakSipaksi.Modules.Logbook.Presentation.csproj.AssemblyReference.cache
+C:\dev_net\UnpakSipaksi\UnpakSipaksi.Modules.Logbook.Presentation\obj\Debug\net8.0\UnpakSipaksi.Modules.Logbook.Presentation.GeneratedMSBuildEditorConfig.editorconfig
+C:\dev_net\UnpakSipaksi\UnpakSipaksi.Modules.Logbook.Presentation\obj\Debug\net8.0\UnpakSipaksi.Modules.Logbook.Presentation.AssemblyInfoInputs.cache
+C:\dev_net\UnpakSipaksi\UnpakSipaksi.Modules.Logbook.Presentation\obj\Debug\net8.0\UnpakSipaksi.Modules.Logbook.Presentation.AssemblyInfo.cs
+C:\dev_net\UnpakSipaksi\UnpakSipaksi.Modules.Logbook.Presentation\obj\Debug\net8.0\UnpakSipaksi.Modules.Logbook.Presentation.csproj.CoreCompileInputs.cache
+C:\dev_net\UnpakSipaksi\UnpakSipaksi.Modules.Logbook.Presentation\obj\Debug\net8.0\UnpakSipaksi.Modules.Logbook.Presentation.sourcelink.json
 C:\dev_net\UnpakSipaksi\UnpakSipaksi.Modules.Logbook.Presentation\obj\Debug\net8.0\UnpakSip.80267594.Up2Date
 C:\dev_net\UnpakSipaksi\UnpakSipaksi.Modules.Logbook.Presentation\obj\Debug\net8.0\UnpakSipaksi.Modules.Logbook.Presentation.dll
 C:\dev_net\UnpakSipaksi\UnpakSipaksi.Modules.Logbook.Presentation\obj\Debug\net8.0\refint\UnpakSipaksi.Modules.Logbook.Presentation.dll

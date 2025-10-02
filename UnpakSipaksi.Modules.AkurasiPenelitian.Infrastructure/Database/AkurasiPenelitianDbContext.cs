@@ -7,7 +7,7 @@ namespace UnpakSipaksi.Modules.AkurasiPenelitian.Infrastructure.Database
 {
     public sealed class AkurasiPenelitianDbContext(DbContextOptions<AkurasiPenelitianDbContext> options) : DbContext(options), IUnitOfWork
     {
-        internal DbSet<Domain.AkurasiPenelitian.AkurasiPenelitian> AkurasiPenelitian { get; set; }
+        public DbSet<Domain.AkurasiPenelitian.AkurasiPenelitian> AkurasiPenelitian { get; set; }
 
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {

@@ -7,7 +7,7 @@ namespace UnpakSipaksi.Modules.PublikasiDisitasiProposal.Infrastructure.Database
 {
     public sealed class PublikasiDisitasiProposalDbContext(DbContextOptions<PublikasiDisitasiProposalDbContext> options) : DbContext(options), IUnitOfWork
     {
-        internal DbSet<Domain.PublikasiDisitasiProposal.PublikasiDisitasiProposal> PublikasiDisitasiProposal { get; set; }
+        public DbSet<Domain.PublikasiDisitasiProposal.PublikasiDisitasiProposal> PublikasiDisitasiProposal { get; set; }
 
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {

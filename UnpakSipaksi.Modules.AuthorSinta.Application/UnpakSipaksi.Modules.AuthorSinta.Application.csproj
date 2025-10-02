@@ -1,7 +1,7 @@
 ﻿<Project Sdk="Microsoft.NET.Sdk">
 
 	<PropertyGroup>
-		<TargetFramework>net8.0</TargetFramework>
+		<TargetFramework>net9.0</TargetFramework>
 		<ImplicitUsings>enable</ImplicitUsings>
 		<Nullable>enable</Nullable>
 	</PropertyGroup>
@@ -11,16 +11,23 @@
 			<Nullable>disable</Nullable>
 		</PropertyGroup>
 	</Target>
-	
+
 	<ItemGroup>
-		<PackageReference Include="Dapper" Version="2.1.35" />
-		<PackageReference Include="MediatR" Version="12.4.1" />
+		<PackageReference Include="Dapper" />
+		<PackageReference Include="MediatR" />
+		<PackageReference Include="Newtonsoft.Json" />
+		<PackageReference Include="System.Text.Json" />
+		<PackageReference Include="Microsoft.AspNetCore.Authentication.JwtBearer" />
 	</ItemGroup>
 
 	<ItemGroup>
 		<ProjectReference Include="..\UnpakSipaksi.Common.Application\UnpakSipaksi.Common.Application.csproj" />
 		<ProjectReference Include="..\UnpakSipaksi.Common.Domain\UnpakSipaksi.Common.Domain.csproj" />
 		<ProjectReference Include="..\UnpakSipaksi.Modules.AuthorSinta.Domain\UnpakSipaksi.Modules.AuthorSinta.Domain.csproj" />
+
+		<AssemblyAttribute Include="System.Runtime.CompilerServices.InternalsVisibleToAttribute">
+			<_Parameter1>UnpakSipaksi.Modules.AuthorSinta.ApplicationTest</_Parameter1>
+		</AssemblyAttribute>
 	</ItemGroup>
 
 </Project>

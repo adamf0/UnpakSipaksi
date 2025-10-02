@@ -27,7 +27,7 @@ namespace UnpakSipaksi.Modules.PenelitianPkm.DomainTest.MemberDosen
         private async Task<Domain.PenelitianPkm.PenelitianPkm> CreateValidHibah(int id = 1)
         {
             var repo = CreateMockRepo();
-            var result = await Domain.PenelitianPkm.PenelitianPkm.Create(repo.Object, "123", "2024-01-01", "judul");
+            var result = await Domain.PenelitianPkm.PenelitianPkm.Create(repo.Object, "1234567890", "2024-01-01", "judul");
             result.IsSuccess.Should().BeTrue();
 
             var hibah = result.Value;
@@ -39,12 +39,12 @@ namespace UnpakSipaksi.Modules.PenelitianPkm.DomainTest.MemberDosen
         public void Create_ShouldReturnSuccess_WhenValid()
         {
             // Act
-            var result = Domain.MemberDosen.MemberDosen.Create(0, 1, "123");
+            var result = Domain.MemberDosen.MemberDosen.Create(0, 1, "1234567890");
 
             // Assert
             result.IsSuccess.Should().BeTrue();
             result.Value.PenelitianPkmId.Should().Be(1);
-            result.Value.NIDN.Should().Be("123");
+            result.Value.NIDN.Should().Be("1234567890");
             result.Value.Status.Should().Be(0); // Default status
         }
 
@@ -53,14 +53,14 @@ namespace UnpakSipaksi.Modules.PenelitianPkm.DomainTest.MemberDosen
         {
             // Arrange
             var hibah = await CreateValidHibah();
-            var original = Domain.MemberDosen.MemberDosen.Create(0, 1, "123").Value;
+            var original = Domain.MemberDosen.MemberDosen.Create(0, 1, "1234567890").Value;
 
             // Act
-            var result = Domain.MemberDosen.MemberDosen.Update(0, original, hibah, "456");
+            var result = Domain.MemberDosen.MemberDosen.Update(0, original, hibah, "1123456789");
 
             // Assert
             result.IsSuccess.Should().BeTrue();
-            result.Value.NIDN.Should().Be("456");
+            result.Value.NIDN.Should().Be("1123456789");
         }
 
         [Fact]
@@ -68,7 +68,7 @@ namespace UnpakSipaksi.Modules.PenelitianPkm.DomainTest.MemberDosen
         {
             // Arrange
             var hibah = await CreateValidHibah();
-            var member = Domain.MemberDosen.MemberDosen.Create(0, 1, "123").Value;
+            var member = Domain.MemberDosen.MemberDosen.Create(0, 1, "1234567890").Value;
 
             // Act
             var result = Domain.MemberDosen.MemberDosen.Approve(member, hibah);
@@ -95,7 +95,7 @@ namespace UnpakSipaksi.Modules.PenelitianPkm.DomainTest.MemberDosen
         {
             // Arrange
             var hibah = await CreateValidHibah();
-            var member = Domain.MemberDosen.MemberDosen.Create(0, 1, "123").Value;
+            var member = Domain.MemberDosen.MemberDosen.Create(0, 1, "1234567890").Value;
 
             // Act
             var result = Domain.MemberDosen.MemberDosen.Reject(member, hibah);

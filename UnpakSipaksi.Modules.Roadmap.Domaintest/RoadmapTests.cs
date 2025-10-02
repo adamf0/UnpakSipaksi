@@ -9,7 +9,7 @@ namespace UnpakSipaksi.Modules.Roadmap.Domaintest
         public void Create_WhenValidPropertiesProvided_ShouldReturnKategoriWithCorrectProperties()
         {
             // Arrange
-            string nidn = "065117251";
+            string nidn = "1234567890";
             string link = "https://drive.google.com/file/d/abc123/view";
 
             // Act
@@ -29,7 +29,7 @@ namespace UnpakSipaksi.Modules.Roadmap.Domaintest
         public void Create_WhenValidPropertiesProvided_ShouldRaiseKategoriCreatedDomainEvent()
         {
             // Arrange
-            string nidn = "065117251";
+            string nidn = "1234567890";
             string link = "https://drive.google.com/file/d/abc123/view";
 
             // Act

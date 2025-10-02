@@ -7,7 +7,7 @@ namespace UnpakSipaksi.Modules.KewajaranTahapanTarget.Infrastructure.Database
 {
     public sealed class KewajaranTahapanTargetDbContext(DbContextOptions<KewajaranTahapanTargetDbContext> options) : DbContext(options), IUnitOfWork
     {
-        internal DbSet<Domain.KewajaranTahapanTarget.KewajaranTahapanTarget> KewajaranTahapanTarget { get; set; }
+        public DbSet<Domain.KewajaranTahapanTarget.KewajaranTahapanTarget> KewajaranTahapanTarget { get; set; }
 
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {

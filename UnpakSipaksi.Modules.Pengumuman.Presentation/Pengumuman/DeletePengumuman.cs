@@ -13,10 +13,10 @@ namespace UnpakSipaksi.Modules.Pengumuman.Presentation.Pengumuman
     {
         public static void MapEndpoint(IEndpointRouteBuilder app)
         {
-            app.MapDelete("Pengumuman/{id}", async (Guid id, ISender sender) =>
+            app.MapDelete("Pengumuman/{uuid}", async (string uuid, ISender sender) =>
             {
                 Result result = await sender.Send(
-                    new DeletePengumumanCommand(id)
+                    new DeletePengumumanCommand(uuid)
                 );
 
                 return result.Match(() => Results.Ok(), ApiResults.Problem);

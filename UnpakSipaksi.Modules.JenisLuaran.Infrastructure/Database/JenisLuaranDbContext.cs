@@ -7,7 +7,7 @@ namespace UnpakSipaksi.Modules.JenisLuaran.Infrastructure.Database
 {
     public sealed class JenisLuaranDbContext(DbContextOptions<JenisLuaranDbContext> options) : DbContext(options), IUnitOfWork
     {
-        internal DbSet<Domain.JenisLuaran> JenisLuaran { get; set; }
+        public DbSet<Domain.JenisLuaran> JenisLuaran { get; set; }
 
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {

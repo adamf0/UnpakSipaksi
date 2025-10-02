@@ -7,7 +7,7 @@ namespace UnpakSipaksi.Modules.KategoriMitraPenelitian.Infrastructure.Database
 {
     public sealed class KategoriMitraPenelitianDbContext(DbContextOptions<KategoriMitraPenelitianDbContext> options) : DbContext(options), IUnitOfWork
     {
-        internal DbSet<Domain.KategoriMitraPenelitian.KategoriMitraPenelitian> KategoriMitraPenelitian { get; set; }
+        public DbSet<Domain.KategoriMitraPenelitian.KategoriMitraPenelitian> KategoriMitraPenelitian { get; set; }
 
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {

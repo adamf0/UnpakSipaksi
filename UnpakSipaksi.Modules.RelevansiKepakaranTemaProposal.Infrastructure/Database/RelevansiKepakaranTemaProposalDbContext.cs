@@ -7,7 +7,7 @@ namespace UnpakSipaksi.Modules.RelevansiKepakaranTemaProposal.Infrastructure.Dat
 {
     public sealed class RelevansiKepakaranTemaProposalDbContext(DbContextOptions<RelevansiKepakaranTemaProposalDbContext> options) : DbContext(options), IUnitOfWork
     {
-        internal DbSet<Domain.RelevansiKepakaranTemaProposal.RelevansiKepakaranTemaProposal> RelevansiKepakaranTemaProposal { get; set; }
+        public DbSet<Domain.RelevansiKepakaranTemaProposal.RelevansiKepakaranTemaProposal> RelevansiKepakaranTemaProposal { get; set; }
 
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {

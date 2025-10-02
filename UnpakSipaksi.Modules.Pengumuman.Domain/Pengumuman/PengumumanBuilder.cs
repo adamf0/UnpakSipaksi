@@ -62,8 +62,8 @@ namespace UnpakSipaksi.Modules.Pengumuman.Domain.Pengumuman
                 }
 
                 _akurasiPenelitian.TypeExpired = expiredInfo.Type.ToString();
-                _akurasiPenelitian.TanggalAwal = expiredInfo.TanggalAwal?.ToString();
-                _akurasiPenelitian.TanggalAkhir = expiredInfo.TanggalAkhir?.ToString();
+                _akurasiPenelitian.TanggalAwal = expiredInfo.TanggalAwal?.ToDateTime(TimeOnly.MinValue);
+                _akurasiPenelitian.TanggalAkhir = expiredInfo.TanggalAkhir?.ToDateTime(TimeOnly.MinValue);
                 return this;
             }
         }

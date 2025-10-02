@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("UnpakSipaksi.Modules.ModelFeasibilityStudys.Domain")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+716a96314e017830ab6b262da84a4d8aa38e206d")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+5564997c3a9286ce05512f8c12b8ed4121a06569")]
 [assembly: System.Reflection.AssemblyProductAttribute("UnpakSipaksi.Modules.ModelFeasibilityStudys.Domain")]
 [assembly: System.Reflection.AssemblyTitleAttribute("UnpakSipaksi.Modules.ModelFeasibilityStudys.Domain")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

@@ -12,7 +12,7 @@ namespace UnpakSipaksi.Modules.PenelitianHibah.DomainTest.PenelitianHibah
             mockRepo.Setup(x =>
                 x.HasUniqueDataAsync(
                     It.IsAny<Guid?>(),
-                    It.Is<string>(s => s == "123"),
+                    It.Is<string>(s => s == "1234567890"),
                     It.Is<string>(j => j == "judul"),
                     It.IsAny<CancellationToken>()
                 )
@@ -26,11 +26,11 @@ namespace UnpakSipaksi.Modules.PenelitianHibah.DomainTest.PenelitianHibah
         {
             // Arrange
             // Act
-            var result = await Domain.PenelitianHibah.PenelitianHibah.Create(repoPenelitianHibah(), "123", "2024-01-01", "judul");
+            var result = await Domain.PenelitianHibah.PenelitianHibah.Create(repoPenelitianHibah(), "1234567890", "2024-01-01", "judul");
 
             // Assert
             result.IsSuccess.Should().BeTrue();
-            result.Value.NIDN.Should().Be("123");
+            result.Value.NIDN.Should().Be("1234567890");
             result.Value.Judul.Should().Be("judul");
             result.Value.Status.Should().Be("Draf");
         }
@@ -49,7 +49,7 @@ namespace UnpakSipaksi.Modules.PenelitianHibah.DomainTest.PenelitianHibah
         [InlineData("invalid-date")]
         public async Task Create_ShouldFail_WhenInvalidDate(string tahun)
         {
-            var result = await Domain.PenelitianHibah.PenelitianHibah.Create(repoPenelitianHibah(), "123", tahun, "judul");
+            var result = await Domain.PenelitianHibah.PenelitianHibah.Create(repoPenelitianHibah(), "1234567890", tahun, "judul");
 
             result.IsFailure.Should().BeTrue();
             result.Error.Code.Should().Be("PenelitianHibah.InvalidFormatTahunPengajuan");
@@ -131,7 +131,7 @@ namespace UnpakSipaksi.Modules.PenelitianHibah.DomainTest.PenelitianHibah
         {
             var result = await Domain.PenelitianHibah.PenelitianHibah.Create(
                 repoPenelitianHibah(),
-                "123",
+                "1234567890",
                 "2022-01-01",
                 "judul"
             );

@@ -7,7 +7,7 @@ namespace UnpakSipaksi.Modules.Komponen.Infrastructure.Database
 {
     public sealed class KomponenContext(DbContextOptions<KomponenContext> options) : DbContext(options), IUnitOfWork
     {
-        internal DbSet<Domain.Komponen.Komponen> Komponen { get; set; }
+        public DbSet<Domain.Komponen.Komponen> Komponen { get; set; }
 
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {

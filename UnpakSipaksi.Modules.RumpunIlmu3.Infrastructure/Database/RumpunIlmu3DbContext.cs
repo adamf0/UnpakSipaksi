@@ -7,7 +7,7 @@ namespace UnpakSipaksi.Modules.RumpunIlmu3.Infrastructure.Database
 {
     public sealed class RumpunIlmu3DbContext(DbContextOptions<RumpunIlmu3DbContext> options) : DbContext(options), IUnitOfWork
     {
-        internal DbSet<Domain.RumpunIlmu3.RumpunIlmu3> RumpunIlmu3 { get; set; }
+        public DbSet<Domain.RumpunIlmu3.RumpunIlmu3> RumpunIlmu3 { get; set; }
 
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {

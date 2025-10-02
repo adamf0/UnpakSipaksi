@@ -7,7 +7,7 @@ namespace UnpakSipaksi.Modules.KesesuaianPenugasan.Infrastructure.Database
 {
     public sealed class KesesuaianPenugasanDbContext(DbContextOptions<KesesuaianPenugasanDbContext> options) : DbContext(options), IUnitOfWork
     {
-        internal DbSet<Domain.KesesuaianPenugasan.KesesuaianPenugasan> KesesuaianPenugasan { get; set; }
+        public DbSet<Domain.KesesuaianPenugasan.KesesuaianPenugasan> KesesuaianPenugasan { get; set; }
 
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {

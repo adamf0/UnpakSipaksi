@@ -35,61 +35,61 @@ namespace UnpakSipaksi.Modules.KredibilitasMitraDukungan.Domain.KredibilitasMitr
                 return this;
             }
 
-            public KredibilitasMitraDukunganBuilder ChangeBobotPDP(int bobotPDP)
-            {
-                if (HasError) return this;
+            //public KredibilitasMitraDukunganBuilder ChangeBobotPDP(int bobotPDP)
+            //{
+            //    if (HasError) return this;
 
-                /*if (string.IsNullOrWhiteSpace(nama))
-                {
-                    _result = Result.Failure<KredibilitasMitraDukungan>(KredibilitasMitraDukunganErrors.NamaNotFound);
-                    return this;
-                }*/
+            //    /*if (string.IsNullOrWhiteSpace(nama))
+            //    {
+            //        _result = Result.Failure<KredibilitasMitraDukungan>(KredibilitasMitraDukunganErrors.NamaNotFound);
+            //        return this;
+            //    }*/
 
-                _akurasiPenelitian.BobotPDP = bobotPDP;
-                return this;
-            }
+            //    _akurasiPenelitian.BobotPDP = bobotPDP;
+            //    return this;
+            //}
 
-            public KredibilitasMitraDukunganBuilder ChangeBobotTerapan(int bobotTerapan)
-            {
-                if (HasError) return this;
+            //public KredibilitasMitraDukunganBuilder ChangeBobotTerapan(int bobotTerapan)
+            //{
+            //    if (HasError) return this;
 
-                /*if (string.IsNullOrWhiteSpace(nama))
-                {
-                    _result = Result.Failure<KredibilitasMitraDukungan>(KredibilitasMitraDukunganErrors.NamaNotFound);
-                    return this;
-                }*/
+            //    /*if (string.IsNullOrWhiteSpace(nama))
+            //    {
+            //        _result = Result.Failure<KredibilitasMitraDukungan>(KredibilitasMitraDukunganErrors.NamaNotFound);
+            //        return this;
+            //    }*/
 
-                _akurasiPenelitian.BobotTerapan = bobotTerapan;
-                return this;
-            }
+            //    _akurasiPenelitian.BobotTerapan = bobotTerapan;
+            //    return this;
+            //}
 
-            public KredibilitasMitraDukunganBuilder ChangeBobotKerjasama(int bobotKerjasama)
-            {
-                if (HasError) return this;
+            //public KredibilitasMitraDukunganBuilder ChangeBobotKerjasama(int bobotKerjasama)
+            //{
+            //    if (HasError) return this;
 
-                /*if (string.IsNullOrWhiteSpace(nama))
-                {
-                    _result = Result.Failure<KredibilitasMitraDukungan>(KredibilitasMitraDukunganErrors.NamaNotFound);
-                    return this;
-                }*/
+            //    /*if (string.IsNullOrWhiteSpace(nama))
+            //    {
+            //        _result = Result.Failure<KredibilitasMitraDukungan>(KredibilitasMitraDukunganErrors.NamaNotFound);
+            //        return this;
+            //    }*/
 
-                _akurasiPenelitian.BobotKerjasama = bobotKerjasama;
-                return this;
-            }
+            //    _akurasiPenelitian.BobotKerjasama = bobotKerjasama;
+            //    return this;
+            //}
 
-            public KredibilitasMitraDukunganBuilder ChangeBobotPenelitianDasar(int bobotPenelitianDasar)
-            {
-                if (HasError) return this;
+            //public KredibilitasMitraDukunganBuilder ChangeBobotPenelitianDasar(int bobotPenelitianDasar)
+            //{
+            //    if (HasError) return this;
 
-                /*if (string.IsNullOrWhiteSpace(nama))
-                {
-                    _result = Result.Failure<KredibilitasMitraDukungan>(KredibilitasMitraDukunganErrors.NamaNotFound);
-                    return this;
-                }*/
+            //    /*if (string.IsNullOrWhiteSpace(nama))
+            //    {
+            //        _result = Result.Failure<KredibilitasMitraDukungan>(KredibilitasMitraDukunganErrors.NamaNotFound);
+            //        return this;
+            //    }*/
 
-                _akurasiPenelitian.BobotPenelitianDasar = bobotPenelitianDasar;
-                return this;
-            }
+            //    _akurasiPenelitian.BobotPenelitianDasar = bobotPenelitianDasar;
+            //    return this;
+            //}
 
             public KredibilitasMitraDukunganBuilder ChangeSkor(int skor)
             {

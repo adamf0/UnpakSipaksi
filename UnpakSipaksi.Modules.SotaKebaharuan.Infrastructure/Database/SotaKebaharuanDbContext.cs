@@ -7,7 +7,7 @@ namespace UnpakSipaksi.Modules.SotaKebaharuan.Infrastructure.Database
 {
     public sealed class SotaKebaharuanDbContext(DbContextOptions<SotaKebaharuanDbContext> options) : DbContext(options), IUnitOfWork
     {
-        internal DbSet<Domain.SotaKebaharuan.SotaKebaharuan> SotaKebaharuan { get; set; }
+        public DbSet<Domain.SotaKebaharuan.SotaKebaharuan> SotaKebaharuan { get; set; }
 
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {

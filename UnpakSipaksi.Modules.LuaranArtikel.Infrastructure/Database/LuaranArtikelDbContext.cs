@@ -7,7 +7,7 @@ namespace UnpakSipaksi.Modules.LuaranArtikel.Infrastructure.Database
 {
     public sealed class LuaranArtikelDbContext(DbContextOptions<LuaranArtikelDbContext> options) : DbContext(options), IUnitOfWork
     {
-        internal DbSet<Domain.LuaranArtikel.LuaranArtikel> LuaranArtikel { get; set; }
+        public DbSet<Domain.LuaranArtikel.LuaranArtikel> LuaranArtikel { get; set; }
 
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {

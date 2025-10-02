@@ -7,7 +7,7 @@ namespace UnpakSipaksi.Modules.KelompokMitra.Infrastructure.Database
 {
     public sealed class KelompokMitraDbContext(DbContextOptions<KelompokMitraDbContext> options) : DbContext(options), IUnitOfWork
     {
-        internal DbSet<Domain.KelompokMitra.KelompokMitra> KelompokMitra { get; set; }
+        public DbSet<Domain.KelompokMitra.KelompokMitra> KelompokMitra { get; set; }
 
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {

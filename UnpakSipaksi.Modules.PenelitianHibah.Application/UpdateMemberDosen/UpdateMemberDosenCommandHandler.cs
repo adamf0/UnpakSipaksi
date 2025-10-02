@@ -18,7 +18,7 @@ namespace UnpakSipaksi.Modules.PenelitianHibah.Application.UpdateMemberDosen
 
             if (existingMemberDosen is null)
             {
-                return Result.Failure(PenelitianHibahErrors.NotFound(Guid.Parse(request.Uuid)));
+                return Result.Failure(MemberDosenErrors.NotFound(Guid.Parse(request.Uuid)));
             }
             
             int checkData = await memberRepository.CheckUniqueDataAsync(existingMemberDosen.Id??0, request.NIDN, cancellationToken);

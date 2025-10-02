@@ -7,7 +7,7 @@ namespace UnpakSipaksi.Modules.RelevansiProdukKepentinganNasional.Infrastructure
 {
     public sealed class RelevansiProdukKepentinganNasionalDbContext(DbContextOptions<RelevansiProdukKepentinganNasionalDbContext> options) : DbContext(options), IUnitOfWork
     {
-        internal DbSet<Domain.RelevansiProdukKepentinganNasional.RelevansiProdukKepentinganNasional> RelevansiProdukKepentinganNasional { get; set; }
+        public DbSet<Domain.RelevansiProdukKepentinganNasional.RelevansiProdukKepentinganNasional> RelevansiProdukKepentinganNasional { get; set; }
 
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {

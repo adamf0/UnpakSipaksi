@@ -7,7 +7,7 @@ namespace UnpakSipaksi.Modules.PeningkatanKeberdayaanMitra.Infrastructure.Databa
 {
     public sealed class PeningkatanKeberdayaanMitraDbContext(DbContextOptions<PeningkatanKeberdayaanMitraDbContext> options) : DbContext(options), IUnitOfWork
     {
-        internal DbSet<Domain.PeningkatanKeberdayaanMitra.PeningkatanKeberdayaanMitra> PeningkatanKeberdayaanMitra { get; set; }
+        public DbSet<Domain.PeningkatanKeberdayaanMitra.PeningkatanKeberdayaanMitra> PeningkatanKeberdayaanMitra { get; set; }
 
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {

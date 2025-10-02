@@ -7,7 +7,7 @@ namespace UnpakSipaksi.Modules.RoadmapPenelitian.Infrastructure.Database
 {
     public sealed class RoadmapPenelitianDbContext(DbContextOptions<RoadmapPenelitianDbContext> options) : DbContext(options), IUnitOfWork
     {
-        internal DbSet<Domain.RoadmapPenelitian.RoadmapPenelitian> RoadmapPenelitian { get; set; }
+        public DbSet<Domain.RoadmapPenelitian.RoadmapPenelitian> RoadmapPenelitian { get; set; }
 
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {

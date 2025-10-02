@@ -7,7 +7,7 @@ namespace UnpakSipaksi.Modules.PenelitianHibah.Infrastructure.Database
 {
     public sealed class MemberNonDosenDbContext(DbContextOptions<MemberNonDosenDbContext> options) : DbContext(options), IUnitOfWorkNonMember
     {
-        internal DbSet<Domain.MemberNonDosen.MemberNonDosen> MemberNonDosen { get; set; }
+        public DbSet<Domain.MemberNonDosen.MemberNonDosen> MemberNonDosen { get; set; }
 
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {

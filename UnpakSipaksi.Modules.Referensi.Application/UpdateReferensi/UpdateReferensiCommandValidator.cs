@@ -23,8 +23,7 @@ namespace UnpakSipaksi.Modules.Referensi.Application.UpdateReferensi
                 .Must(Helper.BeValidGuidV4).WithMessage("'RelevansiKualitasReferensi' harus dalam format UUID v4 yang valid.");
 
             RuleFor(c => c.Nilai)
-                .NotEmpty().WithMessage("'Nilai' tidak boleh kosong.")
-                .LessThan(0).WithMessage("'Nilai' tidak boleh kurang dari 0");
+                .GreaterThanOrEqualTo(0).WithMessage("'Nilai' tidak boleh negative.");
         }
     }
 }
