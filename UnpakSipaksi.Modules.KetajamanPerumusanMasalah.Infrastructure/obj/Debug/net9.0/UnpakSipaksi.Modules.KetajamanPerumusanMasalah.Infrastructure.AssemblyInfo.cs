@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("UnpakSipaksi.Modules.KetajamanPerumusanMasalah.Infrastructure")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+5564997c3a9286ce05512f8c12b8ed4121a06569")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+4b982e78010e0261ba0eda0ea453dc1506bd4e6f")]
 [assembly: System.Reflection.AssemblyProductAttribute("UnpakSipaksi.Modules.KetajamanPerumusanMasalah.Infrastructure")]
 [assembly: System.Reflection.AssemblyTitleAttribute("UnpakSipaksi.Modules.KetajamanPerumusanMasalah.Infrastructure")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

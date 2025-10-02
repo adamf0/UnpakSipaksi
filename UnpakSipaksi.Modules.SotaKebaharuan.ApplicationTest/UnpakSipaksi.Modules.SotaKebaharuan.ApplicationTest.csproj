@@ -1,6 +1,6 @@
 ﻿<Project Sdk="Microsoft.NET.Sdk">
 
-	<PropertyGroup>
+  <PropertyGroup>
 		<TargetFramework>net9.0</TargetFramework>
 		<ImplicitUsings>enable</ImplicitUsings>
 		<Nullable>enable</Nullable>
@@ -25,6 +25,7 @@
 	<ItemGroup>
 		<ProjectReference Include="..\UnpakSipaksi.Modules.SotaKebaharuan.Infrastructure\UnpakSipaksi.Modules.SotaKebaharuan.Infrastructure.csproj" />
 		<ProjectReference Include="..\UnpakSipaksi\UnpakSipaksi.csproj" />
-		<None Include="Seed\init.sql" CopyToOutputDirectory="Always" />pyToOutputDirectory="Always" />
+		<None Include="Seed\init.sql" CopyToOutputDirectory="Always" />
 	</ItemGroup>
+
 </Project>
