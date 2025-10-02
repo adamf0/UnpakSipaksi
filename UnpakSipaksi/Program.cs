@@ -82,7 +82,13 @@ using UnpakSipaksi.Extensions;
 using UnpakSipaksi.Common.Presentation.Security;
 using UnpakSipaksi.Modules.Insentif.Infrastructure;
 
-var builder = WebApplication.CreateBuilder(args);
+var builder = WebApplication.CreateBuilder(new WebApplicationOptions
+{
+    Args = args,
+    ContentRootPath = Directory.GetCurrentDirectory(), // path absolut
+    WebRootPath = null // nonaktifkan wwwroot
+});
+
 RuntimeFeature.IsDynamicCodeSupported.Equals(false);
 RuntimeFeature.IsDynamicCodeCompiled.Equals(false);
 AppContext.SetSwitch("System.Runtime.Serialization.EnableUnsafeBinaryFormatterSerialization", false);
