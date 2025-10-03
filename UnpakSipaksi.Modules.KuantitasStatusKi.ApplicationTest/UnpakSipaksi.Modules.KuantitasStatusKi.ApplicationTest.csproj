@@ -26,6 +26,6 @@
 	<ItemGroup>
 		<ProjectReference Include="..\UnpakSipaksi.Modules.KuantitasStatusKi.Infrastructure\UnpakSipaksi.Modules.KuantitasStatusKi.Infrastructure.csproj" />
 		<ProjectReference Include="..\UnpakSipaksi\UnpakSipaksi.csproj" />
-		<None Include="Seed\init.sql" CopyToOutputDirectory="Always" />
+		<!-- <None Include="Seed\init.sql" CopyToOutputDirectory="Always" /> -->
 	</ItemGroup>
 </Project>
