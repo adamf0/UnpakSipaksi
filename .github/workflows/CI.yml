@@ -2,9 +2,9 @@ name: .NET
 
 on:
   push:
-    branches: [ "master" ]
+    branches: [ "lama" ]
   pull_request:
-    branches: [ "master" ]
+    branches: [ "lama" ]
 
 jobs:
   build:
@@ -20,10 +20,10 @@ jobs:
     - name: Restore dependencies
       run: dotnet restore
     - name: Build
-      run: dotnet build --no-restore
+      run: dotnet build --configuration Release --no-restore
     - name: Run all tests
       run: |
         for proj in $(find . -name "*Test.csproj"); do
           echo "Running tests for $proj"
-          dotnet test "$proj" --no-build --verbosity normal
+          dotnet test "$proj" --configuration Release --no-restore --no-build
         done
