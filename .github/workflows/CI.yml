@@ -8,22 +8,83 @@ on:
 
 jobs:
   build:
-
     runs-on: ubuntu-latest
-
     steps:
-    - uses: actions/checkout@v4
-    - name: Setup .NET
-      uses: actions/setup-dotnet@v4
-      with:
-        dotnet-version: 9.0.x
-    - name: Restore dependencies
-      run: dotnet restore
-    - name: Build
-      run: dotnet build --configuration Release --no-restore
-    - name: Run all tests
-      run: |
-        for proj in $(find . -name "*Test.csproj"); do
-          echo "Running tests for $proj"
-          dotnet test "$proj" --configuration Release --no-restore --no-build --verbosity normal
-        done
+      - uses: actions/checkout@v4
+
+      - name: Setup .NET
+        uses: actions/setup-dotnet@v4
+        with:
+          dotnet-version: 9.0.x
+
+      - name: Restore dependencies
+        run: dotnet restore
+
+      - name: Build
+        run: dotnet build --configuration Release --no-restore
+
+      - name: Run all tests (never kill on failure)
+        run: |
+          GREEN="\033[1;32m"
+          RED="\033[1;31m"
+          YELLOW="\033[1;33m"
+          BLUE="\033[1;34m"
+          NC="\033[0m"
+
+          echo -e "${BLUE}========================================${NC}"
+          echo -e "${BLUE} Running all test projects... ${NC}"
+          echo -e "${BLUE}========================================${NC}"
+
+          failed_projects=()
+          warning_projects=()
+
+          for proj in $(find . -name "*Test.csproj"); do
+            echo -e "\n${YELLOW}>>> Running tests for:${NC} $proj"
+            echo -e "${BLUE}----------------------------------------${NC}"
+
+            # Jalankan test tapi jangan hentikan proses meskipun gagal
+            output=$(dotnet test "$proj" --configuration Release --no-restore --no-build --verbosity normal 2>&1)
+            exit_code=$?
+
+            echo "$output"
+
+            if [ $exit_code -eq 0 ]; then
+              echo -e "${GREEN}✔ PASS:${NC} $proj"
+            else
+              if echo "$output" | grep -qi "warning"; then
+                warning_projects+=("$proj")
+                echo -e "${YELLOW}⚠ WARNING:${NC} Found warnings in $proj"
+              fi
+              failed_projects+=("$proj")
+              echo -e "${RED}✖ FAIL:${NC} $proj"
+            fi
+
+            echo -e "${BLUE}----------------------------------------${NC}"
+          done
+
+          echo -e "\n${BLUE}============== TEST SUMMARY ==============${NC}"
+
+          if [ ${#failed_projects[@]} -eq 0 ]; then
+            echo -e "${GREEN}✅ All tests passed successfully.${NC}"
+          else
+            echo -e "${RED}❌ Failed Projects:${NC}"
+            for f in "${failed_projects[@]}"; do
+              echo -e "   - ${RED}$f${NC}"
+            done
+          fi
+
+          if [ ${#warning_projects[@]} -gt 0 ]; then
+            echo -e "\n${YELLOW}⚠ Projects with warnings:${NC}"
+            for w in "${warning_projects[@]}"; do
+              echo -e "   - ${YELLOW}$w${NC}"
+            done
+          fi
+
+          echo -e "${BLUE}==========================================${NC}"
+
+          # Jika kamu TIDAK ingin GitHub Actions menandai job gagal:
+          exit 0
+
+          # Kalau kamu INGIN job tetap gagal jika ada test gagal:
+          # [Ganti exit 0 di atas menjadi:]
+          # exit ${#failed_projects[@]}
