@@ -73,7 +73,13 @@ namespace UnpakSipaksi.Modules.PenelitianHibah.ApplicationTest
                     services.Remove(descriptorSubstansiUsulan);
                 }
 
-                // Tambahkan DbContext dengan koneksi ke MySQL container
+                var descriptorRab = services.SingleOrDefault(
+                    d => d.ServiceType == typeof(DbContextOptions<SubstansiDbContext>));
+                if (descriptorRab != null)
+                {
+                    services.Remove(descriptorRab);
+                }
+
                 // Tambahkan DbContext dengan koneksi ke MySQL container
                 services.AddDbContext<MemberDosenDbContext>(options =>
                 {
@@ -106,6 +112,11 @@ namespace UnpakSipaksi.Modules.PenelitianHibah.ApplicationTest
                 });
 
                 services.AddDbContext<SubstansiDbContext>(options =>
+                {
+                    options.UseMySQL(_dbContainer.GetConnectionString());
+                });
+
+                services.AddDbContext<RABDbContext>(options =>
                 {
                     options.UseMySQL(_dbContainer.GetConnectionString());
                 });
@@ -223,6 +234,26 @@ namespace UnpakSipaksi.Modules.PenelitianHibah.ApplicationTest
                 PRIMARY KEY (`id`),
                 KEY `id_pdp` (`id_pdp`) 
                 ) ENGINE=InnoDB AUTO_INCREMENT=1903 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
+
+            DROP TABLE IF EXISTS `penelitian_internal_rab`;
+            CREATE TABLE `penelitian_internal_rab` (
+              `id` int(11) NOT NULL AUTO_INCREMENT,
+              `uuid` varchar(36) DEFAULT NULL,
+              `id_pdp` int(11) NOT NULL,
+              `kelompok_rab` int(11) DEFAULT NULL,
+              `komponen` int(11) DEFAULT NULL,
+              `item` int(11) DEFAULT NULL,
+              `satuan` int(11) DEFAULT NULL,
+              `harga_satuan` bigint(255) DEFAULT NULL,
+              `total` bigint(255) DEFAULT NULL,
+              `created_at` timestamp NULL DEFAULT NULL,
+              `updated_at` timestamp NULL DEFAULT NULL,
+              PRIMARY KEY (`id`),
+              KEY `id_pdp` (`id_pdp`),
+              KEY `kelompok_rab` (`kelompok_rab`),
+              KEY `komponen` (`komponen`),
+              KEY `satuan` (`satuan`) 
+            ) ENGINE=InnoDB AUTO_INCREMENT=11197 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
             """;
 
             using var cmd = new MySql.Data.MySqlClient.MySqlCommand(script, connection);

@@ -1182,4 +1182,3 @@ C:\dev_net\UnpakSipaksi\UnpakSipaksi.Modules.PenugasanReviewer.ApplicationTest\o
 C:\dev_net\UnpakSipaksi\UnpakSipaksi.Modules.PenugasanReviewer.ApplicationTest\obj\Debug\net9.0\UnpakSipaksi.Modules.PenugasanReviewer.ApplicationTest.pdb
 C:\dev_net\UnpakSipaksi\UnpakSipaksi.Modules.PenugasanReviewer.ApplicationTest\obj\Debug\net9.0\UnpakSipaksi.Modules.PenugasanReviewer.ApplicationTest.genruntimeconfig.cache
 C:\dev_net\UnpakSipaksi\UnpakSipaksi.Modules.PenugasanReviewer.ApplicationTest\obj\Debug\net9.0\ref\UnpakSipaksi.Modules.PenugasanReviewer.ApplicationTest.dll
-C:\dev_net\UnpakSipaksi\UnpakSipaksi.Modules.PenugasanReviewer.ApplicationTest\bin\Debug\net9.0\Seed\init.sql

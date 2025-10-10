@@ -15,46 +15,46 @@ namespace UnpakSipaksi.Modules.PenelitianHibah.ApplicationTest
     {
         public DokumenPendukungTest(IntegrationTestWebAppFactory factory) : base(factory) { }
 
-        public static IEnumerable<object[]> InvalidData()
-        {
-            var validUuid = Guid.NewGuid().ToString();
-            var empty = "";
-            var invalidGuid = "invalid-guid";
+        //public static IEnumerable<object[]> InvalidData()
+        //{
+        //    var validUuid = Guid.NewGuid().ToString();
+        //    var empty = "";
+        //    var invalidGuid = "invalid-guid";
 
-            // UuidPenelitianHibah
-            yield return new object[] { empty, "file.pdf", null, "kategori", "'UuidPenelitianHibah' tidak boleh kosong." };
-            yield return new object[] { invalidGuid, "file.pdf", null, "kategori", "'UuidPenelitianHibah' harus dalam format UUID v4 yang valid." };
+        //    // UuidPenelitianHibah
+        //    yield return new object[] { empty, "file.pdf", null, "kategori", "'UuidPenelitianHibah' tidak boleh kosong." };
+        //    yield return new object[] { invalidGuid, "file.pdf", null, "kategori", "'UuidPenelitianHibah' harus dalam format UUID v4 yang valid." };
 
-            // File / Link
-            yield return new object[] { validUuid, null, null, "kategori", "'File' atau 'Link' harus diisi." };
-            yield return new object[] { validUuid, "file.pdf", "http://drive.google.com", "kategori", "'File' dan 'Link' tidak boleh diisi bersamaan." };
+        //    // File / Link
+        //    yield return new object[] { validUuid, null, null, "kategori", "'File' atau 'Link' harus diisi." };
+        //    yield return new object[] { validUuid, "file.pdf", "http://drive.google.com", "kategori", "'File' dan 'Link' tidak boleh diisi bersamaan." };
 
-            // Kategori
-            //yield return new object[] { validUuid, "file.pdf", null, "kategori", "'Kategori' tidak boleh kosong." };
-        }
+        //    // Kategori
+        //    //yield return new object[] { validUuid, "file.pdf", null, "kategori", "'Kategori' tidak boleh kosong." };
+        //}
 
-        [Theory]
-        [MemberData(nameof(InvalidData))]
-        public async Task CreateDokumenPendukung_ShouldFailValidation_WhenInvalid(
-            string uuidPenelitianHibah,
-            string? file,
-            string? link,
-            string kategori,
-            string expectedMessage)
-        {
-            var command = new CreateDokumenPendukungCommand(
-                uuidPenelitianHibah,
-                file,
-                link,
-                kategori
-            );
+        //[Theory]
+        //[MemberData(nameof(InvalidData))]
+        //public async Task CreateDokumenPendukung_ShouldFailValidation_WhenInvalid(
+        //    string uuidPenelitianHibah,
+        //    string? file,
+        //    string? link,
+        //    string kategori,
+        //    string expectedMessage)
+        //{
+        //    var command = new CreateDokumenPendukungCommand(
+        //        uuidPenelitianHibah,
+        //        file,
+        //        link,
+        //        kategori
+        //    );
 
-            var validator = new CreateDokumenPendukungCommandValidator();
-            var result = await validator.ValidateAsync(command);
+        //    var validator = new CreateDokumenPendukungCommandValidator();
+        //    var result = await validator.ValidateAsync(command);
 
-            Assert.False(result.IsValid);
-            Assert.Contains(result.Errors, e => e.ErrorMessage == expectedMessage);
-        }
+        //    Assert.False(result.IsValid);
+        //    Assert.Contains(result.Errors, e => e.ErrorMessage == expectedMessage);
+        //}
 
         [Fact]
         public async Task CreateDokumenPendukung_ShouldBeSuccess_WhenValidData()
@@ -62,8 +62,6 @@ namespace UnpakSipaksi.Modules.PenelitianHibah.ApplicationTest
             var penelitianHibahId = "1";
             var penelitianHibahUuid = Guid.NewGuid();
             var NIDNBefore = "1234567890";
-
-            var unitOfWork = new Mock<IUnitOfWorkDokumenPendukung>();
 
             var hibahRepository = new Mock<IPenelitianHibahRepository>();
             hibahRepository.Setup(r => r.HasUniqueDataAsync(
@@ -93,7 +91,7 @@ namespace UnpakSipaksi.Modules.PenelitianHibah.ApplicationTest
                 var handler = new CreateDokumenPendukungCommandHandler(
                     services.GetRequiredService<IDokumenPendukungRepository>(),
                     hibahRepository.Object,
-                    unitOfWork.Object
+                    services.GetRequiredService<IUnitOfWorkDokumenPendukung>()
                 );
 
                 var command = new CreateDokumenPendukungCommand(

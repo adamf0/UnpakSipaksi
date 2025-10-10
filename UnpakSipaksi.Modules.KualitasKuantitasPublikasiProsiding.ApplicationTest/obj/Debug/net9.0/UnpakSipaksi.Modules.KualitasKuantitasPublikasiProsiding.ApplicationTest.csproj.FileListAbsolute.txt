@@ -12,7 +12,6 @@ C:\dev_net\UnpakSipaksi\UnpakSipaksi.Modules.KualitasKuantitasPublikasiProsiding
 C:\dev_net\UnpakSipaksi\UnpakSipaksi.Modules.KualitasKuantitasPublikasiProsiding.ApplicationTest\bin\Debug\net9.0\xunit.runner.visualstudio.dotnetcore.testadapter.dll
 C:\dev_net\UnpakSipaksi\UnpakSipaksi.Modules.KualitasKuantitasPublikasiProsiding.ApplicationTest\bin\Debug\net9.0\xunit.runner.reporters.netcoreapp10.dll
 C:\dev_net\UnpakSipaksi\UnpakSipaksi.Modules.KualitasKuantitasPublikasiProsiding.ApplicationTest\bin\Debug\net9.0\xunit.runner.utility.netcoreapp10.dll
-C:\dev_net\UnpakSipaksi\UnpakSipaksi.Modules.KualitasKuantitasPublikasiProsiding.ApplicationTest\bin\Debug\net9.0\Seed\init.sql
 C:\dev_net\UnpakSipaksi\UnpakSipaksi.Modules.KualitasKuantitasPublikasiProsiding.ApplicationTest\bin\Debug\net9.0\UnpakSipaksi.Modules.KualitasKuantitasPublikasiProsiding.ApplicationTest.deps.json
 C:\dev_net\UnpakSipaksi\UnpakSipaksi.Modules.KualitasKuantitasPublikasiProsiding.ApplicationTest\bin\Debug\net9.0\UnpakSipaksi.Modules.KualitasKuantitasPublikasiProsiding.ApplicationTest.runtimeconfig.json
 C:\dev_net\UnpakSipaksi\UnpakSipaksi.Modules.KualitasKuantitasPublikasiProsiding.ApplicationTest\bin\Debug\net9.0\UnpakSipaksi.Modules.KualitasKuantitasPublikasiProsiding.ApplicationTest.dll

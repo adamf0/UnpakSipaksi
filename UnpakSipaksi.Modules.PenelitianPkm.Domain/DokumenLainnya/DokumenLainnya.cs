@@ -14,7 +14,7 @@ namespace UnpakSipaksi.Modules.PenelitianPkm.Domain.DokumenLainnya
         [Column(TypeName = "VARCHAR(36)")]
         public Guid Uuid { get; private set; }
 
-        [Column("id_pdp")]
+        [Column("id_pkm")]
         public int PenelitianPkmId { get; private set; }
         [Column("file_kontrak")]
         public string File { get; private set; }

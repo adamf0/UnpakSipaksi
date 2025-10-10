@@ -1,6 +1,5 @@
 ﻿using MediatR;
 using Microsoft.Extensions.DependencyInjection;
-using UnpakSipaksi.Modules.LuaranArtikel.Infrastructure.Database;
 using UnpakSipaksi.Modules.PenelitianHibah.Infrastructure.Database;
 using Xunit;
 
@@ -11,13 +10,14 @@ namespace UnpakSipaksi.Modules.PenelitianHibah.ApplicationTest
         protected readonly IntegrationTestWebAppFactory Factory;
         private readonly IServiceScope _scope;
         protected readonly ISender Sender;
-        protected readonly MemberDosenDbContext DBContextDosen;
-        protected readonly MemberMahasiswaDbContext DBContextMahasiswa;
-        protected readonly MemberNonDosenDbContext DBContextNonDosen;
-        protected readonly LuaranDbContext DBContextLuaran;
-        protected readonly DokumenPendukungDbContext DBContextDokumenPendukung;
-        protected readonly DokumenKontrakDbContext DBContextDokumenKontrak;
-        protected readonly SubstansiDbContext DBContextSubstansiUsulan;
+        protected readonly Infrastructure.Database.MemberDosenDbContext DBContextDosen;
+        protected readonly Infrastructure.Database.MemberMahasiswaDbContext DBContextMahasiswa;
+        protected readonly Infrastructure.Database.MemberNonDosenDbContext DBContextNonDosen;
+        protected readonly Infrastructure.Database.LuaranDbContext DBContextLuaran;
+        protected readonly Infrastructure.Database.DokumenPendukungDbContext DBContextDokumenPendukung;
+        protected readonly Infrastructure.Database.DokumenKontrakDbContext DBContextDokumenKontrak;
+        protected readonly Infrastructure.Database.SubstansiDbContext DBContextSubstansiUsulan;
+        protected readonly Infrastructure.Database.RABDbContext DBContextRab;
 
         protected BaseIntegrationTest(IntegrationTestWebAppFactory factory) {
             Factory = factory;
@@ -29,6 +29,7 @@ namespace UnpakSipaksi.Modules.PenelitianHibah.ApplicationTest
             DBContextLuaran = _scope.ServiceProvider.GetRequiredService<LuaranDbContext>();
             DBContextDokumenKontrak = _scope.ServiceProvider.GetRequiredService<DokumenKontrakDbContext>();
             DBContextSubstansiUsulan = _scope.ServiceProvider.GetRequiredService<SubstansiDbContext>();
+            DBContextRab = _scope.ServiceProvider.GetRequiredService<RABDbContext>();
         }
 
         public void Dispose()

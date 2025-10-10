@@ -15,7 +15,7 @@ namespace UnpakSipaksi.Modules.PenelitianHibah.Application.UpdateSubstansiUsulan
         public async Task<Result> Handle(UpdateSubstansiUsulanCommand request, CancellationToken cancellationToken)
         {
             Domain.Substansi.Substansi? existingSubstansi = await substansiRepository.GetAsync(Guid.Parse(request.Uuid), cancellationToken);
-            if (existingSubstansi != null) {
+            if (existingSubstansi == null) {
                 return Result.Failure<Guid>(SubstansiErrors.NotFound(Guid.Parse(request.Uuid)));
             }
 

@@ -92,7 +92,7 @@ namespace UnpakSipaksi.Modules.PenelitianPkm.Domain.RAB
             {
                 return Result.Failure<RAB>(RABErrors.NotFoundHibah(UuidPenelitianPkm));
             }
-            if (prev.Id != existingPenelitianPkm.Id)
+            if (prev.PenelitianPkmId != existingPenelitianPkm.Id)
             {
                 return Result.Failure<RAB>(RABErrors.InvalidData());
             }

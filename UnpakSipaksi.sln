@@ -1084,6 +1084,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "UnpakSipaksi.Modules.Peneli
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "UnpakSipaksi.Modules.SotaKebaharuan.ApplicationTest", "UnpakSipaksi.Modules.SotaKebaharuan.ApplicationTest\UnpakSipaksi.Modules.SotaKebaharuan.ApplicationTest.csproj", "{9A519499-3F6A-47CE-A72F-073F320FBDEF}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "UnpakSipaksi.Modules.PenelitianPkm.ApplicationTest", "UnpakSipaksi.Modules.PenelitianPkm.ApplicationTest\UnpakSipaksi.Modules.PenelitianPkm.ApplicationTest.csproj", "{E37144C3-608F-4699-8035-0DF46399B503}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -2946,6 +2948,10 @@ Global
 		{9A519499-3F6A-47CE-A72F-073F320FBDEF}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{9A519499-3F6A-47CE-A72F-073F320FBDEF}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{9A519499-3F6A-47CE-A72F-073F320FBDEF}.Release|Any CPU.Build.0 = Release|Any CPU
+		{E37144C3-608F-4699-8035-0DF46399B503}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{E37144C3-608F-4699-8035-0DF46399B503}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{E37144C3-608F-4699-8035-0DF46399B503}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{E37144C3-608F-4699-8035-0DF46399B503}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -3486,6 +3492,7 @@ Global
 		{B44FFF29-5F26-47FF-BE0F-9C297D0637C9} = {35795C80-C3D7-4A8F-8076-A151786F2F49}
 		{C5BB3DBF-4D50-4198-9605-81665315F853} = {C4B08763-947D-49BA-95E9-9E09323CA391}
 		{9A519499-3F6A-47CE-A72F-073F320FBDEF} = {346632E5-A9B6-4AE7-B09A-4E8CC132077D}
+		{E37144C3-608F-4699-8035-0DF46399B503} = {98E87652-ED41-4142-8A70-BD70C52223AF}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {436EDA68-9668-49C1-B97C-DFD8EAF1CFE5}

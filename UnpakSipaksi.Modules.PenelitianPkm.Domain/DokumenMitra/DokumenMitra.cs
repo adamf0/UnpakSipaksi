@@ -14,7 +14,7 @@ namespace UnpakSipaksi.Modules.PenelitianPkm.Domain.DokumenMitra
         [Column(TypeName = "VARCHAR(36)")]
         public Guid Uuid { get; private set; }
 
-        [Column("id_pdp")]
+        [Column("id_pkm")]
         public int PenelitianPkmId { get; private set; }
         [Column("mitra")]
         public string Mitra { get; set; }

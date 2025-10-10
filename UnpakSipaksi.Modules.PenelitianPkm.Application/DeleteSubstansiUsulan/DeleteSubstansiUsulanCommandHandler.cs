@@ -20,13 +20,13 @@ namespace UnpakSipaksi.Modules.PenelitianPkm.Application.DeleteSubstansiUsulan
         public async Task<Result> Handle(DeleteSubstansiUsulanCommand request, CancellationToken cancellationToken)
         {
             Substansi? existingSubstansi = await substansiRepository.GetAsync(Guid.Parse(request.Uuid), cancellationToken);
-            if (existingSubstansi != null)
+            if (existingSubstansi == null)
             {
                 return Result.Failure<Guid>(SubstansiErrors.NotFound(Guid.Parse(request.Uuid)));
             }
 
             Domain.PenelitianPkm.PenelitianPkm? existingPenelitianPkm = await penelitianHibahRepository.GetAsync(Guid.Parse(request.UuidPenelitianPkm), cancellationToken);
-            if (existingPenelitianPkm != null)
+            if (existingPenelitianPkm == null)
             {
                 return Result.Failure<Guid>(SubstansiErrors.NotFoundHibah(Guid.Parse(request.UuidPenelitianPkm)));
             }

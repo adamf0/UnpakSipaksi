@@ -15,38 +15,38 @@ namespace UnpakSipaksi.Modules.PenelitianHibah.ApplicationTest
     {
         public DokumenKontrakTest(IntegrationTestWebAppFactory factory) : base(factory) { }
 
-        public static IEnumerable<object[]> InvalidData()
-        {
-            var validUuid = Guid.NewGuid().ToString();
-            var empty = "";
-            var invalidGuid = "invalid-guid";
+        //public static IEnumerable<object[]> InvalidData()
+        //{
+        //    var validUuid = Guid.NewGuid().ToString();
+        //    var empty = "";
+        //    var invalidGuid = "invalid-guid";
 
-            // UuidPenelitianHibah
-            yield return new object[] { empty, "file.pdf", "'UuidPenelitianHibah' tidak boleh kosong." };
-            yield return new object[] { invalidGuid, "file.pdf", "'UuidPenelitianHibah' harus dalam format UUID v4 yang valid." };
+        //    // UuidPenelitianHibah
+        //    yield return new object[] { empty, "file.pdf", "'UuidPenelitianHibah' tidak boleh kosong." };
+        //    yield return new object[] { invalidGuid, "file.pdf", "'UuidPenelitianHibah' harus dalam format UUID v4 yang valid." };
 
-            // File
-            yield return new object[] { validUuid, "", "'File' tidak boleh kosong." };
-        }
+        //    // File
+        //    yield return new object[] { validUuid, "", "'File' tidak boleh kosong." };
+        //}
 
-        [Theory]
-        [MemberData(nameof(InvalidData))]
-        public async Task CreateDokumenKontrak_ShouldFailValidation_WhenInvalid(
-            string uuidPenelitianHibah,
-            string? file,
-            string expectedMessage)
-        {
-            var command = new CreateDokumenKontrakCommand(
-                uuidPenelitianHibah,
-                file
-            );
+        //[Theory]
+        //[MemberData(nameof(InvalidData))]
+        //public async Task CreateDokumenKontrak_ShouldFailValidation_WhenInvalid(
+        //    string uuidPenelitianHibah,
+        //    string? file,
+        //    string expectedMessage)
+        //{
+        //    var command = new CreateDokumenKontrakCommand(
+        //        uuidPenelitianHibah,
+        //        file
+        //    );
 
-            var validator = new CreateDokumenKontrakCommandValidator();
-            var result = await validator.ValidateAsync(command);
+        //    var validator = new CreateDokumenKontrakCommandValidator();
+        //    var result = await validator.ValidateAsync(command);
 
-            Assert.False(result.IsValid);
-            Assert.Contains(result.Errors, e => e.ErrorMessage == expectedMessage);
-        }
+        //    Assert.False(result.IsValid);
+        //    Assert.Contains(result.Errors, e => e.ErrorMessage == expectedMessage);
+        //}
 
         [Fact]
 

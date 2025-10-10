@@ -8,7 +8,7 @@ namespace UnpakSipaksi.Modules.PenelitianPkm.Infrastructure.Database
 {
     public sealed class DokumenMitraDbContext(DbContextOptions<DokumenMitraDbContext> options) : DbContext(options), IUnitOfWorkDokumenMitra
     {
-        internal DbSet<Domain.DokumenMitra.DokumenMitra> DokumenMitra { get; set; }
+        public DbSet<Domain.DokumenMitra.DokumenMitra> DokumenMitra { get; set; }
 
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {
@@ -33,7 +33,7 @@ namespace UnpakSipaksi.Modules.PenelitianPkm.Infrastructure.Database
                       .HasConversion(guidConverter);
 
                 entity.Property(e => e.PenelitianPkmId)
-                .HasColumnName("id_pdp");
+                .HasColumnName("id_pkm");
 
                 entity.Property(e => e.Mitra)
                       .HasColumnName("mitra");
@@ -45,7 +45,7 @@ namespace UnpakSipaksi.Modules.PenelitianPkm.Infrastructure.Database
                       .HasColumnName("kota");
 
                 entity.Property(e => e.KelompokMitraId)
-                      .HasColumnName("id_kelompok_mitra");
+                      .HasColumnName("kelompokMitra");
 
                 entity.Property(e => e.PemimpinMitra)
                       .HasColumnName("pemimpinMitra");

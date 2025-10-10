@@ -31,7 +31,7 @@ namespace UnpakSipaksi.Modules.PenelitianHibah.Application.DeleteRAB
                 return Result.Failure<Guid>(RABErrors.NotFoundHibah(Guid.Parse(request.UuidPenelitianHibah)));
             }
 
-            if (existingRAB?.PenelitianHibahId == existingPenelitianHibah?.Id) {
+            if (existingRAB?.PenelitianHibahId != existingPenelitianHibah?.Id) {
                 return Result.Failure<Guid>(RABErrors.InvalidData());
             }
 

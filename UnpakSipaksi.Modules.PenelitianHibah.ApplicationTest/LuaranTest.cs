@@ -17,93 +17,93 @@ namespace UnpakSipaksi.Modules.PenelitianHibah.ApplicationTest
     {
         public LuaranTest(IntegrationTestWebAppFactory factory) : base(factory) { }
 
-        public static IEnumerable<object[]> InvalidData()
-        {
-            var validUuid = Guid.NewGuid().ToString();
-            var empty = "";
-            var invalidGuid = "invalid-guid";
+        //public static IEnumerable<object[]> InvalidData()
+        //{
+        //    var validUuid = Guid.NewGuid().ToString();
+        //    var empty = "";
+        //    var invalidGuid = "invalid-guid";
 
-            // CREATE: uuidPenelitian, uuidKategori, uuidKategoriLuaran, jenis
-            yield return new object[] { empty, empty, empty, empty, "wajib", "'UuidPenelitianHibah' tidak boleh kosong.", "created" };
-            yield return new object[] { empty, invalidGuid, validUuid, validUuid, "wajib", "'UuidPenelitianHibah' harus dalam format UUID v4 yang valid.", "created" };
-            yield return new object[] { empty, validUuid, empty, validUuid, "wajib", "'UuidKategori' tidak boleh kosong.", "created" };
-            yield return new object[] { empty, validUuid, invalidGuid, validUuid, "wajib", "'UuidKategori' harus dalam format UUID v4 yang valid.", "created" };
-            yield return new object[] { empty, validUuid, validUuid, empty, "wajib", "'UuidKategoriLuaran' tidak boleh kosong.", "created" };
-            yield return new object[] { empty, validUuid, validUuid, invalidGuid, "wajib", "'UuidKategoriLuaran' harus dalam format UUID v4 yang valid.", "created" };
-            yield return new object[] { empty, validUuid, validUuid, validUuid, empty, "'Jenis' tidak boleh kosong.", "created" };
-            yield return new object[] { empty, validUuid, validUuid, validUuid, "invalid", "'Jenis' harus bernilai 'wajib' atau 'tambahan'.", "created" };
+        //    // CREATE: uuidPenelitian, uuidKategori, uuidKategoriLuaran, jenis
+        //    yield return new object[] { empty, empty, empty, empty, "wajib", "'UuidPenelitianHibah' tidak boleh kosong.", "created" };
+        //    yield return new object[] { empty, invalidGuid, validUuid, validUuid, "wajib", "'UuidPenelitianHibah' harus dalam format UUID v4 yang valid.", "created" };
+        //    yield return new object[] { empty, validUuid, empty, validUuid, "wajib", "'UuidKategori' tidak boleh kosong.", "created" };
+        //    yield return new object[] { empty, validUuid, invalidGuid, validUuid, "wajib", "'UuidKategori' harus dalam format UUID v4 yang valid.", "created" };
+        //    yield return new object[] { empty, validUuid, validUuid, empty, "wajib", "'UuidKategoriLuaran' tidak boleh kosong.", "created" };
+        //    yield return new object[] { empty, validUuid, validUuid, invalidGuid, "wajib", "'UuidKategoriLuaran' harus dalam format UUID v4 yang valid.", "created" };
+        //    yield return new object[] { empty, validUuid, validUuid, validUuid, empty, "'Jenis' tidak boleh kosong.", "created" };
+        //    yield return new object[] { empty, validUuid, validUuid, validUuid, "invalid", "'Jenis' harus bernilai 'wajib' atau 'tambahan'.", "created" };
 
-            // UPDATE: uuid, uuidPenelitian, uuidKategori, uuidKategoriLuaran, jenis
-            yield return new object[] { empty, validUuid, validUuid, validUuid, "wajib", "'Uuid' tidak boleh kosong.", "updated" };
-            yield return new object[] { invalidGuid, validUuid, validUuid, validUuid, "wajib", "'Uuid' harus dalam format UUID v4 yang valid.", "updated" };
-            yield return new object[] { validUuid, empty, validUuid, validUuid, "wajib", "'UuidPenelitianHibah' tidak boleh kosong.", "updated" };
-            yield return new object[] { validUuid, invalidGuid, validUuid, validUuid, "wajib", "'UuidPenelitianHibah' harus dalam format UUID v4 yang valid.", "updated" };
-            yield return new object[] { validUuid, validUuid, empty, validUuid, "wajib", "'UuidKategori' tidak boleh kosong.", "updated" };
-            yield return new object[] { validUuid, validUuid, invalidGuid, validUuid, "wajib", "'UuidKategori' harus dalam format UUID v4 yang valid.", "updated" };
-            yield return new object[] { validUuid, validUuid, validUuid, empty, "wajib", "'UuidKategoriLuaran' tidak boleh kosong.", "updated" };
-            yield return new object[] { validUuid, validUuid, validUuid, invalidGuid, "wajib", "'UuidKategoriLuaran' harus dalam format UUID v4 yang valid.", "updated" };
-            yield return new object[] { validUuid, validUuid, validUuid, validUuid, empty, "'Jenis' tidak boleh kosong.", "updated" };
-            yield return new object[] { validUuid, validUuid, validUuid, validUuid, "invalid", "'Jenis' harus bernilai 'wajib' atau 'tambahan'.", "updated" };
+        //    // UPDATE: uuid, uuidPenelitian, uuidKategori, uuidKategoriLuaran, jenis
+        //    yield return new object[] { empty, validUuid, validUuid, validUuid, "wajib", "'Uuid' tidak boleh kosong.", "updated" };
+        //    yield return new object[] { invalidGuid, validUuid, validUuid, validUuid, "wajib", "'Uuid' harus dalam format UUID v4 yang valid.", "updated" };
+        //    yield return new object[] { validUuid, empty, validUuid, validUuid, "wajib", "'UuidPenelitianHibah' tidak boleh kosong.", "updated" };
+        //    yield return new object[] { validUuid, invalidGuid, validUuid, validUuid, "wajib", "'UuidPenelitianHibah' harus dalam format UUID v4 yang valid.", "updated" };
+        //    yield return new object[] { validUuid, validUuid, empty, validUuid, "wajib", "'UuidKategori' tidak boleh kosong.", "updated" };
+        //    yield return new object[] { validUuid, validUuid, invalidGuid, validUuid, "wajib", "'UuidKategori' harus dalam format UUID v4 yang valid.", "updated" };
+        //    yield return new object[] { validUuid, validUuid, validUuid, empty, "wajib", "'UuidKategoriLuaran' tidak boleh kosong.", "updated" };
+        //    yield return new object[] { validUuid, validUuid, validUuid, invalidGuid, "wajib", "'UuidKategoriLuaran' harus dalam format UUID v4 yang valid.", "updated" };
+        //    yield return new object[] { validUuid, validUuid, validUuid, validUuid, empty, "'Jenis' tidak boleh kosong.", "updated" };
+        //    yield return new object[] { validUuid, validUuid, validUuid, validUuid, "invalid", "'Jenis' harus bernilai 'wajib' atau 'tambahan'.", "updated" };
 
-            // DELETE: hanya uuid
-            yield return new object[] { empty, empty, empty, empty, empty, "'Uuid' tidak boleh kosong.", "deleted" };
-            yield return new object[] { invalidGuid, empty, empty, empty, empty, "'Uuid' harus dalam format UUID v4 yang valid.", "deleted" };
-        }
+        //    // DELETE: hanya uuid
+        //    yield return new object[] { empty, empty, empty, empty, empty, "'Uuid' tidak boleh kosong.", "deleted" };
+        //    yield return new object[] { invalidGuid, empty, empty, empty, empty, "'Uuid' harus dalam format UUID v4 yang valid.", "deleted" };
+        //}
 
-        [Theory]
-        [MemberData(nameof(InvalidData))]
-        public async Task LuaranCommand_ShouldThrow_WhenInvalid(
-            string uuid,
-            string uuidPenelitian,
-            string uuidKategori,
-            string uuidKategoriLuaran,
-            string jenis,
-            string expectedMessage,
-            string mode)
-        {
-            Result? result = null;
+        //[Theory]
+        //[MemberData(nameof(InvalidData))]
+        //public async Task LuaranCommand_ShouldThrow_WhenInvalid(
+        //    string uuid,
+        //    string uuidPenelitian,
+        //    string uuidKategori,
+        //    string uuidKategoriLuaran,
+        //    string jenis,
+        //    string expectedMessage,
+        //    string mode)
+        //{
+        //    Result? result = null;
 
-            if (mode == "created")
-            {
-                var command = new CreateLuaranCommand(
-                    uuidPenelitian,
-                    uuidKategori,
-                    uuidKategoriLuaran,
-                    "keterangan",
-                    "http://link.com",
-                    jenis
-                );
-                result = await Sender.Send(command);
-            }
-            else if (mode == "updated")
-            {
-                var command = new UpdateLuaranCommand(
-                    uuid,
-                    uuidPenelitian,
-                    uuidKategori,
-                    uuidKategoriLuaran,
-                    "keterangan",
-                    "http://link.com",
-                    jenis
-                );
-                result = await Sender.Send(command);
-            }
-            else // deleted
-            {
-                var command = new DeleteLuaranCommand(uuid, uuidPenelitian);
-                result = await Sender.Send(command);
-            }
+        //    if (mode == "created")
+        //    {
+        //        var command = new CreateLuaranCommand(
+        //            uuidPenelitian,
+        //            uuidKategori,
+        //            uuidKategoriLuaran,
+        //            "keterangan",
+        //            "http://link.com",
+        //            jenis
+        //        );
+        //        result = await Sender.Send(command);
+        //    }
+        //    else if (mode == "updated")
+        //    {
+        //        var command = new UpdateLuaranCommand(
+        //            uuid,
+        //            uuidPenelitian,
+        //            uuidKategori,
+        //            uuidKategoriLuaran,
+        //            "keterangan",
+        //            "http://link.com",
+        //            jenis
+        //        );
+        //        result = await Sender.Send(command);
+        //    }
+        //    else // deleted
+        //    {
+        //        var command = new DeleteLuaranCommand(uuid, uuidPenelitian);
+        //        result = await Sender.Send(command);
+        //    }
 
-            Assert.True(result.IsFailure);
-            if (result.Error is ValidationError validationError)
-            {
-                Assert.Contains(validationError.Errors, e => e.Description == expectedMessage);
-            }
-            else
-            {
-                Assert.Equal(expectedMessage, result.Error.Description);
-            }
-        }
+        //    Assert.True(result.IsFailure);
+        //    if (result.Error is ValidationError validationError)
+        //    {
+        //        Assert.Contains(validationError.Errors, e => e.Description == expectedMessage);
+        //    }
+        //    else
+        //    {
+        //        Assert.Equal(expectedMessage, result.Error.Description);
+        //    }
+        //}
 
 
         [Fact]

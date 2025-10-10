@@ -7,7 +7,7 @@ namespace UnpakSipaksi.Modules.PenelitianPkm.Infrastructure.Database
 {
     public sealed class DokumenLainnyaDbContext(DbContextOptions<DokumenLainnyaDbContext> options) : DbContext(options), IUnitOfWorkDokumenLainnya
     {
-        internal DbSet<Domain.DokumenLainnya.DokumenLainnya> DokumenLainnya { get; set; }
+        public DbSet<Domain.DokumenLainnya.DokumenLainnya> DokumenLainnya { get; set; }
 
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {
@@ -32,7 +32,7 @@ namespace UnpakSipaksi.Modules.PenelitianPkm.Infrastructure.Database
                       .HasConversion(guidConverter);
 
                 entity.Property(e => e.PenelitianPkmId)
-                      .HasColumnName("id_pdp");
+                      .HasColumnName("id_pkm");
 
                 entity.Property(e => e.File)
                       .HasColumnName("file_kontrak");

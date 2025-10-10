@@ -7,7 +7,7 @@ namespace UnpakSipaksi.Modules.PenelitianHibah.Infrastructure.Database
 {
     public sealed class RABDbContext(DbContextOptions<RABDbContext> options) : DbContext(options), IUnitOfWorkRAB
     {
-        internal DbSet<Domain.RAB.RAB> RAB { get; set; }
+        public DbSet<Domain.RAB.RAB> RAB { get; set; }
 
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {

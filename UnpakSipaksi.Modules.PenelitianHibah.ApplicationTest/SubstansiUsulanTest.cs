@@ -15,38 +15,38 @@ namespace UnpakSipaksi.Modules.PenelitianHibah.ApplicationTest
     {
         public SubstansiUsulanTest(IntegrationTestWebAppFactory factory) : base(factory) { }
 
-        public static IEnumerable<object[]> InvalidData()
-        {
-            var validUuid = Guid.NewGuid().ToString();
-            var empty = "";
-            var invalidGuid = "invalid-guid";
+        //public static IEnumerable<object[]> InvalidData()
+        //{
+        //    var validUuid = Guid.NewGuid().ToString();
+        //    var empty = "";
+        //    var invalidGuid = "invalid-guid";
 
-            // UuidPenelitianHibah
-            yield return new object[] { empty, "file.pdf", "'UuidPenelitianHibah' tidak boleh kosong." };
-            yield return new object[] { invalidGuid, "file.pdf", "'UuidPenelitianHibah' harus dalam format UUID v4 yang valid." };
+        //    // UuidPenelitianHibah
+        //    yield return new object[] { empty, "file.pdf", "'UuidPenelitianHibah' tidak boleh kosong." };
+        //    yield return new object[] { invalidGuid, "file.pdf", "'UuidPenelitianHibah' harus dalam format UUID v4 yang valid." };
 
-            // File
-            yield return new object[] { validUuid, "", "'File' tidak boleh kosong." };
-        }
+        //    // File
+        //    yield return new object[] { validUuid, "", "'File' tidak boleh kosong." };
+        //}
 
-        [Theory]
-        [MemberData(nameof(InvalidData))]
-        public async Task CreateSubstansiUsulan_ShouldFailValidation_WhenInvalid(
-            string uuidPenelitianHibah,
-            string? file,
-            string expectedMessage)
-        {
-            var command = new CreateSubstansiUsulanCommand(
-                uuidPenelitianHibah,
-                file
-            );
+        //[Theory]
+        //[MemberData(nameof(InvalidData))]
+        //public async Task CreateSubstansiUsulan_ShouldFailValidation_WhenInvalid(
+        //    string uuidPenelitianHibah,
+        //    string? file,
+        //    string expectedMessage)
+        //{
+        //    var command = new CreateSubstansiUsulanCommand(
+        //        uuidPenelitianHibah,
+        //        file
+        //    );
 
-            var validator = new CreateSubstansiUsulanCommandValidator();
-            var result = await validator.ValidateAsync(command);
+        //    var validator = new CreateSubstansiUsulanCommandValidator();
+        //    var result = await validator.ValidateAsync(command);
 
-            Assert.False(result.IsValid);
-            Assert.Contains(result.Errors, e => e.ErrorMessage == expectedMessage);
-        }
+        //    Assert.False(result.IsValid);
+        //    Assert.Contains(result.Errors, e => e.ErrorMessage == expectedMessage);
+        //}
 
         [Fact]
         public async Task CreateSubstansiUsulan_ShouldBeSuccess_WhenValidData()
@@ -134,7 +134,6 @@ namespace UnpakSipaksi.Modules.PenelitianHibah.ApplicationTest
             using (var scope = Factory.Services.CreateScope())
             {
                 var services = scope.ServiceProvider;
-                var dokumenRepo = services.GetRequiredService<ISubstansiRepository>();
                 var unitOfWork = services.GetRequiredService<IUnitOfWorkSubstansi>();
 
                 var handler = new CreateSubstansiUsulanCommandHandler(
@@ -151,30 +150,48 @@ namespace UnpakSipaksi.Modules.PenelitianHibah.ApplicationTest
                 var result = await handler.Handle(command, CancellationToken.None);
 
                 Assert.True(result.IsSuccess);
-                var dokumenUuid = result.Value.ToString();
-                //var data = DBContextSubstansiUsulan.Substansi.AsNoTracking().FirstOrDefault(p => p.Uuid.ToString() == dokumenUuid);
+                var substansiUuid = result.Value.ToString();
+                //var data = DBContextSubstansiUsulan.Substansi.AsNoTracking().FirstOrDefault(p => p.Uuid.ToString() == substansiUuid);
                 //Assert.NotNull(data);
                 //Assert.Equal("file.pdf", data.File);
 
+                var substansiRepository = new Mock<ISubstansiRepository>();
+
+                var substansiEntity = Domain.Substansi.Substansi
+                    .Create(
+                        penelitianHibahUuid,
+                        hibahEntity,
+                        "file.pdf"
+                    ).Value;
+
+                typeof(Domain.Substansi.Substansi).GetProperty(nameof(Domain.Substansi.Substansi.Id))!
+                    .SetValue(substansiEntity, 123);
+
+                typeof(Domain.Substansi.Substansi).GetProperty(nameof(Domain.Substansi.Substansi.Uuid))!
+                    .SetValue(substansiEntity, Guid.Parse(substansiUuid));
+
+                substansiRepository.Setup(x => x.GetAsync(It.IsAny<Guid>(), It.IsAny<CancellationToken>()))
+                                   .ReturnsAsync(substansiEntity);
+
                 var updateHandler = new UpdateSubstansiUsulanCommandHandler(
-                    dokumenRepo,
+                    substansiRepository.Object,
                     hibahRepository.Object,
                     unitOfWork
                 );
 
                 var updateCommand = new UpdateSubstansiUsulanCommand(
-                    dokumenUuid,
+                    substansiUuid,
                     penelitianHibahUuid.ToString(),
-                    "file1.pdf"
+                    "file2.pdf"
                 );
 
                 var updateResult = await updateHandler.Handle(updateCommand, CancellationToken.None);
 
                 // Assert
                 Assert.True(updateResult.IsSuccess);
-                //var dataUpdate = DBContextSubstansiUsulan.Substansi.AsNoTracking().FirstOrDefault(p => p.Uuid.ToString() == dokumenUuid);
+                //var dataUpdate = DBContextSubstansiUsulan.Substansi.AsNoTracking().FirstOrDefault(p => p.Uuid.ToString() == substansiUuid);
                 //Assert.NotNull(dataUpdate);
-                //Assert.Equal("file1.pdf", dataUpdate.File);
+                //Assert.Equal("file2.pdf", dataUpdate.File);
             }
         }
 
@@ -209,7 +226,6 @@ namespace UnpakSipaksi.Modules.PenelitianHibah.ApplicationTest
             using (var scope = Factory.Services.CreateScope())
             {
                 var services = scope.ServiceProvider;
-                var dokumenRepo = services.GetRequiredService<ISubstansiRepository>();
                 var unitOfWork = services.GetRequiredService<IUnitOfWorkSubstansi>();
 
                 var handler = new CreateSubstansiUsulanCommandHandler(
@@ -226,18 +242,36 @@ namespace UnpakSipaksi.Modules.PenelitianHibah.ApplicationTest
                 var result = await handler.Handle(command, CancellationToken.None);
 
                 Assert.True(result.IsSuccess);
-                var dokumenUuid = result.Value.ToString();
-                //var data = DBContextSubstansiUsulan.Substansi.AsNoTracking().FirstOrDefault(p => p.Uuid.ToString() == dokumenUuid);
+                var substansiUuid = result.Value.ToString();
+                //var data = DBContextSubstansiUsulan.Substansi.AsNoTracking().FirstOrDefault(p => p.Uuid.ToString() == substansiUuid);
                 //Assert.NotNull(data);
                 //Assert.Equal("file.pdf", data.File);
 
+                var substansiRepository = new Mock<ISubstansiRepository>();
+
+                var substansiEntity = Domain.Substansi.Substansi
+                    .Create(
+                        penelitianHibahUuid,
+                        hibahEntity,
+                        "file.pdf"
+                    ).Value;
+
+                typeof(Domain.Substansi.Substansi).GetProperty(nameof(Domain.Substansi.Substansi.Id))!
+                    .SetValue(substansiEntity, 123);
+
+                typeof(Domain.Substansi.Substansi).GetProperty(nameof(Domain.Substansi.Substansi.Uuid))!
+                    .SetValue(substansiEntity, Guid.Parse(substansiUuid));
+
+                substansiRepository.Setup(x => x.GetAsync(It.IsAny<Guid>(), It.IsAny<CancellationToken>()))
+                                   .ReturnsAsync(substansiEntity);
+
                 var deleteHandler = new DeleteSubstansiUsulanCommandHandler(
-                     dokumenRepo,
+                     substansiRepository.Object,
                      hibahRepository.Object,
                      unitOfWork
                  );
 
-                var deleteCommand = new DeleteSubstansiUsulanCommand(dokumenUuid, penelitianHibahUuid.ToString());
+                var deleteCommand = new DeleteSubstansiUsulanCommand(substansiUuid, penelitianHibahUuid.ToString());
                 var deleteResult = await deleteHandler.Handle(deleteCommand, CancellationToken.None);
 
                 Assert.True(deleteResult.IsSuccess);

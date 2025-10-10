@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("UnpakSipaksi.Modules.KategoriProgramPengabdian.Infrastructure")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+e9c70150ad5d6adb66a10fe1b90b06017cbbc67b")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+66e29d7e73c7f970b011a1ef961f4ef2222b2c01")]
 [assembly: System.Reflection.AssemblyProductAttribute("UnpakSipaksi.Modules.KategoriProgramPengabdian.Infrastructure")]
 [assembly: System.Reflection.AssemblyTitleAttribute("UnpakSipaksi.Modules.KategoriProgramPengabdian.Infrastructure")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

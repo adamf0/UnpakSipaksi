@@ -10,7 +10,7 @@ using UnpakSipaksi.Modules.PenelitianPkm.Application.Abstractions.Data;
 namespace UnpakSipaksi.Modules.PenelitianPkm.Application.CreateRAB
 {
     internal sealed class CreateRABCommandHandler(
-        IRABRepository luaranRepository,
+        IRABRepository rabRepository,
         IPenelitianPkmRepository penelitianHibahRepository,
         IKelompokRabApi kelompokRabApi,
         IKomponenApi komponenApi,
@@ -39,7 +39,7 @@ namespace UnpakSipaksi.Modules.PenelitianPkm.Application.CreateRAB
             if (result.IsFailure)
                 return Result.Failure<Guid>(result.Error);
 
-            luaranRepository.Insert(result.Value);
+            rabRepository.Insert(result.Value);
             await unitOfWork.SaveChangesAsync(cancellationToken);
 
             return Result.Success(result.Value.Uuid);

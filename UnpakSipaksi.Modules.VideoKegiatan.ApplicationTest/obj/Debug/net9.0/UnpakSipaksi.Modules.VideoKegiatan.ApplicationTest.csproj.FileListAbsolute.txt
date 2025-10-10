@@ -1182,4 +1182,3 @@ C:\dev_net\UnpakSipaksi\UnpakSipaksi.Modules.VideoKegiatan.ApplicationTest\obj\D
 C:\dev_net\UnpakSipaksi\UnpakSipaksi.Modules.VideoKegiatan.ApplicationTest\obj\Debug\net9.0\UnpakSipaksi.Modules.VideoKegiatan.ApplicationTest.pdb
 C:\dev_net\UnpakSipaksi\UnpakSipaksi.Modules.VideoKegiatan.ApplicationTest\obj\Debug\net9.0\UnpakSipaksi.Modules.VideoKegiatan.ApplicationTest.genruntimeconfig.cache
 C:\dev_net\UnpakSipaksi\UnpakSipaksi.Modules.VideoKegiatan.ApplicationTest\obj\Debug\net9.0\ref\UnpakSipaksi.Modules.VideoKegiatan.ApplicationTest.dll
-C:\dev_net\UnpakSipaksi\UnpakSipaksi.Modules.VideoKegiatan.ApplicationTest\bin\Debug\net9.0\Seed\init.sql
