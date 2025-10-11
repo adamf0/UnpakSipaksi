@@ -245,7 +245,7 @@ var assemblies = [
     "name": "UnpakSipaksi.Common.Domain",
     "classes": [
       { "name": "UnpakSipaksi.Common.Domain.DomainEvent", "rp": "UnpakSipaksi.Common.Domain_DomainEvent.html", "cl": 6, "ucl": 4, "cal": 10, "tl": 27, "cb": 0, "tb": 0, "cm": 0, "fcm": 0, "tm": 0, "lch": [], "bch": [], "mch": [], "mfch": [], "hc": [], "metrics": { } },
-      { "name": "UnpakSipaksi.Common.Domain.DomainValidator", "rp": "UnpakSipaksi.Common.Domain_DomainValidator.html", "cl": 6, "ucl": 1, "cal": 7, "tl": 33, "cb": 12, "tb": 14, "cm": 0, "fcm": 0, "tm": 0, "lch": [], "bch": [], "mch": [], "mfch": [], "hc": [], "metrics": { } },
+      { "name": "UnpakSipaksi.Common.Domain.DomainValidator", "rp": "UnpakSipaksi.Common.Domain_DomainValidator.html", "cl": 6, "ucl": 1, "cal": 7, "tl": 33, "cb": 11, "tb": 14, "cm": 0, "fcm": 0, "tm": 0, "lch": [], "bch": [], "mch": [], "mfch": [], "hc": [], "metrics": { } },
       { "name": "UnpakSipaksi.Common.Domain.Entity", "rp": "UnpakSipaksi.Common.Domain_Entity.html", "cl": 6, "ucl": 2, "cal": 8, "tl": 29, "cb": 0, "tb": 0, "cm": 0, "fcm": 0, "tm": 0, "lch": [], "bch": [], "mch": [], "mfch": [], "hc": [], "metrics": { } },
       { "name": "UnpakSipaksi.Common.Domain.Error", "rp": "UnpakSipaksi.Common.Domain_Error.html", "cl": 15, "ucl": 3, "cal": 18, "tl": 42, "cb": 0, "tb": 0, "cm": 0, "fcm": 0, "tm": 0, "lch": [], "bch": [], "mch": [], "mfch": [], "hc": [], "metrics": { } },
       { "name": "UnpakSipaksi.Common.Domain.Result", "rp": "UnpakSipaksi.Common.Domain_Result.html", "cl": 13, "ucl": 2, "cal": 15, "tl": 67, "cb": 6, "tb": 8, "cm": 0, "fcm": 0, "tm": 0, "lch": [], "bch": [], "mch": [], "mfch": [], "hc": [], "metrics": { } },
