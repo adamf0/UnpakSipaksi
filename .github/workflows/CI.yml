@@ -11,24 +11,19 @@ permissions:
 
 jobs:
   # ====================================
-  # 1️⃣ Build job
+  # 1️⃣ Build
   # ====================================
   build:
     runs-on: ubuntu-latest
-
     steps:
       - uses: actions/checkout@v4
-
       - uses: actions/setup-dotnet@v4
         with:
           dotnet-version: 9.0.x
-
       - name: Restore dependencies
         run: dotnet restore
-
       - name: Build solution
         run: dotnet build --configuration Release --no-restore
-
       - name: Upload build outputs
         uses: actions/upload-artifact@v4
         with:
@@ -61,48 +56,45 @@ jobs:
           echo "list=$APP" >> $GITHUB_OUTPUT
 
   # ====================================
-  # 3️⃣ Domain Tests (Sequential)
+  # 3️⃣ Domain Tests (Parallel per project)
   # ====================================
   test-domain:
     needs: [build, find-tests]
     runs-on: ubuntu-latest
-
+    strategy:
+      fail-fast: false
+      matrix:
+        project: ${{ fromJson(needs.find-tests.outputs.domain) }}
     steps:
       - uses: actions/checkout@v4
       - uses: actions/download-artifact@v4
         with:
           name: build-output
-
       - uses: actions/setup-dotnet@v4
         with:
           dotnet-version: 9.0.x
-
-      - name: Run Domain Tests sequentially
+      - name: Run Domain Test (${{ matrix.project }})
         run: |
           mkdir -p TestResults
-          for proj in $(find . -type f -path "*/DomainTest/*Test.csproj"); do
-            echo "🧪 Running DOMAIN test: $proj"
-            dotnet test "$proj" \
-              --configuration Release \
-              --no-build \
-              --logger "trx;LogFileName=TestResults/domain-$(basename "$proj").trx" \
-              --results-directory "TestResults" \
-              --collect:"XPlat Code Coverage" || true
-          done
+          echo "🧪 Running DOMAIN test: ${{ matrix.project }}"
+          dotnet test "${{ matrix.project }}" \
+            --configuration Release \
+            --no-build \
+            --logger "trx;LogFileName=TestResults/domain-$(basename '${{ matrix.project }}').trx" \
+            --results-directory "TestResults" \
+            --collect:"XPlat Code Coverage" || true
         env:
           ASPNETCORE_ENVIRONMENT: Test
-
-      - name: Upload Domain Test Results
-        uses: actions/upload-artifact@v4
+      - uses: actions/upload-artifact@v4
         with:
-          name: domain-test-results
+          name: domain-test-results-${{ matrix.project }}
           path: TestResults
 
   # ====================================
-  # 4️⃣ Application Tests (Parallel per Project)
+  # 4️⃣ Application Tests (Parallel per project, setelah domain selesai)
   # ====================================
   test-application:
-    needs: [build, test-domain, find-tests]
+    needs: [test-domain, find-tests]
     runs-on: ubuntu-latest
     strategy:
       fail-fast: false
@@ -113,11 +105,9 @@ jobs:
       - uses: actions/download-artifact@v4
         with:
           name: build-output
-
       - uses: actions/setup-dotnet@v4
         with:
           dotnet-version: 9.0.x
-
       - name: Run Application Test (${{ matrix.project }})
         run: |
           mkdir -p TestResults
@@ -130,9 +120,7 @@ jobs:
             --collect:"XPlat Code Coverage" || true
         env:
           ASPNETCORE_ENVIRONMENT: Test
-
-      - name: Upload Application test results
-        uses: actions/upload-artifact@v4
+      - uses: actions/upload-artifact@v4
         with:
           name: app-test-results-${{ matrix.project }}
           path: TestResults
@@ -148,14 +136,11 @@ jobs:
       - uses: actions/download-artifact@v4
         with:
           path: TestResults
-
       - uses: actions/setup-dotnet@v4
         with:
           dotnet-version: 9.0.x
-
       - name: Install ReportGenerator
         run: dotnet tool install -g dotnet-reportgenerator-globaltool
-
       - name: Generate coverage HTML report
         run: |
           export PATH="$PATH:~/.dotnet/tools"
@@ -163,7 +148,6 @@ jobs:
             -reports:"TestResults/**/coverage.cobertura.xml" \
             -targetdir:"CoverageReport" \
             -reporttypes:Html
-
       - uses: actions/upload-artifact@v4
         with:
           name: html-coverage-report
