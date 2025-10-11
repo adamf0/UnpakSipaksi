@@ -7,72 +7,142 @@ on:
     branches: [ "lama" ]
 
 permissions:
-  contents: write  # diperlukan untuk push ke gh-pages
+  contents: write
 
 jobs:
   build:
     runs-on: ubuntu-latest
 
     steps:
-      # ===============================
-      # 1️⃣ Checkout Repository
-      # ===============================
       - name: Checkout repository
         uses: actions/checkout@v4
 
-      # ===============================
-      # 2️⃣ Setup .NET
-      # ===============================
       - name: Setup .NET
         uses: actions/setup-dotnet@v4
         with:
           dotnet-version: 9.0.x
 
-      # ===============================
-      # 3️⃣ Restore Dependencies
-      # ===============================
       - name: Restore dependencies
         run: dotnet restore
 
-      # ===============================
-      # 4️⃣ Build Solution
-      # ===============================
-      - name: Build solution
+      - name: Build solution (Release)
         run: dotnet build --configuration Release --no-restore
 
-      # ===============================
-      # 5️⃣ Run Tests + Collect Coverage
-      # ===============================
-      - name: Run all tests and collect coverage
+
+  # ===============================
+  # 5️⃣ Test Domain (parallel per project)
+  # ===============================
+  test_domain:
+    needs: build
+    runs-on: ubuntu-latest
+
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-dotnet@v4
+        with:
+          dotnet-version: 9.0.x
+
+      - name: Run Domain Tests in Parallel (Verbose)
         env:
           ASPNETCORE_ENVIRONMENT: Test
+          Logging__LogLevel__Default: Debug
+          Logging__LogLevel__Microsoft: Debug
+          Logging__LogLevel__Microsoft.EntityFrameworkCore.Database.Command: Information
         run: |
           mkdir -p TestResults
-          for proj in $(find . -type f -name "*Test.csproj"); do
-            echo "🧪 Running tests for $proj"
-            dotnet test "$proj" \
+          DOMAIN_PROJECTS=$(find . -type f -name "*DomainTest.csproj")
+          echo "🧪 Found domain test projects:"
+          echo "$DOMAIN_PROJECTS"
+
+          parallel --will-cite -j 4 '
+            echo "🚀 Running {1}"
+            dotnet test "{1}" \
               --configuration Release \
               --no-restore \
               --no-build \
+              --verbosity detailed \
+              --logger "trx;LogFileName={/.}.trx" \
               --collect:"XPlat Code Coverage" \
-              --results-directory "TestResults"
-          done
+              --results-directory "TestResults/{/.}"
+          ' ::: $DOMAIN_PROJECTS
 
-      # ===============================
-      # 6️⃣ Generate HTML Coverage Report
-      # ===============================
-      - name: Generate HTML coverage report
+      - name: Upload Domain Test Coverage
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: domain-test-coverage
+          path: TestResults
+
+
+  # ===============================
+  # 6️⃣ Test Application (parallel per project)
+  # ===============================
+  test_application:
+    needs: test_domain
+    runs-on: ubuntu-latest
+
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-dotnet@v4
+        with:
+          dotnet-version: 9.0.x
+
+      - name: Run Application Tests in Parallel (Verbose)
+        env:
+          ASPNETCORE_ENVIRONMENT: Test
+          Logging__LogLevel__Default: Debug
+          Logging__LogLevel__Microsoft: Debug
+          Logging__LogLevel__Microsoft.EntityFrameworkCore.Database.Command: Information
         run: |
-          dotnet tool install -g dotnet-reportgenerator-globaltool
+          mkdir -p TestResults
+          APP_PROJECTS=$(find . -type f -name "*ApplicationTest.csproj")
+          echo "🧪 Found application test projects:"
+          echo "$APP_PROJECTS"
+
+          parallel --will-cite -j 4 '
+            echo "🚀 Running {1}"
+            dotnet test "{1}" \
+              --configuration Release \
+              --no-restore \
+              --no-build \
+              --verbosity detailed \
+              --logger "trx;LogFileName={/.}.trx" \
+              --collect:"XPlat Code Coverage" \
+              --results-directory "TestResults/{/.}"
+          ' ::: $APP_PROJECTS
+
+      - name: Upload Application Test Coverage
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: application-test-coverage
+          path: TestResults
+
+
+  # ===============================
+  # 7️⃣ Combine Coverage + Generate HTML Report
+  # ===============================
+  coverage_report:
+    needs: [test_domain, test_application]
+    runs-on: ubuntu-latest
+
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/download-artifact@v4
+        with:
+          path: CombinedResults
+
+      - name: Install ReportGenerator
+        run: dotnet tool install -g dotnet-reportgenerator-globaltool
+
+      - name: Generate HTML Coverage Report
+        run: |
           export PATH="$PATH:~/.dotnet/tools"
           reportgenerator \
-            -reports:"TestResults/**/coverage.cobertura.xml" \
+            -reports:"CombinedResults/**/coverage.cobertura.xml" \
             -targetdir:"CoverageReport" \
             -reporttypes:Html
 
-      # ===============================
-      # 7️⃣ Upload Coverage as Artifact (optional)
-      # ===============================
       - name: Upload HTML report (artifact)
         if: always()
         uses: actions/upload-artifact@v4
@@ -80,19 +150,18 @@ jobs:
           name: html-coverage-report
           path: CoverageReport
 
+
   # ===============================
   # 8️⃣ Deploy to GitHub Pages
   # ===============================
   deploy:
-    needs: build
+    needs: coverage_report
     runs-on: ubuntu-latest
 
     steps:
-      - name: Checkout repository
-        uses: actions/checkout@v4
+      - uses: actions/checkout@v4
 
-      - name: Download coverage artifact
-        uses: actions/download-artifact@v4
+      - uses: actions/download-artifact@v4
         with:
           name: html-coverage-report
           path: CoverageReport
