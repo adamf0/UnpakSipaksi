@@ -20,7 +20,7 @@ namespace UnpakSipaksi.Modules.PenelitianHibah.Domain.MemberMahasiswa
         [Column("id_pdp")]
         public int PenelitianHibahId { get; private set; }
         [Column("bukti_mbkm")]
-        public string BuktiMbkm { get; private set; }
+        public string? BuktiMbkm { get; private set; }
 
 
         public static Result<MemberMahasiswa> Create(
