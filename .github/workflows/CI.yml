@@ -1,171 +1,149 @@
-name: .NET CI + Coverage Report
+name: .NET CI + Coverage Report + Security Scans
 
 on:
   push:
-    branches: [ "lama" ]
+    branches: ["lama"]
   pull_request:
-    branches: [ "lama" ]
+    branches: ["lama"]
 
 permissions:
-  contents: write
+  contents: write  # diperlukan untuk push ke gh-pages
 
 jobs:
-  # ====================================
-  # 1️⃣ Build
-  # ====================================
+  # ==========================================================
+  # Build, Test, Coverage & Deploy
+  # ==========================================================
   build:
     runs-on: ubuntu-latest
+
     steps:
-      - uses: actions/checkout@v4
-      - uses: actions/setup-dotnet@v4
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Setup .NET
+        uses: actions/setup-dotnet@v4
         with:
           dotnet-version: 9.0.x
+
       - name: Restore dependencies
         run: dotnet restore
+
       - name: Build solution
         run: dotnet build --configuration Release --no-restore
-      - name: Upload build outputs
-        uses: actions/upload-artifact@v4
-        with:
-          name: build-output
-          path: .
-          retention-days: 1
 
-  # ====================================
-  # 2️⃣ Find test projects (output ke JSON)
-  # ====================================
-  find-tests:
-    needs: build
-    runs-on: ubuntu-latest
-    outputs:
-      domain: ${{ steps.domain.outputs.list }}
-      application: ${{ steps.application.outputs.list }}
-    steps:
-      - uses: actions/checkout@v4
-
-      - name: Find Domain test projects
-        id: domain
-        run: |
-          DOMAIN=$(find . -type f -path "*/DomainTest/*Test.csproj" | jq -R -s -c 'split("\n")[:-1]')
-          echo "list=$DOMAIN" >> $GITHUB_OUTPUT
-
-      - name: Find Application test projects
-        id: application
-        run: |
-          APP=$(find . -type f -path "*/ApplicationTest/*Test.csproj" | jq -R -s -c 'split("\n")[:-1]')
-          echo "list=$APP" >> $GITHUB_OUTPUT
-
-  # ====================================
-  # 3️⃣ Domain Tests (Parallel per project)
-  # ====================================
-  test-domain:
-    needs: [build, find-tests]
-    runs-on: ubuntu-latest
-    strategy:
-      fail-fast: false
-      matrix:
-        project: ${{ fromJson(needs.find-tests.outputs.domain) }}
-    steps:
-      - uses: actions/checkout@v4
-      - uses: actions/download-artifact@v4
-        with:
-          name: build-output
-      - uses: actions/setup-dotnet@v4
-        with:
-          dotnet-version: 9.0.x
-      - name: Run Domain Test (${{ matrix.project }})
-        run: |
-          mkdir -p TestResults
-          echo "🧪 Running DOMAIN test: ${{ matrix.project }}"
-          dotnet test "${{ matrix.project }}" \
-            --configuration Release \
-            --no-build \
-            --logger "trx;LogFileName=TestResults/domain-$(basename '${{ matrix.project }}').trx" \
-            --results-directory "TestResults" \
-            --collect:"XPlat Code Coverage" || true
+      - name: Run all tests and collect coverage
         env:
           ASPNETCORE_ENVIRONMENT: Test
-      - uses: actions/upload-artifact@v4
-        with:
-          name: domain-test-results-${{ matrix.project }}
-          path: TestResults
-
-  # ====================================
-  # 4️⃣ Application Tests (Parallel per project, setelah domain selesai)
-  # ====================================
-  test-application:
-    needs: [test-domain, find-tests]
-    runs-on: ubuntu-latest
-    strategy:
-      fail-fast: false
-      matrix:
-        project: ${{ fromJson(needs.find-tests.outputs.application) }}
-    steps:
-      - uses: actions/checkout@v4
-      - uses: actions/download-artifact@v4
-        with:
-          name: build-output
-      - uses: actions/setup-dotnet@v4
-        with:
-          dotnet-version: 9.0.x
-      - name: Run Application Test (${{ matrix.project }})
         run: |
           mkdir -p TestResults
-          echo "🧪 Running APP test: ${{ matrix.project }}"
-          dotnet test "${{ matrix.project }}" \
-            --configuration Release \
-            --no-build \
-            --logger "trx;LogFileName=TestResults/app-$(basename '${{ matrix.project }}').trx" \
-            --results-directory "TestResults" \
-            --collect:"XPlat Code Coverage" || true
-        env:
-          ASPNETCORE_ENVIRONMENT: Test
-      - uses: actions/upload-artifact@v4
-        with:
-          name: app-test-results-${{ matrix.project }}
-          path: TestResults
+          for proj in $(find . -type f -name "*Test.csproj"); do
+            echo "🏃 Running tests for $proj"
+            dotnet test "$proj" \
+              --configuration Release \
+              --no-restore \
+              --no-build \
+              --collect:"XPlat Code Coverage" \
+              --results-directory "TestResults"
+          done
 
-  # ====================================
-  # 5️⃣ Combine Coverage + Generate HTML
-  # ====================================
-  coverage:
-    needs: [test-domain, test-application]
-    runs-on: ubuntu-latest
-    steps:
-      - uses: actions/checkout@v4
-      - uses: actions/download-artifact@v4
-        with:
-          path: TestResults
-      - uses: actions/setup-dotnet@v4
-        with:
-          dotnet-version: 9.0.x
-      - name: Install ReportGenerator
-        run: dotnet tool install -g dotnet-reportgenerator-globaltool
-      - name: Generate coverage HTML report
+      - name: Generate HTML coverage report
         run: |
+          dotnet tool install -g dotnet-reportgenerator-globaltool
           export PATH="$PATH:~/.dotnet/tools"
           reportgenerator \
             -reports:"TestResults/**/coverage.cobertura.xml" \
             -targetdir:"CoverageReport" \
             -reporttypes:Html
-      - uses: actions/upload-artifact@v4
+
+      - name: Upload HTML report (artifact)
+        if: always()
+        uses: actions/upload-artifact@v4
         with:
           name: html-coverage-report
           path: CoverageReport
 
-  # ====================================
-  # 6️⃣ Deploy to GitHub Pages
-  # ====================================
   deploy:
-    needs: coverage
+    needs: build
     runs-on: ubuntu-latest
+
     steps:
-      - uses: actions/checkout@v4
-      - uses: actions/download-artifact@v4
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Download coverage artifact
+        uses: actions/download-artifact@v4
         with:
           name: html-coverage-report
           path: CoverageReport
-      - uses: peaceiris/actions-gh-pages@v4
+
+      - name: Deploy to GitHub Pages
+        uses: peaceiris/actions-gh-pages@v4
         with:
           github_token: ${{ secrets.GITHUB_TOKEN }}
           publish_dir: ./CoverageReport
+
+  # ==========================================================
+  # Gitleaks Secret Scan
+  # ==========================================================
+  gitleaks:
+    name: Scan secrets with Gitleaks
+    runs-on: ubuntu-latest
+
+    steps:
+      - uses: actions/checkout@v3
+        with:
+          fetch-depth: 0
+
+      - uses: gitleaks/gitleaks-action@v2
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+
+  # ==========================================================
+  # Trufflehog Secret Scan
+  # ==========================================================
+  trufflehog:
+    name: Scan secrets with Trufflehog
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v2
+        with:
+          fetch-depth: 0
+          ref: ${{ github.head_ref }}
+
+      - name: Trufflehog scan
+        uses: edplato/trufflehog-actions-scan@master
+
+  # ==========================================================
+  # Container Security Scans
+  # ==========================================================
+  container-security:
+    name: Container Security Scans
+    runs-on: ubuntu-latest
+    steps:
+      - name: Install Grype
+        run: curl -sSfL https://raw.githubusercontent.com/anchore/grype/main/install.sh | sh -s -- -b /usr/local/bin
+
+      - name: Scan Image with Grype
+        run: grype my-app:latest --scope all-layers
+
+      - name: Install AmIContained
+        run: go install github.com/genuinetools/amicontained@latest
+
+      - name: Inspect Container with AmIContained
+        run: |
+          docker run --rm my-app:latest /bin/sh -c "amicontained"
+
+      - name: Run LinPEAS
+        run: |
+          docker run -d --name test-container my-app:latest
+          docker exec test-container /bin/sh -c "curl -L https://github.com/peass-ng/PEASS-ng/releases/latest/download/linpeas.sh | sh"
+          docker stop test-container
+
+      - name: Upload Security Scan Results
+        uses: actions/upload-artifact@v3
+        with:
+          name: security-report
+          path: |
+            grype-report.txt
+            amicontained-report.txt
+            linpeas-report.txt
