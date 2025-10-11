@@ -20,6 +20,8 @@ jobs:
     - name: Build
       run: dotnet build --configuration Release --no-restore
     - name: Run all tests
+      env:
+        ASPNETCORE_ENVIRONMENT: Test
       run: |
         for proj in $(find . -name "*Test.csproj"); do
           echo "Running tests for $proj"
