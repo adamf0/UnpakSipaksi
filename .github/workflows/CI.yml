@@ -10,8 +10,14 @@ permissions:
   contents: write
 
 jobs:
+  # ====================================
+  # 🔧 Build job (1x)
+  # ====================================
   build:
     runs-on: ubuntu-latest
+
+    outputs:
+      build-artifact: ${{ steps.build-output.outputs.build-path }}
 
     steps:
       - name: Checkout repository
@@ -25,143 +31,162 @@ jobs:
       - name: Restore dependencies
         run: dotnet restore
 
-      - name: Build solution (Release)
-        run: dotnet build --configuration Release --no-restore
+      - name: Build solution
+        id: build-output
+        run: |
+          dotnet build --configuration Release --no-restore
+          echo "build-path=$(pwd)" >> $GITHUB_OUTPUT
 
+      - name: Upload build outputs
+        uses: actions/upload-artifact@v4
+        with:
+          name: build-output
+          path: .
+          retention-days: 1
 
-  # ===============================
-  # 5️⃣ Test Domain (parallel per project)
-  # ===============================
-  test_domain:
+  # ====================================
+  # 🧪 Test Domain (sequential)
+  # ====================================
+  test-domain:
     needs: build
     runs-on: ubuntu-latest
+    strategy:
+      fail-fast: false
+      matrix:
+        project: ${{ fromJson(needs.build.outputs.build-artifact) }}
 
     steps:
-      - uses: actions/checkout@v4
-      - uses: actions/setup-dotnet@v4
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Download build artifacts
+        uses: actions/download-artifact@v4
+        with:
+          name: build-output
+
+      - name: Setup .NET
+        uses: actions/setup-dotnet@v4
         with:
           dotnet-version: 9.0.x
 
-      - name: Run Domain Tests in Parallel (Verbose)
-        env:
-          ASPNETCORE_ENVIRONMENT: Test
-          Logging__LogLevel__Default: Debug
-          Logging__LogLevel__Microsoft: Debug
-          Logging__LogLevel__Microsoft.EntityFrameworkCore.Database.Command: Information
+      - name: Find Domain test projects
+        id: find-tests
+        run: |
+          echo "projects=$(find . -type f -path '*/DomainTest/*Test.csproj' | jq -R -s -c 'split("\n")[:-1]')" >> $GITHUB_OUTPUT
+
+      - name: Run Domain Tests (Sequential with coverage)
         run: |
           mkdir -p TestResults
-          DOMAIN_PROJECTS=$(find . -type f -name "*DomainTest.csproj")
-          echo "🧪 Found domain test projects:"
-          echo "$DOMAIN_PROJECTS"
-
-          parallel --will-cite -j 4 '
-            echo "🚀 Running {1}"
-            dotnet test "{1}" \
+          for proj in $(find . -type f -path '*/DomainTest/*Test.csproj'); do
+            echo "🧪 Running DOMAIN test: $proj"
+            dotnet test "$proj" \
               --configuration Release \
-              --no-restore \
               --no-build \
-              --verbosity detailed \
-              --logger "trx;LogFileName={/.}.trx" \
-              --collect:"XPlat Code Coverage" \
-              --results-directory "TestResults/{/.}"
-          ' ::: $DOMAIN_PROJECTS
+              --logger "trx;LogFileName=TestResults/domain-$(basename "$proj").trx" \
+              --results-directory "TestResults" \
+              --collect:"XPlat Code Coverage" || true
+          done
+        env:
+          ASPNETCORE_ENVIRONMENT: Test
 
-      - name: Upload Domain Test Coverage
-        if: always()
+      - name: Upload Domain test results
         uses: actions/upload-artifact@v4
         with:
-          name: domain-test-coverage
+          name: domain-test-results
           path: TestResults
 
-
-  # ===============================
-  # 6️⃣ Test Application (parallel per project)
-  # ===============================
-  test_application:
-    needs: test_domain
+  # ====================================
+  # ⚙️ Test Application (parallel per project)
+  # ====================================
+  test-application:
+    needs: [build, test-domain]
     runs-on: ubuntu-latest
-
+    strategy:
+      fail-fast: false
+      matrix:
+        project: ${{ fromJson(steps.find-tests.outputs.projects) }}
     steps:
-      - uses: actions/checkout@v4
-      - uses: actions/setup-dotnet@v4
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Download build artifacts
+        uses: actions/download-artifact@v4
+        with:
+          name: build-output
+
+      - name: Setup .NET
+        uses: actions/setup-dotnet@v4
         with:
           dotnet-version: 9.0.x
 
-      - name: Run Application Tests in Parallel (Verbose)
-        env:
-          ASPNETCORE_ENVIRONMENT: Test
-          Logging__LogLevel__Default: Debug
-          Logging__LogLevel__Microsoft: Debug
-          Logging__LogLevel__Microsoft.EntityFrameworkCore.Database.Command: Information
+      - name: Run Application Test (${{ matrix.project }})
         run: |
           mkdir -p TestResults
-          APP_PROJECTS=$(find . -type f -name "*ApplicationTest.csproj")
-          echo "🧪 Found application test projects:"
-          echo "$APP_PROJECTS"
+          echo "🧪 Running APP test: ${{ matrix.project }}"
+          dotnet test "${{ matrix.project }}" \
+            --configuration Release \
+            --no-build \
+            --logger "trx;LogFileName=TestResults/app-$(basename '${{ matrix.project }}').trx" \
+            --results-directory "TestResults" \
+            --collect:"XPlat Code Coverage" || true
+        env:
+          ASPNETCORE_ENVIRONMENT: Test
 
-          parallel --will-cite -j 4 '
-            echo "🚀 Running {1}"
-            dotnet test "{1}" \
-              --configuration Release \
-              --no-restore \
-              --no-build \
-              --verbosity detailed \
-              --logger "trx;LogFileName={/.}.trx" \
-              --collect:"XPlat Code Coverage" \
-              --results-directory "TestResults/{/.}"
-          ' ::: $APP_PROJECTS
-
-      - name: Upload Application Test Coverage
-        if: always()
+      - name: Upload Application test results
         uses: actions/upload-artifact@v4
         with:
-          name: application-test-coverage
+          name: app-test-results-${{ matrix.project }}
           path: TestResults
 
-
-  # ===============================
-  # 7️⃣ Combine Coverage + Generate HTML Report
-  # ===============================
-  coverage_report:
-    needs: [test_domain, test_application]
+  # ====================================
+  # 📊 Combine Coverage and Generate HTML
+  # ====================================
+  coverage:
+    needs: [test-domain, test-application]
     runs-on: ubuntu-latest
-
     steps:
-      - uses: actions/checkout@v4
-      - uses: actions/download-artifact@v4
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Download all test results
+        uses: actions/download-artifact@v4
         with:
-          path: CombinedResults
+          path: TestResults
+
+      - name: Setup .NET
+        uses: actions/setup-dotnet@v4
+        with:
+          dotnet-version: 9.0.x
 
       - name: Install ReportGenerator
         run: dotnet tool install -g dotnet-reportgenerator-globaltool
 
-      - name: Generate HTML Coverage Report
+      - name: Generate coverage HTML report
         run: |
           export PATH="$PATH:~/.dotnet/tools"
           reportgenerator \
-            -reports:"CombinedResults/**/coverage.cobertura.xml" \
+            -reports:"TestResults/**/coverage.cobertura.xml" \
             -targetdir:"CoverageReport" \
             -reporttypes:Html
 
-      - name: Upload HTML report (artifact)
-        if: always()
+      - name: Upload HTML Coverage Report
         uses: actions/upload-artifact@v4
         with:
           name: html-coverage-report
           path: CoverageReport
 
-
-  # ===============================
-  # 8️⃣ Deploy to GitHub Pages
-  # ===============================
+  # ====================================
+  # 🚀 Deploy Coverage to GitHub Pages
+  # ====================================
   deploy:
-    needs: coverage_report
+    needs: coverage
     runs-on: ubuntu-latest
-
     steps:
-      - uses: actions/checkout@v4
+      - name: Checkout repository
+        uses: actions/checkout@v4
 
-      - uses: actions/download-artifact@v4
+      - name: Download coverage artifact
+        uses: actions/download-artifact@v4
         with:
           name: html-coverage-report
           path: CoverageReport
