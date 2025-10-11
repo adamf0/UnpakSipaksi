@@ -11,20 +11,15 @@ permissions:
 
 jobs:
   # ====================================
-  # 🔧 Build job (1x)
+  # 1️⃣ Build job
   # ====================================
   build:
     runs-on: ubuntu-latest
 
-    outputs:
-      build-artifact: ${{ steps.build-output.outputs.build-path }}
-
     steps:
-      - name: Checkout repository
-        uses: actions/checkout@v4
+      - uses: actions/checkout@v4
 
-      - name: Setup .NET
-        uses: actions/setup-dotnet@v4
+      - uses: actions/setup-dotnet@v4
         with:
           dotnet-version: 9.0.x
 
@@ -32,10 +27,7 @@ jobs:
         run: dotnet restore
 
       - name: Build solution
-        id: build-output
-        run: |
-          dotnet build --configuration Release --no-restore
-          echo "build-path=$(pwd)" >> $GITHUB_OUTPUT
+        run: dotnet build --configuration Release --no-restore
 
       - name: Upload build outputs
         uses: actions/upload-artifact@v4
@@ -45,39 +37,50 @@ jobs:
           retention-days: 1
 
   # ====================================
-  # 🧪 Test Domain (sequential)
+  # 2️⃣ Find test projects (output ke JSON)
   # ====================================
-  test-domain:
+  find-tests:
     needs: build
     runs-on: ubuntu-latest
-    strategy:
-      fail-fast: false
-      matrix:
-        project: ${{ fromJson(needs.build.outputs.build-artifact) }}
+    outputs:
+      domain: ${{ steps.domain.outputs.list }}
+      application: ${{ steps.application.outputs.list }}
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Find Domain test projects
+        id: domain
+        run: |
+          DOMAIN=$(find . -type f -path "*/DomainTest/*Test.csproj" | jq -R -s -c 'split("\n")[:-1]')
+          echo "list=$DOMAIN" >> $GITHUB_OUTPUT
+
+      - name: Find Application test projects
+        id: application
+        run: |
+          APP=$(find . -type f -path "*/ApplicationTest/*Test.csproj" | jq -R -s -c 'split("\n")[:-1]')
+          echo "list=$APP" >> $GITHUB_OUTPUT
+
+  # ====================================
+  # 3️⃣ Domain Tests (Sequential)
+  # ====================================
+  test-domain:
+    needs: [build, find-tests]
+    runs-on: ubuntu-latest
 
     steps:
-      - name: Checkout repository
-        uses: actions/checkout@v4
-
-      - name: Download build artifacts
-        uses: actions/download-artifact@v4
+      - uses: actions/checkout@v4
+      - uses: actions/download-artifact@v4
         with:
           name: build-output
 
-      - name: Setup .NET
-        uses: actions/setup-dotnet@v4
+      - uses: actions/setup-dotnet@v4
         with:
           dotnet-version: 9.0.x
 
-      - name: Find Domain test projects
-        id: find-tests
-        run: |
-          echo "projects=$(find . -type f -path '*/DomainTest/*Test.csproj' | jq -R -s -c 'split("\n")[:-1]')" >> $GITHUB_OUTPUT
-
-      - name: Run Domain Tests (Sequential with coverage)
+      - name: Run Domain Tests sequentially
         run: |
           mkdir -p TestResults
-          for proj in $(find . -type f -path '*/DomainTest/*Test.csproj'); do
+          for proj in $(find . -type f -path "*/DomainTest/*Test.csproj"); do
             echo "🧪 Running DOMAIN test: $proj"
             dotnet test "$proj" \
               --configuration Release \
@@ -89,33 +92,29 @@ jobs:
         env:
           ASPNETCORE_ENVIRONMENT: Test
 
-      - name: Upload Domain test results
+      - name: Upload Domain Test Results
         uses: actions/upload-artifact@v4
         with:
           name: domain-test-results
           path: TestResults
 
   # ====================================
-  # ⚙️ Test Application (parallel per project)
+  # 4️⃣ Application Tests (Parallel per Project)
   # ====================================
   test-application:
-    needs: [build, test-domain]
+    needs: [build, test-domain, find-tests]
     runs-on: ubuntu-latest
     strategy:
       fail-fast: false
       matrix:
-        project: ${{ fromJson(steps.find-tests.outputs.projects) }}
+        project: ${{ fromJson(needs.find-tests.outputs.application) }}
     steps:
-      - name: Checkout repository
-        uses: actions/checkout@v4
-
-      - name: Download build artifacts
-        uses: actions/download-artifact@v4
+      - uses: actions/checkout@v4
+      - uses: actions/download-artifact@v4
         with:
           name: build-output
 
-      - name: Setup .NET
-        uses: actions/setup-dotnet@v4
+      - uses: actions/setup-dotnet@v4
         with:
           dotnet-version: 9.0.x
 
@@ -139,22 +138,18 @@ jobs:
           path: TestResults
 
   # ====================================
-  # 📊 Combine Coverage and Generate HTML
+  # 5️⃣ Combine Coverage + Generate HTML
   # ====================================
   coverage:
     needs: [test-domain, test-application]
     runs-on: ubuntu-latest
     steps:
-      - name: Checkout repository
-        uses: actions/checkout@v4
-
-      - name: Download all test results
-        uses: actions/download-artifact@v4
+      - uses: actions/checkout@v4
+      - uses: actions/download-artifact@v4
         with:
           path: TestResults
 
-      - name: Setup .NET
-        uses: actions/setup-dotnet@v4
+      - uses: actions/setup-dotnet@v4
         with:
           dotnet-version: 9.0.x
 
@@ -169,30 +164,24 @@ jobs:
             -targetdir:"CoverageReport" \
             -reporttypes:Html
 
-      - name: Upload HTML Coverage Report
-        uses: actions/upload-artifact@v4
+      - uses: actions/upload-artifact@v4
         with:
           name: html-coverage-report
           path: CoverageReport
 
   # ====================================
-  # 🚀 Deploy Coverage to GitHub Pages
+  # 6️⃣ Deploy to GitHub Pages
   # ====================================
   deploy:
     needs: coverage
     runs-on: ubuntu-latest
     steps:
-      - name: Checkout repository
-        uses: actions/checkout@v4
-
-      - name: Download coverage artifact
-        uses: actions/download-artifact@v4
+      - uses: actions/checkout@v4
+      - uses: actions/download-artifact@v4
         with:
           name: html-coverage-report
           path: CoverageReport
-
-      - name: Deploy to GitHub Pages
-        uses: peaceiris/actions-gh-pages@v4
+      - uses: peaceiris/actions-gh-pages@v4
         with:
           github_token: ${{ secrets.GITHUB_TOKEN }}
           publish_dir: ./CoverageReport
