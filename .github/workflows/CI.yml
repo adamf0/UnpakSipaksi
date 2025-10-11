@@ -25,5 +25,5 @@ jobs:
       run: |
         for proj in $(find . -name "*Test.csproj"); do
           echo "Running tests for $proj"
-          dotnet test "$proj" --configuration Release --no-restore --no-build --verbosity normal
+          dotnet test "$proj" --configuration Release --no-restore --no-build
         done
