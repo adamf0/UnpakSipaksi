@@ -107,6 +107,10 @@ namespace UnpakSipaksi.Modules.PenelitianPkm.DomainTest.RAB
             ).ReturnsAsync(true);
 
             var hibah = await Domain.PenelitianPkm.PenelitianPkm.Create(mockRepo.Object, "1234567890", "2024-01-01", "judul");
+            typeof(Domain.PenelitianPkm.PenelitianPkm)
+                .GetProperty("Id")!
+                .SetValue(hibah.Value, 1);
+
             var existing = Domain.RAB.RAB.Create(Guid.NewGuid(), hibah.Value, 1, 1, 2, 3, 1000, 2000).Value;
 
             // Act
@@ -179,6 +183,10 @@ namespace UnpakSipaksi.Modules.PenelitianPkm.DomainTest.RAB
             ).ReturnsAsync(true);
 
             var hibah = await Domain.PenelitianPkm.PenelitianPkm.Create(mockRepo.Object, "1234567890", "2024-01-01", "judul");
+            typeof(Domain.PenelitianPkm.PenelitianPkm)
+                .GetProperty("Id")!
+                .SetValue(hibah.Value, 1);
+
             var existing = Domain.RAB.RAB.Create(Guid.NewGuid(), hibah.Value, 1, 1, 2, 3, 1000, 2000).Value;
 
             // Act
