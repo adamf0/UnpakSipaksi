@@ -17843,6 +17843,7 @@
       "MySql.EntityFrameworkCore >= 9.0.6",
       "Testcontainers.MySql >= 4.7.0",
       "UnpakSipaksi >= 1.0.0",
+      "UnpakSipaksi.Modules.JenisLuaran.Application >= 1.0.0",
       "UnpakSipaksi.Modules.JenisLuaran.Infrastructure >= 1.0.0",
       "coverlet.collector >= 6.0.0",
       "xunit >= 2.5.3",
@@ -17883,6 +17884,9 @@
         "net9.0": {
           "targetAlias": "net9.0",
           "projectReferences": {
+            "C:\\dev_net\\UnpakSipaksi\\UnpakSipaksi.Modules.JenisLuaran.Application\\UnpakSipaksi.Modules.JenisLuaran.Application.csproj": {
+              "projectPath": "C:\\dev_net\\UnpakSipaksi\\UnpakSipaksi.Modules.JenisLuaran.Application\\UnpakSipaksi.Modules.JenisLuaran.Application.csproj"
+            },
             "C:\\dev_net\\UnpakSipaksi\\UnpakSipaksi.Modules.JenisLuaran.Infrastructure\\UnpakSipaksi.Modules.JenisLuaran.Infrastructure.csproj": {
               "projectPath": "C:\\dev_net\\UnpakSipaksi\\UnpakSipaksi.Modules.JenisLuaran.Infrastructure\\UnpakSipaksi.Modules.JenisLuaran.Infrastructure.csproj"
             },

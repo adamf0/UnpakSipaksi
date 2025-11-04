@@ -2,6 +2,10 @@
 using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.DependencyInjection;
 using UnpakSipaksi.Common.Domain;
+using UnpakSipaksi.Modules.AkurasiPenelitian.Application.DeleteAkurasiPenelitian;
+using UnpakSipaksi.Modules.AkurasiPenelitian.Application.UpdateAkurasiPenelitian;
+using UnpakSipaksi.Modules.ArtikelMediaMassa.Application.CreateArtikelMediaMassa;
+using UnpakSipaksi.Modules.ArtikelMediaMassa.Application.UpdateArtikelMediaMassa;
 using UnpakSipaksi.Modules.AuthorSinta.Application.CreateAuthorSinta;
 using UnpakSipaksi.Modules.AuthorSinta.Application.DeleteAuthorSinta;
 using UnpakSipaksi.Modules.AuthorSinta.Application.UpdateAuthorSinta;
@@ -162,6 +166,83 @@ namespace Application.Integration.Tests
                     Assert.IsType<DeleteAuthorSintaCommandHandler>(handler);
                 }
             }
+        }
+
+        [Fact]
+        public async Task Create_ShouldThrow_WhenInvalidRuleDomain()
+        {
+            var nidnBefore = "1234567890";
+            var authorIdBefore = "1234567";
+            var scoreBefore = -100;
+
+            var createCommand = new CreateAuthorSintaCommand(nidnBefore, authorIdBefore, scoreBefore);
+            var createResult = await Sender.Send(createCommand);
+
+            Assert.True(createResult.IsFailure);
+            Assert.Equal("AuthorSinta.InvalidSkor", createResult.Error.Code);
+        }
+
+        [Fact]
+        public async Task Update_ShouldThrow_WhenNotExist()
+        {
+            var guid = Guid.NewGuid().ToString();
+            var nidnBefore = "1234567890";
+            var authorIdBefore = "1234567";
+            var scoreBefore = -100;
+
+            var updateCommand = new UpdateAuthorSintaCommand(guid, nidnBefore, authorIdBefore, scoreBefore);
+            var updateResult = await Sender.Send(updateCommand);
+
+            Assert.True(updateResult.IsFailure);
+            Assert.Equal("AuthorSinta.NotFound", updateResult.Error.Code);
+        }
+
+        [Fact]
+        public async Task Update_ShouldThrow_WhenInvalidRuleDomain()
+        {
+            // --- CREATE ---
+            var nidnBefore = "1234567890";
+            var authorIdBefore = "1234567";
+            var scoreBefore = 100;
+
+            var createCommand = new CreateAuthorSintaCommand(nidnBefore, authorIdBefore, scoreBefore);
+            var createResult = await Sender.Send(createCommand);
+
+            Assert.True(createResult.IsSuccess);
+            var dataCreate = DBContext.AuthorSinta.FirstOrDefault(p => p.Uuid == createResult!.Value);
+
+            Assert.NotNull(dataCreate);
+            Assert.Equal(nidnBefore, dataCreate.Nidn);
+            Assert.Equal(authorIdBefore, dataCreate.AuthorId);
+            Assert.Equal(scoreBefore, dataCreate.Score);
+
+            var newUuid = createResult.Value.ToString();
+
+            // --- UPDATE ---
+            //if (mode == "updated")
+            //{
+            var nidnAfter = "1234567890";
+            var authorIdAfter = "1234567";
+            var scoreAfter = -100;
+
+            var updateCommand = new UpdateAuthorSintaCommand(newUuid, nidnAfter, authorIdAfter, scoreAfter);
+            var updateResult = await Sender.Send(updateCommand);
+
+            Assert.True(updateResult.IsFailure);
+            Assert.Equal("AuthorSinta.InvalidSkor", updateResult.Error.Code);
+            //}
+        }
+
+        [Fact]
+        public async Task Delete_ShouldThrow_WhenNotExist()
+        {
+            var guid = Guid.NewGuid().ToString();
+
+            var deleteCommand = new DeleteAkurasiPenelitianCommand(guid);
+            var deleteResult = await Sender.Send(deleteCommand);
+
+            Assert.True(deleteResult.IsFailure);
+            Assert.Equal("AuthorSinta.NotFound", deleteResult.Error.Code);
         }
     }
 }

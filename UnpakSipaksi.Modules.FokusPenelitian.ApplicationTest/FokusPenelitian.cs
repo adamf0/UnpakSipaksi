@@ -1,6 +1,9 @@
 ﻿using MediatR;
 using Microsoft.Extensions.DependencyInjection;
 using UnpakSipaksi.Common.Domain;
+using UnpakSipaksi.Modules.AkurasiPenelitian.Application.DeleteAkurasiPenelitian;
+using UnpakSipaksi.Modules.AuthorSinta.Application.CreateAuthorSinta;
+using UnpakSipaksi.Modules.AuthorSinta.Application.UpdateAuthorSinta;
 using UnpakSipaksi.Modules.FokusPenelitian.Application.CreateFokusPenelitian;
 using UnpakSipaksi.Modules.FokusPenelitian.Application.DeleteFokusPenelitian;
 using UnpakSipaksi.Modules.FokusPenelitian.Application.UpdateFokusPenelitian;
@@ -133,6 +136,31 @@ namespace UnpakSipaksi.Modules.FokusPenelitian.ApplicationTest
 
                 Assert.True(deleteResult.IsSuccess);
             }
+        }
+
+        [Fact]
+        public async Task Update_ShouldThrow_WhenNotExist()
+        {
+            var guid = Guid.NewGuid().ToString();
+            var namaBefore = "tes";
+
+            var updateCommand = new UpdateFokusPenelitianCommand(guid, namaBefore);
+            var updateResult = await Sender.Send(updateCommand);
+
+            Assert.True(updateResult.IsFailure);
+            Assert.Equal("FokusPenelitian.NotFound", updateResult.Error.Code);
+        }
+
+        [Fact]
+        public async Task Delete_ShouldThrow_WhenNotExist()
+        {
+            var guid = Guid.NewGuid().ToString();
+
+            var deleteCommand = new DeleteFokusPenelitianCommand(guid);
+            var deleteResult = await Sender.Send(deleteCommand);
+
+            Assert.True(deleteResult.IsFailure);
+            Assert.Equal("FokusPenelitian.NotFound", deleteResult.Error.Code);
         }
     }
 }

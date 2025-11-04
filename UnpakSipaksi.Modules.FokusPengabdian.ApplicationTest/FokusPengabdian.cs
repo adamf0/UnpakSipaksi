@@ -2,8 +2,8 @@
 using Microsoft.Extensions.DependencyInjection;
 using UnpakSipaksi.Common.Domain;
 using UnpakSipaksi.Modules.FokusPengabdian.Application.CreateFokusPengabdian;
-using UnpakSipaksi.Modules.FokusPengabdian.Application.UpdateFokusPengabdian;
 using UnpakSipaksi.Modules.FokusPengabdian.Application.DeleteFokusPengabdian;
+using UnpakSipaksi.Modules.FokusPengabdian.Application.UpdateFokusPengabdian;
 using Xunit;
 
 namespace UnpakSipaksi.Modules.FokusPengabdian.ApplicationTest
@@ -133,6 +133,31 @@ namespace UnpakSipaksi.Modules.FokusPengabdian.ApplicationTest
 
                 Assert.True(deleteResult.IsSuccess);
             }
+        }
+
+        [Fact]
+        public async Task Update_ShouldThrow_WhenNotExist()
+        {
+            var guid = Guid.NewGuid().ToString();
+            var namaBefore = "tes";
+
+            var updateCommand = new UpdateFokusPengabdianCommand(guid, namaBefore);
+            var updateResult = await Sender.Send(updateCommand);
+
+            Assert.True(updateResult.IsFailure);
+            Assert.Equal("FokusPengabdian.NotFound", updateResult.Error.Code);
+        }
+
+        [Fact]
+        public async Task Delete_ShouldThrow_WhenNotExist()
+        {
+            var guid = Guid.NewGuid().ToString();
+
+            var deleteCommand = new DeleteFokusPengabdianCommand(guid);
+            var deleteResult = await Sender.Send(deleteCommand);
+
+            Assert.True(deleteResult.IsFailure);
+            Assert.Equal("FokusPengabdian.NotFound", deleteResult.Error.Code);
         }
     }
 }

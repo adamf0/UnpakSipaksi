@@ -4,6 +4,9 @@ using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.DependencyInjection;
 using System.Reflection;
 using UnpakSipaksi.Common.Domain;
+using UnpakSipaksi.Modules.AkurasiPenelitian.Application.CreateAkurasiPenelitian;
+using UnpakSipaksi.Modules.AkurasiPenelitian.Application.DeleteAkurasiPenelitian;
+using UnpakSipaksi.Modules.AkurasiPenelitian.Application.UpdateAkurasiPenelitian;
 using UnpakSipaksi.Modules.ArtikelMediaMassa.Application.CreateArtikelMediaMassa;
 using UnpakSipaksi.Modules.ArtikelMediaMassa.Application.DeleteArtikelMediaMassa;
 using UnpakSipaksi.Modules.ArtikelMediaMassa.Application.UpdateArtikelMediaMassa;
@@ -146,6 +149,78 @@ namespace Application.Integration.Tests
 
                 Assert.True(deleteResult.IsSuccess);
             }
+        }
+
+        [Fact]
+        public async Task Create_ShouldThrow_WhenInvalidRuleDomain()
+        {
+            var namaBefore = "tes";
+            var nilaiBefore = int.MaxValue;
+
+            var createCommand = new CreateArtikelMediaMassaCommand(namaBefore, nilaiBefore);
+            var createResult = await Sender.Send(createCommand);
+
+            Assert.True(createResult.IsFailure);
+            Assert.Equal("ArtikelMediaMassa.InvalidNilai", createResult.Error.Code);
+        }
+
+        [Fact]
+        public async Task Update_ShouldThrow_WhenNotExist()
+        {
+            var guid = Guid.NewGuid().ToString();
+            var namaBefore = "tes";
+            var nilaiBefore = 1;
+
+            var updateCommand = new UpdateArtikelMediaMassaCommand(guid, namaBefore, nilaiBefore);
+            var updateResult = await Sender.Send(updateCommand);
+
+            Assert.True(updateResult.IsFailure);
+            Assert.Equal("ArtikelMediaMassa.NotFound", updateResult.Error.Code);
+        }
+
+        [Fact]
+        public async Task Update_ShouldThrow_WhenInvalidRuleDomain()
+        {
+            // --- CREATE ---
+            var namaBefore = "tes";
+            var nilaiBefore = 1;
+
+            var createCommand = new CreateArtikelMediaMassaCommand(namaBefore, nilaiBefore);
+            var createResult = await Sender.Send(createCommand);
+
+            Assert.True(createResult.IsSuccess);
+            var dataCreate = DBContext.ArtikelMediaMassa.FirstOrDefault(p => p.Uuid == createResult!.Value);
+
+            Assert.NotNull(dataCreate);
+            Assert.Equal(namaBefore, dataCreate.Nama);
+            Assert.Equal(nilaiBefore, dataCreate.Nilai);
+
+            var newUuid = createResult.Value.ToString();
+
+            // --- UPDATE ---
+            //if (mode == "updated")
+            //{
+            var namaAfter = "tes2";
+            var nilaiAfter = int.MaxValue;
+
+            var updateCommand = new UpdateAkurasiPenelitianCommand(newUuid, namaAfter, nilaiAfter);
+            var updateResult = await Sender.Send(updateCommand);
+
+            Assert.True(updateResult.IsFailure);
+            Assert.Equal("ArtikelMediaMassa.InvalidNilai", updateResult.Error.Code);
+            //}
+        }
+
+        [Fact]
+        public async Task Delete_ShouldThrow_WhenNotExist()
+        {
+            var guid = Guid.NewGuid().ToString();
+
+            var deleteCommand = new DeleteAkurasiPenelitianCommand(guid);
+            var deleteResult = await Sender.Send(deleteCommand);
+
+            Assert.True(deleteResult.IsFailure);
+            Assert.Equal("ArtikelMediaMassa.NotFound", deleteResult.Error.Code);
         }
     }
 }

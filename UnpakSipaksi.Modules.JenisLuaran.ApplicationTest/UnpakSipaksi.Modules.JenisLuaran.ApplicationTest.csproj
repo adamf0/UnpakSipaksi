@@ -23,6 +23,7 @@
 	</ItemGroup>
 
 	<ItemGroup>
+		<ProjectReference Include="..\UnpakSipaksi.Modules.JenisLuaran.Application\UnpakSipaksi.Modules.JenisLuaran.Application.csproj" />
 		<ProjectReference Include="..\UnpakSipaksi.Modules.JenisLuaran.Infrastructure\UnpakSipaksi.Modules.JenisLuaran.Infrastructure.csproj" />
 		<ProjectReference Include="..\UnpakSipaksi\UnpakSipaksi.csproj" />
 		<!-- <None Include="Seed\init.sql" CopyToOutputDirectory="Always" /> -->

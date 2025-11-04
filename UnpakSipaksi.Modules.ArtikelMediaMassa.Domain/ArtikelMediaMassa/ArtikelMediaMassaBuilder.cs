@@ -44,7 +44,7 @@ namespace UnpakSipaksi.Modules.ArtikelMediaMassa.Domain.ArtikelMediaMassa
             {
                 if (HasError) return this;
 
-                if (nilai < 0 || nilai > int.MaxValue)
+                if (nilai < 0 || nilai >= int.MaxValue)
                 {
                     _result = Result.Failure<ArtikelMediaMassa>(ArtikelMediaMassaErrors.InvalidNilai());
                 }

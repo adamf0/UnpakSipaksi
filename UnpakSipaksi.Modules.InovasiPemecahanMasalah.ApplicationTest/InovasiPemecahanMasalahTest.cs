@@ -1,5 +1,4 @@
-﻿using Docker.DotNet.Models;
-using MediatR;
+﻿using MediatR;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.DependencyInjection;
 using System.Reflection;
@@ -16,7 +15,6 @@ namespace Application.Integration.Tests
     {
         public InovasiPemecahanMasalahTest(IntegrationTestWebAppFactory factory) : base(factory)
         {
-
         }
 
         public static IEnumerable<object[]> InvalidData()
@@ -52,7 +50,6 @@ namespace Application.Integration.Tests
             string message,
             string mode)
         {
-            // Act
             Result? result = null;
             if (mode == "created")
             {
@@ -70,7 +67,6 @@ namespace Application.Integration.Tests
                 result = await Sender.Send(command);
             }
 
-            // Assert
             Assert.True(result.IsFailure);
             if (result.Error is ValidationError validationError)
             {
@@ -89,25 +85,22 @@ namespace Application.Integration.Tests
             object[]? afterData,
             string mode)
         {
-            // --- CREATE ---
             var namaBefore = (string)beforeData[0];
             var skorBefore = (int)beforeData[1];
 
+            // --- CREATE ---
             var createCommand = new CreateInovasiPemecahanMasalahCommand(namaBefore, skorBefore);
             var createResult = await Sender.Send(createCommand);
 
             Assert.True(createResult.IsSuccess);
             var dataCreate = DBContext.InovasiPemecahanMasalah.FirstOrDefault(p => p.Uuid == createResult!.Value);
-
             Assert.NotNull(dataCreate);
             Assert.Equal(namaBefore, dataCreate.Nama);
             Assert.Equal(skorBefore, dataCreate.Skor);
 
             using (var scope = Factory.Services.CreateScope())
             {
-                var handler = scope.ServiceProvider
-                    .GetService<IRequestHandler<CreateInovasiPemecahanMasalahCommand, Result<Guid>>>();
-
+                var handler = scope.ServiceProvider.GetService<IRequestHandler<CreateInovasiPemecahanMasalahCommand, Result<Guid>>>();
                 Assert.NotNull(handler);
                 Assert.IsType<CreateInovasiPemecahanMasalahCommandHandler>(handler);
             }
@@ -125,16 +118,13 @@ namespace Application.Integration.Tests
 
                 Assert.True(updateResult.IsSuccess);
                 var dataUpdate = DBContext.InovasiPemecahanMasalah.FirstOrDefault(p => p.Uuid == createResult!.Value);
-
                 Assert.NotNull(dataUpdate);
                 Assert.Equal(namaAfter, dataUpdate.Nama);
                 Assert.Equal(skorAfter, dataUpdate.Skor);
 
                 using (var scope = Factory.Services.CreateScope())
                 {
-                    var handler = scope.ServiceProvider
-                        .GetService<IRequestHandler<UpdateInovasiPemecahanMasalahCommand, Result>>();
-
+                    var handler = scope.ServiceProvider.GetService<IRequestHandler<UpdateInovasiPemecahanMasalahCommand, Result>>();
                     Assert.NotNull(handler);
                     Assert.IsType<UpdateInovasiPemecahanMasalahCommandHandler>(handler);
                 }
@@ -143,18 +133,84 @@ namespace Application.Integration.Tests
             {
                 var deleteCommand = new DeleteInovasiPemecahanMasalahCommand(newUuid);
                 var deleteResult = await Sender.Send(deleteCommand);
-
                 Assert.True(deleteResult.IsSuccess);
+
+                var deleted = DBContext.InovasiPemecahanMasalah.FirstOrDefault(p => p.Uuid == Guid.Parse(newUuid));
+                Assert.Null(deleted);
 
                 using (var scope = Factory.Services.CreateScope())
                 {
-                    var handler = scope.ServiceProvider
-                        .GetService<IRequestHandler<DeleteInovasiPemecahanMasalahCommand, Result>>();
-
+                    var handler = scope.ServiceProvider.GetService<IRequestHandler<DeleteInovasiPemecahanMasalahCommand, Result>>();
                     Assert.NotNull(handler);
                     Assert.IsType<DeleteInovasiPemecahanMasalahCommandHandler>(handler);
                 }
             }
+        }
+
+        [Fact]
+        public async Task Create_ShouldThrow_WhenInvalidRuleDomain()
+        {
+            var namaBefore = "tes";
+            var skorBefore = -100;
+
+            var createCommand = new CreateInovasiPemecahanMasalahCommand(namaBefore, skorBefore);
+            var createResult = await Sender.Send(createCommand);
+
+            Assert.True(createResult.IsFailure);
+            Assert.Equal("InovasiPemecahanMasalah.InvalidSkor", createResult.Error.Code);
+        }
+
+        [Fact]
+        public async Task Update_ShouldThrow_WhenNotExist()
+        {
+            var guid = Guid.NewGuid().ToString();
+            var namaBefore = "tes";
+            var skorBefore = 1;
+
+            var updateCommand = new UpdateInovasiPemecahanMasalahCommand(guid, namaBefore, skorBefore);
+            var updateResult = await Sender.Send(updateCommand);
+
+            Assert.True(updateResult.IsFailure);
+            Assert.Equal("InovasiPemecahanMasalah.NotFound", updateResult.Error.Code);
+        }
+
+        [Fact]
+        public async Task Update_ShouldThrow_WhenInvalidRuleDomain()
+        {
+            // --- CREATE ---
+            var namaBefore = "tes";
+            var skorBefore = 1;
+
+            var createCommand = new CreateInovasiPemecahanMasalahCommand(namaBefore, skorBefore);
+            var createResult = await Sender.Send(createCommand);
+
+            Assert.True(createResult.IsSuccess);
+            var dataCreate = DBContext.InovasiPemecahanMasalah.FirstOrDefault(p => p.Uuid == createResult!.Value);
+            Assert.NotNull(dataCreate);
+
+            var newUuid = createResult.Value.ToString();
+
+            // --- UPDATE ---
+            var namaAfter = "tes2";
+            var skorAfter = -100;
+
+            var updateCommand = new UpdateInovasiPemecahanMasalahCommand(newUuid, namaAfter, skorAfter);
+            var updateResult = await Sender.Send(updateCommand);
+
+            Assert.True(updateResult.IsFailure);
+            Assert.Equal("InovasiPemecahanMasalah.InvalidSkor", updateResult.Error.Code);
+        }
+
+        [Fact]
+        public async Task Delete_ShouldThrow_WhenNotExist()
+        {
+            var guid = Guid.NewGuid().ToString();
+
+            var deleteCommand = new DeleteInovasiPemecahanMasalahCommand(guid);
+            var deleteResult = await Sender.Send(deleteCommand);
+
+            Assert.True(deleteResult.IsFailure);
+            Assert.Equal("InovasiPemecahanMasalah.NotFound", deleteResult.Error.Code);
         }
     }
 }

@@ -136,7 +136,41 @@ namespace Application.Integration.Tests
                 var deleteResult = await Sender.Send(deleteCommand);
 
                 Assert.True(deleteResult.IsSuccess);
+
+                using (var scope = Factory.Services.CreateScope())
+                {
+                    var handler = scope.ServiceProvider
+                        .GetService<IRequestHandler<DeleteJenisLuaranCommand, Result>>();
+
+                    Assert.NotNull(handler);
+                    Assert.IsType<DeleteJenisLuaranCommandHandler>(handler);
+                }
             }
+        }
+
+        [Fact]
+        public async Task Update_ShouldThrow_WhenNotExist()
+        {
+            var guid = Guid.NewGuid().ToString();
+            var namaBefore = "tes";
+
+            var updateCommand = new UpdateJenisLuaranCommand(guid, namaBefore);
+            var updateResult = await Sender.Send(updateCommand);
+
+            Assert.True(updateResult.IsFailure);
+            Assert.Equal("JenisLuaran.NotFound", updateResult.Error.Code);
+        }
+
+        [Fact]
+        public async Task Delete_ShouldThrow_WhenNotExist()
+        {
+            var guid = Guid.NewGuid().ToString();
+
+            var deleteCommand = new DeleteJenisLuaranCommand(guid);
+            var deleteResult = await Sender.Send(deleteCommand);
+
+            Assert.True(deleteResult.IsFailure);
+            Assert.Equal("JenisLuaran.NotFound", deleteResult.Error.Code);
         }
     }
 }
