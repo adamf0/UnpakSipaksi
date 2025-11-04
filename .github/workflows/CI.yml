@@ -43,8 +43,8 @@ jobs:
               --no-restore \
               --no-build \
               --collect:"XPlat Code Coverage" \
-              --results-directory "TestResults" \ 
-              -- RunConfiguration.DisableParallelization=true
+              --results-directory "TestResults" \
+              --RunConfiguration.DisableParallelization=true
           done
 
       - name: Generate HTML coverage report
