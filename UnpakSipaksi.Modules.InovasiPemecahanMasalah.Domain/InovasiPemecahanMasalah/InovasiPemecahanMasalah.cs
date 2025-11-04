@@ -34,7 +34,7 @@ namespace UnpakSipaksi.Modules.InovasiPemecahanMasalah.Domain.InovasiPemecahanMa
         int Skor
         )
         {
-            if (Skor < 0) {
+            if (Skor < 0 || Skor >= int.MaxValue) {
                 return Result.Failure<InovasiPemecahanMasalah>(InovasiPemecahanMasalahErrors.InvalidSkor());
             }
             var asset = new InovasiPemecahanMasalah

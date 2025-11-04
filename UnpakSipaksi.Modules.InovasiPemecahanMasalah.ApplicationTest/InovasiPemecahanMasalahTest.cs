@@ -151,7 +151,7 @@ namespace Application.Integration.Tests
         public async Task Create_ShouldThrow_WhenInvalidRuleDomain()
         {
             var namaBefore = "tes";
-            var skorBefore = -100;
+            var skorBefore = int.MaxValue;
 
             var createCommand = new CreateInovasiPemecahanMasalahCommand(namaBefore, skorBefore);
             var createResult = await Sender.Send(createCommand);
@@ -192,7 +192,7 @@ namespace Application.Integration.Tests
 
             // --- UPDATE ---
             var namaAfter = "tes2";
-            var skorAfter = -100;
+            var skorAfter = int.MaxValue;
 
             var updateCommand = new UpdateInovasiPemecahanMasalahCommand(newUuid, namaAfter, skorAfter);
             var updateResult = await Sender.Send(updateCommand);
