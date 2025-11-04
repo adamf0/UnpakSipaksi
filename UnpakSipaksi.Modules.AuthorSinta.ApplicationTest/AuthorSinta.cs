@@ -2,10 +2,6 @@
 using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.DependencyInjection;
 using UnpakSipaksi.Common.Domain;
-using UnpakSipaksi.Modules.AkurasiPenelitian.Application.DeleteAkurasiPenelitian;
-using UnpakSipaksi.Modules.AkurasiPenelitian.Application.UpdateAkurasiPenelitian;
-using UnpakSipaksi.Modules.ArtikelMediaMassa.Application.CreateArtikelMediaMassa;
-using UnpakSipaksi.Modules.ArtikelMediaMassa.Application.UpdateArtikelMediaMassa;
 using UnpakSipaksi.Modules.AuthorSinta.Application.CreateAuthorSinta;
 using UnpakSipaksi.Modules.AuthorSinta.Application.DeleteAuthorSinta;
 using UnpakSipaksi.Modules.AuthorSinta.Application.UpdateAuthorSinta;
@@ -238,7 +234,7 @@ namespace Application.Integration.Tests
         {
             var guid = Guid.NewGuid().ToString();
 
-            var deleteCommand = new DeleteAkurasiPenelitianCommand(guid);
+            var deleteCommand = new DeleteAuthorSintaCommand(guid);
             var deleteResult = await Sender.Send(deleteCommand);
 
             Assert.True(deleteResult.IsFailure);

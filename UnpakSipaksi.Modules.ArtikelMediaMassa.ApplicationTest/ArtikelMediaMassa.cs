@@ -4,9 +4,6 @@ using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.DependencyInjection;
 using System.Reflection;
 using UnpakSipaksi.Common.Domain;
-using UnpakSipaksi.Modules.AkurasiPenelitian.Application.CreateAkurasiPenelitian;
-using UnpakSipaksi.Modules.AkurasiPenelitian.Application.DeleteAkurasiPenelitian;
-using UnpakSipaksi.Modules.AkurasiPenelitian.Application.UpdateAkurasiPenelitian;
 using UnpakSipaksi.Modules.ArtikelMediaMassa.Application.CreateArtikelMediaMassa;
 using UnpakSipaksi.Modules.ArtikelMediaMassa.Application.DeleteArtikelMediaMassa;
 using UnpakSipaksi.Modules.ArtikelMediaMassa.Application.UpdateArtikelMediaMassa;
@@ -203,7 +200,7 @@ namespace Application.Integration.Tests
             var namaAfter = "tes2";
             var nilaiAfter = int.MaxValue;
 
-            var updateCommand = new UpdateAkurasiPenelitianCommand(newUuid, namaAfter, nilaiAfter);
+            var updateCommand = new UpdateArtikelMediaMassaCommand(newUuid, namaAfter, nilaiAfter);
             var updateResult = await Sender.Send(updateCommand);
 
             Assert.True(updateResult.IsFailure);
@@ -216,7 +213,7 @@ namespace Application.Integration.Tests
         {
             var guid = Guid.NewGuid().ToString();
 
-            var deleteCommand = new DeleteAkurasiPenelitianCommand(guid);
+            var deleteCommand = new DeleteArtikelMediaMassaCommand(guid);
             var deleteResult = await Sender.Send(deleteCommand);
 
             Assert.True(deleteResult.IsFailure);

@@ -5,7 +5,6 @@ using Microsoft.Extensions.DependencyInjection;
 using Moq;
 using System.Reflection;
 using UnpakSipaksi.Common.Domain;
-using UnpakSipaksi.Modules.AkurasiPenelitian.Application.DeleteAkurasiPenelitian;
 using UnpakSipaksi.Modules.IndikatorCapaian.Application.CreateIndikatorCapaian;
 using UnpakSipaksi.Modules.IndikatorCapaian.Application.DeleteIndikatorCapaian;
 using UnpakSipaksi.Modules.IndikatorCapaian.Application.UpdateIndikatorCapaian;
@@ -238,7 +237,7 @@ namespace Application.Integration.Tests
         {
             var guid = Guid.NewGuid().ToString();
 
-            var deleteCommand = new DeleteAkurasiPenelitianCommand(guid);
+            var deleteCommand = new DeleteIndikatorCapaianCommand(guid);
             var deleteResult = await Sender.Send(deleteCommand);
 
             Assert.True(deleteResult.IsFailure);
