@@ -29,7 +29,7 @@ namespace UnpakSipaksi.Modules.JumlahKolaboratorPublikasBereputasi.Domain.Jumlah
         int Skor
         )
         {
-            if (Skor < 0) {
+            if (Skor < 0 || Skor >= int.MaxValue) {
                 return Result.Failure<JumlahKolaboratorPublikasBereputasi>(JumlahKolaboratorPublikasBereputasiErrors.InvalidSkor());
             }
 
