@@ -1,27 +1,114 @@
-name: .NET
+name: .NET CI + Coverage Report + Security Scans
 
 on:
   push:
-    branches: [ "lama" ]
+    branches: ["lama"]
   pull_request:
-    branches: [ "lama" ]
+    branches: ["lama"]
+
+permissions:
+  contents: write  # diperlukan untuk push ke gh-pages
 
 jobs:
+  # ==========================================================
+  # Build, Test, Coverage & Deploy
+  # ==========================================================
   build:
     runs-on: ubuntu-latest
+
     steps:
-    - uses: actions/checkout@v4
-    - name: Setup .NET
-      uses: actions/setup-dotnet@v4
-      with:
-        dotnet-version: 9.0.x
-    - name: Restore dependencies
-      run: dotnet restore
-    - name: Build
-      run: dotnet build --configuration Release --no-restore
-    - name: Run all tests
-      run: |
-        for proj in $(find . -name "*Test.csproj"); do
-          echo "Running tests for $proj"
-          dotnet test "$proj" --configuration Release --no-restore --no-build
-        done
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Setup .NET
+        uses: actions/setup-dotnet@v4
+        with:
+          dotnet-version: 9.0.x
+
+      - name: Restore dependencies
+        run: dotnet restore
+
+      - name: Build solution
+        run: dotnet build --configuration Release --no-restore
+
+      - name: Run all tests and collect coverage
+        env:
+          ASPNETCORE_ENVIRONMENT: Test
+        run: |
+          mkdir -p TestResults
+          for proj in $(find . -type f -name "*Test.csproj"); do
+            echo "🏃 Running tests for $proj"
+            dotnet test "$proj" \
+              --configuration Release \
+              --no-restore \
+              --no-build \
+              --collect:"XPlat Code Coverage" \
+              --results-directory "TestResults"
+          done
+
+      - name: Generate HTML coverage report
+        run: |
+          dotnet tool install -g dotnet-reportgenerator-globaltool
+          export PATH="$PATH:~/.dotnet/tools"
+          reportgenerator \
+            -reports:"TestResults/**/coverage.cobertura.xml" \
+            -targetdir:"CoverageReport" \
+            -reporttypes:Html
+
+      - name: Upload HTML report (artifact)
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: html-coverage-report
+          path: CoverageReport
+
+  deploy:
+    needs: build
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Download coverage artifact
+        uses: actions/download-artifact@v4
+        with:
+          name: html-coverage-report
+          path: CoverageReport
+
+      - name: Deploy to GitHub Pages
+        uses: peaceiris/actions-gh-pages@v4
+        with:
+          github_token: ${{ secrets.GITHUB_TOKEN }}
+          publish_dir: ./CoverageReport
+
+  # ==========================================================
+  # Gitleaks Secret Scan
+  # ==========================================================
+  gitleaks:
+    name: Scan secrets with Gitleaks
+    runs-on: ubuntu-latest
+
+    steps:
+      - uses: actions/checkout@v3
+        with:
+          fetch-depth: 0
+
+      - uses: gitleaks/gitleaks-action@v2
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+
+  # ==========================================================
+  # Trufflehog Secret Scan
+  # ==========================================================
+  trufflehog:
+    name: Scan secrets with Trufflehog
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v2
+        with:
+          fetch-depth: 0
+          ref: ${{ github.head_ref }}
+
+      - name: Trufflehog scan
+        uses: edplato/trufflehog-actions-scan@master

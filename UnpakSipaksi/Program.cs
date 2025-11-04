@@ -291,7 +291,14 @@ builder.WebHost.ConfigureKestrel(options =>
     options.AddServerHeader = false;
 });
 
-SecurityConfig.PreventDynamicCodeExecution();
+var env = Environment.GetEnvironmentVariable("ASPNETCORE_ENVIRONMENT");
+
+if (!string.Equals(env, "Development", StringComparison.OrdinalIgnoreCase) &&
+    !string.Equals(env, "Test", StringComparison.OrdinalIgnoreCase) &&
+    !AppDomain.CurrentDomain.FriendlyName.Contains("testhost", StringComparison.OrdinalIgnoreCase))
+{
+    SecurityConfig.PreventDynamicCodeExecution();
+}
 
 var app = builder.Build();
 app.UseUserAgentMiddleware();
