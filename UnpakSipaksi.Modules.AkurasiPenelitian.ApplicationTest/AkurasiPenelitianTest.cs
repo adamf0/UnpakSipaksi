@@ -143,5 +143,77 @@ namespace Application.Integration.Tests
                 Assert.True(deleteResult.IsSuccess);
             }
         }
+
+        [Fact]
+        public async Task Create_ShouldThrow_WhenInvalidRuleDomain()
+        {
+            var namaBefore = "tes";
+            var skorBefore = int.MaxValue;
+
+            var createCommand = new CreateAkurasiPenelitianCommand(namaBefore, skorBefore);
+            var createResult = await Sender.Send(createCommand);
+
+            Assert.True(createResult.IsFailure);
+            Assert.Equal("AkurasiPenelitian.InvalidSkor", createResult.Error.Code);
+        }
+
+        [Fact]
+        public async Task Update_ShouldThrow_WhenNotExist()
+        {
+            var guid = Guid.NewGuid().ToString();
+            var namaBefore = "tes";
+            var skorBefore = 1;
+
+            var updateCommand = new UpdateAkurasiPenelitianCommand(guid, namaBefore, skorBefore);
+            var updateResult = await Sender.Send(updateCommand);
+
+            Assert.True(updateResult.IsFailure);
+            Assert.Equal("AkurasiPenelitian.NotFound", updateResult.Error.Code);
+        }
+
+        [Fact]
+        public async Task Update_ShouldThrow_WhenInvalidRuleDomain()
+        {
+            // --- CREATE ---
+            var namaBefore = "tes";
+            var skorBefore = 1;
+
+            var createCommand = new CreateAkurasiPenelitianCommand(namaBefore, skorBefore);
+            var createResult = await Sender.Send(createCommand);
+
+            Assert.True(createResult.IsSuccess);
+            var dataCreate = DBContext.AkurasiPenelitian.FirstOrDefault(p => p.Uuid == createResult!.Value);
+
+            Assert.NotNull(dataCreate);
+            Assert.Equal(namaBefore, dataCreate.Nama);
+            Assert.Equal(skorBefore, dataCreate.Skor);
+
+            var newUuid = createResult.Value.ToString();
+
+            // --- UPDATE ---
+            //if (mode == "updated")
+            //{
+                var namaAfter = "tes2";
+                var skorAfter = int.MaxValue;
+
+                var updateCommand = new UpdateAkurasiPenelitianCommand(newUuid, namaAfter, skorAfter);
+                var updateResult = await Sender.Send(updateCommand);
+
+                Assert.True(updateResult.IsFailure);
+                Assert.Equal("AkurasiPenelitian.InvalidSkor", updateResult.Error.Code);
+            //}
+        }
+
+        [Fact]
+        public async Task Delete_ShouldThrow_WhenNotExist()
+        {
+            var guid = Guid.NewGuid().ToString();
+
+            var deleteCommand = new DeleteAkurasiPenelitianCommand(guid);
+            var deleteResult = await Sender.Send(deleteCommand);
+
+            Assert.True(deleteResult.IsFailure);
+            Assert.Equal("AkurasiPenelitian.NotFound", deleteResult.Error.Code);
+        }
     }
 }
