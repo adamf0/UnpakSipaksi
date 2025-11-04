@@ -44,7 +44,7 @@ namespace UnpakSipaksi.Modules.JenisPublikasi.Domain.JenisPublikasi
             {
                 if (HasError) return this;
 
-                if (sbu < 0)
+                if (sbu < 0 || sbu >= int.MaxValue)
                 {
                     _result = Result.Failure<JenisPublikasi>(JenisPublikasiErrors.InvalidSbu());
                     return this;

@@ -26,9 +26,9 @@ namespace Application.Integration.Tests
             var guidEmpty = Guid.Empty.ToString();
 
             // CREATE invalid
-            yield return new object[] { validJenisLuaranUuid, "", "aktif", "'Nama' tidak boleh kosong.", "created" };
-            yield return new object[] { validJenisLuaranUuid, "Luaran Tes", "", "'Status' tidak boleh kosong.", "created" };
-            yield return new object[] { guidEmpty, "Luaran Tes", "aktif", "'JenisLuaran' harus dalam format UUID v4 yang valid.", "created" };
+            yield return new object[] { empty, validJenisLuaranUuid, "", "aktif", "'Nama' tidak boleh kosong.", "created" };
+            yield return new object[] { empty, validJenisLuaranUuid, "Luaran Tes", "", "'Status' tidak boleh kosong.", "created" };
+            yield return new object[] { empty, guidEmpty, "Luaran Tes", "aktif", "'JenisLuaran' harus dalam format UUID v4 yang valid.", "created" };
 
             // UPDATE invalid
             yield return new object[] { "", validJenisLuaranUuid, "Luaran Tes", "aktif", "'Uuid' tidak boleh kosong.", "updated" };

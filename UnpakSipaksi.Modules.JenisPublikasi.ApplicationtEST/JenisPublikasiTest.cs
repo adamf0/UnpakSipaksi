@@ -149,5 +149,74 @@ namespace Application.Integration.Tests
                 Assert.True(deleteResult.IsSuccess);
             }
         }
+
+        [Fact]
+        public async Task Create_ShouldThrow_WhenInvalidRuleDomain()
+        {
+            var nama = "tes";
+            var sbu = int.MaxValue; // misal terlalu besar, melanggar aturan domain
+
+            var command = new CreateJenisPublikasiCommand(nama, sbu);
+            var result = await Sender.Send(command);
+
+            Assert.True(result.IsFailure);
+            Assert.Equal("JenisPublikasi.InvalidSbu", result.Error.Code);
+        }
+
+        [Fact]
+        public async Task Update_ShouldThrow_WhenNotExist()
+        {
+            var guid = Guid.NewGuid().ToString();
+            var nama = "tes";
+            var sbu = 1;
+
+            var command = new UpdateJenisPublikasiCommand(guid, nama, sbu);
+            var result = await Sender.Send(command);
+
+            Assert.True(result.IsFailure);
+            Assert.Equal("JenisPublikasi.NotFound", result.Error.Code);
+        }
+
+        [Fact]
+        public async Task Update_ShouldThrow_WhenInvalidRuleDomain()
+        {
+            // --- CREATE ---
+            var namaBefore = "tes";
+            var sbuBefore = 10;
+
+            var createCommand = new CreateJenisPublikasiCommand(namaBefore, sbuBefore);
+            var createResult = await Sender.Send(createCommand);
+
+            Assert.True(createResult.IsSuccess);
+            var dataCreate = DBContext.JenisPublikasi.FirstOrDefault(p => p.Uuid == createResult!.Value);
+
+            Assert.NotNull(dataCreate);
+            Assert.Equal(namaBefore, dataCreate.Nama);
+            Assert.Equal(sbuBefore, dataCreate.Sbu);
+
+            var newUuid = createResult.Value.ToString();
+
+            // --- UPDATE invalid ---
+            var namaAfter = "tes2";
+            var sbuAfter = int.MaxValue; // nilai melanggar aturan domain
+
+            var updateCommand = new UpdateJenisPublikasiCommand(newUuid, namaAfter, sbuAfter);
+            var updateResult = await Sender.Send(updateCommand);
+
+            Assert.True(updateResult.IsFailure);
+            Assert.Equal("JenisPublikasi.InvalidSbu", updateResult.Error.Code);
+        }
+
+        [Fact]
+        public async Task Delete_ShouldThrow_WhenNotExist()
+        {
+            var guid = Guid.NewGuid().ToString();
+
+            var command = new DeleteJenisPublikasiCommand(guid);
+            var result = await Sender.Send(command);
+
+            Assert.True(result.IsFailure);
+            Assert.Equal("JenisPublikasi.NotFound", result.Error.Code);
+        }
     }
 }

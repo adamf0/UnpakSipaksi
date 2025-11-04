@@ -29,7 +29,7 @@ namespace UnpakSipaksi.Modules.JenisPublikasi.Domain.JenisPublikasi
         int Sbu
         )
         {
-            if (Sbu < 0) {
+            if (Sbu < 0 || Sbu >= int.MaxValue) {
                 return Result.Failure<JenisPublikasi>(JenisPublikasiErrors.InvalidSbu());
             }
             var asset = new JenisPublikasi
