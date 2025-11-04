@@ -100,7 +100,7 @@ namespace UnpakSipaksi.Modules.AkurasiPenelitian.Domain.AkurasiPenelitian
             {
                 if (HasError) return this;
 
-                if (skor < 0 || skor > int.MaxValue)
+                if (skor < 0 || skor >= int.MaxValue)
                 {
                     _result = Result.Failure<AkurasiPenelitian>(AkurasiPenelitianErrors.InvalidSkor());
                 }

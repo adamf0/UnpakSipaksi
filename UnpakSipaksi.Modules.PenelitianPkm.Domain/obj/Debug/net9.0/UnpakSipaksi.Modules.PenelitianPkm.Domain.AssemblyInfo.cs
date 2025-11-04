@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("UnpakSipaksi.Modules.PenelitianPkm.Domain")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+22621659571abcec017bb3b8bbfa7eabf7fa74db")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+2df49a0c74c5bad1d8e110fb22249e5884b77aa5")]
 [assembly: System.Reflection.AssemblyProductAttribute("UnpakSipaksi.Modules.PenelitianPkm.Domain")]
 [assembly: System.Reflection.AssemblyTitleAttribute("UnpakSipaksi.Modules.PenelitianPkm.Domain")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]
