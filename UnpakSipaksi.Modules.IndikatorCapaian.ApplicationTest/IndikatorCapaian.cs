@@ -1,10 +1,12 @@
-﻿using MediatR;
+﻿using Docker.DotNet.Models;
+using MediatR;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.DependencyInjection;
 using Moq;
 using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Reflection;
 using System.Threading;
 using System.Threading.Tasks;
 using UnpakSipaksi.Common.Domain;
@@ -85,17 +87,16 @@ namespace Application.Integration.Tests
             });
 
             // --- 3️⃣ Ambil scope service baru ---
-            using var scope = factoryWithMock.Services.CreateScope();
+            await using var scope = factoryWithMock.Services.CreateAsyncScope();
             var sender = scope.ServiceProvider.GetRequiredService<ISender>();
-            var dbContext = scope.ServiceProvider.GetRequiredService<DbContext>(); // ✅ ganti ke DBContext kamu
+            var dbContext = scope.ServiceProvider.GetRequiredService<IndikatorCapaianDbContext>();
 
             // --- 4️⃣ CREATE ---
             var createCommand = new CreateIndikatorCapaianCommand(jenisLuaranId, namaBefore, statusBefore);
             var createResult = await sender.Send(createCommand);
 
             Assert.True(createResult.IsSuccess);
-            var dataCreate = dbContext.Set<UnpakSipaksi.Modules.IndikatorCapaian.Domain.IndikatorCapaian>()
-                .FirstOrDefault(p => p.Uuid == createResult!.Value);
+            var dataCreate = dbContext.IndikatorCapaian.FirstOrDefault(p => p.Uuid == createResult!.Value);
             Assert.NotNull(dataCreate);
             Assert.Equal(namaBefore, dataCreate.Nama);
             Assert.Equal(statusBefore, dataCreate.Status);
@@ -113,8 +114,7 @@ namespace Application.Integration.Tests
 
                 Assert.True(updateResult.IsSuccess);
 
-                var dataUpdate = dbContext.Set<UnpakSipaksi.Modules.IndikatorCapaian.Domain.IndikatorCapaian>()
-                    .FirstOrDefault(p => p.Uuid.ToString() == newUuid);
+                var dataUpdate = dbContext.IndikatorCapaian.FirstOrDefault(p => p.Uuid.ToString() == newUuid);
                 Assert.NotNull(dataUpdate);
                 Assert.Equal(namaAfter, dataUpdate.Nama);
                 Assert.Equal(statusAfter, dataUpdate.Status);
@@ -128,8 +128,7 @@ namespace Application.Integration.Tests
 
                 Assert.True(deleteResult.IsSuccess);
 
-                var deletedData = dbContext.Set<UnpakSipaksi.Modules.IndikatorCapaian.Domain.IndikatorCapaian>()
-                    .FirstOrDefault(p => p.Uuid.ToString() == newUuid);
+                var deletedData = dbContext.IndikatorCapaian.FirstOrDefault(p => p.Uuid.ToString() == newUuid);
                 Assert.Null(deletedData);
             }
         }
@@ -171,35 +170,6 @@ namespace Application.Integration.Tests
         [Fact]
         public async Task Create_ShouldThrow_WhenInvalidRuleDomain()
         {
-            var uuidJenisLuaranBefore = Guid.NewGuid().ToString();
-            var namaBefore = "tes";
-            var statusBefore = "ok";
-
-            var createCommand = new CreateIndikatorCapaianCommand(uuidJenisLuaranBefore, namaBefore, statusBefore);
-            var createResult = await Sender.Send(createCommand);
-
-            Assert.True(createResult.IsFailure);
-            Assert.Equal("IndikatorCapaian.UnknownJenisLuaran", createResult.Error.Code);
-        }
-
-        [Fact]
-        public async Task Update_ShouldThrow_WhenNotExist()
-        {
-            var guid = Guid.NewGuid().ToString();
-            var uuidJenisLuaranBefore = Guid.NewGuid().ToString();
-            var namaBefore = "tes";
-            var statusBefore = "ok";
-
-            var updateCommand = new UpdateIndikatorCapaianCommand(guid, uuidJenisLuaranBefore, namaBefore, statusBefore);
-            var updateResult = await Sender.Send(updateCommand);
-
-            Assert.True(updateResult.IsFailure);
-            Assert.Equal("IndikatorCapaian.NotFound", updateResult.Error.Code);
-        }
-
-        [Fact]
-        public async Task Update_ShouldThrow_WhenInvalidRuleDomain()
-        {
             var jenisLuaranApiMock = new Mock<IJenisLuaranApi>();
             var jenisLuaranValid = Guid.NewGuid().ToString();
             var jenisLuaranInvalid = Guid.NewGuid().ToString();
@@ -209,12 +179,6 @@ namespace Application.Integration.Tests
                 .Setup(api => api.GetAsync(It.Is<Guid>(id => id.ToString() == jenisLuaranValid), It.IsAny<CancellationToken>()))
                 .ReturnsAsync(new JenisLuaranResponse("1", jenisLuaranValid, "Luaran Tes"));
 
-            // Setup mock untuk jenisLuaranInvalid → return null (seolah tidak ada)
-            jenisLuaranApiMock
-                .Setup(api => api.GetAsync(It.Is<Guid>(id => id.ToString() == jenisLuaranInvalid), It.IsAny<CancellationToken>()))
-                .ReturnsAsync((JenisLuaranResponse?)null);
-
-            // --- Override DI container agar pakai mock ---
             var factoryWithMock = Factory.WithWebHostBuilder(builder =>
             {
                 builder.ConfigureServices(services =>
@@ -229,27 +193,72 @@ namespace Application.Integration.Tests
                 });
             });
 
-            // --- Ambil scope service baru ---
-            using var scope = factoryWithMock.Services.CreateScope();
+            await using var scope = factoryWithMock.Services.CreateAsyncScope();
             var sender = scope.ServiceProvider.GetRequiredService<ISender>();
-            var dbContext = scope.ServiceProvider.GetRequiredService<IndikatorCapaianDbContext>(); // ganti sesuai nama DbContext kamu
 
-            // --- CREATE dengan jenisLuaranValid ---
-            var namaBefore = "Tes Awal";
-            var statusBefore = "aktif";
-            var createCommand = new CreateIndikatorCapaianCommand(jenisLuaranValid, namaBefore, statusBefore);
+            var createCommand = new CreateIndikatorCapaianCommand(jenisLuaranInvalid, "Tes Awal", "aktif");
             var createResult = await sender.Send(createCommand);
 
+            Assert.True(createResult.IsFailure);
+            Assert.Equal("IndikatorCapaian.UnknownJenisLuaran", createResult.Error.Code);
+        }
+
+        [Fact]
+        public async Task Update_ShouldThrow_WhenNotExist()
+        {
+            var updateCommand = new UpdateIndikatorCapaianCommand(
+                Guid.NewGuid().ToString(),
+                Guid.NewGuid().ToString(),
+                "tes",
+                "ok"
+            );
+
+            var updateResult = await Sender.Send(updateCommand);
+
+            Assert.True(updateResult.IsFailure);
+            Assert.Equal("IndikatorCapaian.NotFound", updateResult.Error.Code);
+        }
+
+        [Fact]
+        public async Task Update_ShouldThrow_WhenInvalidRuleDomain()
+        {
+            var jenisLuaranApiMock = new Mock<IJenisLuaranApi>();
+            var jenisLuaranValid = Guid.NewGuid().ToString();
+            var jenisLuaranInvalid = Guid.NewGuid().ToString();
+
+            jenisLuaranApiMock
+                .Setup(api => api.GetAsync(It.Is<Guid>(id => id.ToString() == jenisLuaranValid), It.IsAny<CancellationToken>()))
+                .ReturnsAsync(new JenisLuaranResponse("1", jenisLuaranValid, "Luaran Tes"));
+
+            var factoryWithMock = Factory.WithWebHostBuilder(builder =>
+            {
+                builder.ConfigureServices(services =>
+                {
+                    var descriptor = services.SingleOrDefault(
+                        d => d.ServiceType == typeof(IJenisLuaranApi)
+                    );
+                    if (descriptor != null)
+                        services.Remove(descriptor);
+
+                    services.AddSingleton<IJenisLuaranApi>(jenisLuaranApiMock.Object);
+                });
+            });
+
+            await using var scope = factoryWithMock.Services.CreateAsyncScope();
+            var sender = scope.ServiceProvider.GetRequiredService<ISender>();
+            var dbContext = scope.ServiceProvider.GetRequiredService<IndikatorCapaianDbContext>();
+
+            // CREATE valid
+            var createCommand = new CreateIndikatorCapaianCommand(jenisLuaranValid, "Tes Awal", "aktif");
+            var createResult = await sender.Send(createCommand);
             Assert.True(createResult.IsSuccess);
 
             var dataCreate = dbContext.IndikatorCapaian.FirstOrDefault(p => p.Uuid == createResult!.Value);
             Assert.NotNull(dataCreate);
             var newUuid = createResult.Value.ToString();
 
-            // --- UPDATE dengan jenisLuaranInvalid ---
-            var namaAfter = "Tes Ubah";
-            var statusAfter = "aktif";
-            var updateCommand = new UpdateIndikatorCapaianCommand(newUuid, jenisLuaranInvalid, namaAfter, statusAfter);
+            // UPDATE invalid
+            var updateCommand = new UpdateIndikatorCapaianCommand(newUuid, jenisLuaranInvalid, "Tes Ubah", "aktif");
             var updateResult = await sender.Send(updateCommand);
 
             Assert.True(updateResult.IsFailure);
@@ -259,9 +268,7 @@ namespace Application.Integration.Tests
         [Fact]
         public async Task Delete_ShouldThrow_WhenNotExist()
         {
-            var guid = Guid.NewGuid().ToString();
-
-            var deleteCommand = new DeleteIndikatorCapaianCommand(guid);
+            var deleteCommand = new DeleteIndikatorCapaianCommand(Guid.NewGuid().ToString());
             var deleteResult = await Sender.Send(deleteCommand);
 
             Assert.True(deleteResult.IsFailure);
