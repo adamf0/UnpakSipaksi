@@ -11,6 +11,7 @@ using UnpakSipaksi.Common.Domain;
 using UnpakSipaksi.Modules.IndikatorCapaian.Application.CreateIndikatorCapaian;
 using UnpakSipaksi.Modules.IndikatorCapaian.Application.DeleteIndikatorCapaian;
 using UnpakSipaksi.Modules.IndikatorCapaian.Application.UpdateIndikatorCapaian;
+using UnpakSipaksi.Modules.IndikatorCapaian.ApplicationTest;
 using UnpakSipaksi.Modules.JenisLuaran.PublicApi;
 using Xunit;
 
