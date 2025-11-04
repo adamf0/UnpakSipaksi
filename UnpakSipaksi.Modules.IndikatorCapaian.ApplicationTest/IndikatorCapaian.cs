@@ -12,6 +12,7 @@ using UnpakSipaksi.Modules.IndikatorCapaian.Application.CreateIndikatorCapaian;
 using UnpakSipaksi.Modules.IndikatorCapaian.Application.DeleteIndikatorCapaian;
 using UnpakSipaksi.Modules.IndikatorCapaian.Application.UpdateIndikatorCapaian;
 using UnpakSipaksi.Modules.IndikatorCapaian.ApplicationTest;
+using UnpakSipaksi.Modules.IndikatorCapaian.Infrastructure.Database;
 using UnpakSipaksi.Modules.JenisLuaran.PublicApi;
 using Xunit;
 
@@ -231,7 +232,7 @@ namespace Application.Integration.Tests
             // --- Ambil scope service baru ---
             using var scope = factoryWithMock.Services.CreateScope();
             var sender = scope.ServiceProvider.GetRequiredService<ISender>();
-            var dbContext = scope.ServiceProvider.GetRequiredService<YourDbContextType>(); // ganti sesuai nama DbContext kamu
+            var dbContext = scope.ServiceProvider.GetRequiredService<IndikatorCapaianDbContext>(); // ganti sesuai nama DbContext kamu
 
             // --- CREATE dengan jenisLuaranValid ---
             var namaBefore = "Tes Awal";
