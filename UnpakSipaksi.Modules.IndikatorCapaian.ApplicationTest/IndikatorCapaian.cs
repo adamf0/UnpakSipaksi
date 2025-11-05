@@ -83,6 +83,11 @@ namespace Application.Integration.Tests
             switch (mode)
             {
                 case "created":
+                    var createHandler = new CreateIndikatorCapaianCommandHandler(
+                        jenisLuaranApiMock.Object,
+                        services.GetRequiredService<IIndikatorCapaianRepository>(),
+                        services.GetRequiredService<IUnitOfWork>()
+                    );
                     var createCommand = new CreateIndikatorCapaianCommand(jenisLuaranId, nama, status);
                     result = await Sender.Send(createCommand);
                     break;
