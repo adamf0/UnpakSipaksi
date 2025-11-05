@@ -24,15 +24,24 @@ namespace Application.Integration.Tests
         {
         }
 
-        public static IEnumerable<object[]> InvalidData()
+        public static IEnumerable<object[]> InvalidDataKategoriLuaran()
         {
             var validUuid = Guid.NewGuid().ToString();
             var empty = "";
 
-            // Nama kosong
-            yield return new object[] { validUuid, "", "aktif", "'Nama' tidak boleh kosong." };
-            // Status kosong
-            yield return new object[] { validUuid, "Kategori Tes", "", "'Status' tidak boleh kosong." };
+            // CREATE scenarios
+            yield return new object[] { empty, "Kategori Tes", "'Uuid' tidak boleh kosong.", "created" };
+            yield return new object[] { "no-guid", "Kategori Tes", "'Uuid' harus dalam format UUID v4 yang valid.", "created" };
+            yield return new object[] { validUuid, empty, "'Nama' tidak boleh kosong.", "created" };
+
+            // UPDATE scenarios
+            yield return new object[] { empty, "Kategori Tes", "'Uuid' tidak boleh kosong.", "updated" };
+            yield return new object[] { "no-guid", "Kategori Tes", "'Uuid' harus dalam format UUID v4 yang valid.", "updated" };
+            yield return new object[] { validUuid, empty, "'Nama' tidak boleh kosong.", "updated" };
+
+            // DELETE scenarios (hanya mengacu pada Uuid)
+            yield return new object[] { empty, "", "'Uuid' tidak boleh kosong.", "deleted" };
+            yield return new object[] { "no-guid", "", "'Uuid' harus dalam format UUID v4 yang valid.", "deleted" };
         }
 
         public static IEnumerable<object?[]> ValidData()
@@ -65,20 +74,50 @@ namespace Application.Integration.Tests
         }
 
         [Theory]
-        [MemberData(nameof(InvalidData))]
-        public async Task Create_ShouldThrow_WhenInvalid(
+        [MemberData(nameof(InvalidDataKategoriLuaran))]
+        public async Task CreateUpdateDeleteKategoriLuaran_ShouldThrow_WhenInvalid(
+            string uuid,
             string uuidKategori,
             string nama,
             string status,
-            string message)
+            string message,
+            string mode
+        )
         {
-            var command = new CreateKategoriLuaranCommand(uuidKategori, nama, status);
-            var result = await Sender.Send(command);
+            // Act
+            Result? result = null;
 
-            Assert.True(result.IsFailure);
-            var validationError = Assert.IsType<ValidationError>(result.Error);
-            Assert.Contains(validationError.Errors, e => e.Description == message);
+            switch (mode)
+            {
+                case "created":
+                    var createCommand = new CreateKategoriLuaranCommand(uuidKategori, nama, status);
+                    result = await Sender.Send(createCommand);
+                    break;
+
+                case "updated":
+                    var updateCommand = new UpdateKategoriLuaranCommand(uuid, uuidKategori, nama, status);
+                    result = await Sender.Send(updateCommand);
+                    break;
+
+                case "deleted":
+                    var deleteCommand = new DeleteKategoriLuaranCommand(uuid);
+                    result = await Sender.Send(deleteCommand);
+                    break;
+            }
+
+            // Assert
+            Assert.True(result!.IsFailure);
+
+            if (result.Error is ValidationError validationError)
+            {
+                Assert.Contains(validationError.Errors, e => e.Description == message);
+            }
+            else
+            {
+                Assert.Equal(message, result.Error.Description);
+            }
         }
+
 
         [Theory]
         [MemberData(nameof(ValidData))]

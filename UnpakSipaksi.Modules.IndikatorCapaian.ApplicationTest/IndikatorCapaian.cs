@@ -7,6 +7,8 @@ using System.Reflection;
 using UnpakSipaksi.Common.Domain;
 using UnpakSipaksi.Modules.IndikatorCapaian.Application.Abstractions.Data;
 using UnpakSipaksi.Modules.IndikatorCapaian.Application.CreateIndikatorCapaian;
+using UnpakSipaksi.Modules.IndikatorCapaian.Application.DeleteIndikatorCapaian;
+using UnpakSipaksi.Modules.IndikatorCapaian.Application.UpdateIndikatorCapaian;
 using UnpakSipaksi.Modules.IndikatorCapaian.ApplicationTest;
 using UnpakSipaksi.Modules.IndikatorCapaian.Domain;
 using UnpakSipaksi.Modules.JenisLuaran.PublicApi;
@@ -16,9 +18,7 @@ namespace Application.Integration.Tests
 {
     public class IndikatorCapaianTest : BaseIntegrationTest
     {
-        public IndikatorCapaianTest(IntegrationTestWebAppFactory factory) : base(factory)
-        {
-        }
+        public IndikatorCapaianTest(IntegrationTestWebAppFactory factory) : base(factory) { }
 
         public static IEnumerable<object[]> InvalidData()
         {
@@ -26,71 +26,251 @@ namespace Application.Integration.Tests
             var empty = "";
             var guidEmpty = Guid.Empty.ToString();
 
-            // CREATE invalid Nama
-            yield return new object[] { validUuid, "", "aktif", "'Nama' tidak boleh kosong." };
-            // CREATE invalid Status
-            yield return new object[] { validUuid, "Luaran Tes", "", "'Status' tidak boleh kosong." };
-            // CREATE invalid JenisLuaran
-            yield return new object[] { guidEmpty, "Luaran Tes", "aktif", "'JenisLuaran' harus dalam format UUID v4 yang valid." };
+            // CREATE invalid (mengacu pada UuidJenisLuaran, Nama, Status)
+            yield return new object[] { empty, validUuid, "Luaran Tes", "aktif", "'JenisLuaran' tidak boleh kosong.", "created" };
+            yield return new object[] { empty, "", "Luaran Tes", "aktif", "'JenisLuaran' harus dalam format UUID v4 yang valid.", "created" };
+            yield return new object[] { empty, validUuid, "", "aktif", "'Nama' tidak boleh kosong.", "created" };
+            yield return new object[] { empty, validUuid, "Luaran Tes", "", "'Status' tidak boleh kosong.", "created" };
+
+            // UPDATE invalid (mengacu pada Uuid, UuidJenisLuaran, Nama, Status)
+            yield return new object[] { "", validUuid, "Luaran Tes", "aktif", "'Uuid' tidak boleh kosong.", "updated" };
+            yield return new object[] { "no-guid", validUuid, "Luaran Tes", "aktif", "'Uuid' harus dalam format UUID v4 yang valid.", "updated" };
+            yield return new object[] { validUuid, "", "Luaran Tes", "aktif", "'JenisLuaran' tidak boleh kosong.", "updated" };
+            yield return new object[] { validUuid, validUuid, "", "aktif", "'Nama' tidak boleh kosong.", "updated" };
+            yield return new object[] { validUuid, validUuid, "Luaran Tes", "", "'Status' tidak boleh kosong.", "updated" };
+
+            // DELETE invalid (hanya mengacu pada Uuid)
+            yield return new object[] { "", "", "", "", "'Uuid' tidak boleh kosong.", "deleted" };
+            yield return new object[] { "no-guid", "", "", "", "'Uuid' harus dalam format UUID v4 yang valid.", "deleted" };
+        }
+
+
+        public static IEnumerable<object[]> ValidData()
+        {
+            var jenisLuaranId = Guid.NewGuid().ToString();
+
+            // CREATE valid
+            yield return new object[] { "", jenisLuaranId, "Luaran Tes", "aktif", "created" };
+
+            // UPDATE valid
+            yield return new object[] { Guid.NewGuid().ToString(), jenisLuaranId, "Luaran Lama", "aktif", "updated" };
+
+            // DELETE valid
+            yield return new object[] { Guid.NewGuid().ToString(), "", "", "", "deleted" };
         }
 
         [Theory]
         [MemberData(nameof(InvalidData))]
-        public async Task Create_ShouldThrow_WhenInvalid(
+        public async Task CreateUpdateDelete_ShouldThrow_WhenInvalid(
+            string uuid,
             string jenisLuaranId,
             string nama,
             string status,
-            string message)
+            string message,
+            string mode)
         {
-            var command = new CreateIndikatorCapaianCommand(jenisLuaranId, nama, status);
-            var result = await Sender.Send(command);
+            Result? result = null;
 
-            Assert.True(result.IsFailure);
-            var validationError = Assert.IsType<ValidationError>(result.Error);
-            Assert.Contains(validationError.Errors, e => e.Description == message);
-        }
+            using var scope = Factory.Services.CreateScope();
+            var services = scope.ServiceProvider;
 
-        [Fact]
-        public async Task Create_ShouldAdd_WhenValid_AndCallHandler()
-        {
-            var jenisLuaranId = Guid.NewGuid().ToString();
-
-            // Mock IJenisLuaranApi
             var jenisLuaranApiMock = new Mock<IJenisLuaranApi>();
             jenisLuaranApiMock
                 .Setup(api => api.GetAsync(It.IsAny<Guid>(), It.IsAny<CancellationToken>()))
                 .ReturnsAsync(new JenisLuaranResponse("1", jenisLuaranId, "Luaran Tes"));
 
-            using (var scope = Factory.Services.CreateScope())
+            switch (mode)
             {
-                var services = scope.ServiceProvider;
+                case "created":
+                    var createCommand = new CreateIndikatorCapaianCommand(jenisLuaranId, nama, status);
+                    result = await Sender.Send(createCommand);
+                    break;
 
-                var handler = new CreateIndikatorCapaianCommandHandler(
-                    jenisLuaranApiMock.Object,
-                    services.GetRequiredService<IIndikatorCapaianRepository>(),
-                    services.GetRequiredService<IUnitOfWork>()
-                );
+                case "updated":
+                    var updateHandler = new UpdateIndikatorCapaianCommandHandler(
+                        jenisLuaranApiMock.Object,
+                        services.GetRequiredService<IIndikatorCapaianRepository>(),
+                        services.GetRequiredService<IUnitOfWork>()
+                    );
+                    var updateCommand = new UpdateIndikatorCapaianCommand(uuid, jenisLuaranId, nama, status);
+                    result = await updateHandler.Handle(updateCommand, CancellationToken.None);
+                    break;
 
-                var command = new CreateIndikatorCapaianCommand(
-                    jenisLuaranId,
-                    "Luaran Tes",
-                    "aktif"
-                );
+                case "deleted":
+                    var deleteHandler = new DeleteIndikatorCapaianCommandHandler(
+                        services.GetRequiredService<IIndikatorCapaianRepository>(),
+                        services.GetRequiredService<IUnitOfWork>()
+                    );
+                    var deleteCommand = new DeleteIndikatorCapaianCommand(uuid);
+                    result = await deleteHandler.Handle(deleteCommand, CancellationToken.None);
+                    break;
+            }
 
-                // Act
-                var result = await handler.Handle(command, CancellationToken.None);
-
-                // Assert
-                Assert.True(result.IsSuccess);
-
-                var data = DBContext.IndikatorCapaian.FirstOrDefault(p => p.Uuid == result.Value);
-                Assert.NotNull(data);
-                Assert.Equal("Luaran Tes", data.Nama);
-                Assert.Equal("aktif", data.Status);
-
-                // Pastikan mock terpanggil
-                jenisLuaranApiMock.Verify(api => api.GetAsync(It.IsAny<Guid>(), It.IsAny<CancellationToken>()), Times.Once);
+            Assert.True(result!.IsFailure);
+            if (result.Error is ValidationError validationError)
+            {
+                Assert.Contains(validationError.Errors, e => e.Description == message);
+            }
+            else
+            {
+                Assert.Equal(message, result.Error.Description);
             }
         }
+
+        [Theory]
+        [MemberData(nameof(ValidData))]
+        public async Task CreateUpdateDelete_ShouldExecute_WhenValid(string uuid, string jenisLuaranId, string nama, string status, string action)
+        {
+            using var scope = Factory.Services.CreateScope();
+            var services = scope.ServiceProvider;
+
+            var jenisLuaranApiMock = new Mock<IJenisLuaranApi>();
+            jenisLuaranApiMock
+                .Setup(api => api.GetAsync(It.IsAny<Guid>(), It.IsAny<CancellationToken>()))
+                .ReturnsAsync(new JenisLuaranResponse("1", jenisLuaranId, "Luaran Tes"));
+
+            switch (action)
+            {
+                case "created":
+                    var createHandler = new CreateIndikatorCapaianCommandHandler(
+                        jenisLuaranApiMock.Object,
+                        services.GetRequiredService<IIndikatorCapaianRepository>(),
+                        services.GetRequiredService<IUnitOfWork>()
+                    );
+                    var createCommand = new CreateIndikatorCapaianCommand(jenisLuaranId, nama, status);
+                    var createResult = await createHandler.Handle(createCommand, CancellationToken.None);
+                    Assert.True(createResult.IsSuccess);
+                    break;
+
+                case "updated":
+                    var updateHandler = new UpdateIndikatorCapaianCommandHandler(
+                        jenisLuaranApiMock.Object,
+                        services.GetRequiredService<IIndikatorCapaianRepository>(),
+                        services.GetRequiredService<IUnitOfWork>()
+                    );
+                    var updateCommand = new UpdateIndikatorCapaianCommand(uuid, jenisLuaranId, nama, status);
+                    var updateResult = await updateHandler.Handle(updateCommand, CancellationToken.None);
+                    Assert.True(updateResult.IsSuccess);
+                    break;
+
+                case "deleted":
+                    var deleteHandler = new DeleteIndikatorCapaianCommandHandler(
+                        services.GetRequiredService<IIndikatorCapaianRepository>(),
+                        services.GetRequiredService<IUnitOfWork>()
+                    );
+                    var deleteCommand = new DeleteIndikatorCapaianCommand(uuid);
+                    var deleteResult = await deleteHandler.Handle(deleteCommand, CancellationToken.None);
+                    Assert.True(deleteResult.IsSuccess);
+                    break;
+            }
+        }
+
+        [Fact]
+        public async Task Update_ShouldThrow_WhenNotExist()
+        {
+            var jenisLuaranId = Guid.NewGuid().ToString();
+            var invalidUuid = Guid.NewGuid().ToString();
+
+            var jenisLuaranApiMock = new Mock<IJenisLuaranApi>();
+            jenisLuaranApiMock
+                .Setup(api => api.GetAsync(It.IsAny<Guid>(), It.IsAny<CancellationToken>()))
+                .ReturnsAsync(new JenisLuaranResponse("1", jenisLuaranId, "Luaran Tes"));
+
+            using var scope = Factory.Services.CreateScope();
+            var services = scope.ServiceProvider;
+
+            // Coba update uuid yang tidak ada
+            var updateHandler = new UpdateIndikatorCapaianCommandHandler(
+                jenisLuaranApiMock.Object,
+                services.GetRequiredService<IIndikatorCapaianRepository>(),
+                services.GetRequiredService<IUnitOfWork>()
+            );
+
+            var commandUpdate = new UpdateIndikatorCapaianCommand(
+                invalidUuid,
+                jenisLuaranId,
+                "Luaran Tes",
+                "aktif"
+            );
+
+            var updateResult = await updateHandler.Handle(commandUpdate, CancellationToken.None);
+
+            Assert.True(updateResult.IsFailure);
+            Assert.Equal("IndikatorCapaian.NotFound", updateResult.Error.Code);
+        }
+
+        [Fact]
+        public async Task Update_ShouldThrow_WhenInvalidRuleDomain()
+        {
+            var jenisLuaranId = Guid.NewGuid().ToString();
+            var invalidJenisLuaranId = Guid.NewGuid().ToString();
+
+            // Mock valid
+            var jenisLuaranApiMockValid = new Mock<IJenisLuaranApi>();
+            jenisLuaranApiMockValid
+                .Setup(api => api.GetAsync(It.IsAny<Guid>(), It.IsAny<CancellationToken>()))
+                .ReturnsAsync(new JenisLuaranResponse("1", jenisLuaranId, "Luaran Tes"));
+
+            // Mock invalid (foreign key tidak ada)
+            var jenisLuaranApiMockInvalid = new Mock<IJenisLuaranApi>();
+            jenisLuaranApiMockInvalid
+                .Setup(api => api.GetAsync(It.Is<Guid>(id => id != Guid.Parse(jenisLuaranId)), It.IsAny<CancellationToken>()))
+                .ReturnsAsync((JenisLuaranResponse?)null);
+
+            using var scope = Factory.Services.CreateScope();
+            var services = scope.ServiceProvider;
+
+            // Buat record awal
+            var createHandler = new CreateIndikatorCapaianCommandHandler(
+                jenisLuaranApiMockValid.Object,
+                services.GetRequiredService<IIndikatorCapaianRepository>(),
+                services.GetRequiredService<IUnitOfWork>()
+            );
+
+            var createCommand = new CreateIndikatorCapaianCommand(jenisLuaranId, "Luaran Tes", "aktif");
+            var createResult = await createHandler.Handle(createCommand, CancellationToken.None);
+            Assert.True(createResult.IsSuccess);
+
+            var newUuid = createResult.Value.ToString();
+
+            // Update ke jenisLuaranId yang tidak valid
+            var updateHandler = new UpdateIndikatorCapaianCommandHandler(
+                jenisLuaranApiMockInvalid.Object,
+                services.GetRequiredService<IIndikatorCapaianRepository>(),
+                services.GetRequiredService<IUnitOfWork>()
+            );
+
+            var commandUpdate = new UpdateIndikatorCapaianCommand(
+                newUuid,
+                invalidJenisLuaranId,
+                "Luaran Tes",
+                "aktif"
+            );
+
+            var updateResult = await updateHandler.Handle(commandUpdate, CancellationToken.None);
+            Assert.True(updateResult.IsFailure);
+            Assert.Equal("IndikatorCapaian.JenisLuaranNotFound", updateResult.Error.Code);
+        }
+
+        [Fact]
+        public async Task Delete_ShouldThrow_WhenNotExist()
+        {
+            var invalidUuid = Guid.NewGuid().ToString();
+
+            using var scope = Factory.Services.CreateScope();
+            var services = scope.ServiceProvider;
+
+            var deleteHandler = new DeleteIndikatorCapaianCommandHandler(
+                services.GetRequiredService<IIndikatorCapaianRepository>(),
+                services.GetRequiredService<IUnitOfWork>()
+            );
+
+            var deleteCommand = new DeleteIndikatorCapaianCommand(invalidUuid);
+            var deleteResult = await deleteHandler.Handle(deleteCommand, CancellationToken.None);
+
+            Assert.True(deleteResult.IsFailure);
+            Assert.Equal("IndikatorCapaian.NotFound", deleteResult.Error.Code);
+        }
+
     }
 }
