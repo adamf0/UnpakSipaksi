@@ -63,15 +63,15 @@ namespace Application.Integration.Tests
             // update: data lama ada, ingin ubah ke baru
             yield return new object?[]
             {
-            new object?[] { uuidKategori, "Kategori Lama", "aktif" },
-            new object?[] { uuidKategori, "Kategori Baru", "nonaktif" },
+            new object[] { uuidKategori, "Kategori Lama", "aktif" },
+            new object[] { uuidKategori, "Kategori Baru", "nonaktif" },
             "updated"
             };
 
             // delete: data lama ada, ingin hapus
             yield return new object?[]
             {
-            new object?[] { uuidKategori, "Kategori Hapus", "aktif" },
+            new object[] { uuidKategori, "Kategori Hapus", "aktif" },
             null,
             "deleted"
             };
@@ -168,7 +168,7 @@ namespace Application.Integration.Tests
 
         [Theory]
         [MemberData(nameof(ValidData))]
-        public async Task CreateUpdateDelete_ShouldBeExecute_WhenValidData(object[] initial, object[] updated, string action)
+        public async Task CreateUpdateDelete_ShouldBeExecute_WhenValidData(object[] initial, object?[] updated, string action)
         {
             var uuidKategori = initial[0].ToString();
 
@@ -207,8 +207,8 @@ namespace Application.Integration.Tests
                 var commandUpdate = new UpdateKategoriLuaranCommand(
                     newUuid,
                     uuidKategori!,
-                    updated[1].ToString()!,
-                    updated[2].ToString()!
+                    updated![1].ToString()!,
+                    updated![2].ToString()!
                 );
 
                 var resultUpdate = await handlerUpdate.Handle(commandUpdate, CancellationToken.None);

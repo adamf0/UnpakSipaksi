@@ -46,13 +46,13 @@ namespace Application.Integration.Tests
         }
 
 
-        public static IEnumerable<object[]> ValidData()
+        public static IEnumerable<object?[]> ValidData()
         {
             var jenisLuaranId = Guid.NewGuid().ToString();
             // create: belum ada data awal, ingin buat baru
             yield return new object?[]
             {
-            new object?[] { jenisLuaranId, "Luaran Tes", "aktif" },
+            new object[] { jenisLuaranId, "Luaran Tes", "aktif" },
             null,
             "created"
             };
@@ -60,15 +60,15 @@ namespace Application.Integration.Tests
             // update: data lama ada, ingin ubah ke baru
             yield return new object?[]
             {
-            new object?[] { jenisLuaranId, "Luaran Tes", "aktif"},
-            new object?[] { jenisLuaranId, "Luaran Tes", "non-aktif"},
+            new object[] { jenisLuaranId, "Luaran Tes", "aktif"},
+            new object[] { jenisLuaranId, "Luaran Tes", "non-aktif"},
             "updated"
             };
 
             // delete: data lama ada, ingin hapus
             yield return new object?[]
             {
-            new object?[] { jenisLuaranId, "Luaran Tes", "aktif" },
+            new object[] { jenisLuaranId, "Luaran Tes", "aktif" },
             null,
             "deleted"
             };
@@ -139,7 +139,7 @@ namespace Application.Integration.Tests
 
         [Theory]
         [MemberData(nameof(ValidData))]
-        public async Task CreateUpdateDelete_ShouldExecute_WhenValid(object[] initial, object[] updated, string action)
+        public async Task CreateUpdateDelete_ShouldExecute_WhenValid(object[] initial, object?[] updated, string action)
         {
             using var scope = Factory.Services.CreateScope();
             var services = scope.ServiceProvider;
@@ -147,14 +147,14 @@ namespace Application.Integration.Tests
             var jenisLuaranApiMock = new Mock<IJenisLuaranApi>();
             jenisLuaranApiMock
                 .Setup(api => api.GetAsync(It.IsAny<Guid>(), It.IsAny<CancellationToken>()))
-                .ReturnsAsync(new JenisLuaranResponse("1", initial[0], "Luaran Tes"));
+                .ReturnsAsync(new JenisLuaranResponse("1", initial[0]!, "Luaran Tes"));
 
             var createHandler = new CreateIndikatorCapaianCommandHandler(
                 jenisLuaranApiMock.Object,
                 services.GetRequiredService<IIndikatorCapaianRepository>(),
                 services.GetRequiredService<IUnitOfWork>()
             );
-            var createCommand = new CreateIndikatorCapaianCommand(initial[0], initial[1], initial[2]);
+            var createCommand = new CreateIndikatorCapaianCommand(initial[0]!, initial[1]!, initial[2]!);
             var createResult = await createHandler.Handle(createCommand, CancellationToken.None);
             Assert.True(createResult.IsSuccess);
             var newUuid = createResult.Value.ToString();
@@ -167,7 +167,7 @@ namespace Application.Integration.Tests
                         services.GetRequiredService<IIndikatorCapaianRepository>(),
                         services.GetRequiredService<IUnitOfWork>()
                     );
-                    var updateCommand = new UpdateIndikatorCapaianCommand(newUuid, update[0], update[1], update[2]);
+                    var updateCommand = new UpdateIndikatorCapaianCommand(newUuid, update![0], update![1], update![2]);
                     var updateResult = await updateHandler.Handle(updateCommand, CancellationToken.None);
                     Assert.True(updateResult.IsSuccess);
                     break;
