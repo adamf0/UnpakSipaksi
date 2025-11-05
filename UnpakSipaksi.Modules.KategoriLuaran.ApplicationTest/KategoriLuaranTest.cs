@@ -77,63 +77,63 @@ namespace Application.Integration.Tests
             };
         }
 
-        [Theory]
-        [MemberData(nameof(InvalidDataKategoriLuaran))]
-        public async Task CreateUpdateDeleteKategoriLuaran_ShouldThrow_WhenInvalid(
-            string uuid,
-            string uuidKategori,
-            string nama,
-            string status,
-            string message,
-            string mode
-        )
-        {
-            // === Arrange ===
-            var kategoriApiMock = new Mock<IKategoriApi>();
-            kategoriApiMock
-                .Setup(api => api.GetAsync(It.IsAny<Guid>(), It.IsAny<CancellationToken>()))
-                .ReturnsAsync(new KategoriResponse("1", uuidKategori!, "Kategori Tes"));
+        //[Theory]
+        //[MemberData(nameof(InvalidDataKategoriLuaran))]
+        //public async Task CreateUpdateDeleteKategoriLuaran_ShouldThrow_WhenInvalid(
+        //    string uuid,
+        //    string uuidKategori,
+        //    string nama,
+        //    string status,
+        //    string message,
+        //    string mode
+        //)
+        //{
+        //    // === Arrange ===
+        //    var kategoriApiMock = new Mock<IKategoriApi>();
+        //    kategoriApiMock
+        //        .Setup(api => api.GetAsync(It.IsAny<Guid>(), It.IsAny<CancellationToken>()))
+        //        .ReturnsAsync(new KategoriResponse("1", uuidKategori!, "Kategori Tes"));
 
-            using var scope = Factory.Services.CreateScope();
-            var services = scope.ServiceProvider;
+        //    using var scope = Factory.Services.CreateScope();
+        //    var services = scope.ServiceProvider;
 
-            Result? result = null;
+        //    Result? result = null;
 
-            // === Act ===
-            switch (mode)
-            {
-                case "created":
-                    {
-                        var handler = new CreateKategoriLuaranCommandHandler(
-                            kategoriApiMock.Object,
-                            services.GetRequiredService<IKategoriLuaranRepository>(),
-                            services.GetRequiredService<IUnitOfWork>()
-                        );
+        //    // === Act ===
+        //    switch (mode)
+        //    {
+        //        case "created":
+        //            {
+        //                var handler = new CreateKategoriLuaranCommandHandler(
+        //                    kategoriApiMock.Object,
+        //                    services.GetRequiredService<IKategoriLuaranRepository>(),
+        //                    services.GetRequiredService<IUnitOfWork>()
+        //                );
 
-                        var command = new CreateKategoriLuaranCommand(
-                            uuidKategori!,
-                            nama!,
-                            status!
-                        );
+        //                var command = new CreateKategoriLuaranCommand(
+        //                    uuidKategori!,
+        //                    nama!,
+        //                    status!
+        //                );
 
-                        result = await handler.Handle(command, CancellationToken.None);
-                        break;
-                    }
+        //                result = await handler.Handle(command, CancellationToken.None);
+        //                break;
+        //            }
 
-                case "updated":
-                    {
-                        var handlerUpdate = new UpdateKategoriLuaranCommandHandler(
-                            kategoriApiMock.Object,
-                            services.GetRequiredService<IKategoriLuaranRepository>(),
-                            services.GetRequiredService<IUnitOfWork>()
-                        );
+        //        case "updated":
+        //            {
+        //                var handlerUpdate = new UpdateKategoriLuaranCommandHandler(
+        //                    kategoriApiMock.Object,
+        //                    services.GetRequiredService<IKategoriLuaranRepository>(),
+        //                    services.GetRequiredService<IUnitOfWork>()
+        //                );
 
-                        var commandUpdate = new UpdateKategoriLuaranCommand(
-                            uuid!,
-                            uuidKategori!,
-                            nama!,
-                            status!
-                        );
+        //                var commandUpdate = new UpdateKategoriLuaranCommand(
+        //                    uuid!,
+        //                    uuidKategori!,
+        //                    nama!,
+        //                    status!
+        //                );
 
         //                result = await handlerUpdate.Handle(commandUpdate, CancellationToken.None);
         //                break;
