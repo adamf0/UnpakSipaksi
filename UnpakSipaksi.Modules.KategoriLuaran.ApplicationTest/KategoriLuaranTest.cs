@@ -30,18 +30,22 @@ namespace Application.Integration.Tests
             var empty = "";
 
             // CREATE scenarios
-            yield return new object[] { empty, "Kategori Tes", "'Uuid' tidak boleh kosong.", "created" };
-            yield return new object[] { "no-guid", "Kategori Tes", "'Uuid' harus dalam format UUID v4 yang valid.", "created" };
-            yield return new object[] { validUuid, empty, "'Nama' tidak boleh kosong.", "created" };
+            yield return new object[] { empty, validUuid, "Kategori Tes", "active", "'Kategori' tidak boleh kosong.", "created" };
+            yield return new object[] { "invalid-guid", validUuid, "Kategori Tes", "active", "'Kategori' harus dalam format UUID v4 yang valid.", "created" };
+            yield return new object[] { validUuid, validUuid, "", "active", "'Nama' tidak boleh kosong.", "created" };
+            yield return new object[] { validUuid, validUuid, "Kategori Tes", "", "'Status' tidak boleh kosong.", "created" };
 
             // UPDATE scenarios
-            yield return new object[] { empty, "Kategori Tes", "'Uuid' tidak boleh kosong.", "updated" };
-            yield return new object[] { "no-guid", "Kategori Tes", "'Uuid' harus dalam format UUID v4 yang valid.", "updated" };
-            yield return new object[] { validUuid, empty, "'Nama' tidak boleh kosong.", "updated" };
+            yield return new object[] { empty, validUuid, "Kategori Tes", "active", "'Uuid' tidak boleh kosong.", "updated" };
+            yield return new object[] { "invalid-guid", validUuid, "Kategori Tes", "active", "'Uuid' harus dalam format UUID v4 yang valid.", "updated" };
+            yield return new object[] { validUuid, empty, "Kategori Tes", "active", "'Kategori' tidak boleh kosong.", "updated" };
+            yield return new object[] { validUuid, "invalid-guid", "Kategori Tes", "active", "'Kategori' harus dalam format UUID v4 yang valid.", "updated" };
+            yield return new object[] { validUuid, validUuid, "", "active", "'Nama' tidak boleh kosong.", "updated" };
+            yield return new object[] { validUuid, validUuid, "Kategori Tes", "", "'Status' tidak boleh kosong.", "updated" };
 
-            // DELETE scenarios (hanya mengacu pada Uuid)
-            yield return new object[] { empty, "", "'Uuid' tidak boleh kosong.", "deleted" };
-            yield return new object[] { "no-guid", "", "'Uuid' harus dalam format UUID v4 yang valid.", "deleted" };
+            // DELETE scenarios (hanya Uuid)
+            yield return new object[] { empty, "", "", "active", "'Uuid' tidak boleh kosong.", "deleted" };
+            yield return new object[] { "invalid-guid", "", "", "active", "'Uuid' harus dalam format UUID v4 yang valid.", "deleted" };
         }
 
         public static IEnumerable<object?[]> ValidData()

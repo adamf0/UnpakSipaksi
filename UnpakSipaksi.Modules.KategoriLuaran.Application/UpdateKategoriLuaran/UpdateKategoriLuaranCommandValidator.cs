@@ -17,8 +17,15 @@ namespace UnpakSipaksi.Modules.KategoriLuaran.Application.UpdateKategoriLuaran
                 .NotEmpty().WithMessage("'Uuid' tidak boleh kosong.")
                 .Must(Helper.BeValidGuidV4).WithMessage("'Uuid' harus dalam format UUID v4 yang valid.");
 
+            RuleFor(c => c.UuidKategori)
+                .NotEmpty().WithMessage("'Kategori' tidak boleh kosong.")
+                .Must(Helper.BeValidGuidV4).WithMessage("'Kategori' harus dalam format UUID v4 yang valid.");
+
             RuleFor(c => c.Nama)
                 .NotEmpty().WithMessage("'Nama' tidak boleh kosong.");
+
+            RuleFor(c => c.Status)
+                .NotEmpty().WithMessage("'Status' tidak boleh kosong.");
         }
     }
 }
