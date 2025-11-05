@@ -42,8 +42,8 @@ namespace Application.Integration.Tests
             // create: belum ada data awal, ingin buat baru
             yield return new object?[]
             {
-            null,
             new object?[] { uuidKategori, "Kategori Tes", "aktif" },
+            null,
             "created"
             };
 
@@ -187,13 +187,19 @@ namespace Application.Integration.Tests
                 // --- UPDATE ---
                 //if (mode == "updated")
                 //{
-                var updateCommand = new UpdateKategoriLuaranCommand(
+                var handlerUpdate = new UpdateKategoriLuaranCommandHandler(
+                    kategoriApiMock.Object,
+                    services.GetRequiredService<IKategoriLuaranRepository>(),
+                    services.GetRequiredService<IUnitOfWork>()
+                );
+
+                var commandUpdate = new UpdateKategoriLuaranCommand(
                     newUuidInvalid,
                     uuidKategori,
                     "Kategori Tes",
                     "aktif"
                 );
-                var updateResult = await Sender.Send(updateCommand);
+                var updateResult = await handlerUpdate.Handle(commandUpdate, CancellationToken.None);
 
                 Assert.True(updateResult.IsFailure);
                 Assert.Equal("KategoriLuaran.NotFound", updateResult.Error.Code);
@@ -213,6 +219,11 @@ namespace Application.Integration.Tests
             kategoriApiMock
                 .Setup(api => api.GetAsync(It.IsAny<Guid>(), It.IsAny<CancellationToken>()))
                 .ReturnsAsync(new KategoriResponse("1", uuidKategori, "Kategori Tes"));
+
+            var kategoriApiMockInvalid = new Mock<IKategoriApi>();
+            kategoriApiMockInvalid
+                .Setup(api => api.GetAsync(It.Is<Guid>(id => id != Guid.Parse(uuidKategori)), It.IsAny<CancellationToken>()))
+                .ReturnsAsync((KategoriResponse?)null);
 
             using (var scope = Factory.Services.CreateScope())
             {
@@ -245,13 +256,19 @@ namespace Application.Integration.Tests
                 // --- UPDATE ---
                 //if (mode == "updated")
                 //{
-                var updateCommand = new UpdateKategoriLuaranCommand(
+                var handlerUpdate = new UpdateKategoriLuaranCommandHandler(
+                    kategoriApiMockInvalid.Object,
+                    services.GetRequiredService<IKategoriLuaranRepository>(),
+                    services.GetRequiredService<IUnitOfWork>()
+                );
+
+                var commandUpdate = new UpdateKategoriLuaranCommand(
                     newUuid,
                     uuidKategoriInvalid,
                     "Kategori Tes",
                     "aktif"
                 );
-                var updateResult = await Sender.Send(updateCommand);
+                var updateResult = await handlerUpdate.Handle(commandUpdate, CancellationToken.None);
 
                 Assert.True(updateResult.IsFailure);
                 Assert.Equal("KategoriLuaran.KategoriNotFound", updateResult.Error.Code);
