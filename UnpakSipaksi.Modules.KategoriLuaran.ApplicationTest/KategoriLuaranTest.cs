@@ -30,8 +30,8 @@ namespace Application.Integration.Tests
             var empty = "";
 
             // CREATE scenarios
-            yield return new object[] { empty, validUuid, "Kategori Tes", "active", "'Kategori' tidak boleh kosong.", "created" };
-            yield return new object[] { "invalid-guid", validUuid, "Kategori Tes", "active", "'Kategori' harus dalam format UUID v4 yang valid.", "created" };
+            yield return new object[] { validUuid, empty, "Kategori Tes", "active", "'Kategori' tidak boleh kosong.", "created" };
+            yield return new object[] { validUuid, "invalid-guid", "Kategori Tes", "active", "'Kategori' harus dalam format UUID v4 yang valid.", "created" };
             yield return new object[] { validUuid, validUuid, "", "active", "'Nama' tidak boleh kosong.", "created" };
             yield return new object[] { validUuid, validUuid, "Kategori Tes", "", "'Status' tidak boleh kosong.", "created" };
 
