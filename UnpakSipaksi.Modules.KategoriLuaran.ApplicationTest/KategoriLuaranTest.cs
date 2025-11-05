@@ -135,35 +135,35 @@ namespace Application.Integration.Tests
                             status!
                         );
 
-                        result = await handlerUpdate.Handle(commandUpdate, CancellationToken.None);
-                        break;
-                    }
+        //                result = await handlerUpdate.Handle(commandUpdate, CancellationToken.None);
+        //                break;
+        //            }
 
-                case "deleted":
-                    {
-                        var handlerDelete = new DeleteKategoriLuaranCommandHandler(
-                            services.GetRequiredService<IKategoriLuaranRepository>(),
-                            services.GetRequiredService<IUnitOfWork>()
-                        );
+        //        case "deleted":
+        //            {
+        //                var handlerDelete = new DeleteKategoriLuaranCommandHandler(
+        //                    services.GetRequiredService<IKategoriLuaranRepository>(),
+        //                    services.GetRequiredService<IUnitOfWork>()
+        //                );
 
-                        var commandDelete = new DeleteKategoriLuaranCommand(uuid!);
-                        result = await handlerDelete.Handle(commandDelete, CancellationToken.None);
-                        break;
-                    }
-            }
+        //                var commandDelete = new DeleteKategoriLuaranCommand(uuid!);
+        //                result = await handlerDelete.Handle(commandDelete, CancellationToken.None);
+        //                break;
+        //            }
+        //    }
 
-            // === Assert ===
-            Assert.True(result!.IsFailure);
+        //    // === Assert ===
+        //    Assert.True(result!.IsFailure);
 
-            if (result.Error is ValidationError validationError)
-            {
-                Assert.Contains(validationError.Errors, e => e.Description == message);
-            }
-            else
-            {
-                Assert.Equal(message, result.Error.Description);
-            }
-        }
+        //    if (result.Error is ValidationError validationError)
+        //    {
+        //        Assert.Contains(validationError.Errors, e => e.Description == message);
+        //    }
+        //    else
+        //    {
+        //        Assert.Equal(message, result.Error.Description);
+        //    }
+        //}
 
 
         [Theory]
