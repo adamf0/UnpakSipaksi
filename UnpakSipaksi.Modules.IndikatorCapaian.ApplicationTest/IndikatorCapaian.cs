@@ -147,14 +147,20 @@ namespace Application.Integration.Tests
             var jenisLuaranApiMock = new Mock<IJenisLuaranApi>();
             jenisLuaranApiMock
                 .Setup(api => api.GetAsync(It.IsAny<Guid>(), It.IsAny<CancellationToken>()))
-                .ReturnsAsync(new JenisLuaranResponse("1", initial[0]!, "Luaran Tes"));
+                .ReturnsAsync(new JenisLuaranResponse("1", initial[0]!.ToString()!, "Luaran Tes"));
 
             var createHandler = new CreateIndikatorCapaianCommandHandler(
                 jenisLuaranApiMock.Object,
                 services.GetRequiredService<IIndikatorCapaianRepository>(),
                 services.GetRequiredService<IUnitOfWork>()
             );
-            var createCommand = new CreateIndikatorCapaianCommand(initial[0]!, initial[1]!, initial[2]!);
+
+            var createCommand = new CreateIndikatorCapaianCommand(
+                initial[0]!.ToString()!,
+                initial[1]!.ToString()!,
+                initial[2]!.ToString()!
+            );
+
             var createResult = await createHandler.Handle(createCommand, CancellationToken.None);
             Assert.True(createResult.IsSuccess);
             var newUuid = createResult.Value.ToString();
@@ -167,7 +173,14 @@ namespace Application.Integration.Tests
                         services.GetRequiredService<IIndikatorCapaianRepository>(),
                         services.GetRequiredService<IUnitOfWork>()
                     );
-                    var updateCommand = new UpdateIndikatorCapaianCommand(newUuid, update![0], update![1], update![2]);
+
+                    var updateCommand = new UpdateIndikatorCapaianCommand(
+                        newUuid,
+                        updated![0]!.ToString()!,
+                        updated![1]!.ToString()!,
+                        updated![2]!.ToString()!
+                    );
+
                     var updateResult = await updateHandler.Handle(updateCommand, CancellationToken.None);
                     Assert.True(updateResult.IsSuccess);
                     break;
@@ -177,6 +190,7 @@ namespace Application.Integration.Tests
                         services.GetRequiredService<IIndikatorCapaianRepository>(),
                         services.GetRequiredService<IUnitOfWork>()
                     );
+
                     var deleteCommand = new DeleteIndikatorCapaianCommand(newUuid);
                     var deleteResult = await deleteHandler.Handle(deleteCommand, CancellationToken.None);
                     Assert.True(deleteResult.IsSuccess);
