@@ -2,9 +2,11 @@
 using Microsoft.Extensions.DependencyInjection;
 using Moq;
 using UnpakSipaksi.Common.Domain;
+using UnpakSipaksi.Modules.Kategori.Application.DeleteKategori;
+using UnpakSipaksi.Modules.Kategori.Application.UpdateKategori;
 using UnpakSipaksi.Modules.KategoriMitraPenelitian.Application.CreateKategoriMitraPenelitian;
-using UnpakSipaksi.Modules.KategoriMitraPenelitian.Application.UpdateKategoriMitraPenelitian;
 using UnpakSipaksi.Modules.KategoriMitraPenelitian.Application.DeleteKategoriMitraPenelitian;
+using UnpakSipaksi.Modules.KategoriMitraPenelitian.Application.UpdateKategoriMitraPenelitian;
 using Xunit;
 
 namespace UnpakSipaksi.Modules.KategoriMitraPenelitian.ApplicationTest
@@ -146,6 +148,31 @@ namespace UnpakSipaksi.Modules.KategoriMitraPenelitian.ApplicationTest
                     Assert.IsType<DeleteKategoriMitraPenelitianCommandHandler>(handler);
                 }
             }
+        }
+
+        [Fact]
+        public async Task Update_ShouldThrow_WhenNotExist()
+        {
+            var guid = Guid.NewGuid().ToString();
+            var namaBefore = "tes";
+
+            var updateCommand = new UpdateKategoriMitraPenelitianCommand(guid, namaBefore);
+            var updateResult = await Sender.Send(updateCommand);
+
+            Assert.True(updateResult.IsFailure);
+            Assert.Equal("KategoriMitraPenelitian.NotFound", updateResult.Error.Code);
+        }
+
+        [Fact]
+        public async Task Delete_ShouldThrow_WhenNotExist()
+        {
+            var guid = Guid.NewGuid().ToString();
+
+            var deleteCommand = new DeleteKategoriMitraPenelitianCommand(guid);
+            var deleteResult = await Sender.Send(deleteCommand);
+
+            Assert.True(deleteResult.IsFailure);
+            Assert.Equal("KategoriMitraPenelitian.NotFound", deleteResult.Error.Code);
         }
     }
 }

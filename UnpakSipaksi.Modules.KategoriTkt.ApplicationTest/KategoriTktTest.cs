@@ -1,9 +1,11 @@
 ﻿using MediatR;
 using Microsoft.Extensions.DependencyInjection;
 using UnpakSipaksi.Common.Domain;
+using UnpakSipaksi.Modules.KategoriMitraPenelitian.Application.DeleteKategoriMitraPenelitian;
+using UnpakSipaksi.Modules.KategoriMitraPenelitian.Application.UpdateKategoriMitraPenelitian;
 using UnpakSipaksi.Modules.KategoriTkt.Application.CreateKategoriTkt;
-using UnpakSipaksi.Modules.KategoriTkt.Application.UpdateKategoriTkt;
 using UnpakSipaksi.Modules.KategoriTkt.Application.DeleteKategoriTkt;
+using UnpakSipaksi.Modules.KategoriTkt.Application.UpdateKategoriTkt;
 using Xunit;
 
 namespace UnpakSipaksi.Modules.KategoriTkt.ApplicationTest
@@ -144,6 +146,31 @@ namespace UnpakSipaksi.Modules.KategoriTkt.ApplicationTest
                     Assert.IsType<DeleteKategoriTktCommandHandler>(handler);
                 }
             }
+        }
+
+        [Fact]
+        public async Task Update_ShouldThrow_WhenNotExist()
+        {
+            var guid = Guid.NewGuid().ToString();
+            var namaBefore = "tes";
+
+            var updateCommand = new UpdateKategoriTktCommand(guid, namaBefore);
+            var updateResult = await Sender.Send(updateCommand);
+
+            Assert.True(updateResult.IsFailure);
+            Assert.Equal("KategoriTkt.NotFound", updateResult.Error.Code);
+        }
+
+        [Fact]
+        public async Task Delete_ShouldThrow_WhenNotExist()
+        {
+            var guid = Guid.NewGuid().ToString();
+
+            var deleteCommand = new DeleteKategoriTktCommand(guid);
+            var deleteResult = await Sender.Send(deleteCommand);
+
+            Assert.True(deleteResult.IsFailure);
+            Assert.Equal("KategoriTkt.NotFound", deleteResult.Error.Code);
         }
     }
 }
