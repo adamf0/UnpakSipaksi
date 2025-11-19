@@ -1,9 +1,11 @@
 ﻿using MediatR;
 using Microsoft.Extensions.DependencyInjection;
 using UnpakSipaksi.Common.Domain;
+using UnpakSipaksi.Modules.Kategori.Application.DeleteKategori;
+using UnpakSipaksi.Modules.Kategori.Application.UpdateKategori;
 using UnpakSipaksi.Modules.KelompokMitra.Application.CreateKelompokMitra;
-using UnpakSipaksi.Modules.KelompokMitra.Application.UpdateKelompokMitra;
 using UnpakSipaksi.Modules.KelompokMitra.Application.DeleteKelompokMitra;
+using UnpakSipaksi.Modules.KelompokMitra.Application.UpdateKelompokMitra;
 using Xunit;
 
 namespace UnpakSipaksi.Modules.KelompokMitra.ApplicationTest
@@ -144,6 +146,31 @@ namespace UnpakSipaksi.Modules.KelompokMitra.ApplicationTest
                     Assert.IsType<DeleteKelompokMitraCommandHandler>(handler);
                 }
             }
+        }
+
+        [Fact]
+        public async Task Update_ShouldThrow_WhenNotExist()
+        {
+            var guid = Guid.NewGuid().ToString();
+            var namaBefore = "tes";
+
+            var updateCommand = new UpdateKelompokMitraCommand(guid, namaBefore);
+            var updateResult = await Sender.Send(updateCommand);
+
+            Assert.True(updateResult.IsFailure);
+            Assert.Equal("KelompokMitra.NotFound", updateResult.Error.Code);
+        }
+
+        [Fact]
+        public async Task Delete_ShouldThrow_WhenNotExist()
+        {
+            var guid = Guid.NewGuid().ToString();
+
+            var deleteCommand = new DeleteKelompokMitraCommand(guid);
+            var deleteResult = await Sender.Send(deleteCommand);
+
+            Assert.True(deleteResult.IsFailure);
+            Assert.Equal("KelompokMitra.NotFound", deleteResult.Error.Code);
         }
     }
 }

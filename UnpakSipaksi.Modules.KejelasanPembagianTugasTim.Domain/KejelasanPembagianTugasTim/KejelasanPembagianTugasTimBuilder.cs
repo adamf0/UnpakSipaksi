@@ -44,7 +44,7 @@ namespace UnpakSipaksi.Modules.KejelasanPembagianTugasTim.Domain.KejelasanPembag
             {
                 if (HasError) return this;
 
-                if (skor < 0)
+                if (skor < 0 || skor >= int.MaxValue)
                 {
                     _result = Result.Failure<KejelasanPembagianTugasTim>(KejelasanPembagianTugasTimErrors.InvalidValueSkor());
                     return this;

@@ -29,7 +29,7 @@ namespace UnpakSipaksi.Modules.KejelasanPembagianTugasTim.Domain.KejelasanPembag
         int Skor
         )
         {
-            if (Skor < 0)
+            if (Skor < 0 || Skor >= int.MaxValue)
             {
                 return Result.Failure<KejelasanPembagianTugasTim>(KejelasanPembagianTugasTimErrors.InvalidValueSkor());
             }

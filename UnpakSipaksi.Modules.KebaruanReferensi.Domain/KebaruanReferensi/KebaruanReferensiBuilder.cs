@@ -44,7 +44,7 @@ namespace UnpakSipaksi.Modules.KebaruanReferensi.Domain.KebaruanReferensi
             {
                 if (HasError) return this;
 
-                if (skor < 0)
+                if (skor < 0 || skor >= int.MaxValue)
                 {
                     _result = Result.Failure<KebaruanReferensi>(KebaruanReferensiErrors.InvalidValueSkor());
                     return this;

@@ -33,7 +33,7 @@ namespace UnpakSipaksi.Modules.KebaruanReferensi.Domain.KebaruanReferensi
         int Skor
         )
         {
-            if (Skor <0 && Skor >= int.MaxValue) {
+            if (Skor <0 || Skor >= int.MaxValue) {
                 return Result.Failure<KebaruanReferensi>(KebaruanReferensiErrors.InvalidValueSkor());
             }
 

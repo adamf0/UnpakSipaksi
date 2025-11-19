@@ -197,7 +197,7 @@ namespace Application.Integration.Tests
 
             // --- UPDATE (melanggar aturan domain)
             var namaAfter = "tes2";
-            var skorAfter = -10;
+            var skorAfter = int.MaxValue;
 
             var updateCommand = new UpdateKebaruanReferensiCommand(newUuid, namaAfter, skorAfter);
             var updateResult = await Sender.Send(updateCommand);
