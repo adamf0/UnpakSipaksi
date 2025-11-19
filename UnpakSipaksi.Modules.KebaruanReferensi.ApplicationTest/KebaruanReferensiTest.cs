@@ -203,7 +203,7 @@ namespace Application.Integration.Tests
             var updateResult = await Sender.Send(updateCommand);
 
             Assert.True(updateResult.IsFailure);
-            Assert.Equal("KebaruanReferensi.InvalidSkor", updateResult.Error.Code);
+            Assert.Equal("KebaruanReferensi.InvalidValueSkor", updateResult.Error.Code);
         }
 
         [Fact]

@@ -172,7 +172,7 @@ namespace Application.Integration.Tests
             var result = await Sender.Send(command);
 
             Assert.True(result.IsFailure);
-            Assert.Equal("KejelasanPembagianTugasTim.InvalidSkor", result.Error.Code);
+            Assert.Equal("KejelasanPembagianTugasTim.InvalidValueSkor", result.Error.Code);
         }
 
         [Fact]
@@ -216,7 +216,7 @@ namespace Application.Integration.Tests
             var updateResult = await Sender.Send(updateCommand);
 
             Assert.True(updateResult.IsFailure);
-            Assert.Equal("KejelasanPembagianTugasTim.InvalidSkor", updateResult.Error.Code);
+            Assert.Equal("KejelasanPembagianTugasTim.InvalidValueSkor", updateResult.Error.Code);
         }
 
         [Fact]
