@@ -10,7 +10,6 @@ using UnpakSipaksi.Modules.RumpunIlmu2.Application.UpdateRumpunIlmu2;
 using UnpakSipaksi.Modules.RumpunIlmu2.ApplicationTest;
 using UnpakSipaksi.Modules.RumpunIlmu2.Domain.RumpunIlmu2;
 using Xunit;
-using static Org.BouncyCastle.Crypto.Engines.SM2Engine;
 
 namespace Application.Integration.Tests
 {

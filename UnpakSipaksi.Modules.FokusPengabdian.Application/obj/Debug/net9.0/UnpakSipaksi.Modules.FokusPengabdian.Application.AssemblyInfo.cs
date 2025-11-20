@@ -15,7 +15,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("UnpakSipaksi.Modules.FokusPengabdian.Application")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+8122971a730687048bd54670a419bb4b3ca96ca4")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+075a09395c4208ff1827728f81debc5129dd1cff")]
 [assembly: System.Reflection.AssemblyProductAttribute("UnpakSipaksi.Modules.FokusPengabdian.Application")]
 [assembly: System.Reflection.AssemblyTitleAttribute("UnpakSipaksi.Modules.FokusPengabdian.Application")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

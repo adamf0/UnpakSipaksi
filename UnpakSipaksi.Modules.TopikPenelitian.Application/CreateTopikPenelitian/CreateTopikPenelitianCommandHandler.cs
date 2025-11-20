@@ -11,7 +11,7 @@ using UnpakSipaksi.Modules.TemaPenelitian.PublicApi;
 
 namespace UnpakSipaksi.Modules.TopikPenelitian.Application.CreateTopikPenelitian
 {
-    internal sealed class CreateTopikPenelitianCommandHandler(
+    public sealed class CreateTopikPenelitianCommandHandler(
     ITopikPenelitianRepository topikPenelitianRepository,
     ITemaPenelitianApi temaPenelitianApi,
     IUnitOfWork unitOfWork)

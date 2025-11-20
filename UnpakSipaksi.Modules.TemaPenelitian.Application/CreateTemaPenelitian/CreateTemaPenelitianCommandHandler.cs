@@ -11,7 +11,7 @@ using UnpakSipaksi.Modules.FokusPenelitian.PublicApi;
 
 namespace UnpakSipaksi.Modules.TemaPenelitian.Application.CreateTemaPenelitian
 {
-    internal sealed class CreateTemaPenelitianCommandHandler(
+    public sealed class CreateTemaPenelitianCommandHandler(
     ITemaPenelitianRepository temaPenelitianRepository,
     IFokusPenelitianApi fokusPenelitianApi,
     IUnitOfWork unitOfWork)

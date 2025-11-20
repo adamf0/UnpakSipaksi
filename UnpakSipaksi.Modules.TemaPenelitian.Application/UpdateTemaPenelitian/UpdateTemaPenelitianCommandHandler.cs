@@ -11,7 +11,7 @@ using UnpakSipaksi.Modules.FokusPenelitian.PublicApi;
 
 namespace UnpakSipaksi.Modules.TemaPenelitian.Application.UpdateTemaPenelitian
 {
-    internal sealed class UpdateTemaPenelitianCommandHandler(
+    public sealed class UpdateTemaPenelitianCommandHandler(
     ITemaPenelitianRepository temaPenelitianRepository,
     IFokusPenelitianApi fokusPenelitianApi,
     IUnitOfWork unitOfWork)

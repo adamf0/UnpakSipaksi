@@ -11,7 +11,7 @@ using UnpakSipaksi.Modules.TopikPenelitian.Domain.TopikPenelitian;
 
 namespace UnpakSipaksi.Modules.TopikPenelitian.Application.UpdateTopikPenelitian
 {
-    internal sealed class UpdateTopikPenelitianCommandHandler(
+    public sealed class UpdateTopikPenelitianCommandHandler(
     ITopikPenelitianRepository topikPenelitianRepository,
     ITemaPenelitianApi temaPenelitianApi,
     IUnitOfWork unitOfWork)

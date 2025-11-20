@@ -7,7 +7,7 @@ namespace UnpakSipaksi.Modules.TemaPenelitian.Infrastructure.Database
 {
     public sealed class TemaPenelitianDbContext(DbContextOptions<TemaPenelitianDbContext> options) : DbContext(options), IUnitOfWork
     {
-        internal DbSet<Domain.TemaPenelitian.TemaPenelitian> TemaPenelitian { get; set; }
+        public DbSet<Domain.TemaPenelitian.TemaPenelitian> TemaPenelitian { get; set; }
 
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {
