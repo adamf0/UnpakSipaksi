@@ -39,7 +39,7 @@ namespace UnpakSipaksi.Modules.VideoKegiatan.Domain.VideoKegiatan
             {
                 if (HasError) return this;
 
-                if (nilai < 0)
+                if (nilai < 0 || nilai >= int.MaxValue)
                 {
                     _result = Result.Failure<VideoKegiatan>(VideoKegiatanErrors.InvalidValueNilai());
                     return this;

@@ -25,7 +25,7 @@ namespace UnpakSipaksi.Modules.KewajaranTahapanTarget.Domain.KewajaranTahapanTar
         int Nilai
         )
         {
-            if(Nilai < 0){
+            if(Nilai < 0 || Nilai >= int.MaxValue){
                 return Result.Failure<KewajaranTahapanTarget>(KewajaranTahapanTargetErrors.InvalidValueNilai());
             }
             var asset = new KewajaranTahapanTarget

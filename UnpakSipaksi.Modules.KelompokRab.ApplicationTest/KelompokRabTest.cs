@@ -1,9 +1,11 @@
 ﻿using MediatR;
 using Microsoft.Extensions.DependencyInjection;
 using UnpakSipaksi.Common.Domain;
+using UnpakSipaksi.Modules.Kategori.Application.DeleteKategori;
+using UnpakSipaksi.Modules.Kategori.Application.UpdateKategori;
 using UnpakSipaksi.Modules.KelompokRab.Application.CreateKelompokRab;
-using UnpakSipaksi.Modules.KelompokRab.Application.UpdateKelompokRab;
 using UnpakSipaksi.Modules.KelompokRab.Application.DeleteKelompokRab;
+using UnpakSipaksi.Modules.KelompokRab.Application.UpdateKelompokRab;
 using Xunit;
 
 namespace UnpakSipaksi.Modules.KelompokRab.ApplicationTest
@@ -144,6 +146,31 @@ namespace UnpakSipaksi.Modules.KelompokRab.ApplicationTest
                     Assert.IsType<DeleteKelompokRabCommandHandler>(handler);
                 }
             }
+        }
+
+        [Fact]
+        public async Task Update_ShouldThrow_WhenNotExist()
+        {
+            var guid = Guid.NewGuid().ToString();
+            var namaBefore = "tes";
+
+            var updateCommand = new UpdateKelompokRabCommand(guid, namaBefore);
+            var updateResult = await Sender.Send(updateCommand);
+
+            Assert.True(updateResult.IsFailure);
+            Assert.Equal("KelompokRab.NotFound", updateResult.Error.Code);
+        }
+
+        [Fact]
+        public async Task Delete_ShouldThrow_WhenNotExist()
+        {
+            var guid = Guid.NewGuid().ToString();
+
+            var deleteCommand = new DeleteKelompokRabCommand(guid);
+            var deleteResult = await Sender.Send(deleteCommand);
+
+            Assert.True(deleteResult.IsFailure);
+            Assert.Equal("KelompokRab.NotFound", deleteResult.Error.Code);
         }
     }
 }

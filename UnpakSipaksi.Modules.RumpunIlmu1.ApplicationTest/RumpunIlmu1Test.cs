@@ -4,6 +4,8 @@ using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.DependencyInjection;
 using System.Reflection;
 using UnpakSipaksi.Common.Domain;
+using UnpakSipaksi.Modules.RumpunIlmu1.Application.DeleteRumpunIlmu1;
+using UnpakSipaksi.Modules.RumpunIlmu1.Application.UpdateRumpunIlmu1;
 using UnpakSipaksi.Modules.RumpunIlmu1.Application.CreateRumpunIlmu1;
 using UnpakSipaksi.Modules.RumpunIlmu1.ApplicationTest;
 using Xunit;
@@ -55,6 +57,30 @@ namespace Application.Integration.Tests
                 Assert.NotNull(handler);
                 Assert.IsType<CreateRumpunIlmu1CommandHandler>(handler);
             }
+        }
+        [Fact]
+        public async Task Update_ShouldThrow_WhenNotExist()
+        {
+            var guid = Guid.NewGuid().ToString();
+            var namaBefore = "tes";
+
+            var updateCommand = new UpdateRumpunIlmu1Command(guid, namaBefore);
+            var updateResult = await Sender.Send(updateCommand);
+
+            Assert.True(updateResult.IsFailure);
+            Assert.Equal("RumpunIlmu1.NotFound", updateResult.Error.Code);
+        }
+
+        [Fact]
+        public async Task Delete_ShouldThrow_WhenNotExist()
+        {
+            var guid = Guid.NewGuid().ToString();
+
+            var deleteCommand = new DeleteRumpunIlmu1Command(guid);
+            var deleteResult = await Sender.Send(deleteCommand);
+
+            Assert.True(deleteResult.IsFailure);
+            Assert.Equal("RumpunIlmu1.NotFound", deleteResult.Error.Code);
         }
     }
 }

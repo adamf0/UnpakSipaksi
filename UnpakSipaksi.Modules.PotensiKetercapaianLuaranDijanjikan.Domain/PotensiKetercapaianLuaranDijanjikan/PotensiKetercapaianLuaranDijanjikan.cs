@@ -29,7 +29,7 @@ namespace UnpakSipaksi.Modules.PotensiKetercapaianLuaranDijanjikan.Domain.Potens
         int Skor
         )
         {
-            if (Skor < 0) {
+            if (Skor < 0 || Skor>=int.MaxValue) {
                 return Result.Failure<PotensiKetercapaianLuaranDijanjikan>(PotensiKetercapaianLuaranDijanjikanErrors.InvalidValueSkor());
             }
             var asset = new PotensiKetercapaianLuaranDijanjikan

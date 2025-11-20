@@ -7,6 +7,9 @@ using UnpakSipaksi.Common.Domain;
 using UnpakSipaksi.Modules.Komponen.Application.CreateKomponen;
 using UnpakSipaksi.Modules.Komponen.Application.DeleteKomponen;
 using UnpakSipaksi.Modules.Komponen.Application.UpdateKomponen;
+using UnpakSipaksi.Modules.Komponen.Application.CreateKomponen;
+using UnpakSipaksi.Modules.Komponen.Application.DeleteKomponen;
+using UnpakSipaksi.Modules.Komponen.Application.UpdateKomponen;
 using UnpakSipaksi.Modules.Komponen.ApplicationTest;
 using Xunit;
 
@@ -155,6 +158,32 @@ namespace Application.Integration.Tests
                     Assert.IsType<DeleteKomponenCommandHandler>(handler);
                 }
             }
+        }
+
+        [Fact]
+        public async Task Update_ShouldThrow_WhenNotExist()
+        {
+            var guid = Guid.NewGuid().ToString();
+            var nama = "tes";
+            var maxBiaya = 10;
+
+            var command = new UpdateKomponenCommand(guid, nama, maxBiaya);
+            var result = await Sender.Send(command);
+
+            Assert.True(result.IsFailure);
+            Assert.Equal("Komponen.NotFound", result.Error.Code);
+        }
+
+        [Fact]
+        public async Task Delete_ShouldThrow_WhenNotExist()
+        {
+            var guid = Guid.NewGuid().ToString();
+
+            var command = new DeleteKomponenCommand(guid);
+            var result = await Sender.Send(command);
+
+            Assert.True(result.IsFailure);
+            Assert.Equal("Komponen.NotFound", result.Error.Code);
         }
     }
 }

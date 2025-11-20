@@ -39,7 +39,7 @@ namespace UnpakSipaksi.Modules.KuantitasStatusKi.Domain.KuantitasStatusKi
             {
                 if (HasError) return this;
 
-                if (nilai < 0)
+                if (nilai < 0 || nilai>=int.MaxValue)
                 {
                     _result = Result.Failure<KuantitasStatusKi>(KuantitasStatusKiErrors.InvalidValueNilai());
                     return this;

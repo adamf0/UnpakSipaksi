@@ -29,7 +29,7 @@ namespace UnpakSipaksi.Modules.RelevansiKualitasReferensi.Domain.RelevansiKualit
         int Skor
         )
         {
-            if (Skor < 0) {
+            if (Skor < 0 || Skor >= int.MaxValue) {
                 return Result.Failure<RelevansiKualitasReferensi>(RelevansiKualitasReferensiErrors.InvalidValueSkor());
             }
             var asset = new RelevansiKualitasReferensi

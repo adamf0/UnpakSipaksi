@@ -24,7 +24,7 @@ namespace UnpakSipaksi.Modules.KualitasKuantitasPublikasiProsiding.Domain.Kualit
         int Nilai
         )
         {
-            if (Nilai < 0) {
+            if (Nilai < 0 || Nilai >= int.MaxValue) {
                 return Result.Failure<KualitasKuantitasPublikasiProsiding>(KualitasKuantitasPublikasiProsidingErrors.InvalidValueNilai());
             }
             var asset = new KualitasKuantitasPublikasiProsiding

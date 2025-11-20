@@ -24,7 +24,7 @@ namespace UnpakSipaksi.Modules.KuantitasStatusKi.Domain.KuantitasStatusKi
         int Nilai
         )
         {
-            if (Nilai < 0) {
+            if (Nilai < 0 || Nilai >= int.MaxValue) {
                 return Result.Failure<KuantitasStatusKi>(KuantitasStatusKiErrors.InvalidValueNilai());
             }
             var asset = new KuantitasStatusKi

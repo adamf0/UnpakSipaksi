@@ -29,7 +29,7 @@ namespace UnpakSipaksi.Modules.KesesuaianSolusiMasalahMitra.Domain.KesesuaianSol
         int Nilai
         )
         {
-            if (Nilai < 0) {
+            if (Nilai < 0 || Nilai >= int.MaxValue) {
                 return Result.Failure<KesesuaianSolusiMasalahMitra>(KesesuaianSolusiMasalahMitraErrors.InvalidValueNilai());
             }
             var asset = new KesesuaianSolusiMasalahMitra

@@ -95,7 +95,7 @@ namespace UnpakSipaksi.Modules.RoadmapPenelitian.Domain.RoadmapPenelitian
             {
                 if (HasError) return this;
 
-                if (skor < 0)
+                if (skor < 0 || skor>=int.MaxValue)
                 {
                     _result = Result.Failure<RoadmapPenelitian>(RoadmapPenelitianErrors.InvalidValueSkor());
                     return this;

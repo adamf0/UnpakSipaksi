@@ -148,5 +148,73 @@ namespace Application.Integration.Tests
                 Assert.True(deleteResult.IsSuccess);
             }
         }
+        [Fact]
+        public async Task Create_ShouldThrow_WhenInvalidRuleDomain()
+        {
+            var nama = "tes";
+            var skor = int.MaxValue; // contoh melanggar aturan domain
+
+            var command = new CreateRoadmapPenelitianCommand(nama, skor);
+            var result = await Sender.Send(command);
+
+            Assert.True(result.IsFailure);
+            Assert.Equal("RoadmapPenelitian.InvalidValueSkor", result.Error.Code);
+        }
+
+        [Fact]
+        public async Task Update_ShouldThrow_WhenNotExist()
+        {
+            var guid = Guid.NewGuid().ToString();
+            var nama = "tes";
+            var skor = 10;
+
+            var command = new UpdateRoadmapPenelitianCommand(guid, nama, skor);
+            var result = await Sender.Send(command);
+
+            Assert.True(result.IsFailure);
+            Assert.Equal("RoadmapPenelitian.NotFound", result.Error.Code);
+        }
+
+        [Fact]
+        public async Task Update_ShouldThrow_WhenInvalidRuleDomain()
+        {
+            // --- CREATE ---
+            var namaBefore = "tes";
+            var skorBefore = 10;
+
+            var createCommand = new CreateRoadmapPenelitianCommand(namaBefore, skorBefore);
+            var createResult = await Sender.Send(createCommand);
+
+            Assert.True(createResult.IsSuccess);
+            var dataCreate = DBContext.RoadmapPenelitian.FirstOrDefault(p => p.Uuid == createResult!.Value);
+
+            Assert.NotNull(dataCreate);
+            Assert.Equal(namaBefore, dataCreate.Nama);
+            Assert.Equal(skorBefore, dataCreate.Skor);
+
+            var newUuid = createResult.Value.ToString();
+
+            // --- UPDATE (melanggar aturan domain)
+            var namaAfter = "tes2";
+            var skorAfter = int.MaxValue;
+
+            var updateCommand = new UpdateRoadmapPenelitianCommand(newUuid, namaAfter, skorAfter);
+            var updateResult = await Sender.Send(updateCommand);
+
+            Assert.True(updateResult.IsFailure);
+            Assert.Equal("RoadmapPenelitian.InvalidValueSkor", updateResult.Error.Code);
+        }
+
+        [Fact]
+        public async Task Delete_ShouldThrow_WhenNotExist()
+        {
+            var guid = Guid.NewGuid().ToString();
+
+            var command = new DeleteRoadmapPenelitianCommand(guid);
+            var result = await Sender.Send(command);
+
+            Assert.True(result.IsFailure);
+            Assert.Equal("RoadmapPenelitian.NotFound", result.Error.Code);
+        }
     }
 }

@@ -95,7 +95,7 @@ namespace UnpakSipaksi.Modules.SotaKebaharuan.Domain.SotaKebaharuan
             {
                 if (HasError) return this;
 
-                if (skor < 0)
+                if (skor < 0 || skor>=int.MaxValue)
                 {
                     _result = Result.Failure<SotaKebaharuan>(SotaKebaharuanErrors.InvalidValueSkor());
                     return this;

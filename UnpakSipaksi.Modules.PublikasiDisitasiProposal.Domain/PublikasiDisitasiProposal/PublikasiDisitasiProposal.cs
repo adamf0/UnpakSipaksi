@@ -25,7 +25,7 @@ namespace UnpakSipaksi.Modules.PublikasiDisitasiProposal.Domain.PublikasiDisitas
         int Skor
         )
         {
-            if (Skor < 0) {
+            if (Skor < 0 || Skor >= int.MaxValue) {
                 return Result.Failure<PublikasiDisitasiProposal>(PublikasiDisitasiProposalErrors.InvalidValueSkor());
             }
             var asset = new PublikasiDisitasiProposal

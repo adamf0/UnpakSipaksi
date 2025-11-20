@@ -29,7 +29,7 @@ namespace UnpakSipaksi.Modules.KesesuaianPenugasan.Domain.KesesuaianPenugasan
         int Nilai
         )
         {
-            if (Nilai < 0) {
+            if (Nilai < 0 || Nilai >= int.MaxValue) {
                 return Result.Failure<KesesuaianPenugasan>(KesesuaianPenugasanErrors.InvalidValueNilai());
             }
             var asset = new KesesuaianPenugasan

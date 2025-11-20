@@ -39,7 +39,7 @@ namespace UnpakSipaksi.Modules.KewajaranTahapanTarget.Domain.KewajaranTahapanTar
             {
                 if (HasError) return this;
 
-                if (nilai < 0)
+                if (nilai < 0 || nilai >= int.MaxValue)
                 {
                     _result = Result.Failure<KewajaranTahapanTarget>(KewajaranTahapanTargetErrors.InvalidValueNilai());
                     return this;

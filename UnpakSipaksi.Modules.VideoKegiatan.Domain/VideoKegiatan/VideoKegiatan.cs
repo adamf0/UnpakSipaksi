@@ -25,7 +25,7 @@ namespace UnpakSipaksi.Modules.VideoKegiatan.Domain.VideoKegiatan
         int Nilai
         )
         {
-            if (Nilai < 0) {
+            if (Nilai < 0 || Nilai >= int.MaxValue) {
                 return Result.Failure<VideoKegiatan>(VideoKegiatanErrors.InvalidValueNilai());
             }
             var asset = new VideoKegiatan

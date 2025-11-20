@@ -95,7 +95,7 @@ namespace UnpakSipaksi.Modules.ModelFeasibilityStudys.Domain.ModelFeasibilityStu
             {
                 if (HasError) return this;
 
-                if (skor < 0)
+                if (skor < 0 || skor >= int.MaxValue)
                 {
                     _result = Result.Failure<ModelFeasibilityStudys>(ModelFeasibilityStudysErrors.InvalidValueSkor());
                     return this;

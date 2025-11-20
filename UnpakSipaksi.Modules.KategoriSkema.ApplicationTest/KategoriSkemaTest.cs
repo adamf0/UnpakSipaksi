@@ -2,8 +2,11 @@
 using Microsoft.Extensions.DependencyInjection;
 using UnpakSipaksi.Common.Domain;
 using UnpakSipaksi.Modules.KategoriSkema.Application.CreateKategoriSkema;
-using UnpakSipaksi.Modules.KategoriSkema.Application.UpdateKategoriSkema;
 using UnpakSipaksi.Modules.KategoriSkema.Application.DeleteKategoriSkema;
+using UnpakSipaksi.Modules.KategoriSkema.Application.UpdateKategoriSkema;
+using UnpakSipaksi.Modules.KategoriSkema.Application.CreateKategoriSkema;
+using UnpakSipaksi.Modules.KategoriSkema.Application.DeleteKategoriSkema;
+using UnpakSipaksi.Modules.KategoriSkema.Application.UpdateKategoriSkema;
 using Xunit;
 
 namespace UnpakSipaksi.Modules.KategoriSkema.ApplicationTest
@@ -151,6 +154,74 @@ namespace UnpakSipaksi.Modules.KategoriSkema.ApplicationTest
                     Assert.IsType<DeleteKategoriSkemaCommandHandler>(handler);
                 }
             }
+        }
+        [Fact]
+        public async Task Create_ShouldThrow_WhenInvalidRuleDomain()
+        {
+            var nama = "tes";
+            var rule = "**"; // contoh melanggar aturan domain
+
+            var command = new CreateKategoriSkemaCommand(nama, rule);
+            var result = await Sender.Send(command);
+
+            Assert.True(result.IsFailure);
+            Assert.Equal("KategoriSkema.InvalidFormatRule", result.Error.Code);
+        }
+
+        [Fact]
+        public async Task Update_ShouldThrow_WhenNotExist()
+        {
+            var guid = Guid.NewGuid().ToString();
+            var nama = "tes";
+            var rule = "[]";
+
+            var command = new UpdateKategoriSkemaCommand(guid, nama, rule);
+            var result = await Sender.Send(command);
+
+            Assert.True(result.IsFailure);
+            Assert.Equal("KategoriSkema.NotFound", result.Error.Code);
+        }
+
+        [Fact]
+        public async Task Update_ShouldThrow_WhenInvalidRuleDomain()
+        {
+            // --- CREATE ---
+            var namaBefore = "tes";
+            var ruleBefore = "[]";
+
+            var createCommand = new CreateKategoriSkemaCommand(namaBefore, ruleBefore);
+            var createResult = await Sender.Send(createCommand);
+
+            Assert.True(createResult.IsSuccess);
+            var dataCreate = DBContext.KategoriSkema.FirstOrDefault(p => p.Uuid == createResult!.Value);
+
+            Assert.NotNull(dataCreate);
+            Assert.Equal(namaBefore, dataCreate.Nama);
+            Assert.Equal(ruleBefore, dataCreate.Rule);
+
+            var newUuid = createResult.Value.ToString();
+
+            // --- UPDATE (melanggar aturan domain)
+            var namaAfter = "tes2";
+            var ruleAfter = "**";
+
+            var updateCommand = new UpdateKategoriSkemaCommand(newUuid, namaAfter, ruleAfter);
+            var updateResult = await Sender.Send(updateCommand);
+
+            Assert.True(updateResult.IsFailure);
+            Assert.Equal("KategoriSkema.InvalidFormatRule", updateResult.Error.Code);
+        }
+
+        [Fact]
+        public async Task Delete_ShouldThrow_WhenNotExist()
+        {
+            var guid = Guid.NewGuid().ToString();
+
+            var command = new DeleteKategoriSkemaCommand(guid);
+            var result = await Sender.Send(command);
+
+            Assert.True(result.IsFailure);
+            Assert.Equal("KategoriSkema.NotFound", result.Error.Code);
         }
     }
 }

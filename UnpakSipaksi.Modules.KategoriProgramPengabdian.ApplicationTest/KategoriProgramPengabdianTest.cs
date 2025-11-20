@@ -2,8 +2,8 @@
 using Microsoft.Extensions.DependencyInjection;
 using UnpakSipaksi.Common.Domain;
 using UnpakSipaksi.Modules.KategoriProgramPengabdian.Application.CreateKategoriProgramPengabdian;
-using UnpakSipaksi.Modules.KategoriProgramPengabdian.Application.UpdateKategoriProgramPengabdian;
 using UnpakSipaksi.Modules.KategoriProgramPengabdian.Application.DeleteKategoriProgramPengabdian;
+using UnpakSipaksi.Modules.KategoriProgramPengabdian.Application.UpdateKategoriProgramPengabdian;
 using Xunit;
 
 namespace UnpakSipaksi.Modules.KategoriProgramPengabdian.ApplicationTest
@@ -151,6 +151,74 @@ namespace UnpakSipaksi.Modules.KategoriProgramPengabdian.ApplicationTest
                     Assert.IsType<DeleteKategoriProgramPengabdianCommandHandler>(handler);
                 }
             }
+        }
+        [Fact]
+        public async Task Create_ShouldThrow_WhenInvalidRuleDomain()
+        {
+            var nama = "tes";
+            var rule = "**"; // contoh melanggar aturan domain
+
+            var command = new CreateKategoriProgramPengabdianCommand(nama, rule);
+            var result = await Sender.Send(command);
+
+            Assert.True(result.IsFailure);
+            Assert.Equal("KategoriProgramPengabdian.InvalidFormatRule", result.Error.Code);
+        }
+
+        [Fact]
+        public async Task Update_ShouldThrow_WhenNotExist()
+        {
+            var guid = Guid.NewGuid().ToString();
+            var nama = "tes";
+            var rule = "[]";
+
+            var command = new UpdateKategoriProgramPengabdianCommand(guid, nama, rule);
+            var result = await Sender.Send(command);
+
+            Assert.True(result.IsFailure);
+            Assert.Equal("KategoriProgramPengabdian.NotFound", result.Error.Code);
+        }
+
+        [Fact]
+        public async Task Update_ShouldThrow_WhenInvalidRuleDomain()
+        {
+            // --- CREATE ---
+            var namaBefore = "tes";
+            var ruleBefore = "[]";
+
+            var createCommand = new CreateKategoriProgramPengabdianCommand(namaBefore, ruleBefore);
+            var createResult = await Sender.Send(createCommand);
+
+            Assert.True(createResult.IsSuccess);
+            var dataCreate = DBContext.KategoriProgramPengabdian.FirstOrDefault(p => p.Uuid == createResult!.Value);
+
+            Assert.NotNull(dataCreate);
+            Assert.Equal(namaBefore, dataCreate.Nama);
+            Assert.Equal(ruleBefore, dataCreate.Rule);
+
+            var newUuid = createResult.Value.ToString();
+
+            // --- UPDATE (melanggar aturan domain)
+            var namaAfter = "tes2";
+            var ruleAfter = "**";
+
+            var updateCommand = new UpdateKategoriProgramPengabdianCommand(newUuid, namaAfter, ruleAfter);
+            var updateResult = await Sender.Send(updateCommand);
+
+            Assert.True(updateResult.IsFailure);
+            Assert.Equal("KategoriProgramPengabdian.InvalidFormatRule", updateResult.Error.Code);
+        }
+
+        [Fact]
+        public async Task Delete_ShouldThrow_WhenNotExist()
+        {
+            var guid = Guid.NewGuid().ToString();
+
+            var command = new DeleteKategoriProgramPengabdianCommand(guid);
+            var result = await Sender.Send(command);
+
+            Assert.True(result.IsFailure);
+            Assert.Equal("KategoriProgramPengabdian.NotFound", result.Error.Code);
         }
     }
 }

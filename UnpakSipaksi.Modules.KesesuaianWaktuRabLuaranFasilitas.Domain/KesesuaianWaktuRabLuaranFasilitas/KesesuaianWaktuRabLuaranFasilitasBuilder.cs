@@ -44,7 +44,7 @@ namespace UnpakSipaksi.Modules.KesesuaianWaktuRabLuaranFasilitas.Domain.Kesesuai
             {
                 if (HasError) return this;
 
-                if (skor < 0)
+                if (skor < 0 || skor >= int.MaxValue)
                 {
                     _result = Result.Failure<KesesuaianWaktuRabLuaranFasilitas>(KesesuaianWaktuRabLuaranFasilitasErrors.InvalidValueSkor());
                     return this;

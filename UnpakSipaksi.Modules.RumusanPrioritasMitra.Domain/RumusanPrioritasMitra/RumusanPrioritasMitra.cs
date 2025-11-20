@@ -24,7 +24,7 @@ namespace UnpakSipaksi.Modules.RumusanPrioritasMitra.Domain.RumusanPrioritasMitr
         int Nilai
         )
         {
-            if (Nilai < 0) {
+            if (Nilai < 0 || Nilai>=int.MaxValue) {
                 return Result.Failure<RumusanPrioritasMitra>(RumusanPrioritasMitraErrors.InvalidValueNilai());
             }
             var asset = new RumusanPrioritasMitra

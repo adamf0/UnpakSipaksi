@@ -29,7 +29,7 @@ namespace UnpakSipaksi.Modules.KesesuaianWaktuRabLuaranFasilitas.Domain.Kesesuai
         int Skor
         )
         {
-            if (Skor < 0)
+            if (Skor < 0 || Skor >= int.MaxValue)
             {
                 return Result.Failure<KesesuaianWaktuRabLuaranFasilitas>(KesesuaianWaktuRabLuaranFasilitasErrors.InvalidValueSkor());
             }

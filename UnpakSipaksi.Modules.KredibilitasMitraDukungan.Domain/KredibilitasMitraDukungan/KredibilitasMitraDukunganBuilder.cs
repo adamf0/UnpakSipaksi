@@ -95,7 +95,7 @@ namespace UnpakSipaksi.Modules.KredibilitasMitraDukungan.Domain.KredibilitasMitr
             {
                 if (HasError) return this;
 
-                if (skor < 0)
+                if (skor < 0 || skor >= int.MaxValue)
                 {
                     _result = Result.Failure<KredibilitasMitraDukungan>(KredibilitasMitraDukunganErrors.InvalidValueSkor());
                     return this;

@@ -39,7 +39,7 @@ namespace UnpakSipaksi.Modules.LuaranArtikel.Domain.LuaranArtikel
             {
                 if (HasError) return this;
 
-                if (nilai < 0)
+                if (nilai < 0 || nilai>=int.MaxValue)
                 {
                     _result =  Result.Failure<LuaranArtikel>(LuaranArtikelErrors.InvalidValueNilai());
                     return this;

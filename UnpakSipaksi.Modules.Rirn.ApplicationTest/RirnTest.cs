@@ -4,6 +4,8 @@ using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.DependencyInjection;
 using System.Reflection;
 using UnpakSipaksi.Common.Domain;
+using UnpakSipaksi.Modules.Rirn.Application.DeleteRirn;
+using UnpakSipaksi.Modules.Rirn.Application.UpdateRirn;
 using UnpakSipaksi.Modules.Rirn.Application.CreateRirn;
 using UnpakSipaksi.Modules.Rirn.ApplicationTest;
 using Xunit;
@@ -55,6 +57,30 @@ namespace Application.Integration.Tests
                 Assert.NotNull(handler);
                 Assert.IsType<CreateRirnCommandHandler>(handler);
             }
+        }
+        [Fact]
+        public async Task Update_ShouldThrow_WhenNotExist()
+        {
+            var guid = Guid.NewGuid().ToString();
+            var namaBefore = "tes";
+
+            var updateCommand = new UpdateRirnCommand(guid, namaBefore);
+            var updateResult = await Sender.Send(updateCommand);
+
+            Assert.True(updateResult.IsFailure);
+            Assert.Equal("Rirn.NotFound", updateResult.Error.Code);
+        }
+
+        [Fact]
+        public async Task Delete_ShouldThrow_WhenNotExist()
+        {
+            var guid = Guid.NewGuid().ToString();
+
+            var deleteCommand = new DeleteRirnCommand(guid);
+            var deleteResult = await Sender.Send(deleteCommand);
+
+            Assert.True(deleteResult.IsFailure);
+            Assert.Equal("Rirn.NotFound", deleteResult.Error.Code);
         }
     }
 }

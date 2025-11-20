@@ -2,6 +2,9 @@
 using MediatR;
 using Microsoft.Extensions.DependencyInjection;
 using UnpakSipaksi.Common.Domain;
+using UnpakSipaksi.Modules.KesesuaianWaktuRabLuaranFasilitas.Application.CreateKesesuaianWaktuRabLuaranFasilitas;
+using UnpakSipaksi.Modules.KesesuaianWaktuRabLuaranFasilitas.Application.DeleteKesesuaianWaktuRabLuaranFasilitas;
+using UnpakSipaksi.Modules.KesesuaianWaktuRabLuaranFasilitas.Application.UpdateKesesuaianWaktuRabLuaranFasilitas;
 using UnpakSipaksi.Modules.KetajamanPerumusanMasalah.Application.CreateKetajamanPerumusanMasalah;
 using UnpakSipaksi.Modules.KetajamanPerumusanMasalah.Application.DeleteKetajamanPerumusanMasalah;
 using UnpakSipaksi.Modules.KetajamanPerumusanMasalah.Application.UpdateKetajamanPerumusanMasalah;
@@ -145,6 +148,75 @@ namespace UnpakSipaksi.Modules.KetajamanPerumusanMasalah.ApplicationTest
 
                 Assert.True(deleteResult.IsSuccess);
             }
+        }
+
+        [Fact]
+        public async Task Create_ShouldThrow_WhenInvalidRuleDomain()
+        {
+            var nama = "tes";
+            var skor = int.MaxValue; // contoh melanggar aturan domain
+
+            var command = new CreateKetajamanPerumusanMasalahCommand(nama, skor);
+            var result = await Sender.Send(command);
+
+            Assert.True(result.IsFailure);
+            Assert.Equal("KetajamanPerumusanMasalah.InvalidValueSkor", result.Error.Code);
+        }
+
+        [Fact]
+        public async Task Update_ShouldThrow_WhenNotExist()
+        {
+            var guid = Guid.NewGuid().ToString();
+            var nama = "tes";
+            var skor = 10;
+
+            var command = new UpdateKetajamanPerumusanMasalahCommand(guid, nama, skor);
+            var result = await Sender.Send(command);
+
+            Assert.True(result.IsFailure);
+            Assert.Equal("KetajamanPerumusanMasalah.NotFound", result.Error.Code);
+        }
+
+        [Fact]
+        public async Task Update_ShouldThrow_WhenInvalidRuleDomain()
+        {
+            // --- CREATE ---
+            var namaBefore = "tes";
+            var skorBefore = 10;
+
+            var createCommand = new CreateKetajamanPerumusanMasalahCommand(namaBefore, skorBefore);
+            var createResult = await Sender.Send(createCommand);
+
+            Assert.True(createResult.IsSuccess);
+            var dataCreate = DBContext.KetajamanPerumusanMasalah.FirstOrDefault(p => p.Uuid == createResult!.Value);
+
+            Assert.NotNull(dataCreate);
+            Assert.Equal(namaBefore, dataCreate.Nama);
+            Assert.Equal(skorBefore, dataCreate.Skor);
+
+            var newUuid = createResult.Value.ToString();
+
+            // --- UPDATE (melanggar aturan domain)
+            var namaAfter = "tes2";
+            var skorAfter = int.MaxValue;
+
+            var updateCommand = new UpdateKetajamanPerumusanMasalahCommand(newUuid, namaAfter, skorAfter);
+            var updateResult = await Sender.Send(updateCommand);
+
+            Assert.True(updateResult.IsFailure);
+            Assert.Equal("KetajamanPerumusanMasalah.InvalidValueSkor", updateResult.Error.Code);
+        }
+
+        [Fact]
+        public async Task Delete_ShouldThrow_WhenNotExist()
+        {
+            var guid = Guid.NewGuid().ToString();
+
+            var command = new DeleteKetajamanPerumusanMasalahCommand(guid);
+            var result = await Sender.Send(command);
+
+            Assert.True(result.IsFailure);
+            Assert.Equal("KetajamanPerumusanMasalah.NotFound", result.Error.Code);
         }
     }
 }

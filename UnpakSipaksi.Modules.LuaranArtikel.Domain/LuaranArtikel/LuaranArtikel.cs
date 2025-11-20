@@ -24,7 +24,7 @@ namespace UnpakSipaksi.Modules.LuaranArtikel.Domain.LuaranArtikel
         int Nilai
         )
         {
-            if (Nilai < 0) {
+            if (Nilai < 0 || Nilai >= int.MaxValue) {
                 return Result.Failure<LuaranArtikel>(LuaranArtikelErrors.InvalidValueNilai());
             }
             var asset = new LuaranArtikel

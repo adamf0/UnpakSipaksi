@@ -95,7 +95,7 @@ namespace UnpakSipaksi.Modules.PotensiKetercapaianLuaranDijanjikan.Domain.Potens
             {
                 if (HasError) return this;
 
-                if (skor < 0)
+                if (skor < 0 || skor >= int.MaxValue)
                 {
                     _result = Result.Failure<PotensiKetercapaianLuaranDijanjikan>(PotensiKetercapaianLuaranDijanjikanErrors.InvalidValueSkor());
                     return this;

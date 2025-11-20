@@ -44,7 +44,7 @@ namespace UnpakSipaksi.Modules.KesesuaianTkt.Domain.KesesuaianTkt
             {
                 if (HasError) return this;
 
-                if (skor < 0)
+                if (skor < 0 || skor >= int.MaxValue)
                 {
                     _result = Result.Failure<KesesuaianTkt>(KesesuaianTktErrors.InvalidValueSkor());
                     return this;

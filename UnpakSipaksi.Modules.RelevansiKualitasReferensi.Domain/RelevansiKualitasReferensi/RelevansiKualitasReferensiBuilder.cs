@@ -95,7 +95,7 @@ namespace UnpakSipaksi.Modules.RelevansiKualitasReferensi.Domain.RelevansiKualit
             {
                 if (HasError) return this;
 
-                if (skor < 0)
+                if (skor < 0 || skor >= int.MaxValue)
                 {
                     _result = Result.Failure<RelevansiKualitasReferensi>(RelevansiKualitasReferensiErrors.InvalidValueSkor());
                     return this;

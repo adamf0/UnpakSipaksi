@@ -39,7 +39,7 @@ namespace UnpakSipaksi.Modules.RelevansiKepakaranTemaProposal.Domain.RelevansiKe
             {
                 if (HasError) return this;
 
-                if (skor < 0)
+                if (skor < 0 || skor >= int.MaxValue)
                 {
                     _result = Result.Failure<RelevansiKepakaranTemaProposal>(RelevansiKepakaranTemaProposalErrors.InvalidValueSkor());
                     return this;

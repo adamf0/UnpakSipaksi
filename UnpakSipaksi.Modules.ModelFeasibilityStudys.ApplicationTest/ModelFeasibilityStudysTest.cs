@@ -155,5 +155,73 @@ namespace Application.Integration.Tests
                 }
             }
         }
+        [Fact]
+        public async Task Create_ShouldThrow_WhenInvalidRuleDomain()
+        {
+            var nama = "tes";
+            var skor = int.MaxValue; // contoh melanggar aturan domain
+
+            var command = new CreateModelFeasibilityStudysCommand(nama, skor);
+            var result = await Sender.Send(command);
+
+            Assert.True(result.IsFailure);
+            Assert.Equal("ModelFeasibilityStudys.InvalidValueSkor", result.Error.Code);
+        }
+
+        [Fact]
+        public async Task Update_ShouldThrow_WhenNotExist()
+        {
+            var guid = Guid.NewGuid().ToString();
+            var nama = "tes";
+            var skor = 10;
+
+            var command = new UpdateModelFeasibilityStudysCommand(guid, nama, skor);
+            var result = await Sender.Send(command);
+
+            Assert.True(result.IsFailure);
+            Assert.Equal("ModelFeasibilityStudys.NotFound", result.Error.Code);
+        }
+
+        [Fact]
+        public async Task Update_ShouldThrow_WhenInvalidRuleDomain()
+        {
+            // --- CREATE ---
+            var namaBefore = "tes";
+            var skorBefore = 10;
+
+            var createCommand = new CreateModelFeasibilityStudysCommand(namaBefore, skorBefore);
+            var createResult = await Sender.Send(createCommand);
+
+            Assert.True(createResult.IsSuccess);
+            var dataCreate = DBContext.ModelFeasibilityStudys.FirstOrDefault(p => p.Uuid == createResult!.Value);
+
+            Assert.NotNull(dataCreate);
+            Assert.Equal(namaBefore, dataCreate.Nama);
+            Assert.Equal(skorBefore, dataCreate.Skor);
+
+            var newUuid = createResult.Value.ToString();
+
+            // --- UPDATE (melanggar aturan domain)
+            var namaAfter = "tes2";
+            var skorAfter = int.MaxValue;
+
+            var updateCommand = new UpdateModelFeasibilityStudysCommand(newUuid, namaAfter, skorAfter);
+            var updateResult = await Sender.Send(updateCommand);
+
+            Assert.True(updateResult.IsFailure);
+            Assert.Equal("ModelFeasibilityStudys.InvalidValueSkor", updateResult.Error.Code);
+        }
+
+        [Fact]
+        public async Task Delete_ShouldThrow_WhenNotExist()
+        {
+            var guid = Guid.NewGuid().ToString();
+
+            var command = new DeleteModelFeasibilityStudysCommand(guid);
+            var result = await Sender.Send(command);
+
+            Assert.True(result.IsFailure);
+            Assert.Equal("ModelFeasibilityStudys.NotFound", result.Error.Code);
+        }
     }
 }

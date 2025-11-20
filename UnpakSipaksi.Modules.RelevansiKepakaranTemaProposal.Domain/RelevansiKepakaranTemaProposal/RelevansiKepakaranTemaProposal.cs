@@ -25,7 +25,7 @@ namespace UnpakSipaksi.Modules.RelevansiKepakaranTemaProposal.Domain.RelevansiKe
         int Skor
         )
         {
-            if (Skor < 0) {
+            if (Skor < 0 || Skor >= int.MaxValue) {
                 return Result.Failure<RelevansiKepakaranTemaProposal>(RelevansiKepakaranTemaProposalErrors.InvalidValueSkor());
             }
             var asset = new RelevansiKepakaranTemaProposal

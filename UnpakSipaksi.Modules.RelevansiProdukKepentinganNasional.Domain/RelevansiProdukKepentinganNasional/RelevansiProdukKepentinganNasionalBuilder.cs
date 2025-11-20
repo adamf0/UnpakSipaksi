@@ -95,7 +95,7 @@ namespace UnpakSipaksi.Modules.RelevansiProdukKepentinganNasional.Domain.Relevan
             {
                 if (HasError) return this;
 
-                if (skor < 0)
+                if (skor < 0 || skor >= int.MaxValue)
                 {
                     _result = Result.Failure<RelevansiProdukKepentinganNasional>(RelevansiProdukKepentinganNasionalErrors.InvalidValueSkor());
                     return this;

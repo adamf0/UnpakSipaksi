@@ -155,5 +155,73 @@ namespace Application.Integration.Tests
                 }
             }
         }
+        [Fact]
+        public async Task Create_ShouldThrow_WhenInvalidRuleDomain()
+        {
+            var nama = "tes";
+            var nilai = int.MaxValue; // contoh melanggar aturan domain
+
+            var command = new CreateKualitasKuantitasPublikasiProsidingCommand(nama, nilai);
+            var result = await Sender.Send(command);
+
+            Assert.True(result.IsFailure);
+            Assert.Equal("KualitasKuantitasPublikasiProsiding.InvalidValueNilai", result.Error.Code);
+        }
+
+        [Fact]
+        public async Task Update_ShouldThrow_WhenNotExist()
+        {
+            var guid = Guid.NewGuid().ToString();
+            var nama = "tes";
+            var nilai = 10;
+
+            var command = new UpdateKualitasKuantitasPublikasiProsidingCommand(guid, nama, nilai);
+            var result = await Sender.Send(command);
+
+            Assert.True(result.IsFailure);
+            Assert.Equal("KualitasKuantitasPublikasiProsiding.NotFound", result.Error.Code);
+        }
+
+        [Fact]
+        public async Task Update_ShouldThrow_WhenInvalidRuleDomain()
+        {
+            // --- CREATE ---
+            var namaBefore = "tes";
+            var nilaiBefore = 10;
+
+            var createCommand = new CreateKualitasKuantitasPublikasiProsidingCommand(namaBefore, nilaiBefore);
+            var createResult = await Sender.Send(createCommand);
+
+            Assert.True(createResult.IsSuccess);
+            var dataCreate = DBContext.KualitasKuantitasPublikasiProsiding.FirstOrDefault(p => p.Uuid == createResult!.Value);
+
+            Assert.NotNull(dataCreate);
+            Assert.Equal(namaBefore, dataCreate.Nama);
+            Assert.Equal(nilaiBefore, dataCreate.Nilai);
+
+            var newUuid = createResult.Value.ToString();
+
+            // --- UPDATE (melanggar aturan domain)
+            var namaAfter = "tes2";
+            var nilaiAfter = int.MaxValue;
+
+            var updateCommand = new UpdateKualitasKuantitasPublikasiProsidingCommand(newUuid, namaAfter, nilaiAfter);
+            var updateResult = await Sender.Send(updateCommand);
+
+            Assert.True(updateResult.IsFailure);
+            Assert.Equal("KualitasKuantitasPublikasiProsiding.InvalidValueNilai", updateResult.Error.Code);
+        }
+
+        [Fact]
+        public async Task Delete_ShouldThrow_WhenNotExist()
+        {
+            var guid = Guid.NewGuid().ToString();
+
+            var command = new DeleteKualitasKuantitasPublikasiProsidingCommand(guid);
+            var result = await Sender.Send(command);
+
+            Assert.True(result.IsFailure);
+            Assert.Equal("KualitasKuantitasPublikasiProsiding.NotFound", result.Error.Code);
+        }
     }
 }

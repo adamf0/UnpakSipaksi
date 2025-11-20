@@ -25,7 +25,7 @@ namespace UnpakSipaksi.Modules.KetajamanAnalisis.Domain.KetajamanAnalisis
         int Nilai
         )
         {
-            if (Nilai < 0) {
+            if (Nilai < 0 || Nilai >= int.MaxValue) {
                 return Result.Failure<KetajamanAnalisis>(KetajamanAnalisisErrors.InvalidValueNilai());
             }
             var asset = new KetajamanAnalisis

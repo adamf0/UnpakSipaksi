@@ -4,6 +4,9 @@ using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.DependencyInjection;
 using System.Reflection;
 using UnpakSipaksi.Common.Domain;
+using UnpakSipaksi.Modules.KesesuaianJadwal.Application.CreateKesesuaianJadwal;
+using UnpakSipaksi.Modules.KesesuaianJadwal.Application.DeleteKesesuaianJadwal;
+using UnpakSipaksi.Modules.KesesuaianJadwal.Application.UpdateKesesuaianJadwal;
 using UnpakSipaksi.Modules.KesesuaianPenugasan.Application.CreateKesesuaianPenugasan;
 using UnpakSipaksi.Modules.KesesuaianPenugasan.Application.DeleteKesesuaianPenugasan;
 using UnpakSipaksi.Modules.KesesuaianPenugasan.Application.UpdateKesesuaianPenugasan;
@@ -157,6 +160,75 @@ namespace Application.Integration.Tests
                     Assert.IsType<DeleteKesesuaianPenugasanCommandHandler>(handler);
                 }
             }
+        }
+
+        [Fact]
+        public async Task Create_ShouldThrow_WhenInvalidRuleDomain()
+        {
+            var nama = "tes";
+            var nilai = int.MaxValue; // contoh melanggar aturan domain
+
+            var command = new CreateKesesuaianPenugasanCommand(nama, nilai);
+            var result = await Sender.Send(command);
+
+            Assert.True(result.IsFailure);
+            Assert.Equal("KesesuaianPenugasan.InvalidValueNilai", result.Error.Code);
+        }
+
+        [Fact]
+        public async Task Update_ShouldThrow_WhenNotExist()
+        {
+            var guid = Guid.NewGuid().ToString();
+            var nama = "tes";
+            var nilai = 10;
+
+            var command = new UpdateKesesuaianPenugasanCommand(guid, nama, nilai);
+            var result = await Sender.Send(command);
+
+            Assert.True(result.IsFailure);
+            Assert.Equal("KesesuaianPenugasan.NotFound", result.Error.Code);
+        }
+
+        [Fact]
+        public async Task Update_ShouldThrow_WhenInvalidRuleDomain()
+        {
+            // --- CREATE ---
+            var namaBefore = "tes";
+            var nilaiBefore = 10;
+
+            var createCommand = new CreateKesesuaianPenugasanCommand(namaBefore, nilaiBefore);
+            var createResult = await Sender.Send(createCommand);
+
+            Assert.True(createResult.IsSuccess);
+            var dataCreate = DBContext.KesesuaianPenugasan.FirstOrDefault(p => p.Uuid == createResult!.Value);
+
+            Assert.NotNull(dataCreate);
+            Assert.Equal(namaBefore, dataCreate.Nama);
+            Assert.Equal(nilaiBefore, dataCreate.Nilai);
+
+            var newUuid = createResult.Value.ToString();
+
+            // --- UPDATE (melanggar aturan domain)
+            var namaAfter = "tes2";
+            var nilaiAfter = int.MaxValue;
+
+            var updateCommand = new UpdateKesesuaianPenugasanCommand(newUuid, namaAfter, nilaiAfter);
+            var updateResult = await Sender.Send(updateCommand);
+
+            Assert.True(updateResult.IsFailure);
+            Assert.Equal("KesesuaianPenugasan.InvalidValueNilai", updateResult.Error.Code);
+        }
+
+        [Fact]
+        public async Task Delete_ShouldThrow_WhenNotExist()
+        {
+            var guid = Guid.NewGuid().ToString();
+
+            var command = new DeleteKesesuaianPenugasanCommand(guid);
+            var result = await Sender.Send(command);
+
+            Assert.True(result.IsFailure);
+            Assert.Equal("KesesuaianPenugasan.NotFound", result.Error.Code);
         }
     }
 }

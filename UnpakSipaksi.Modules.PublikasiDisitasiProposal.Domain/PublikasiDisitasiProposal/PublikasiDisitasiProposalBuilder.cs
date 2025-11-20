@@ -39,7 +39,7 @@ namespace UnpakSipaksi.Modules.PublikasiDisitasiProposal.Domain.PublikasiDisitas
             {
                 if (HasError) return this;
 
-                if (skor < 0)
+                if (skor < 0 || skor >= int.MaxValue)
                 {
                     _result = Result.Failure<PublikasiDisitasiProposal>(PublikasiDisitasiProposalErrors.InvalidValueSkor());
                     return this;

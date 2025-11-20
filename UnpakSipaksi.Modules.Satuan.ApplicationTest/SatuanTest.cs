@@ -4,9 +4,9 @@ using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.DependencyInjection;
 using System.Reflection;
 using UnpakSipaksi.Common.Domain;
-using UnpakSipaksi.Modules.Satuan.Application.CreateSatuan;
 using UnpakSipaksi.Modules.Satuan.Application.DeleteSatuan;
 using UnpakSipaksi.Modules.Satuan.Application.UpdateSatuan;
+using UnpakSipaksi.Modules.Satuan.Application.CreateSatuan;
 using UnpakSipaksi.Modules.Satuan.ApplicationTest;
 using Xunit;
 
@@ -147,6 +147,30 @@ namespace Application.Integration.Tests
                     Assert.IsType<DeleteSatuanCommandHandler>(handler);
                 }
             }
+        }
+        [Fact]
+        public async Task Update_ShouldThrow_WhenNotExist()
+        {
+            var guid = Guid.NewGuid().ToString();
+            var namaBefore = "tes";
+
+            var updateCommand = new UpdateSatuanCommand(guid, namaBefore);
+            var updateResult = await Sender.Send(updateCommand);
+
+            Assert.True(updateResult.IsFailure);
+            Assert.Equal("Satuan.NotFound", updateResult.Error.Code);
+        }
+
+        [Fact]
+        public async Task Delete_ShouldThrow_WhenNotExist()
+        {
+            var guid = Guid.NewGuid().ToString();
+
+            var deleteCommand = new DeleteSatuanCommand(guid);
+            var deleteResult = await Sender.Send(deleteCommand);
+
+            Assert.True(deleteResult.IsFailure);
+            Assert.Equal("Satuan.NotFound", deleteResult.Error.Code);
         }
     }
 }

@@ -2,8 +2,8 @@
 using Microsoft.Extensions.DependencyInjection;
 using UnpakSipaksi.Common.Domain;
 using UnpakSipaksi.Modules.RelevansiKualitasReferensi.Application.CreateRelevansiKualitasReferensi;
-using UnpakSipaksi.Modules.RelevansiKualitasReferensi.Application.UpdateRelevansiKualitasReferensi;
 using UnpakSipaksi.Modules.RelevansiKualitasReferensi.Application.DeleteRelevansiKualitasReferensi;
+using UnpakSipaksi.Modules.RelevansiKualitasReferensi.Application.UpdateRelevansiKualitasReferensi;
 using Xunit;
 
 namespace UnpakSipaksi.Modules.RelevansiKualitasReferensi.ApplicationTest
@@ -152,6 +152,74 @@ namespace UnpakSipaksi.Modules.RelevansiKualitasReferensi.ApplicationTest
                     Assert.IsType<DeleteRelevansiKualitasReferensiCommandHandler>(handler);
                 }
             }
+        }
+        [Fact]
+        public async Task Create_ShouldThrow_WhenInvalidRuleDomain()
+        {
+            var nama = "tes";
+            var skor = int.MaxValue; // contoh melanggar aturan domain
+
+            var command = new CreateRelevansiKualitasReferensiCommand(nama, skor);
+            var result = await Sender.Send(command);
+
+            Assert.True(result.IsFailure);
+            Assert.Equal("RelevansiKualitasReferensi.InvalidValueSkor", result.Error.Code);
+        }
+
+        [Fact]
+        public async Task Update_ShouldThrow_WhenNotExist()
+        {
+            var guid = Guid.NewGuid().ToString();
+            var nama = "tes";
+            var skor = 10;
+
+            var command = new UpdateRelevansiKualitasReferensiCommand(guid, nama, skor);
+            var result = await Sender.Send(command);
+
+            Assert.True(result.IsFailure);
+            Assert.Equal("RelevansiKualitasReferensi.NotFound", result.Error.Code);
+        }
+
+        [Fact]
+        public async Task Update_ShouldThrow_WhenInvalidRuleDomain()
+        {
+            // --- CREATE ---
+            var namaBefore = "tes";
+            var skorBefore = 10;
+
+            var createCommand = new CreateRelevansiKualitasReferensiCommand(namaBefore, skorBefore);
+            var createResult = await Sender.Send(createCommand);
+
+            Assert.True(createResult.IsSuccess);
+            var dataCreate = DBContext.RelevansiKualitasReferensi.FirstOrDefault(p => p.Uuid == createResult!.Value);
+
+            Assert.NotNull(dataCreate);
+            Assert.Equal(namaBefore, dataCreate.Nama);
+            Assert.Equal(skorBefore, dataCreate.Skor);
+
+            var newUuid = createResult.Value.ToString();
+
+            // --- UPDATE (melanggar aturan domain)
+            var namaAfter = "tes2";
+            var skorAfter = int.MaxValue;
+
+            var updateCommand = new UpdateRelevansiKualitasReferensiCommand(newUuid, namaAfter, skorAfter);
+            var updateResult = await Sender.Send(updateCommand);
+
+            Assert.True(updateResult.IsFailure);
+            Assert.Equal("RelevansiKualitasReferensi.InvalidValueSkor", updateResult.Error.Code);
+        }
+
+        [Fact]
+        public async Task Delete_ShouldThrow_WhenNotExist()
+        {
+            var guid = Guid.NewGuid().ToString();
+
+            var command = new DeleteRelevansiKualitasReferensiCommand(guid);
+            var result = await Sender.Send(command);
+
+            Assert.True(result.IsFailure);
+            Assert.Equal("RelevansiKualitasReferensi.NotFound", result.Error.Code);
         }
     }
 }

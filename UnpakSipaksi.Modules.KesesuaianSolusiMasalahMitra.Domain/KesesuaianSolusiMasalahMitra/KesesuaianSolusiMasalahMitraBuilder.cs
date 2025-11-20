@@ -44,7 +44,7 @@ namespace UnpakSipaksi.Modules.KesesuaianSolusiMasalahMitra.Domain.KesesuaianSol
             {
                 if (HasError) return this;
 
-                if (nilai < 0)
+                if (nilai < 0 || nilai >= int.MaxValue)
                 {
                     _result = Result.Failure<KesesuaianSolusiMasalahMitra>(KesesuaianSolusiMasalahMitraErrors.InvalidValueNilai());
                     return this;

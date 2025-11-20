@@ -39,7 +39,7 @@ namespace UnpakSipaksi.Modules.KualitasKuantitasPublikasiProsiding.Domain.Kualit
             {
                 if (HasError) return this;
 
-                if (nilai < 0)
+                if (nilai < 0 || nilai>=int.MaxValue)
                 {
                     _result = Result.Failure<KualitasKuantitasPublikasiProsiding>(KualitasKuantitasPublikasiProsidingErrors.InvalidValueNilai());
                     return this;
