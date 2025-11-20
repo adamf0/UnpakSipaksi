@@ -1,8 +1,16 @@
-﻿using MediatR;
+﻿using Dapper;
+using MediatR;
 using Microsoft.Extensions.DependencyInjection;
+using Moq;
+using Moq.Dapper;
+using System.Data;
+using System.Data.Common;
+using UnpakSipaksi.Common.Application.Data;
 using UnpakSipaksi.Common.Domain;
 using UnpakSipaksi.Modules.KategoriProgramPengabdian.Application.CreateKategoriProgramPengabdian;
 using UnpakSipaksi.Modules.KategoriProgramPengabdian.Application.DeleteKategoriProgramPengabdian;
+using UnpakSipaksi.Modules.KategoriProgramPengabdian.Application.GetAllKategoriProgramPengabdian;
+using UnpakSipaksi.Modules.KategoriProgramPengabdian.Application.GetKategoriProgramPengabdian;
 using UnpakSipaksi.Modules.KategoriProgramPengabdian.Application.UpdateKategoriProgramPengabdian;
 using Xunit;
 
@@ -219,6 +227,211 @@ namespace UnpakSipaksi.Modules.KategoriProgramPengabdian.ApplicationTest
 
             Assert.True(result.IsFailure);
             Assert.Equal("KategoriProgramPengabdian.NotFound", result.Error.Code);
+        }
+
+        [Fact]
+        public async Task Handle_All_ReturnsSuccess_WhenDataExists()
+        {
+            // Arrange
+            var mockConnectionFactory = new Mock<IDbConnectionFactory>();
+            var mockConnection = new Mock<DbConnection>();
+
+            var fakeDataList = new List<KategoriProgramPengabdianResponse>
+        {
+            new() { Uuid = Guid.NewGuid().ToString(), Nama = "Program 1", Rule = "[]" },
+            new() { Uuid = Guid.NewGuid().ToString(), Nama = "Program 2", Rule = "[]" }
+        };
+
+            mockConnection.SetupDapperAsync(c =>
+                c.QueryAsync<KategoriProgramPengabdianResponse>(
+                    It.IsAny<string>(),
+                    It.IsAny<object>(),
+                    It.IsAny<IDbTransaction>(),
+                    It.IsAny<int?>(),
+                    It.IsAny<System.Data.CommandType?>()
+                )
+            ).ReturnsAsync(fakeDataList);
+
+            mockConnectionFactory.Setup(f => f.OpenConnectionAsync())
+                .ReturnsAsync(mockConnection.Object);
+
+            var handler = new GetAllKategoriProgramPengabdianQueryHandler(mockConnectionFactory.Object);
+            var query = new GetAllKategoriProgramPengabdianQuery();
+
+            // Act
+            var result = await handler.Handle(query, CancellationToken.None);
+
+            // Assert
+            Assert.True(result.IsSuccess);
+            Assert.Equal(fakeDataList.Count, result.Value.Count);
+        }
+
+        [Fact]
+        public async Task Handle_All_ReturnsFailure_WhenNoData()
+        {
+            // Arrange
+            var mockConnectionFactory = new Mock<IDbConnectionFactory>();
+            var mockConnection = new Mock<DbConnection>();
+
+            mockConnection.SetupDapperAsync(c =>
+                c.QueryAsync<KategoriProgramPengabdianResponse>(
+                    It.IsAny<string>(),
+                    It.IsAny<object>(),
+                    It.IsAny<IDbTransaction>(),
+                    It.IsAny<int?>(),
+                    It.IsAny<System.Data.CommandType?>()
+                )
+            ).ReturnsAsync(new List<KategoriProgramPengabdianResponse>());
+
+            mockConnectionFactory.Setup(f => f.OpenConnectionAsync())
+                .ReturnsAsync(mockConnection.Object);
+
+            var handler = new GetAllKategoriProgramPengabdianQueryHandler(mockConnectionFactory.Object);
+            var query = new GetAllKategoriProgramPengabdianQuery();
+
+            // Act
+            var result = await handler.Handle(query, CancellationToken.None);
+
+            // Assert
+            Assert.False(result.IsSuccess);
+        }
+
+        [Fact]
+        public async Task Handle_Single_ReturnsSuccess_WhenDataExists()
+        {
+            // Arrange
+            var mockConnectionFactory = new Mock<IDbConnectionFactory>();
+            var mockConnection = new Mock<DbConnection>();
+            var uuid = Guid.NewGuid();
+
+            var fakeData = new KategoriProgramPengabdianResponse
+            {
+                Uuid = uuid.ToString(),
+                Nama = "Program 1",
+                Rule = "[]"
+            };
+
+            mockConnection.SetupDapperAsync(c =>
+                c.QuerySingleOrDefaultAsync<KategoriProgramPengabdianResponse>(
+                    It.IsAny<string>(),
+                    It.IsAny<object>(),
+                    It.IsAny<IDbTransaction>(),
+                    It.IsAny<int?>(),
+                    It.IsAny<System.Data.CommandType?>()
+                )
+            ).ReturnsAsync(fakeData);
+
+            mockConnectionFactory.Setup(f => f.OpenConnectionAsync())
+                .ReturnsAsync(mockConnection.Object);
+
+            var handler = new GetKategoriProgramPengabdianQueryHandler(mockConnectionFactory.Object);
+            var query = new GetKategoriProgramPengabdianQuery(uuid);
+
+            // Act
+            var result = await handler.Handle(query, CancellationToken.None);
+
+            // Assert
+            Assert.True(result.IsSuccess);
+            Assert.Equal(fakeData.Nama, result.Value.Nama);
+            Assert.Equal(fakeData.Rule, result.Value.Rule);
+        }
+
+        [Fact]
+        public async Task Handle_Single_ReturnsFailure_WhenDataNotFound()
+        {
+            // Arrange
+            var mockConnectionFactory = new Mock<IDbConnectionFactory>();
+            var mockConnection = new Mock<DbConnection>();
+
+            mockConnection.SetupDapperAsync(c =>
+                c.QuerySingleOrDefaultAsync<KategoriProgramPengabdianResponse>(
+                    It.IsAny<string>(),
+                    It.IsAny<object>(),
+                    It.IsAny<IDbTransaction>(),
+                    It.IsAny<int?>(),
+                    It.IsAny<System.Data.CommandType?>()
+                )
+            ).ReturnsAsync((KategoriProgramPengabdianResponse?)null);
+
+            mockConnectionFactory.Setup(f => f.OpenConnectionAsync())
+                .ReturnsAsync(mockConnection.Object);
+
+            var handler = new GetKategoriProgramPengabdianQueryHandler(mockConnectionFactory.Object);
+            var query = new GetKategoriProgramPengabdianQuery(Guid.NewGuid());
+
+            // Act
+            var result = await handler.Handle(query, CancellationToken.None);
+
+            // Assert
+            Assert.False(result.IsSuccess);
+        }
+
+        [Fact]
+        public async Task Handle_Default_ReturnsSuccess_WhenDataExists()
+        {
+            // Arrange
+            var mockConnectionFactory = new Mock<IDbConnectionFactory>();
+            var mockConnection = new Mock<DbConnection>();
+            var uuid = Guid.NewGuid();
+
+            var fakeData = new KategoriProgramPengabdianDefaultResponse
+            {
+                Uuid = uuid.ToString(),
+                Nama = "Program 1",
+            };
+
+            mockConnection.SetupDapperAsync(c =>
+                c.QuerySingleOrDefaultAsync<KategoriProgramPengabdianDefaultResponse>(
+                    It.IsAny<string>(),
+                    It.IsAny<object>(),
+                    It.IsAny<IDbTransaction>(),
+                    It.IsAny<int?>(),
+                    It.IsAny<System.Data.CommandType?>()
+                )
+            ).ReturnsAsync(fakeData);
+
+            mockConnectionFactory.Setup(f => f.OpenConnectionAsync())
+                .ReturnsAsync(mockConnection.Object);
+
+            var handler = new GetKategoriProgramPengabdianDefaultQueryHandler(mockConnectionFactory.Object);
+            var query = new GetKategoriProgramPengabdianDefaultQuery(uuid);
+
+            // Act
+            var result = await handler.Handle(query, CancellationToken.None);
+
+            // Assert
+            Assert.True(result.IsSuccess);
+            Assert.Equal(fakeData.Nama, result.Value.Nama);
+        }
+
+        [Fact]
+        public async Task Handle_Default_ReturnsFailure_WhenDataNotFound()
+        {
+            // Arrange
+            var mockConnectionFactory = new Mock<IDbConnectionFactory>();
+            var mockConnection = new Mock<DbConnection>();
+
+            mockConnection.SetupDapperAsync(c =>
+                c.QuerySingleOrDefaultAsync<KategoriProgramPengabdianDefaultResponse>(
+                    It.IsAny<string>(),
+                    It.IsAny<object>(),
+                    It.IsAny<IDbTransaction>(),
+                    It.IsAny<int?>(),
+                    It.IsAny<System.Data.CommandType?>()
+                )
+            ).ReturnsAsync((KategoriProgramPengabdianDefaultResponse?)null);
+
+            mockConnectionFactory.Setup(f => f.OpenConnectionAsync())
+                .ReturnsAsync(mockConnection.Object);
+
+            var handler = new GetKategoriProgramPengabdianDefaultQueryHandler(mockConnectionFactory.Object);
+            var query = new GetKategoriProgramPengabdianDefaultQuery(Guid.NewGuid());
+
+            // Act
+            var result = await handler.Handle(query, CancellationToken.None);
+
+            // Assert
+            Assert.False(result.IsSuccess);
         }
     }
 }

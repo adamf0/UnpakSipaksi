@@ -1,11 +1,19 @@
-﻿using MediatR;
+﻿using Dapper;
+using MediatR;
 using Microsoft.Extensions.DependencyInjection;
 using Moq;
+using Moq;
+using Moq.Dapper;
+using System.Data;
+using System.Data.Common;
+using UnpakSipaksi.Common.Application.Data;
 using UnpakSipaksi.Common.Domain;
 using UnpakSipaksi.Modules.Kategori.Application.DeleteKategori;
 using UnpakSipaksi.Modules.Kategori.Application.UpdateKategori;
 using UnpakSipaksi.Modules.KategoriMitraPenelitian.Application.CreateKategoriMitraPenelitian;
 using UnpakSipaksi.Modules.KategoriMitraPenelitian.Application.DeleteKategoriMitraPenelitian;
+using UnpakSipaksi.Modules.KategoriMitraPenelitian.Application.GetAllKategoriMitraPenelitian;
+using UnpakSipaksi.Modules.KategoriMitraPenelitian.Application.GetKategoriMitraPenelitian;
 using UnpakSipaksi.Modules.KategoriMitraPenelitian.Application.UpdateKategoriMitraPenelitian;
 using Xunit;
 
@@ -173,6 +181,141 @@ namespace UnpakSipaksi.Modules.KategoriMitraPenelitian.ApplicationTest
 
             Assert.True(deleteResult.IsFailure);
             Assert.Equal("KategoriMitraPenelitian.NotFound", deleteResult.Error.Code);
+        }
+
+        [Fact]
+        public async Task Handle_All_ReturnsSuccess_WhenDataExists()
+        {
+            // Arrange
+            var mockConnectionFactory = new Mock<IDbConnectionFactory>();
+            var mockConnection = new Mock<DbConnection>();
+
+            var fakeDataList = new List<KategoriMitraPenelitianResponse>
+            {
+                new() { Uuid = Guid.NewGuid().ToString(), Nama = "Mitra 1" },
+                new() { Uuid = Guid.NewGuid().ToString(), Nama = "Mitra 2" }
+            };
+
+            mockConnection.SetupDapperAsync(c =>
+                c.QueryAsync<KategoriMitraPenelitianResponse>(
+                    It.IsAny<string>(),
+                    It.IsAny<object>(),
+                    It.IsAny<IDbTransaction>(),
+                    It.IsAny<int?>(),
+                    It.IsAny<System.Data.CommandType?>()
+                )
+            ).ReturnsAsync(fakeDataList);
+
+            mockConnectionFactory.Setup(f => f.OpenConnectionAsync())
+                .ReturnsAsync(mockConnection.Object);
+
+            var handler = new GetAllKategoriMitraPenelitianQueryHandler(mockConnectionFactory.Object);
+            var query = new GetAllKategoriMitraPenelitianQuery();
+
+            // Act
+            var result = await handler.Handle(query, CancellationToken.None);
+
+            // Assert
+            Assert.True(result.IsSuccess);
+            Assert.Equal(fakeDataList.Count, result.Value.Count);
+        }
+
+        [Fact]
+        public async Task Handle_All_ReturnsFailure_WhenNoData()
+        {
+            // Arrange
+            var mockConnectionFactory = new Mock<IDbConnectionFactory>();
+            var mockConnection = new Mock<DbConnection>();
+
+            mockConnection.SetupDapperAsync(c =>
+                c.QueryAsync<KategoriMitraPenelitianResponse>(
+                    It.IsAny<string>(),
+                    It.IsAny<object>(),
+                    It.IsAny<IDbTransaction>(),
+                    It.IsAny<int?>(),
+                    It.IsAny<System.Data.CommandType?>()
+                )
+            ).ReturnsAsync(new List<KategoriMitraPenelitianResponse>());
+
+            mockConnectionFactory.Setup(f => f.OpenConnectionAsync())
+                .ReturnsAsync(mockConnection.Object);
+
+            var handler = new GetAllKategoriMitraPenelitianQueryHandler(mockConnectionFactory.Object);
+            var query = new GetAllKategoriMitraPenelitianQuery();
+
+            // Act
+            var result = await handler.Handle(query, CancellationToken.None);
+
+            // Assert
+            Assert.False(result.IsSuccess);
+        }
+
+        [Fact]
+        public async Task Handle_Single_ReturnsSuccess_WhenDataExists()
+        {
+            // Arrange
+            var mockConnectionFactory = new Mock<IDbConnectionFactory>();
+            var mockConnection = new Mock<DbConnection>();
+            var uuid = Guid.NewGuid();
+
+            var fakeData = new KategoriMitraPenelitianResponse
+            {
+                Uuid = uuid.ToString(),
+                Nama = "Mitra 1"
+            };
+
+            mockConnection.SetupDapperAsync(c =>
+                c.QuerySingleOrDefaultAsync<KategoriMitraPenelitianResponse>(
+                    It.IsAny<string>(),
+                    It.IsAny<object>(),
+                    It.IsAny<IDbTransaction>(),
+                    It.IsAny<int?>(),
+                    It.IsAny<System.Data.CommandType?>()
+                )
+            ).ReturnsAsync(fakeData);
+
+            mockConnectionFactory.Setup(f => f.OpenConnectionAsync())
+                .ReturnsAsync(mockConnection.Object);
+
+            var handler = new GetKategoriMitraPenelitianQueryHandler(mockConnectionFactory.Object);
+            var query = new GetKategoriMitraPenelitianQuery(uuid);
+
+            // Act
+            var result = await handler.Handle(query, CancellationToken.None);
+
+            // Assert
+            Assert.True(result.IsSuccess);
+            Assert.Equal(fakeData.Nama, result.Value.Nama);
+        }
+
+        [Fact]
+        public async Task Handle_Single_ReturnsFailure_WhenDataNotFound()
+        {
+            // Arrange
+            var mockConnectionFactory = new Mock<IDbConnectionFactory>();
+            var mockConnection = new Mock<DbConnection>();
+
+            mockConnection.SetupDapperAsync(c =>
+                c.QuerySingleOrDefaultAsync<KategoriMitraPenelitianResponse>(
+                    It.IsAny<string>(),
+                    It.IsAny<object>(),
+                    It.IsAny<IDbTransaction>(),
+                    It.IsAny<int?>(),
+                    It.IsAny<System.Data.CommandType?>()
+                )
+            ).ReturnsAsync((KategoriMitraPenelitianResponse?)null);
+
+            mockConnectionFactory.Setup(f => f.OpenConnectionAsync())
+                .ReturnsAsync(mockConnection.Object);
+
+            var handler = new GetKategoriMitraPenelitianQueryHandler(mockConnectionFactory.Object);
+            var query = new GetKategoriMitraPenelitianQuery(Guid.NewGuid());
+
+            // Act
+            var result = await handler.Handle(query, CancellationToken.None);
+
+            // Assert
+            Assert.False(result.IsSuccess);
         }
     }
 }

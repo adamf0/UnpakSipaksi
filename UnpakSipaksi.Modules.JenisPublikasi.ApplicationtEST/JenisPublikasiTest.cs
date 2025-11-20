@@ -1,11 +1,19 @@
-﻿using Docker.DotNet.Models;
+﻿using Dapper;
+using Docker.DotNet.Models;
 using MediatR;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.DependencyInjection;
+using Moq;
+using Moq.Dapper;
+using System.Data;
+using System.Data.Common;
 using System.Reflection;
+using UnpakSipaksi.Common.Application.Data;
 using UnpakSipaksi.Common.Domain;
 using UnpakSipaksi.Modules.JenisPublikasi.Application.CreateJenisPublikasi;
 using UnpakSipaksi.Modules.JenisPublikasi.Application.DeleteJenisPublikasi;
+using UnpakSipaksi.Modules.JenisPublikasi.Application.GetAllJenisPublikasi;
+using UnpakSipaksi.Modules.JenisPublikasi.Application.GetJenisPublikasi;
 using UnpakSipaksi.Modules.JenisPublikasi.Application.UpdateJenisPublikasi;
 using UnpakSipaksi.Modules.JenisPublikasi.ApplicationtTest;
 using Xunit;
@@ -217,6 +225,203 @@ namespace Application.Integration.Tests
 
             Assert.True(result.IsFailure);
             Assert.Equal("JenisPublikasi.NotFound", result.Error.Code);
+        }
+
+        [Fact]
+        public async Task GetAllJenisPublikasi_Handle_ReturnsSuccess_WhenDataExists()
+        {
+            // Arrange
+            var mockConnectionFactory = new Mock<IDbConnectionFactory>();
+            var mockConnection = new Mock<DbConnection>();
+
+            var fakeData = new List<JenisPublikasiResponse>
+            {
+                new JenisPublikasiResponse { Uuid = Guid.NewGuid().ToString(), Nama = "Publikasi 1", Sbu = 10 },
+                new JenisPublikasiResponse { Uuid = Guid.NewGuid().ToString(), Nama = "Publikasi 2", Sbu =10 }
+            };
+
+            mockConnection.SetupDapperAsync(c =>
+                 c.QueryAsync<JenisPublikasiResponse>(
+                     It.IsAny<string>(),
+                     It.IsAny<object>(),
+                     It.IsAny<IDbTransaction>(),
+                     It.IsAny<int?>(),
+                     It.IsAny<CommandType?>()
+                 )
+             ).ReturnsAsync(fakeData);
+
+            mockConnectionFactory.Setup(f => f.OpenConnectionAsync())
+                .ReturnsAsync(mockConnection.Object);
+
+            var handler = new GetAllJenisPublikasiQueryHandler(mockConnectionFactory.Object);
+            var query = new GetAllJenisPublikasiQuery();
+
+            // Act
+            var result = await handler.Handle(query, CancellationToken.None);
+
+            // Assert
+            Assert.True(result.IsSuccess);
+            Assert.Equal(fakeData.Count, result.Value.Count);
+            Assert.Equal(fakeData.First().Nama, result.Value.First().Nama);
+        }
+
+        [Fact]
+        public async Task GetAllJenisPublikasi_Handle_ReturnsFailure_WhenNoData()
+        {
+            // Arrange
+            var mockConnectionFactory = new Mock<IDbConnectionFactory>();
+            var mockConnection = new Mock<DbConnection>();
+
+            mockConnection.SetupDapperAsync(c =>
+                c.QueryAsync<JenisPublikasiResponse>(
+                    It.IsAny<string>(),
+                    It.IsAny<object>(),
+                    It.IsAny<IDbTransaction>(),
+                    It.IsAny<int?>(),
+                    It.IsAny<CommandType?>()
+                )
+            ).ReturnsAsync(new List<JenisPublikasiResponse>());
+
+            mockConnectionFactory.Setup(f => f.OpenConnectionAsync())
+                .ReturnsAsync(mockConnection.Object);
+
+            var handler = new GetAllJenisPublikasiQueryHandler(mockConnectionFactory.Object);
+            var query = new GetAllJenisPublikasiQuery();
+
+            // Act
+            var result = await handler.Handle(query, CancellationToken.None);
+
+            // Assert
+            Assert.False(result.IsSuccess);
+        }
+
+        [Fact]
+        public async Task GetJenisPublikasi_Handle_ReturnsSuccess_WhenDataExists()
+        {
+            // Arrange
+            var mockConnectionFactory = new Mock<IDbConnectionFactory>();
+            var mockConnection = new Mock<DbConnection>();
+            var uuid = Guid.NewGuid();
+
+            var fakeData = new JenisPublikasiResponse
+            {
+                Uuid = uuid.ToString(),
+                Nama = "Publikasi 1",
+                Sbu = 10
+            };
+
+            mockConnection.SetupDapperAsync(c =>
+                c.QuerySingleOrDefaultAsync<JenisPublikasiResponse>(
+                    It.IsAny<string>(),
+                    It.IsAny<object>(), null, null, null
+                )
+            ).ReturnsAsync(fakeData);
+
+            mockConnectionFactory.Setup(f => f.OpenConnectionAsync())
+                .ReturnsAsync(mockConnection.Object);
+
+            var handler = new GetJenisPublikasiQueryHandler(mockConnectionFactory.Object);
+            var query = new GetJenisPublikasiQuery(uuid);
+
+            // Act
+            var result = await handler.Handle(query, CancellationToken.None);
+
+            // Assert
+            Assert.True(result.IsSuccess);
+            Assert.Equal(fakeData.Nama, result.Value.Nama);
+            Assert.Equal(fakeData.Sbu, result.Value.Sbu);
+        }
+
+        [Fact]
+        public async Task GetJenisPublikasi_Handle_ReturnsFailure_WhenDataNotFound()
+        {
+            // Arrange
+            var mockConnectionFactory = new Mock<IDbConnectionFactory>();
+            var mockConnection = new Mock<DbConnection>();
+
+            mockConnection.SetupDapperAsync(c =>
+                c.QuerySingleOrDefaultAsync<JenisPublikasiResponse>(
+                    It.IsAny<string>(),
+                    It.IsAny<object>(), null, null, null
+                )
+            ).ReturnsAsync((JenisPublikasiResponse?)null);
+
+            mockConnectionFactory.Setup(f => f.OpenConnectionAsync())
+                .ReturnsAsync(mockConnection.Object);
+
+            var handler = new GetJenisPublikasiQueryHandler(mockConnectionFactory.Object);
+            var query = new GetJenisPublikasiQuery(Guid.NewGuid());
+
+            // Act
+            var result = await handler.Handle(query, CancellationToken.None);
+
+            // Assert
+            Assert.False(result.IsSuccess);
+        }
+
+        [Fact]
+        public async Task Handle_Default_ReturnsSuccess_WhenDataExists()
+        {
+            // Arrange
+            var mockConnectionFactory = new Mock<IDbConnectionFactory>();
+            var mockConnection = new Mock<DbConnection>();
+            var uuid = Guid.NewGuid().ToString();
+
+            var fakeData = new JenisPublikasiDefaultResponse
+            {
+                Id = "1",
+                Uuid = uuid,
+                Nama = "Publikasi Default",
+                Sbu = 10
+            };
+
+            mockConnection.SetupDapperAsync(c =>
+                c.QuerySingleOrDefaultAsync<JenisPublikasiDefaultResponse>(
+                    It.IsAny<string>(),
+                    It.IsAny<object>(), null, null, null
+                )
+            ).ReturnsAsync(fakeData);
+
+            mockConnectionFactory.Setup(f => f.OpenConnectionAsync())
+                .ReturnsAsync(mockConnection.Object);
+
+            var handler = new GetJenisPublikasiDefaultQueryHandler(mockConnectionFactory.Object);
+            var query = new GetJenisPublikasiDefaultQuery(Guid.Parse(uuid));
+
+            // Act
+            var result = await handler.Handle(query, CancellationToken.None);
+
+            // Assert
+            Assert.True(result.IsSuccess);
+            Assert.Equal(fakeData.Nama, result.Value.Nama);
+            Assert.Equal(fakeData.Sbu, result.Value.Sbu);
+        }
+
+        [Fact]
+        public async Task Handle_Default_ReturnsFailure_WhenDataNotFound()
+        {
+            // Arrange
+            var mockConnectionFactory = new Mock<IDbConnectionFactory>();
+            var mockConnection = new Mock<DbConnection>();
+
+            mockConnection.SetupDapperAsync(c =>
+                c.QuerySingleOrDefaultAsync<JenisPublikasiDefaultResponse>(
+                    It.IsAny<string>(),
+                    It.IsAny<object>(), null, null, null
+                )
+            ).ReturnsAsync((JenisPublikasiDefaultResponse?)null);
+
+            mockConnectionFactory.Setup(f => f.OpenConnectionAsync())
+                .ReturnsAsync(mockConnection.Object);
+
+            var handler = new GetJenisPublikasiDefaultQueryHandler(mockConnectionFactory.Object);
+            var query = new GetJenisPublikasiDefaultQuery(Guid.NewGuid());
+
+            // Act
+            var result = await handler.Handle(query, CancellationToken.None);
+
+            // Assert
+            Assert.False(result.IsSuccess);
         }
     }
 }

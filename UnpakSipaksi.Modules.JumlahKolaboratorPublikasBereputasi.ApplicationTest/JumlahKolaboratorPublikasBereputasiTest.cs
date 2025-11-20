@@ -1,11 +1,20 @@
-﻿using Docker.DotNet.Models;
+﻿using Dapper;
+using Docker.DotNet.Models;
 using MediatR;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.DependencyInjection;
+using Moq;
+using Moq.Dapper;
+using System.Data;
+using System.Data.Common;
 using System.Reflection;
+using UnpakSipaksi.Common.Application.Data;
 using UnpakSipaksi.Common.Domain;
 using UnpakSipaksi.Modules.JumlahKolaboratorPublikasBereputasi.Application.CreateJumlahKolaboratorPublikasBereputasi;
 using UnpakSipaksi.Modules.JumlahKolaboratorPublikasBereputasi.Application.DeleteJumlahKolaboratorPublikasBereputasi;
+using UnpakSipaksi.Modules.JumlahKolaboratorPublikasBereputasi.Application.GetAllJumlahKolaboratorPublikasBereputasi;
+using UnpakSipaksi.Modules.JumlahKolaboratorPublikasBereputasi.Application.GetBobotJumlahKolaboratorPublikasBereputasi;
+using UnpakSipaksi.Modules.JumlahKolaboratorPublikasBereputasi.Application.GetJumlahKolaboratorPublikasBereputasi;
 using UnpakSipaksi.Modules.JumlahKolaboratorPublikasBereputasi.Application.UpdateJumlahKolaboratorPublikasBereputasi;
 using UnpakSipaksi.Modules.JumlahKolaboratorPublikasBereputasi.ApplicationTest;
 using Xunit;
@@ -226,6 +235,312 @@ namespace Application.Integration.Tests
 
             Assert.True(result.IsFailure);
             Assert.Equal("JumlahKolaboratorPublikasBereputasi.NotFound", result.Error.Code);
+        }
+
+        [Fact]
+        public async Task Handle_All_ReturnsSuccess_WhenDataExists()
+        {
+            // Arrange
+            var mockConnectionFactory = new Mock<IDbConnectionFactory>();
+            var mockConnection = new Mock<DbConnection>();
+
+            var fakeDataList = new List<JumlahKolaboratorPublikasBereputasiResponse>
+            {
+                new() { Uuid = Guid.NewGuid().ToString(), Nama = "Publikasi 1", BobotPDP=1, BobotTerapan=2, BobotKerjasama=3, BobotPenelitianDasar=4, Skor=10 }
+            };
+
+            mockConnection.SetupDapperAsync(c =>
+                c.QueryAsync<JumlahKolaboratorPublikasBereputasiResponse>(
+                    It.IsAny<string>(),
+                    It.IsAny<object>(),
+                    It.IsAny<IDbTransaction>(),
+                    It.IsAny<int?>(),
+                    It.IsAny<System.Data.CommandType?>()
+                )
+            ).ReturnsAsync(fakeDataList);
+
+            mockConnectionFactory.Setup(f => f.OpenConnectionAsync())
+                .ReturnsAsync(mockConnection.Object);
+
+            var handler = new GetAllJumlahKolaboratorPublikasBereputasiQueryHandler(mockConnectionFactory.Object);
+            var query = new GetAllJumlahKolaboratorPublikasBereputasiQuery();
+
+            // Act
+            var result = await handler.Handle(query, CancellationToken.None);
+
+            // Assert
+            Assert.True(result.IsSuccess);
+            Assert.NotEmpty(result.Value);
+            Assert.Equal(fakeDataList[0].Nama, result.Value[0].Nama);
+        }
+
+        [Fact]
+        public async Task Handle_ReturnsFailure_WhenNoData_All()
+        {
+            // Arrange
+            var mockConnectionFactory = new Mock<IDbConnectionFactory>();
+            var mockConnection = new Mock<DbConnection>();
+
+            mockConnection.SetupDapperAsync(c =>
+                c.QueryAsync<JumlahKolaboratorPublikasBereputasiResponse>(
+                    It.IsAny<string>(),
+                    It.IsAny<object>(),
+                    It.IsAny<IDbTransaction>(),
+                    It.IsAny<int?>(),
+                    It.IsAny<System.Data.CommandType?>()
+                )
+            ).ReturnsAsync(new List<JumlahKolaboratorPublikasBereputasiResponse>());
+
+            mockConnectionFactory.Setup(f => f.OpenConnectionAsync())
+                .ReturnsAsync(mockConnection.Object);
+
+            var handler = new GetAllJumlahKolaboratorPublikasBereputasiQueryHandler(mockConnectionFactory.Object);
+            var query = new GetAllJumlahKolaboratorPublikasBereputasiQuery();
+
+            // Act
+            var result = await handler.Handle(query, CancellationToken.None);
+
+            // Assert
+            Assert.False(result.IsSuccess);
+        }
+
+        [Fact]
+        public async Task Handle_Default_ReturnsSuccess_WhenDataExists()
+        {
+            // Arrange
+            var mockConnectionFactory = new Mock<IDbConnectionFactory>();
+            var mockConnection = new Mock<DbConnection>();
+            var uuid = Guid.NewGuid().ToString();
+
+            var fakeData = new JumlahKolaboratorPublikasBereputasiDefaultResponse
+            {
+                Id = "1",
+                Uuid = uuid,
+                Nama = "Publikasi Default",
+                BobotPDP = 1,
+                BobotTerapan = 2,
+                BobotKerjasama = 3,
+                BobotPenelitianDasar = 4,
+                Skor = 10
+            };
+
+            mockConnection.SetupDapperAsync(c =>
+                c.QuerySingleOrDefaultAsync<JumlahKolaboratorPublikasBereputasiDefaultResponse>(
+                    It.IsAny<string>(),
+                    It.IsAny<object>(),
+                    It.IsAny<IDbTransaction>(),
+                    It.IsAny<int?>(),
+                    It.IsAny<System.Data.CommandType?>()
+                )
+            ).ReturnsAsync(fakeData);
+
+            mockConnectionFactory.Setup(f => f.OpenConnectionAsync())
+                .ReturnsAsync(mockConnection.Object);
+
+            var handler = new GetJumlahKolaboratorPublikasBereputasiDefaultQueryHandler(mockConnectionFactory.Object);
+            var query = new GetJumlahKolaboratorPublikasBereputasiDefaultQuery(Guid.Parse(uuid));
+
+            // Act
+            var result = await handler.Handle(query, CancellationToken.None);
+
+            // Assert
+            Assert.True(result.IsSuccess);
+            Assert.Equal(fakeData.Nama, result.Value.Nama);
+        }
+
+        [Fact]
+        public async Task Handle_Default_ReturnsFailure_WhenDataNotFound()
+        {
+            // Arrange
+            var mockConnectionFactory = new Mock<IDbConnectionFactory>();
+            var mockConnection = new Mock<DbConnection>();
+
+            mockConnection.SetupDapperAsync(c =>
+                c.QuerySingleOrDefaultAsync<JumlahKolaboratorPublikasBereputasiDefaultResponse>(
+                    It.IsAny<string>(),
+                    It.IsAny<object>(),
+                    It.IsAny<IDbTransaction>(),
+                    It.IsAny<int?>(),
+                    It.IsAny<System.Data.CommandType?>()
+                )
+            ).ReturnsAsync((JumlahKolaboratorPublikasBereputasiDefaultResponse?)null);
+
+            mockConnectionFactory.Setup(f => f.OpenConnectionAsync())
+                .ReturnsAsync(mockConnection.Object);
+
+            var handler = new GetJumlahKolaboratorPublikasBereputasiDefaultQueryHandler(mockConnectionFactory.Object);
+            var query = new GetJumlahKolaboratorPublikasBereputasiDefaultQuery(Guid.NewGuid());
+
+            // Act
+            var result = await handler.Handle(query, CancellationToken.None);
+
+            // Assert
+            Assert.False(result.IsSuccess);
+        }
+
+        [Fact]
+        public async Task Handle_ReturnsSuccess_WhenDataExists()
+        {
+            // Arrange
+            var mockConnectionFactory = new Mock<IDbConnectionFactory>();
+            var mockConnection = new Mock<DbConnection>();
+            var uuid = Guid.NewGuid().ToString();
+
+            var fakeData = new JumlahKolaboratorPublikasBereputasiResponse
+            {
+                Uuid = uuid,
+                Nama = "Publikasi 1",
+                BobotPDP = 1,
+                BobotTerapan = 2,
+                BobotKerjasama = 3,
+                BobotPenelitianDasar = 4,
+                Skor = 10
+            };
+
+            mockConnection.SetupDapperAsync(c =>
+                c.QuerySingleOrDefaultAsync<JumlahKolaboratorPublikasBereputasiResponse>(
+                    It.IsAny<string>(),
+                    It.IsAny<object>(),
+                    It.IsAny<IDbTransaction>(),
+                    It.IsAny<int?>(),
+                    It.IsAny<System.Data.CommandType?>()
+                )
+            ).ReturnsAsync(fakeData);
+
+            mockConnectionFactory.Setup(f => f.OpenConnectionAsync())
+                .ReturnsAsync(mockConnection.Object);
+
+            var handler = new GetJumlahKolaboratorPublikasBereputasiQueryHandler(mockConnectionFactory.Object);
+            var query = new GetJumlahKolaboratorPublikasBereputasiQuery(Guid.Parse(uuid));
+
+            // Act
+            var result = await handler.Handle(query, CancellationToken.None);
+
+            // Assert
+            Assert.True(result.IsSuccess);
+            Assert.Equal(fakeData.Nama, result.Value.Nama);
+        }
+
+        [Fact]
+        public async Task Handle_ReturnsFailure_WhenDataNotFound()
+        {
+            // Arrange
+            var mockConnectionFactory = new Mock<IDbConnectionFactory>();
+            var mockConnection = new Mock<DbConnection>();
+
+            mockConnection.SetupDapperAsync(c =>
+                c.QuerySingleOrDefaultAsync<JumlahKolaboratorPublikasBereputasiResponse>(
+                    It.IsAny<string>(),
+                    It.IsAny<object>(),
+                    It.IsAny<IDbTransaction>(),
+                    It.IsAny<int?>(),
+                    It.IsAny<System.Data.CommandType?>()
+                )
+            ).ReturnsAsync((JumlahKolaboratorPublikasBereputasiResponse?)null);
+
+            mockConnectionFactory.Setup(f => f.OpenConnectionAsync())
+                .ReturnsAsync(mockConnection.Object);
+
+            var handler = new GetJumlahKolaboratorPublikasBereputasiQueryHandler(mockConnectionFactory.Object);
+            var query = new GetJumlahKolaboratorPublikasBereputasiQuery(Guid.NewGuid());
+
+            // Act
+            var result = await handler.Handle(query, CancellationToken.None);
+
+            // Assert
+            Assert.False(result.IsSuccess);
+        }
+
+        [Theory]
+        [InlineData("Penelitian Dasar", 10)]
+        [InlineData("Penelitian Terapan", 20)]
+        [InlineData("Penelitian Kolaborasi", 30)]
+        [InlineData("Penelitian Dosen Pemula (PDP)", 40)]
+        public async Task Handle_ReturnsSuccess_WhenSingleValueExists(string kategori, int expectedValue)
+        {
+            // Arrange
+            var mockConnectionFactory = new Mock<IDbConnectionFactory>();
+            var mockConnection = new Mock<DbConnection>();
+
+            mockConnection.SetupDapperAsync(c =>
+                c.QueryAsync<int>(It.IsAny<string>(), It.IsAny<object>(), It.IsAny<IDbTransaction>(), It.IsAny<int?>(), It.IsAny<System.Data.CommandType?>())
+            ).ReturnsAsync(new List<int> { expectedValue });
+
+            mockConnectionFactory.Setup(f => f.OpenConnectionAsync())
+                .ReturnsAsync(mockConnection.Object);
+
+            var handler = new GetBobotJumlahKolaboratorPublikasBereputasiQueryHandler(mockConnectionFactory.Object);
+            var query = new GetBobotJumlahKolaboratorPublikasBereputasiQuery(kategori);
+
+            // Act
+            var result = await handler.Handle(query, CancellationToken.None);
+
+            // Assert
+            Assert.True(result.IsSuccess);
+            Assert.Equal(expectedValue, result.Value);
+        }
+
+        [Fact]
+        public async Task Handle_ReturnsFailure_WhenEmptyData()
+        {
+            // Arrange
+            var mockConnectionFactory = new Mock<IDbConnectionFactory>();
+            var mockConnection = new Mock<DbConnection>();
+
+            mockConnection.SetupDapperAsync(c =>
+                c.QueryAsync<int>(It.IsAny<string>(), It.IsAny<object>(), It.IsAny<IDbTransaction>(), It.IsAny<int?>(), It.IsAny<System.Data.CommandType?>())
+            ).ReturnsAsync(new List<int>());
+
+            mockConnectionFactory.Setup(f => f.OpenConnectionAsync())
+                .ReturnsAsync(mockConnection.Object);
+
+            var handler = new GetBobotJumlahKolaboratorPublikasBereputasiQueryHandler(mockConnectionFactory.Object);
+            var query = new GetBobotJumlahKolaboratorPublikasBereputasiQuery("Penelitian Dasar");
+
+            // Act
+            var result = await handler.Handle(query, CancellationToken.None);
+
+            // Assert
+            Assert.False(result.IsSuccess);
+        }
+
+        [Fact]
+        public async Task Handle_ReturnsFailure_WhenMultipleValues()
+        {
+            // Arrange
+            var mockConnectionFactory = new Mock<IDbConnectionFactory>();
+            var mockConnection = new Mock<DbConnection>();
+
+            mockConnection.SetupDapperAsync(c =>
+                c.QueryAsync<int>(It.IsAny<string>(), It.IsAny<object>(), It.IsAny<IDbTransaction>(), It.IsAny<int?>(), It.IsAny<System.Data.CommandType?>())
+            ).ReturnsAsync(new List<int> { 10, 20 });
+
+            mockConnectionFactory.Setup(f => f.OpenConnectionAsync())
+                .ReturnsAsync(mockConnection.Object);
+
+            var handler = new GetBobotJumlahKolaboratorPublikasBereputasiQueryHandler(mockConnectionFactory.Object);
+            var query = new GetBobotJumlahKolaboratorPublikasBereputasiQuery("Penelitian Dasar");
+
+            // Act
+            var result = await handler.Handle(query, CancellationToken.None);
+
+            // Assert
+            Assert.False(result.IsSuccess);
+        }
+
+        [Fact]
+        public async Task Handle_ReturnsFailure_WhenUnknownKategori()
+        {
+            // Arrange
+            var mockConnectionFactory = new Mock<IDbConnectionFactory>();
+            var handler = new GetBobotJumlahKolaboratorPublikasBereputasiQueryHandler(mockConnectionFactory.Object);
+            var query = new GetBobotJumlahKolaboratorPublikasBereputasiQuery("Kategori Tidak Valid");
+
+            // Act
+            var result = await handler.Handle(query, CancellationToken.None);
+
+            // Assert
+            Assert.False(result.IsSuccess);
         }
     }
 }
