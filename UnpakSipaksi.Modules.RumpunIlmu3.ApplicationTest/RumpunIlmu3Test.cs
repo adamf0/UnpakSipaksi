@@ -5,7 +5,11 @@ using Microsoft.Extensions.DependencyInjection;
 using Moq;
 using System.Reflection;
 using UnpakSipaksi.Common.Domain;
+using UnpakSipaksi.Modules.RumpunIlmu1.PublicApi;
+using UnpakSipaksi.Modules.RumpunIlmu2.Application.CreateRumpunIlmu2;
 using UnpakSipaksi.Modules.RumpunIlmu2.Application.DeleteRumpunIlmu2;
+using UnpakSipaksi.Modules.RumpunIlmu2.Application.UpdateRumpunIlmu2;
+using UnpakSipaksi.Modules.RumpunIlmu2.Domain.RumpunIlmu2;
 using UnpakSipaksi.Modules.RumpunIlmu2.PublicApi;
 using UnpakSipaksi.Modules.RumpunIlmu3.Application.Abstractions.Data;
 using UnpakSipaksi.Modules.RumpunIlmu3.Application.CreateRumpunIlmu3;
@@ -164,14 +168,33 @@ namespace Application.Integration.Tests
         [Fact]
         public async Task Create_ShouldThrow_WhenRumpunIlmu2NotExist()
         {
-            var nama = "tes";
-            var rumpunIlmu2 = Guid.NewGuid().ToString(); // contoh melanggar aturan domain
+            var namaBefore = "tes";
+            var rumpunIlmu2Before = Guid.NewGuid().ToString();
 
-            var command = new CreateRumpunIlmu3Command(nama, rumpunIlmu2);
-            var result = await Sender.Send(command);
+            var rumpunIlmu2Mock = new Mock<IRumpunIlmu2Api>();
+            rumpunIlmu2Mock.Setup(x => x.GetAsync(It.IsAny<Guid>(), It.IsAny<CancellationToken>()))
+                .ReturnsAsync(new RumpunIlmu2Response("1", Guid.NewGuid().ToString(), "rumpun2"));
 
-            Assert.True(result.IsFailure);
-            Assert.Equal("RumpunIlmu3.RumpunIlmu2NotFound", result.Error.Code);
+            // CREATE
+            using (var scope = Factory.Services.CreateScope())
+            {
+                var services = scope.ServiceProvider;
+
+                var handler = new CreateRumpunIlmu3CommandHandler(
+                    services.GetRequiredService<IRumpunIlmu3Repository>(),
+                    rumpunIlmu2Mock.Object,
+                    services.GetRequiredService<IUnitOfWork>()
+                );
+
+                var command = new CreateRumpunIlmu3Command(namaBefore, rumpunIlmu2Before);
+
+                // Act
+                var createResult = await handler.Handle(command, CancellationToken.None);
+
+                // Assert
+                Assert.True(createResult.IsFailure);
+                Assert.Equal("RumpunIlmu3.RumpunIlmu2NotFound", createResult.Error.Code);
+            }
         }
         [Fact]
         public async Task Create_ShouldThrow_WhenDomainRule()
@@ -305,17 +328,34 @@ namespace Application.Integration.Tests
         }
 
         [Fact]
-        public async Task Update_ShouldThrow_WhenRumpunIlmu1NotExist()
+        public async Task Update_ShouldThrow_WhenRumpunIlmu2NotExist()
         {
             var guid = Guid.NewGuid().ToString();
             var nama = "tes";
             var rumpunIlmu2 = Guid.NewGuid().ToString();
 
-            var command = new UpdateRumpunIlmu3Command(guid, nama, rumpunIlmu2);
-            var result = await Sender.Send(command);
+            var rumpunIlmu2Mock = new Mock<IRumpunIlmu2Api>();
+            rumpunIlmu2Mock.Setup(x => x.GetAsync(It.IsAny<Guid>(), It.IsAny<CancellationToken>()))
+                .ReturnsAsync(new RumpunIlmu2Response("1", Guid.NewGuid().ToString(), "rumpun2"));
 
-            Assert.True(result.IsFailure);
-            Assert.Equal("RumpunIlmu3.RumpunIlmu2NotFound", result.Error.Code);
+            using (var scope = Factory.Services.CreateScope())
+            {
+                var services = scope.ServiceProvider;
+
+                var handlerUpdate = new UpdateRumpunIlmu3CommandHandler(
+                    services.GetRequiredService<IRumpunIlmu3Repository>(),
+                    rumpunIlmu2Mock.Object,
+                    services.GetRequiredService<IUnitOfWork>()
+                );
+
+                var updateCommand = new UpdateRumpunIlmu3Command(guid, nama, rumpunIlmu2);
+
+                // Act
+                var updateResult = await handlerUpdate.Handle(updateCommand, CancellationToken.None);
+
+                Assert.True(updateResult.IsFailure);
+                Assert.Equal("RumpunIlmu3.RumpunIlmu2NotFound", updateResult.Error.Code);
+            }
         }
 
         [Fact]

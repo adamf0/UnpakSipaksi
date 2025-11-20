@@ -160,14 +160,33 @@ namespace Application.Integration.Tests
         [Fact]
         public async Task Create_ShouldThrow_WhenRumpunIlmu1NotExist()
         {
-            var nama = "tes";
-            var rumpunIlmu1 = Guid.NewGuid().ToString(); // contoh melanggar aturan domain
+            var namaBefore = "tes";
+            var rumpunIlmu1Before = Guid.NewGuid().ToString();
 
-            var command = new CreateRumpunIlmu2Command(nama, rumpunIlmu1);
-            var result = await Sender.Send(command);
+            var rumpunIlmu1Mock = new Mock<IRumpunIlmu1Api>();
+            rumpunIlmu1Mock.Setup(x => x.GetAsync(It.IsAny<Guid>(), It.IsAny<CancellationToken>()))
+                .ReturnsAsync(new RumpunIlmu1Response("1", Guid.NewGuid().ToString(), "rumpun1"));
 
-            Assert.True(result.IsFailure);
-            Assert.Equal("RumpunIlmu2.RumpunIlmu1NotFound", result.Error.Code);
+            // CREATE
+            using (var scope = Factory.Services.CreateScope())
+            {
+                var services = scope.ServiceProvider;
+
+                var handler = new CreateRumpunIlmu2CommandHandler(
+                    services.GetRequiredService<IRumpunIlmu2Repository>(),
+                    rumpunIlmu1Mock.Object,
+                    services.GetRequiredService<IUnitOfWork>()
+                );
+
+                var command = new CreateRumpunIlmu2Command(namaBefore, rumpunIlmu1Before);
+
+                // Act
+                var createResult = await handler.Handle(command, CancellationToken.None);
+
+                // Assert
+                Assert.True(createResult.IsFailure);
+                Assert.Equal("RumpunIlmu2.RumpunIlmu1NotFound", createResult.Error.Code);
+            }
         }
         [Fact]
         public async Task Create_ShouldThrow_WhenDomainRule()
@@ -307,11 +326,28 @@ namespace Application.Integration.Tests
             var nama = "tes";
             var rumpunIlmu1 = Guid.NewGuid().ToString();
 
-            var command = new UpdateRumpunIlmu2Command(guid, nama, rumpunIlmu1);
-            var result = await Sender.Send(command);
+            var rumpunIlmu1Mock = new Mock<IRumpunIlmu1Api>();
+            rumpunIlmu1Mock.Setup(x => x.GetAsync(It.IsAny<Guid>(), It.IsAny<CancellationToken>()))
+                .ReturnsAsync(new RumpunIlmu1Response("1", Guid.NewGuid().ToString(), "rumpun1"));
 
-            Assert.True(result.IsFailure);
-            Assert.Equal("RumpunIlmu2.RumpunIlmu1NotFound", result.Error.Code);
+            using (var scope = Factory.Services.CreateScope())
+            {
+                var services = scope.ServiceProvider;
+
+                var handlerUpdate = new UpdateRumpunIlmu2CommandHandler(
+                    services.GetRequiredService<IRumpunIlmu2Repository>(),
+                    rumpunIlmu1Mock.Object,
+                    services.GetRequiredService<IUnitOfWork>()
+                );
+
+                var updateCommand = new UpdateRumpunIlmu2Command(guid, nama, rumpunIlmu1);
+
+                // Act
+                var updateResult = await handlerUpdate.Handle(updateCommand, CancellationToken.None);
+
+                Assert.True(updateResult.IsFailure);
+                Assert.Equal("RumpunIlmu2.RumpunIlmu1NotFound", updateResult.Error.Code);
+            }
         }
 
         [Fact]
