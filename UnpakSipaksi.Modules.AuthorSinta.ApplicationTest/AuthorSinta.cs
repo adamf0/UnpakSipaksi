@@ -1,9 +1,16 @@
-﻿using MediatR;
+﻿using Dapper;
+using MediatR;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.DependencyInjection;
+using Moq;
+using Moq.Dapper;
+using System.Data.Common;
+using UnpakSipaksi.Common.Application.Data;
 using UnpakSipaksi.Common.Domain;
 using UnpakSipaksi.Modules.AuthorSinta.Application.CreateAuthorSinta;
 using UnpakSipaksi.Modules.AuthorSinta.Application.DeleteAuthorSinta;
+using UnpakSipaksi.Modules.AuthorSinta.Application.GetAllAuthorSinta;
+using UnpakSipaksi.Modules.AuthorSinta.Application.GetAuthorSinta;
 using UnpakSipaksi.Modules.AuthorSinta.Application.UpdateAuthorSinta;
 using UnpakSipaksi.Modules.AuthorSinta.ApplicationTest;
 using Xunit;
@@ -240,5 +247,106 @@ namespace Application.Integration.Tests
             Assert.True(deleteResult.IsFailure);
             Assert.Equal("AuthorSinta.NotFound", deleteResult.Error.Code);
         }
+
+        [Fact]
+        public async Task HandleList_ReturnsSuccess_WhenDataExists()
+        {
+            var mockConnectionFactory = new Mock<IDbConnectionFactory>();
+            var mockConnection = new Mock<DbConnection>();
+
+            var fakeData = new List<AuthorSintaResponse>
+            {
+                new AuthorSintaResponse { Uuid = "1", Nidn = "123", AuthorId = "A1", Score = 80 }
+            };
+
+            mockConnection.SetupDapperAsync(c => c.QueryAsync<AuthorSintaResponse>(
+                It.IsAny<string>(), It.IsAny<object>(), null, null, null))
+                .ReturnsAsync(fakeData);
+
+            mockConnectionFactory
+                .Setup(f => f.OpenConnectionAsync())
+                .Returns(new ValueTask<DbConnection>(mockConnection.Object));
+
+            var handler = new GetAllAuthorSintaQueryHandler(mockConnectionFactory.Object);
+            var query = new GetAllAuthorSintaQuery();
+
+            var result = await handler.Handle(query, CancellationToken.None);
+
+            Assert.True(result.IsSuccess);
+            Assert.NotEmpty(result.Value);
+            Assert.Equal(fakeData.First().Uuid, result.Value.First().Uuid);
+        }
+
+        [Fact]
+        public async Task HandleList_ReturnsFailure_WhenNoData()
+        {
+            var mockConnectionFactory = new Mock<IDbConnectionFactory>();
+            var mockConnection = new Mock<DbConnection>();
+
+            mockConnection.SetupDapperAsync(c => c.QueryAsync<AuthorSintaResponse>(
+                It.IsAny<string>(), It.IsAny<object>(), null, null, null))
+                .ReturnsAsync(new List<AuthorSintaResponse>());
+
+            mockConnectionFactory
+                .Setup(f => f.OpenConnectionAsync())
+                .Returns(new ValueTask<DbConnection>(mockConnection.Object));
+
+            var handler = new GetAllAuthorSintaQueryHandler(mockConnectionFactory.Object);
+            var query = new GetAllAuthorSintaQuery();
+
+            var result = await handler.Handle(query, CancellationToken.None);
+
+            Assert.False(result.IsSuccess);
+        }
+
+        [Fact]
+        public async Task HandleSingle_ReturnsSuccess_WhenDataExists()
+        {
+            var mockConnectionFactory = new Mock<IDbConnectionFactory>();
+            var mockConnection = new Mock<DbConnection>();
+            var uuid = Guid.NewGuid();
+
+            var fakeData = new AuthorSintaResponse { Uuid = uuid.ToString(), Nidn = "123", AuthorId = "A1", Score = 80 };
+
+            mockConnection.SetupDapperAsync(c => c.QuerySingleOrDefaultAsync<AuthorSintaResponse>(
+                It.IsAny<string>(), It.IsAny<object>(), null, null, null))
+                .ReturnsAsync(fakeData);
+
+            mockConnectionFactory
+                .Setup(f => f.OpenConnectionAsync())
+                .Returns(new ValueTask<DbConnection>(mockConnection.Object));
+
+            var handler = new GetAuthorSintaQueryHandler(mockConnectionFactory.Object);
+            var query = new GetAuthorSintaQuery(uuid);
+
+            var result = await handler.Handle(query, CancellationToken.None);
+
+            Assert.True(result.IsSuccess);
+            Assert.Equal(fakeData.Uuid, result.Value.Uuid);
+        }
+
+        [Fact]
+        public async Task HandleSingle_ReturnsFailure_WhenDataNotFound()
+        {
+            var mockConnectionFactory = new Mock<IDbConnectionFactory>();
+            var mockConnection = new Mock<DbConnection>();
+
+            mockConnection.SetupDapperAsync(c => c.QuerySingleOrDefaultAsync<AuthorSintaResponse>(
+                It.IsAny<string>(), It.IsAny<object>(), null, null, null))
+                .ReturnsAsync((AuthorSintaResponse?)null);
+
+            mockConnectionFactory
+                .Setup(f => f.OpenConnectionAsync())
+                .Returns(new ValueTask<DbConnection>(mockConnection.Object));
+
+            var handler = new GetAuthorSintaQueryHandler(mockConnectionFactory.Object);
+            var query = new GetAuthorSintaQuery(Guid.NewGuid());
+
+            var result = await handler.Handle(query, CancellationToken.None);
+
+            Assert.False(result.IsSuccess);
+        }
+
+
     }
 }

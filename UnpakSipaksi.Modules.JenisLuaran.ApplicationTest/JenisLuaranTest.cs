@@ -1,8 +1,15 @@
-﻿using MediatR;
+﻿using Dapper;
+using MediatR;
 using Microsoft.Extensions.DependencyInjection;
+using Moq;
+using Moq.Dapper;
+using System.Data.Common;
+using UnpakSipaksi.Common.Application.Data;
 using UnpakSipaksi.Common.Domain;
 using UnpakSipaksi.Modules.JenisLuaran.Application.CreateJenisLuaran;
 using UnpakSipaksi.Modules.JenisLuaran.Application.DeleteJenisLuaran;
+using UnpakSipaksi.Modules.JenisLuaran.Application.GetAllJenisLuaran;
+using UnpakSipaksi.Modules.JenisLuaran.Application.GetJenisLuaran;
 using UnpakSipaksi.Modules.JenisLuaran.Application.UpdateJenisLuaran;
 using UnpakSipaksi.Modules.JenisLuaran.ApplicationTest;
 using Xunit;
@@ -171,6 +178,146 @@ namespace Application.Integration.Tests
 
             Assert.True(deleteResult.IsFailure);
             Assert.Equal("JenisLuaran.NotFound", deleteResult.Error.Code);
+        }
+
+        [Fact]
+        public async Task GetAllJenisLuaran_ReturnsSuccess_WhenDataExists()
+        {
+            var mockConnectionFactory = new Mock<IDbConnectionFactory>();
+            var mockConnection = new Mock<DbConnection>();
+
+            var fakeData = new List<JenisLuaranResponse>
+            {
+                new JenisLuaranResponse { Uuid = Guid.NewGuid().ToString(), Nama = "Luaran 1" }
+            };
+
+            mockConnection.SetupDapperAsync(c => c.QueryAsync<JenisLuaranResponse>(
+                It.IsAny<string>(), null, null, null, null))
+                .ReturnsAsync(fakeData);
+
+            mockConnectionFactory.Setup(f => f.OpenConnectionAsync())
+                .Returns(new ValueTask<DbConnection>(mockConnection.Object));
+
+            var handler = new GetAllJenisLuaranQueryHandler(mockConnectionFactory.Object);
+            var query = new GetAllJenisLuaranQuery();
+
+            var result = await handler.Handle(query, CancellationToken.None);
+
+            Assert.True(result.IsSuccess);
+            Assert.NotEmpty(result.Value);
+            Assert.Equal(fakeData.First().Nama, result.Value.First().Nama);
+        }
+
+        [Fact]
+        public async Task GetAllJenisLuaran_ReturnsFailure_WhenNoData()
+        {
+            var mockConnectionFactory = new Mock<IDbConnectionFactory>();
+            var mockConnection = new Mock<DbConnection>();
+
+            mockConnection.SetupDapperAsync(c => c.QueryAsync<JenisLuaranResponse>(
+                It.IsAny<string>(), null, null, null, null))
+                .ReturnsAsync(new List<JenisLuaranResponse>());
+
+            mockConnectionFactory.Setup(f => f.OpenConnectionAsync())
+                .Returns(new ValueTask<DbConnection>(mockConnection.Object));
+
+            var handler = new GetAllJenisLuaranQueryHandler(mockConnectionFactory.Object);
+            var query = new GetAllJenisLuaranQuery();
+
+            var result = await handler.Handle(query, CancellationToken.None);
+
+            Assert.False(result.IsSuccess);
+        }
+
+        [Fact]
+        public async Task GetJenisLuaran_ReturnsSuccess_WhenDataExists()
+        {
+            var mockConnectionFactory = new Mock<IDbConnectionFactory>();
+            var mockConnection = new Mock<DbConnection>();
+            var uuid = Guid.NewGuid();
+
+            var fakeData = new JenisLuaranResponse { Uuid = uuid.ToString(), Nama = "Luaran 1" };
+
+            mockConnection.SetupDapperAsync(c => c.QuerySingleOrDefaultAsync<JenisLuaranResponse>(
+                It.IsAny<string>(), It.IsAny<object>(), null, null, null))
+                .ReturnsAsync(fakeData);
+
+            mockConnectionFactory.Setup(f => f.OpenConnectionAsync())
+                .Returns(new ValueTask<DbConnection>(mockConnection.Object));
+
+            var handler = new GetJenisLuaranQueryHandler(mockConnectionFactory.Object);
+            var query = new GetJenisLuaranQuery(uuid);
+
+            var result = await handler.Handle(query, CancellationToken.None);
+
+            Assert.True(result.IsSuccess);
+            Assert.Equal(fakeData.Nama, result.Value.Nama);
+        }
+
+        [Fact]
+        public async Task GetJenisLuaran_ReturnsFailure_WhenDataNotFound()
+        {
+            var mockConnectionFactory = new Mock<IDbConnectionFactory>();
+            var mockConnection = new Mock<DbConnection>();
+
+            mockConnection.SetupDapperAsync(c => c.QuerySingleOrDefaultAsync<JenisLuaranResponse>(
+                It.IsAny<string>(), It.IsAny<object>(), null, null, null))
+                .ReturnsAsync((JenisLuaranResponse?)null);
+
+            mockConnectionFactory.Setup(f => f.OpenConnectionAsync())
+                .Returns(new ValueTask<DbConnection>(mockConnection.Object));
+
+            var handler = new GetJenisLuaranQueryHandler(mockConnectionFactory.Object);
+            var query = new GetJenisLuaranQuery(Guid.NewGuid());
+
+            var result = await handler.Handle(query, CancellationToken.None);
+
+            Assert.False(result.IsSuccess);
+        }
+
+        [Fact]
+        public async Task GetJenisLuaranDefault_ReturnsSuccess_WhenDataExists()
+        {
+            var mockConnectionFactory = new Mock<IDbConnectionFactory>();
+            var mockConnection = new Mock<DbConnection>();
+
+            var fakeData = new JenisLuaranDefaultResponse { Uuid = Guid.NewGuid().ToString(), Id = "1", Nama = "Luaran Default" };
+
+            mockConnection.SetupDapperAsync(c => c.QuerySingleOrDefaultAsync<JenisLuaranDefaultResponse>(
+                It.IsAny<string>(), It.IsAny<object>(), null, null, null))
+                .ReturnsAsync(fakeData);
+
+            mockConnectionFactory.Setup(f => f.OpenConnectionAsync())
+                .Returns(new ValueTask<DbConnection>(mockConnection.Object));
+
+            var handler = new GetJenisLuaranDefaultQueryHandler(mockConnectionFactory.Object);
+            var query = new GetJenisLuaranDefaultQuery(Guid.Parse(fakeData.Uuid));
+
+            var result = await handler.Handle(query, CancellationToken.None);
+
+            Assert.True(result.IsSuccess);
+            Assert.Equal(fakeData.Nama, result.Value.Nama);
+        }
+
+        [Fact]
+        public async Task GetJenisLuaranDefault_ReturnsFailure_WhenDataNotFound()
+        {
+            var mockConnectionFactory = new Mock<IDbConnectionFactory>();
+            var mockConnection = new Mock<DbConnection>();
+
+            mockConnection.SetupDapperAsync(c => c.QuerySingleOrDefaultAsync<JenisLuaranDefaultResponse>(
+                It.IsAny<string>(), It.IsAny<object>(), null, null, null))
+                .ReturnsAsync((JenisLuaranDefaultResponse?)null);
+
+            mockConnectionFactory.Setup(f => f.OpenConnectionAsync())
+                .Returns(new ValueTask<DbConnection>(mockConnection.Object));
+
+            var handler = new GetJenisLuaranDefaultQueryHandler(mockConnectionFactory.Object);
+            var query = new GetJenisLuaranDefaultQuery(Guid.NewGuid());
+
+            var result = await handler.Handle(query, CancellationToken.None);
+
+            Assert.False(result.IsSuccess);
         }
     }
 }

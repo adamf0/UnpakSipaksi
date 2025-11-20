@@ -1,8 +1,15 @@
-﻿using MediatR;
+﻿using Dapper;
+using MediatR;
 using Microsoft.Extensions.DependencyInjection;
+using Moq;
+using Moq.Dapper;
+using System.Data.Common;
+using UnpakSipaksi.Common.Application.Data;
 using UnpakSipaksi.Common.Domain;
 using UnpakSipaksi.Modules.FokusPengabdian.Application.CreateFokusPengabdian;
 using UnpakSipaksi.Modules.FokusPengabdian.Application.DeleteFokusPengabdian;
+using UnpakSipaksi.Modules.FokusPengabdian.Application.GetAllFokusPengabdian;
+using UnpakSipaksi.Modules.FokusPengabdian.Application.GetFokusPengabdian;
 using UnpakSipaksi.Modules.FokusPengabdian.Application.UpdateFokusPengabdian;
 using Xunit;
 
@@ -158,6 +165,146 @@ namespace UnpakSipaksi.Modules.FokusPengabdian.ApplicationTest
 
             Assert.True(deleteResult.IsFailure);
             Assert.Equal("FokusPengabdian.NotFound", deleteResult.Error.Code);
+        }
+
+        [Fact]
+        public async Task GetAllFokusPengabdian_ReturnsSuccess_WhenDataExists()
+        {
+            var mockConnectionFactory = new Mock<IDbConnectionFactory>();
+            var mockConnection = new Mock<DbConnection>();
+
+            var fakeData = new List<FokusPengabdianResponse>
+            {
+                new FokusPengabdianResponse { Uuid = Guid.NewGuid().ToString(), Nama = "Pengabdian 1" }
+            };
+
+            mockConnection.SetupDapperAsync(c => c.QueryAsync<FokusPengabdianResponse>(
+                It.IsAny<string>(), null, null, null, null))
+                .ReturnsAsync(fakeData);
+
+            mockConnectionFactory.Setup(f => f.OpenConnectionAsync())
+                .Returns(new ValueTask<DbConnection>(mockConnection.Object));
+
+            var handler = new GetAllFokusPengabdianQueryHandler(mockConnectionFactory.Object);
+            var query = new GetAllFokusPengabdianQuery();
+
+            var result = await handler.Handle(query, CancellationToken.None);
+
+            Assert.True(result.IsSuccess);
+            Assert.NotEmpty(result.Value);
+            Assert.Equal(fakeData.First().Nama, result.Value.First().Nama);
+        }
+
+        [Fact]
+        public async Task GetAllFokusPengabdian_ReturnsFailure_WhenNoData()
+        {
+            var mockConnectionFactory = new Mock<IDbConnectionFactory>();
+            var mockConnection = new Mock<DbConnection>();
+
+            mockConnection.SetupDapperAsync(c => c.QueryAsync<FokusPengabdianResponse>(
+                It.IsAny<string>(), null, null, null, null))
+                .ReturnsAsync(new List<FokusPengabdianResponse>());
+
+            mockConnectionFactory.Setup(f => f.OpenConnectionAsync())
+                .Returns(new ValueTask<DbConnection>(mockConnection.Object));
+
+            var handler = new GetAllFokusPengabdianQueryHandler(mockConnectionFactory.Object);
+            var query = new GetAllFokusPengabdianQuery();
+
+            var result = await handler.Handle(query, CancellationToken.None);
+
+            Assert.False(result.IsSuccess);
+        }
+
+        [Fact]
+        public async Task GetFokusPengabdian_ReturnsSuccess_WhenDataExists()
+        {
+            var mockConnectionFactory = new Mock<IDbConnectionFactory>();
+            var mockConnection = new Mock<DbConnection>();
+            var uuid = Guid.NewGuid();
+
+            var fakeData = new FokusPengabdianResponse { Uuid = uuid.ToString(), Nama = "Pengabdian 1" };
+
+            mockConnection.SetupDapperAsync(c => c.QuerySingleOrDefaultAsync<FokusPengabdianResponse>(
+                It.IsAny<string>(), It.IsAny<object>(), null, null, null))
+                .ReturnsAsync(fakeData);
+
+            mockConnectionFactory.Setup(f => f.OpenConnectionAsync())
+                .Returns(new ValueTask<DbConnection>(mockConnection.Object));
+
+            var handler = new GetFokusPengabdianQueryHandler(mockConnectionFactory.Object);
+            var query = new GetFokusPengabdianQuery(uuid);
+
+            var result = await handler.Handle(query, CancellationToken.None);
+
+            Assert.True(result.IsSuccess);
+            Assert.Equal(fakeData.Nama, result.Value.Nama);
+        }
+
+        [Fact]
+        public async Task GetFokusPengabdian_ReturnsFailure_WhenDataNotFound()
+        {
+            var mockConnectionFactory = new Mock<IDbConnectionFactory>();
+            var mockConnection = new Mock<DbConnection>();
+
+            mockConnection.SetupDapperAsync(c => c.QuerySingleOrDefaultAsync<FokusPengabdianResponse>(
+                It.IsAny<string>(), It.IsAny<object>(), null, null, null))
+                .ReturnsAsync((FokusPengabdianResponse?)null);
+
+            mockConnectionFactory.Setup(f => f.OpenConnectionAsync())
+                .Returns(new ValueTask<DbConnection>(mockConnection.Object));
+
+            var handler = new GetFokusPengabdianQueryHandler(mockConnectionFactory.Object);
+            var query = new GetFokusPengabdianQuery(Guid.NewGuid());
+
+            var result = await handler.Handle(query, CancellationToken.None);
+
+            Assert.False(result.IsSuccess);
+        }
+
+        [Fact]
+        public async Task GetFokusPengabdianDefault_ReturnsSuccess_WhenDataExists()
+        {
+            var mockConnectionFactory = new Mock<IDbConnectionFactory>();
+            var mockConnection = new Mock<DbConnection>();
+
+            var fakeData = new FokusPengabdianDefaultResponse { Uuid = Guid.NewGuid().ToString(), Nama = "Pengabdian Default" };
+
+            mockConnection.SetupDapperAsync(c => c.QuerySingleOrDefaultAsync<FokusPengabdianDefaultResponse>(
+                It.IsAny<string>(), It.IsAny<object>(), null, null, null))
+                .ReturnsAsync(fakeData);
+
+            mockConnectionFactory.Setup(f => f.OpenConnectionAsync())
+                .Returns(new ValueTask<DbConnection>(mockConnection.Object));
+
+            var handler = new GetFokusPengabdianDefaultQueryHandler(mockConnectionFactory.Object);
+            var query = new GetFokusPengabdianDefaultQuery(Guid.Parse(fakeData.Uuid));
+
+            var result = await handler.Handle(query, CancellationToken.None);
+
+            Assert.True(result.IsSuccess);
+            Assert.Equal(fakeData.Nama, result.Value.Nama);
+        }
+
+        [Fact]
+        public async Task GetFokusPengabdianDefault_ReturnsFailure_WhenDataNotFound()
+        {
+            var mockConnectionFactory = new Mock<IDbConnectionFactory>();
+            var mockConnection = new Mock<DbConnection>();
+
+            mockConnection.SetupDapperAsync(c => c.QuerySingleOrDefaultAsync<FokusPengabdianDefaultResponse>(
+                It.IsAny<string>(), It.IsAny<object>(), null, null, null))
+                .ReturnsAsync((FokusPengabdianDefaultResponse?)null);
+
+            mockConnectionFactory.Setup(f => f.OpenConnectionAsync())
+                .Returns(new ValueTask<DbConnection>(mockConnection.Object));
+
+            var handler = new GetFokusPengabdianDefaultQueryHandler(mockConnectionFactory.Object);
+            var query = new GetFokusPengabdianDefaultQuery(Guid.NewGuid());
+
+            var result = await handler.Handle(query, CancellationToken.None);
+
+            Assert.False(result.IsSuccess);
         }
     }
 }

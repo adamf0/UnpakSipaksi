@@ -1,12 +1,9 @@
 ﻿using Dapper;
-using Docker.DotNet.Models;
 using MediatR;
-using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.DependencyInjection;
 using Moq;
 using Moq.Dapper;
 using System.Data.Common;
-using System.Reflection;
 using UnpakSipaksi.Common.Application.Data;
 using UnpakSipaksi.Common.Domain;
 using UnpakSipaksi.Modules.ArtikelMediaMassa.Application.CreateArtikelMediaMassa;
