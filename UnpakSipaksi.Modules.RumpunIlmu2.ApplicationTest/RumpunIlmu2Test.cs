@@ -1,6 +1,7 @@
 ﻿using Microsoft.Extensions.DependencyInjection;
 using Moq;
 using UnpakSipaksi.Common.Domain;
+using UnpakSipaksi.Modules.RumpunIlmu1.Domain.RumpunIlmu1;
 using UnpakSipaksi.Modules.RumpunIlmu1.PublicApi;
 using UnpakSipaksi.Modules.RumpunIlmu2.Application.Abstractions.Data;
 using UnpakSipaksi.Modules.RumpunIlmu2.Application.CreateRumpunIlmu2;
@@ -8,6 +9,8 @@ using UnpakSipaksi.Modules.RumpunIlmu2.Application.DeleteRumpunIlmu2;
 using UnpakSipaksi.Modules.RumpunIlmu2.Application.UpdateRumpunIlmu2;
 using UnpakSipaksi.Modules.RumpunIlmu2.ApplicationTest;
 using UnpakSipaksi.Modules.RumpunIlmu2.Domain.RumpunIlmu2;
+using UnpakSipaksi.Modules.RumpunIlmu3.Application.DeleteRumpunIlmu3;
+using UnpakSipaksi.Modules.RumpunIlmu3.Domain.RumpunIlmu3;
 using Xunit;
 using static Org.BouncyCastle.Crypto.Engines.SM2Engine;
 
@@ -353,13 +356,33 @@ namespace Application.Integration.Tests
         [Fact]
         public async Task Delete_ShouldThrow_WhenNotExist()
         {
-            var guid = Guid.NewGuid().ToString();
+            // Arrange
+            var uuid = Guid.NewGuid();
 
-            var command = new DeleteRumpunIlmu2Command(guid);
-            var result = await Sender.Send(command);
+            // Mock repository
+            var mockRepo = new Mock<IRumpunIlmu2Repository>();
+            mockRepo.Setup(r => r.GetAsync(uuid, It.IsAny<CancellationToken>()))
+                    .ReturnsAsync((RumpunIlmu2?)null);
 
-            Assert.True(result.IsFailure);
-            Assert.Equal("RumpunIlmu2.NotFound", result.Error.Code);
+            // Handler
+            using (var scope = Factory.Services.CreateScope())
+            {
+                var services = scope.ServiceProvider;
+
+                var handler = new DeleteRumpunIlmu2CommandHandler(
+                    mockRepo.Object,
+                    services.GetRequiredService<IUnitOfWork>()
+                );
+
+                var command = new DeleteRumpunIlmu2Command(uuid.ToString());
+
+                // Act
+                var result = await handler.Handle(command, CancellationToken.None);
+
+                // Assert
+                Assert.True(result.IsFailure);
+                Assert.Equal("RumpunIlmu3.NotFound", result.Error.Code);
+            }
         }
     }
 }

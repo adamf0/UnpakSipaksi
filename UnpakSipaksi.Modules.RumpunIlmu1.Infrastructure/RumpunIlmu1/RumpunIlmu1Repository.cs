@@ -7,9 +7,9 @@ namespace UnpakSipaksi.Modules.RumpunIlmu1.Infrastructure.RumpunIlmu1
 {
     internal sealed class RumpunIlmu1Repository(RumpunIlmu1DbContext context) : IRumpunIlmu1Repository
     {
-        public async Task<Domain.RumpunIlmu1.RumpunIlmu1> GetAsync(Guid Uuid, CancellationToken cancellationToken = default)
+        public async Task<Domain.RumpunIlmu1.RumpunIlmu1?> GetAsync(Guid Uuid, CancellationToken cancellationToken = default)
         {
-            Domain.RumpunIlmu1.RumpunIlmu1 temaPenelitian = await context.RumpunIlmu1.SingleOrDefaultAsync(e => e.Uuid == Uuid, cancellationToken);
+            Domain.RumpunIlmu1.RumpunIlmu1? temaPenelitian = await context.RumpunIlmu1.SingleOrDefaultAsync(e => e.Uuid == Uuid, cancellationToken);
             return temaPenelitian;
         }
 

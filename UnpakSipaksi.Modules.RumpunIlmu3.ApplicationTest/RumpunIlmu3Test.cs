@@ -361,13 +361,33 @@ namespace Application.Integration.Tests
         [Fact]
         public async Task Delete_ShouldThrow_WhenNotExist()
         {
-            var guid = Guid.NewGuid().ToString();
+            // Arrange
+            var uuid = Guid.NewGuid();
 
-            var command = new DeleteRumpunIlmu2Command(guid);
-            var result = await Sender.Send(command);
+            // Mock repository
+            var mockRepo = new Mock<IRumpunIlmu3Repository>();
+            mockRepo.Setup(r => r.GetAsync(uuid, It.IsAny<CancellationToken>()))
+                    .ReturnsAsync((RumpunIlmu3?)null);
 
-            Assert.True(result.IsFailure);
-            Assert.Equal("RumpunIlmu3.NotFound", result.Error.Code);
+            // Handler
+            using (var scope = Factory.Services.CreateScope())
+            {
+                var services = scope.ServiceProvider;
+
+                var handler = new DeleteRumpunIlmu3CommandHandler(
+                    mockRepo.Object,
+                    services.GetRequiredService<IUnitOfWork>()
+                );
+
+                var command = new DeleteRumpunIlmu3Command(uuid.ToString());
+
+                // Act
+                var result = await handler.Handle(command, CancellationToken.None);
+
+                // Assert
+                Assert.True(result.IsFailure);
+                Assert.Equal("RumpunIlmu3.NotFound", result.Error.Code);
+            }
         }
     }
 
