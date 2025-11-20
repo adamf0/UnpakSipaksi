@@ -9,8 +9,6 @@ using UnpakSipaksi.Modules.RumpunIlmu2.Application.DeleteRumpunIlmu2;
 using UnpakSipaksi.Modules.RumpunIlmu2.Application.UpdateRumpunIlmu2;
 using UnpakSipaksi.Modules.RumpunIlmu2.ApplicationTest;
 using UnpakSipaksi.Modules.RumpunIlmu2.Domain.RumpunIlmu2;
-using UnpakSipaksi.Modules.RumpunIlmu3.Application.DeleteRumpunIlmu3;
-using UnpakSipaksi.Modules.RumpunIlmu3.Domain.RumpunIlmu3;
 using Xunit;
 using static Org.BouncyCastle.Crypto.Engines.SM2Engine;
 
@@ -381,7 +379,7 @@ namespace Application.Integration.Tests
 
                 // Assert
                 Assert.True(result.IsFailure);
-                Assert.Equal("RumpunIlmu3.NotFound", result.Error.Code);
+                Assert.Equal("RumpunIlmu2.NotFound", result.Error.Code);
             }
         }
     }
