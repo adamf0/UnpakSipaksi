@@ -173,7 +173,7 @@ namespace Application.Integration.Tests
 
             var rumpunIlmu2Mock = new Mock<IRumpunIlmu2Api>();
             rumpunIlmu2Mock.Setup(x => x.GetAsync(It.IsAny<Guid>(), It.IsAny<CancellationToken>()))
-                .ReturnsAsync(new RumpunIlmu2Response("1", Guid.NewGuid().ToString(), "rumpun2"));
+                .ReturnsAsync((RumpunIlmu2Response?)null);
 
             // CREATE
             using (var scope = Factory.Services.CreateScope())
@@ -336,7 +336,7 @@ namespace Application.Integration.Tests
 
             var rumpunIlmu2Mock = new Mock<IRumpunIlmu2Api>();
             rumpunIlmu2Mock.Setup(x => x.GetAsync(It.IsAny<Guid>(), It.IsAny<CancellationToken>()))
-                .ReturnsAsync(new RumpunIlmu2Response("1", Guid.NewGuid().ToString(), "rumpun2"));
+                .ReturnsAsync((RumpunIlmu2Response?)null);
 
             using (var scope = Factory.Services.CreateScope())
             {
