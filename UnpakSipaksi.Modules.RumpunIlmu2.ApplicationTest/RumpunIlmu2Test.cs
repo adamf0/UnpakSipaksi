@@ -1,14 +1,10 @@
 ﻿using Microsoft.Extensions.DependencyInjection;
 using Moq;
-using MySqlX.XDevAPI.Common;
 using UnpakSipaksi.Common.Domain;
 using UnpakSipaksi.Modules.RumpunIlmu1.PublicApi;
 using UnpakSipaksi.Modules.RumpunIlmu2.Application.Abstractions.Data;
 using UnpakSipaksi.Modules.RumpunIlmu2.Application.CreateRumpunIlmu2;
-using UnpakSipaksi.Modules.RumpunIlmu2.Application.CreateRumpunIlmu2;
 using UnpakSipaksi.Modules.RumpunIlmu2.Application.DeleteRumpunIlmu2;
-using UnpakSipaksi.Modules.RumpunIlmu2.Application.DeleteRumpunIlmu2;
-using UnpakSipaksi.Modules.RumpunIlmu2.Application.UpdateRumpunIlmu2;
 using UnpakSipaksi.Modules.RumpunIlmu2.Application.UpdateRumpunIlmu2;
 using UnpakSipaksi.Modules.RumpunIlmu2.ApplicationTest;
 using UnpakSipaksi.Modules.RumpunIlmu2.Domain.RumpunIlmu2;
