@@ -3,6 +3,8 @@ using Microsoft.AspNetCore.Mvc.Testing;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.DependencyInjection;
 using Testcontainers.MySql;
+using UnpakSipaksi.Common.Application.Data;
+using UnpakSipaksi.Common.Infrastructure.Data;
 using UnpakSipaksi.Modules.AkurasiPenelitian.Infrastructure.Database;
 using Xunit;
 
@@ -35,6 +37,15 @@ namespace Application.Integration.Tests
                 services.AddDbContext<AkurasiPenelitianDbContext>(options =>
                 {
                     options.UseMySQL(_dbContainer.GetConnectionString());
+                });
+
+                var dbFactoryDescriptor = services.SingleOrDefault(d => d.ServiceType == typeof(IDbConnectionFactory));
+                if (dbFactoryDescriptor != null)
+                    services.Remove(dbFactoryDescriptor);
+
+                services.AddSingleton<IDbConnectionFactory>(sp =>
+                {
+                    return new DbConnectionFactory(_dbContainer.GetConnectionString());
                 });
             });
         }
