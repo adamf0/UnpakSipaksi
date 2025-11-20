@@ -39,7 +39,7 @@ namespace Application.Integration.Tests
                     options.UseMySQL(_dbContainer.GetConnectionString());
                 });
 
-                var dbFactoryDescriptor = services.SingleOrDefault(d => d.ServiceType == typeof(IDbConnectionFactory));
+                var dbFactoryDescriptor = services.FirstOrDefault(d => d.ServiceType == typeof(IDbConnectionFactory));
                 if (dbFactoryDescriptor != null)
                     services.Remove(dbFactoryDescriptor);
 
