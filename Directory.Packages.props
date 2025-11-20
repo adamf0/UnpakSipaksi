@@ -45,5 +45,6 @@
     <PackageVersion Include="xunit" Version="2.5.3" />
     <PackageVersion Include="xunit.extensibility.core" Version="2.5.3" />
     <PackageVersion Include="xunit.runner.visualstudio" Version="2.5.3" />
+	<PackageVersion Include="Moq.Dapper" Version="1.0.7" />
   </ItemGroup>
 </Project>

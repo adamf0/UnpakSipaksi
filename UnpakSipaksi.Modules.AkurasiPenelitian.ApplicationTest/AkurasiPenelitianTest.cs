@@ -1,5 +1,11 @@
-﻿using MediatR;
+﻿using Dapper;
+using MediatR;
 using Microsoft.Extensions.DependencyInjection;
+using Moq;
+using Moq.Dapper;
+using System.Data;
+using System.Data.Common;
+using UnpakSipaksi.Common.Application.Data;
 using UnpakSipaksi.Common.Domain;
 using UnpakSipaksi.Modules.AkurasiPenelitian.Application.CreateAkurasiPenelitian;
 using UnpakSipaksi.Modules.AkurasiPenelitian.Application.DeleteAkurasiPenelitian;
@@ -225,5 +231,67 @@ namespace Application.Integration.Tests
             Assert.Equal("AkurasiPenelitian.NotFound", deleteResult.Error.Code);
         }
 
+        [Fact]
+        public async Task Handle_ReturnsList_WhenDataExists()
+        {
+            // Arrange
+            var mockConnectionFactory = new Mock<IDbConnectionFactory>();
+            var mockConnection = new Mock<DbConnection>();
+
+            var fakeData = new List<AkurasiPenelitianResponse>
+            {
+                new AkurasiPenelitianResponse
+                {
+                    Uuid = "123",
+                    Nama = "Penelitian 1",
+                    Skor = 20
+                }
+            };
+
+            // Setup Dapper extension
+            mockConnection.SetupDapperAsync(c => c.QueryAsync<AkurasiPenelitianResponse>(
+            It.IsAny<string>(), null, null, null, null))
+            .ReturnsAsync(fakeData);
+
+            mockConnectionFactory
+             .Setup(f => f.OpenConnectionAsync())
+             .Returns(new ValueTask<DbConnection>(mockConnection.Object));
+
+            var handler = new GetAllAkurasiPenelitianQueryHandler(mockConnectionFactory.Object);
+            var query = new GetAllAkurasiPenelitianQuery();
+
+            // Act
+            var result = await handler.Handle(query, CancellationToken.None);
+
+            // Assert
+            Assert.True(result.IsSuccess);
+            Assert.NotEmpty(result.Value);
+            Assert.Equal(fakeData.First().Nama, result.Value.First().Nama);
+        }
+
+        [Fact]
+        public async Task Handle_ReturnsFailure_WhenNoData()
+        {
+            // Arrange
+            var mockConnectionFactory = new Mock<IDbConnectionFactory>();
+            var mockConnection = new Mock<DbConnection>();
+
+            // Empty data
+            mockConnection.SetupDapperAsync(c => c.QueryAsync<AkurasiPenelitianResponse>(
+                It.IsAny<string>(), null, null, null, null))
+                .ReturnsAsync(new List<AkurasiPenelitianResponse>());
+
+            mockConnectionFactory.Setup(f => f.OpenConnectionAsync())
+                .ReturnsAsync(mockConnection.Object);
+
+            var handler = new GetAllAkurasiPenelitianQueryHandler(mockConnectionFactory.Object);
+            var query = new GetAllAkurasiPenelitianQuery();
+
+            // Act
+            var result = await handler.Handle(query, CancellationToken.None);
+
+            // Assert
+            Assert.False(result.IsSuccess);
+        }
     }
 }

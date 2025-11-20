@@ -1487,6 +1487,19 @@
           "lib/net6.0/Moq.dll": {}
         }
       },
+      "Moq.Dapper/1.0.7": {
+        "type": "package",
+        "dependencies": {
+          "Dapper": "2.0.123",
+          "Moq": "4.18.4"
+        },
+        "compile": {
+          "lib/netstandard2.1/Moq.Dapper.dll": {}
+        },
+        "runtime": {
+          "lib/netstandard2.1/Moq.Dapper.dll": {}
+        }
+      },
       "MySql.Data/9.4.0": {
         "type": "package",
         "dependencies": {
@@ -11781,6 +11794,18 @@
         "readme.md"
       ]
     },
+    "Moq.Dapper/1.0.7": {
+      "sha512": "dW+M8etuQsvx1bSLTopozqz9+vfEuFc/nNwLUmwjI9TPEezGcmh8fcXD8+DsQOPwYqRwlTaQi+Gdba0Eh3YW/A==",
+      "type": "package",
+      "path": "moq.dapper/1.0.7",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "lib/netstandard2.1/Moq.Dapper.dll",
+        "moq.dapper.1.0.7.nupkg.sha512",
+        "moq.dapper.nuspec"
+      ]
+    },
     "MySql.Data/9.4.0": {
       "sha512": "yGfcv5TSj72rwUdywZqtM90qlZ9AuSNckG2Fb9OxuXkskhnqi/DGBaOji9z2G4q3BgFfddbm/WmZzFfAggjbSw==",
       "type": "package",
@@ -17836,10 +17861,12 @@
   },
   "projectFileDependencyGroups": {
     "net9.0": [
+      "Dapper >= 2.1.66",
       "Microsoft.AspNetCore.Mvc.Testing >= 9.0.9",
       "Microsoft.EntityFrameworkCore >= 9.0.9",
       "Microsoft.NET.Test.Sdk >= 17.8.0",
       "Moq >= 4.20.72",
+      "Moq.Dapper >= 1.0.7",
       "MySql.EntityFrameworkCore >= 9.0.6",
       "Testcontainers.MySql >= 4.7.0",
       "UnpakSipaksi >= 1.0.0",
@@ -17908,6 +17935,11 @@
       "net9.0": {
         "targetAlias": "net9.0",
         "dependencies": {
+          "Dapper": {
+            "target": "Package",
+            "version": "[2.1.66, )",
+            "versionCentrallyManaged": true
+          },
           "Microsoft.AspNetCore.Mvc.Testing": {
             "target": "Package",
             "version": "[9.0.9, )",
@@ -17926,6 +17958,11 @@
           "Moq": {
             "target": "Package",
             "version": "[4.20.72, )",
+            "versionCentrallyManaged": true
+          },
+          "Moq.Dapper": {
+            "target": "Package",
+            "version": "[1.0.7, )",
             "versionCentrallyManaged": true
           },
           "MySql.EntityFrameworkCore": {
@@ -17971,6 +18008,7 @@
           "Microsoft.VisualStudio.Azure.Containers.Tools.Targets": "1.22.1",
           "Minio.AspNetCore": "6.0.1",
           "Moq": "4.20.72",
+          "Moq.Dapper": "1.0.7",
           "MySql.EntityFrameworkCore": "9.0.6",
           "MySqlConnector": "2.4.0",
           "Newtonsoft.Json": "13.0.4",
