@@ -191,11 +191,12 @@ namespace Application.Integration.Tests
         public async Task Create_ShouldThrow_WhenDomainRule()
         {
             var nama = "tes";
-            var fokus = Guid.NewGuid().ToString();
+            var fokusId = "0";
+            var fokusUuid = Guid.NewGuid().ToString();
 
             var mock = new Mock<IFokusPenelitianApi>();
             mock.Setup(x => x.GetAsync(It.IsAny<Guid>(), It.IsAny<CancellationToken>()))
-                .ReturnsAsync(new FokusPenelitianResponse("0", fokus, "fokus"));
+                .ReturnsAsync(new FokusPenelitianResponse(fokusId, fokusUuid, "fokus"));
 
             using var scope = Factory.Services.CreateScope();
             var services = scope.ServiceProvider;
@@ -206,7 +207,7 @@ namespace Application.Integration.Tests
                 services.GetRequiredService<IUnitOfWork>()
             );
 
-            var cmd = new CreateTemaPenelitianCommand(nama, fokus);
+            var cmd = new CreateTemaPenelitianCommand(nama, fokusUuid);
             var result = await handler.Handle(cmd, CancellationToken.None);
 
             Assert.True(result.IsFailure);

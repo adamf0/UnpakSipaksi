@@ -189,11 +189,12 @@ namespace Application.Integration.Tests
         public async Task Create_ShouldThrow_WhenDomainRule()
         {
             var nama = "tes";
-            var tema = Guid.NewGuid().ToString();
+            var temaId = "0";
+            var temaUuid = Guid.NewGuid().ToString();
 
             var temaMock = new Mock<ITemaPenelitianApi>();
             temaMock.Setup(x => x.GetAsync(It.IsAny<Guid>(), It.IsAny<CancellationToken>()))
-                .ReturnsAsync(new TemaPenelitianResponse("0", Guid.NewGuid().ToString(), "uuid-fokus", tema));
+                .ReturnsAsync(new TemaPenelitianResponse(temaId, temaUuid, Guid.NewGuid().ToString(), "tema"));
 
             using var scope = Factory.Services.CreateScope();
             var services = scope.ServiceProvider;
@@ -204,7 +205,7 @@ namespace Application.Integration.Tests
                 services.GetRequiredService<IUnitOfWork>()
             );
 
-            var cmd = new CreateTopikPenelitianCommand(nama, tema);
+            var cmd = new CreateTopikPenelitianCommand(nama, temaUuid);
             var result = await handler.Handle(cmd, CancellationToken.None);
 
             Assert.True(result.IsFailure);
