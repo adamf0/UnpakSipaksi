@@ -43,7 +43,7 @@ namespace Application.Integration.Tests
                 if (dbFactoryDescriptor != null)
                     services.Remove(dbFactoryDescriptor);
 
-                services.AddSingleton<IDbConnectionFactory>(sp =>
+                services.AddScoped<IDbConnectionFactory>(sp =>
                 {
                     return new DbConnectionFactory(_dbContainer.GetConnectionString());
                 });
