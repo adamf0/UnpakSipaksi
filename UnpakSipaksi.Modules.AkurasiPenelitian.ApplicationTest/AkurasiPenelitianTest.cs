@@ -10,8 +10,6 @@ using UnpakSipaksi.Common.Domain;
 using UnpakSipaksi.Modules.AkurasiPenelitian.Application.CreateAkurasiPenelitian;
 using UnpakSipaksi.Modules.AkurasiPenelitian.Application.DeleteAkurasiPenelitian;
 using UnpakSipaksi.Modules.AkurasiPenelitian.Application.GetAkurasiPenelitian;
-using UnpakSipaksi.Modules.AkurasiPenelitian.Application.GetAkurasiPenelitianQuery;
-using UnpakSipaksi.Modules.AkurasiPenelitian.Application.GetAkurasiPenelitianDefaultQuery;
 using UnpakSipaksi.Modules.AkurasiPenelitian.Application.GetAllAkurasiPenelitian;
 using UnpakSipaksi.Modules.AkurasiPenelitian.Application.UpdateAkurasiPenelitian;
 using Xunit;
@@ -244,7 +242,7 @@ namespace Application.Integration.Tests
             {
                 new AkurasiPenelitianResponse
                 {
-                    Uuid = "123",
+                    Uuid = Guid.NewGuid().ToString(),
                     Nama = "Penelitian 1",
                     Skor = 20
                 }
@@ -302,10 +300,11 @@ namespace Application.Integration.Tests
             // Arrange
             var mockConnectionFactory = new Mock<IDbConnectionFactory>();
             var mockConnection = new Mock<DbConnection>();
+            var uuid = Guid.NewGuid();
 
             var fakeData = new AkurasiPenelitianResponse
             {
-                Uuid = "123",
+                Uuid = uuid.ToString(),
                 Nama = "Penelitian 1",
                 Skor = 20
             };
@@ -323,7 +322,7 @@ namespace Application.Integration.Tests
                 .Returns(new ValueTask<DbConnection>(mockConnection.Object));
 
             var handler = new GetAkurasiPenelitianQueryHandler(mockConnectionFactory.Object);
-            var query = new GetAkurasiPenelitianQuery("123");
+            var query = new GetAkurasiPenelitianQuery(uuid.ToString());
 
             // Act
             var result = await handler.Handle(query, CancellationToken.None);
@@ -353,7 +352,7 @@ namespace Application.Integration.Tests
                 .Returns(new ValueTask<DbConnection>(mockConnection.Object));
 
             var handler = new GetAkurasiPenelitianQueryHandler(mockConnectionFactory.Object);
-            var query = new GetAkurasiPenelitianQuery("123");
+            var query = new GetAkurasiPenelitianQuery(Guid.NewGuid().ToString());
 
             // Act
             var result = await handler.Handle(query, CancellationToken.None);
@@ -367,11 +366,12 @@ namespace Application.Integration.Tests
             // Arrange
             var mockConnectionFactory = new Mock<IDbConnectionFactory>();
             var mockConnection = new Mock<DbConnection>();
+            var uuid = Guid.NewGuid();
 
             var fakeData = new AkurasiPenelitianDefaultResponse
             {
-                Id = 1,
-                Uuid = "123",
+                Id = "1",
+                Uuid = uuid.ToString(),
                 Nama = "Penelitian Default",
                 Skor = 20
             };
@@ -389,7 +389,7 @@ namespace Application.Integration.Tests
                 .Returns(new ValueTask<DbConnection>(mockConnection.Object));
 
             var handler = new GetAkurasiPenelitianDefaultQueryHandler(mockConnectionFactory.Object);
-            var query = new GetAkurasiPenelitianDefaultQuery("123");
+            var query = new GetAkurasiPenelitianDefaultQuery(uuid);
 
             // Act
             var result = await handler.Handle(query, CancellationToken.None);
@@ -418,7 +418,7 @@ namespace Application.Integration.Tests
                 .Returns(new ValueTask<DbConnection>(mockConnection.Object));
 
             var handler = new GetAkurasiPenelitianDefaultQueryHandler(mockConnectionFactory.Object);
-            var query = new GetAkurasiPenelitianDefaultQuery("123");
+            var query = new GetAkurasiPenelitianDefaultQuery(Guid.NewGuid());
 
             // Act
             var result = await handler.Handle(query, CancellationToken.None);

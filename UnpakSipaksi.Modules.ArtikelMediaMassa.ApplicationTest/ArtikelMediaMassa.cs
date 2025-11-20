@@ -1,20 +1,21 @@
-﻿using Docker.DotNet.Models;
+﻿using Dapper;
+using Docker.DotNet.Models;
 using MediatR;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.DependencyInjection;
+using Moq;
+using Moq.Dapper;
+using System.Data.Common;
 using System.Reflection;
+using UnpakSipaksi.Common.Application.Data;
 using UnpakSipaksi.Common.Domain;
 using UnpakSipaksi.Modules.ArtikelMediaMassa.Application.CreateArtikelMediaMassa;
 using UnpakSipaksi.Modules.ArtikelMediaMassa.Application.DeleteArtikelMediaMassa;
-using UnpakSipaksi.Modules.ArtikelMediaMassa.Application.GetArtikelMediaMassa;
-using UnpakSipaksi.Modules.ArtikelMediaMassa.Application.GetArtikelMediaMassaQuery;
-using UnpakSipaksi.Modules.ArtikelMediaMassa.Application.GetArtikelMediaMassaDefaultQuery;
 using UnpakSipaksi.Modules.ArtikelMediaMassa.Application.GetAllArtikelMediaMassa;
+using UnpakSipaksi.Modules.ArtikelMediaMassa.Application.GetArtikelMediaMassa;
 using UnpakSipaksi.Modules.ArtikelMediaMassa.Application.UpdateArtikelMediaMassa;
 using UnpakSipaksi.Modules.ArtikelMediaMassa.ApplicationTest;
 using Xunit;
-using Moq;
-using Moq.Dapper;
 
 namespace Application.Integration.Tests
 {
@@ -295,10 +296,11 @@ namespace Application.Integration.Tests
             // Arrange
             var mockConnectionFactory = new Mock<IDbConnectionFactory>();
             var mockConnection = new Mock<DbConnection>();
+            var uuid = Guid.NewGuid();
 
             var fakeData = new ArtikelMediaMassaResponse
             {
-                Uuid = "123",
+                Uuid = uuid.ToString(),
                 Nama = "Penelitian 1",
                 Nilai = 20
             };
@@ -316,7 +318,7 @@ namespace Application.Integration.Tests
                 .Returns(new ValueTask<DbConnection>(mockConnection.Object));
 
             var handler = new GetArtikelMediaMassaQueryHandler(mockConnectionFactory.Object);
-            var query = new GetArtikelMediaMassaQuery("123");
+            var query = new GetArtikelMediaMassaQuery(uuid);
 
             // Act
             var result = await handler.Handle(query, CancellationToken.None);
@@ -346,7 +348,7 @@ namespace Application.Integration.Tests
                 .Returns(new ValueTask<DbConnection>(mockConnection.Object));
 
             var handler = new GetArtikelMediaMassaQueryHandler(mockConnectionFactory.Object);
-            var query = new GetArtikelMediaMassaQuery("123");
+            var query = new GetArtikelMediaMassaQuery(Guid.NewGuid());
 
             // Act
             var result = await handler.Handle(query, CancellationToken.None);
@@ -360,11 +362,12 @@ namespace Application.Integration.Tests
             // Arrange
             var mockConnectionFactory = new Mock<IDbConnectionFactory>();
             var mockConnection = new Mock<DbConnection>();
+            var uuid = Guid.NewGuid();
 
             var fakeData = new ArtikelMediaMassaDefaultResponse
             {
-                Id = 1,
-                Uuid = "123",
+                Id = "1",
+                Uuid = uuid.ToString(),
                 Nama = "Penelitian Default",
                 Nilai = 20
             };
@@ -382,7 +385,7 @@ namespace Application.Integration.Tests
                 .Returns(new ValueTask<DbConnection>(mockConnection.Object));
 
             var handler = new GetArtikelMediaMassaDefaultQueryHandler(mockConnectionFactory.Object);
-            var query = new GetArtikelMediaMassaDefaultQuery("123");
+            var query = new GetArtikelMediaMassaDefaultQuery(uuid);
 
             // Act
             var result = await handler.Handle(query, CancellationToken.None);
@@ -411,7 +414,7 @@ namespace Application.Integration.Tests
                 .Returns(new ValueTask<DbConnection>(mockConnection.Object));
 
             var handler = new GetArtikelMediaMassaDefaultQueryHandler(mockConnectionFactory.Object);
-            var query = new GetArtikelMediaMassaDefaultQuery("123");
+            var query = new GetArtikelMediaMassaDefaultQuery(Guid.NewGuid());
 
             // Act
             var result = await handler.Handle(query, CancellationToken.None);

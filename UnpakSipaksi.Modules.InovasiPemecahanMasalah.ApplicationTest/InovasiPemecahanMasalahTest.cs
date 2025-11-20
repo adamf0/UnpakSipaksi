@@ -1,8 +1,15 @@
 ﻿using MediatR;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.DependencyInjection;
+using Moq;
+using Moq.Dapper;
+using Dapper;
+using System.Data.Common;
 using System.Reflection;
+using UnpakSipaksi.Common.Application.Data;
 using UnpakSipaksi.Common.Domain;
+using UnpakSipaksi.Modules.InovasiPemecahanMasalah.Application.GetInovasiPemecahanMasalah;
+using UnpakSipaksi.Modules.InovasiPemecahanMasalah.Application.GetAllInovasiPemecahanMasalah;
 using UnpakSipaksi.Modules.InovasiPemecahanMasalah.Application.CreateInovasiPemecahanMasalah;
 using UnpakSipaksi.Modules.InovasiPemecahanMasalah.Application.DeleteInovasiPemecahanMasalah;
 using UnpakSipaksi.Modules.InovasiPemecahanMasalah.Application.UpdateInovasiPemecahanMasalah;
@@ -211,6 +218,202 @@ namespace Application.Integration.Tests
 
             Assert.True(deleteResult.IsFailure);
             Assert.Equal("InovasiPemecahanMasalah.NotFound", deleteResult.Error.Code);
+        }
+
+        [Fact]
+        public async Task Handle_ReturnsList_WhenDataExists()
+        {
+            // Arrange
+            var mockConnectionFactory = new Mock<IDbConnectionFactory>();
+            var mockConnection = new Mock<DbConnection>();
+
+            var fakeData = new List<InovasiPemecahanMasalahResponse>
+            {
+                new InovasiPemecahanMasalahResponse
+                {
+                    Uuid = Guid.NewGuid().ToString(),
+                    Nama = "Penelitian 1",
+                    Skor = 20
+                }
+            };
+
+            // Setup Dapper extension
+            mockConnection.SetupDapperAsync(c => c.QueryAsync<InovasiPemecahanMasalahResponse>(
+            It.IsAny<string>(), null, null, null, null))
+            .ReturnsAsync(fakeData);
+
+            mockConnectionFactory
+             .Setup(f => f.OpenConnectionAsync())
+             .Returns(new ValueTask<DbConnection>(mockConnection.Object));
+
+            var handler = new GetAllInovasiPemecahanMasalahQueryHandler(mockConnectionFactory.Object);
+            var query = new GetAllInovasiPemecahanMasalahQuery();
+
+            // Act
+            var result = await handler.Handle(query, CancellationToken.None);
+
+            // Assert
+            Assert.True(result.IsSuccess);
+            Assert.NotEmpty(result.Value);
+            Assert.Equal(fakeData.First().Nama, result.Value.First().Nama);
+        }
+
+        [Fact]
+        public async Task Handle_ReturnsFailure_WhenNoData()
+        {
+            // Arrange
+            var mockConnectionFactory = new Mock<IDbConnectionFactory>();
+            var mockConnection = new Mock<DbConnection>();
+
+            // Empty data
+            mockConnection.SetupDapperAsync(c => c.QueryAsync<InovasiPemecahanMasalahResponse>(
+                It.IsAny<string>(), null, null, null, null))
+                .ReturnsAsync(new List<InovasiPemecahanMasalahResponse>());
+
+            mockConnectionFactory.Setup(f => f.OpenConnectionAsync())
+                .ReturnsAsync(mockConnection.Object);
+
+            var handler = new GetAllInovasiPemecahanMasalahQueryHandler(mockConnectionFactory.Object);
+            var query = new GetAllInovasiPemecahanMasalahQuery();
+
+            // Act
+            var result = await handler.Handle(query, CancellationToken.None);
+
+            // Assert
+            Assert.False(result.IsSuccess);
+        }
+
+        [Fact]
+        public async Task Handle_ReturnsSuccess_WhenDataExists()
+        {
+            // Arrange
+            var mockConnectionFactory = new Mock<IDbConnectionFactory>();
+            var mockConnection = new Mock<DbConnection>();
+            var uuid = Guid.NewGuid();
+
+            var fakeData = new InovasiPemecahanMasalahResponse
+            {
+                Uuid = uuid.ToString(),
+                Nama = "Penelitian 1",
+                Skor = 20
+            };
+
+            mockConnection.SetupDapperAsync(c =>
+                c.QuerySingleOrDefaultAsync<InovasiPemecahanMasalahResponse?>(
+                    It.IsAny<string>(),
+                    It.IsAny<object>(),
+                    null, null, null
+                )
+            ).ReturnsAsync(fakeData);
+
+            mockConnectionFactory
+                .Setup(f => f.OpenConnectionAsync())
+                .Returns(new ValueTask<DbConnection>(mockConnection.Object));
+
+            var handler = new GetInovasiPemecahanMasalahQueryHandler(mockConnectionFactory.Object);
+            var query = new GetInovasiPemecahanMasalahQuery(uuid);
+
+            // Act
+            var result = await handler.Handle(query, CancellationToken.None);
+
+            // Assert
+            Assert.True(result.IsSuccess);
+            Assert.Equal("Penelitian 1", result.Value.Nama);
+        }
+        [Fact]
+        public async Task Handle_ReturnsFailure_WhenDataNotFound()
+        {
+            // Arrange
+            var mockConnectionFactory = new Mock<IDbConnectionFactory>();
+            var mockConnection = new Mock<DbConnection>();
+
+            // Return null
+            mockConnection.SetupDapperAsync(c =>
+                c.QuerySingleOrDefaultAsync<InovasiPemecahanMasalahResponse?>(
+                    It.IsAny<string>(),
+                    It.IsAny<object>(),
+                    null, null, null
+                )
+            ).ReturnsAsync((InovasiPemecahanMasalahResponse?)null);
+
+            mockConnectionFactory
+                .Setup(f => f.OpenConnectionAsync())
+                .Returns(new ValueTask<DbConnection>(mockConnection.Object));
+
+            var handler = new GetInovasiPemecahanMasalahQueryHandler(mockConnectionFactory.Object);
+            var query = new GetInovasiPemecahanMasalahQuery(Guid.NewGuid());
+
+            // Act
+            var result = await handler.Handle(query, CancellationToken.None);
+
+            // Assert
+            Assert.False(result.IsSuccess);
+        }
+        [Fact]
+        public async Task Handle_ReturnsSuccess_Default_WhenDataExists()
+        {
+            // Arrange
+            var mockConnectionFactory = new Mock<IDbConnectionFactory>();
+            var mockConnection = new Mock<DbConnection>();
+            var uuid = Guid.NewGuid();
+
+            var fakeData = new InovasiPemecahanMasalahDefaultResponse
+            {
+                Id = "1",
+                Uuid = uuid.ToString(),
+                Nama = "Penelitian Default",
+                Skor = 20
+            };
+
+            mockConnection.SetupDapperAsync(c =>
+                c.QuerySingleOrDefaultAsync<InovasiPemecahanMasalahDefaultResponse?>(
+                    It.IsAny<string>(),
+                    It.IsAny<object>(),
+                    null, null, null
+                )
+            ).ReturnsAsync(fakeData);
+
+            mockConnectionFactory
+                .Setup(f => f.OpenConnectionAsync())
+                .Returns(new ValueTask<DbConnection>(mockConnection.Object));
+
+            var handler = new GetInovasiPemecahanMasalahDefaultQueryHandler(mockConnectionFactory.Object);
+            var query = new GetInovasiPemecahanMasalahDefaultQuery(uuid);
+
+            // Act
+            var result = await handler.Handle(query, CancellationToken.None);
+
+            // Assert
+            Assert.True(result.IsSuccess);
+            Assert.Equal("Penelitian Default", result.Value.Nama);
+        }
+        [Fact]
+        public async Task Handle_ReturnsFailure_Default_WhenDataNotFound()
+        {
+            // Arrange
+            var mockConnectionFactory = new Mock<IDbConnectionFactory>();
+            var mockConnection = new Mock<DbConnection>();
+
+            mockConnection.SetupDapperAsync(c =>
+                c.QuerySingleOrDefaultAsync<InovasiPemecahanMasalahDefaultResponse?>(
+                    It.IsAny<string>(),
+                    It.IsAny<object>(),
+                    null, null, null
+                )
+            ).ReturnsAsync((InovasiPemecahanMasalahDefaultResponse?)null);
+
+            mockConnectionFactory
+                .Setup(f => f.OpenConnectionAsync())
+                .Returns(new ValueTask<DbConnection>(mockConnection.Object));
+
+            var handler = new GetInovasiPemecahanMasalahDefaultQueryHandler(mockConnectionFactory.Object);
+            var query = new GetInovasiPemecahanMasalahDefaultQuery(Guid.NewGuid());
+
+            // Act
+            var result = await handler.Handle(query, CancellationToken.None);
+
+            // Assert
+            Assert.False(result.IsSuccess);
         }
     }
 }
