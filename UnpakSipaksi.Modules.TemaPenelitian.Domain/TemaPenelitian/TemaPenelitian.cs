@@ -30,6 +30,9 @@ namespace UnpakSipaksi.Modules.TemaPenelitian.Domain.TemaPenelitian
         int FokusPenelitianId
         )
         {
+            if (FokusPenelitianId <= 0)
+                return Result.Failure<TemaPenelitian>(TemaPenelitianErrors.UnknownFokusPenelitian());
+
             var asset = new TemaPenelitian
             {
                 Uuid = Guid.NewGuid(),

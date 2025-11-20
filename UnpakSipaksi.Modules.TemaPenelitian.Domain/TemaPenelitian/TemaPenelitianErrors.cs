@@ -18,5 +18,7 @@ namespace UnpakSipaksi.Modules.TemaPenelitian.Domain.TemaPenelitian
         public static Error FokusPenelitianNotFound(Guid Id) =>
             Error.NotFound("TemaPenelitian.FokusPenelitianNotFound", $"The Fokus Penelitian with the identifier {Id} was not found");
 
+        public static Error UnknownFokusPenelitian() =>
+            Error.Failure("TemaPenelitian.UnknownFokusPenelitian", $"Fokus Penelitian is not valid");
     }
 }

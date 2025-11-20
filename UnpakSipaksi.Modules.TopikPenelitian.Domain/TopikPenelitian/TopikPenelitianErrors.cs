@@ -17,6 +17,7 @@ namespace UnpakSipaksi.Modules.TopikPenelitian.Domain.TopikPenelitian
 
         public static Error TemaPenelitianNotFound(Guid Id) =>
             Error.NotFound("TopikPenelitian.TemaPenelitianNotFound", $"The Tema Penelitian with the identifier {Id} was not found");
-
+        public static Error UnknownTemaPenelitian() =>
+            Error.Failure("TopikPenelitian.UnknownTemaPenelitian", $"Tema penelitian is not valid");
     }
 }

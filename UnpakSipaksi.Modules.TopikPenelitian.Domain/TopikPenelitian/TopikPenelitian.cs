@@ -30,6 +30,9 @@ namespace UnpakSipaksi.Modules.TopikPenelitian.Domain.TopikPenelitian
         int TemaPenelitianId
         )
         {
+            if (TemaPenelitianId <= 0)
+                return Result.Failure<TopikPenelitian>(TopikPenelitianErrors.UnknownTemaPenelitian());
+
             var asset = new TopikPenelitian
             {
                 Uuid = Guid.NewGuid(),
