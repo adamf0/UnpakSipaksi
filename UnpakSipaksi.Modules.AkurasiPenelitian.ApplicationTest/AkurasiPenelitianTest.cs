@@ -10,6 +10,8 @@ using UnpakSipaksi.Common.Domain;
 using UnpakSipaksi.Modules.AkurasiPenelitian.Application.CreateAkurasiPenelitian;
 using UnpakSipaksi.Modules.AkurasiPenelitian.Application.DeleteAkurasiPenelitian;
 using UnpakSipaksi.Modules.AkurasiPenelitian.Application.GetAkurasiPenelitian;
+using UnpakSipaksi.Modules.AkurasiPenelitian.Application.GetAkurasiPenelitianQuery;
+using UnpakSipaksi.Modules.AkurasiPenelitian.Application.GetAkurasiPenelitianDefaultQuery;
 using UnpakSipaksi.Modules.AkurasiPenelitian.Application.GetAllAkurasiPenelitian;
 using UnpakSipaksi.Modules.AkurasiPenelitian.Application.UpdateAkurasiPenelitian;
 using Xunit;
@@ -286,6 +288,137 @@ namespace Application.Integration.Tests
 
             var handler = new GetAllAkurasiPenelitianQueryHandler(mockConnectionFactory.Object);
             var query = new GetAllAkurasiPenelitianQuery();
+
+            // Act
+            var result = await handler.Handle(query, CancellationToken.None);
+
+            // Assert
+            Assert.False(result.IsSuccess);
+        }
+
+        [Fact]
+        public async Task Handle_ReturnsSuccess_WhenDataExists()
+        {
+            // Arrange
+            var mockConnectionFactory = new Mock<IDbConnectionFactory>();
+            var mockConnection = new Mock<DbConnection>();
+
+            var fakeData = new AkurasiPenelitianResponse
+            {
+                Uuid = "123",
+                Nama = "Penelitian 1",
+                Skor = 20
+            };
+
+            mockConnection.SetupDapperAsync(c =>
+                c.QuerySingleOrDefaultAsync<AkurasiPenelitianResponse?>(
+                    It.IsAny<string>(),
+                    It.IsAny<object>(),
+                    null, null, null
+                )
+            ).ReturnsAsync(fakeData);
+
+            mockConnectionFactory
+                .Setup(f => f.OpenConnectionAsync())
+                .Returns(new ValueTask<DbConnection>(mockConnection.Object));
+
+            var handler = new GetAkurasiPenelitianQueryHandler(mockConnectionFactory.Object);
+            var query = new GetAkurasiPenelitianQuery("123");
+
+            // Act
+            var result = await handler.Handle(query, CancellationToken.None);
+
+            // Assert
+            Assert.True(result.IsSuccess);
+            Assert.Equal("Penelitian 1", result.Value.Nama);
+        }
+        [Fact]
+        public async Task Handle_ReturnsFailure_WhenDataNotFound()
+        {
+            // Arrange
+            var mockConnectionFactory = new Mock<IDbConnectionFactory>();
+            var mockConnection = new Mock<DbConnection>();
+
+            // Return null
+            mockConnection.SetupDapperAsync(c =>
+                c.QuerySingleOrDefaultAsync<AkurasiPenelitianResponse?>(
+                    It.IsAny<string>(),
+                    It.IsAny<object>(),
+                    null, null, null
+                )
+            ).ReturnsAsync((AkurasiPenelitianResponse?)null);
+
+            mockConnectionFactory
+                .Setup(f => f.OpenConnectionAsync())
+                .Returns(new ValueTask<DbConnection>(mockConnection.Object));
+
+            var handler = new GetAkurasiPenelitianQueryHandler(mockConnectionFactory.Object);
+            var query = new GetAkurasiPenelitianQuery("123");
+
+            // Act
+            var result = await handler.Handle(query, CancellationToken.None);
+
+            // Assert
+            Assert.False(result.IsSuccess);
+        }
+        [Fact]
+        public async Task Handle_ReturnsSuccess_Default_WhenDataExists()
+        {
+            // Arrange
+            var mockConnectionFactory = new Mock<IDbConnectionFactory>();
+            var mockConnection = new Mock<DbConnection>();
+
+            var fakeData = new AkurasiPenelitianDefaultResponse
+            {
+                Id = 1,
+                Uuid = "123",
+                Nama = "Penelitian Default",
+                Skor = 20
+            };
+
+            mockConnection.SetupDapperAsync(c =>
+                c.QuerySingleOrDefaultAsync<AkurasiPenelitianDefaultResponse?>(
+                    It.IsAny<string>(),
+                    It.IsAny<object>(),
+                    null, null, null
+                )
+            ).ReturnsAsync(fakeData);
+
+            mockConnectionFactory
+                .Setup(f => f.OpenConnectionAsync())
+                .Returns(new ValueTask<DbConnection>(mockConnection.Object));
+
+            var handler = new GetAkurasiPenelitianDefaultQueryHandler(mockConnectionFactory.Object);
+            var query = new GetAkurasiPenelitianDefaultQuery("123");
+
+            // Act
+            var result = await handler.Handle(query, CancellationToken.None);
+
+            // Assert
+            Assert.True(result.IsSuccess);
+            Assert.Equal("Penelitian Default", result.Value.Nama);
+        }
+        [Fact]
+        public async Task Handle_ReturnsFailure_Default_WhenDataNotFound()
+        {
+            // Arrange
+            var mockConnectionFactory = new Mock<IDbConnectionFactory>();
+            var mockConnection = new Mock<DbConnection>();
+
+            mockConnection.SetupDapperAsync(c =>
+                c.QuerySingleOrDefaultAsync<AkurasiPenelitianDefaultResponse?>(
+                    It.IsAny<string>(),
+                    It.IsAny<object>(),
+                    null, null, null
+                )
+            ).ReturnsAsync((AkurasiPenelitianDefaultResponse?)null);
+
+            mockConnectionFactory
+                .Setup(f => f.OpenConnectionAsync())
+                .Returns(new ValueTask<DbConnection>(mockConnection.Object));
+
+            var handler = new GetAkurasiPenelitianDefaultQueryHandler(mockConnectionFactory.Object);
+            var query = new GetAkurasiPenelitianDefaultQuery("123");
 
             // Act
             var result = await handler.Handle(query, CancellationToken.None);

@@ -6,9 +6,15 @@ using System.Reflection;
 using UnpakSipaksi.Common.Domain;
 using UnpakSipaksi.Modules.ArtikelMediaMassa.Application.CreateArtikelMediaMassa;
 using UnpakSipaksi.Modules.ArtikelMediaMassa.Application.DeleteArtikelMediaMassa;
+using UnpakSipaksi.Modules.ArtikelMediaMassa.Application.GetArtikelMediaMassa;
+using UnpakSipaksi.Modules.ArtikelMediaMassa.Application.GetArtikelMediaMassaQuery;
+using UnpakSipaksi.Modules.ArtikelMediaMassa.Application.GetArtikelMediaMassaDefaultQuery;
+using UnpakSipaksi.Modules.ArtikelMediaMassa.Application.GetAllArtikelMediaMassa;
 using UnpakSipaksi.Modules.ArtikelMediaMassa.Application.UpdateArtikelMediaMassa;
 using UnpakSipaksi.Modules.ArtikelMediaMassa.ApplicationTest;
 using Xunit;
+using Moq;
+using Moq.Dapper;
 
 namespace Application.Integration.Tests
 {
@@ -218,6 +224,200 @@ namespace Application.Integration.Tests
 
             Assert.True(deleteResult.IsFailure);
             Assert.Equal("ArtikelMediaMassa.NotFound", deleteResult.Error.Code);
+        }
+
+        [Fact]
+        public async Task Handle_ReturnsList_WhenDataExists()
+        {
+            // Arrange
+            var mockConnectionFactory = new Mock<IDbConnectionFactory>();
+            var mockConnection = new Mock<DbConnection>();
+
+            var fakeData = new List<ArtikelMediaMassaResponse>
+            {
+                new ArtikelMediaMassaResponse
+                {
+                    Uuid = "123",
+                    Nama = "Penelitian 1",
+                    Nilai = 20
+                }
+            };
+
+            // Setup Dapper extension
+            mockConnection.SetupDapperAsync(c => c.QueryAsync<ArtikelMediaMassaResponse>(
+            It.IsAny<string>(), null, null, null, null))
+            .ReturnsAsync(fakeData);
+
+            mockConnectionFactory
+             .Setup(f => f.OpenConnectionAsync())
+             .Returns(new ValueTask<DbConnection>(mockConnection.Object));
+
+            var handler = new GetAllArtikelMediaMassaQueryHandler(mockConnectionFactory.Object);
+            var query = new GetAllArtikelMediaMassaQuery();
+
+            // Act
+            var result = await handler.Handle(query, CancellationToken.None);
+
+            // Assert
+            Assert.True(result.IsSuccess);
+            Assert.NotEmpty(result.Value);
+            Assert.Equal(fakeData.First().Nama, result.Value.First().Nama);
+        }
+
+        [Fact]
+        public async Task Handle_ReturnsFailure_WhenNoData()
+        {
+            // Arrange
+            var mockConnectionFactory = new Mock<IDbConnectionFactory>();
+            var mockConnection = new Mock<DbConnection>();
+
+            // Empty data
+            mockConnection.SetupDapperAsync(c => c.QueryAsync<ArtikelMediaMassaResponse>(
+                It.IsAny<string>(), null, null, null, null))
+                .ReturnsAsync(new List<ArtikelMediaMassaResponse>());
+
+            mockConnectionFactory.Setup(f => f.OpenConnectionAsync())
+                .ReturnsAsync(mockConnection.Object);
+
+            var handler = new GetAllArtikelMediaMassaQueryHandler(mockConnectionFactory.Object);
+            var query = new GetAllArtikelMediaMassaQuery();
+
+            // Act
+            var result = await handler.Handle(query, CancellationToken.None);
+
+            // Assert
+            Assert.False(result.IsSuccess);
+        }
+
+        [Fact]
+        public async Task Handle_ReturnsSuccess_WhenDataExists()
+        {
+            // Arrange
+            var mockConnectionFactory = new Mock<IDbConnectionFactory>();
+            var mockConnection = new Mock<DbConnection>();
+
+            var fakeData = new ArtikelMediaMassaResponse
+            {
+                Uuid = "123",
+                Nama = "Penelitian 1",
+                Nilai = 20
+            };
+
+            mockConnection.SetupDapperAsync(c =>
+                c.QuerySingleOrDefaultAsync<ArtikelMediaMassaResponse?>(
+                    It.IsAny<string>(),
+                    It.IsAny<object>(),
+                    null, null, null
+                )
+            ).ReturnsAsync(fakeData);
+
+            mockConnectionFactory
+                .Setup(f => f.OpenConnectionAsync())
+                .Returns(new ValueTask<DbConnection>(mockConnection.Object));
+
+            var handler = new GetArtikelMediaMassaQueryHandler(mockConnectionFactory.Object);
+            var query = new GetArtikelMediaMassaQuery("123");
+
+            // Act
+            var result = await handler.Handle(query, CancellationToken.None);
+
+            // Assert
+            Assert.True(result.IsSuccess);
+            Assert.Equal("Penelitian 1", result.Value.Nama);
+        }
+        [Fact]
+        public async Task Handle_ReturnsFailure_WhenDataNotFound()
+        {
+            // Arrange
+            var mockConnectionFactory = new Mock<IDbConnectionFactory>();
+            var mockConnection = new Mock<DbConnection>();
+
+            // Return null
+            mockConnection.SetupDapperAsync(c =>
+                c.QuerySingleOrDefaultAsync<ArtikelMediaMassaResponse?>(
+                    It.IsAny<string>(),
+                    It.IsAny<object>(),
+                    null, null, null
+                )
+            ).ReturnsAsync((ArtikelMediaMassaResponse?)null);
+
+            mockConnectionFactory
+                .Setup(f => f.OpenConnectionAsync())
+                .Returns(new ValueTask<DbConnection>(mockConnection.Object));
+
+            var handler = new GetArtikelMediaMassaQueryHandler(mockConnectionFactory.Object);
+            var query = new GetArtikelMediaMassaQuery("123");
+
+            // Act
+            var result = await handler.Handle(query, CancellationToken.None);
+
+            // Assert
+            Assert.False(result.IsSuccess);
+        }
+        [Fact]
+        public async Task Handle_ReturnsSuccess_Default_WhenDataExists()
+        {
+            // Arrange
+            var mockConnectionFactory = new Mock<IDbConnectionFactory>();
+            var mockConnection = new Mock<DbConnection>();
+
+            var fakeData = new ArtikelMediaMassaDefaultResponse
+            {
+                Id = 1,
+                Uuid = "123",
+                Nama = "Penelitian Default",
+                Nilai = 20
+            };
+
+            mockConnection.SetupDapperAsync(c =>
+                c.QuerySingleOrDefaultAsync<ArtikelMediaMassaDefaultResponse?>(
+                    It.IsAny<string>(),
+                    It.IsAny<object>(),
+                    null, null, null
+                )
+            ).ReturnsAsync(fakeData);
+
+            mockConnectionFactory
+                .Setup(f => f.OpenConnectionAsync())
+                .Returns(new ValueTask<DbConnection>(mockConnection.Object));
+
+            var handler = new GetArtikelMediaMassaDefaultQueryHandler(mockConnectionFactory.Object);
+            var query = new GetArtikelMediaMassaDefaultQuery("123");
+
+            // Act
+            var result = await handler.Handle(query, CancellationToken.None);
+
+            // Assert
+            Assert.True(result.IsSuccess);
+            Assert.Equal("Penelitian Default", result.Value.Nama);
+        }
+        [Fact]
+        public async Task Handle_ReturnsFailure_Default_WhenDataNotFound()
+        {
+            // Arrange
+            var mockConnectionFactory = new Mock<IDbConnectionFactory>();
+            var mockConnection = new Mock<DbConnection>();
+
+            mockConnection.SetupDapperAsync(c =>
+                c.QuerySingleOrDefaultAsync<ArtikelMediaMassaDefaultResponse?>(
+                    It.IsAny<string>(),
+                    It.IsAny<object>(),
+                    null, null, null
+                )
+            ).ReturnsAsync((ArtikelMediaMassaDefaultResponse?)null);
+
+            mockConnectionFactory
+                .Setup(f => f.OpenConnectionAsync())
+                .Returns(new ValueTask<DbConnection>(mockConnection.Object));
+
+            var handler = new GetArtikelMediaMassaDefaultQueryHandler(mockConnectionFactory.Object);
+            var query = new GetArtikelMediaMassaDefaultQuery("123");
+
+            // Act
+            var result = await handler.Handle(query, CancellationToken.None);
+
+            // Assert
+            Assert.False(result.IsSuccess);
         }
     }
 }
