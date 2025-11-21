@@ -1,10 +1,16 @@
-﻿using MediatR;
+﻿using Dapper;
+using MediatR;
 using Microsoft.Extensions.DependencyInjection;
+using Moq;
+using Moq.Dapper;
+using System.Data.Common;
+using UnpakSipaksi.Common.Application.Data;
 using UnpakSipaksi.Common.Domain;
-using UnpakSipaksi.Modules.KategoriMitraPenelitian.Application.DeleteKategoriMitraPenelitian;
-using UnpakSipaksi.Modules.KategoriMitraPenelitian.Application.UpdateKategoriMitraPenelitian;
 using UnpakSipaksi.Modules.KategoriTkt.Application.CreateKategoriTkt;
 using UnpakSipaksi.Modules.KategoriTkt.Application.DeleteKategoriTkt;
+using UnpakSipaksi.Modules.KategoriTkt.Application.GetAllKategoriTkt;
+using UnpakSipaksi.Modules.KategoriTkt.Application.GetBobotKategoriTkt;
+using UnpakSipaksi.Modules.KategoriTkt.Application.GetKategoriTkt;
 using UnpakSipaksi.Modules.KategoriTkt.Application.UpdateKategoriTkt;
 using Xunit;
 
@@ -171,6 +177,234 @@ namespace UnpakSipaksi.Modules.KategoriTkt.ApplicationTest
 
             Assert.True(deleteResult.IsFailure);
             Assert.Equal("KategoriTkt.NotFound", deleteResult.Error.Code);
+        }
+
+        [Fact]
+        public async Task GetAllKategoriTkt_Handle_ReturnsList_WhenDataExists()
+        {
+            // Arrange
+            var mockConnectionFactory = new Mock<IDbConnectionFactory>();
+            var mockConnection = new Mock<DbConnection>();
+
+            var fakeData = new List<KategoriTktResponse>
+            {
+                new KategoriTktResponse { Uuid = Guid.NewGuid().ToString(), Nama = "TKT 1" }
+            };
+
+            mockConnection.SetupDapperAsync(c =>
+                c.QueryAsync<KategoriTktResponse>(It.IsAny<string>(), null, null, null, null))
+                .ReturnsAsync(fakeData);
+
+            mockConnectionFactory.Setup(f => f.OpenConnectionAsync())
+                .Returns(new ValueTask<DbConnection>(mockConnection.Object));
+
+            var handler = new GetAllKategoriTktQueryHandler(mockConnectionFactory.Object);
+            var query = new GetAllKategoriTktQuery();
+
+            // Act
+            var result = await handler.Handle(query, CancellationToken.None);
+
+            // Assert
+            Assert.True(result.IsSuccess);
+            Assert.NotEmpty(result.Value);
+            Assert.Equal("TKT 1", result.Value.First().Nama);
+        }
+
+        [Fact]
+        public async Task GetAllKategoriTkt_Handle_ReturnsFailure_WhenNoData()
+        {
+            // Arrange
+            var mockConnectionFactory = new Mock<IDbConnectionFactory>();
+            var mockConnection = new Mock<DbConnection>();
+
+            mockConnection.SetupDapperAsync(c =>
+                c.QueryAsync<KategoriTktResponse>(It.IsAny<string>(), null, null, null, null))
+                .ReturnsAsync(new List<KategoriTktResponse>());
+
+            mockConnectionFactory.Setup(f => f.OpenConnectionAsync())
+                .Returns(new ValueTask<DbConnection>(mockConnection.Object));
+
+            var handler = new GetAllKategoriTktQueryHandler(mockConnectionFactory.Object);
+            var query = new GetAllKategoriTktQuery();
+
+            // Act
+            var result = await handler.Handle(query, CancellationToken.None);
+
+            // Assert
+            Assert.False(result.IsSuccess);
+        }
+
+        [Fact]
+        public async Task GetKategoriTkt_Handle_ReturnsSuccess_WhenDataExists()
+        {
+            // Arrange
+            var mockConnectionFactory = new Mock<IDbConnectionFactory>();
+            var mockConnection = new Mock<DbConnection>();
+            var uuid = Guid.NewGuid();
+
+            var fakeData = new KategoriTktResponse { Uuid = uuid.ToString(), Nama = "TKT 1" };
+
+            mockConnection.SetupDapperAsync(c =>
+                c.QuerySingleOrDefaultAsync<KategoriTktResponse?>(It.IsAny<string>(), It.IsAny<object>(), null, null, null))
+                .ReturnsAsync(fakeData);
+
+            mockConnectionFactory.Setup(f => f.OpenConnectionAsync())
+                .Returns(new ValueTask<DbConnection>(mockConnection.Object));
+
+            var handler = new GetKategoriTktQueryHandler(mockConnectionFactory.Object);
+            var query = new GetKategoriTktQuery(uuid);
+
+            // Act
+            var result = await handler.Handle(query, CancellationToken.None);
+
+            // Assert
+            Assert.True(result.IsSuccess);
+            Assert.Equal("TKT 1", result.Value.Nama);
+        }
+
+        [Fact]
+        public async Task GetKategoriTkt_Handle_ReturnsFailure_WhenDataNotFound()
+        {
+            // Arrange
+            var mockConnectionFactory = new Mock<IDbConnectionFactory>();
+            var mockConnection = new Mock<DbConnection>();
+
+            mockConnection.SetupDapperAsync(c =>
+                c.QuerySingleOrDefaultAsync<KategoriTktResponse?>(It.IsAny<string>(), It.IsAny<object>(), null, null, null))
+                .ReturnsAsync((KategoriTktResponse?)null);
+
+            mockConnectionFactory.Setup(f => f.OpenConnectionAsync())
+                .Returns(new ValueTask<DbConnection>(mockConnection.Object));
+
+            var handler = new GetKategoriTktQueryHandler(mockConnectionFactory.Object);
+            var query = new GetKategoriTktQuery(Guid.NewGuid());
+
+            // Act
+            var result = await handler.Handle(query, CancellationToken.None);
+
+            // Assert
+            Assert.False(result.IsSuccess);
+        }
+
+        [Fact]
+        public async Task GetKategoriTktDefault_Handle_ReturnsSuccess_WhenDataExists()
+        {
+            // Arrange
+            var mockConnectionFactory = new Mock<IDbConnectionFactory>();
+            var mockConnection = new Mock<DbConnection>();
+            var uuid = Guid.NewGuid();
+
+            var fakeData = new KategoriTktDefaultResponse { Id = "1", Uuid = uuid.ToString(), Nama = "TKT Default" };
+
+            mockConnection.SetupDapperAsync(c =>
+                c.QuerySingleOrDefaultAsync<KategoriTktDefaultResponse?>(It.IsAny<string>(), It.IsAny<object>(), null, null, null))
+                .ReturnsAsync(fakeData);
+
+            mockConnectionFactory.Setup(f => f.OpenConnectionAsync())
+                .Returns(new ValueTask<DbConnection>(mockConnection.Object));
+
+            var handler = new GetKategoriTktDefaultQueryHandler(mockConnectionFactory.Object);
+            var query = new GetKategoriTktDefaultQuery(uuid);
+
+            // Act
+            var result = await handler.Handle(query, CancellationToken.None);
+
+            // Assert
+            Assert.True(result.IsSuccess);
+            Assert.Equal("TKT Default", result.Value.Nama);
+        }
+
+        [Fact]
+        public async Task GetKategoriTktDefault_Handle_ReturnsFailure_WhenDataNotFound()
+        {
+            // Arrange
+            var mockConnectionFactory = new Mock<IDbConnectionFactory>();
+            var mockConnection = new Mock<DbConnection>();
+
+            mockConnection.SetupDapperAsync(c =>
+                c.QuerySingleOrDefaultAsync<KategoriTktDefaultResponse?>(It.IsAny<string>(), It.IsAny<object>(), null, null, null))
+                .ReturnsAsync((KategoriTktDefaultResponse?)null);
+
+            mockConnectionFactory.Setup(f => f.OpenConnectionAsync())
+                .Returns(new ValueTask<DbConnection>(mockConnection.Object));
+
+            var handler = new GetKategoriTktDefaultQueryHandler(mockConnectionFactory.Object);
+            var query = new GetKategoriTktDefaultQuery(Guid.NewGuid());
+
+            // Act
+            var result = await handler.Handle(query, CancellationToken.None);
+
+            // Assert
+            Assert.False(result.IsSuccess);
+        }
+
+        [Fact]
+        public async Task GetBobotKategoriTkt_Handle_ReturnsSuccess_WhenSingleValueExists()
+        {
+            // Arrange
+            var mockConnectionFactory = new Mock<IDbConnectionFactory>();
+            var mockConnection = new Mock<DbConnection>();
+            string kategoriSkema = "Penelitian Dasar";
+
+            var fakeValue = new List<int> { 10 };
+
+            mockConnection.SetupDapperAsync(c =>
+                c.QueryAsync<int>(It.IsAny<string>(), null, null, null, null))
+                .ReturnsAsync(fakeValue);
+
+            mockConnectionFactory.Setup(f => f.OpenConnectionAsync())
+                .Returns(new ValueTask<DbConnection>(mockConnection.Object));
+
+            var handler = new GetBobotKategoriTktQueryHandler(mockConnectionFactory.Object);
+            var query = new GetBobotKategoriTktQuery(kategoriSkema);
+
+            // Act
+            var result = await handler.Handle(query, CancellationToken.None);
+
+            // Assert
+            Assert.True(result.IsSuccess);
+            Assert.Equal(10, result.Value);
+        }
+
+        [Fact]
+        public async Task GetBobotKategoriTkt_Handle_ReturnsFailure_WhenMultipleValues()
+        {
+            // Arrange
+            var mockConnectionFactory = new Mock<IDbConnectionFactory>();
+            var mockConnection = new Mock<DbConnection>();
+
+            var fakeValue = new List<int> { 10, 20 };
+
+            mockConnection.SetupDapperAsync(c =>
+                c.QueryAsync<int>(It.IsAny<string>(), null, null, null, null))
+                .ReturnsAsync(fakeValue);
+
+            mockConnectionFactory.Setup(f => f.OpenConnectionAsync())
+                .Returns(new ValueTask<DbConnection>(mockConnection.Object));
+
+            var handler = new GetBobotKategoriTktQueryHandler(mockConnectionFactory.Object);
+            var query = new GetBobotKategoriTktQuery("Penelitian Dasar");
+
+            // Act
+            var result = await handler.Handle(query, CancellationToken.None);
+
+            // Assert
+            Assert.False(result.IsSuccess);
+        }
+
+        [Fact]
+        public async Task GetBobotKategoriTkt_Handle_ReturnsFailure_WhenUnknownKategoriSkema()
+        {
+            // Arrange
+            var mockConnectionFactory = new Mock<IDbConnectionFactory>();
+            var handler = new GetBobotKategoriTktQueryHandler(mockConnectionFactory.Object);
+            var query = new GetBobotKategoriTktQuery("Unknown");
+
+            // Act
+            var result = await handler.Handle(query, CancellationToken.None);
+
+            // Assert
+            Assert.False(result.IsSuccess);
         }
     }
 }

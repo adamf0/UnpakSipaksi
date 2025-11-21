@@ -1,10 +1,15 @@
-﻿using MediatR;
+﻿using Dapper;
+using MediatR;
 using Microsoft.Extensions.DependencyInjection;
+using Moq;
+using Moq.Dapper;
+using System.Data.Common;
+using UnpakSipaksi.Common.Application.Data;
 using UnpakSipaksi.Common.Domain;
-using UnpakSipaksi.Modules.KategoriMitraPenelitian.Application.DeleteKategoriMitraPenelitian;
-using UnpakSipaksi.Modules.KategoriMitraPenelitian.Application.UpdateKategoriMitraPenelitian;
 using UnpakSipaksi.Modules.KategoriSumberDana.Application.CreateKategoriSumberDana;
 using UnpakSipaksi.Modules.KategoriSumberDana.Application.DeleteKategoriSumberDana;
+using UnpakSipaksi.Modules.KategoriSumberDana.Application.GetAllKategoriSumberDana;
+using UnpakSipaksi.Modules.KategoriSumberDana.Application.GetKategoriSumberDana;
 using UnpakSipaksi.Modules.KategoriSumberDana.Application.UpdateKategoriSumberDana;
 using Xunit;
 
@@ -171,6 +176,121 @@ namespace UnpakSipaksi.Modules.KategoriSumberDana.ApplicationTest
 
             Assert.True(deleteResult.IsFailure);
             Assert.Equal("KategoriSumberDana.NotFound", deleteResult.Error.Code);
+        }
+
+        [Fact]
+        public async Task GetAllKategoriSumberDana_Handle_ReturnsList_WhenDataExists()
+        {
+            // Arrange
+            var mockConnectionFactory = new Mock<IDbConnectionFactory>();
+            var mockConnection = new Mock<DbConnection>();
+
+            var fakeData = new List<KategoriSumberDanaResponse>
+            {
+                new KategoriSumberDanaResponse
+                {
+                    Uuid = Guid.NewGuid().ToString(),
+                    Nama = "Sumber Dana 1"
+                }
+            };
+
+            mockConnection.SetupDapperAsync(c =>
+                c.QueryAsync<KategoriSumberDanaResponse>(It.IsAny<string>(), null, null, null, null))
+                .ReturnsAsync(fakeData);
+
+            mockConnectionFactory.Setup(f => f.OpenConnectionAsync())
+                .Returns(new ValueTask<DbConnection>(mockConnection.Object));
+
+            var handler = new GetAllKategoriSumberDanaQueryHandler(mockConnectionFactory.Object);
+            var query = new GetAllKategoriSumberDanaQuery();
+
+            // Act
+            var result = await handler.Handle(query, CancellationToken.None);
+
+            // Assert
+            Assert.True(result.IsSuccess);
+            Assert.NotEmpty(result.Value);
+            Assert.Equal(fakeData.First().Nama, result.Value.First().Nama);
+        }
+
+        [Fact]
+        public async Task GetAllKategoriSumberDana_Handle_ReturnsFailure_WhenNoData()
+        {
+            // Arrange
+            var mockConnectionFactory = new Mock<IDbConnectionFactory>();
+            var mockConnection = new Mock<DbConnection>();
+
+            mockConnection.SetupDapperAsync(c =>
+                c.QueryAsync<KategoriSumberDanaResponse>(It.IsAny<string>(), null, null, null, null))
+                .ReturnsAsync(new List<KategoriSumberDanaResponse>());
+
+            mockConnectionFactory.Setup(f => f.OpenConnectionAsync())
+                .Returns(new ValueTask<DbConnection>(mockConnection.Object));
+
+            var handler = new GetAllKategoriSumberDanaQueryHandler(mockConnectionFactory.Object);
+            var query = new GetAllKategoriSumberDanaQuery();
+
+            // Act
+            var result = await handler.Handle(query, CancellationToken.None);
+
+            // Assert
+            Assert.False(result.IsSuccess);
+        }
+
+        [Fact]
+        public async Task GetKategoriSumberDana_Handle_ReturnsSuccess_WhenDataExists()
+        {
+            // Arrange
+            var mockConnectionFactory = new Mock<IDbConnectionFactory>();
+            var mockConnection = new Mock<DbConnection>();
+            var uuid = Guid.NewGuid();
+
+            var fakeData = new KategoriSumberDanaResponse
+            {
+                Uuid = uuid.ToString(),
+                Nama = "Sumber Dana 1"
+            };
+
+            mockConnection.SetupDapperAsync(c =>
+                c.QuerySingleOrDefaultAsync<KategoriSumberDanaResponse?>(It.IsAny<string>(), It.IsAny<object>(), null, null, null))
+                .ReturnsAsync(fakeData);
+
+            mockConnectionFactory.Setup(f => f.OpenConnectionAsync())
+                .Returns(new ValueTask<DbConnection>(mockConnection.Object));
+
+            var handler = new GetKategoriSumberDanaQueryHandler(mockConnectionFactory.Object);
+            var query = new GetKategoriSumberDanaQuery(uuid);
+
+            // Act
+            var result = await handler.Handle(query, CancellationToken.None);
+
+            // Assert
+            Assert.True(result.IsSuccess);
+            Assert.Equal("Sumber Dana 1", result.Value.Nama);
+        }
+
+        [Fact]
+        public async Task GetKategoriSumberDana_Handle_ReturnsFailure_WhenDataNotFound()
+        {
+            // Arrange
+            var mockConnectionFactory = new Mock<IDbConnectionFactory>();
+            var mockConnection = new Mock<DbConnection>();
+
+            mockConnection.SetupDapperAsync(c =>
+                c.QuerySingleOrDefaultAsync<KategoriSumberDanaResponse?>(It.IsAny<string>(), It.IsAny<object>(), null, null, null))
+                .ReturnsAsync((KategoriSumberDanaResponse?)null);
+
+            mockConnectionFactory.Setup(f => f.OpenConnectionAsync())
+                .Returns(new ValueTask<DbConnection>(mockConnection.Object));
+
+            var handler = new GetKategoriSumberDanaQueryHandler(mockConnectionFactory.Object);
+            var query = new GetKategoriSumberDanaQuery(Guid.NewGuid());
+
+            // Act
+            var result = await handler.Handle(query, CancellationToken.None);
+
+            // Assert
+            Assert.False(result.IsSuccess);
         }
     }
 }

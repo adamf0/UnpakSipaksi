@@ -1,11 +1,15 @@
 ﻿using MediatR;
 using Microsoft.Extensions.DependencyInjection;
+using Moq;
+using Moq.Dapper;
+using Dapper;
+using System.Data.Common;
+using UnpakSipaksi.Common.Application.Data;
 using UnpakSipaksi.Common.Domain;
 using UnpakSipaksi.Modules.KategoriSkema.Application.CreateKategoriSkema;
 using UnpakSipaksi.Modules.KategoriSkema.Application.DeleteKategoriSkema;
-using UnpakSipaksi.Modules.KategoriSkema.Application.UpdateKategoriSkema;
-using UnpakSipaksi.Modules.KategoriSkema.Application.CreateKategoriSkema;
-using UnpakSipaksi.Modules.KategoriSkema.Application.DeleteKategoriSkema;
+using UnpakSipaksi.Modules.KategoriSkema.Application.GetAllKategoriSkema;
+using UnpakSipaksi.Modules.KategoriSkema.Application.GetKategoriSkema;
 using UnpakSipaksi.Modules.KategoriSkema.Application.UpdateKategoriSkema;
 using Xunit;
 
@@ -222,6 +226,184 @@ namespace UnpakSipaksi.Modules.KategoriSkema.ApplicationTest
 
             Assert.True(result.IsFailure);
             Assert.Equal("KategoriSkema.NotFound", result.Error.Code);
+        }
+
+        public class KategoriSkemaQueryHandlerTests
+        {
+            [Fact]
+            public async Task GetAllKategoriSkema_Handle_ReturnsList_WhenDataExists()
+            {
+                // Arrange
+                var mockConnectionFactory = new Mock<IDbConnectionFactory>();
+                var mockConnection = new Mock<DbConnection>();
+
+                var fakeData = new List<KategoriSkemaResponse>
+            {
+                new KategoriSkemaResponse
+                {
+                    Uuid = Guid.NewGuid().ToString(),
+                    Nama = "Skema 1",
+                    Rule = "[]"
+                }
+            };
+
+                mockConnection.SetupDapperAsync(c =>
+                    c.QueryAsync<KategoriSkemaResponse>(It.IsAny<string>(), null, null, null, null))
+                    .ReturnsAsync(fakeData);
+
+                mockConnectionFactory.Setup(f => f.OpenConnectionAsync())
+                    .Returns(new ValueTask<DbConnection>(mockConnection.Object));
+
+                var handler = new GetAllKategoriSkemaQueryHandler(mockConnectionFactory.Object);
+                var query = new GetAllKategoriSkemaQuery();
+
+                // Act
+                var result = await handler.Handle(query, CancellationToken.None);
+
+                // Assert
+                Assert.True(result.IsSuccess);
+                Assert.NotEmpty(result.Value);
+                Assert.Equal(fakeData.First().Nama, result.Value.First().Nama);
+            }
+
+            [Fact]
+            public async Task GetAllKategoriSkema_Handle_ReturnsFailure_WhenNoData()
+            {
+                // Arrange
+                var mockConnectionFactory = new Mock<IDbConnectionFactory>();
+                var mockConnection = new Mock<DbConnection>();
+
+                mockConnection.SetupDapperAsync(c =>
+                    c.QueryAsync<KategoriSkemaResponse>(It.IsAny<string>(), null, null, null, null))
+                    .ReturnsAsync(new List<KategoriSkemaResponse>());
+
+                mockConnectionFactory.Setup(f => f.OpenConnectionAsync())
+                    .Returns(new ValueTask<DbConnection>(mockConnection.Object));
+
+                var handler = new GetAllKategoriSkemaQueryHandler(mockConnectionFactory.Object);
+                var query = new GetAllKategoriSkemaQuery();
+
+                // Act
+                var result = await handler.Handle(query, CancellationToken.None);
+
+                // Assert
+                Assert.False(result.IsSuccess);
+            }
+
+            [Fact]
+            public async Task GetKategoriSkema_Handle_ReturnsSuccess_WhenDataExists()
+            {
+                // Arrange
+                var mockConnectionFactory = new Mock<IDbConnectionFactory>();
+                var mockConnection = new Mock<DbConnection>();
+                var uuid = Guid.NewGuid();
+
+                var fakeData = new KategoriSkemaResponse
+                {
+                    Uuid = uuid.ToString(),
+                    Nama = "Skema 1",
+                    Rule = "[]"
+                };
+
+                mockConnection.SetupDapperAsync(c =>
+                    c.QuerySingleOrDefaultAsync<KategoriSkemaResponse?>(It.IsAny<string>(), It.IsAny<object>(), null, null, null))
+                    .ReturnsAsync(fakeData);
+
+                mockConnectionFactory.Setup(f => f.OpenConnectionAsync())
+                    .Returns(new ValueTask<DbConnection>(mockConnection.Object));
+
+                var handler = new GetKategoriSkemaQueryHandler(mockConnectionFactory.Object);
+                var query = new GetKategoriSkemaQuery(uuid);
+
+                // Act
+                var result = await handler.Handle(query, CancellationToken.None);
+
+                // Assert
+                Assert.True(result.IsSuccess);
+                Assert.Equal("Skema 1", result.Value.Nama);
+            }
+
+            [Fact]
+            public async Task GetKategoriSkema_Handle_ReturnsFailure_WhenDataNotFound()
+            {
+                // Arrange
+                var mockConnectionFactory = new Mock<IDbConnectionFactory>();
+                var mockConnection = new Mock<DbConnection>();
+
+                mockConnection.SetupDapperAsync(c =>
+                    c.QuerySingleOrDefaultAsync<KategoriSkemaResponse?>(It.IsAny<string>(), It.IsAny<object>(), null, null, null))
+                    .ReturnsAsync((KategoriSkemaResponse?)null);
+
+                mockConnectionFactory.Setup(f => f.OpenConnectionAsync())
+                    .Returns(new ValueTask<DbConnection>(mockConnection.Object));
+
+                var handler = new GetKategoriSkemaQueryHandler(mockConnectionFactory.Object);
+                var query = new GetKategoriSkemaQuery(Guid.NewGuid());
+
+                // Act
+                var result = await handler.Handle(query, CancellationToken.None);
+
+                // Assert
+                Assert.False(result.IsSuccess);
+            }
+
+            [Fact]
+            public async Task GetKategoriSkemaDefault_Handle_ReturnsSuccess_WhenDataExists()
+            {
+                // Arrange
+                var mockConnectionFactory = new Mock<IDbConnectionFactory>();
+                var mockConnection = new Mock<DbConnection>();
+                var uuid = Guid.NewGuid();
+
+                var fakeData = new KategoriSkemaDefaultResponse
+                {
+                    Id = "1",
+                    Uuid = uuid.ToString(),
+                    Nama = "Skema Default",
+                    Rule = "[]"
+                };
+
+                mockConnection.SetupDapperAsync(c =>
+                    c.QuerySingleOrDefaultAsync<KategoriSkemaDefaultResponse?>(It.IsAny<string>(), It.IsAny<object>(), null, null, null))
+                    .ReturnsAsync(fakeData);
+
+                mockConnectionFactory.Setup(f => f.OpenConnectionAsync())
+                    .Returns(new ValueTask<DbConnection>(mockConnection.Object));
+
+                var handler = new GetKategoriSkemaDefaultQueryHandler(mockConnectionFactory.Object);
+                var query = new GetKategoriSkemaDefaultQuery(uuid);
+
+                // Act
+                var result = await handler.Handle(query, CancellationToken.None);
+
+                // Assert
+                Assert.True(result.IsSuccess);
+                Assert.Equal("Skema Default", result.Value.Nama);
+            }
+
+            [Fact]
+            public async Task GetKategoriSkemaDefault_Handle_ReturnsFailure_WhenDataNotFound()
+            {
+                // Arrange
+                var mockConnectionFactory = new Mock<IDbConnectionFactory>();
+                var mockConnection = new Mock<DbConnection>();
+
+                mockConnection.SetupDapperAsync(c =>
+                    c.QuerySingleOrDefaultAsync<KategoriSkemaDefaultResponse?>(It.IsAny<string>(), It.IsAny<object>(), null, null, null))
+                    .ReturnsAsync((KategoriSkemaDefaultResponse?)null);
+
+                mockConnectionFactory.Setup(f => f.OpenConnectionAsync())
+                    .Returns(new ValueTask<DbConnection>(mockConnection.Object));
+
+                var handler = new GetKategoriSkemaDefaultQueryHandler(mockConnectionFactory.Object);
+                var query = new GetKategoriSkemaDefaultQuery(Guid.NewGuid());
+
+                // Act
+                var result = await handler.Handle(query, CancellationToken.None);
+
+                // Assert
+                Assert.False(result.IsSuccess);
+            }
         }
     }
 }
