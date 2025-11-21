@@ -1,14 +1,16 @@
-﻿using Docker.DotNet.Models;
+﻿using Dapper;
 using MediatR;
-using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.DependencyInjection;
-using System.Reflection;
+using Moq;
+using Moq.Dapper;
+using System.Data.Common;
+using UnpakSipaksi.Common.Application.Data;
 using UnpakSipaksi.Common.Domain;
-using UnpakSipaksi.Modules.JumlahKolaboratorPublikasBereputasi.Application.CreateJumlahKolaboratorPublikasBereputasi;
-using UnpakSipaksi.Modules.JumlahKolaboratorPublikasBereputasi.Application.DeleteJumlahKolaboratorPublikasBereputasi;
-using UnpakSipaksi.Modules.JumlahKolaboratorPublikasBereputasi.Application.UpdateJumlahKolaboratorPublikasBereputasi;
 using UnpakSipaksi.Modules.KejelasanPembagianTugasTim.Application.CreateKejelasanPembagianTugasTim;
 using UnpakSipaksi.Modules.KejelasanPembagianTugasTim.Application.DeleteKejelasanPembagianTugasTim;
+using UnpakSipaksi.Modules.KejelasanPembagianTugasTim.Application.GetAllKejelasanPembagianTugasTim;
+using UnpakSipaksi.Modules.KejelasanPembagianTugasTim.Application.GetBobotKejelasanPembagianTugasTim;
+using UnpakSipaksi.Modules.KejelasanPembagianTugasTim.Application.GetKejelasanPembagianTugasTim;
 using UnpakSipaksi.Modules.KejelasanPembagianTugasTim.Application.UpdateKejelasanPembagianTugasTim;
 using UnpakSipaksi.Modules.KejelasanPembagianTugasTim.ApplicationTest;
 using Xunit;
@@ -229,6 +231,285 @@ namespace Application.Integration.Tests
 
             Assert.True(result.IsFailure);
             Assert.Equal("KejelasanPembagianTugasTim.NotFound", result.Error.Code);
+        }
+
+        [Fact]
+        public async Task Handle_All_ReturnsSuccess_WhenDataExists()
+        {
+            var mockFactory = new Mock<IDbConnectionFactory>();
+            var mockConn = new Mock<DbConnection>();
+
+            var fakeData = new List<KejelasanPembagianTugasTimResponse>
+            {
+                new() { Uuid = Guid.NewGuid().ToString(), Nama = "Tim 1", Skor = "5" }
+            };
+
+            mockConn.SetupDapperAsync(c =>
+                c.QueryAsync<KejelasanPembagianTugasTimResponse>(
+                    It.IsAny<string>(),
+                    null, null, null, null
+                )
+            ).ReturnsAsync(fakeData);
+
+            mockFactory.Setup(f => f.OpenConnectionAsync())
+                .ReturnsAsync(mockConn.Object);
+
+            var handler = new GetAllKejelasanPembagianTugasTimQueryHandler(mockFactory.Object);
+
+            var result = await handler.Handle(
+                new GetAllKejelasanPembagianTugasTimQuery(),
+                CancellationToken.None
+            );
+
+            Assert.True(result.IsSuccess);
+            Assert.NotEmpty(result.Value);
+        }
+
+        [Fact]
+        public async Task Handle_All_ReturnsFailure_WhenEmpty()
+        {
+            var mockFactory = new Mock<IDbConnectionFactory>();
+            var mockConn = new Mock<DbConnection>();
+
+            mockConn.SetupDapperAsync(c =>
+                c.QueryAsync<KejelasanPembagianTugasTimResponse>(
+                    It.IsAny<string>(),
+                    null, null, null, null
+                )
+            ).ReturnsAsync(new List<KejelasanPembagianTugasTimResponse>());
+
+            mockFactory.Setup(f => f.OpenConnectionAsync())
+                .ReturnsAsync(mockConn.Object);
+
+            var handler = new GetAllKejelasanPembagianTugasTimQueryHandler(mockFactory.Object);
+
+            var result = await handler.Handle(
+                new GetAllKejelasanPembagianTugasTimQuery(),
+                CancellationToken.None
+            );
+
+            Assert.False(result.IsSuccess);
+        }
+
+        [Fact]
+        public async Task Handle_Default_ReturnsSuccess_WhenFound()
+        {
+            var mockFactory = new Mock<IDbConnectionFactory>();
+            var mockConn = new Mock<DbConnection>();
+            var uuid = Guid.NewGuid();
+
+            var fakeData = new KejelasanPembagianTugasTimDefaultResponse
+            {
+                Id = "1",
+                Uuid = uuid.ToString(),
+                Nama = "Default Tim",
+                BobotPDP = 1,
+                BobotTerapan = 2,
+                BobotKerjasama = 3,
+                BobotPenelitianDasar = 4,
+                Skor = 10
+            };
+
+            mockConn.SetupDapperAsync(c =>
+                c.QuerySingleOrDefaultAsync<KejelasanPembagianTugasTimDefaultResponse>(
+                    It.IsAny<string>(),
+                    It.IsAny<object>(),
+                    null, null, null
+                )
+            ).ReturnsAsync(fakeData);
+
+            mockFactory.Setup(f => f.OpenConnectionAsync())
+                .ReturnsAsync(mockConn.Object);
+
+            var handler = new GetKejelasanPembagianTugasTimDefaultQueryHandler(mockFactory.Object);
+
+            var result = await handler.Handle(
+                new GetKejelasanPembagianTugasTimDefaultQuery(uuid),
+                CancellationToken.None
+            );
+
+            Assert.True(result.IsSuccess);
+            Assert.Equal(fakeData.Nama, result.Value.Nama);
+        }
+
+        [Fact]
+        public async Task Handle_Default_ReturnsFailure_WhenNotFound()
+        {
+            var mockFactory = new Mock<IDbConnectionFactory>();
+            var mockConn = new Mock<DbConnection>();
+
+            mockConn.SetupDapperAsync(c =>
+                c.QuerySingleOrDefaultAsync<KejelasanPembagianTugasTimDefaultResponse>(
+                    It.IsAny<string>(),
+                    It.IsAny<object>(),
+                    null, null, null
+                )
+            ).ReturnsAsync((KejelasanPembagianTugasTimDefaultResponse?)null);
+
+            mockFactory.Setup(f => f.OpenConnectionAsync())
+                .ReturnsAsync(mockConn.Object);
+
+            var handler = new GetKejelasanPembagianTugasTimDefaultQueryHandler(mockFactory.Object);
+
+            var result = await handler.Handle(
+                new GetKejelasanPembagianTugasTimDefaultQuery(Guid.NewGuid()),
+                CancellationToken.None
+            );
+
+            Assert.False(result.IsSuccess);
+        }
+
+        [Fact]
+        public async Task Handle_ReturnsSuccess_WhenFound()
+        {
+            var mockFactory = new Mock<IDbConnectionFactory>();
+            var mockConn = new Mock<DbConnection>();
+            var uuid = Guid.NewGuid();
+
+            var fakeData = new KejelasanPembagianTugasTimResponse
+            {
+                Uuid = uuid.ToString(),
+                Nama = "Tim 1",
+                Skor = "9"
+            };
+
+            mockConn.SetupDapperAsync(c =>
+                c.QuerySingleOrDefaultAsync<KejelasanPembagianTugasTimResponse>(
+                    It.IsAny<string>(),
+                    It.IsAny<object>(),
+                    null, null, null
+                )
+            ).ReturnsAsync(fakeData);
+
+            mockFactory.Setup(f => f.OpenConnectionAsync())
+                .ReturnsAsync(mockConn.Object);
+
+            var handler = new GetKejelasanPembagianTugasTimQueryHandler(mockFactory.Object);
+
+            var result = await handler.Handle(
+                new GetKejelasanPembagianTugasTimQuery(uuid),
+                CancellationToken.None
+            );
+
+            Assert.True(result.IsSuccess);
+            Assert.Equal(fakeData.Nama, result.Value.Nama);
+        }
+
+        [Fact]
+        public async Task Handle_ReturnsFailure_WhenNotFound()
+        {
+            var mockFactory = new Mock<IDbConnectionFactory>();
+            var mockConn = new Mock<DbConnection>();
+
+            mockConn.SetupDapperAsync(c =>
+                c.QuerySingleOrDefaultAsync<KejelasanPembagianTugasTimResponse>(
+                    It.IsAny<string>(),
+                    It.IsAny<object>(),
+                    null, null, null
+                )
+            ).ReturnsAsync((KejelasanPembagianTugasTimResponse?)null);
+
+            mockFactory.Setup(f => f.OpenConnectionAsync())
+                .ReturnsAsync(mockConn.Object);
+
+            var handler = new GetKejelasanPembagianTugasTimQueryHandler(mockFactory.Object);
+
+            var result = await handler.Handle(
+                new GetKejelasanPembagianTugasTimQuery(Guid.NewGuid()),
+                CancellationToken.None
+            );
+
+            Assert.False(result.IsSuccess);
+        }
+
+        [Theory]
+        [InlineData("Penelitian Dasar", 10)]
+        [InlineData("Penelitian Terapan", 20)]
+        [InlineData("Penelitian Kolaborasi", 30)]
+        [InlineData("Penelitian Dosen Pemula (PDP)", 40)]
+        public async Task Handle_ReturnsSuccess_WhenSingleValueExists(string kategori, int expected)
+        {
+            var mockFactory = new Mock<IDbConnectionFactory>();
+            var mockConn = new Mock<DbConnection>();
+
+            mockConn.SetupDapperAsync(c =>
+                c.QueryAsync<int>(
+                    It.IsAny<string>(),
+                    null, null, null, null
+                )
+            ).ReturnsAsync(new List<int> { expected });
+
+            mockFactory.Setup(f => f.OpenConnectionAsync())
+                .ReturnsAsync(mockConn.Object);
+
+            var handler = new GetBobotKejelasanPembagianTugasTimQueryHandler(mockFactory.Object);
+
+            var result = await handler.Handle(
+                new GetBobotKejelasanPembagianTugasTimQuery(kategori),
+                CancellationToken.None
+            );
+
+            Assert.True(result.IsSuccess);
+            Assert.Equal(expected, result.Value);
+        }
+
+        [Fact]
+        public async Task Handle_ReturnsFailure_WhenKategoriUnknown()
+        {
+            var handler = new GetBobotKejelasanPembagianTugasTimQueryHandler(new Mock<IDbConnectionFactory>().Object);
+
+            var result = await handler.Handle(
+                new GetBobotKejelasanPembagianTugasTimQuery("Kategori Tidak Ada"),
+                CancellationToken.None
+            );
+
+            Assert.False(result.IsSuccess);
+        }
+
+        [Fact]
+        public async Task Handle_ReturnsFailure_WhenEmptyData()
+        {
+            var mockFactory = new Mock<IDbConnectionFactory>();
+            var mockConn = new Mock<DbConnection>();
+
+            mockConn.SetupDapperAsync(c =>
+                c.QueryAsync<int>(It.IsAny<string>(), null, null, null, null)
+            ).ReturnsAsync(new List<int>());
+
+            mockFactory.Setup(f => f.OpenConnectionAsync())
+                .ReturnsAsync(mockConn.Object);
+
+            var handler = new GetBobotKejelasanPembagianTugasTimQueryHandler(mockFactory.Object);
+
+            var result = await handler.Handle(
+                new GetBobotKejelasanPembagianTugasTimQuery("Penelitian Dasar"),
+                CancellationToken.None
+            );
+
+            Assert.False(result.IsSuccess);
+        }
+
+        [Fact]
+        public async Task Handle_ReturnsFailure_WhenMultipleValues()
+        {
+            var mockFactory = new Mock<IDbConnectionFactory>();
+            var mockConn = new Mock<DbConnection>();
+
+            mockConn.SetupDapperAsync(c =>
+                c.QueryAsync<int>(It.IsAny<string>(), null, null, null, null)
+            ).ReturnsAsync(new List<int> { 10, 20 });
+
+            mockFactory.Setup(f => f.OpenConnectionAsync())
+                .ReturnsAsync(mockConn.Object);
+
+            var handler = new GetBobotKejelasanPembagianTugasTimQueryHandler(mockFactory.Object);
+
+            var result = await handler.Handle(
+                new GetBobotKejelasanPembagianTugasTimQuery("Penelitian Dasar"),
+                CancellationToken.None
+            );
+
+            Assert.False(result.IsSuccess);
         }
     }
 }

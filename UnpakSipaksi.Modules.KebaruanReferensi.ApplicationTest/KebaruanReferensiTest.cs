@@ -219,5 +219,282 @@ namespace UnpakSipaksi.Modules.KebaruanReferensi.ApplicationTest
             Assert.True(result.IsFailure);
             Assert.Equal("KebaruanReferensi.NotFound", result.Error.Code);
         }
+
+        [Fact]
+        public async Task Handle_All_ReturnsSuccess_WhenDataExists()
+        {
+            var mockFactory = new Mock<IDbConnectionFactory>();
+            var mockConn = new Mock<DbConnection>();
+
+            var fakeList = new List<KebaruanReferensiResponse>
+            {
+                new() { Uuid = Guid.NewGuid().ToString(), Nama = "Ref 1", Skor = "10" }
+            };
+
+            mockConn.SetupDapperAsync(c =>
+                c.QueryAsync<KebaruanReferensiResponse>(
+                    It.IsAny<string>(),
+                    null,
+                    null,
+                    null,
+                    null
+                )
+            ).ReturnsAsync(fakeList);
+
+            mockFactory.Setup(f => f.OpenConnectionAsync())
+                .ReturnsAsync(mockConn.Object);
+
+            var handler = new GetAllKebaruanReferensiQueryHandler(mockFactory.Object);
+            var query = new GetAllKebaruanReferensiQuery();
+
+            var result = await handler.Handle(query, CancellationToken.None);
+
+            Assert.True(result.IsSuccess);
+            Assert.NotEmpty(result.Value);
+            Assert.Equal(fakeList[0].Nama, result.Value[0].Nama);
+        }
+
+        [Fact]
+        public async Task Handle_All_ReturnsFailure_WhenNoData()
+        {
+            var mockFactory = new Mock<IDbConnectionFactory>();
+            var mockConn = new Mock<DbConnection>();
+
+            mockConn.SetupDapperAsync(c =>
+                c.QueryAsync<KebaruanReferensiResponse>(
+                    It.IsAny<string>(),
+                    null, null, null, null
+                )
+            ).ReturnsAsync(new List<KebaruanReferensiResponse>());
+
+            mockFactory.Setup(f => f.OpenConnectionAsync())
+                .ReturnsAsync(mockConn.Object);
+
+            var handler = new GetAllKebaruanReferensiQueryHandler(mockFactory.Object);
+            var query = new GetAllKebaruanReferensiQuery();
+
+            var result = await handler.Handle(query, CancellationToken.None);
+
+            Assert.False(result.IsSuccess);
+        }
+
+        [Fact]
+        public async Task Handle_Default_ReturnsSuccess_WhenDataExists()
+        {
+            var mockFactory = new Mock<IDbConnectionFactory>();
+            var mockConn = new Mock<DbConnection>();
+            var uuid = Guid.NewGuid().ToString();
+
+            var fakeData = new KebaruanReferensiDefaultResponse
+            {
+                Id = "1",
+                Uuid = uuid,
+                Nama = "Ref Default",
+                BobotPDP = 1,
+                BobotTerapan = 2,
+                BobotKerjasama = 3,
+                BobotPenelitianDasar = 4,
+                Skor = 10
+            };
+
+            mockConn.SetupDapperAsync(c =>
+                c.QuerySingleOrDefaultAsync<KebaruanReferensiDefaultResponse>(
+                    It.IsAny<string>(),
+                    It.IsAny<object>(),
+                    null, null, null
+                )
+            ).ReturnsAsync(fakeData);
+
+            mockFactory.Setup(f => f.OpenConnectionAsync())
+                .ReturnsAsync(mockConn.Object);
+
+            var handler = new GetKebaruanReferensiDefaultQueryHandler(mockFactory.Object);
+            var query = new GetKebaruanReferensiDefaultQuery(Guid.Parse(uuid));
+
+            var result = await handler.Handle(query, CancellationToken.None);
+
+            Assert.True(result.IsSuccess);
+            Assert.Equal(fakeData.Nama, result.Value.Nama);
+        }
+
+        [Fact]
+        public async Task Handle_Default_ReturnsFailure_WhenNotFound()
+        {
+            var mockFactory = new Mock<IDbConnectionFactory>();
+            var mockConn = new Mock<DbConnection>();
+
+            mockConn.SetupDapperAsync(c =>
+                c.QuerySingleOrDefaultAsync<KebaruanReferensiDefaultResponse>(
+                    It.IsAny<string>(),
+                    It.IsAny<object>(),
+                    null, null, null
+                )
+            ).ReturnsAsync((KebaruanReferensiDefaultResponse?)null);
+
+            mockFactory.Setup(f => f.OpenConnectionAsync())
+                .ReturnsAsync(mockConn.Object);
+
+            var handler = new GetKebaruanReferensiDefaultQueryHandler(mockFactory.Object);
+
+            var result = await handler.Handle(
+                new GetKebaruanReferensiDefaultQuery(Guid.NewGuid()),
+                CancellationToken.None
+            );
+
+            Assert.False(result.IsSuccess);
+        }
+
+        [Fact]
+        public async Task Handle_ReturnsSuccess_WhenDataExists()
+        {
+            var mockFactory = new Mock<IDbConnectionFactory>();
+            var mockConn = new Mock<DbConnection>();
+            var uuid = Guid.NewGuid().ToString();
+
+            var fakeData = new KebaruanReferensiResponse
+            {
+                Uuid = uuid,
+                Nama = "Ref 1",
+                Skor = "5"
+            };
+
+            mockConn.SetupDapperAsync(c =>
+                c.QuerySingleOrDefaultAsync<KebaruanReferensiResponse>(
+                    It.IsAny<string>(),
+                    It.IsAny<object>(),
+                    null, null, null
+                )
+            ).ReturnsAsync(fakeData);
+
+            mockFactory.Setup(f => f.OpenConnectionAsync())
+                .ReturnsAsync(mockConn.Object);
+
+            var handler = new GetKebaruanReferensiQueryHandler(mockFactory.Object);
+            var query = new GetKebaruanReferensiQuery(Guid.Parse(uuid));
+
+            var result = await handler.Handle(query, CancellationToken.None);
+
+            Assert.True(result.IsSuccess);
+            Assert.Equal(fakeData.Nama, result.Value.Nama);
+        }
+
+        [Fact]
+        public async Task Handle_ReturnsFailure_WhenNotFound()
+        {
+            var mockFactory = new Mock<IDbConnectionFactory>();
+            var mockConn = new Mock<DbConnection>();
+
+            mockConn.SetupDapperAsync(c =>
+                c.QuerySingleOrDefaultAsync<KebaruanReferensiResponse>(
+                    It.IsAny<string>(),
+                    It.IsAny<object>(),
+                    null, null, null
+                )
+            ).ReturnsAsync((KebaruanReferensiResponse?)null);
+
+            mockFactory.Setup(f => f.OpenConnectionAsync())
+                .ReturnsAsync(mockConn.Object);
+
+            var handler = new GetKebaruanReferensiQueryHandler(mockFactory.Object);
+
+            var result = await handler.Handle(
+                new GetKebaruanReferensiQuery(Guid.NewGuid()),
+                CancellationToken.None
+            );
+
+            Assert.False(result.IsSuccess);
+        }
+
+        [Theory]
+        [InlineData("Penelitian Dasar", 10)]
+        [InlineData("Penelitian Terapan", 20)]
+        [InlineData("Penelitian Kolaborasi", 30)]
+        [InlineData("Penelitian Dosen Pemula (PDP)", 40)]
+        public async Task Handle_ReturnsSuccess_WhenSingleValueExists(string kategori, int expected)
+        {
+            var mockFactory = new Mock<IDbConnectionFactory>();
+            var mockConn = new Mock<DbConnection>();
+
+            mockConn.SetupDapperAsync(c =>
+                c.QueryAsync<int>(
+                    It.IsAny<string>(),
+                    null, null, null, null
+                )
+            ).ReturnsAsync(new List<int> { expected });
+
+            mockFactory.Setup(f => f.OpenConnectionAsync())
+                .ReturnsAsync(mockConn.Object);
+
+            var handler = new GetBobotKebaruanReferensiQueryHandler(mockFactory.Object);
+            var query = new GetBobotKebaruanReferensiQuery(kategori);
+
+            var result = await handler.Handle(query, CancellationToken.None);
+
+            Assert.True(result.IsSuccess);
+            Assert.Equal(expected, result.Value);
+        }
+
+        [Fact]
+        public async Task Handle_ReturnsFailure_WhenEmptyData()
+        {
+            var mockFactory = new Mock<IDbConnectionFactory>();
+            var mockConn = new Mock<DbConnection>();
+
+            mockConn.SetupDapperAsync(c =>
+                c.QueryAsync<int>(It.IsAny<string>(), null, null, null, null)
+            ).ReturnsAsync(new List<int>());
+
+            mockFactory.Setup(f => f.OpenConnectionAsync())
+                .ReturnsAsync(mockConn.Object);
+
+            var handler = new GetBobotKebaruanReferensiQueryHandler(mockFactory.Object);
+
+            var result = await handler.Handle(
+                new GetBobotKebaruanReferensiQuery("Penelitian Dasar"),
+                CancellationToken.None
+            );
+
+            Assert.False(result.IsSuccess);
+        }
+
+        [Fact]
+        public async Task Handle_ReturnsFailure_WhenMultipleValues()
+        {
+            var mockFactory = new Mock<IDbConnectionFactory>();
+            var mockConn = new Mock<DbConnection>();
+
+            mockConn.SetupDapperAsync(c =>
+                c.QueryAsync<int>(
+                    It.IsAny<string>(),
+                    null, null, null, null
+                )
+            ).ReturnsAsync(new List<int> { 10, 20 });
+
+            mockFactory.Setup(f => f.OpenConnectionAsync())
+                .ReturnsAsync(mockConn.Object);
+
+            var handler = new GetBobotKebaruanReferensiQueryHandler(mockFactory.Object);
+
+            var result = await handler.Handle(
+                new GetBobotKebaruanReferensiQuery("Penelitian Dasar"),
+                CancellationToken.None
+            );
+
+            Assert.False(result.IsSuccess);
+        }
+
+        [Fact]
+        public async Task Handle_ReturnsFailure_WhenUnknownKategori()
+        {
+            var mockFactory = new Mock<IDbConnectionFactory>();
+            var handler = new GetBobotKebaruanReferensiQueryHandler(mockFactory.Object);
+
+            var result = await handler.Handle(
+                new GetBobotKebaruanReferensiQuery("Kategori Tidak Valid"),
+                CancellationToken.None
+            );
+
+            Assert.False(result.IsSuccess);
+        }
     }
 }
