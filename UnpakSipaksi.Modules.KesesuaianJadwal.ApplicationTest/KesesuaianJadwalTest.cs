@@ -8,13 +8,16 @@ using System.Data.Common;
 using System.Reflection;
 using UnpakSipaksi.Common.Application.Data;
 using UnpakSipaksi.Common.Domain;
+using UnpakSipaksi.Modules.AkurasiPenelitian.Application.GetAkurasiPenelitian;
 using UnpakSipaksi.Modules.KesesuaianJadwal.Application.CreateKesesuaianJadwal;
 using UnpakSipaksi.Modules.KesesuaianJadwal.Application.DeleteKesesuaianJadwal;
 using UnpakSipaksi.Modules.KesesuaianJadwal.Application.GetAllKesesuaianJadwal;
 using UnpakSipaksi.Modules.KesesuaianJadwal.Application.GetBobotKesesuaianJadwal;
+using UnpakSipaksi.Modules.KesesuaianJadwal.Application.GetBobotKesesuaianJadwal;
 using UnpakSipaksi.Modules.KesesuaianJadwal.Application.GetKesesuaianJadwal;
 using UnpakSipaksi.Modules.KesesuaianJadwal.Application.UpdateKesesuaianJadwal;
 using UnpakSipaksi.Modules.KesesuaianJadwal.ApplicationTest;
+using UnpakSipaksi.Modules.KesesuaianJadwal.Domain.KesesuaianJadwal;
 using Xunit;
 
 namespace Application.Integration.Tests
@@ -238,23 +241,29 @@ namespace Application.Integration.Tests
         [Fact]
         public async Task GetAllKesesuaianJadwal_ShouldReturnList_WhenDataExists()
         {
-            var mockFactory = new Mock<IDbConnectionFactory>();
+            var mockConnectionFactory = new Mock<IDbConnectionFactory>();
             var mockConnection = new Mock<DbConnection>();
 
-            mockFactory.Setup(f => f.OpenConnectionAsync()).ReturnsAsync(mockConnection.Object);
+            var fakeData = new List<KesesuaianJadwalResponse>
+            {
+                new KesesuaianJadwalResponse
+                {
+                    Uuid = Guid.NewGuid().ToString(),
+                    Nama = "Nama1",
+                    Nilai = "5"
+                }
+            };
 
-            var rows = new List<KesesuaianJadwalResponse>
-        {
-            new() { Uuid = "abc", Nama = "Nama1", Nilai = "5" }
-        };
+            // Setup Dapper extension
+            mockConnection.SetupDapperAsync(c => c.QueryAsync<KesesuaianJadwalResponse>(
+            It.IsAny<string>(), null, null, null, null))
+            .ReturnsAsync(fakeData);
 
-            SqlMapper.AddTypeMap(typeof(string), System.Data.DbType.String);
+            mockConnectionFactory
+             .Setup(f => f.OpenConnectionAsync())
+             .Returns(new ValueTask<DbConnection>(mockConnection.Object));
 
-            mockConnection
-                .Setup(c => c.QueryAsync<KesesuaianJadwalResponse>(It.IsAny<string>(), null, null, null, null))
-                .ReturnsAsync(rows);
-
-            var handler = new GetAllKesesuaianJadwalQueryHandler(mockFactory.Object);
+            var handler = new GetAllKesesuaianJadwalQueryHandler(mockConnectionFactory.Object);
             var result = await handler.Handle(new GetAllKesesuaianJadwalQuery(), CancellationToken.None);
 
             Assert.True(result.IsSuccess);
@@ -264,16 +273,19 @@ namespace Application.Integration.Tests
         [Fact]
         public async Task GetAllKesesuaianJadwal_ShouldReturnFailure_WhenEmpty()
         {
-            var mockFactory = new Mock<IDbConnectionFactory>();
+            // Arrange
+            var mockConnectionFactory = new Mock<IDbConnectionFactory>();
             var mockConnection = new Mock<DbConnection>();
 
-            mockFactory.Setup(f => f.OpenConnectionAsync()).ReturnsAsync(mockConnection.Object);
-
-            mockConnection
-                .Setup(c => c.QueryAsync<KesesuaianJadwalResponse>(It.IsAny<string>(), null, null, null, null))
+            // Empty data
+            mockConnection.SetupDapperAsync(c => c.QueryAsync<KesesuaianJadwalResponse>(
+                It.IsAny<string>(), null, null, null, null))
                 .ReturnsAsync(new List<KesesuaianJadwalResponse>());
 
-            var handler = new GetAllKesesuaianJadwalQueryHandler(mockFactory.Object);
+            mockConnectionFactory.Setup(f => f.OpenConnectionAsync())
+                .ReturnsAsync(mockConnection.Object);
+
+            var handler = new GetAllKesesuaianJadwalQueryHandler(mockConnectionFactory.Object);
             var result = await handler.Handle(new GetAllKesesuaianJadwalQuery(), CancellationToken.None);
 
             Assert.True(result.IsFailure);
@@ -282,53 +294,62 @@ namespace Application.Integration.Tests
         [Fact]
         public async Task GetKesesuaianJadwalDefault_ShouldReturnData_WhenExists()
         {
-            var mockFactory = new Mock<IDbConnectionFactory>();
-            var mockConn = new Mock<DbConnection>();
+            // Arrange
+            var mockConnectionFactory = new Mock<IDbConnectionFactory>();
+            var mockConnection = new Mock<DbConnection>();
+            var uuid = Guid.NewGuid();
 
-            mockFactory.Setup(f => f.OpenConnectionAsync()).ReturnsAsync(mockConn.Object);
-            var uuid = Guid.NewGuid().ToString();
-
-            var response = new KesesuaianJadwalDefaultResponse
+            var fakeData = new KesesuaianJadwalDefaultResponse
             {
                 Id = "1",
-                Uuid = uuid,
-                Nama = "Test",
+                Uuid = uuid.ToString(),
+                Nama = "Nama1",
                 Nilai = 5
             };
 
-            mockConn
-                .Setup(c => c.QuerySingleOrDefaultAsync<KesesuaianJadwalDefaultResponse?>(
+            mockConnection.SetupDapperAsync(c =>
+                c.QuerySingleOrDefaultAsync<KesesuaianJadwalDefaultResponse?>(
                     It.IsAny<string>(),
                     It.IsAny<object>(),
-                    null, null, null))
-                .ReturnsAsync(response);
+                    null, null, null
+                )
+            ).ReturnsAsync(fakeData);
 
-            var handler = new GetKesesuaianJadwalDefaultQueryHandler(mockFactory.Object);
+            mockConnectionFactory
+                .Setup(f => f.OpenConnectionAsync())
+                .Returns(new ValueTask<DbConnection>(mockConnection.Object));
+
+            var handler = new GetKesesuaianJadwalDefaultQueryHandler(mockConnectionFactory.Object);
 
             var result = await handler.Handle(
-                new GetKesesuaianJadwalDefaultQuery(Guid.Parse(uuid)),
+                new GetKesesuaianJadwalDefaultQuery(uuid),
                 CancellationToken.None);
 
             Assert.True(result.IsSuccess);
-            Assert.Equal(uuid, result.Value.Uuid);
+            Assert.Equal(uuid.ToString(), result.Value.Uuid);
         }
 
         [Fact]
         public async Task GetKesesuaianJadwalDefault_ShouldReturnFailure_WhenNotFound()
         {
-            var mockFactory = new Mock<IDbConnectionFactory>();
-            var mockConn = new Mock<DbConnection>();
+            // Arrange
+            var mockConnectionFactory = new Mock<IDbConnectionFactory>();
+            var mockConnection = new Mock<DbConnection>();
+            var uuid = Guid.NewGuid();
 
-            mockFactory.Setup(f => f.OpenConnectionAsync()).ReturnsAsync(mockConn.Object);
-
-            mockConn
-                .Setup(c => c.QuerySingleOrDefaultAsync<KesesuaianJadwalDefaultResponse?>(
+            mockConnection.SetupDapperAsync(c =>
+                c.QuerySingleOrDefaultAsync<KesesuaianJadwalDefaultResponse?>(
                     It.IsAny<string>(),
                     It.IsAny<object>(),
-                    null, null, null))
-                .ReturnsAsync((KesesuaianJadwalDefaultResponse?)null);
+                    null, null, null
+                )
+            ).ReturnsAsync((KesesuaianJadwalDefaultResponse?) null);
 
-            var handler = new GetKesesuaianJadwalDefaultQueryHandler(mockFactory.Object);
+            mockConnectionFactory
+                .Setup(f => f.OpenConnectionAsync())
+                .Returns(new ValueTask<DbConnection>(mockConnection.Object));
+
+            var handler = new GetKesesuaianJadwalDefaultQueryHandler(mockConnectionFactory.Object);
 
             var result = await handler.Handle(
                 new GetKesesuaianJadwalDefaultQuery(Guid.NewGuid()),
@@ -340,52 +361,61 @@ namespace Application.Integration.Tests
         [Fact]
         public async Task GetKesesuaianJadwalById_ShouldReturnData_WhenFound()
         {
-            var mockFactory = new Mock<IDbConnectionFactory>();
-            var mockConn = new Mock<DbConnection>();
+            // Arrange
+            var mockConnectionFactory = new Mock<IDbConnectionFactory>();
+            var mockConnection = new Mock<DbConnection>();
+            var uuid = Guid.NewGuid();
 
-            mockFactory.Setup(f => f.OpenConnectionAsync()).ReturnsAsync(mockConn.Object);
-            var uuid = Guid.NewGuid().ToString();
-
-            var response = new KesesuaianJadwalResponse
+            var fakeData = new KesesuaianJadwalResponse
             {
-                Uuid = uuid,
-                Nama = "Testing",
-                Nilai = "2"
+                Uuid = uuid.ToString(),
+                Nama = "Nama1",
+                Nilai = "20"
             };
 
-            mockConn
-                .Setup(c => c.QuerySingleOrDefaultAsync<KesesuaianJadwalResponse?>(
+            mockConnection.SetupDapperAsync(c =>
+                c.QuerySingleOrDefaultAsync<KesesuaianJadwalResponse?>(
                     It.IsAny<string>(),
                     It.IsAny<object>(),
-                    null, null, null))
-                .ReturnsAsync(response);
+                    null, null, null
+                )
+            ).ReturnsAsync(fakeData);
 
-            var handler = new GetKesesuaianJadwalQueryHandler(mockFactory.Object);
+            mockConnectionFactory
+                .Setup(f => f.OpenConnectionAsync())
+                .Returns(new ValueTask<DbConnection>(mockConnection.Object));
+
+            var handler = new GetKesesuaianJadwalQueryHandler(mockConnectionFactory.Object);
 
             var result = await handler.Handle(
-                new GetKesesuaianJadwalQuery(Guid.Parse(uuid)),
+                new GetKesesuaianJadwalQuery(uuid),
                 CancellationToken.None);
 
             Assert.True(result.IsSuccess);
-            Assert.Equal(uuid, result.Value.Uuid);
+            Assert.Equal(uuid.ToString(), result.Value.Uuid);
         }
 
         [Fact]
         public async Task GetKesesuaianJadwalById_ShouldReturnFailure_WhenNotFound()
         {
-            var mockFactory = new Mock<IDbConnectionFactory>();
-            var mockConn = new Mock<DbConnection>();
+            // Arrange
+            var mockConnectionFactory = new Mock<IDbConnectionFactory>();
+            var mockConnection = new Mock<DbConnection>();
+            var uuid = Guid.NewGuid();
 
-            mockFactory.Setup(f => f.OpenConnectionAsync()).ReturnsAsync(mockConn.Object);
-
-            mockConn
-                .Setup(c => c.QuerySingleOrDefaultAsync<KesesuaianJadwalResponse?>(
+            mockConnection.SetupDapperAsync(c =>
+                c.QuerySingleOrDefaultAsync<KesesuaianJadwalResponse?>(
                     It.IsAny<string>(),
                     It.IsAny<object>(),
-                    null, null, null))
-                .ReturnsAsync((KesesuaianJadwalResponse?)null);
+                    null, null, null
+                )
+            ).ReturnsAsync((KesesuaianJadwalResponse?) null);
 
-            var handler = new GetKesesuaianJadwalQueryHandler(mockFactory.Object);
+            mockConnectionFactory
+                .Setup(f => f.OpenConnectionAsync())
+                .Returns(new ValueTask<DbConnection>(mockConnection.Object));
+
+            var handler = new GetKesesuaianJadwalQueryHandler(mockConnectionFactory.Object);
 
             var result = await handler.Handle(
                 new GetKesesuaianJadwalQuery(Guid.NewGuid()),
@@ -395,40 +425,51 @@ namespace Application.Integration.Tests
         }
 
         [Fact]
-        public async Task GetBobotKesesuaianJadwal_ShouldReturnValue_WhenSingleValue()
+        public async Task GetBobotKesesuaianJadwal_ShouldReturnFailure_WhenValueIsNull()
         {
             var mockFactory = new Mock<IDbConnectionFactory>();
             var mockConn = new Mock<DbConnection>();
 
-            mockFactory.Setup(f => f.OpenConnectionAsync()).ReturnsAsync(mockConn.Object);
+            mockConn.SetupDapperAsync(c =>
+                c.QuerySingleOrDefaultAsync<int?>(
+                    It.IsAny<string>(),
+                    It.IsAny<object>(),
+                    null, null, null
+                )
+            ).ReturnsAsync((int?)null);
 
-            mockConn
-                .Setup(c => c.QueryAsync<int>(It.IsAny<string>(), null, null, null, null))
-                .ReturnsAsync(new List<int> { 10 });
+            mockFactory.Setup(f => f.OpenConnectionAsync())
+                .ReturnsAsync(mockConn.Object);
 
             var handler = new GetBobotKesesuaianJadwalQueryHandler(mockFactory.Object);
+
             var result = await handler.Handle(new GetBobotKesesuaianJadwalQuery(), CancellationToken.None);
 
-            Assert.True(result.IsSuccess);
-            Assert.Equal(10, result.Value);
+            Assert.False(result.IsSuccess);
         }
 
         [Fact]
-        public async Task GetBobotKesesuaianJadwal_ShouldReturnFailure_WhenEmpty()
+        public async Task GetBobotKesesuaianJadwal_ShouldReturnFailure_WhenEmptyList()
         {
             var mockFactory = new Mock<IDbConnectionFactory>();
             var mockConn = new Mock<DbConnection>();
 
-            mockFactory.Setup(f => f.OpenConnectionAsync()).ReturnsAsync(mockConn.Object);
+            // Return empty list
+            mockConn.SetupDapperAsync(c =>
+                c.QueryAsync<int>(
+                    It.IsAny<string>(), null, null, null, null
+                )
+            ).ReturnsAsync(new List<int>());
 
-            mockConn
-                .Setup(c => c.QueryAsync<int>(It.IsAny<string>(), null, null, null, null))
-                .ReturnsAsync(new List<int>());
+            mockFactory.Setup(f => f.OpenConnectionAsync())
+                .ReturnsAsync(mockConn.Object);
 
             var handler = new GetBobotKesesuaianJadwalQueryHandler(mockFactory.Object);
+
             var result = await handler.Handle(new GetBobotKesesuaianJadwalQuery(), CancellationToken.None);
 
             Assert.True(result.IsFailure);
+            Assert.Equal(KesesuaianJadwalErrors.EmptyData().Code, result.Error.Code);
         }
 
         [Fact]
@@ -437,16 +478,24 @@ namespace Application.Integration.Tests
             var mockFactory = new Mock<IDbConnectionFactory>();
             var mockConn = new Mock<DbConnection>();
 
-            mockFactory.Setup(f => f.OpenConnectionAsync()).ReturnsAsync(mockConn.Object);
+            // Return 2 values
+            mockConn.SetupDapperAsync(c =>
+                c.QueryAsync<int>(
+                    It.IsAny<string>(), null, null, null, null
+                )
+            ).ReturnsAsync(new List<int> { 5, 7 });
 
-            mockConn
-                .Setup(c => c.QueryAsync<int>(It.IsAny<string>(), null, null, null, null))
-                .ReturnsAsync(new List<int> { 5, 7 });
+            mockFactory.Setup(f => f.OpenConnectionAsync())
+                .ReturnsAsync(mockConn.Object);
 
             var handler = new GetBobotKesesuaianJadwalQueryHandler(mockFactory.Object);
+
             var result = await handler.Handle(new GetBobotKesesuaianJadwalQuery(), CancellationToken.None);
 
             Assert.True(result.IsFailure);
+            Assert.Equal(KesesuaianJadwalErrors.NotSameValue().Code, result.Error.Code);
         }
+
+
     }
 }
