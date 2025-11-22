@@ -1,11 +1,17 @@
-﻿using MediatR;
+﻿using Dapper;
+using MediatR;
 using Microsoft.Extensions.DependencyInjection;
+using Moq;
+using Moq.Dapper;
+using System.Data.Common;
+using UnpakSipaksi.Common.Application.Data;
 using UnpakSipaksi.Common.Domain;
-using UnpakSipaksi.Modules.Kategori.Application.DeleteKategori;
-using UnpakSipaksi.Modules.Kategori.Application.UpdateKategori;
 using UnpakSipaksi.Modules.KelompokRab.Application.CreateKelompokRab;
 using UnpakSipaksi.Modules.KelompokRab.Application.DeleteKelompokRab;
+using UnpakSipaksi.Modules.KelompokRab.Application.GetAllKelompokRab;
+using UnpakSipaksi.Modules.KelompokRab.Application.GetKelompokRab;
 using UnpakSipaksi.Modules.KelompokRab.Application.UpdateKelompokRab;
+using UnpakSipaksi.Modules.KelompokRab.Domain.KelompokRab;
 using Xunit;
 
 namespace UnpakSipaksi.Modules.KelompokRab.ApplicationTest
@@ -171,6 +177,156 @@ namespace UnpakSipaksi.Modules.KelompokRab.ApplicationTest
 
             Assert.True(deleteResult.IsFailure);
             Assert.Equal("KelompokRab.NotFound", deleteResult.Error.Code);
+        }
+
+        [Fact]
+        public async Task GetAll_ReturnsList_WhenDataExists()
+        {
+            var mockFactory = new Mock<IDbConnectionFactory>();
+            var mockConn = new Mock<DbConnection>();
+
+            var fake = new List<KelompokRabResponse>
+            {
+                new() { Uuid = Guid.NewGuid().ToString(), Nama = "Data 1" }
+            };
+
+            mockConn.SetupDapperAsync(c =>
+                c.QueryAsync<KelompokRabResponse>(It.IsAny<string>(), null, null, null, null)
+            ).ReturnsAsync(fake);
+
+            mockFactory.Setup(f => f.OpenConnectionAsync())
+                .Returns(new ValueTask<DbConnection>(mockConn.Object));
+
+            var handler = new GetAllKelompokRabQueryHandler(mockFactory.Object);
+            var result = await handler.Handle(new GetAllKelompokRabQuery(), CancellationToken.None);
+
+            Assert.True(result.IsSuccess);
+            Assert.Single(result.Value);
+            Assert.Equal("Data 1", result.Value[0].Nama);
+        }
+
+        [Fact]
+        public async Task GetAll_ReturnsFailure_WhenEmpty()
+        {
+            var mockFactory = new Mock<IDbConnectionFactory>();
+            var mockConn = new Mock<DbConnection>();
+
+            mockConn.SetupDapperAsync(c =>
+                c.QueryAsync<KelompokRabResponse>(It.IsAny<string>(), null, null, null, null)
+            ).ReturnsAsync(new List<KelompokRabResponse>());
+
+            mockFactory.Setup(f => f.OpenConnectionAsync())
+                .ReturnsAsync(mockConn.Object);
+
+            var handler = new GetAllKelompokRabQueryHandler(mockFactory.Object);
+            var result = await handler.Handle(new GetAllKelompokRabQuery(), CancellationToken.None);
+
+            Assert.False(result.IsSuccess);
+            Assert.Equal(KelompokRabErrors.EmptyData().Code, result.Error.Code);
+        }
+
+        [Fact]
+        public async Task GetDefault_ReturnsSuccess_WhenFound()
+        {
+            var mockFactory = new Mock<IDbConnectionFactory>();
+            var mockConn = new Mock<DbConnection>();
+
+            var uuid = Guid.NewGuid();
+
+            var fake = new KelompokRabDefaultResponse
+            {
+                Id = "1",
+                Uuid = uuid.ToString(),
+                Nama = "Default Data"
+            };
+
+            mockConn.SetupDapperAsync(c =>
+                c.QuerySingleOrDefaultAsync<KelompokRabDefaultResponse?>(It.IsAny<string>(),
+                    It.IsAny<object>(), null, null, null)
+            ).ReturnsAsync(fake);
+
+            mockFactory.Setup(f => f.OpenConnectionAsync())
+                .Returns(new ValueTask<DbConnection>(mockConn.Object));
+
+            var handler = new GetKelompokRabDefaultQueryHandler(mockFactory.Object);
+            var query = new GetKelompokRabDefaultQuery(uuid);
+            var result = await handler.Handle(query, CancellationToken.None);
+
+            Assert.True(result.IsSuccess);
+            Assert.Equal("Default Data", result.Value.Nama);
+        }
+
+        [Fact]
+        public async Task GetDefault_ReturnsFailure_WhenNotFound()
+        {
+            var mockFactory = new Mock<IDbConnectionFactory>();
+            var mockConn = new Mock<DbConnection>();
+
+            mockConn.SetupDapperAsync(c =>
+                c.QuerySingleOrDefaultAsync<KelompokRabDefaultResponse?>(It.IsAny<string>(),
+                    It.IsAny<object>(), null, null, null)
+            ).ReturnsAsync((KelompokRabDefaultResponse?)null);
+
+            mockFactory.Setup(f => f.OpenConnectionAsync())
+                .Returns(new ValueTask<DbConnection>(mockConn.Object));
+
+            var handler = new GetKelompokRabDefaultQueryHandler(mockFactory.Object);
+            var query = new GetKelompokRabDefaultQuery(Guid.NewGuid());
+            var result = await handler.Handle(query, CancellationToken.None);
+
+            Assert.False(result.IsSuccess);
+            Assert.Equal(KelompokRabErrors.NotFound(query.KelompokRabUuid).Code, result.Error.Code);
+        }
+
+        [Fact]
+        public async Task GetByUuid_ReturnsSuccess_WhenFound()
+        {
+            var mockFactory = new Mock<IDbConnectionFactory>();
+            var mockConn = new Mock<DbConnection>();
+
+            var uuid = Guid.NewGuid();
+
+            var fake = new KelompokRabResponse
+            {
+                Uuid = uuid.ToString(),
+                Nama = "Some Data"
+            };
+
+            mockConn.SetupDapperAsync(c =>
+                c.QuerySingleOrDefaultAsync<KelompokRabResponse?>(It.IsAny<string>(),
+                    It.IsAny<object>(), null, null, null)
+            ).ReturnsAsync(fake);
+
+            mockFactory.Setup(f => f.OpenConnectionAsync())
+                .Returns(new ValueTask<DbConnection>(mockConn.Object));
+
+            var handler = new GetKelompokRabQueryHandler(mockFactory.Object);
+            var result = await handler.Handle(new GetKelompokRabQuery(uuid), CancellationToken.None);
+
+            Assert.True(result.IsSuccess);
+            Assert.Equal("Some Data", result.Value.Nama);
+        }
+
+        [Fact]
+        public async Task GetByUuid_ReturnsFailure_WhenNotFound()
+        {
+            var mockFactory = new Mock<IDbConnectionFactory>();
+            var mockConn = new Mock<DbConnection>();
+
+            mockConn.SetupDapperAsync(c =>
+                c.QuerySingleOrDefaultAsync<KelompokRabResponse?>(It.IsAny<string>(),
+                    It.IsAny<object>(), null, null, null)
+            ).ReturnsAsync((KelompokRabResponse?)null);
+
+            mockFactory.Setup(f => f.OpenConnectionAsync())
+                .Returns(new ValueTask<DbConnection>(mockConn.Object));
+
+            var handler = new GetKelompokRabQueryHandler(mockFactory.Object);
+            var uuid = Guid.NewGuid();
+            var result = await handler.Handle(new GetKelompokRabQuery(uuid), CancellationToken.None);
+
+            Assert.False(result.IsSuccess);
+            Assert.Equal(KelompokRabErrors.NotFound(uuid).Code, result.Error.Code);
         }
     }
 }

@@ -495,7 +495,31 @@ namespace Application.Integration.Tests
             Assert.True(result.IsFailure);
             Assert.Equal(KesesuaianJadwalErrors.NotSameValue().Code, result.Error.Code);
         }
+        [Fact]
+        public async Task GetBobotKesesuaianJadwal_ShouldReturnSuccess_WhenSingleValue()
+        {
+            // Arrange
+            var mockFactory = new Mock<IDbConnectionFactory>();
+            var mockConn = new Mock<DbConnection>();
 
+            // Return hanya 1 nilai -> HARUS masuk ke Result.Success()
+            mockConn.SetupDapperAsync(c =>
+                c.QueryAsync<int>(
+                    It.IsAny<string>(), null, null, null, null
+                )
+            ).ReturnsAsync(new List<int> { 10 });
 
+            mockFactory.Setup(f => f.OpenConnectionAsync())
+                .ReturnsAsync(mockConn.Object);
+
+            var handler = new GetBobotKesesuaianJadwalQueryHandler(mockFactory.Object);
+
+            // Act
+            var result = await handler.Handle(new GetBobotKesesuaianJadwalQuery(), CancellationToken.None);
+
+            // Assert
+            Assert.True(result.IsSuccess);
+            Assert.Equal(10, result.Value);
+        }
     }
 }
