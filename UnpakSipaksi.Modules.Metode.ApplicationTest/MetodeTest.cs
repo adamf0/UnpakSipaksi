@@ -1,5 +1,9 @@
-﻿using Microsoft.Extensions.DependencyInjection;
+﻿using Dapper;
+using Microsoft.Extensions.DependencyInjection;
 using Moq;
+using Moq.Dapper;
+using System.Data.Common;
+using UnpakSipaksi.Common.Application.Data;
 using UnpakSipaksi.Common.Domain;
 using UnpakSipaksi.Modules.AkurasiPenelitian.PublicApi;
 using UnpakSipaksi.Modules.KejelasanPembagianTugasTim.PublicApi;
@@ -8,6 +12,8 @@ using UnpakSipaksi.Modules.KesesuaianWaktuRabLuaranFasilitas.PublicApi;
 using UnpakSipaksi.Modules.KredibilitasMitraDukungan.PublicApi;
 using UnpakSipaksi.Modules.Metode.Application.Abstractions.Data;
 using UnpakSipaksi.Modules.Metode.Application.CreateMetode;
+using UnpakSipaksi.Modules.Metode.Application.GetAllMetode;
+using UnpakSipaksi.Modules.Metode.Application.GetMetode;
 using UnpakSipaksi.Modules.Metode.Domain.Metode;
 using UnpakSipaksi.Modules.ModelFeasibilityStudys.PublicApi;
 using UnpakSipaksi.Modules.PotensiKetercapaianLuaranDijanjikan.PublicApi;
@@ -156,6 +162,144 @@ namespace UnpakSipaksi.Modules.Metode.ApplicationTest
         private T GetService<T>() where T : notnull
         {
             return Factory.Services.CreateScope().ServiceProvider.GetRequiredService<T>();
+        }
+
+        [Fact]
+        public async Task GetAll_ReturnsList_WhenDataExists()
+        {
+            // Arrange
+            var mockConnectionFactory = new Mock<IDbConnectionFactory>();
+            var mockConnection = new Mock<DbConnection>();
+
+            var fakeData = new List<MetodeResponse>
+        {
+            new MetodeResponse
+            {
+                Uuid = Guid.NewGuid().ToString(),
+                UuidAkurasiPenelitian = Guid.NewGuid().ToString(),
+                UuidKejelasanPembagianTugasTim = Guid.NewGuid().ToString(),
+                UuidKesesuaianWaktuRabLuaranFasilitas = Guid.NewGuid().ToString(),
+                UuidPotensiKetercapaianLuaranDijanjikan = Guid.NewGuid().ToString(),
+                UuidModelFeasibilityStudy = Guid.NewGuid().ToString(),
+                UuidKesesuaianTkt = Guid.NewGuid().ToString(),
+                UuidKredibilitasMitraDukungan = Guid.NewGuid().ToString()
+            }
+        };
+
+            mockConnection.SetupDapperAsync(c =>
+                c.QueryAsync<MetodeResponse>(It.IsAny<string>(), null, null, null, null)
+            ).ReturnsAsync(fakeData);
+
+            mockConnectionFactory
+                .Setup(x => x.OpenConnectionAsync())
+                .ReturnsAsync(mockConnection.Object);
+
+            var handler = new GetAllMetodeQueryHandler(mockConnectionFactory.Object);
+            var query = new GetAllMetodeQuery();
+
+            // Act
+            var result = await handler.Handle(query, CancellationToken.None);
+
+            // Assert
+            Assert.True(result.IsSuccess);
+            Assert.NotEmpty(result.Value);
+        }
+
+        [Fact]
+        public async Task GetAll_ReturnsFailure_WhenNoData()
+        {
+            // Arrange
+            var mockConnectionFactory = new Mock<IDbConnectionFactory>();
+            var mockConnection = new Mock<DbConnection>();
+
+            mockConnection.SetupDapperAsync(c =>
+                c.QueryAsync<MetodeResponse>(It.IsAny<string>(), null, null, null, null)
+            ).ReturnsAsync(new List<MetodeResponse>());
+
+            mockConnectionFactory
+                .Setup(x => x.OpenConnectionAsync())
+                .ReturnsAsync(mockConnection.Object);
+
+            var handler = new GetAllMetodeQueryHandler(mockConnectionFactory.Object);
+            var query = new GetAllMetodeQuery();
+
+            // Act
+            var result = await handler.Handle(query, CancellationToken.None);
+
+            // Assert
+            Assert.False(result.IsSuccess);
+        }
+
+        [Fact]
+        public async Task GetByUuid_ReturnsSuccess_WhenDataExists()
+        {
+            // Arrange
+            var mockConnectionFactory = new Mock<IDbConnectionFactory>();
+            var mockConnection = new Mock<DbConnection>();
+            var uuid = Guid.NewGuid();
+
+            var fakeData = new MetodeResponse
+            {
+                Uuid = uuid.ToString(),
+                UuidAkurasiPenelitian = Guid.NewGuid().ToString(),
+                UuidKejelasanPembagianTugasTim = Guid.NewGuid().ToString(),
+                UuidKesesuaianWaktuRabLuaranFasilitas = Guid.NewGuid().ToString(),
+                UuidPotensiKetercapaianLuaranDijanjikan = Guid.NewGuid().ToString(),
+                UuidModelFeasibilityStudy = Guid.NewGuid().ToString(),
+                UuidKesesuaianTkt = Guid.NewGuid().ToString(),
+                UuidKredibilitasMitraDukungan = Guid.NewGuid().ToString()
+            };
+
+            mockConnection.SetupDapperAsync(c =>
+                c.QuerySingleOrDefaultAsync<MetodeResponse?>(
+                    It.IsAny<string>(),
+                    It.IsAny<object>(),
+                    null, null, null
+                )
+            ).ReturnsAsync(fakeData);
+
+            mockConnectionFactory
+                .Setup(x => x.OpenConnectionAsync())
+                .ReturnsAsync(mockConnection.Object);
+
+            var handler = new GetMetodeQueryHandler(mockConnectionFactory.Object);
+            var query = new GetMetodeQuery(uuid);
+
+            // Act
+            var result = await handler.Handle(query, CancellationToken.None);
+
+            // Assert
+            Assert.True(result.IsSuccess);
+            Assert.Equal(uuid.ToString(), result.Value.Uuid);
+        }
+
+        [Fact]
+        public async Task GetByUuid_ReturnsFailure_WhenNotFound()
+        {
+            // Arrange
+            var mockConnectionFactory = new Mock<IDbConnectionFactory>();
+            var mockConnection = new Mock<DbConnection>();
+
+            mockConnection.SetupDapperAsync(c =>
+                c.QuerySingleOrDefaultAsync<MetodeResponse?>(
+                    It.IsAny<string>(),
+                    It.IsAny<object>(),
+                    null, null, null
+                )
+            ).ReturnsAsync((MetodeResponse?)null);
+
+            mockConnectionFactory
+                .Setup(x => x.OpenConnectionAsync())
+                .ReturnsAsync(mockConnection.Object);
+
+            var handler = new GetMetodeQueryHandler(mockConnectionFactory.Object);
+            var query = new GetMetodeQuery(Guid.NewGuid());
+
+            // Act
+            var result = await handler.Handle(query, CancellationToken.None);
+
+            // Assert
+            Assert.False(result.IsSuccess);
         }
     }
 }

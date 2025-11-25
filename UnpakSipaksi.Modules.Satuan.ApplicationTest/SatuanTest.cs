@@ -1,12 +1,19 @@
-﻿using Docker.DotNet.Models;
+﻿using Dapper;
+using Docker.DotNet.Models;
 using MediatR;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.DependencyInjection;
+using Moq;
+using Moq.Dapper;
+using System.Data.Common;
 using System.Reflection;
+using UnpakSipaksi.Common.Application.Data;
 using UnpakSipaksi.Common.Domain;
-using UnpakSipaksi.Modules.Satuan.Application.DeleteSatuan;
-using UnpakSipaksi.Modules.Satuan.Application.UpdateSatuan;
 using UnpakSipaksi.Modules.Satuan.Application.CreateSatuan;
+using UnpakSipaksi.Modules.Satuan.Application.DeleteSatuan;
+using UnpakSipaksi.Modules.Satuan.Application.GetAllSatuan;
+using UnpakSipaksi.Modules.Satuan.Application.GetSatuan;
+using UnpakSipaksi.Modules.Satuan.Application.UpdateSatuan;
 using UnpakSipaksi.Modules.Satuan.ApplicationTest;
 using Xunit;
 
@@ -171,6 +178,154 @@ namespace Application.Integration.Tests
 
             Assert.True(deleteResult.IsFailure);
             Assert.Equal("Satuan.NotFound", deleteResult.Error.Code);
+        }
+
+        [Fact]
+        public async Task GetAllSatuan_ReturnsSuccess_WhenDataExists()
+        {
+            // Arrange
+            var mockConnectionFactory = new Mock<IDbConnectionFactory>();
+            var mockConnection = new Mock<DbConnection>();
+
+            var fakeData = new List<SatuanResponse>
+        {
+            new SatuanResponse { Uuid = Guid.NewGuid().ToString(), Nama = "Fokus 1" }
+        };
+
+            mockConnection.SetupDapperAsync(c => c.QueryAsync<SatuanResponse>(
+                It.IsAny<string>(), null, null, null, null))
+                .ReturnsAsync(fakeData);
+
+            mockConnectionFactory.Setup(f => f.OpenConnectionAsync())
+                .Returns(new ValueTask<DbConnection>(mockConnection.Object));
+
+            var handler = new GetAllSatuanQueryHandler(mockConnectionFactory.Object);
+            var query = new GetAllSatuanQuery();
+
+            // Act
+            var result = await handler.Handle(query, CancellationToken.None);
+
+            // Assert
+            Assert.True(result.IsSuccess);
+            Assert.NotEmpty(result.Value);
+            Assert.Equal(fakeData.First().Nama, result.Value.First().Nama);
+        }
+
+        [Fact]
+        public async Task GetAllSatuan_ReturnsFailure_WhenNoData()
+        {
+            // Arrange
+            var mockConnectionFactory = new Mock<IDbConnectionFactory>();
+            var mockConnection = new Mock<DbConnection>();
+
+            mockConnection.SetupDapperAsync(c => c.QueryAsync<SatuanResponse>(
+                It.IsAny<string>(), null, null, null, null))
+                .ReturnsAsync(new List<SatuanResponse>());
+
+            mockConnectionFactory.Setup(f => f.OpenConnectionAsync())
+                .Returns(new ValueTask<DbConnection>(mockConnection.Object));
+
+            var handler = new GetAllSatuanQueryHandler(mockConnectionFactory.Object);
+            var query = new GetAllSatuanQuery();
+
+            // Act
+            var result = await handler.Handle(query, CancellationToken.None);
+
+            // Assert
+            Assert.False(result.IsSuccess);
+        }
+
+
+        [Fact]
+        public async Task GetSatuan_ReturnsSuccess_WhenDataExists()
+        {
+            var mockConnectionFactory = new Mock<IDbConnectionFactory>();
+            var mockConnection = new Mock<DbConnection>();
+            var uuid = Guid.NewGuid();
+
+            var fakeData = new SatuanResponse { Uuid = uuid.ToString(), Nama = "Fokus 1" };
+
+            mockConnection.SetupDapperAsync(c => c.QuerySingleOrDefaultAsync<SatuanResponse>(
+                It.IsAny<string>(), It.IsAny<object>(), null, null, null))
+                .ReturnsAsync(fakeData);
+
+            mockConnectionFactory.Setup(f => f.OpenConnectionAsync())
+                .Returns(new ValueTask<DbConnection>(mockConnection.Object));
+
+            var handler = new GetSatuanQueryHandler(mockConnectionFactory.Object);
+            var query = new GetSatuanQuery(uuid);
+
+            var result = await handler.Handle(query, CancellationToken.None);
+
+            Assert.True(result.IsSuccess);
+            Assert.Equal(fakeData.Nama, result.Value.Nama);
+        }
+
+        [Fact]
+        public async Task GetSatuan_ReturnsFailure_WhenDataNotFound()
+        {
+            var mockConnectionFactory = new Mock<IDbConnectionFactory>();
+            var mockConnection = new Mock<DbConnection>();
+
+            mockConnection.SetupDapperAsync(c => c.QuerySingleOrDefaultAsync<SatuanResponse>(
+                It.IsAny<string>(), It.IsAny<object>(), null, null, null))
+                .ReturnsAsync((SatuanResponse?)null);
+
+            mockConnectionFactory.Setup(f => f.OpenConnectionAsync())
+                .Returns(new ValueTask<DbConnection>(mockConnection.Object));
+
+            var handler = new GetSatuanQueryHandler(mockConnectionFactory.Object);
+            var query = new GetSatuanQuery(Guid.NewGuid());
+
+            var result = await handler.Handle(query, CancellationToken.None);
+
+            Assert.False(result.IsSuccess);
+        }
+
+
+        [Fact]
+        public async Task GetSatuanDefault_ReturnsSuccess_WhenDataExists()
+        {
+            var mockConnectionFactory = new Mock<IDbConnectionFactory>();
+            var mockConnection = new Mock<DbConnection>();
+
+            var fakeData = new SatuanDefaultResponse { Uuid = Guid.NewGuid().ToString(), Id = "1", Nama = "Fokus Default" };
+
+            mockConnection.SetupDapperAsync(c => c.QuerySingleOrDefaultAsync<SatuanDefaultResponse>(
+                It.IsAny<string>(), It.IsAny<object>(), null, null, null))
+                .ReturnsAsync(fakeData);
+
+            mockConnectionFactory.Setup(f => f.OpenConnectionAsync())
+                .Returns(new ValueTask<DbConnection>(mockConnection.Object));
+
+            var handler = new GetSatuanDefaultQueryHandler(mockConnectionFactory.Object);
+            var query = new GetSatuanDefaultQuery(Guid.Parse(fakeData.Uuid));
+
+            var result = await handler.Handle(query, CancellationToken.None);
+
+            Assert.True(result.IsSuccess);
+            Assert.Equal(fakeData.Nama, result.Value.Nama);
+        }
+
+        [Fact]
+        public async Task GetSatuanDefault_ReturnsFailure_WhenDataNotFound()
+        {
+            var mockConnectionFactory = new Mock<IDbConnectionFactory>();
+            var mockConnection = new Mock<DbConnection>();
+
+            mockConnection.SetupDapperAsync(c => c.QuerySingleOrDefaultAsync<SatuanDefaultResponse>(
+                It.IsAny<string>(), It.IsAny<object>(), null, null, null))
+                .ReturnsAsync((SatuanDefaultResponse?)null);
+
+            mockConnectionFactory.Setup(f => f.OpenConnectionAsync())
+                .Returns(new ValueTask<DbConnection>(mockConnection.Object));
+
+            var handler = new GetSatuanDefaultQueryHandler(mockConnectionFactory.Object);
+            var query = new GetSatuanDefaultQuery(Guid.NewGuid());
+
+            var result = await handler.Handle(query, CancellationToken.None);
+
+            Assert.False(result.IsSuccess);
         }
     }
 }

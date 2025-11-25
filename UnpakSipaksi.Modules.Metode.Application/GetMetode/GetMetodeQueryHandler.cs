@@ -19,13 +19,13 @@ namespace UnpakSipaksi.Modules.Metode.Application.GetMetode
                 $"""
                  SELECT 
                      CAST(NULLIF(uuid, '') AS VARCHAR(36)) AS Uuid,
-                     ap.uuid AS AkurasiPenelitianId,
-                     kptt.uuid AS KejelasanPembagianTugasTimId,
-                     kwrlf.uuid AS KesesuaianWaktuRabLuaranFasilitasId,
-                     pkld.uuid AS PotensiKetercapaianLuaranDijanjikanId,
-                     mfs.uuid AS ModelFeasibilityStudyId,
-                     kt.uuid AS KesesuaianTktId,
-                     kmd.uuid AS KredibilitasMitraDukunganId
+                     ap.uuid AS UuidAkurasiPenelitian,
+                     kptt.uuid AS UuidKejelasanPembagianTugasTim,
+                     kwrlf.uuid AS UuidKesesuaianWaktuRabLuaranFasilitas,
+                     pkld.uuid AS UuidPotensiKetercapaianLuaranDijanjikan,
+                     mfs.uuid AS UuidModelFeasibilityStudy,
+                     kt.uuid AS UuidKesesuaianTkt,
+                     kmd.uuid AS UuidKredibilitasMitraDukungan
                  FROM metode m
                  LEFT JOIN akurasi_penelitian ap ON m.id_akurasi_penelitian = ap.id
                  LEFT JOIN kejelasan_pembagian_tugas_tim kptt ON m.id_kejelasan_pembagian_tugas_tim = kptt.id

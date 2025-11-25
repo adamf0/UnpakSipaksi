@@ -1,19 +1,20 @@
-﻿using Docker.DotNet.Models;
+﻿using Dapper;
+using Docker.DotNet.Models;
 using MediatR;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.DependencyInjection;
 using Moq;
+using Moq.Dapper;
+using System.Data.Common;
 using System.Reflection;
+using UnpakSipaksi.Common.Application.Data;
 using UnpakSipaksi.Common.Domain;
-using UnpakSipaksi.Modules.RumpunIlmu1.PublicApi;
-using UnpakSipaksi.Modules.RumpunIlmu2.Application.CreateRumpunIlmu2;
-using UnpakSipaksi.Modules.RumpunIlmu2.Application.DeleteRumpunIlmu2;
-using UnpakSipaksi.Modules.RumpunIlmu2.Application.UpdateRumpunIlmu2;
-using UnpakSipaksi.Modules.RumpunIlmu2.Domain.RumpunIlmu2;
 using UnpakSipaksi.Modules.RumpunIlmu2.PublicApi;
 using UnpakSipaksi.Modules.RumpunIlmu3.Application.Abstractions.Data;
 using UnpakSipaksi.Modules.RumpunIlmu3.Application.CreateRumpunIlmu3;
 using UnpakSipaksi.Modules.RumpunIlmu3.Application.DeleteRumpunIlmu3;
+using UnpakSipaksi.Modules.RumpunIlmu3.Application.GetAllRumpunIlmu3;
+using UnpakSipaksi.Modules.RumpunIlmu3.Application.GetRumpunIlmu3;
 using UnpakSipaksi.Modules.RumpunIlmu3.Application.UpdateRumpunIlmu3;
 using UnpakSipaksi.Modules.RumpunIlmu3.ApplicationTest;
 using UnpakSipaksi.Modules.RumpunIlmu3.Domain.RumpunIlmu3;
@@ -388,6 +389,154 @@ namespace Application.Integration.Tests
                 Assert.True(result.IsFailure);
                 Assert.Equal("RumpunIlmu3.NotFound", result.Error.Code);
             }
+        }
+
+        [Fact]
+        public async Task GetAllRumpunIlmu3_ReturnsSuccess_WhenDataExists()
+        {
+            // Arrange
+            var mockConnectionFactory = new Mock<IDbConnectionFactory>();
+            var mockConnection = new Mock<DbConnection>();
+
+            var fakeData = new List<RumpunIlmu3Response>
+        {
+            new RumpunIlmu3Response { Uuid = Guid.NewGuid().ToString(), Nama = "Fokus 1", UuidRumpunIlmu2 = Guid.NewGuid().ToString() }
+        };
+
+            mockConnection.SetupDapperAsync(c => c.QueryAsync<RumpunIlmu3Response>(
+                It.IsAny<string>(), null, null, null, null))
+                .ReturnsAsync(fakeData);
+
+            mockConnectionFactory.Setup(f => f.OpenConnectionAsync())
+                .Returns(new ValueTask<DbConnection>(mockConnection.Object));
+
+            var handler = new GetAllRumpunIlmu3QueryHandler(mockConnectionFactory.Object);
+            var query = new GetAllRumpunIlmu3Query();
+
+            // Act
+            var result = await handler.Handle(query, CancellationToken.None);
+
+            // Assert
+            Assert.True(result.IsSuccess);
+            Assert.NotEmpty(result.Value);
+            Assert.Equal(fakeData.First().Nama, result.Value.First().Nama);
+        }
+
+        [Fact]
+        public async Task GetAllRumpunIlmu3_ReturnsFailure_WhenNoData()
+        {
+            // Arrange
+            var mockConnectionFactory = new Mock<IDbConnectionFactory>();
+            var mockConnection = new Mock<DbConnection>();
+
+            mockConnection.SetupDapperAsync(c => c.QueryAsync<RumpunIlmu3Response>(
+                It.IsAny<string>(), null, null, null, null))
+                .ReturnsAsync(new List<RumpunIlmu3Response>());
+
+            mockConnectionFactory.Setup(f => f.OpenConnectionAsync())
+                .Returns(new ValueTask<DbConnection>(mockConnection.Object));
+
+            var handler = new GetAllRumpunIlmu3QueryHandler(mockConnectionFactory.Object);
+            var query = new GetAllRumpunIlmu3Query();
+
+            // Act
+            var result = await handler.Handle(query, CancellationToken.None);
+
+            // Assert
+            Assert.False(result.IsSuccess);
+        }
+
+
+        [Fact]
+        public async Task GetRumpunIlmu3_ReturnsSuccess_WhenDataExists()
+        {
+            var mockConnectionFactory = new Mock<IDbConnectionFactory>();
+            var mockConnection = new Mock<DbConnection>();
+            var uuid = Guid.NewGuid();
+
+            var fakeData = new RumpunIlmu3Response { Uuid = uuid.ToString(), Nama = "Fokus 1", UuidRumpunIlmu2 = Guid.NewGuid().ToString() };
+
+            mockConnection.SetupDapperAsync(c => c.QuerySingleOrDefaultAsync<RumpunIlmu3Response>(
+                It.IsAny<string>(), It.IsAny<object>(), null, null, null))
+                .ReturnsAsync(fakeData);
+
+            mockConnectionFactory.Setup(f => f.OpenConnectionAsync())
+                .Returns(new ValueTask<DbConnection>(mockConnection.Object));
+
+            var handler = new GetRumpunIlmu3QueryHandler(mockConnectionFactory.Object);
+            var query = new GetRumpunIlmu3Query(uuid);
+
+            var result = await handler.Handle(query, CancellationToken.None);
+
+            Assert.True(result.IsSuccess);
+            Assert.Equal(fakeData.Nama, result.Value.Nama);
+        }
+
+        [Fact]
+        public async Task GetRumpunIlmu3_ReturnsFailure_WhenDataNotFound()
+        {
+            var mockConnectionFactory = new Mock<IDbConnectionFactory>();
+            var mockConnection = new Mock<DbConnection>();
+
+            mockConnection.SetupDapperAsync(c => c.QuerySingleOrDefaultAsync<RumpunIlmu3Response>(
+                It.IsAny<string>(), It.IsAny<object>(), null, null, null))
+                .ReturnsAsync((RumpunIlmu3Response?)null);
+
+            mockConnectionFactory.Setup(f => f.OpenConnectionAsync())
+                .Returns(new ValueTask<DbConnection>(mockConnection.Object));
+
+            var handler = new GetRumpunIlmu3QueryHandler(mockConnectionFactory.Object);
+            var query = new GetRumpunIlmu3Query(Guid.NewGuid());
+
+            var result = await handler.Handle(query, CancellationToken.None);
+
+            Assert.False(result.IsSuccess);
+        }
+
+
+        [Fact]
+        public async Task GetRumpunIlmu3Default_ReturnsSuccess_WhenDataExists()
+        {
+            var mockConnectionFactory = new Mock<IDbConnectionFactory>();
+            var mockConnection = new Mock<DbConnection>();
+
+            var fakeData = new RumpunIlmu3DefaultResponse { Uuid = Guid.NewGuid().ToString(), Id = "1", Nama = "Fokus Default" };
+
+            mockConnection.SetupDapperAsync(c => c.QuerySingleOrDefaultAsync<RumpunIlmu3DefaultResponse>(
+                It.IsAny<string>(), It.IsAny<object>(), null, null, null))
+                .ReturnsAsync(fakeData);
+
+            mockConnectionFactory.Setup(f => f.OpenConnectionAsync())
+                .Returns(new ValueTask<DbConnection>(mockConnection.Object));
+
+            var handler = new GetRumpunIlmu3DefaultQueryHandler(mockConnectionFactory.Object);
+            var query = new GetRumpunIlmu3DefaultQuery(Guid.Parse(fakeData.Uuid));
+
+            var result = await handler.Handle(query, CancellationToken.None);
+
+            Assert.True(result.IsSuccess);
+            Assert.Equal(fakeData.Nama, result.Value.Nama);
+        }
+
+        [Fact]
+        public async Task GetRumpunIlmu3Default_ReturnsFailure_WhenDataNotFound()
+        {
+            var mockConnectionFactory = new Mock<IDbConnectionFactory>();
+            var mockConnection = new Mock<DbConnection>();
+
+            mockConnection.SetupDapperAsync(c => c.QuerySingleOrDefaultAsync<RumpunIlmu3DefaultResponse>(
+                It.IsAny<string>(), It.IsAny<object>(), null, null, null))
+                .ReturnsAsync((RumpunIlmu3DefaultResponse?)null);
+
+            mockConnectionFactory.Setup(f => f.OpenConnectionAsync())
+                .Returns(new ValueTask<DbConnection>(mockConnection.Object));
+
+            var handler = new GetRumpunIlmu3DefaultQueryHandler(mockConnectionFactory.Object);
+            var query = new GetRumpunIlmu3DefaultQuery(Guid.NewGuid());
+
+            var result = await handler.Handle(query, CancellationToken.None);
+
+            Assert.False(result.IsSuccess);
         }
     }
 

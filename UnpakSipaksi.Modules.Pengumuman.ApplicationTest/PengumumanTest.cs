@@ -1,11 +1,18 @@
-﻿using Docker.DotNet.Models;
+﻿using Dapper;
+using Docker.DotNet.Models;
 using MediatR;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.DependencyInjection;
+using Moq;
+using Moq.Dapper;
+using System.Data.Common;
 using System.Reflection;
+using UnpakSipaksi.Common.Application.Data;
 using UnpakSipaksi.Common.Domain;
 using UnpakSipaksi.Modules.Pengumuman.Application.CreatePengumuman;
 using UnpakSipaksi.Modules.Pengumuman.Application.DeletePengumuman;
+using UnpakSipaksi.Modules.Pengumuman.Application.GetAllPengumuman;
+using UnpakSipaksi.Modules.Pengumuman.Application.GetPengumuman;
 using UnpakSipaksi.Modules.Pengumuman.Application.UpdatePengumuman;
 using UnpakSipaksi.Modules.Pengumuman.ApplicationTest;
 using Xunit;
@@ -361,6 +368,150 @@ namespace Application.Integration.Tests
                     Assert.IsType<DeletePengumumanCommandHandler>(handler);
                 }
             }
+        }
+
+        [Fact]
+        public async Task GetAll_ReturnsList_WhenDataExists()
+        {
+            // Arrange
+            var mockConnectionFactory = new Mock<IDbConnectionFactory>();
+            var mockConnection = new Mock<DbConnection>();
+
+            var fakeData = new List<PengumumanResponse>
+        {
+            new PengumumanResponse
+            {
+                Pesan = "Info Penting",
+                File = null,
+                Url = "https://contoh.com",
+                Type = "Global",
+                Target = null,
+                Nidn = null,
+                KodeFaKultas = null,
+                TypeExpired = "date",
+                TanggalAwal = "2025-01-01",
+                TanggalAkhir = "2025-02-01"
+            }
+        };
+
+            mockConnection.SetupDapperAsync(c =>
+                c.QueryAsync<PengumumanResponse>(It.IsAny<string>(), null, null, null, null)
+            ).ReturnsAsync(fakeData);
+
+            mockConnectionFactory
+                .Setup(f => f.OpenConnectionAsync())
+                .ReturnsAsync(mockConnection.Object);
+
+            var handler = new GetAllPengumumanQueryHandler(mockConnectionFactory.Object);
+            var query = new GetAllPengumumanQuery();
+
+            // Act
+            var result = await handler.Handle(query, CancellationToken.None);
+
+            // Assert
+            Assert.True(result.IsSuccess);
+            Assert.NotEmpty(result.Value);
+            Assert.Equal(fakeData.First().Pesan, result.Value.First().Pesan);
+        }
+
+        [Fact]
+        public async Task GetAll_ReturnsFailure_WhenNoData()
+        {
+            // Arrange
+            var mockConnectionFactory = new Mock<IDbConnectionFactory>();
+            var mockConnection = new Mock<DbConnection>();
+
+            mockConnection.SetupDapperAsync(c =>
+                c.QueryAsync<PengumumanResponse>(It.IsAny<string>(), null, null, null, null)
+            ).ReturnsAsync(new List<PengumumanResponse>());
+
+            mockConnectionFactory
+                .Setup(f => f.OpenConnectionAsync())
+                .ReturnsAsync(mockConnection.Object);
+
+            var handler = new GetAllPengumumanQueryHandler(mockConnectionFactory.Object);
+            var query = new GetAllPengumumanQuery();
+
+            // Act
+            var result = await handler.Handle(query, CancellationToken.None);
+
+            // Assert
+            Assert.False(result.IsSuccess);
+        }
+
+        [Fact]
+        public async Task GetByUuid_ReturnsSuccess_WhenDataExists()
+        {
+            // Arrange
+            var mockConnectionFactory = new Mock<IDbConnectionFactory>();
+            var mockConnection = new Mock<DbConnection>();
+            var uuid = Guid.NewGuid();
+
+            var fakeData = new PengumumanResponse
+            {
+                Uuid = uuid.ToString(),
+                Pesan = "Pengumuman Penting",
+                File = null,
+                Url = null,
+                Type = "Fakultas",
+                Target = "Dosen",
+                Nidn = "123456",
+                KodeFaKultas = "FKIP",
+                TypeExpired = "date",
+                TanggalAwal = "2025-04-01",
+                TanggalAkhir = "2025-04-30"
+            };
+
+            mockConnection.SetupDapperAsync(c =>
+                c.QuerySingleOrDefaultAsync<PengumumanResponse?>(
+                    It.IsAny<string>(),
+                    It.IsAny<object>(),
+                    null, null, null
+                )
+            ).ReturnsAsync(fakeData);
+
+            mockConnectionFactory
+                .Setup(f => f.OpenConnectionAsync())
+                .Returns(new ValueTask<DbConnection>(mockConnection.Object));
+
+            var handler = new GetPengumumanQueryHandler(mockConnectionFactory.Object);
+            var query = new GetPengumumanQuery(uuid);
+
+            // Act
+            var result = await handler.Handle(query, CancellationToken.None);
+
+            // Assert
+            Assert.True(result.IsSuccess);
+            Assert.Equal("Pengumuman Penting", result.Value.Pesan);
+        }
+
+        [Fact]
+        public async Task GetByUuid_ReturnsFailure_WhenDataNotFound()
+        {
+            // Arrange
+            var mockConnectionFactory = new Mock<IDbConnectionFactory>();
+            var mockConnection = new Mock<DbConnection>();
+
+            mockConnection.SetupDapperAsync(c =>
+                c.QuerySingleOrDefaultAsync<PengumumanResponse?>(
+                    It.IsAny<string>(),
+                    It.IsAny<object>(),
+                    null, null, null
+                )
+            ).ReturnsAsync((PengumumanResponse?)null);
+
+            mockConnectionFactory
+                .Setup(f => f.OpenConnectionAsync())
+                .Returns(new ValueTask<DbConnection>(mockConnection.Object));
+
+            var handler = new GetPengumumanQueryHandler(mockConnectionFactory.Object);
+            var query = new GetPengumumanQuery(Guid.NewGuid());
+
+            // Act
+            var result = await handler.Handle(query, CancellationToken.None);
+
+            // Assert
+            Assert.False(result.IsSuccess);
         }
     }
 }

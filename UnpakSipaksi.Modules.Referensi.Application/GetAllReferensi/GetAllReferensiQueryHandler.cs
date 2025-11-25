@@ -9,7 +9,6 @@ using UnpakSipaksi.Common.Application.Data;
 using UnpakSipaksi.Common.Application.Messaging;
 using UnpakSipaksi.Common.Domain;
 using UnpakSipaksi.Modules.Referensi.Application.GetReferensi;
-using UnpakSipaksi.Modules.Referensi.Application.GetReferensi;
 using UnpakSipaksi.Modules.Referensi.Domain.Referensi;
 
 namespace UnpakSipaksi.Modules.Referensi.Application.GetAllReferensi

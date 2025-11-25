@@ -18,6 +18,7 @@ namespace UnpakSipaksi.Modules.Rirn.Application.GetRirn
             const string sql =
                 $"""
                  SELECT 
+                     id as Id,
                      CAST(NULLIF(uuid, '') AS VARCHAR(36)) AS Uuid,
                      nama AS Nama
                  FROM rirn

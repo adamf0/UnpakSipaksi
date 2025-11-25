@@ -2,14 +2,11 @@
 using MediatR;
 using Microsoft.Extensions.DependencyInjection;
 using Moq;
-using Moq;
 using Moq.Dapper;
 using System.Data;
 using System.Data.Common;
 using UnpakSipaksi.Common.Application.Data;
 using UnpakSipaksi.Common.Domain;
-using UnpakSipaksi.Modules.Kategori.Application.DeleteKategori;
-using UnpakSipaksi.Modules.Kategori.Application.UpdateKategori;
 using UnpakSipaksi.Modules.KategoriMitraPenelitian.Application.CreateKategoriMitraPenelitian;
 using UnpakSipaksi.Modules.KategoriMitraPenelitian.Application.DeleteKategoriMitraPenelitian;
 using UnpakSipaksi.Modules.KategoriMitraPenelitian.Application.GetAllKategoriMitraPenelitian;
