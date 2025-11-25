@@ -220,7 +220,7 @@ namespace UnpakSipaksi.Modules.Referensi.ApplicationTest
                 .Returns(new ValueTask<DbConnection>(mockConn.Object));
 
             var handler = new GetReferensiQueryHandler(mockFactory.Object);
-            var query = new GetReferensiQuery(Guid.NewGuid();
+            var query = new GetReferensiQuery(Guid.NewGuid());
 
             var result = await handler.Handle(query, CancellationToken.None);
 
