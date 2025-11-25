@@ -135,7 +135,7 @@ namespace Application.Integration.Tests
             var mockConnection = new Mock<DbConnection>();
             var uuid = Guid.NewGuid();
 
-            var fakeData = new RoadmapResponse { Uuid = uuid.ToString(), , Nidn = "1234567890", Link = "https://drive.google.com/file/xxxx" };
+            var fakeData = new RoadmapResponse { Uuid = uuid.ToString(), Nidn = "1234567890", Link = "https://drive.google.com/file/xxxx" };
 
             mockConnection.SetupDapperAsync(c => c.QuerySingleOrDefaultAsync<RoadmapResponse>(
                 It.IsAny<string>(), It.IsAny<object>(), null, null, null))
