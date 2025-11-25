@@ -240,7 +240,7 @@ namespace Application.Integration.Tests
 
             var fake = new List<KewajaranTahapanTargetResponse>
             {
-                new() { Uuid = Guid.NewGuid().ToString(), Nama = "Data 1", Nilai = "10" }
+                new() { Uuid = Guid.NewGuid().ToString(), Nama = "Data 1", Nilai = 10 }
             };
 
             mockConn.SetupDapperAsync(c =>
@@ -399,7 +399,7 @@ namespace Application.Integration.Tests
             {
                 Uuid = uuid.ToString(),
                 Nama = "Some Data",
-                Nilai = "99"
+                Nilai = 99
             };
 
             mockConn.SetupDapperAsync(c =>
