@@ -1,6 +1,15 @@
-﻿using MediatR;
+﻿using Dapper;
+using MediatR;
 using Microsoft.Extensions.DependencyInjection;
+using Moq;
+using Moq.Dapper;
+using System.Data.Common;
+using UnpakSipaksi.Common.Application.Data;
 using UnpakSipaksi.Common.Domain;
+using UnpakSipaksi.Modules.VideoKegiatan.Application.GetAllVideoKegiatan;
+using UnpakSipaksi.Modules.VideoKegiatan.Application.GetBobotVideoKegiatan;
+using UnpakSipaksi.Modules.VideoKegiatan.Application.GetVideoKegiatan;
+using UnpakSipaksi.Modules.VideoKegiatan.Domain.VideoKegiatan;
 using UnpakSipaksi.Modules.VideoKegiatan.Application.CreateVideoKegiatan;
 using UnpakSipaksi.Modules.VideoKegiatan.Application.DeleteVideoKegiatan;
 using UnpakSipaksi.Modules.VideoKegiatan.Application.UpdateVideoKegiatan;
@@ -222,6 +231,211 @@ namespace Application.Integration.Tests
 
             Assert.True(result.IsFailure);
             Assert.Equal("VideoKegiatan.NotFound", result.Error.Code);
+        }
+
+        [Fact]
+        public async Task GetAll_ReturnsList_WhenDataExists()
+        {
+            var mockFactory = new Mock<IDbConnectionFactory>();
+            var mockConn = new Mock<DbConnection>();
+
+            var fake = new List<VideoKegiatanResponse>
+            {
+                new() { Uuid = Guid.NewGuid().ToString(), Nama = "Data 1", Nilai = 10 }
+            };
+
+            mockConn.SetupDapperAsync(c =>
+                c.QueryAsync<VideoKegiatanResponse>(It.IsAny<string>(), null, null, null, null)
+            ).ReturnsAsync(fake);
+
+            mockFactory.Setup(f => f.OpenConnectionAsync())
+                .ReturnsAsync(mockConn.Object);
+
+            var handler = new GetAllVideoKegiatanQueryHandler(mockFactory.Object);
+            var result = await handler.Handle(new GetAllVideoKegiatanQuery(), CancellationToken.None);
+
+            Assert.True(result.IsSuccess);
+            Assert.Single(result.Value);
+            Assert.Equal("Data 1", result.Value[0].Nama);
+        }
+
+        [Fact]
+        public async Task GetAll_ReturnsFailure_WhenEmpty()
+        {
+            var mockFactory = new Mock<IDbConnectionFactory>();
+            var mockConn = new Mock<DbConnection>();
+
+            mockConn.SetupDapperAsync(c =>
+                c.QueryAsync<VideoKegiatanResponse>(It.IsAny<string>(), null, null, null, null)
+            ).ReturnsAsync(new List<VideoKegiatanResponse>());
+
+            mockFactory.Setup(f => f.OpenConnectionAsync())
+                .ReturnsAsync(mockConn.Object);
+
+            var handler = new GetAllVideoKegiatanQueryHandler(mockFactory.Object);
+            var result = await handler.Handle(new GetAllVideoKegiatanQuery(), CancellationToken.None);
+
+            Assert.False(result.IsSuccess);
+            Assert.Equal(VideoKegiatanErrors.EmptyData().Code, result.Error.Code);
+        }
+
+        [Fact]
+        public async Task GetBobot_ReturnsSuccess_WhenSingleValueFound()
+        {
+            var mockFactory = new Mock<IDbConnectionFactory>();
+            var mockConn = new Mock<DbConnection>();
+
+            mockConn.SetupDapperAsync(c =>
+                c.QueryAsync<int>(It.IsAny<string>(), null, null, null, null)
+            ).ReturnsAsync(new List<int> { 100 });
+
+            mockFactory.Setup(f => f.OpenConnectionAsync())
+                .ReturnsAsync(mockConn.Object);
+
+            var handler = new GetBobotVideoKegiatanQueryHandler(mockFactory.Object);
+            var result = await handler.Handle(new GetBobotVideoKegiatanQuery(), CancellationToken.None);
+
+            Assert.True(result.IsSuccess);
+            Assert.Equal(100, result.Value);
+        }
+
+        [Fact]
+        public async Task GetBobot_ReturnsFailure_WhenEmpty()
+        {
+            var mockFactory = new Mock<IDbConnectionFactory>();
+            var mockConn = new Mock<DbConnection>();
+
+            mockConn.SetupDapperAsync(c =>
+                c.QueryAsync<int>(It.IsAny<string>(), null, null, null, null)
+            ).ReturnsAsync(new List<int>());
+
+            mockFactory.Setup(f => f.OpenConnectionAsync())
+                .ReturnsAsync(mockConn.Object);
+
+            var handler = new GetBobotVideoKegiatanQueryHandler(mockFactory.Object);
+            var result = await handler.Handle(new GetBobotVideoKegiatanQuery(), CancellationToken.None);
+
+            Assert.False(result.IsSuccess);
+            Assert.Equal(VideoKegiatanErrors.EmptyData().Code, result.Error.Code);
+        }
+
+        [Fact]
+        public async Task GetBobot_ReturnsFailure_WhenMultipleValues()
+        {
+            var mockFactory = new Mock<IDbConnectionFactory>();
+            var mockConn = new Mock<DbConnection>();
+
+            mockConn.SetupDapperAsync(c =>
+                c.QueryAsync<int>(It.IsAny<string>(), null, null, null, null)
+            ).ReturnsAsync(new List<int> { 10, 20 });
+
+            mockFactory.Setup(f => f.OpenConnectionAsync())
+                .ReturnsAsync(mockConn.Object);
+
+            var handler = new GetBobotVideoKegiatanQueryHandler(mockFactory.Object);
+            var result = await handler.Handle(new GetBobotVideoKegiatanQuery(), CancellationToken.None);
+
+            Assert.False(result.IsSuccess);
+            Assert.Equal(VideoKegiatanErrors.NotSameValue().Code, result.Error.Code);
+        }
+
+        [Fact]
+        public async Task GetDefault_ReturnsSuccess_WhenFound()
+        {
+            var mockFactory = new Mock<IDbConnectionFactory>();
+            var mockConn = new Mock<DbConnection>();
+
+            var uuid = Guid.NewGuid();
+            var fake = new VideoKegiatanDefaultResponse
+            {
+                Id = "1",
+                Uuid = uuid.ToString(),
+                Nama = "Default",
+                Nilai = 10
+            };
+
+            mockConn.SetupDapperAsync(c =>
+                c.QuerySingleOrDefaultAsync<VideoKegiatanDefaultResponse?>(It.IsAny<string>(), It.IsAny<object>(), null, null, null)
+            ).ReturnsAsync(fake);
+
+            mockFactory.Setup(f => f.OpenConnectionAsync())
+                .ReturnsAsync(mockConn.Object);
+
+            var handler = new GetVideoKegiatanDefaultQueryHandler(mockFactory.Object);
+            var result = await handler.Handle(new GetVideoKegiatanDefaultQuery(uuid), CancellationToken.None);
+
+            Assert.True(result.IsSuccess);
+            Assert.Equal("Default", result.Value.Nama);
+        }
+
+        [Fact]
+        public async Task GetDefault_ReturnsFailure_WhenNotFound()
+        {
+            var mockFactory = new Mock<IDbConnectionFactory>();
+            var mockConn = new Mock<DbConnection>();
+
+            mockConn.SetupDapperAsync(c =>
+                c.QuerySingleOrDefaultAsync<VideoKegiatanDefaultResponse?>(It.IsAny<string>(), It.IsAny<object>(), null, null, null)
+            ).ReturnsAsync((VideoKegiatanDefaultResponse?)null);
+
+            mockFactory.Setup(f => f.OpenConnectionAsync())
+                .ReturnsAsync(mockConn.Object);
+
+            var uuid = Guid.NewGuid();
+            var handler = new GetVideoKegiatanDefaultQueryHandler(mockFactory.Object);
+            var result = await handler.Handle(new GetVideoKegiatanDefaultQuery(uuid), CancellationToken.None);
+
+            Assert.False(result.IsSuccess);
+            Assert.Equal(VideoKegiatanErrors.NotFound(uuid).Code, result.Error.Code);
+        }
+
+        [Fact]
+        public async Task GetByUuid_ReturnsSuccess_WhenFound()
+        {
+            var mockFactory = new Mock<IDbConnectionFactory>();
+            var mockConn = new Mock<DbConnection>();
+
+            var uuid = Guid.NewGuid();
+            var fake = new VideoKegiatanResponse
+            {
+                Uuid = uuid.ToString(),
+                Nama = "Some Data",
+                Nilai = 99
+            };
+
+            mockConn.SetupDapperAsync(c =>
+                c.QuerySingleOrDefaultAsync<VideoKegiatanResponse?>(It.IsAny<string>(), It.IsAny<object>(), null, null, null)
+            ).ReturnsAsync(fake);
+
+            mockFactory.Setup(f => f.OpenConnectionAsync())
+                .ReturnsAsync(mockConn.Object);
+
+            var handler = new GetVideoKegiatanQueryHandler(mockFactory.Object);
+            var result = await handler.Handle(new GetVideoKegiatanQuery(uuid), CancellationToken.None);
+
+            Assert.True(result.IsSuccess);
+            Assert.Equal("Some Data", result.Value.Nama);
+        }
+
+        [Fact]
+        public async Task GetByUuid_ReturnsFailure_WhenNotFound()
+        {
+            var mockFactory = new Mock<IDbConnectionFactory>();
+            var mockConn = new Mock<DbConnection>();
+
+            mockConn.SetupDapperAsync(c =>
+                c.QuerySingleOrDefaultAsync<VideoKegiatanResponse?>(It.IsAny<string>(), It.IsAny<object>(), null, null, null)
+            ).ReturnsAsync((VideoKegiatanResponse?)null);
+
+            mockFactory.Setup(f => f.OpenConnectionAsync())
+                .ReturnsAsync(mockConn.Object);
+
+            var uuid = Guid.NewGuid();
+            var handler = new GetVideoKegiatanQueryHandler(mockFactory.Object);
+            var result = await handler.Handle(new GetVideoKegiatanQuery(uuid), CancellationToken.None);
+
+            Assert.False(result.IsSuccess);
+            Assert.Equal(VideoKegiatanErrors.NotFound(uuid).Code, result.Error.Code);
         }
     }
 }

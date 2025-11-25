@@ -1,9 +1,18 @@
-﻿using Docker.DotNet.Models;
+﻿using Dapper;
+using Docker.DotNet.Models;
 using MediatR;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.DependencyInjection;
+using Moq;
+using Moq.Dapper;
+using System.Data.Common;
 using System.Reflection;
+using UnpakSipaksi.Common.Application.Data;
 using UnpakSipaksi.Common.Domain;
+using UnpakSipaksi.Modules.KualitasKuantitasPublikasiJurnalIlmiah.Application.GetAllKualitasKuantitasPublikasiJurnalIlmiah;
+using UnpakSipaksi.Modules.KualitasKuantitasPublikasiJurnalIlmiah.Application.GetBobotKualitasKuantitasPublikasiJurnalIlmiah;
+using UnpakSipaksi.Modules.KualitasKuantitasPublikasiJurnalIlmiah.Application.GetKualitasKuantitasPublikasiJurnalIlmiah;
+using UnpakSipaksi.Modules.KualitasKuantitasPublikasiJurnalIlmiah.Domain.KualitasKuantitasPublikasiJurnalIlmiah;
 using UnpakSipaksi.Modules.KualitasKuantitasPublikasiJurnalIlmiah.Application.CreateKualitasKuantitasPublikasiJurnalIlmiah;
 using UnpakSipaksi.Modules.KualitasKuantitasPublikasiJurnalIlmiah.Application.DeleteKualitasKuantitasPublikasiJurnalIlmiah;
 using UnpakSipaksi.Modules.KualitasKuantitasPublikasiJurnalIlmiah.Application.UpdateKualitasKuantitasPublikasiJurnalIlmiah;
@@ -222,6 +231,211 @@ namespace Application.Integration.Tests
 
             Assert.True(result.IsFailure);
             Assert.Equal("KualitasKuantitasPublikasiJurnalIlmiah.NotFound", result.Error.Code);
+        }
+
+        [Fact]
+        public async Task GetAll_ReturnsList_WhenDataExists()
+        {
+            var mockFactory = new Mock<IDbConnectionFactory>();
+            var mockConn = new Mock<DbConnection>();
+
+            var fake = new List<KualitasKuantitasPublikasiJurnalIlmiahResponse>
+            {
+                new() { Uuid = Guid.NewGuid().ToString(), Nama = "Data 1", Nilai = "10" }
+            };
+
+            mockConn.SetupDapperAsync(c =>
+                c.QueryAsync<KualitasKuantitasPublikasiJurnalIlmiahResponse>(It.IsAny<string>(), null, null, null, null)
+            ).ReturnsAsync(fake);
+
+            mockFactory.Setup(f => f.OpenConnectionAsync())
+                .ReturnsAsync(mockConn.Object);
+
+            var handler = new GetAllKualitasKuantitasPublikasiJurnalIlmiahQueryHandler(mockFactory.Object);
+            var result = await handler.Handle(new GetAllKualitasKuantitasPublikasiJurnalIlmiahQuery(), CancellationToken.None);
+
+            Assert.True(result.IsSuccess);
+            Assert.Single(result.Value);
+            Assert.Equal("Data 1", result.Value[0].Nama);
+        }
+
+        [Fact]
+        public async Task GetAll_ReturnsFailure_WhenEmpty()
+        {
+            var mockFactory = new Mock<IDbConnectionFactory>();
+            var mockConn = new Mock<DbConnection>();
+
+            mockConn.SetupDapperAsync(c =>
+                c.QueryAsync<KualitasKuantitasPublikasiJurnalIlmiahResponse>(It.IsAny<string>(), null, null, null, null)
+            ).ReturnsAsync(new List<KualitasKuantitasPublikasiJurnalIlmiahResponse>());
+
+            mockFactory.Setup(f => f.OpenConnectionAsync())
+                .ReturnsAsync(mockConn.Object);
+
+            var handler = new GetAllKualitasKuantitasPublikasiJurnalIlmiahQueryHandler(mockFactory.Object);
+            var result = await handler.Handle(new GetAllKualitasKuantitasPublikasiJurnalIlmiahQuery(), CancellationToken.None);
+
+            Assert.False(result.IsSuccess);
+            Assert.Equal(KualitasKuantitasPublikasiJurnalIlmiahErrors.EmptyData().Code, result.Error.Code);
+        }
+
+        [Fact]
+        public async Task GetBobot_ReturnsSuccess_WhenSingleValueFound()
+        {
+            var mockFactory = new Mock<IDbConnectionFactory>();
+            var mockConn = new Mock<DbConnection>();
+
+            mockConn.SetupDapperAsync(c =>
+                c.QueryAsync<int>(It.IsAny<string>(), null, null, null, null)
+            ).ReturnsAsync(new List<int> { 100 });
+
+            mockFactory.Setup(f => f.OpenConnectionAsync())
+                .ReturnsAsync(mockConn.Object);
+
+            var handler = new GetBobotKualitasKuantitasPublikasiJurnalIlmiahQueryHandler(mockFactory.Object);
+            var result = await handler.Handle(new GetBobotKualitasKuantitasPublikasiJurnalIlmiahQuery(), CancellationToken.None);
+
+            Assert.True(result.IsSuccess);
+            Assert.Equal(100, result.Value);
+        }
+
+        [Fact]
+        public async Task GetBobot_ReturnsFailure_WhenEmpty()
+        {
+            var mockFactory = new Mock<IDbConnectionFactory>();
+            var mockConn = new Mock<DbConnection>();
+
+            mockConn.SetupDapperAsync(c =>
+                c.QueryAsync<int>(It.IsAny<string>(), null, null, null, null)
+            ).ReturnsAsync(new List<int>());
+
+            mockFactory.Setup(f => f.OpenConnectionAsync())
+                .ReturnsAsync(mockConn.Object);
+
+            var handler = new GetBobotKualitasKuantitasPublikasiJurnalIlmiahQueryHandler(mockFactory.Object);
+            var result = await handler.Handle(new GetBobotKualitasKuantitasPublikasiJurnalIlmiahQuery(), CancellationToken.None);
+
+            Assert.False(result.IsSuccess);
+            Assert.Equal(KualitasKuantitasPublikasiJurnalIlmiahErrors.EmptyData().Code, result.Error.Code);
+        }
+
+        [Fact]
+        public async Task GetBobot_ReturnsFailure_WhenMultipleValues()
+        {
+            var mockFactory = new Mock<IDbConnectionFactory>();
+            var mockConn = new Mock<DbConnection>();
+
+            mockConn.SetupDapperAsync(c =>
+                c.QueryAsync<int>(It.IsAny<string>(), null, null, null, null)
+            ).ReturnsAsync(new List<int> { 10, 20 });
+
+            mockFactory.Setup(f => f.OpenConnectionAsync())
+                .ReturnsAsync(mockConn.Object);
+
+            var handler = new GetBobotKualitasKuantitasPublikasiJurnalIlmiahQueryHandler(mockFactory.Object);
+            var result = await handler.Handle(new GetBobotKualitasKuantitasPublikasiJurnalIlmiahQuery(), CancellationToken.None);
+
+            Assert.False(result.IsSuccess);
+            Assert.Equal(KualitasKuantitasPublikasiJurnalIlmiahErrors.NotSameValue().Code, result.Error.Code);
+        }
+
+        [Fact]
+        public async Task GetDefault_ReturnsSuccess_WhenFound()
+        {
+            var mockFactory = new Mock<IDbConnectionFactory>();
+            var mockConn = new Mock<DbConnection>();
+
+            var uuid = Guid.NewGuid();
+            var fake = new KualitasKuantitasPublikasiJurnalIlmiahDefaultResponse
+            {
+                Id = "1",
+                Uuid = uuid.ToString(),
+                Nama = "Default",
+                Nilai = 10
+            };
+
+            mockConn.SetupDapperAsync(c =>
+                c.QuerySingleOrDefaultAsync<KualitasKuantitasPublikasiJurnalIlmiahDefaultResponse?>(It.IsAny<string>(), It.IsAny<object>(), null, null, null)
+            ).ReturnsAsync(fake);
+
+            mockFactory.Setup(f => f.OpenConnectionAsync())
+                .ReturnsAsync(mockConn.Object);
+
+            var handler = new GetKualitasKuantitasPublikasiJurnalIlmiahDefaultQueryHandler(mockFactory.Object);
+            var result = await handler.Handle(new GetKualitasKuantitasPublikasiJurnalIlmiahDefaultQuery(uuid), CancellationToken.None);
+
+            Assert.True(result.IsSuccess);
+            Assert.Equal("Default", result.Value.Nama);
+        }
+
+        [Fact]
+        public async Task GetDefault_ReturnsFailure_WhenNotFound()
+        {
+            var mockFactory = new Mock<IDbConnectionFactory>();
+            var mockConn = new Mock<DbConnection>();
+
+            mockConn.SetupDapperAsync(c =>
+                c.QuerySingleOrDefaultAsync<KualitasKuantitasPublikasiJurnalIlmiahDefaultResponse?>(It.IsAny<string>(), It.IsAny<object>(), null, null, null)
+            ).ReturnsAsync((KualitasKuantitasPublikasiJurnalIlmiahDefaultResponse?)null);
+
+            mockFactory.Setup(f => f.OpenConnectionAsync())
+                .ReturnsAsync(mockConn.Object);
+
+            var uuid = Guid.NewGuid();
+            var handler = new GetKualitasKuantitasPublikasiJurnalIlmiahDefaultQueryHandler(mockFactory.Object);
+            var result = await handler.Handle(new GetKualitasKuantitasPublikasiJurnalIlmiahDefaultQuery(uuid), CancellationToken.None);
+
+            Assert.False(result.IsSuccess);
+            Assert.Equal(KualitasKuantitasPublikasiJurnalIlmiahErrors.NotFound(uuid).Code, result.Error.Code);
+        }
+
+        [Fact]
+        public async Task GetByUuid_ReturnsSuccess_WhenFound()
+        {
+            var mockFactory = new Mock<IDbConnectionFactory>();
+            var mockConn = new Mock<DbConnection>();
+
+            var uuid = Guid.NewGuid();
+            var fake = new KualitasKuantitasPublikasiJurnalIlmiahResponse
+            {
+                Uuid = uuid.ToString(),
+                Nama = "Some Data",
+                Nilai = "99"
+            };
+
+            mockConn.SetupDapperAsync(c =>
+                c.QuerySingleOrDefaultAsync<KualitasKuantitasPublikasiJurnalIlmiahResponse?>(It.IsAny<string>(), It.IsAny<object>(), null, null, null)
+            ).ReturnsAsync(fake);
+
+            mockFactory.Setup(f => f.OpenConnectionAsync())
+                .ReturnsAsync(mockConn.Object);
+
+            var handler = new GetKualitasKuantitasPublikasiJurnalIlmiahQueryHandler(mockFactory.Object);
+            var result = await handler.Handle(new GetKualitasKuantitasPublikasiJurnalIlmiahQuery(uuid), CancellationToken.None);
+
+            Assert.True(result.IsSuccess);
+            Assert.Equal("Some Data", result.Value.Nama);
+        }
+
+        [Fact]
+        public async Task GetByUuid_ReturnsFailure_WhenNotFound()
+        {
+            var mockFactory = new Mock<IDbConnectionFactory>();
+            var mockConn = new Mock<DbConnection>();
+
+            mockConn.SetupDapperAsync(c =>
+                c.QuerySingleOrDefaultAsync<KualitasKuantitasPublikasiJurnalIlmiahResponse?>(It.IsAny<string>(), It.IsAny<object>(), null, null, null)
+            ).ReturnsAsync((KualitasKuantitasPublikasiJurnalIlmiahResponse?)null);
+
+            mockFactory.Setup(f => f.OpenConnectionAsync())
+                .ReturnsAsync(mockConn.Object);
+
+            var uuid = Guid.NewGuid();
+            var handler = new GetKualitasKuantitasPublikasiJurnalIlmiahQueryHandler(mockFactory.Object);
+            var result = await handler.Handle(new GetKualitasKuantitasPublikasiJurnalIlmiahQuery(uuid), CancellationToken.None);
+
+            Assert.False(result.IsSuccess);
+            Assert.Equal(KualitasKuantitasPublikasiJurnalIlmiahErrors.NotFound(uuid).Code, result.Error.Code);
         }
     }
 }

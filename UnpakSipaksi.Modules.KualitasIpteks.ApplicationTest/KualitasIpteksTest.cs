@@ -1,10 +1,19 @@
-﻿using MediatR;
+﻿using Dapper;
+using MediatR;
 using Microsoft.Extensions.DependencyInjection;
+using Moq;
+using Moq.Dapper;
+using System.Data.Common;
+using UnpakSipaksi.Common.Application.Data;
 using UnpakSipaksi.Common.Domain;
 using UnpakSipaksi.Modules.KualitasIpteks.Application.CreateKualitasIpteks;
 using UnpakSipaksi.Modules.KualitasIpteks.Application.DeleteKualitasIpteks;
+using UnpakSipaksi.Modules.KualitasIpteks.Application.GetAllKualitasIpteks;
+using UnpakSipaksi.Modules.KualitasIpteks.Application.GetBobotKualitasIpteks;
+using UnpakSipaksi.Modules.KualitasIpteks.Application.GetKualitasIpteks;
 using UnpakSipaksi.Modules.KualitasIpteks.Application.UpdateKualitasIpteks;
 using UnpakSipaksi.Modules.KualitasIpteks.ApplicationTest;
+using UnpakSipaksi.Modules.KualitasIpteks.Domain.KualitasIpteks;
 using Xunit;
 
 namespace Application.Integration.Tests
@@ -219,6 +228,211 @@ namespace Application.Integration.Tests
 
             Assert.True(result.IsFailure);
             Assert.Equal("KualitasIpteks.NotFound", result.Error.Code);
+        }
+
+        [Fact]
+        public async Task GetAll_ReturnsList_WhenDataExists()
+        {
+            var mockFactory = new Mock<IDbConnectionFactory>();
+            var mockConn = new Mock<DbConnection>();
+
+            var fake = new List<KualitasIpteksResponse>
+            {
+                new() { Uuid = Guid.NewGuid().ToString(), Nama = "Data 1", Nilai = "10" }
+            };
+
+            mockConn.SetupDapperAsync(c =>
+                c.QueryAsync<KualitasIpteksResponse>(It.IsAny<string>(), null, null, null, null)
+            ).ReturnsAsync(fake);
+
+            mockFactory.Setup(f => f.OpenConnectionAsync())
+                .ReturnsAsync(mockConn.Object);
+
+            var handler = new GetAllKualitasIpteksQueryHandler(mockFactory.Object);
+            var result = await handler.Handle(new GetAllKualitasIpteksQuery(), CancellationToken.None);
+
+            Assert.True(result.IsSuccess);
+            Assert.Single(result.Value);
+            Assert.Equal("Data 1", result.Value[0].Nama);
+        }
+
+        [Fact]
+        public async Task GetAll_ReturnsFailure_WhenEmpty()
+        {
+            var mockFactory = new Mock<IDbConnectionFactory>();
+            var mockConn = new Mock<DbConnection>();
+
+            mockConn.SetupDapperAsync(c =>
+                c.QueryAsync<KualitasIpteksResponse>(It.IsAny<string>(), null, null, null, null)
+            ).ReturnsAsync(new List<KualitasIpteksResponse>());
+
+            mockFactory.Setup(f => f.OpenConnectionAsync())
+                .ReturnsAsync(mockConn.Object);
+
+            var handler = new GetAllKualitasIpteksQueryHandler(mockFactory.Object);
+            var result = await handler.Handle(new GetAllKualitasIpteksQuery(), CancellationToken.None);
+
+            Assert.False(result.IsSuccess);
+            Assert.Equal(KualitasIpteksErrors.EmptyData().Code, result.Error.Code);
+        }
+
+        [Fact]
+        public async Task GetBobot_ReturnsSuccess_WhenSingleValueFound()
+        {
+            var mockFactory = new Mock<IDbConnectionFactory>();
+            var mockConn = new Mock<DbConnection>();
+
+            mockConn.SetupDapperAsync(c =>
+                c.QueryAsync<int>(It.IsAny<string>(), null, null, null, null)
+            ).ReturnsAsync(new List<int> { 100 });
+
+            mockFactory.Setup(f => f.OpenConnectionAsync())
+                .ReturnsAsync(mockConn.Object);
+
+            var handler = new GetBobotKualitasIpteksQueryHandler(mockFactory.Object);
+            var result = await handler.Handle(new GetBobotKualitasIpteksQuery(), CancellationToken.None);
+
+            Assert.True(result.IsSuccess);
+            Assert.Equal(100, result.Value);
+        }
+
+        [Fact]
+        public async Task GetBobot_ReturnsFailure_WhenEmpty()
+        {
+            var mockFactory = new Mock<IDbConnectionFactory>();
+            var mockConn = new Mock<DbConnection>();
+
+            mockConn.SetupDapperAsync(c =>
+                c.QueryAsync<int>(It.IsAny<string>(), null, null, null, null)
+            ).ReturnsAsync(new List<int>());
+
+            mockFactory.Setup(f => f.OpenConnectionAsync())
+                .ReturnsAsync(mockConn.Object);
+
+            var handler = new GetBobotKualitasIpteksQueryHandler(mockFactory.Object);
+            var result = await handler.Handle(new GetBobotKualitasIpteksQuery(), CancellationToken.None);
+
+            Assert.False(result.IsSuccess);
+            Assert.Equal(KualitasIpteksErrors.EmptyData().Code, result.Error.Code);
+        }
+
+        [Fact]
+        public async Task GetBobot_ReturnsFailure_WhenMultipleValues()
+        {
+            var mockFactory = new Mock<IDbConnectionFactory>();
+            var mockConn = new Mock<DbConnection>();
+
+            mockConn.SetupDapperAsync(c =>
+                c.QueryAsync<int>(It.IsAny<string>(), null, null, null, null)
+            ).ReturnsAsync(new List<int> { 10, 20 });
+
+            mockFactory.Setup(f => f.OpenConnectionAsync())
+                .ReturnsAsync(mockConn.Object);
+
+            var handler = new GetBobotKualitasIpteksQueryHandler(mockFactory.Object);
+            var result = await handler.Handle(new GetBobotKualitasIpteksQuery(), CancellationToken.None);
+
+            Assert.False(result.IsSuccess);
+            Assert.Equal(KualitasIpteksErrors.NotSameValue().Code, result.Error.Code);
+        }
+
+        [Fact]
+        public async Task GetDefault_ReturnsSuccess_WhenFound()
+        {
+            var mockFactory = new Mock<IDbConnectionFactory>();
+            var mockConn = new Mock<DbConnection>();
+
+            var uuid = Guid.NewGuid();
+            var fake = new KualitasIpteksDefaultResponse
+            {
+                Id = "1",
+                Uuid = uuid.ToString(),
+                Nama = "Default",
+                Nilai = 10
+            };
+
+            mockConn.SetupDapperAsync(c =>
+                c.QuerySingleOrDefaultAsync<KualitasIpteksDefaultResponse?>(It.IsAny<string>(), It.IsAny<object>(), null, null, null)
+            ).ReturnsAsync(fake);
+
+            mockFactory.Setup(f => f.OpenConnectionAsync())
+                .ReturnsAsync(mockConn.Object);
+
+            var handler = new GetKualitasIpteksDefaultQueryHandler(mockFactory.Object);
+            var result = await handler.Handle(new GetKualitasIpteksDefaultQuery(uuid), CancellationToken.None);
+
+            Assert.True(result.IsSuccess);
+            Assert.Equal("Default", result.Value.Nama);
+        }
+
+        [Fact]
+        public async Task GetDefault_ReturnsFailure_WhenNotFound()
+        {
+            var mockFactory = new Mock<IDbConnectionFactory>();
+            var mockConn = new Mock<DbConnection>();
+
+            mockConn.SetupDapperAsync(c =>
+                c.QuerySingleOrDefaultAsync<KualitasIpteksDefaultResponse?>(It.IsAny<string>(), It.IsAny<object>(), null, null, null)
+            ).ReturnsAsync((KualitasIpteksDefaultResponse?)null);
+
+            mockFactory.Setup(f => f.OpenConnectionAsync())
+                .ReturnsAsync(mockConn.Object);
+
+            var uuid = Guid.NewGuid();
+            var handler = new GetKualitasIpteksDefaultQueryHandler(mockFactory.Object);
+            var result = await handler.Handle(new GetKualitasIpteksDefaultQuery(uuid), CancellationToken.None);
+
+            Assert.False(result.IsSuccess);
+            Assert.Equal(KualitasIpteksErrors.NotFound(uuid).Code, result.Error.Code);
+        }
+
+        [Fact]
+        public async Task GetByUuid_ReturnsSuccess_WhenFound()
+        {
+            var mockFactory = new Mock<IDbConnectionFactory>();
+            var mockConn = new Mock<DbConnection>();
+
+            var uuid = Guid.NewGuid();
+            var fake = new KualitasIpteksResponse
+            {
+                Uuid = uuid.ToString(),
+                Nama = "Some Data",
+                Nilai = "99"
+            };
+
+            mockConn.SetupDapperAsync(c =>
+                c.QuerySingleOrDefaultAsync<KualitasIpteksResponse?>(It.IsAny<string>(), It.IsAny<object>(), null, null, null)
+            ).ReturnsAsync(fake);
+
+            mockFactory.Setup(f => f.OpenConnectionAsync())
+                .ReturnsAsync(mockConn.Object);
+
+            var handler = new GetKualitasIpteksQueryHandler(mockFactory.Object);
+            var result = await handler.Handle(new GetKualitasIpteksQuery(uuid), CancellationToken.None);
+
+            Assert.True(result.IsSuccess);
+            Assert.Equal("Some Data", result.Value.Nama);
+        }
+
+        [Fact]
+        public async Task GetByUuid_ReturnsFailure_WhenNotFound()
+        {
+            var mockFactory = new Mock<IDbConnectionFactory>();
+            var mockConn = new Mock<DbConnection>();
+
+            mockConn.SetupDapperAsync(c =>
+                c.QuerySingleOrDefaultAsync<KualitasIpteksResponse?>(It.IsAny<string>(), It.IsAny<object>(), null, null, null)
+            ).ReturnsAsync((KualitasIpteksResponse?)null);
+
+            mockFactory.Setup(f => f.OpenConnectionAsync())
+                .ReturnsAsync(mockConn.Object);
+
+            var uuid = Guid.NewGuid();
+            var handler = new GetKualitasIpteksQueryHandler(mockFactory.Object);
+            var result = await handler.Handle(new GetKualitasIpteksQuery(uuid), CancellationToken.None);
+
+            Assert.False(result.IsSuccess);
+            Assert.Equal(KualitasIpteksErrors.NotFound(uuid).Code, result.Error.Code);
         }
     }
 }

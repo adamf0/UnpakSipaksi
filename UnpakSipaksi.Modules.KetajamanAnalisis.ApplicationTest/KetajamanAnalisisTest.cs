@@ -1,10 +1,16 @@
-﻿using FluentValidation;
+﻿using Dapper;
+using FluentValidation;
 using MediatR;
 using Microsoft.Extensions.DependencyInjection;
+using Moq;
+using Moq.Dapper;
+using System.Data.Common;
+using UnpakSipaksi.Common.Application.Data;
 using UnpakSipaksi.Common.Domain;
-using UnpakSipaksi.Modules.KesesuaianWaktuRabLuaranFasilitas.Application.CreateKesesuaianWaktuRabLuaranFasilitas;
-using UnpakSipaksi.Modules.KesesuaianWaktuRabLuaranFasilitas.Application.DeleteKesesuaianWaktuRabLuaranFasilitas;
-using UnpakSipaksi.Modules.KesesuaianWaktuRabLuaranFasilitas.Application.UpdateKesesuaianWaktuRabLuaranFasilitas;
+using UnpakSipaksi.Modules.KetajamanAnalisis.Application.GetAllKetajamanAnalisis;
+using UnpakSipaksi.Modules.KetajamanAnalisis.Application.GetBobotKetajamanAnalisis;
+using UnpakSipaksi.Modules.KetajamanAnalisis.Application.GetKetajamanAnalisis;
+using UnpakSipaksi.Modules.KetajamanAnalisis.Domain.KetajamanAnalisis;
 using UnpakSipaksi.Modules.KetajamanAnalisis.Application.CreateKetajamanAnalisis;
 using UnpakSipaksi.Modules.KetajamanAnalisis.Application.DeleteKetajamanAnalisis;
 using UnpakSipaksi.Modules.KetajamanAnalisis.Application.UpdateKetajamanAnalisis;
@@ -216,6 +222,211 @@ namespace UnpakSipaksi.Modules.KetajamanAnalisis.ApplicationTest
 
             Assert.True(result.IsFailure);
             Assert.Equal("KetajamanAnalisis.NotFound", result.Error.Code);
+        }
+
+        [Fact]
+        public async Task GetAll_ReturnsList_WhenDataExists()
+        {
+            var mockFactory = new Mock<IDbConnectionFactory>();
+            var mockConn = new Mock<DbConnection>();
+
+            var fake = new List<KetajamanAnalisisResponse>
+            {
+                new() { Uuid = Guid.NewGuid().ToString(), Nama = "Data 1", Nilai = 10 }
+            };
+
+            mockConn.SetupDapperAsync(c =>
+                c.QueryAsync<KetajamanAnalisisResponse>(It.IsAny<string>(), null, null, null, null)
+            ).ReturnsAsync(fake);
+
+            mockFactory.Setup(f => f.OpenConnectionAsync())
+                .ReturnsAsync(mockConn.Object);
+
+            var handler = new GetAllKetajamanAnalisisQueryHandler(mockFactory.Object);
+            var result = await handler.Handle(new GetAllKetajamanAnalisisQuery(), CancellationToken.None);
+
+            Assert.True(result.IsSuccess);
+            Assert.Single(result.Value);
+            Assert.Equal("Data 1", result.Value[0].Nama);
+        }
+
+        [Fact]
+        public async Task GetAll_ReturnsFailure_WhenEmpty()
+        {
+            var mockFactory = new Mock<IDbConnectionFactory>();
+            var mockConn = new Mock<DbConnection>();
+
+            mockConn.SetupDapperAsync(c =>
+                c.QueryAsync<KetajamanAnalisisResponse>(It.IsAny<string>(), null, null, null, null)
+            ).ReturnsAsync(new List<KetajamanAnalisisResponse>());
+
+            mockFactory.Setup(f => f.OpenConnectionAsync())
+                .ReturnsAsync(mockConn.Object);
+
+            var handler = new GetAllKetajamanAnalisisQueryHandler(mockFactory.Object);
+            var result = await handler.Handle(new GetAllKetajamanAnalisisQuery(), CancellationToken.None);
+
+            Assert.False(result.IsSuccess);
+            Assert.Equal(KetajamanAnalisisErrors.EmptyData().Code, result.Error.Code);
+        }
+
+        [Fact]
+        public async Task GetBobot_ReturnsSuccess_WhenSingleValueFound()
+        {
+            var mockFactory = new Mock<IDbConnectionFactory>();
+            var mockConn = new Mock<DbConnection>();
+
+            mockConn.SetupDapperAsync(c =>
+                c.QueryAsync<int>(It.IsAny<string>(), null, null, null, null)
+            ).ReturnsAsync(new List<int> { 100 });
+
+            mockFactory.Setup(f => f.OpenConnectionAsync())
+                .ReturnsAsync(mockConn.Object);
+
+            var handler = new GetBobotKetajamanAnalisisQueryHandler(mockFactory.Object);
+            var result = await handler.Handle(new GetBobotKetajamanAnalisisQuery(), CancellationToken.None);
+
+            Assert.True(result.IsSuccess);
+            Assert.Equal(100, result.Value);
+        }
+
+        [Fact]
+        public async Task GetBobot_ReturnsFailure_WhenEmpty()
+        {
+            var mockFactory = new Mock<IDbConnectionFactory>();
+            var mockConn = new Mock<DbConnection>();
+
+            mockConn.SetupDapperAsync(c =>
+                c.QueryAsync<int>(It.IsAny<string>(), null, null, null, null)
+            ).ReturnsAsync(new List<int>());
+
+            mockFactory.Setup(f => f.OpenConnectionAsync())
+                .ReturnsAsync(mockConn.Object);
+
+            var handler = new GetBobotKetajamanAnalisisQueryHandler(mockFactory.Object);
+            var result = await handler.Handle(new GetBobotKetajamanAnalisisQuery(), CancellationToken.None);
+
+            Assert.False(result.IsSuccess);
+            Assert.Equal(KetajamanAnalisisErrors.EmptyData().Code, result.Error.Code);
+        }
+
+        [Fact]
+        public async Task GetBobot_ReturnsFailure_WhenMultipleValues()
+        {
+            var mockFactory = new Mock<IDbConnectionFactory>();
+            var mockConn = new Mock<DbConnection>();
+
+            mockConn.SetupDapperAsync(c =>
+                c.QueryAsync<int>(It.IsAny<string>(), null, null, null, null)
+            ).ReturnsAsync(new List<int> { 10, 20 });
+
+            mockFactory.Setup(f => f.OpenConnectionAsync())
+                .ReturnsAsync(mockConn.Object);
+
+            var handler = new GetBobotKetajamanAnalisisQueryHandler(mockFactory.Object);
+            var result = await handler.Handle(new GetBobotKetajamanAnalisisQuery(), CancellationToken.None);
+
+            Assert.False(result.IsSuccess);
+            Assert.Equal(KetajamanAnalisisErrors.NotSameValue().Code, result.Error.Code);
+        }
+
+        [Fact]
+        public async Task GetDefault_ReturnsSuccess_WhenFound()
+        {
+            var mockFactory = new Mock<IDbConnectionFactory>();
+            var mockConn = new Mock<DbConnection>();
+
+            var uuid = Guid.NewGuid();
+            var fake = new KetajamanAnalisisDefaultResponse
+            {
+                Id = "1",
+                Uuid = uuid.ToString(),
+                Nama = "Default",
+                Nilai = 10
+            };
+
+            mockConn.SetupDapperAsync(c =>
+                c.QuerySingleOrDefaultAsync<KetajamanAnalisisDefaultResponse?>(It.IsAny<string>(), It.IsAny<object>(), null, null, null)
+            ).ReturnsAsync(fake);
+
+            mockFactory.Setup(f => f.OpenConnectionAsync())
+                .ReturnsAsync(mockConn.Object);
+
+            var handler = new GetKetajamanAnalisisDefaultQueryHandler(mockFactory.Object);
+            var result = await handler.Handle(new GetKetajamanAnalisisDefaultQuery(uuid), CancellationToken.None);
+
+            Assert.True(result.IsSuccess);
+            Assert.Equal("Default", result.Value.Nama);
+        }
+
+        [Fact]
+        public async Task GetDefault_ReturnsFailure_WhenNotFound()
+        {
+            var mockFactory = new Mock<IDbConnectionFactory>();
+            var mockConn = new Mock<DbConnection>();
+
+            mockConn.SetupDapperAsync(c =>
+                c.QuerySingleOrDefaultAsync<KetajamanAnalisisDefaultResponse?>(It.IsAny<string>(), It.IsAny<object>(), null, null, null)
+            ).ReturnsAsync((KetajamanAnalisisDefaultResponse?)null);
+
+            mockFactory.Setup(f => f.OpenConnectionAsync())
+                .ReturnsAsync(mockConn.Object);
+
+            var uuid = Guid.NewGuid();
+            var handler = new GetKetajamanAnalisisDefaultQueryHandler(mockFactory.Object);
+            var result = await handler.Handle(new GetKetajamanAnalisisDefaultQuery(uuid), CancellationToken.None);
+
+            Assert.False(result.IsSuccess);
+            Assert.Equal(KetajamanAnalisisErrors.NotFound(uuid).Code, result.Error.Code);
+        }
+
+        [Fact]
+        public async Task GetByUuid_ReturnsSuccess_WhenFound()
+        {
+            var mockFactory = new Mock<IDbConnectionFactory>();
+            var mockConn = new Mock<DbConnection>();
+
+            var uuid = Guid.NewGuid();
+            var fake = new KetajamanAnalisisResponse
+            {
+                Uuid = uuid.ToString(),
+                Nama = "Some Data",
+                Nilai = 99
+            };
+
+            mockConn.SetupDapperAsync(c =>
+                c.QuerySingleOrDefaultAsync<KetajamanAnalisisResponse?>(It.IsAny<string>(), It.IsAny<object>(), null, null, null)
+            ).ReturnsAsync(fake);
+
+            mockFactory.Setup(f => f.OpenConnectionAsync())
+                .ReturnsAsync(mockConn.Object);
+
+            var handler = new GetKetajamanAnalisisQueryHandler(mockFactory.Object);
+            var result = await handler.Handle(new GetKetajamanAnalisisQuery(uuid), CancellationToken.None);
+
+            Assert.True(result.IsSuccess);
+            Assert.Equal("Some Data", result.Value.Nama);
+        }
+
+        [Fact]
+        public async Task GetByUuid_ReturnsFailure_WhenNotFound()
+        {
+            var mockFactory = new Mock<IDbConnectionFactory>();
+            var mockConn = new Mock<DbConnection>();
+
+            mockConn.SetupDapperAsync(c =>
+                c.QuerySingleOrDefaultAsync<KetajamanAnalisisResponse?>(It.IsAny<string>(), It.IsAny<object>(), null, null, null)
+            ).ReturnsAsync((KetajamanAnalisisResponse?)null);
+
+            mockFactory.Setup(f => f.OpenConnectionAsync())
+                .ReturnsAsync(mockConn.Object);
+
+            var uuid = Guid.NewGuid();
+            var handler = new GetKetajamanAnalisisQueryHandler(mockFactory.Object);
+            var result = await handler.Handle(new GetKetajamanAnalisisQuery(uuid), CancellationToken.None);
+
+            Assert.False(result.IsSuccess);
+            Assert.Equal(KetajamanAnalisisErrors.NotFound(uuid).Code, result.Error.Code);
         }
     }
 }

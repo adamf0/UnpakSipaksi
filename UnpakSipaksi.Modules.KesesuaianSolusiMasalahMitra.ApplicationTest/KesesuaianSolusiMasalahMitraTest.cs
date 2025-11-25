@@ -1,12 +1,18 @@
-﻿using Docker.DotNet.Models;
+﻿using Dapper;
+using Docker.DotNet.Models;
 using MediatR;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.DependencyInjection;
+using Moq;
+using Moq.Dapper;
+using System.Data.Common;
 using System.Reflection;
+using UnpakSipaksi.Common.Application.Data;
 using UnpakSipaksi.Common.Domain;
-using UnpakSipaksi.Modules.KesesuaianPenugasan.Application.CreateKesesuaianPenugasan;
-using UnpakSipaksi.Modules.KesesuaianPenugasan.Application.DeleteKesesuaianPenugasan;
-using UnpakSipaksi.Modules.KesesuaianPenugasan.Application.UpdateKesesuaianPenugasan;
+using UnpakSipaksi.Modules.KesesuaianSolusiMasalahMitra.Application.GetAllKesesuaianSolusiMasalahMitra;
+using UnpakSipaksi.Modules.KesesuaianSolusiMasalahMitra.Application.GetBobotKesesuaianSolusiMasalahMitra;
+using UnpakSipaksi.Modules.KesesuaianSolusiMasalahMitra.Application.GetKesesuaianSolusiMasalahMitra;
+using UnpakSipaksi.Modules.KesesuaianSolusiMasalahMitra.Domain.KesesuaianSolusiMasalahMitra;
 using UnpakSipaksi.Modules.KesesuaianSolusiMasalahMitra.Application.CreateKesesuaianSolusiMasalahMitra;
 using UnpakSipaksi.Modules.KesesuaianSolusiMasalahMitra.Application.DeleteKesesuaianSolusiMasalahMitra;
 using UnpakSipaksi.Modules.KesesuaianSolusiMasalahMitra.Application.UpdateKesesuaianSolusiMasalahMitra;
@@ -229,6 +235,211 @@ namespace Application.Integration.Tests
 
             Assert.True(result.IsFailure);
             Assert.Equal("KesesuaianSolusiMasalahMitra.NotFound", result.Error.Code);
+        }
+
+        [Fact]
+        public async Task GetAll_ReturnsList_WhenDataExists()
+        {
+            var mockFactory = new Mock<IDbConnectionFactory>();
+            var mockConn = new Mock<DbConnection>();
+
+            var fake = new List<KesesuaianSolusiMasalahMitraResponse>
+            {
+                new() { Uuid = Guid.NewGuid().ToString(), Nama = "Data 1", Nilai = "10" }
+            };
+
+            mockConn.SetupDapperAsync(c =>
+                c.QueryAsync<KesesuaianSolusiMasalahMitraResponse>(It.IsAny<string>(), null, null, null, null)
+            ).ReturnsAsync(fake);
+
+            mockFactory.Setup(f => f.OpenConnectionAsync())
+                .ReturnsAsync(mockConn.Object);
+
+            var handler = new GetAllKesesuaianSolusiMasalahMitraQueryHandler(mockFactory.Object);
+            var result = await handler.Handle(new GetAllKesesuaianSolusiMasalahMitraQuery(), CancellationToken.None);
+
+            Assert.True(result.IsSuccess);
+            Assert.Single(result.Value);
+            Assert.Equal("Data 1", result.Value[0].Nama);
+        }
+
+        [Fact]
+        public async Task GetAll_ReturnsFailure_WhenEmpty()
+        {
+            var mockFactory = new Mock<IDbConnectionFactory>();
+            var mockConn = new Mock<DbConnection>();
+
+            mockConn.SetupDapperAsync(c =>
+                c.QueryAsync<KesesuaianSolusiMasalahMitraResponse>(It.IsAny<string>(), null, null, null, null)
+            ).ReturnsAsync(new List<KesesuaianSolusiMasalahMitraResponse>());
+
+            mockFactory.Setup(f => f.OpenConnectionAsync())
+                .ReturnsAsync(mockConn.Object);
+
+            var handler = new GetAllKesesuaianSolusiMasalahMitraQueryHandler(mockFactory.Object);
+            var result = await handler.Handle(new GetAllKesesuaianSolusiMasalahMitraQuery(), CancellationToken.None);
+
+            Assert.False(result.IsSuccess);
+            Assert.Equal(KesesuaianSolusiMasalahMitraErrors.EmptyData().Code, result.Error.Code);
+        }
+
+        [Fact]
+        public async Task GetBobot_ReturnsSuccess_WhenSingleValueFound()
+        {
+            var mockFactory = new Mock<IDbConnectionFactory>();
+            var mockConn = new Mock<DbConnection>();
+
+            mockConn.SetupDapperAsync(c =>
+                c.QueryAsync<int>(It.IsAny<string>(), null, null, null, null)
+            ).ReturnsAsync(new List<int> { 100 });
+
+            mockFactory.Setup(f => f.OpenConnectionAsync())
+                .ReturnsAsync(mockConn.Object);
+
+            var handler = new GetBobotKesesuaianSolusiMasalahMitraQueryHandler(mockFactory.Object);
+            var result = await handler.Handle(new GetBobotKesesuaianSolusiMasalahMitraQuery(), CancellationToken.None);
+
+            Assert.True(result.IsSuccess);
+            Assert.Equal(100, result.Value);
+        }
+
+        [Fact]
+        public async Task GetBobot_ReturnsFailure_WhenEmpty()
+        {
+            var mockFactory = new Mock<IDbConnectionFactory>();
+            var mockConn = new Mock<DbConnection>();
+
+            mockConn.SetupDapperAsync(c =>
+                c.QueryAsync<int>(It.IsAny<string>(), null, null, null, null)
+            ).ReturnsAsync(new List<int>());
+
+            mockFactory.Setup(f => f.OpenConnectionAsync())
+                .ReturnsAsync(mockConn.Object);
+
+            var handler = new GetBobotKesesuaianSolusiMasalahMitraQueryHandler(mockFactory.Object);
+            var result = await handler.Handle(new GetBobotKesesuaianSolusiMasalahMitraQuery(), CancellationToken.None);
+
+            Assert.False(result.IsSuccess);
+            Assert.Equal(KesesuaianSolusiMasalahMitraErrors.EmptyData().Code, result.Error.Code);
+        }
+
+        [Fact]
+        public async Task GetBobot_ReturnsFailure_WhenMultipleValues()
+        {
+            var mockFactory = new Mock<IDbConnectionFactory>();
+            var mockConn = new Mock<DbConnection>();
+
+            mockConn.SetupDapperAsync(c =>
+                c.QueryAsync<int>(It.IsAny<string>(), null, null, null, null)
+            ).ReturnsAsync(new List<int> { 10, 20 });
+
+            mockFactory.Setup(f => f.OpenConnectionAsync())
+                .ReturnsAsync(mockConn.Object);
+
+            var handler = new GetBobotKesesuaianSolusiMasalahMitraQueryHandler(mockFactory.Object);
+            var result = await handler.Handle(new GetBobotKesesuaianSolusiMasalahMitraQuery(), CancellationToken.None);
+
+            Assert.False(result.IsSuccess);
+            Assert.Equal(KesesuaianSolusiMasalahMitraErrors.NotSameValue().Code, result.Error.Code);
+        }
+
+        [Fact]
+        public async Task GetDefault_ReturnsSuccess_WhenFound()
+        {
+            var mockFactory = new Mock<IDbConnectionFactory>();
+            var mockConn = new Mock<DbConnection>();
+
+            var uuid = Guid.NewGuid();
+            var fake = new KesesuaianSolusiMasalahMitraDefaultResponse
+            {
+                Id = "1",
+                Uuid = uuid.ToString(),
+                Nama = "Default",
+                Nilai = 10
+            };
+
+            mockConn.SetupDapperAsync(c =>
+                c.QuerySingleOrDefaultAsync<KesesuaianSolusiMasalahMitraDefaultResponse?>(It.IsAny<string>(), It.IsAny<object>(), null, null, null)
+            ).ReturnsAsync(fake);
+
+            mockFactory.Setup(f => f.OpenConnectionAsync())
+                .ReturnsAsync(mockConn.Object);
+
+            var handler = new GetKesesuaianSolusiMasalahMitraDefaultQueryHandler(mockFactory.Object);
+            var result = await handler.Handle(new GetKesesuaianSolusiMasalahMitraDefaultQuery(uuid), CancellationToken.None);
+
+            Assert.True(result.IsSuccess);
+            Assert.Equal("Default", result.Value.Nama);
+        }
+
+        [Fact]
+        public async Task GetDefault_ReturnsFailure_WhenNotFound()
+        {
+            var mockFactory = new Mock<IDbConnectionFactory>();
+            var mockConn = new Mock<DbConnection>();
+
+            mockConn.SetupDapperAsync(c =>
+                c.QuerySingleOrDefaultAsync<KesesuaianSolusiMasalahMitraDefaultResponse?>(It.IsAny<string>(), It.IsAny<object>(), null, null, null)
+            ).ReturnsAsync((KesesuaianSolusiMasalahMitraDefaultResponse?)null);
+
+            mockFactory.Setup(f => f.OpenConnectionAsync())
+                .ReturnsAsync(mockConn.Object);
+
+            var uuid = Guid.NewGuid();
+            var handler = new GetKesesuaianSolusiMasalahMitraDefaultQueryHandler(mockFactory.Object);
+            var result = await handler.Handle(new GetKesesuaianSolusiMasalahMitraDefaultQuery(uuid), CancellationToken.None);
+
+            Assert.False(result.IsSuccess);
+            Assert.Equal(KesesuaianSolusiMasalahMitraErrors.NotFound(uuid).Code, result.Error.Code);
+        }
+
+        [Fact]
+        public async Task GetByUuid_ReturnsSuccess_WhenFound()
+        {
+            var mockFactory = new Mock<IDbConnectionFactory>();
+            var mockConn = new Mock<DbConnection>();
+
+            var uuid = Guid.NewGuid();
+            var fake = new KesesuaianSolusiMasalahMitraResponse
+            {
+                Uuid = uuid.ToString(),
+                Nama = "Some Data",
+                Nilai = "99"
+            };
+
+            mockConn.SetupDapperAsync(c =>
+                c.QuerySingleOrDefaultAsync<KesesuaianSolusiMasalahMitraResponse?>(It.IsAny<string>(), It.IsAny<object>(), null, null, null)
+            ).ReturnsAsync(fake);
+
+            mockFactory.Setup(f => f.OpenConnectionAsync())
+                .ReturnsAsync(mockConn.Object);
+
+            var handler = new GetKesesuaianSolusiMasalahMitraQueryHandler(mockFactory.Object);
+            var result = await handler.Handle(new GetKesesuaianSolusiMasalahMitraQuery(uuid), CancellationToken.None);
+
+            Assert.True(result.IsSuccess);
+            Assert.Equal("Some Data", result.Value.Nama);
+        }
+
+        [Fact]
+        public async Task GetByUuid_ReturnsFailure_WhenNotFound()
+        {
+            var mockFactory = new Mock<IDbConnectionFactory>();
+            var mockConn = new Mock<DbConnection>();
+
+            mockConn.SetupDapperAsync(c =>
+                c.QuerySingleOrDefaultAsync<KesesuaianSolusiMasalahMitraResponse?>(It.IsAny<string>(), It.IsAny<object>(), null, null, null)
+            ).ReturnsAsync((KesesuaianSolusiMasalahMitraResponse?)null);
+
+            mockFactory.Setup(f => f.OpenConnectionAsync())
+                .ReturnsAsync(mockConn.Object);
+
+            var uuid = Guid.NewGuid();
+            var handler = new GetKesesuaianSolusiMasalahMitraQueryHandler(mockFactory.Object);
+            var result = await handler.Handle(new GetKesesuaianSolusiMasalahMitraQuery(uuid), CancellationToken.None);
+
+            Assert.False(result.IsSuccess);
+            Assert.Equal(KesesuaianSolusiMasalahMitraErrors.NotFound(uuid).Code, result.Error.Code);
         }
     }
 }

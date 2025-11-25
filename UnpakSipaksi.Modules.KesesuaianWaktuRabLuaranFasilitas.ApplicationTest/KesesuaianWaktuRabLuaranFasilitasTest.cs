@@ -1,9 +1,14 @@
-﻿using MediatR;
+﻿using Dapper;
+using MediatR;
 using Microsoft.Extensions.DependencyInjection;
+using Moq;
+using Moq.Dapper;
+using System.Data.Common;
+using UnpakSipaksi.Common.Application.Data;
 using UnpakSipaksi.Common.Domain;
-using UnpakSipaksi.Modules.KesesuaianTkt.Application.CreateKesesuaianTkt;
-using UnpakSipaksi.Modules.KesesuaianTkt.Application.DeleteKesesuaianTkt;
-using UnpakSipaksi.Modules.KesesuaianTkt.Application.UpdateKesesuaianTkt;
+using UnpakSipaksi.Modules.KesesuaianWaktuRabLuaranFasilitas.Application.GetAllKesesuaianWaktuRabLuaranFasilitas;
+using UnpakSipaksi.Modules.KesesuaianWaktuRabLuaranFasilitas.Application.GetBobotKesesuaianWaktuRabLuaranFasilitas;
+using UnpakSipaksi.Modules.KesesuaianWaktuRabLuaranFasilitas.Application.GetKesesuaianWaktuRabLuaranFasilitas;
 using UnpakSipaksi.Modules.KesesuaianWaktuRabLuaranFasilitas.Application.CreateKesesuaianWaktuRabLuaranFasilitas;
 using UnpakSipaksi.Modules.KesesuaianWaktuRabLuaranFasilitas.Application.DeleteKesesuaianWaktuRabLuaranFasilitas;
 using UnpakSipaksi.Modules.KesesuaianWaktuRabLuaranFasilitas.Application.UpdateKesesuaianWaktuRabLuaranFasilitas;
@@ -226,6 +231,285 @@ namespace Application.Integration.Tests
 
             Assert.True(result.IsFailure);
             Assert.Equal("KesesuaianWaktuRabLuaranFasilitas.NotFound", result.Error.Code);
+        }
+
+        [Fact]
+        public async Task Handle_All_ReturnsSuccess_WhenDataExists()
+        {
+            var mockConnectionFactory = new Mock<IDbConnectionFactory>();
+            var mockConnection = new Mock<DbConnection>();
+
+            var fakeData = new List<KesesuaianWaktuRabLuaranFasilitasResponse>
+        {
+            new() { Uuid = Guid.NewGuid().ToString(), Nama = "TKT 1", Skor = "5" }
+        };
+
+            mockConnection.SetupDapperAsync(c =>
+                c.QueryAsync<KesesuaianWaktuRabLuaranFasilitasResponse>(
+                    It.IsAny<string>(), null, null, null, null
+                )
+            ).ReturnsAsync(fakeData);
+
+            mockConnectionFactory
+                .Setup(f => f.OpenConnectionAsync())
+                .Returns(new ValueTask<DbConnection>(mockConnection.Object));
+
+            var handler = new GetAllKesesuaianWaktuRabLuaranFasilitasQueryHandler(mockConnectionFactory.Object);
+
+            var result = await handler.Handle(
+                new GetAllKesesuaianWaktuRabLuaranFasilitasQuery(),
+                CancellationToken.None
+            );
+
+            Assert.True(result.IsSuccess);
+            Assert.NotEmpty(result.Value);
+        }
+
+        [Fact]
+        public async Task Handle_All_ReturnsFailure_WhenEmpty()
+        {
+            var mockConnectionFactory = new Mock<IDbConnectionFactory>();
+            var mockConnection = new Mock<DbConnection>();
+
+            mockConnection.SetupDapperAsync(c =>
+                c.QueryAsync<KesesuaianWaktuRabLuaranFasilitasResponse>(
+                    It.IsAny<string>(), null, null, null, null
+                )
+            ).ReturnsAsync(new List<KesesuaianWaktuRabLuaranFasilitasResponse>());
+
+            mockConnectionFactory
+                .Setup(f => f.OpenConnectionAsync())
+                .Returns(new ValueTask<DbConnection>(mockConnection.Object));
+
+            var handler = new GetAllKesesuaianWaktuRabLuaranFasilitasQueryHandler(mockConnectionFactory.Object);
+
+            var result = await handler.Handle(
+                new GetAllKesesuaianWaktuRabLuaranFasilitasQuery(),
+                CancellationToken.None
+            );
+
+            Assert.False(result.IsSuccess);
+        }
+
+        [Fact]
+        public async Task Handle_Default_ReturnsSuccess_WhenFound()
+        {
+            var mockConnectionFactory = new Mock<IDbConnectionFactory>();
+            var mockConnection = new Mock<DbConnection>();
+            var uuid = Guid.NewGuid();
+
+            var fakeData = new KesesuaianWaktuRabLuaranFasilitasDefaultResponse
+            {
+                Id = "1",
+                Uuid = uuid.ToString(),
+                Nama = "Default TKT",
+                BobotPDP = 1,
+                BobotTerapan = 2,
+                BobotKerjasama = 3,
+                BobotPenelitianDasar = 4,
+                Skor = 10
+            };
+
+            mockConnection.SetupDapperAsync(c =>
+                c.QuerySingleOrDefaultAsync<KesesuaianWaktuRabLuaranFasilitasDefaultResponse>(
+                    It.IsAny<string>(), It.IsAny<object>(), null, null, null
+                )
+            ).ReturnsAsync(fakeData);
+
+            mockConnectionFactory
+                .Setup(f => f.OpenConnectionAsync())
+                .Returns(new ValueTask<DbConnection>(mockConnection.Object));
+
+            var handler = new GetKesesuaianWaktuRabLuaranFasilitasDefaultQueryHandler(mockConnectionFactory.Object);
+
+            var result = await handler.Handle(
+                new GetKesesuaianWaktuRabLuaranFasilitasDefaultQuery(uuid),
+                CancellationToken.None
+            );
+
+            Assert.True(result.IsSuccess);
+            Assert.Equal(fakeData.Nama, result.Value.Nama);
+        }
+
+        [Fact]
+        public async Task Handle_Default_ReturnsFailure_WhenNotFound()
+        {
+            var mockConnectionFactory = new Mock<IDbConnectionFactory>();
+            var mockConnection = new Mock<DbConnection>();
+
+            mockConnection.SetupDapperAsync(c =>
+                c.QuerySingleOrDefaultAsync<KesesuaianWaktuRabLuaranFasilitasDefaultResponse>(
+                    It.IsAny<string>(), It.IsAny<object>(), null, null, null
+                )
+            ).ReturnsAsync((KesesuaianWaktuRabLuaranFasilitasDefaultResponse?)null);
+
+            mockConnectionFactory
+                .Setup(f => f.OpenConnectionAsync())
+                .Returns(new ValueTask<DbConnection>(mockConnection.Object));
+
+            var handler = new GetKesesuaianWaktuRabLuaranFasilitasDefaultQueryHandler(mockConnectionFactory.Object);
+
+            var result = await handler.Handle(
+                new GetKesesuaianWaktuRabLuaranFasilitasDefaultQuery(Guid.NewGuid()),
+                CancellationToken.None
+            );
+
+            Assert.False(result.IsSuccess);
+        }
+
+        [Fact]
+        public async Task Handle_ReturnsSuccess_WhenFound()
+        {
+            var mockConnectionFactory = new Mock<IDbConnectionFactory>();
+            var mockConnection = new Mock<DbConnection>();
+            var uuid = Guid.NewGuid();
+
+            var fakeData = new KesesuaianWaktuRabLuaranFasilitasResponse
+            {
+                Uuid = uuid.ToString(),
+                Nama = "TKT 1",
+                Skor = "9"
+            };
+
+            mockConnection.SetupDapperAsync(c =>
+                c.QuerySingleOrDefaultAsync<KesesuaianWaktuRabLuaranFasilitasResponse>(
+                    It.IsAny<string>(), It.IsAny<object>(), null, null, null
+                )
+            ).ReturnsAsync(fakeData);
+
+            mockConnectionFactory
+                .Setup(f => f.OpenConnectionAsync())
+                .Returns(new ValueTask<DbConnection>(mockConnection.Object));
+
+            var handler = new GetKesesuaianWaktuRabLuaranFasilitasQueryHandler(mockConnectionFactory.Object);
+
+            var result = await handler.Handle(
+                new GetKesesuaianWaktuRabLuaranFasilitasQuery(uuid),
+                CancellationToken.None
+            );
+
+            Assert.True(result.IsSuccess);
+            Assert.Equal(fakeData.Nama, result.Value.Nama);
+        }
+
+        [Fact]
+        public async Task Handle_ReturnsFailure_WhenNotFound()
+        {
+            var mockConnectionFactory = new Mock<IDbConnectionFactory>();
+            var mockConnection = new Mock<DbConnection>();
+
+            mockConnection.SetupDapperAsync(c =>
+                c.QuerySingleOrDefaultAsync<KesesuaianWaktuRabLuaranFasilitasResponse>(
+                    It.IsAny<string>(), It.IsAny<object>(), null, null, null
+                )
+            ).ReturnsAsync((KesesuaianWaktuRabLuaranFasilitasResponse?)null);
+
+            mockConnectionFactory
+                .Setup(f => f.OpenConnectionAsync())
+                .Returns(new ValueTask<DbConnection>(mockConnection.Object));
+
+            var handler = new GetKesesuaianWaktuRabLuaranFasilitasQueryHandler(mockConnectionFactory.Object);
+
+            var result = await handler.Handle(
+                new GetKesesuaianWaktuRabLuaranFasilitasQuery(Guid.NewGuid()),
+                CancellationToken.None
+            );
+
+            Assert.False(result.IsSuccess);
+        }
+
+        [Theory]
+        [InlineData("Penelitian Dasar", 10)]
+        [InlineData("Penelitian Terapan", 20)]
+        [InlineData("Penelitian Kolaborasi", 30)]
+        [InlineData("Penelitian Dosen Pemula (PDP)", 40)]
+        public async Task Handle_ReturnsSuccess_WhenSingleValueExists(string kategori, int expected)
+        {
+            var mockConnectionFactory = new Mock<IDbConnectionFactory>();
+            var mockConnection = new Mock<DbConnection>();
+
+            var fakeData = new List<int> { expected };
+
+            mockConnection.SetupDapperAsync(c =>
+                c.QueryAsync<int>(It.IsAny<string>(), null, null, null, null)
+            ).ReturnsAsync(fakeData);
+
+            mockConnectionFactory
+                .Setup(f => f.OpenConnectionAsync())
+                .Returns(new ValueTask<DbConnection>(mockConnection.Object));
+
+            var handler = new GetBobotKesesuaianWaktuRabLuaranFasilitasQueryHandler(mockConnectionFactory.Object);
+
+            var result = await handler.Handle(
+                new GetBobotKesesuaianWaktuRabLuaranFasilitasQuery(kategori),
+                CancellationToken.None
+            );
+
+            Assert.True(result.IsSuccess);
+            Assert.Equal(expected, result.Value);
+        }
+
+        [Fact]
+        public async Task Handle_ReturnsFailure_WhenKategoriUnknown()
+        {
+            var handler = new GetBobotKesesuaianWaktuRabLuaranFasilitasQueryHandler(new Mock<IDbConnectionFactory>().Object);
+
+            var result = await handler.Handle(
+                new GetBobotKesesuaianWaktuRabLuaranFasilitasQuery("Kategori Tidak Ada"),
+                CancellationToken.None
+            );
+
+            Assert.False(result.IsSuccess);
+        }
+
+        [Fact]
+        public async Task Handle_ReturnsFailure_WhenEmptyData()
+        {
+            var mockConnectionFactory = new Mock<IDbConnectionFactory>();
+            var mockConnection = new Mock<DbConnection>();
+
+            mockConnection.SetupDapperAsync(c =>
+                c.QueryAsync<int>(It.IsAny<string>(), null, null, null, null)
+            ).ReturnsAsync(new List<int>());
+
+            mockConnectionFactory
+                .Setup(f => f.OpenConnectionAsync())
+                .Returns(new ValueTask<DbConnection>(mockConnection.Object));
+
+            var handler = new GetBobotKesesuaianWaktuRabLuaranFasilitasQueryHandler(mockConnectionFactory.Object);
+
+            var result = await handler.Handle(
+                new GetBobotKesesuaianWaktuRabLuaranFasilitasQuery("Penelitian Dasar"),
+                CancellationToken.None
+            );
+
+            Assert.False(result.IsSuccess);
+        }
+
+        [Fact]
+        public async Task Handle_ReturnsFailure_WhenMultipleValues()
+        {
+            var mockConnectionFactory = new Mock<IDbConnectionFactory>();
+            var mockConnection = new Mock<DbConnection>();
+
+            var fakeData = new List<int> { 10, 20 };
+
+            mockConnection.SetupDapperAsync(c =>
+                c.QueryAsync<int>(It.IsAny<string>(), null, null, null, null)
+            ).ReturnsAsync(fakeData);
+
+            mockConnectionFactory
+                .Setup(f => f.OpenConnectionAsync())
+                .Returns(new ValueTask<DbConnection>(mockConnection.Object));
+
+            var handler = new GetBobotKesesuaianWaktuRabLuaranFasilitasQueryHandler(mockConnectionFactory.Object);
+
+            var result = await handler.Handle(
+                new GetBobotKesesuaianWaktuRabLuaranFasilitasQuery("Penelitian Dasar"),
+                CancellationToken.None
+            );
+
+            Assert.False(result.IsSuccess);
         }
     }
 }

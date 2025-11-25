@@ -8,6 +8,6 @@
         public int BobotTerapan { get; set; }
         public int BobotKerjasama { get; set; }
         public int BobotPenelitianDasar { get; set; }
-        public int Skor { get; set; }
+        public int Nilai { get; set; }
     }
 }

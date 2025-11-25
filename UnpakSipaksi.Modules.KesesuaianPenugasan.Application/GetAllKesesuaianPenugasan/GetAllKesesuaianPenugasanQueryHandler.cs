@@ -10,7 +10,6 @@ using UnpakSipaksi.Common.Application.Messaging;
 using UnpakSipaksi.Common.Domain;
 using UnpakSipaksi.Modules.KesesuaianPenugasan.Domain.KesesuaianPenugasan;
 using UnpakSipaksi.Modules.KesesuaianPenugasan.Application.GetKesesuaianPenugasan;
-using UnpakSipaksi.Modules.KesesuaianPenugasan.Application.GetKesesuaianPenugasan;
 
 namespace UnpakSipaksi.Modules.KesesuaianPenugasan.Application.GetAllKesesuaianPenugasan
 {

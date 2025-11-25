@@ -20,6 +20,8 @@
 		<PackageReference Include="xunit.runner.visualstudio" />
 		<PackageReference Include="Microsoft.EntityFrameworkCore" />
 		<PackageReference Include="MySql.EntityFrameworkCore" />
+		<PackageReference Include="Dapper"/>
+		<PackageReference Include="Moq.Dapper"/>
 	</ItemGroup>
 
 	<ItemGroup>
