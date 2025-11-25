@@ -4,6 +4,7 @@ using MediatR;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.DependencyInjection;
 using Moq;
+using Moq.Dapper;
 using System.Data.Common;
 using System.Reflection;
 using UnpakSipaksi.Common.Application.Data;
@@ -191,25 +192,27 @@ namespace Application.Integration.Tests
         }
 
         [Fact]
-        public async Task GetAllKomponen_DataExists_ReturnSuccess()
+        public async Task Handle_ReturnsList_WhenDataExists()
         {
+            var mockFactory = new Mock<IDbConnectionFactory>();
+            var mockConn = new Mock<DbConnection>();
+
             var fakeData = new List<KomponenResponse>
-        {
-            new KomponenResponse { Uuid = Guid.NewGuid().ToString(), Nama = "Komponen 1", MaxBiaya = 1000 },
-            new KomponenResponse { Uuid = Guid.NewGuid().ToString(), Nama = "Komponen 2", MaxBiaya = 2000 }
-        };
+            {
+                new KomponenResponse { Uuid = Guid.NewGuid().ToString(), Nama = "Komponen 1", MaxBiaya = 1000 },
+                new KomponenResponse { Uuid = Guid.NewGuid().ToString(), Nama = "Komponen 2", MaxBiaya = 2000 }
+            };
 
-            var mockConnection = new Mock<DbConnection>();
-            var dbFactory = new Mock<IDbConnectionFactory>();
-
-            dbFactory.Setup(x => x.OpenConnectionAsync())
-                .ReturnsAsync(mockConnection.Object);
-
-            mockConnection
-                .Setup(x => x.QueryAsync<KomponenResponse>(It.IsAny<string>(), null, null, null, null))
+            mockConn
+                .SetupDapperAsync(c => c.QueryAsync<KomponenResponse>(
+                    It.IsAny<string>(), null, null, null, null))
                 .ReturnsAsync(fakeData);
 
-            var handler = new GetAllKomponenQueryHandler(dbFactory.Object);
+            mockFactory
+                .Setup(f => f.OpenConnectionAsync())
+                .Returns(new ValueTask<DbConnection>(mockConn.Object));
+
+            var handler = new GetAllKomponenQueryHandler(mockFactory.Object);
             var query = new GetAllKomponenQuery();
 
             var result = await handler.Handle(query, CancellationToken.None);
@@ -219,136 +222,154 @@ namespace Application.Integration.Tests
         }
 
         [Fact]
-        public async Task GetAllKomponen_EmptyData_ReturnFailure()
+        public async Task Handle_ReturnsFailure_WhenNoData()
         {
-            var mockConnection = new Mock<DbConnection>();
-            var dbFactory = new Mock<IDbConnectionFactory>();
+            var mockFactory = new Mock<IDbConnectionFactory>();
+            var mockConn = new Mock<DbConnection>();
 
-            dbFactory.Setup(x => x.OpenConnectionAsync())
-                .ReturnsAsync(mockConnection.Object);
-
-            mockConnection
-                .Setup(x => x.QueryAsync<KomponenResponse>(It.IsAny<string>(), null, null, null, null))
+            mockConn
+                .SetupDapperAsync(c => c.QueryAsync<KomponenResponse>(
+                    It.IsAny<string>(), null, null, null, null))
                 .ReturnsAsync(new List<KomponenResponse>());
 
-            var handler = new GetAllKomponenQueryHandler(dbFactory.Object);
+            mockFactory
+                .Setup(f => f.OpenConnectionAsync())
+                .Returns(new ValueTask<DbConnection>(mockConn.Object));
+
+            var handler = new GetAllKomponenQueryHandler(mockFactory.Object);
             var query = new GetAllKomponenQuery();
 
             var result = await handler.Handle(query, CancellationToken.None);
 
-            Assert.True(result.IsFailure);
+            Assert.False(result.IsSuccess);
             Assert.Equal(KomponenErrors.EmptyData().Code, result.Error.Code);
         }
 
         [Fact]
-        public async Task GetKomponen_Found_ReturnSuccess()
+        public async Task Handle_ReturnsSuccess_WhenDataExists()
         {
-            var komponenUuid = Guid.NewGuid();
+            var mockFactory = new Mock<IDbConnectionFactory>();
+            var mockConn = new Mock<DbConnection>();
+            var uuid = Guid.NewGuid();
 
-            var fakeResponse = new KomponenResponse
+            var fake = new KomponenResponse
             {
-                Uuid = komponenUuid.ToString(),
+                Uuid = uuid.ToString(),
                 Nama = "Komponen A",
                 MaxBiaya = 5000
             };
 
-            var mockConnection = new Mock<DbConnection>();
-            var dbFactory = new Mock<IDbConnectionFactory>();
+            mockConn
+                .SetupDapperAsync(c => c.QuerySingleOrDefaultAsync<KomponenResponse?>(
+                    It.IsAny<string>(),
+                    It.IsAny<object>(),
+                    null, null, null
+                ))
+                .ReturnsAsync(fake);
 
-            dbFactory.Setup(x => x.OpenConnectionAsync())
-                .ReturnsAsync(mockConnection.Object);
+            mockFactory
+                .Setup(f => f.OpenConnectionAsync())
+                .Returns(new ValueTask<DbConnection>(mockConn.Object));
 
-            mockConnection
-                .Setup(x => x.QuerySingleOrDefaultAsync<KomponenResponse?>(It.IsAny<string>(), It.IsAny<object>(), null, null, null))
-                .ReturnsAsync(fakeResponse);
-
-            var handler = new GetKomponenQueryHandler(dbFactory.Object);
-            var query = new GetKomponenQuery(komponenUuid);
+            var handler = new GetKomponenQueryHandler(mockFactory.Object);
+            var query = new GetKomponenQuery(uuid);
 
             var result = await handler.Handle(query, CancellationToken.None);
 
             Assert.True(result.IsSuccess);
-            Assert.Equal(komponenUuid.ToString(), result.Value.Uuid);
+            Assert.Equal(uuid.ToString(), result.Value.Uuid);
         }
 
         [Fact]
-        public async Task GetKomponen_NotFound_ReturnFailure()
+        public async Task Handle_ReturnsFailure_WhenDataNotFound()
         {
-            var komponenUuid = Guid.NewGuid();
+            var mockFactory = new Mock<IDbConnectionFactory>();
+            var mockConn = new Mock<DbConnection>();
+            var uuid = Guid.NewGuid();
 
-            var mockConnection = new Mock<DbConnection>();
-            var dbFactory = new Mock<IDbConnectionFactory>();
-
-            dbFactory.Setup(x => x.OpenConnectionAsync())
-                .ReturnsAsync(mockConnection.Object);
-
-            mockConnection
-                .Setup(x => x.QuerySingleOrDefaultAsync<KomponenResponse?>(It.IsAny<string>(), It.IsAny<object>(), null, null, null))
+            mockConn
+                .SetupDapperAsync(c => c.QuerySingleOrDefaultAsync<KomponenResponse?>(
+                    It.IsAny<string>(),
+                    It.IsAny<object>(),
+                    null, null, null
+                ))
                 .ReturnsAsync((KomponenResponse?)null);
 
-            var handler = new GetKomponenQueryHandler(dbFactory.Object);
-            var query = new GetKomponenQuery(komponenUuid);
+            mockFactory
+                .Setup(f => f.OpenConnectionAsync())
+                .Returns(new ValueTask<DbConnection>(mockConn.Object));
+
+            var handler = new GetKomponenQueryHandler(mockFactory.Object);
+            var query = new GetKomponenQuery(uuid);
 
             var result = await handler.Handle(query, CancellationToken.None);
 
-            Assert.True(result.IsFailure);
-            Assert.Equal(KomponenErrors.NotFound(komponenUuid).Code, result.Error.Code);
+            Assert.False(result.IsSuccess);
+            Assert.Equal(KomponenErrors.NotFound(uuid).Code, result.Error.Code);
         }
 
         [Fact]
-        public async Task GetKomponenDefault_Found_ReturnSuccess()
+        public async Task Handle_ReturnsSuccess_Default_WhenDataExists()
         {
-            var komponenUuid = Guid.NewGuid();
+            var mockFactory = new Mock<IDbConnectionFactory>();
+            var mockConn = new Mock<DbConnection>();
+            var uuid = Guid.NewGuid();
 
-            var fakeResponse = new KomponenDefaultResponse
+            var fake = new KomponenDefaultResponse
             {
                 Id = "10",
-                Uuid = komponenUuid.ToString(),
+                Uuid = uuid.ToString(),
                 Nama = "Default Komponen",
                 MaxBiaya = 3000
             };
 
-            var mockConnection = new Mock<DbConnection>();
-            var dbFactory = new Mock<IDbConnectionFactory>();
+            mockConn
+                .SetupDapperAsync(c => c.QuerySingleOrDefaultAsync<KomponenDefaultResponse?>(
+                    It.IsAny<string>(),
+                    It.IsAny<object>(),
+                    null, null, null
+                ))
+                .ReturnsAsync(fake);
 
-            dbFactory.Setup(x => x.OpenConnectionAsync())
-                .ReturnsAsync(mockConnection.Object);
+            mockFactory
+                .Setup(f => f.OpenConnectionAsync())
+                .Returns(new ValueTask<DbConnection>(mockConn.Object));
 
-            mockConnection
-                .Setup(x => x.QuerySingleOrDefaultAsync<KomponenDefaultResponse?>(It.IsAny<string>(), It.IsAny<object>(), null, null, null))
-                .ReturnsAsync(fakeResponse);
-
-            var handler = new GetKomponenDefaultQueryHandler(dbFactory.Object);
-            var query = new GetKomponenDefaultQuery(komponenUuid);
+            var handler = new GetKomponenDefaultQueryHandler(mockFactory.Object);
+            var query = new GetKomponenDefaultQuery(uuid);
 
             var result = await handler.Handle(query, CancellationToken.None);
 
             Assert.True(result.IsSuccess);
-            Assert.Equal(komponenUuid.ToString(), result.Value.Uuid);
+            Assert.Equal(uuid.ToString(), result.Value.Uuid);
         }
 
         [Fact]
-        public async Task GetKomponenDefault_NotFound_ReturnFailure()
+        public async Task Handle_ReturnsFailure_Default_WhenDataNotFound()
         {
-            var komponenUuid = Guid.NewGuid();
+            var mockFactory = new Mock<IDbConnectionFactory>();
+            var mockConn = new Mock<DbConnection>();
+            var uuid = Guid.NewGuid();
 
-            var mockConnection = new Mock<DbConnection>();
-            var dbFactory = new Mock<IDbConnectionFactory>();
-
-            dbFactory.Setup(x => x.OpenConnectionAsync())
-                .ReturnsAsync(mockConnection.Object);
-
-            mockConnection
-                .Setup(x => x.QuerySingleOrDefaultAsync<KomponenDefaultResponse?>(It.IsAny<string>(), It.IsAny<object>(), null, null, null))
+            mockConn
+                .SetupDapperAsync(c => c.QuerySingleOrDefaultAsync<KomponenDefaultResponse?>(
+                    It.IsAny<string>(),
+                    It.IsAny<object>(),
+                    null, null, null
+                ))
                 .ReturnsAsync((KomponenDefaultResponse?)null);
 
-            var handler = new GetKomponenDefaultQueryHandler(dbFactory.Object);
-            var query = new GetKomponenDefaultQuery(komponenUuid);
+            mockFactory
+                .Setup(f => f.OpenConnectionAsync())
+                .Returns(new ValueTask<DbConnection>(mockConn.Object));
+
+            var handler = new GetKomponenDefaultQueryHandler(mockFactory.Object);
+            var query = new GetKomponenDefaultQuery(uuid);
 
             var result = await handler.Handle(query, CancellationToken.None);
 
-            Assert.True(result.IsFailure);
-            Assert.Equal(KomponenErrors.NotFound(komponenUuid).Code, result.Error.Code);
+            Assert.False(result.IsSuccess);
+            Assert.Equal(KomponenErrors.NotFound(uuid).Code, result.Error.Code);
         }
     }
 }
