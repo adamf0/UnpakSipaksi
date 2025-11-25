@@ -2,7 +2,7 @@
 {
     public sealed record PengumumanResponse
     {
-        public string Uuid { get;  set; };
+        public string Uuid { get;  set; }
         public string Pesan { get; set; } = null!;
         public string? File { get;  set; }
         public string? Url { get;  set; }
