@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("UnpakSipaksi.Modules.KelompokMitra.ApplicationTest")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+28a6dfb55156ad1a710aeed7fc0569a8980b4224")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+ab65a015a090e769d435bdabcdbbcadbd0d32c70")]
 [assembly: System.Reflection.AssemblyProductAttribute("UnpakSipaksi.Modules.KelompokMitra.ApplicationTest")]
 [assembly: System.Reflection.AssemblyTitleAttribute("UnpakSipaksi.Modules.KelompokMitra.ApplicationTest")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

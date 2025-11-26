@@ -9,7 +9,7 @@ using UnpakSipaksi.Modules.ArtikelMediaMassa.Application.GetArtikelMediaMassa;
 
 namespace UnpakSipaksi.Modules.ArtikelMediaMassa.Infrastructure.PublicApi
 {
-    internal sealed class ArtikelMediaMassaApi(ISender sender) : IArtikelMediaMassaApi
+    public sealed class ArtikelMediaMassaApi(ISender sender) : IArtikelMediaMassaApi
     {
         public async Task<ArtikelMediaMassaResponseApi?> GetAsync(Guid ArtikelMediaMassaUuid, CancellationToken cancellationToken = default)
         {

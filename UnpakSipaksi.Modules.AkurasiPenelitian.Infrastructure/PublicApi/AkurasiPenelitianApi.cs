@@ -8,7 +8,7 @@ using UnpakSipaksi.Modules.AkurasiPenelitian.Application.GetBobotAkurasiPeneliti
 
 namespace UnpakSipaksi.Modules.AkurasiPenelitian.Infrastructure.PublicApi
 {
-    internal sealed class AkurasiPenelitianApi(ISender sender) : IAkurasiPenelitianApi
+    public sealed class AkurasiPenelitianApi(ISender sender) : IAkurasiPenelitianApi
     {
         public async Task<AkurasiPenelitianResponseApi?> GetAsync(Guid AkurasiPenelitianUuid, CancellationToken cancellationToken = default)
         {
