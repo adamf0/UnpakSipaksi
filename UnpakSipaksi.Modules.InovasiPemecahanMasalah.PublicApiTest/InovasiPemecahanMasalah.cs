@@ -81,9 +81,9 @@ public sealed class InovasiPemecahanMasalahApiTests
     {
         // Arrange
         _senderMock
-            .Setup(s => s.Send(It.IsAny<GetInovasiPemecahanMasalahDefaultQuery>(), It.IsAny<CancellationToken>()))
-            .Returns((GetInovasiPemecahanMasalahDefaultQuery q, CancellationToken ct) => 
-                Task.FromResult(Result<int?>.Failure<InovasiPemecahanMasalahDefaultResponse>(InovasiPemecahanMasalahErrors.UnknownKategoriSkema())));
+            .Setup(s => s.Send(It.IsAny<GetBobotInovasiPemecahanMasalahQuery>(), It.IsAny<CancellationToken>()))
+            .Returns((GetBobotInovasiPemecahanMasalahQuery q, CancellationToken ct) => 
+                Task.FromResult(Result<int?>.Failure(InovasiPemecahanMasalahErrors.UnknownKategoriSkema())));
 
         // Act
         var result = await _api.GetBobotWithoutTargetAsync("PDP");
