@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("UnpakSipaksi.Modules.KesesuaianJadwal.DomainTest")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+8ee258e803b6ece71369a47e5fdba915ea4a5e6d")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+c1fbe335eb8cdf80ee4635f21c472607e9d7e7f3")]
 [assembly: System.Reflection.AssemblyProductAttribute("UnpakSipaksi.Modules.KesesuaianJadwal.DomainTest")]
 [assembly: System.Reflection.AssemblyTitleAttribute("UnpakSipaksi.Modules.KesesuaianJadwal.DomainTest")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

@@ -8,7 +8,7 @@ using UnpakSipaksi.Modules.InovasiPemecahanMasalah.Application.GetBobotInovasiPe
 
 namespace UnpakSipaksi.Modules.InovasiPemecahanMasalah.Infrastructure.PublicApi
 {
-    internal sealed class InovasiPemecahanMasalahApi(ISender sender) : IInovasiPemecahanMasalahApi
+    public sealed class InovasiPemecahanMasalahApi(ISender sender) : IInovasiPemecahanMasalahApi
     {
         public async Task<InovasiPemecahanMasalahResponseApi?> GetAsync(Guid InovasiPemecahanMasalahUuid, CancellationToken cancellationToken = default)
         {

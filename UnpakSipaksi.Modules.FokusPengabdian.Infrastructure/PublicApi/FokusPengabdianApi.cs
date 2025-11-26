@@ -12,7 +12,7 @@ using UnpakSipaksi.Modules.FokusPengabdian.Application.GetFokusPengabdian;
 
 namespace UnpakSipaksi.Modules.FokusPengabdian.Infrastructure.PublicApi
 {
-    internal sealed class FokusPengabdianApi(ISender sender) : IFokusPengabdianApi
+    public sealed class FokusPengabdianApi(ISender sender) : IFokusPengabdianApi
     {
         public async Task<FokusPengabdianResponseApi?> GetAsync(Guid FokusPengabdianUuid, CancellationToken cancellationToken = default)
         {

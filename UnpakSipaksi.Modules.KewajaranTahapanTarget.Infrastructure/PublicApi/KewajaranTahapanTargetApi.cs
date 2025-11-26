@@ -8,7 +8,7 @@ using UnpakSipaksi.Modules.KewajaranTahapanTarget.Application.GetKewajaranTahapa
 
 namespace UnpakSipaksi.Modules.KewajaranTahapanTarget.Infrastructure.PublicApi
 {
-    internal sealed class KewajaranTahapanTargetApi(ISender sender) : IKewajaranTahapanTargetApi
+    public sealed class KewajaranTahapanTargetApi(ISender sender) : IKewajaranTahapanTargetApi
     {
         public async Task<KewajaranTahapanTargetResponseApi?> GetAsync(Guid KewajaranTahapanTargetUuid, CancellationToken cancellationToken = default)
         {

@@ -8,7 +8,7 @@ using UnpakSipaksi.Modules.KesesuaianPenugasan.Application.GetBobotKesesuaianPen
 
 namespace UnpakSipaksi.Modules.KesesuaianPenugasan.Infrastructure.PublicApi
 {
-    internal sealed class KesesuaianPenugasanApi(ISender sender) : IKesesuaianPenugasanApi
+    public sealed class KesesuaianPenugasanApi(ISender sender) : IKesesuaianPenugasanApi
     {
         public async Task<KesesuaianPenugasanResponseApi?> GetAsync(Guid KesesuaianPenugasanUuid, CancellationToken cancellationToken = default)
         {

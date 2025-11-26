@@ -7,7 +7,7 @@ using UnpakSipaksi.Modules.KelompokRab.Application.GetKelompokRab;
 
 namespace UnpakSipaksi.Modules.KelompokRab.Infrastructure.PublicApi
 {
-    internal sealed class KelompokRabApi(ISender sender) : IKelompokRabApi
+    public sealed class KelompokRabApi(ISender sender) : IKelompokRabApi
     {
         public async Task<KelompokRabResponseApi?> GetAsync(Guid KelompokRabUuid, CancellationToken cancellationToken = default)
         {

@@ -12,7 +12,7 @@ using UnpakSipaksi.Modules.FokusPenelitian.Application.GetFokusPenelitian;
 
 namespace UnpakSipaksi.Modules.FokusPenelitian.Infrastructure.PublicApi
 {
-    internal sealed class FokusPenelitianApi(ISender sender) : IFokusPenelitianApi
+    public sealed class FokusPenelitianApi(ISender sender) : IFokusPenelitianApi
     {
         public async Task<FokusPenelitianResponseApi?> GetAsync(Guid FokusPenelitianUuid, CancellationToken cancellationToken = default)
         {

@@ -4,11 +4,10 @@ using UnpakSipaksi.Common.Domain;
 using IJenisLuaranApi = UnpakSipaksi.Modules.JenisLuaran.PublicApi.IJenisLuaranApi;
 using JenisLuaranResponseApi = UnpakSipaksi.Modules.JenisLuaran.PublicApi.JenisLuaranResponse;
 using UnpakSipaksi.Modules.JenisLuaran.Application.GetJenisLuaran;
-using UnpakSipaksi.Modules.JenisLuaran.Application.GetJenisLuaran;
 
 namespace UnpakSipaksi.Modules.JenisLuaran.Infrastructure.PublicApi
 {
-    internal sealed class JenisLuaranApi(ISender sender) : IJenisLuaranApi
+    public sealed class JenisLuaranApi(ISender sender) : IJenisLuaranApi
     {
         public async Task<JenisLuaranResponseApi?> GetAsync(Guid JenisLuaranUuid, CancellationToken cancellationToken = default)
         {

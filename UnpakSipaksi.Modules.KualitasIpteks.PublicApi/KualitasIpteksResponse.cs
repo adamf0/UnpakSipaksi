@@ -6,5 +6,5 @@ using System.Threading.Tasks;
 
 namespace UnpakSipaksi.Modules.KualitasIpteks.PublicApi
 {
-    public sealed record KualitasIpteksResponse(string Id, string Uuid, string Nama, int Skor);
+    public sealed record KualitasIpteksResponse(string Id, string Uuid, string Nama, int Nilai);
 }

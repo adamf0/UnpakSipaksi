@@ -8,7 +8,7 @@ using UnpakSipaksi.Modules.KualitasKuantitasPublikasiJurnalIlmiah.Application.Ge
 
 namespace UnpakSipaksi.Modules.KualitasKuantitasPublikasiJurnalIlmiah.Infrastructure.PublicApi
 {
-    internal sealed class KualitasKuantitasPublikasiJurnalIlmiahApi(ISender sender) : IKualitasKuantitasPublikasiJurnalIlmiahApi
+    public sealed class KualitasKuantitasPublikasiJurnalIlmiahApi(ISender sender) : IKualitasKuantitasPublikasiJurnalIlmiahApi
     {
         public async Task<KualitasKuantitasPublikasiJurnalIlmiahResponseApi?> GetAsync(Guid KualitasKuantitasPublikasiJurnalIlmiahUuid, CancellationToken cancellationToken = default)
         {

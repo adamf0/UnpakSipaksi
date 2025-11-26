@@ -8,7 +8,7 @@ using UnpakSipaksi.Modules.KuantitasStatusKi.Application.GetBobotKuantitasStatus
 
 namespace UnpakSipaksi.Modules.KuantitasStatusKi.Infrastructure.PublicApi
 {
-    internal sealed class KuantitasStatusKiApi(ISender sender) : IKuantitasStatusKiApi
+    public sealed class KuantitasStatusKiApi(ISender sender) : IKuantitasStatusKiApi
     {
         public async Task<KuantitasStatusKiResponseApi?> GetAsync(Guid KuantitasStatusKiUuid, CancellationToken cancellationToken = default)
         {

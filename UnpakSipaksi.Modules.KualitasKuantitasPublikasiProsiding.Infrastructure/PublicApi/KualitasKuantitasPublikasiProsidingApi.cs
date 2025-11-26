@@ -8,7 +8,7 @@ using UnpakSipaksi.Modules.KualitasKuantitasPublikasiProsiding.Application.GetBo
 
 namespace UnpakSipaksi.Modules.KualitasKuantitasPublikasiProsiding.Infrastructure.PublicApi
 {
-    internal sealed class KualitasKuantitasPublikasiProsidingApi(ISender sender) : IKualitasKuantitasPublikasiProsidingApi
+    public sealed class KualitasKuantitasPublikasiProsidingApi(ISender sender) : IKualitasKuantitasPublikasiProsidingApi
     {
         public async Task<KualitasKuantitasPublikasiProsidingResponseApi?> GetAsync(Guid KualitasKuantitasPublikasiProsidingUuid, CancellationToken cancellationToken = default)
         {

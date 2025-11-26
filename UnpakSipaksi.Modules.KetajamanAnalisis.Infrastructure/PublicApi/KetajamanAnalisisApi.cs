@@ -8,7 +8,7 @@ using UnpakSipaksi.Modules.KetajamanAnalisis.Application.GetKetajamanAnalisis;
 
 namespace UnpakSipaksi.Modules.KetajamanAnalisis.Infrastructure.PublicApi
 {
-    internal sealed class KetajamanAnalisisApi(ISender sender) : IKetajamanAnalisisApi
+    public sealed class KetajamanAnalisisApi(ISender sender) : IKetajamanAnalisisApi
     {
         public async Task<KetajamanAnalisisResponseApi?> GetAsync(Guid KetajamanAnalisisUuid, CancellationToken cancellationToken = default)
         {

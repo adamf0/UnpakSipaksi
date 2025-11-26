@@ -8,7 +8,7 @@ using UnpakSipaksi.Modules.KesesuaianSolusiMasalahMitra.Application.GetBobotKese
 
 namespace UnpakSipaksi.Modules.KesesuaianSolusiMasalahMitra.Infrastructure.PublicApi
 {
-    internal sealed class KesesuaianSolusiMasalahMitraApi(ISender sender) : IKesesuaianSolusiMasalahMitraApi
+    public sealed class KesesuaianSolusiMasalahMitraApi(ISender sender) : IKesesuaianSolusiMasalahMitraApi
     {
         public async Task<KesesuaianSolusiMasalahMitraResponseApi?> GetAsync(Guid KesesuaianSolusiMasalahMitraUuid, CancellationToken cancellationToken = default)
         {

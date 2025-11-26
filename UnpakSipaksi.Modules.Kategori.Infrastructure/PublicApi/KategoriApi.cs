@@ -8,7 +8,7 @@ using UnpakSipaksi.Modules.Kategori.Application.GetKategori;
 
 namespace UnpakSipaksi.Modules.Kategori.Infrastructure.PublicApi
 {
-    internal sealed class KategoriApi(ISender sender) : IKategoriApi
+    public sealed class KategoriApi(ISender sender) : IKategoriApi
     {
         public async Task<KategoriResponseApi?> GetAsync(Guid KategoriUuid, CancellationToken cancellationToken = default)
         {

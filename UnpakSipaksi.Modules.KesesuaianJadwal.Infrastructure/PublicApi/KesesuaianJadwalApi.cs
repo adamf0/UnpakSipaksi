@@ -8,7 +8,7 @@ using UnpakSipaksi.Modules.KesesuaianJadwal.Application.GetKesesuaianJadwal;
 
 namespace UnpakSipaksi.Modules.KesesuaianJadwal.Infrastructure.PublicApi
 {
-    internal sealed class KesesuaianJadwalApi(ISender sender) : IKesesuaianJadwalApi
+    public sealed class KesesuaianJadwalApi(ISender sender) : IKesesuaianJadwalApi
     {
         public async Task<KesesuaianJadwalResponseApi?> GetAsync(Guid KesesuaianJadwalUuid, CancellationToken cancellationToken = default)
         {

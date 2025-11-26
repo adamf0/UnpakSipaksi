@@ -8,7 +8,7 @@ using UnpakSipaksi.Modules.KualitasIpteks.Application.GetBobotKualitasIpteks;
 
 namespace UnpakSipaksi.Modules.KualitasIpteks.Infrastructure.PublicApi
 {
-    internal sealed class KualitasIpteksApi(ISender sender) : IKualitasIpteksApi
+    public sealed class KualitasIpteksApi(ISender sender) : IKualitasIpteksApi
     {
         public async Task<KualitasIpteksResponseApi?> GetAsync(Guid KualitasIpteksUuid, CancellationToken cancellationToken = default)
         {
