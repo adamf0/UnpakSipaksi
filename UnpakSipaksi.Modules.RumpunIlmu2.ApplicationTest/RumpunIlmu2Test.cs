@@ -364,7 +364,7 @@ namespace UnpakSipaksi.Modules.RumpunIlmu2.ApplicationTest
             // Mock repository
             var mockRepo = new Mock<IRumpunIlmu2Repository>();
             mockRepo.Setup(r => r.GetAsync(uuid, It.IsAny<CancellationToken>()))
-                    .ReturnsAsync((RumpunIlmu2?)null);
+                    .ReturnsAsync((Domain.RumpunIlmu2.RumpunIlmu2?)null);
 
             // Handler
             using (var scope = Factory.Services.CreateScope())
