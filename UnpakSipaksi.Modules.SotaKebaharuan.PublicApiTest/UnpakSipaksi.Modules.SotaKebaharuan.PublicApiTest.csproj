@@ -26,6 +26,7 @@
 
 	<ItemGroup>
 		<ProjectReference Include="..\UnpakSipaksi.Modules.SotaKebaharuan.Application\UnpakSipaksi.Modules.SotaKebaharuan.Application.csproj" />
+		<ProjectReference Include="..\UnpakSipaksi.Modules.SotaKebaharuan.Domain\UnpakSipaksi.Modules.SotaKebaharuan.Domain.csproj" />
 		<ProjectReference Include="..\UnpakSipaksi.Modules.SotaKebaharuan.Infrastructure\UnpakSipaksi.Modules.SotaKebaharuan.Infrastructure.csproj" />
 		<ProjectReference Include="..\UnpakSipaksi\UnpakSipaksi.csproj" />
 		<!-- <None Include="Seed\init.sql" CopyToOutputDirectory="Always" /> -->
