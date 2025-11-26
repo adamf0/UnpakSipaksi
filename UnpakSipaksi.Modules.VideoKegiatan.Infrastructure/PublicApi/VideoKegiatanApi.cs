@@ -8,7 +8,7 @@ using UnpakSipaksi.Modules.VideoKegiatan.Application.GetVideoKegiatan;
 
 namespace UnpakSipaksi.Modules.VideoKegiatan.Infrastructure.PublicApi
 {
-    internal sealed class VideoKegiatanApi(ISender sender) : IVideoKegiatanApi
+    public sealed class VideoKegiatanApi(ISender sender) : IVideoKegiatanApi
     {
         public async Task<VideoKegiatanResponseApi?> GetAsync(Guid VideoKegiatanUuid, CancellationToken cancellationToken = default)
         {

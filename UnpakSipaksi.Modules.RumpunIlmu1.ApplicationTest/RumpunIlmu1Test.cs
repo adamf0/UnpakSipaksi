@@ -14,10 +14,9 @@ using UnpakSipaksi.Modules.RumpunIlmu1.Application.DeleteRumpunIlmu1;
 using UnpakSipaksi.Modules.RumpunIlmu1.Application.GetAllRumpunIlmu1;
 using UnpakSipaksi.Modules.RumpunIlmu1.Application.GetRumpunIlmu1;
 using UnpakSipaksi.Modules.RumpunIlmu1.Application.UpdateRumpunIlmu1;
-using UnpakSipaksi.Modules.RumpunIlmu1.ApplicationTest;
 using Xunit;
 
-namespace Application.Integration.Tests
+namespace UnpakSipaksi.Modules.RumpunIlmu1.ApplicationTest
 {
     public class RumpunIlmu1Test : BaseIntegrationTest
     {

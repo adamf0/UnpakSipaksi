@@ -16,11 +16,10 @@ using UnpakSipaksi.Modules.RumpunIlmu3.Application.DeleteRumpunIlmu3;
 using UnpakSipaksi.Modules.RumpunIlmu3.Application.GetAllRumpunIlmu3;
 using UnpakSipaksi.Modules.RumpunIlmu3.Application.GetRumpunIlmu3;
 using UnpakSipaksi.Modules.RumpunIlmu3.Application.UpdateRumpunIlmu3;
-using UnpakSipaksi.Modules.RumpunIlmu3.ApplicationTest;
 using UnpakSipaksi.Modules.RumpunIlmu3.Domain.RumpunIlmu3;
 using Xunit;
 
-namespace Application.Integration.Tests
+namespace UnpakSipaksi.Modules.RumpunIlmu3.ApplicationTest
 {
     public class RumpunIlmu3Test : BaseIntegrationTest
     {

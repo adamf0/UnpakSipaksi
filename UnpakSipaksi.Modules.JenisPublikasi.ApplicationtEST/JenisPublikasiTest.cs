@@ -15,10 +15,9 @@ using UnpakSipaksi.Modules.JenisPublikasi.Application.DeleteJenisPublikasi;
 using UnpakSipaksi.Modules.JenisPublikasi.Application.GetAllJenisPublikasi;
 using UnpakSipaksi.Modules.JenisPublikasi.Application.GetJenisPublikasi;
 using UnpakSipaksi.Modules.JenisPublikasi.Application.UpdateJenisPublikasi;
-using UnpakSipaksi.Modules.JenisPublikasi.ApplicationtTest;
 using Xunit;
 
-namespace Application.Integration.Tests
+namespace UnpakSipaksi.Modules.JenisPublikasi.ApplicationTest
 {
     public class JenisPublikasiTest : BaseIntegrationTest
     {

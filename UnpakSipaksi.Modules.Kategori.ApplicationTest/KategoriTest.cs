@@ -14,7 +14,7 @@ using UnpakSipaksi.Modules.Kategori.Application.GetKategori;
 using UnpakSipaksi.Modules.Kategori.Application.UpdateKategori;
 using Xunit;
 
-namespace Application.Integration.Tests
+namespace UnpakSipaksi.Modules.Kategori.ApplicationTest
 {
     public class KategoriTest : BaseIntegrationTest
     {
@@ -191,7 +191,7 @@ namespace Application.Integration.Tests
                     It.IsAny<object>(),
                     It.IsAny<IDbTransaction>(),
                     It.IsAny<int?>(),
-                    It.IsAny<System.Data.CommandType?>()
+                    It.IsAny<CommandType?>()
                 )
             ).ReturnsAsync(fakeDataList);
 
@@ -223,7 +223,7 @@ namespace Application.Integration.Tests
                     It.IsAny<object>(),
                     It.IsAny<IDbTransaction>(),
                     It.IsAny<int?>(),
-                    It.IsAny<System.Data.CommandType?>()
+                    It.IsAny<CommandType?>()
                 )
             ).ReturnsAsync(new List<KategoriResponse>());
 
@@ -261,7 +261,7 @@ namespace Application.Integration.Tests
                     It.IsAny<object>(),
                     It.IsAny<IDbTransaction>(),
                     It.IsAny<int?>(),
-                    It.IsAny<System.Data.CommandType?>()
+                    It.IsAny<CommandType?>()
                 )
             ).ReturnsAsync(fakeData);
 
@@ -292,7 +292,7 @@ namespace Application.Integration.Tests
                     It.IsAny<object>(),
                     It.IsAny<IDbTransaction>(),
                     It.IsAny<int?>(),
-                    It.IsAny<System.Data.CommandType?>()
+                    It.IsAny<CommandType?>()
                 )
             ).ReturnsAsync((KategoriDefaultResponse?)null);
 
@@ -329,7 +329,7 @@ namespace Application.Integration.Tests
                     It.IsAny<object>(),
                     It.IsAny<IDbTransaction>(),
                     It.IsAny<int?>(),
-                    It.IsAny<System.Data.CommandType?>()
+                    It.IsAny<CommandType?>()
                 )
             ).ReturnsAsync(fakeData);
 
@@ -360,7 +360,7 @@ namespace Application.Integration.Tests
                     It.IsAny<object>(),
                     It.IsAny<IDbTransaction>(),
                     It.IsAny<int?>(),
-                    It.IsAny<System.Data.CommandType?>()
+                    It.IsAny<CommandType?>()
                 )
             ).ReturnsAsync((KategoriResponse?)null);
 

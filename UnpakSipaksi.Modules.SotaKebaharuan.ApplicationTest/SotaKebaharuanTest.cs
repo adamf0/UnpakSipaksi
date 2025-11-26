@@ -12,10 +12,9 @@ using UnpakSipaksi.Modules.SotaKebaharuan.Application.GetAllSotaKebaharuan;
 using UnpakSipaksi.Modules.SotaKebaharuan.Application.GetBobotSotaKebaharuan;
 using UnpakSipaksi.Modules.SotaKebaharuan.Application.GetSotaKebaharuan;
 using UnpakSipaksi.Modules.SotaKebaharuan.Application.UpdateSotaKebaharuan;
-using UnpakSipaksi.Modules.SotaKebaharuan.ApplicationTest;
 using Xunit;
 
-namespace Application.Integration.Tests
+namespace UnpakSipaksi.Modules.SotaKebaharuan.ApplicationTest
 {
     public class SotaKebaharuanTest : BaseIntegrationTest
     {

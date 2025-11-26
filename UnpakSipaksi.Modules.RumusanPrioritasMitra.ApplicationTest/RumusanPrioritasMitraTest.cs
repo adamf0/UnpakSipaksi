@@ -16,10 +16,9 @@ using UnpakSipaksi.Modules.RumusanPrioritasMitra.Domain.RumusanPrioritasMitra;
 using UnpakSipaksi.Modules.RumusanPrioritasMitra.Application.CreateRumusanPrioritasMitra;
 using UnpakSipaksi.Modules.RumusanPrioritasMitra.Application.DeleteRumusanPrioritasMitra;
 using UnpakSipaksi.Modules.RumusanPrioritasMitra.Application.UpdateRumusanPrioritasMitra;
-using UnpakSipaksi.Modules.RumusanPrioritasMitra.ApplicationTest;
 using Xunit;
 
-namespace Application.Integration.Tests
+namespace UnpakSipaksi.Modules.RumusanPrioritasMitra.ApplicationTest
 {
     public class RumusanPrioritasMitraTest : BaseIntegrationTest
     {

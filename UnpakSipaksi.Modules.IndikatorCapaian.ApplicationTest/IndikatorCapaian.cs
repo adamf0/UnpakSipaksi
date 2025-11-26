@@ -9,12 +9,11 @@ using UnpakSipaksi.Modules.IndikatorCapaian.Application.Abstractions.Data;
 using UnpakSipaksi.Modules.IndikatorCapaian.Application.CreateIndikatorCapaian;
 using UnpakSipaksi.Modules.IndikatorCapaian.Application.DeleteIndikatorCapaian;
 using UnpakSipaksi.Modules.IndikatorCapaian.Application.UpdateIndikatorCapaian;
-using UnpakSipaksi.Modules.IndikatorCapaian.ApplicationTest;
 using UnpakSipaksi.Modules.IndikatorCapaian.Domain;
 using UnpakSipaksi.Modules.JenisLuaran.PublicApi;
 using Xunit;
 
-namespace Application.Integration.Tests
+namespace UnpakSipaksi.Modules.IndikatorCapaian.ApplicationTest
 {
     public class IndikatorCapaianTest : BaseIntegrationTest
     {

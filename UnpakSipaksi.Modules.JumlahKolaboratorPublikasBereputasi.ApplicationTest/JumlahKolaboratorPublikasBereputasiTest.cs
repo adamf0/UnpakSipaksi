@@ -16,10 +16,9 @@ using UnpakSipaksi.Modules.JumlahKolaboratorPublikasBereputasi.Application.GetAl
 using UnpakSipaksi.Modules.JumlahKolaboratorPublikasBereputasi.Application.GetBobotJumlahKolaboratorPublikasBereputasi;
 using UnpakSipaksi.Modules.JumlahKolaboratorPublikasBereputasi.Application.GetJumlahKolaboratorPublikasBereputasi;
 using UnpakSipaksi.Modules.JumlahKolaboratorPublikasBereputasi.Application.UpdateJumlahKolaboratorPublikasBereputasi;
-using UnpakSipaksi.Modules.JumlahKolaboratorPublikasBereputasi.ApplicationTest;
 using Xunit;
 
-namespace Application.Integration.Tests
+namespace UnpakSipaksi.Modules.JumlahKolaboratorPublikasBereputasi.ApplicationTest
 {
     public class JumlahKolaboratorPublikasBereputasiTest : BaseIntegrationTest
     {
@@ -255,7 +254,7 @@ namespace Application.Integration.Tests
                     It.IsAny<object>(),
                     It.IsAny<IDbTransaction>(),
                     It.IsAny<int?>(),
-                    It.IsAny<System.Data.CommandType?>()
+                    It.IsAny<CommandType?>()
                 )
             ).ReturnsAsync(fakeDataList);
 
@@ -287,7 +286,7 @@ namespace Application.Integration.Tests
                     It.IsAny<object>(),
                     It.IsAny<IDbTransaction>(),
                     It.IsAny<int?>(),
-                    It.IsAny<System.Data.CommandType?>()
+                    It.IsAny<CommandType?>()
                 )
             ).ReturnsAsync(new List<JumlahKolaboratorPublikasBereputasiResponse>());
 
@@ -330,7 +329,7 @@ namespace Application.Integration.Tests
                     It.IsAny<object>(),
                     It.IsAny<IDbTransaction>(),
                     It.IsAny<int?>(),
-                    It.IsAny<System.Data.CommandType?>()
+                    It.IsAny<CommandType?>()
                 )
             ).ReturnsAsync(fakeData);
 
@@ -361,7 +360,7 @@ namespace Application.Integration.Tests
                     It.IsAny<object>(),
                     It.IsAny<IDbTransaction>(),
                     It.IsAny<int?>(),
-                    It.IsAny<System.Data.CommandType?>()
+                    It.IsAny<CommandType?>()
                 )
             ).ReturnsAsync((JumlahKolaboratorPublikasBereputasiDefaultResponse?)null);
 
@@ -403,7 +402,7 @@ namespace Application.Integration.Tests
                     It.IsAny<object>(),
                     It.IsAny<IDbTransaction>(),
                     It.IsAny<int?>(),
-                    It.IsAny<System.Data.CommandType?>()
+                    It.IsAny<CommandType?>()
                 )
             ).ReturnsAsync(fakeData);
 
@@ -434,7 +433,7 @@ namespace Application.Integration.Tests
                     It.IsAny<object>(),
                     It.IsAny<IDbTransaction>(),
                     It.IsAny<int?>(),
-                    It.IsAny<System.Data.CommandType?>()
+                    It.IsAny<CommandType?>()
                 )
             ).ReturnsAsync((JumlahKolaboratorPublikasBereputasiResponse?)null);
 
@@ -463,7 +462,7 @@ namespace Application.Integration.Tests
             var mockConnection = new Mock<DbConnection>();
 
             mockConnection.SetupDapperAsync(c =>
-                c.QueryAsync<int>(It.IsAny<string>(), It.IsAny<object>(), It.IsAny<IDbTransaction>(), It.IsAny<int?>(), It.IsAny<System.Data.CommandType?>())
+                c.QueryAsync<int>(It.IsAny<string>(), It.IsAny<object>(), It.IsAny<IDbTransaction>(), It.IsAny<int?>(), It.IsAny<CommandType?>())
             ).ReturnsAsync(new List<int> { expectedValue });
 
             mockConnectionFactory.Setup(f => f.OpenConnectionAsync())
@@ -488,7 +487,7 @@ namespace Application.Integration.Tests
             var mockConnection = new Mock<DbConnection>();
 
             mockConnection.SetupDapperAsync(c =>
-                c.QueryAsync<int>(It.IsAny<string>(), It.IsAny<object>(), It.IsAny<IDbTransaction>(), It.IsAny<int?>(), It.IsAny<System.Data.CommandType?>())
+                c.QueryAsync<int>(It.IsAny<string>(), It.IsAny<object>(), It.IsAny<IDbTransaction>(), It.IsAny<int?>(), It.IsAny<CommandType?>())
             ).ReturnsAsync(new List<int>());
 
             mockConnectionFactory.Setup(f => f.OpenConnectionAsync())
@@ -512,7 +511,7 @@ namespace Application.Integration.Tests
             var mockConnection = new Mock<DbConnection>();
 
             mockConnection.SetupDapperAsync(c =>
-                c.QueryAsync<int>(It.IsAny<string>(), It.IsAny<object>(), It.IsAny<IDbTransaction>(), It.IsAny<int?>(), It.IsAny<System.Data.CommandType?>())
+                c.QueryAsync<int>(It.IsAny<string>(), It.IsAny<object>(), It.IsAny<IDbTransaction>(), It.IsAny<int?>(), It.IsAny<CommandType?>())
             ).ReturnsAsync(new List<int> { 10, 20 });
 
             mockConnectionFactory.Setup(f => f.OpenConnectionAsync())

@@ -6,7 +6,7 @@ using Testcontainers.MySql;
 using UnpakSipaksi.Modules.Kategori.Infrastructure.Database;
 using Xunit;
 
-namespace Application.Integration.Tests
+namespace UnpakSipaksi.Modules.Kategori.ApplicationTest
 {
     public class IntegrationTestWebAppFactory
         : WebApplicationFactory<Program>, IAsyncLifetime

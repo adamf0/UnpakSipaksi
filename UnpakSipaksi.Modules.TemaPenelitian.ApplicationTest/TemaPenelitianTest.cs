@@ -8,11 +8,10 @@ using UnpakSipaksi.Modules.TemaPenelitian.Application.Abstractions.Data;
 using UnpakSipaksi.Modules.TemaPenelitian.Application.CreateTemaPenelitian;
 using UnpakSipaksi.Modules.TemaPenelitian.Application.DeleteTemaPenelitian;
 using UnpakSipaksi.Modules.TemaPenelitian.Application.UpdateTemaPenelitian;
-using UnpakSipaksi.Modules.TemaPenelitian.ApplicationTest;
 using UnpakSipaksi.Modules.TemaPenelitian.Domain.TemaPenelitian;
 using Xunit;
 
-namespace Application.Integration.Tests
+namespace UnpakSipaksi.Modules.TemaPenelitian.ApplicationTest
 {
     public class TemaPenelitianTest : BaseIntegrationTest
     {

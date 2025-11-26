@@ -7,7 +7,7 @@ using UnpakSipaksi.Modules.Satuan.Application.GetSatuan;
 
 namespace UnpakSipaksi.Modules.Satuan.Infrastructure.PublicApi
 {
-    internal sealed class SatuanApi(ISender sender) : ISatuanApi
+    public sealed class SatuanApi(ISender sender) : ISatuanApi
     {
         public async Task<SatuanResponseApi?> GetAsync(Guid SatuanUuid, CancellationToken cancellationToken = default)
         {

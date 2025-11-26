@@ -6,11 +6,10 @@ using UnpakSipaksi.Modules.TopikPenelitian.Application.Abstractions.Data;
 using UnpakSipaksi.Modules.TopikPenelitian.Application.CreateTopikPenelitian;
 using UnpakSipaksi.Modules.TopikPenelitian.Application.DeleteTopikPenelitian;
 using UnpakSipaksi.Modules.TopikPenelitian.Application.UpdateTopikPenelitian;
-using UnpakSipaksi.Modules.TopikPenelitian.ApplicationTest;
 using UnpakSipaksi.Modules.TopikPenelitian.Domain.TopikPenelitian;
 using Xunit;
 
-namespace Application.Integration.Tests
+namespace UnpakSipaksi.Modules.TopikPenelitian.ApplicationTest
 {
     public class TopikPenelitianTest : BaseIntegrationTest
     {

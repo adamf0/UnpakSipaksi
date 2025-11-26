@@ -12,7 +12,7 @@ using UnpakSipaksi.Modules.TopikPenelitian.Application.GetTopikPenelitian;
 
 namespace UnpakSipaksi.Modules.TopikPenelitian.Infrastructure.PublicApi
 {
-    internal sealed class TopikPenelitianApi(ISender sender) : ITopikPenelitianApi
+    public sealed class TopikPenelitianApi(ISender sender) : ITopikPenelitianApi
     {
         public async Task<TopikPenelitianResponseApi?> GetAsync(Guid TopikPenelitianUuid, CancellationToken cancellationToken = default)
         {

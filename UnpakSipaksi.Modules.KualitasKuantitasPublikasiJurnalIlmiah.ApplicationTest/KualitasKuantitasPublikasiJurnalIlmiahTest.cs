@@ -16,10 +16,9 @@ using UnpakSipaksi.Modules.KualitasKuantitasPublikasiJurnalIlmiah.Domain.Kualita
 using UnpakSipaksi.Modules.KualitasKuantitasPublikasiJurnalIlmiah.Application.CreateKualitasKuantitasPublikasiJurnalIlmiah;
 using UnpakSipaksi.Modules.KualitasKuantitasPublikasiJurnalIlmiah.Application.DeleteKualitasKuantitasPublikasiJurnalIlmiah;
 using UnpakSipaksi.Modules.KualitasKuantitasPublikasiJurnalIlmiah.Application.UpdateKualitasKuantitasPublikasiJurnalIlmiah;
-using UnpakSipaksi.Modules.KualitasKuantitasPublikasiJurnalIlmiah.ApplicationTest;
 using Xunit;
 
-namespace Application.Integration.Tests
+namespace UnpakSipaksi.Modules.KualitasKuantitasPublikasiJurnalIlmiah.ApplicationTest
 {
     public class KualitasKuantitasPublikasiJurnalIlmiahTest : BaseIntegrationTest
     {

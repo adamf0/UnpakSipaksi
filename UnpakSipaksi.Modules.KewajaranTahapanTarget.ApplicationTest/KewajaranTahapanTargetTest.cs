@@ -13,10 +13,9 @@ using UnpakSipaksi.Modules.KewajaranTahapanTarget.Domain.KewajaranTahapanTarget;
 using UnpakSipaksi.Modules.KewajaranTahapanTarget.Application.CreateKewajaranTahapanTarget;
 using UnpakSipaksi.Modules.KewajaranTahapanTarget.Application.DeleteKewajaranTahapanTarget;
 using UnpakSipaksi.Modules.KewajaranTahapanTarget.Application.UpdateKewajaranTahapanTarget;
-using UnpakSipaksi.Modules.KewajaranTahapanTarget.ApplicationTest;
 using Xunit;
 
-namespace Application.Integration.Tests
+namespace UnpakSipaksi.Modules.KewajaranTahapanTarget.ApplicationTest
 {
     public class KewajaranTahapanTargetTest : BaseIntegrationTest
     {

@@ -14,7 +14,7 @@ using UnpakSipaksi.Modules.AkurasiPenelitian.Application.GetAllAkurasiPenelitian
 using UnpakSipaksi.Modules.AkurasiPenelitian.Application.UpdateAkurasiPenelitian;
 using Xunit;
 
-namespace Application.Integration.Tests
+namespace UnpakSipaksi.Modules.AkurasiPenelitian.ApplicationTest
 {
     public class AkurasiPenelitianTest : BaseIntegrationTest
     {

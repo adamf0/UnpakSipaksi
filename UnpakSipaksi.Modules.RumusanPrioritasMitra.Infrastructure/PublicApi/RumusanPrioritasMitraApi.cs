@@ -8,7 +8,7 @@ using UnpakSipaksi.Modules.RumusanPrioritasMitra.Application.GetBobotRumusanPrio
 
 namespace UnpakSipaksi.Modules.RumusanPrioritasMitra.Infrastructure.PublicApi
 {
-    internal sealed class RumusanPrioritasMitraApi(ISender sender) : IRumusanPrioritasMitraApi
+    public sealed class RumusanPrioritasMitraApi(ISender sender) : IRumusanPrioritasMitraApi
     {
         public async Task<RumusanPrioritasMitraResponseApi?> GetAsync(Guid RumusanPrioritasMitraUuid, CancellationToken cancellationToken = default)
         {

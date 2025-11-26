@@ -14,10 +14,9 @@ using UnpakSipaksi.Modules.Satuan.Application.DeleteSatuan;
 using UnpakSipaksi.Modules.Satuan.Application.GetAllSatuan;
 using UnpakSipaksi.Modules.Satuan.Application.GetSatuan;
 using UnpakSipaksi.Modules.Satuan.Application.UpdateSatuan;
-using UnpakSipaksi.Modules.Satuan.ApplicationTest;
 using Xunit;
 
-namespace Application.Integration.Tests
+namespace UnpakSipaksi.Modules.Satuan.ApplicationTest
 {
     public class SatuanTest : BaseIntegrationTest
     {

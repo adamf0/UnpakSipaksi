@@ -19,11 +19,10 @@ using UnpakSipaksi.Modules.KategoriLuaran.Application.DeleteKategoriLuaran;
 using UnpakSipaksi.Modules.KategoriLuaran.Application.GetAllKategoriLuaran;
 using UnpakSipaksi.Modules.KategoriLuaran.Application.GetKategoriLuaran;
 using UnpakSipaksi.Modules.KategoriLuaran.Application.UpdateKategoriLuaran;
-using UnpakSipaksi.Modules.KategoriLuaran.ApplicationTest;
 using UnpakSipaksi.Modules.KategoriLuaran.Domain.Kategori;
 using Xunit;
 
-namespace Application.Integration.Tests
+namespace UnpakSipaksi.Modules.KategoriLuaran.ApplicationTest
 {
     public class KategoriLuaranTest : BaseIntegrationTest
     {
@@ -400,7 +399,7 @@ namespace Application.Integration.Tests
                     It.IsAny<object>(),
                     It.IsAny<IDbTransaction>(),
                     It.IsAny<int?>(),
-                    It.IsAny<System.Data.CommandType?>()
+                    It.IsAny<CommandType?>()
                 )
             ).ReturnsAsync(fakeDataList);
 
@@ -432,7 +431,7 @@ namespace Application.Integration.Tests
                     It.IsAny<object>(),
                     It.IsAny<IDbTransaction>(),
                     It.IsAny<int?>(),
-                    It.IsAny<System.Data.CommandType?>()
+                    It.IsAny<CommandType?>()
                 )
             ).ReturnsAsync(new List<KategoriLuaranResponse>());
 
@@ -473,7 +472,7 @@ namespace Application.Integration.Tests
                     It.IsAny<object>(),
                     It.IsAny<IDbTransaction>(),
                     It.IsAny<int?>(),
-                    It.IsAny<System.Data.CommandType?>()
+                    It.IsAny<CommandType?>()
                 )
             ).ReturnsAsync(fakeData);
 
@@ -504,7 +503,7 @@ namespace Application.Integration.Tests
                     It.IsAny<object>(),
                     It.IsAny<IDbTransaction>(),
                     It.IsAny<int?>(),
-                    It.IsAny<System.Data.CommandType?>()
+                    It.IsAny<CommandType?>()
                 )
             ).ReturnsAsync((KategoriLuaranDefaultResponse?)null);
 
@@ -543,7 +542,7 @@ namespace Application.Integration.Tests
                     It.IsAny<object>(),
                     It.IsAny<IDbTransaction>(),
                     It.IsAny<int?>(),
-                    It.IsAny<System.Data.CommandType?>()
+                    It.IsAny<CommandType?>()
                 )
             ).ReturnsAsync(fakeData);
 
@@ -574,7 +573,7 @@ namespace Application.Integration.Tests
                     It.IsAny<object>(),
                     It.IsAny<IDbTransaction>(),
                     It.IsAny<int?>(),
-                    It.IsAny<System.Data.CommandType?>()
+                    It.IsAny<CommandType?>()
                 )
             ).ReturnsAsync((KategoriLuaranResponse?)null);
 

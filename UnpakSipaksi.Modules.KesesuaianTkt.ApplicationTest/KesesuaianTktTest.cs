@@ -13,13 +13,12 @@ using UnpakSipaksi.Modules.KesesuaianTkt.Application.GetAllKesesuaianTkt;
 using UnpakSipaksi.Modules.KesesuaianTkt.Application.GetBobotKesesuaianTkt;
 using UnpakSipaksi.Modules.KesesuaianTkt.Application.GetKesesuaianTkt;
 using UnpakSipaksi.Modules.KesesuaianTkt.Application.UpdateKesesuaianTkt;
-using UnpakSipaksi.Modules.KesesuaianTkt.ApplicationTest;
 using Xunit;
 using Moq;
 using Moq.Dapper;
 using Dapper;
 
-namespace Application.Integration.Tests
+namespace UnpakSipaksi.Modules.KesesuaianTkt.ApplicationTest
 {
     public class KesesuaianTktTest : BaseIntegrationTest
     {

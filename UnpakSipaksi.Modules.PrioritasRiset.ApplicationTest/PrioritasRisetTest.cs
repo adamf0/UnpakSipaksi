@@ -14,10 +14,9 @@ using UnpakSipaksi.Modules.PrioritasRiset.Application.DeletePrioritasRiset;
 using UnpakSipaksi.Modules.PrioritasRiset.Application.GetAllPrioritasRiset;
 using UnpakSipaksi.Modules.PrioritasRiset.Application.GetPrioritasRiset;
 using UnpakSipaksi.Modules.PrioritasRiset.Application.UpdatePrioritasRiset;
-using UnpakSipaksi.Modules.PrioritasRiset.ApplicationTest;
 using Xunit;
 
-namespace Application.Integration.Tests
+namespace UnpakSipaksi.Modules.PrioritasRiset.ApplicationTest
 {
     public class PrioritasRisetTest : BaseIntegrationTest
     {

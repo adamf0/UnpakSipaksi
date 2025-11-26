@@ -9,7 +9,7 @@ using UnpakSipaksi.Modules.SotaKebaharuan.Application.GetBobotSotaKebaharuan;
 
 namespace UnpakSipaksi.Modules.SotaKebaharuan.Infrastructure.PublicApi
 {
-    internal sealed class SotaKebaharuanApi(ISender sender) : ISotaKebaharuanApi
+    public sealed class SotaKebaharuanApi(ISender sender) : ISotaKebaharuanApi
     {
         public async Task<SotaKebaharuanResponseApi?> GetAsync(Guid SotaKebaharuanUuid, CancellationToken cancellationToken = default)
         {

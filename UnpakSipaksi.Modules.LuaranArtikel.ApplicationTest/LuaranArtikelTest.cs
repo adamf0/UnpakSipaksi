@@ -10,7 +10,6 @@ using UnpakSipaksi.Common.Domain;
 using UnpakSipaksi.Modules.LuaranArtikel.Application.CreateLuaranArtikel;
 using UnpakSipaksi.Modules.LuaranArtikel.Application.DeleteLuaranArtikel;
 using UnpakSipaksi.Modules.LuaranArtikel.Application.UpdateLuaranArtikel;
-using UnpakSipaksi.Modules.LuaranArtikel.ApplicationTest;
 using UnpakSipaksi.Modules.LuaranArtikel.Application.GetAllLuaranArtikel;
 using UnpakSipaksi.Modules.LuaranArtikel.Application.GetBobotLuaranArtikel;
 using UnpakSipaksi.Modules.LuaranArtikel.Application.GetLuaranArtikel;
@@ -19,7 +18,7 @@ using Xunit;
 using Moq.Dapper;
 using Dapper;
 
-namespace Application.Integration.Tests
+namespace UnpakSipaksi.Modules.LuaranArtikel.ApplicationTest
 {
     public class LuaranArtikelTest : BaseIntegrationTest
     {

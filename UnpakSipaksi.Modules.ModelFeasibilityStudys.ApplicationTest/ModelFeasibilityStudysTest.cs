@@ -15,10 +15,9 @@ using UnpakSipaksi.Modules.ModelFeasibilityStudys.Application.GetAllModelFeasibi
 using UnpakSipaksi.Modules.ModelFeasibilityStudys.Application.GetBobotModelFeasibilityStudys;
 using UnpakSipaksi.Modules.ModelFeasibilityStudys.Application.GetModelFeasibilityStudys;
 using UnpakSipaksi.Modules.ModelFeasibilityStudys.Application.UpdateModelFeasibilityStudys;
-using UnpakSipaksi.Modules.ModelFeasibilityStudys.ApplicationTest;
 using Xunit;
 
-namespace Application.Integration.Tests
+namespace UnpakSipaksi.Modules.ModelFeasibilityStudys.ApplicationTest
 {
     public class ModelFeasibilityStudysTest : BaseIntegrationTest
     {

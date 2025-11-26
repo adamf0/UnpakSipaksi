@@ -12,10 +12,9 @@ using UnpakSipaksi.Modules.KejelasanPembagianTugasTim.Application.GetAllKejelasa
 using UnpakSipaksi.Modules.KejelasanPembagianTugasTim.Application.GetBobotKejelasanPembagianTugasTim;
 using UnpakSipaksi.Modules.KejelasanPembagianTugasTim.Application.GetKejelasanPembagianTugasTim;
 using UnpakSipaksi.Modules.KejelasanPembagianTugasTim.Application.UpdateKejelasanPembagianTugasTim;
-using UnpakSipaksi.Modules.KejelasanPembagianTugasTim.ApplicationTest;
 using Xunit;
 
-namespace Application.Integration.Tests
+namespace UnpakSipaksi.Modules.KejelasanPembagianTugasTim.ApplicationTest
 {
     public class KejelasanPembagianTugasTimTest : BaseIntegrationTest
     {

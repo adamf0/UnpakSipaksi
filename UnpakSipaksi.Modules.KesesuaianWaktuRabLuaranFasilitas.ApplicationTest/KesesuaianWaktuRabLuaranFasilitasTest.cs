@@ -12,10 +12,9 @@ using UnpakSipaksi.Modules.KesesuaianWaktuRabLuaranFasilitas.Application.GetKese
 using UnpakSipaksi.Modules.KesesuaianWaktuRabLuaranFasilitas.Application.CreateKesesuaianWaktuRabLuaranFasilitas;
 using UnpakSipaksi.Modules.KesesuaianWaktuRabLuaranFasilitas.Application.DeleteKesesuaianWaktuRabLuaranFasilitas;
 using UnpakSipaksi.Modules.KesesuaianWaktuRabLuaranFasilitas.Application.UpdateKesesuaianWaktuRabLuaranFasilitas;
-using UnpakSipaksi.Modules.KesesuaianWaktuRabLuaranFasilitas.ApplicationTest;
 using Xunit;
 
-namespace Application.Integration.Tests
+namespace UnpakSipaksi.Modules.KesesuaianWaktuRabLuaranFasilitas.ApplicationTest
 {
     public class KesesuaianWaktuRabLuaranFasilitasTest : BaseIntegrationTest
     {

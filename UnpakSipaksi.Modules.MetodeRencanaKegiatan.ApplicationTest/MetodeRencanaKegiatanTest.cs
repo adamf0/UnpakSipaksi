@@ -16,10 +16,9 @@ using UnpakSipaksi.Modules.MetodeRencanaKegiatan.Domain.MetodeRencanaKegiatan;
 using UnpakSipaksi.Modules.MetodeRencanaKegiatan.Application.CreateMetodeRencanaKegiatan;
 using UnpakSipaksi.Modules.MetodeRencanaKegiatan.Application.DeleteMetodeRencanaKegiatan;
 using UnpakSipaksi.Modules.MetodeRencanaKegiatan.Application.UpdateMetodeRencanaKegiatan;
-using UnpakSipaksi.Modules.MetodeRencanaKegiatan.ApplicationTest;
 using Xunit;
 
-namespace Application.Integration.Tests
+namespace UnpakSipaksi.Modules.MetodeRencanaKegiatan.ApplicationTest
 {
     public class MetodeRencanaKegiatanTest : BaseIntegrationTest
     {

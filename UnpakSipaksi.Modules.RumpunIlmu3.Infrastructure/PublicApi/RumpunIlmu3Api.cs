@@ -12,7 +12,7 @@ using UnpakSipaksi.Modules.RumpunIlmu3.Application.GetRumpunIlmu3;
 
 namespace UnpakSipaksi.Modules.RumpunIlmu3.Infrastructure.PublicApi
 {
-    internal sealed class RumpunIlmu3Api(ISender sender) : IRumpunIlmu3Api
+    public sealed class RumpunIlmu3Api(ISender sender) : IRumpunIlmu3Api
     {
         public async Task<RumpunIlmu3ResponseApi?> GetAsync(Guid RumpunIlmu3Uuid, CancellationToken cancellationToken = default)
         {

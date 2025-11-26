@@ -3,7 +3,7 @@ using Microsoft.Extensions.DependencyInjection;
 using UnpakSipaksi.Modules.JenisPublikasi.Infrastructure.Database;
 using Xunit;
 
-namespace UnpakSipaksi.Modules.JenisPublikasi.ApplicationtTest
+namespace UnpakSipaksi.Modules.JenisPublikasi.ApplicationTest
 {
     public abstract class BaseIntegrationTest : IClassFixture<IntegrationTestWebAppFactory>, IDisposable
     {

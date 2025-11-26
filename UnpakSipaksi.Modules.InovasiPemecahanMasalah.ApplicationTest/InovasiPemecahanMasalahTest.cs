@@ -13,10 +13,9 @@ using UnpakSipaksi.Modules.InovasiPemecahanMasalah.Application.GetAllInovasiPeme
 using UnpakSipaksi.Modules.InovasiPemecahanMasalah.Application.CreateInovasiPemecahanMasalah;
 using UnpakSipaksi.Modules.InovasiPemecahanMasalah.Application.DeleteInovasiPemecahanMasalah;
 using UnpakSipaksi.Modules.InovasiPemecahanMasalah.Application.UpdateInovasiPemecahanMasalah;
-using UnpakSipaksi.Modules.InovasiPemecahanMasalah.ApplicationTest;
 using Xunit;
 
-namespace Application.Integration.Tests
+namespace UnpakSipaksi.Modules.InovasiPemecahanMasalah.ApplicationTest
 {
     public class InovasiPemecahanMasalahTest : BaseIntegrationTest
     {

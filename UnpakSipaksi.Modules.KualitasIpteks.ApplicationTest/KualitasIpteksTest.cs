@@ -12,11 +12,10 @@ using UnpakSipaksi.Modules.KualitasIpteks.Application.GetAllKualitasIpteks;
 using UnpakSipaksi.Modules.KualitasIpteks.Application.GetBobotKualitasIpteks;
 using UnpakSipaksi.Modules.KualitasIpteks.Application.GetKualitasIpteks;
 using UnpakSipaksi.Modules.KualitasIpteks.Application.UpdateKualitasIpteks;
-using UnpakSipaksi.Modules.KualitasIpteks.ApplicationTest;
 using UnpakSipaksi.Modules.KualitasIpteks.Domain.KualitasIpteks;
 using Xunit;
 
-namespace Application.Integration.Tests
+namespace UnpakSipaksi.Modules.KualitasIpteks.ApplicationTest
 {
     public class KualitasIpteksTest : BaseIntegrationTest
     {

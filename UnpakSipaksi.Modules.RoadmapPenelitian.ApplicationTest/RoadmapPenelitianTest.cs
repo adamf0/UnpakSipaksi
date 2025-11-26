@@ -15,10 +15,9 @@ using UnpakSipaksi.Modules.RoadmapPenelitian.Application.GetAllRoadmapPenelitian
 using UnpakSipaksi.Modules.RoadmapPenelitian.Application.GetBobotRoadmapPenelitian;
 using UnpakSipaksi.Modules.RoadmapPenelitian.Application.GetRoadmapPenelitian;
 using UnpakSipaksi.Modules.RoadmapPenelitian.Application.UpdateRoadmapPenelitian;
-using UnpakSipaksi.Modules.RoadmapPenelitian.ApplicationTest;
 using Xunit;
 
-namespace Application.Integration.Tests
+namespace UnpakSipaksi.Modules.RoadmapPenelitian.ApplicationTest
 {
     public class RoadmapPenelitianTest : BaseIntegrationTest
     {

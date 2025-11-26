@@ -13,10 +13,9 @@ using UnpakSipaksi.Modules.VideoKegiatan.Domain.VideoKegiatan;
 using UnpakSipaksi.Modules.VideoKegiatan.Application.CreateVideoKegiatan;
 using UnpakSipaksi.Modules.VideoKegiatan.Application.DeleteVideoKegiatan;
 using UnpakSipaksi.Modules.VideoKegiatan.Application.UpdateVideoKegiatan;
-using UnpakSipaksi.Modules.VideoKegiatan.ApplicationTest;
 using Xunit;
 
-namespace Application.Integration.Tests
+namespace UnpakSipaksi.Modules.VideoKegiatan.ApplicationTest
 {
     public class VideoKegiatanTest : BaseIntegrationTest
     {

@@ -11,10 +11,9 @@ using UnpakSipaksi.Modules.ArtikelMediaMassa.Application.DeleteArtikelMediaMassa
 using UnpakSipaksi.Modules.ArtikelMediaMassa.Application.GetAllArtikelMediaMassa;
 using UnpakSipaksi.Modules.ArtikelMediaMassa.Application.GetArtikelMediaMassa;
 using UnpakSipaksi.Modules.ArtikelMediaMassa.Application.UpdateArtikelMediaMassa;
-using UnpakSipaksi.Modules.ArtikelMediaMassa.ApplicationTest;
 using Xunit;
 
-namespace Application.Integration.Tests
+namespace UnpakSipaksi.Modules.ArtikelMediaMassa.ApplicationTest
 {
     public class ArtikelMediaMassaTest : BaseIntegrationTest
     {

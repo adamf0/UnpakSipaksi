@@ -12,10 +12,9 @@ using UnpakSipaksi.Modules.AuthorSinta.Application.DeleteAuthorSinta;
 using UnpakSipaksi.Modules.AuthorSinta.Application.GetAllAuthorSinta;
 using UnpakSipaksi.Modules.AuthorSinta.Application.GetAuthorSinta;
 using UnpakSipaksi.Modules.AuthorSinta.Application.UpdateAuthorSinta;
-using UnpakSipaksi.Modules.AuthorSinta.ApplicationTest;
 using Xunit;
 
-namespace Application.Integration.Tests
+namespace UnpakSipaksi.Modules.AuthorSinta.ApplicationTest
 {
     public class AuthorSintaTest : BaseIntegrationTest
     {

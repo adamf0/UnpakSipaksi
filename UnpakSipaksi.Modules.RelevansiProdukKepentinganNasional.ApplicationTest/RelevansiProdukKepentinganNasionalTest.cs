@@ -15,10 +15,9 @@ using UnpakSipaksi.Modules.RelevansiProdukKepentinganNasional.Application.GetAll
 using UnpakSipaksi.Modules.RelevansiProdukKepentinganNasional.Application.GetBobotRelevansiProdukKepentinganNasional;
 using UnpakSipaksi.Modules.RelevansiProdukKepentinganNasional.Application.GetRelevansiProdukKepentinganNasional;
 using UnpakSipaksi.Modules.RelevansiProdukKepentinganNasional.Application.UpdateRelevansiProdukKepentinganNasional;
-using UnpakSipaksi.Modules.RelevansiProdukKepentinganNasional.ApplicationTest;
 using Xunit;
 
-namespace Application.Integration.Tests
+namespace UnpakSipaksi.Modules.RelevansiProdukKepentinganNasional.ApplicationTest
 {
     public class RelevansiProdukKepentinganNasionalTest : BaseIntegrationTest
     {

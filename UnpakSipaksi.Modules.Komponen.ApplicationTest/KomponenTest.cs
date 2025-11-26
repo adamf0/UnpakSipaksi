@@ -14,11 +14,10 @@ using UnpakSipaksi.Modules.Komponen.Application.DeleteKomponen;
 using UnpakSipaksi.Modules.Komponen.Application.GetAllKomponen;
 using UnpakSipaksi.Modules.Komponen.Application.GetKomponen;
 using UnpakSipaksi.Modules.Komponen.Application.UpdateKomponen;
-using UnpakSipaksi.Modules.Komponen.ApplicationTest;
 using UnpakSipaksi.Modules.Komponen.Domain.Komponen;
 using Xunit;
 
-namespace Application.Integration.Tests
+namespace UnpakSipaksi.Modules.Komponen.ApplicationTest
 {
     public class KomponenTest : BaseIntegrationTest
     {

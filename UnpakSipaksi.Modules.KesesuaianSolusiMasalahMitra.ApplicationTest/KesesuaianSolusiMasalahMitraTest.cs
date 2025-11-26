@@ -16,10 +16,9 @@ using UnpakSipaksi.Modules.KesesuaianSolusiMasalahMitra.Domain.KesesuaianSolusiM
 using UnpakSipaksi.Modules.KesesuaianSolusiMasalahMitra.Application.CreateKesesuaianSolusiMasalahMitra;
 using UnpakSipaksi.Modules.KesesuaianSolusiMasalahMitra.Application.DeleteKesesuaianSolusiMasalahMitra;
 using UnpakSipaksi.Modules.KesesuaianSolusiMasalahMitra.Application.UpdateKesesuaianSolusiMasalahMitra;
-using UnpakSipaksi.Modules.KesesuaianSolusiMasalahMitra.ApplicationTest;
 using Xunit;
 
-namespace Application.Integration.Tests
+namespace UnpakSipaksi.Modules.KesesuaianSolusiMasalahMitra.ApplicationTest
 {
     public class KesesuaianSolusiMasalahMitraTest : BaseIntegrationTest
     {

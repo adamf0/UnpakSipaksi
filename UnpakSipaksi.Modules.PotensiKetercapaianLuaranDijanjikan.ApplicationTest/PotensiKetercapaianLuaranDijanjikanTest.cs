@@ -15,10 +15,9 @@ using UnpakSipaksi.Modules.PotensiKetercapaianLuaranDijanjikan.Application.GetAl
 using UnpakSipaksi.Modules.PotensiKetercapaianLuaranDijanjikan.Application.GetBobotPotensiKetercapaianLuaranDijanjikan;
 using UnpakSipaksi.Modules.PotensiKetercapaianLuaranDijanjikan.Application.GetPotensiKetercapaianLuaranDijanjikan;
 using UnpakSipaksi.Modules.PotensiKetercapaianLuaranDijanjikan.Application.UpdatePotensiKetercapaianLuaranDijanjikan;
-using UnpakSipaksi.Modules.PotensiKetercapaianLuaranDijanjikan.ApplicationTest;
 using Xunit;
 
-namespace Application.Integration.Tests
+namespace UnpakSipaksi.Modules.PotensiKetercapaianLuaranDijanjikan.ApplicationTest
 {
     public class PotensiKetercapaianLuaranDijanjikanTest : BaseIntegrationTest
     {

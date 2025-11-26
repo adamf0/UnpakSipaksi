@@ -16,10 +16,9 @@ using UnpakSipaksi.Modules.KuantitasStatusKi.Domain.KuantitasStatusKi;
 using UnpakSipaksi.Modules.KuantitasStatusKi.Application.CreateKuantitasStatusKi;
 using UnpakSipaksi.Modules.KuantitasStatusKi.Application.DeleteKuantitasStatusKi;
 using UnpakSipaksi.Modules.KuantitasStatusKi.Application.UpdateKuantitasStatusKi;
-using UnpakSipaksi.Modules.KuantitasStatusKi.ApplicationTest;
 using Xunit;
 
-namespace Application.Integration.Tests
+namespace UnpakSipaksi.Modules.KuantitasStatusKi.ApplicationTest
 {
     public class KuantitasStatusKiTest : BaseIntegrationTest
     {

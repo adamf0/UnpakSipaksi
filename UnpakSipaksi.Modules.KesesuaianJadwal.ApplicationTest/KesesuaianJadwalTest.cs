@@ -14,11 +14,10 @@ using UnpakSipaksi.Modules.KesesuaianJadwal.Application.GetAllKesesuaianJadwal;
 using UnpakSipaksi.Modules.KesesuaianJadwal.Application.GetBobotKesesuaianJadwal;
 using UnpakSipaksi.Modules.KesesuaianJadwal.Application.GetKesesuaianJadwal;
 using UnpakSipaksi.Modules.KesesuaianJadwal.Application.UpdateKesesuaianJadwal;
-using UnpakSipaksi.Modules.KesesuaianJadwal.ApplicationTest;
 using UnpakSipaksi.Modules.KesesuaianJadwal.Domain.KesesuaianJadwal;
 using Xunit;
 
-namespace Application.Integration.Tests
+namespace UnpakSipaksi.Modules.KesesuaianJadwal.ApplicationTest
 {
     public class KesesuaianJadwalTest : BaseIntegrationTest
     {

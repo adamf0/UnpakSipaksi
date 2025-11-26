@@ -14,10 +14,9 @@ using UnpakSipaksi.Modules.Rirn.Application.DeleteRirn;
 using UnpakSipaksi.Modules.Rirn.Application.GetAllRirn;
 using UnpakSipaksi.Modules.Rirn.Application.GetRirn;
 using UnpakSipaksi.Modules.Rirn.Application.UpdateRirn;
-using UnpakSipaksi.Modules.Rirn.ApplicationTest;
 using Xunit;
 
-namespace Application.Integration.Tests
+namespace UnpakSipaksi.Modules.Rirn.ApplicationTest
 {
     public class RirnTest : BaseIntegrationTest
     {

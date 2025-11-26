@@ -16,11 +16,10 @@ using UnpakSipaksi.Modules.KesesuaianPenugasan.Application.GetAllKesesuaianPenug
 using UnpakSipaksi.Modules.KesesuaianPenugasan.Application.GetBobotKesesuaianPenugasan;
 using UnpakSipaksi.Modules.KesesuaianPenugasan.Application.GetKesesuaianPenugasan;
 using UnpakSipaksi.Modules.KesesuaianPenugasan.Application.UpdateKesesuaianPenugasan;
-using UnpakSipaksi.Modules.KesesuaianPenugasan.ApplicationTest;
 using UnpakSipaksi.Modules.KesesuaianPenugasan.Domain.KesesuaianPenugasan;
 using Xunit;
 
-namespace Application.Integration.Tests
+namespace UnpakSipaksi.Modules.KesesuaianPenugasan.ApplicationTest
 {
     public class KesesuaianPenugasanTest : BaseIntegrationTest
     {

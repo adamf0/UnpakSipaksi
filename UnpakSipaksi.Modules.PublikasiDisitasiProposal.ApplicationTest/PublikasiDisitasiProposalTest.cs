@@ -15,10 +15,9 @@ using UnpakSipaksi.Modules.PublikasiDisitasiProposal.Application.GetAllPublikasi
 using UnpakSipaksi.Modules.PublikasiDisitasiProposal.Application.GetBobotPublikasiDisitasiProposal;
 using UnpakSipaksi.Modules.PublikasiDisitasiProposal.Application.GetPublikasiDisitasiProposal;
 using UnpakSipaksi.Modules.PublikasiDisitasiProposal.Application.UpdatePublikasiDisitasiProposal;
-using UnpakSipaksi.Modules.PublikasiDisitasiProposal.ApplicationTest;
 using Xunit;
 
-namespace Application.Integration.Tests
+namespace UnpakSipaksi.Modules.PublikasiDisitasiProposal.ApplicationTest
 {
     public class PublikasiDisitasiProposalTest : BaseIntegrationTest
     {

@@ -14,10 +14,9 @@ using UnpakSipaksi.Modules.Pengumuman.Application.DeletePengumuman;
 using UnpakSipaksi.Modules.Pengumuman.Application.GetAllPengumuman;
 using UnpakSipaksi.Modules.Pengumuman.Application.GetPengumuman;
 using UnpakSipaksi.Modules.Pengumuman.Application.UpdatePengumuman;
-using UnpakSipaksi.Modules.Pengumuman.ApplicationTest;
 using Xunit;
 
-namespace Application.Integration.Tests
+namespace UnpakSipaksi.Modules.Pengumuman.ApplicationTest
 {
     public class PengumumanTest : BaseIntegrationTest
     {

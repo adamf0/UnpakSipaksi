@@ -15,11 +15,10 @@ using UnpakSipaksi.Modules.KualitasKuantitasPublikasiProsiding.Application.GetAl
 using UnpakSipaksi.Modules.KualitasKuantitasPublikasiProsiding.Application.GetBobotKualitasKuantitasPublikasiProsiding;
 using UnpakSipaksi.Modules.KualitasKuantitasPublikasiProsiding.Application.GetKualitasKuantitasPublikasiProsiding;
 using UnpakSipaksi.Modules.KualitasKuantitasPublikasiProsiding.Application.UpdateKualitasKuantitasPublikasiProsiding;
-using UnpakSipaksi.Modules.KualitasKuantitasPublikasiProsiding.ApplicationTest;
 using UnpakSipaksi.Modules.KualitasKuantitasPublikasiProsiding.Domain.KualitasKuantitasPublikasiProsiding;
 using Xunit;
 
-namespace Application.Integration.Tests
+namespace UnpakSipaksi.Modules.KualitasKuantitasPublikasiProsiding.ApplicationTest
 {
     public class KualitasKuantitasPublikasiProsidingTest : BaseIntegrationTest
     {

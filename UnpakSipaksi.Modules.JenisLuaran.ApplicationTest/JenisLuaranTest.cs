@@ -11,10 +11,9 @@ using UnpakSipaksi.Modules.JenisLuaran.Application.DeleteJenisLuaran;
 using UnpakSipaksi.Modules.JenisLuaran.Application.GetAllJenisLuaran;
 using UnpakSipaksi.Modules.JenisLuaran.Application.GetJenisLuaran;
 using UnpakSipaksi.Modules.JenisLuaran.Application.UpdateJenisLuaran;
-using UnpakSipaksi.Modules.JenisLuaran.ApplicationTest;
 using Xunit;
 
-namespace Application.Integration.Tests
+namespace UnpakSipaksi.Modules.JenisLuaran.ApplicationTest
 {
     public class JenisLuaranTest : BaseIntegrationTest
     {

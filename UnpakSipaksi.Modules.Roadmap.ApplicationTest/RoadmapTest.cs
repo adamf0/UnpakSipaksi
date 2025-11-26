@@ -12,10 +12,9 @@ using UnpakSipaksi.Common.Domain;
 using UnpakSipaksi.Modules.Roadmap.Application.CreateRoadmap;
 using UnpakSipaksi.Modules.Roadmap.Application.GetAllRoadmap;
 using UnpakSipaksi.Modules.Roadmap.Application.GetRoadmap;
-using UnpakSipaksi.Modules.Roadmap.ApplicationTest;
 using Xunit;
 
-namespace Application.Integration.Tests
+namespace UnpakSipaksi.Modules.Roadmap.ApplicationTest
 {
     public class RoadmapTest : BaseIntegrationTest
     {

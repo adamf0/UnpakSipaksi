@@ -12,10 +12,9 @@ using UnpakSipaksi.Modules.KredibilitasMitraDukungan.Application.GetKredibilitas
 using UnpakSipaksi.Modules.KredibilitasMitraDukungan.Application.CreateKredibilitasMitraDukungan;
 using UnpakSipaksi.Modules.KredibilitasMitraDukungan.Application.DeleteKredibilitasMitraDukungan;
 using UnpakSipaksi.Modules.KredibilitasMitraDukungan.Application.UpdateKredibilitasMitraDukungan;
-using UnpakSipaksi.Modules.KredibilitasMitraDukungan.ApplicationTest;
 using Xunit;
 
-namespace Application.Integration.Tests
+namespace UnpakSipaksi.Modules.KredibilitasMitraDukungan.ApplicationTest
 {
     public class KredibilitasMitraDukunganTest : BaseIntegrationTest
     {

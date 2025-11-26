@@ -16,10 +16,9 @@ using UnpakSipaksi.Modules.PeningkatanKeberdayaanMitra.Domain.PeningkatanKeberda
 using UnpakSipaksi.Modules.PeningkatanKeberdayaanMitra.Application.CreatePeningkatanKeberdayaanMitra;
 using UnpakSipaksi.Modules.PeningkatanKeberdayaanMitra.Application.DeletePeningkatanKeberdayaanMitra;
 using UnpakSipaksi.Modules.PeningkatanKeberdayaanMitra.Application.UpdatePeningkatanKeberdayaanMitra;
-using UnpakSipaksi.Modules.PeningkatanKeberdayaanMitra.ApplicationTest;
 using Xunit;
 
-namespace Application.Integration.Tests
+namespace UnpakSipaksi.Modules.PeningkatanKeberdayaanMitra.ApplicationTest
 {
     public class PeningkatanKeberdayaanMitraTest : BaseIntegrationTest
     {
