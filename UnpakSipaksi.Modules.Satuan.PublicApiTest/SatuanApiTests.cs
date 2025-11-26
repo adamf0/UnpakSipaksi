@@ -43,7 +43,7 @@ namespace UnpakSipaksi.Modules.Satuan.Tests.PublicApiTest
             Assert.NotNull(result);
             Assert.Equal("10", result.Id);
             Assert.Equal(uuid.ToString(), result.Uuid);
-            Assert.Equal("Satuan X", result.Nama);
+            Assert.Equal("Satuan A", result.Nama);
         }
 
         [Fact]
