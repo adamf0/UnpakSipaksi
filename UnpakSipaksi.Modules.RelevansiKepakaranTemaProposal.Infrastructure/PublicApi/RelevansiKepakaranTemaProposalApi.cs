@@ -8,7 +8,7 @@ using UnpakSipaksi.Modules.RelevansiKepakaranTemaProposal.Application.GetBobotRe
 
 namespace UnpakSipaksi.Modules.RelevansiKepakaranTemaProposal.Infrastructure.PublicApi
 {
-    internal sealed class RelevansiKepakaranTemaProposalApi(ISender sender) : IRelevansiKepakaranTemaProposalApi
+    public sealed class RelevansiKepakaranTemaProposalApi(ISender sender) : IRelevansiKepakaranTemaProposalApi
     {
         public async Task<RelevansiKepakaranTemaProposalResponseApi?> GetAsync(Guid RelevansiKepakaranTemaProposalUuid, CancellationToken cancellationToken = default)
         {

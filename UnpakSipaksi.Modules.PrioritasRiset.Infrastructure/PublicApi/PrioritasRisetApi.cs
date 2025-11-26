@@ -7,7 +7,7 @@ using UnpakSipaksi.Modules.PrioritasRiset.Application.GetPrioritasRiset;
 
 namespace UnpakSipaksi.Modules.PrioritasRiset.Infrastructure.PublicApi
 {
-    internal sealed class PrioritasRisetApi(ISender sender) : IPrioritasRisetApi
+    public sealed class PrioritasRisetApi(ISender sender) : IPrioritasRisetApi
     {
         public async Task<PrioritasRisetResponseApi?> GetAsync(Guid PrioritasRisetUuid, CancellationToken cancellationToken = default)
         {

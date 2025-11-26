@@ -8,7 +8,7 @@ using UnpakSipaksi.Modules.RelevansiKualitasReferensi.Application.GetBobotReleva
 
 namespace UnpakSipaksi.Modules.RelevansiKualitasReferensi.Infrastructure.PublicApi
 {
-    internal sealed class RelevansiKualitasReferensiApi(ISender sender) : IRelevansiKualitasReferensiApi
+    public sealed class RelevansiKualitasReferensiApi(ISender sender) : IRelevansiKualitasReferensiApi
     {
         public async Task<RelevansiKualitasReferensiResponseApi?> GetAsync(Guid RelevansiKualitasReferensiUuid, CancellationToken cancellationToken = default)
         {

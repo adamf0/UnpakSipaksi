@@ -9,7 +9,7 @@ using UnpakSipaksi.Modules.MetodeRencanaKegiatan.Application.GetBobotMetodeRenca
 
 namespace UnpakSipaksi.Modules.MetodeRencanaKegiatan.Infrastructure.PublicApi
 {
-    internal sealed class MetodeRencanaKegiatanApi(ISender sender) : IMetodeRencanaKegiatanApi
+    public sealed class MetodeRencanaKegiatanApi(ISender sender) : IMetodeRencanaKegiatanApi
     {
         public async Task<MetodeRencanaKegiatanResponseApi?> GetAsync(Guid MetodeRencanaKegiatanUuid, CancellationToken cancellationToken = default)
         {

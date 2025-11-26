@@ -8,7 +8,7 @@ using UnpakSipaksi.Modules.ModelFeasibilityStudys.Application.GetBobotModelFeasi
 
 namespace UnpakSipaksi.Modules.ModelFeasibilityStudys.Infrastructure.PublicApi
 {
-    internal sealed class ModelFeasibilityStudysApi(ISender sender) : IModelFeasibilityStudysApi
+    public sealed class ModelFeasibilityStudysApi(ISender sender) : IModelFeasibilityStudysApi
     {
         public async Task<ModelFeasibilityStudysResponseApi?> GetAsync(Guid ModelFeasibilityStudysUuid, CancellationToken cancellationToken = default)
         {

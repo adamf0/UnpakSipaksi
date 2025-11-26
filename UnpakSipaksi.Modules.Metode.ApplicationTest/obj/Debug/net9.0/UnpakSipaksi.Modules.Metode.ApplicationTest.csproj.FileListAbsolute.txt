@@ -1182,3 +1182,4 @@ C:\dev_net\UnpakSipaksi\UnpakSipaksi.Modules.Metode.ApplicationTest\obj\Debug\ne
 C:\dev_net\UnpakSipaksi\UnpakSipaksi.Modules.Metode.ApplicationTest\obj\Debug\net9.0\UnpakSipaksi.Modules.Metode.ApplicationTest.pdb
 C:\dev_net\UnpakSipaksi\UnpakSipaksi.Modules.Metode.ApplicationTest\obj\Debug\net9.0\UnpakSipaksi.Modules.Metode.ApplicationTest.genruntimeconfig.cache
 C:\dev_net\UnpakSipaksi\UnpakSipaksi.Modules.Metode.ApplicationTest\obj\Debug\net9.0\ref\UnpakSipaksi.Modules.Metode.ApplicationTest.dll
+C:\dev_net\UnpakSipaksi\UnpakSipaksi.Modules.Metode.ApplicationTest\bin\Debug\net9.0\Moq.Dapper.dll

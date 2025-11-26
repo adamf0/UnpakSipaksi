@@ -8,7 +8,7 @@ using UnpakSipaksi.Modules.RelevansiProdukKepentinganNasional.Application.GetBob
 
 namespace UnpakSipaksi.Modules.RelevansiProdukKepentinganNasional.Infrastructure.PublicApi
 {
-    internal sealed class RelevansiProdukKepentinganNasionalApi(ISender sender) : IRelevansiProdukKepentinganNasionalApi
+    public sealed class RelevansiProdukKepentinganNasionalApi(ISender sender) : IRelevansiProdukKepentinganNasionalApi
     {
         public async Task<RelevansiProdukKepentinganNasionalResponseApi?> GetAsync(Guid RelevansiProdukKepentinganNasionalUuid, CancellationToken cancellationToken = default)
         {

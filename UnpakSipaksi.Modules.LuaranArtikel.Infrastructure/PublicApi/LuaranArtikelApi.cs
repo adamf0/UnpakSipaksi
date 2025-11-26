@@ -8,7 +8,7 @@ using UnpakSipaksi.Modules.LuaranArtikel.Application.GetLuaranArtikel;
 
 namespace UnpakSipaksi.Modules.LuaranArtikel.Infrastructure.PublicApi
 {
-    internal sealed class LuaranArtikelApi(ISender sender) : ILuaranArtikelApi
+    public sealed class LuaranArtikelApi(ISender sender) : ILuaranArtikelApi
     {
         public async Task<LuaranArtikelResponseApi?> GetAsync(Guid LuaranArtikelUuid, CancellationToken cancellationToken = default)
         {

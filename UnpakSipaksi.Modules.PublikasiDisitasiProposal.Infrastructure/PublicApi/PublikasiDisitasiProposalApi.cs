@@ -8,7 +8,7 @@ using UnpakSipaksi.Modules.PublikasiDisitasiProposal.Application.GetPublikasiDis
 
 namespace UnpakSipaksi.Modules.PublikasiDisitasiProposal.Infrastructure.PublicApi
 {
-    internal sealed class PublikasiDisitasiProposalApi(ISender sender) : IPublikasiDisitasiProposalApi
+    public sealed class PublikasiDisitasiProposalApi(ISender sender) : IPublikasiDisitasiProposalApi
     {
         public async Task<PublikasiDisitasiProposalResponseApi?> GetAsync(Guid PublikasiDisitasiProposalUuid, CancellationToken cancellationToken = default)
         {

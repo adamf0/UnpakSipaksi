@@ -8,7 +8,7 @@ using UnpakSipaksi.Modules.PeningkatanKeberdayaanMitra.Application.GetPeningkata
 
 namespace UnpakSipaksi.Modules.PeningkatanKeberdayaanMitra.Infrastructure.PublicApi
 {
-    internal sealed class PeningkatanKeberdayaanMitraApi(ISender sender) : IPeningkatanKeberdayaanMitraApi
+    public sealed class PeningkatanKeberdayaanMitraApi(ISender sender) : IPeningkatanKeberdayaanMitraApi
     {
         public async Task<PeningkatanKeberdayaanMitraResponseApi?> GetAsync(Guid PeningkatanKeberdayaanMitraUuid, CancellationToken cancellationToken = default)
         {

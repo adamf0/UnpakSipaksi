@@ -12,7 +12,7 @@ using UnpakSipaksi.Modules.Rirn.Application.GetRirn;
 
 namespace UnpakSipaksi.Modules.Rirn.Infrastructure.PublicApi
 {
-    internal sealed class RirnApi(ISender sender) : IRirnApi
+    public sealed class RirnApi(ISender sender) : IRirnApi
     {
         public async Task<RirnResponseApi?> GetAsync(Guid RirnUuid, CancellationToken cancellationToken = default)
         {

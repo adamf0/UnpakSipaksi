@@ -15,7 +15,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("UnpakSipaksi.Modules.PenelitianHibah.Application")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+47705f0ed81c0c148c7a61215da52913ee5067c6")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+8ee258e803b6ece71369a47e5fdba915ea4a5e6d")]
 [assembly: System.Reflection.AssemblyProductAttribute("UnpakSipaksi.Modules.PenelitianHibah.Application")]
 [assembly: System.Reflection.AssemblyTitleAttribute("UnpakSipaksi.Modules.PenelitianHibah.Application")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

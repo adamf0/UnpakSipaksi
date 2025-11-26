@@ -8,7 +8,7 @@ using UnpakSipaksi.Modules.PotensiKetercapaianLuaranDijanjikan.Application.GetBo
 
 namespace UnpakSipaksi.Modules.PotensiKetercapaianLuaranDijanjikan.Infrastructure.PublicApi
 {
-    internal sealed class PotensiKetercapaianLuaranDijanjikanApi(ISender sender) : IPotensiKetercapaianLuaranDijanjikanApi
+    public sealed class PotensiKetercapaianLuaranDijanjikanApi(ISender sender) : IPotensiKetercapaianLuaranDijanjikanApi
     {
         public async Task<PotensiKetercapaianLuaranDijanjikanResponseApi?> GetAsync(Guid PotensiKetercapaianLuaranDijanjikanUuid, CancellationToken cancellationToken = default)
         {
