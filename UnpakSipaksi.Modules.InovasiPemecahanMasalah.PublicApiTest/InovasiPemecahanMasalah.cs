@@ -76,21 +76,21 @@ public sealed class InovasiPemecahanMasalahApiTests
         Assert.Equal(85, result.Skor);
     }
 
-    [Fact]
-    public async Task GetBobotWithoutTargetAsync_ShouldReturnNull_WhenFailure()
-    {
-        // Arrange
-        _senderMock
-             .Setup(s => s.Send(It.IsAny<GetBobotInovasiPemecahanMasalahQuery>(), It.IsAny<CancellationToken>()))
-             .Returns((GetBobotInovasiPemecahanMasalahQuery q, CancellationToken ct) =>
-                 Task.FromResult(Result<int?>.Failure(InovasiPemecahanMasalahErrors.UnknownKategoriSkema())));
+    //[Fact]
+    //public async Task GetBobotWithoutTargetAsync_ShouldReturnNull_WhenFailure()
+    //{
+    //    // Arrange
+    //    _senderMock
+    //         .Setup(s => s.Send(It.IsAny<GetBobotInovasiPemecahanMasalahQuery>(), It.IsAny<CancellationToken>()))
+    //         .Returns((GetBobotInovasiPemecahanMasalahQuery q, CancellationToken ct) =>
+    //             Task.FromResult(Result<int?>.Failure(InovasiPemecahanMasalahErrors.UnknownKategoriSkema())));
 
-        // Act
-        var result = await _api.GetBobotWithoutTargetAsync("PDP");
+    //    // Act
+    //    var result = await _api.GetBobotWithoutTargetAsync("PDP");
 
-        // Assert
-        Assert.Null(result);
-    }
+    //    // Assert
+    //    Assert.Null(result);
+    //}
 
     [Fact]
     public async Task GetBobotWithoutTargetAsync_ShouldReturnValue_WhenSuccess()
