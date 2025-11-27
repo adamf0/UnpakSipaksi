@@ -941,7 +941,7 @@ var assemblies = [
       { "name": "UnpakSipaksi.Modules.JumlahKolaboratorPublikasBereputasi.Infrastructure.JumlahKolaboratorPublikasBereputasi.JumlahKolaboratorPublikasBereputasiConfiguration", "rp": "UnpakSipaksi.Modules.JumlahKolaboratorPublikasBerelaboratorPublikasBereputasiConfiguration.html", "cl": 1, "ucl": 0, "cal": 1, "tl": 18, "cb": 0, "tb": 0, "cm": 0, "fcm": 0, "tm": 0, "lch": [], "bch": [], "mch": [], "mfch": [], "hc": [], "metrics": { } },
       { "name": "UnpakSipaksi.Modules.JumlahKolaboratorPublikasBereputasi.Infrastructure.JumlahKolaboratorPublikasBereputasi.JumlahKolaboratorPublikasBereputasiRepository", "rp": "UnpakSipaksi.Modules.JumlahKolaboratorPublikasBerehKolaboratorPublikasBereputasiRepository.html", "cl": 8, "ucl": 0, "cal": 8, "tl": 26, "cb": 0, "tb": 0, "cm": 0, "fcm": 0, "tm": 0, "lch": [], "bch": [], "mch": [], "mfch": [], "hc": [], "metrics": { } },
       { "name": "UnpakSipaksi.Modules.JumlahKolaboratorPublikasBereputasi.Infrastructure.JumlahKolaboratorPublikasBereputasiModule", "rp": "UnpakSipaksi.Modules.JumlahKolaboratorPublikasBereumlahKolaboratorPublikasBereputasiModule.html", "cl": 11, "ucl": 0, "cal": 11, "tl": 53, "cb": 0, "tb": 0, "cm": 0, "fcm": 0, "tm": 0, "lch": [], "bch": [], "mch": [], "mfch": [], "hc": [], "metrics": { } },
-      { "name": "UnpakSipaksi.Modules.JumlahKolaboratorPublikasBereputasi.Infrastructure.PublicApi.JumlahKolaboratorPublikasBereputasiApi", "rp": "UnpakSipaksi.Modules.JumlahKolaboratorPublikasBeree_JumlahKolaboratorPublikasBereputasiApi.html", "cl": 0, "ucl": 20, "cal": 20, "tl": 47, "cb": 0, "tb": 4, "cm": 0, "fcm": 0, "tm": 0, "lch": [], "bch": [], "mch": [], "mfch": [], "hc": [], "metrics": { } },
+      { "name": "UnpakSipaksi.Modules.JumlahKolaboratorPublikasBereputasi.Infrastructure.PublicApi.JumlahKolaboratorPublikasBereputasiApi", "rp": "UnpakSipaksi.Modules.JumlahKolaboratorPublikasBeree_JumlahKolaboratorPublikasBereputasiApi.html", "cl": 20, "ucl": 0, "cal": 20, "tl": 47, "cb": 4, "tb": 4, "cm": 0, "fcm": 0, "tm": 0, "lch": [], "bch": [], "mch": [], "mfch": [], "hc": [], "metrics": { } },
     ]},
   {
     "name": "UnpakSipaksi.Modules.JumlahKolaboratorPublikasBereputasi.Presentation",
@@ -956,7 +956,7 @@ var assemblies = [
   {
     "name": "UnpakSipaksi.Modules.JumlahKolaboratorPublikasBereputasi.PublicApi",
     "classes": [
-      { "name": "UnpakSipaksi.Modules.JumlahKolaboratorPublikasBereputasi.PublicApi.JumlahKolaboratorPublikasBereputasiResponse", "rp": "UnpakSipaksi.Modules.JumlahKolaboratorPublikasBerelahKolaboratorPublikasBereputasiResponse.2.html", "cl": 0, "ucl": 1, "cal": 1, "tl": 10, "cb": 0, "tb": 0, "cm": 0, "fcm": 0, "tm": 0, "lch": [], "bch": [], "mch": [], "mfch": [], "hc": [], "metrics": { } },
+      { "name": "UnpakSipaksi.Modules.JumlahKolaboratorPublikasBereputasi.PublicApi.JumlahKolaboratorPublikasBereputasiResponse", "rp": "UnpakSipaksi.Modules.JumlahKolaboratorPublikasBerelahKolaboratorPublikasBereputasiResponse.2.html", "cl": 1, "ucl": 0, "cal": 1, "tl": 10, "cb": 0, "tb": 0, "cm": 0, "fcm": 0, "tm": 0, "lch": [], "bch": [], "mch": [], "mfch": [], "hc": [], "metrics": { } },
     ]},
   {
     "name": "UnpakSipaksi.Modules.Kategori.Application",
@@ -1359,7 +1359,7 @@ var assemblies = [
       { "name": "UnpakSipaksi.Modules.KebaruanReferensi.Infrastructure.KebaruanReferensi.KebaruanReferensiConfiguration", "rp": "UnpakSipaksi.Modules.KebaruanReferensi.Infrastructure_KebaruanReferensiConfiguration.html", "cl": 1, "ucl": 0, "cal": 1, "tl": 18, "cb": 0, "tb": 0, "cm": 0, "fcm": 0, "tm": 0, "lch": [], "bch": [], "mch": [], "mfch": [], "hc": [], "metrics": { } },
       { "name": "UnpakSipaksi.Modules.KebaruanReferensi.Infrastructure.KebaruanReferensi.KebaruanReferensiRepository", "rp": "UnpakSipaksi.Modules.KebaruanReferensi.Infrastructure_KebaruanReferensiRepository.html", "cl": 8, "ucl": 0, "cal": 8, "tl": 26, "cb": 0, "tb": 0, "cm": 0, "fcm": 0, "tm": 0, "lch": [], "bch": [], "mch": [], "mfch": [], "hc": [], "metrics": { } },
       { "name": "UnpakSipaksi.Modules.KebaruanReferensi.Infrastructure.KebaruanReferensiModule", "rp": "UnpakSipaksi.Modules.KebaruanReferensi.Infrastructure_KebaruanReferensiModule.html", "cl": 11, "ucl": 0, "cal": 11, "tl": 54, "cb": 0, "tb": 0, "cm": 0, "fcm": 0, "tm": 0, "lch": [], "bch": [], "mch": [], "mfch": [], "hc": [], "metrics": { } },
-      { "name": "UnpakSipaksi.Modules.KebaruanReferensi.Infrastructure.PublicApi.KebaruanReferensiApi", "rp": "UnpakSipaksi.Modules.KebaruanReferensi.Infrastructure_KebaruanReferensiApi.html", "cl": 0, "ucl": 20, "cal": 20, "tl": 47, "cb": 0, "tb": 4, "cm": 0, "fcm": 0, "tm": 0, "lch": [], "bch": [], "mch": [], "mfch": [], "hc": [], "metrics": { } },
+      { "name": "UnpakSipaksi.Modules.KebaruanReferensi.Infrastructure.PublicApi.KebaruanReferensiApi", "rp": "UnpakSipaksi.Modules.KebaruanReferensi.Infrastructure_KebaruanReferensiApi.html", "cl": 20, "ucl": 0, "cal": 20, "tl": 47, "cb": 4, "tb": 4, "cm": 0, "fcm": 0, "tm": 0, "lch": [], "bch": [], "mch": [], "mfch": [], "hc": [], "metrics": { } },
     ]},
   {
     "name": "UnpakSipaksi.Modules.KebaruanReferensi.Presentation",
@@ -1415,7 +1415,7 @@ var assemblies = [
       { "name": "UnpakSipaksi.Modules.KejelasanPembagianTugasTim.Infrastructure.KejelasanPembagianTugasTim.KejelasanPembagianTugasTimConfiguration", "rp": "UnpakSipaksi.Modules.KejelasanPembagianTugasTim.In_KejelasanPembagianTugasTimConfiguration.html", "cl": 1, "ucl": 0, "cal": 1, "tl": 18, "cb": 0, "tb": 0, "cm": 0, "fcm": 0, "tm": 0, "lch": [], "bch": [], "mch": [], "mfch": [], "hc": [], "metrics": { } },
       { "name": "UnpakSipaksi.Modules.KejelasanPembagianTugasTim.Infrastructure.KejelasanPembagianTugasTim.KejelasanPembagianTugasTimRepository", "rp": "UnpakSipaksi.Modules.KejelasanPembagianTugasTim.Inure_KejelasanPembagianTugasTimRepository.html", "cl": 8, "ucl": 0, "cal": 8, "tl": 26, "cb": 0, "tb": 0, "cm": 0, "fcm": 0, "tm": 0, "lch": [], "bch": [], "mch": [], "mfch": [], "hc": [], "metrics": { } },
       { "name": "UnpakSipaksi.Modules.KejelasanPembagianTugasTim.Infrastructure.KejelasanPembagianTugasTimModule", "rp": "UnpakSipaksi.Modules.KejelasanPembagianTugasTim.Infrastructure_KejelasanPembagianTugasTimModule.html", "cl": 11, "ucl": 0, "cal": 11, "tl": 54, "cb": 0, "tb": 0, "cm": 0, "fcm": 0, "tm": 0, "lch": [], "bch": [], "mch": [], "mfch": [], "hc": [], "metrics": { } },
-      { "name": "UnpakSipaksi.Modules.KejelasanPembagianTugasTim.Infrastructure.PublicApi.KejelasanPembagianTugasTimApi", "rp": "UnpakSipaksi.Modules.KejelasanPembagianTugasTim.Infrastructure_KejelasanPembagianTugasTimApi.html", "cl": 0, "ucl": 20, "cal": 20, "tl": 46, "cb": 0, "tb": 4, "cm": 0, "fcm": 0, "tm": 0, "lch": [], "bch": [], "mch": [], "mfch": [], "hc": [], "metrics": { } },
+      { "name": "UnpakSipaksi.Modules.KejelasanPembagianTugasTim.Infrastructure.PublicApi.KejelasanPembagianTugasTimApi", "rp": "UnpakSipaksi.Modules.KejelasanPembagianTugasTim.Infrastructure_KejelasanPembagianTugasTimApi.html", "cl": 20, "ucl": 0, "cal": 20, "tl": 46, "cb": 4, "tb": 4, "cm": 0, "fcm": 0, "tm": 0, "lch": [], "bch": [], "mch": [], "mfch": [], "hc": [], "metrics": { } },
     ]},
   {
     "name": "UnpakSipaksi.Modules.KejelasanPembagianTugasTim.Presentation",
@@ -1747,7 +1747,7 @@ var assemblies = [
       { "name": "UnpakSipaksi.Modules.KesesuaianTkt.Infrastructure.KesesuaianTkt.KesesuaianTktConfiguration", "rp": "UnpakSipaksi.Modules.KesesuaianTkt.Infrastructure_KesesuaianTktConfiguration.html", "cl": 1, "ucl": 0, "cal": 1, "tl": 18, "cb": 0, "tb": 0, "cm": 0, "fcm": 0, "tm": 0, "lch": [], "bch": [], "mch": [], "mfch": [], "hc": [], "metrics": { } },
       { "name": "UnpakSipaksi.Modules.KesesuaianTkt.Infrastructure.KesesuaianTkt.KesesuaianTktRepository", "rp": "UnpakSipaksi.Modules.KesesuaianTkt.Infrastructure_KesesuaianTktRepository.html", "cl": 8, "ucl": 0, "cal": 8, "tl": 26, "cb": 0, "tb": 0, "cm": 0, "fcm": 0, "tm": 0, "lch": [], "bch": [], "mch": [], "mfch": [], "hc": [], "metrics": { } },
       { "name": "UnpakSipaksi.Modules.KesesuaianTkt.Infrastructure.KesesuaianTktModule", "rp": "UnpakSipaksi.Modules.KesesuaianTkt.Infrastructure_KesesuaianTktModule.html", "cl": 11, "ucl": 0, "cal": 11, "tl": 54, "cb": 0, "tb": 0, "cm": 0, "fcm": 0, "tm": 0, "lch": [], "bch": [], "mch": [], "mfch": [], "hc": [], "metrics": { } },
-      { "name": "UnpakSipaksi.Modules.KesesuaianTkt.Infrastructure.PublicApi.KesesuaianTktApi", "rp": "UnpakSipaksi.Modules.KesesuaianTkt.Infrastructure_KesesuaianTktApi.html", "cl": 0, "ucl": 20, "cal": 20, "tl": 47, "cb": 0, "tb": 4, "cm": 0, "fcm": 0, "tm": 0, "lch": [], "bch": [], "mch": [], "mfch": [], "hc": [], "metrics": { } },
+      { "name": "UnpakSipaksi.Modules.KesesuaianTkt.Infrastructure.PublicApi.KesesuaianTktApi", "rp": "UnpakSipaksi.Modules.KesesuaianTkt.Infrastructure_KesesuaianTktApi.html", "cl": 20, "ucl": 0, "cal": 20, "tl": 47, "cb": 4, "tb": 4, "cm": 0, "fcm": 0, "tm": 0, "lch": [], "bch": [], "mch": [], "mfch": [], "hc": [], "metrics": { } },
     ]},
   {
     "name": "UnpakSipaksi.Modules.KesesuaianTkt.Presentation",
@@ -1803,7 +1803,7 @@ var assemblies = [
       { "name": "UnpakSipaksi.Modules.KesesuaianWaktuRabLuaranFasilitas.Infrastructure.KesesuaianWaktuRabLuaranFasilitas.KesesuaianWaktuRabLuaranFasilitasConfiguration", "rp": "UnpakSipaksi.Modules.KesesuaianWaktuRabLuaranFasilaianWaktuRabLuaranFasilitasConfiguration.html", "cl": 1, "ucl": 0, "cal": 1, "tl": 18, "cb": 0, "tb": 0, "cm": 0, "fcm": 0, "tm": 0, "lch": [], "bch": [], "mch": [], "mfch": [], "hc": [], "metrics": { } },
       { "name": "UnpakSipaksi.Modules.KesesuaianWaktuRabLuaranFasilitas.Infrastructure.KesesuaianWaktuRabLuaranFasilitas.KesesuaianWaktuRabLuaranFasilitasRepository", "rp": "UnpakSipaksi.Modules.KesesuaianWaktuRabLuaranFasilesuaianWaktuRabLuaranFasilitasRepository.html", "cl": 8, "ucl": 0, "cal": 8, "tl": 26, "cb": 0, "tb": 0, "cm": 0, "fcm": 0, "tm": 0, "lch": [], "bch": [], "mch": [], "mfch": [], "hc": [], "metrics": { } },
       { "name": "UnpakSipaksi.Modules.KesesuaianWaktuRabLuaranFasilitas.Infrastructure.KesesuaianWaktuRabLuaranFasilitasModule", "rp": "UnpakSipaksi.Modules.KesesuaianWaktuRabLuaranFasil_KesesuaianWaktuRabLuaranFasilitasModule.html", "cl": 11, "ucl": 0, "cal": 11, "tl": 54, "cb": 0, "tb": 0, "cm": 0, "fcm": 0, "tm": 0, "lch": [], "bch": [], "mch": [], "mfch": [], "hc": [], "metrics": { } },
-      { "name": "UnpakSipaksi.Modules.KesesuaianWaktuRabLuaranFasilitas.Infrastructure.PublicApi.KesesuaianWaktuRabLuaranFasilitasApi", "rp": "UnpakSipaksi.Modules.KesesuaianWaktuRabLuaranFasilure_KesesuaianWaktuRabLuaranFasilitasApi.html", "cl": 0, "ucl": 20, "cal": 20, "tl": 47, "cb": 0, "tb": 4, "cm": 0, "fcm": 0, "tm": 0, "lch": [], "bch": [], "mch": [], "mfch": [], "hc": [], "metrics": { } },
+      { "name": "UnpakSipaksi.Modules.KesesuaianWaktuRabLuaranFasilitas.Infrastructure.PublicApi.KesesuaianWaktuRabLuaranFasilitasApi", "rp": "UnpakSipaksi.Modules.KesesuaianWaktuRabLuaranFasilure_KesesuaianWaktuRabLuaranFasilitasApi.html", "cl": 20, "ucl": 0, "cal": 20, "tl": 47, "cb": 4, "tb": 4, "cm": 0, "fcm": 0, "tm": 0, "lch": [], "bch": [], "mch": [], "mfch": [], "hc": [], "metrics": { } },
     ]},
   {
     "name": "UnpakSipaksi.Modules.KesesuaianWaktuRabLuaranFasilitas.Presentation",
@@ -1915,7 +1915,7 @@ var assemblies = [
       { "name": "UnpakSipaksi.Modules.KetajamanPerumusanMasalah.Infrastructure.KetajamanPerumusanMasalah.KetajamanPerumusanMasalahConfiguration", "rp": "UnpakSipaksi.Modules.KetajamanPerumusanMasalah.Infe_KetajamanPerumusanMasalahConfiguration.html", "cl": 1, "ucl": 0, "cal": 1, "tl": 13, "cb": 0, "tb": 0, "cm": 0, "fcm": 0, "tm": 0, "lch": [], "bch": [], "mch": [], "mfch": [], "hc": [], "metrics": { } },
       { "name": "UnpakSipaksi.Modules.KetajamanPerumusanMasalah.Infrastructure.KetajamanPerumusanMasalah.KetajamanPerumusanMasalahRepository", "rp": "UnpakSipaksi.Modules.KetajamanPerumusanMasalah.Infture_KetajamanPerumusanMasalahRepository.html", "cl": 8, "ucl": 0, "cal": 8, "tl": 25, "cb": 0, "tb": 0, "cm": 0, "fcm": 0, "tm": 0, "lch": [], "bch": [], "mch": [], "mfch": [], "hc": [], "metrics": { } },
       { "name": "UnpakSipaksi.Modules.KetajamanPerumusanMasalah.Infrastructure.KetajamanPerumusanMasalahModule", "rp": "UnpakSipaksi.Modules.KetajamanPerumusanMasalah.Infrastructure_KetajamanPerumusanMasalahModule.html", "cl": 11, "ucl": 0, "cal": 11, "tl": 49, "cb": 0, "tb": 0, "cm": 0, "fcm": 0, "tm": 0, "lch": [], "bch": [], "mch": [], "mfch": [], "hc": [], "metrics": { } },
-      { "name": "UnpakSipaksi.Modules.KetajamanPerumusanMasalah.Infrastructure.PublicApi.KetajamanPerumusanMasalahApi", "rp": "UnpakSipaksi.Modules.KetajamanPerumusanMasalah.Infrastructure_KetajamanPerumusanMasalahApi.html", "cl": 0, "ucl": 20, "cal": 20, "tl": 47, "cb": 0, "tb": 4, "cm": 0, "fcm": 0, "tm": 0, "lch": [], "bch": [], "mch": [], "mfch": [], "hc": [], "metrics": { } },
+      { "name": "UnpakSipaksi.Modules.KetajamanPerumusanMasalah.Infrastructure.PublicApi.KetajamanPerumusanMasalahApi", "rp": "UnpakSipaksi.Modules.KetajamanPerumusanMasalah.Infrastructure_KetajamanPerumusanMasalahApi.html", "cl": 20, "ucl": 0, "cal": 20, "tl": 47, "cb": 4, "tb": 4, "cm": 0, "fcm": 0, "tm": 0, "lch": [], "bch": [], "mch": [], "mfch": [], "hc": [], "metrics": { } },
     ]},
   {
     "name": "UnpakSipaksi.Modules.KetajamanPerumusanMasalah.Presentation",
@@ -1930,7 +1930,7 @@ var assemblies = [
   {
     "name": "UnpakSipaksi.Modules.KetajamanPerumusanMasalah.PublicApi",
     "classes": [
-      { "name": "UnpakSipaksi.Modules.KetajamanPerumusanMasalah.PublicApi.KetajamanPerumusanMasalahResponse", "rp": "UnpakSipaksi.Modules.KetajamanPerumusanMasalah.PublicApi_KetajamanPerumusanMasalahResponse.html", "cl": 0, "ucl": 1, "cal": 1, "tl": 10, "cb": 0, "tb": 0, "cm": 0, "fcm": 0, "tm": 0, "lch": [], "bch": [], "mch": [], "mfch": [], "hc": [], "metrics": { } },
+      { "name": "UnpakSipaksi.Modules.KetajamanPerumusanMasalah.PublicApi.KetajamanPerumusanMasalahResponse", "rp": "UnpakSipaksi.Modules.KetajamanPerumusanMasalah.PublicApi_KetajamanPerumusanMasalahResponse.html", "cl": 1, "ucl": 0, "cal": 1, "tl": 10, "cb": 0, "tb": 0, "cm": 0, "fcm": 0, "tm": 0, "lch": [], "bch": [], "mch": [], "mfch": [], "hc": [], "metrics": { } },
     ]},
   {
     "name": "UnpakSipaksi.Modules.KewajaranTahapanTarget.Application",
@@ -2081,7 +2081,7 @@ var assemblies = [
       { "name": "UnpakSipaksi.Modules.KredibilitasMitraDukungan.Infrastructure.KredibilitasMitraDukungan.KredibilitasMitraDukunganConfiguration", "rp": "UnpakSipaksi.Modules.KredibilitasMitraDukungan.Infe_KredibilitasMitraDukunganConfiguration.html", "cl": 1, "ucl": 0, "cal": 1, "tl": 13, "cb": 0, "tb": 0, "cm": 0, "fcm": 0, "tm": 0, "lch": [], "bch": [], "mch": [], "mfch": [], "hc": [], "metrics": { } },
       { "name": "UnpakSipaksi.Modules.KredibilitasMitraDukungan.Infrastructure.KredibilitasMitraDukungan.KredibilitasMitraDukunganRepository", "rp": "UnpakSipaksi.Modules.KredibilitasMitraDukungan.Infture_KredibilitasMitraDukunganRepository.html", "cl": 8, "ucl": 0, "cal": 8, "tl": 25, "cb": 0, "tb": 0, "cm": 0, "fcm": 0, "tm": 0, "lch": [], "bch": [], "mch": [], "mfch": [], "hc": [], "metrics": { } },
       { "name": "UnpakSipaksi.Modules.KredibilitasMitraDukungan.Infrastructure.KredibilitasMitraDukunganModule", "rp": "UnpakSipaksi.Modules.KredibilitasMitraDukungan.Infrastructure_KredibilitasMitraDukunganModule.html", "cl": 11, "ucl": 0, "cal": 11, "tl": 49, "cb": 0, "tb": 0, "cm": 0, "fcm": 0, "tm": 0, "lch": [], "bch": [], "mch": [], "mfch": [], "hc": [], "metrics": { } },
-      { "name": "UnpakSipaksi.Modules.KredibilitasMitraDukungan.Infrastructure.PublicApi.KredibilitasMitraDukunganApi", "rp": "UnpakSipaksi.Modules.KredibilitasMitraDukungan.Infrastructure_KredibilitasMitraDukunganApi.html", "cl": 0, "ucl": 20, "cal": 20, "tl": 47, "cb": 0, "tb": 4, "cm": 0, "fcm": 0, "tm": 0, "lch": [], "bch": [], "mch": [], "mfch": [], "hc": [], "metrics": { } },
+      { "name": "UnpakSipaksi.Modules.KredibilitasMitraDukungan.Infrastructure.PublicApi.KredibilitasMitraDukunganApi", "rp": "UnpakSipaksi.Modules.KredibilitasMitraDukungan.Infrastructure_KredibilitasMitraDukunganApi.html", "cl": 20, "ucl": 0, "cal": 20, "tl": 47, "cb": 4, "tb": 4, "cm": 0, "fcm": 0, "tm": 0, "lch": [], "bch": [], "mch": [], "mfch": [], "hc": [], "metrics": { } },
     ]},
   {
     "name": "UnpakSipaksi.Modules.KredibilitasMitraDukungan.Presentation",
@@ -3794,7 +3794,7 @@ var assemblies = [
     "name": "UnpakSipaksi.Modules.RoadmapPenelitian.Infrastructure",
     "classes": [
       { "name": "UnpakSipaksi.Modules.RoadmapPenelitian.Infrastructure.Database.RoadmapPenelitianDbContext", "rp": "UnpakSipaksi.Modules.RoadmapPenelitian.Infrastructure_RoadmapPenelitianDbContext.html", "cl": 38, "ucl": 0, "cal": 38, "tl": 52, "cb": 0, "tb": 0, "cm": 0, "fcm": 0, "tm": 0, "lch": [], "bch": [], "mch": [], "mfch": [], "hc": [], "metrics": { } },
-      { "name": "UnpakSipaksi.Modules.RoadmapPenelitian.Infrastructure.PublicApi.RoadmapPenelitianApi", "rp": "UnpakSipaksi.Modules.RoadmapPenelitian.Infrastructure_RoadmapPenelitianApi.html", "cl": 0, "ucl": 20, "cal": 20, "tl": 47, "cb": 0, "tb": 4, "cm": 0, "fcm": 0, "tm": 0, "lch": [], "bch": [], "mch": [], "mfch": [], "hc": [], "metrics": { } },
+      { "name": "UnpakSipaksi.Modules.RoadmapPenelitian.Infrastructure.PublicApi.RoadmapPenelitianApi", "rp": "UnpakSipaksi.Modules.RoadmapPenelitian.Infrastructure_RoadmapPenelitianApi.html", "cl": 20, "ucl": 0, "cal": 20, "tl": 47, "cb": 4, "tb": 4, "cm": 0, "fcm": 0, "tm": 0, "lch": [], "bch": [], "mch": [], "mfch": [], "hc": [], "metrics": { } },
       { "name": "UnpakSipaksi.Modules.RoadmapPenelitian.Infrastructure.RoadmapPenelitian.RoadmapPenelitianConfiguration", "rp": "UnpakSipaksi.Modules.RoadmapPenelitian.Infrastructure_RoadmapPenelitianConfiguration.html", "cl": 1, "ucl": 0, "cal": 1, "tl": 13, "cb": 0, "tb": 0, "cm": 0, "fcm": 0, "tm": 0, "lch": [], "bch": [], "mch": [], "mfch": [], "hc": [], "metrics": { } },
       { "name": "UnpakSipaksi.Modules.RoadmapPenelitian.Infrastructure.RoadmapPenelitian.RoadmapPenelitianRepository", "rp": "UnpakSipaksi.Modules.RoadmapPenelitian.Infrastructure_RoadmapPenelitianRepository.html", "cl": 8, "ucl": 0, "cal": 8, "tl": 25, "cb": 0, "tb": 0, "cm": 0, "fcm": 0, "tm": 0, "lch": [], "bch": [], "mch": [], "mfch": [], "hc": [], "metrics": { } },
       { "name": "UnpakSipaksi.Modules.RoadmapPenelitian.Infrastructure.RoadmapPenelitianModule", "rp": "UnpakSipaksi.Modules.RoadmapPenelitian.Infrastructure_RoadmapPenelitianModule.html", "cl": 11, "ucl": 0, "cal": 11, "tl": 49, "cb": 0, "tb": 0, "cm": 0, "fcm": 0, "tm": 0, "lch": [], "bch": [], "mch": [], "mfch": [], "hc": [], "metrics": { } },
@@ -3812,7 +3812,7 @@ var assemblies = [
   {
     "name": "UnpakSipaksi.Modules.RoadmapPenelitian.PublicApi",
     "classes": [
-      { "name": "UnpakSipaksi.Modules.RoadmapPenelitian.PublicApi.RoadmapPenelitianResponse", "rp": "UnpakSipaksi.Modules.RoadmapPenelitian.PublicApi_RoadmapPenelitianResponse.html", "cl": 0, "ucl": 1, "cal": 1, "tl": 10, "cb": 0, "tb": 0, "cm": 0, "fcm": 0, "tm": 0, "lch": [], "bch": [], "mch": [], "mfch": [], "hc": [], "metrics": { } },
+      { "name": "UnpakSipaksi.Modules.RoadmapPenelitian.PublicApi.RoadmapPenelitianResponse", "rp": "UnpakSipaksi.Modules.RoadmapPenelitian.PublicApi_RoadmapPenelitianResponse.html", "cl": 1, "ucl": 0, "cal": 1, "tl": 10, "cb": 0, "tb": 0, "cm": 0, "fcm": 0, "tm": 0, "lch": [], "bch": [], "mch": [], "mfch": [], "hc": [], "metrics": { } },
     ]},
   {
     "name": "UnpakSipaksi.Modules.RumpunIlmu1.Application",
