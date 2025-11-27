@@ -8,7 +8,7 @@ using UnpakSipaksi.Modules.JumlahKolaboratorPublikasBereputasi.Application.GetJu
 
 namespace UnpakSipaksi.Modules.JumlahKolaboratorPublikasBereputasi.Infrastructure.PublicApi
 {
-    internal sealed class JumlahKolaboratorPublikasBereputasiApi(ISender sender) : IJumlahKolaboratorPublikasBereputasiApi
+    public sealed class JumlahKolaboratorPublikasBereputasiApi(ISender sender) : IJumlahKolaboratorPublikasBereputasiApi
     {
         public async Task<JumlahKolaboratorPublikasBereputasiResponseApi?> GetAsync(Guid JumlahKolaboratorPublikasBereputasiUuid, CancellationToken cancellationToken = default)
         {

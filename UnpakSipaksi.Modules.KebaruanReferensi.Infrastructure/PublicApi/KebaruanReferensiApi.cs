@@ -8,7 +8,7 @@ using UnpakSipaksi.Modules.KebaruanReferensi.Application.GetBobotKebaruanReferen
 
 namespace UnpakSipaksi.Modules.KebaruanReferensi.Infrastructure.PublicApi
 {
-    internal sealed class KebaruanReferensiApi(ISender sender) : IKebaruanReferensiApi
+    public sealed class KebaruanReferensiApi(ISender sender) : IKebaruanReferensiApi
     {
         public async Task<KebaruanReferensiResponseApi?> GetAsync(Guid KebaruanReferensiUuid, CancellationToken cancellationToken = default)
         {

@@ -4,8 +4,6 @@ using UnpakSipaksi.Common.Domain;
 using UnpakSipaksi.Modules.RumpunIlmu1.Application.GetRumpunIlmu1;
 using UnpakSipaksi.Modules.RumpunIlmu1.Domain.RumpunIlmu1;
 using UnpakSipaksi.Modules.RumpunIlmu1.Infrastructure.PublicApi;
-using UnpakSipaksi.Modules.RumpunIlmu1.Application.GetRumpunIlmu1;
-using UnpakSipaksi.Modules.RumpunIlmu1.Domain.RumpunIlmu1;
 using Xunit;
 
 namespace UnpakSipaksi.Modules.RumpunIlmu1.PublicApiTest

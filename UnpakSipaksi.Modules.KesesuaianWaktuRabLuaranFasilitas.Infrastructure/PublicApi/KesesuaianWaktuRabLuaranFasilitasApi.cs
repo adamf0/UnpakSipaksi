@@ -8,7 +8,7 @@ using UnpakSipaksi.Modules.KesesuaianWaktuRabLuaranFasilitas.Application.GetBobo
 
 namespace UnpakSipaksi.Modules.KesesuaianWaktuRabLuaranFasilitas.Infrastructure.PublicApi
 {
-    internal sealed class KesesuaianWaktuRabLuaranFasilitasApi(ISender sender) : IKesesuaianWaktuRabLuaranFasilitasApi
+    public sealed class KesesuaianWaktuRabLuaranFasilitasApi(ISender sender) : IKesesuaianWaktuRabLuaranFasilitasApi
     {
         public async Task<KesesuaianWaktuRabLuaranFasilitasResponseApi?> GetAsync(Guid KesesuaianWaktuRabLuaranFasilitasUuid, CancellationToken cancellationToken = default)
         {

@@ -8,7 +8,7 @@ using UnpakSipaksi.Modules.RoadmapPenelitian.Application.GetBobotRoadmapPeneliti
 
 namespace UnpakSipaksi.Modules.RoadmapPenelitian.Infrastructure.PublicApi
 {
-    internal sealed class RoadmapPenelitianApi(ISender sender) : IRoadmapPenelitianApi
+    public sealed class RoadmapPenelitianApi(ISender sender) : IRoadmapPenelitianApi
     {
         public async Task<RoadmapPenelitianResponseApi?> GetAsync(Guid RoadmapPenelitianUuid, CancellationToken cancellationToken = default)
         {

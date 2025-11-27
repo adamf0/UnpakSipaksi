@@ -8,7 +8,7 @@ using UnpakSipaksi.Modules.KejelasanPembagianTugasTim.Application.GetBobotKejela
 
 namespace UnpakSipaksi.Modules.KejelasanPembagianTugasTim.Infrastructure.PublicApi
 {
-    internal sealed class KejelasanPembagianTugasTimApi(ISender sender) : IKejelasanPembagianTugasTimApi
+    public sealed class KejelasanPembagianTugasTimApi(ISender sender) : IKejelasanPembagianTugasTimApi
     {
         public async Task<KejelasanPembagianTugasTimResponseApi?> GetAsync(Guid KejelasanPembagianTugasTimUuid, CancellationToken cancellationToken = default)
         {

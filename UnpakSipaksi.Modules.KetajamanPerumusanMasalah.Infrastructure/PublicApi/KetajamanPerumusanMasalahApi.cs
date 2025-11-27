@@ -8,7 +8,7 @@ using UnpakSipaksi.Modules.KetajamanPerumusanMasalah.Application.GetBobotKetajam
 
 namespace UnpakSipaksi.Modules.KetajamanPerumusanMasalah.Infrastructure.PublicApi
 {
-    internal sealed class KetajamanPerumusanMasalahApi(ISender sender) : IKetajamanPerumusanMasalahApi
+    public sealed class KetajamanPerumusanMasalahApi(ISender sender) : IKetajamanPerumusanMasalahApi
     {
         public async Task<KetajamanPerumusanMasalahResponseApi?> GetAsync(Guid KetajamanPerumusanMasalahUuid, CancellationToken cancellationToken = default)
         {

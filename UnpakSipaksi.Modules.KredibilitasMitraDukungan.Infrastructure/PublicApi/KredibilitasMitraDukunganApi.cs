@@ -8,7 +8,7 @@ using UnpakSipaksi.Modules.KredibilitasMitraDukungan.Application.GetBobotKredibi
 
 namespace UnpakSipaksi.Modules.KredibilitasMitraDukungan.Infrastructure.PublicApi
 {
-    internal sealed class KredibilitasMitraDukunganApi(ISender sender) : IKredibilitasMitraDukunganApi
+    public sealed class KredibilitasMitraDukunganApi(ISender sender) : IKredibilitasMitraDukunganApi
     {
         public async Task<KredibilitasMitraDukunganResponseApi?> GetAsync(Guid KredibilitasMitraDukunganUuid, CancellationToken cancellationToken = default)
         {
